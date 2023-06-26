@@ -1,0 +1,204 @@
+.footer
+    width: 100%
+    // height: 700px
+    background: #393939
+    display: flex
+    justify-content: center
+    
+    @media screen and ( max-width:  $md2)
+        display: none
+
+    a
+        color: #A7A7A7
+        transition: color .32s ease-in-out
+        &:hover
+            color: #fff
+
+    &__container
+        padding: 60px 0 40px 0
+        @media (max-width: $md2)
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+    &__title
+        font-size: 32px
+        font-weight: 700
+        color: #fff
+        display: flex
+        padding-bottom: 50px
+        display: flex
+        justify-content: center
+        user-select: none
+        @media (max-width: $md2)
+            font-size: 2.5em
+            padding-bottom: 26px
+    &__nav-container
+        display: flex
+        gap: 30px
+        margin-bottom: 50px
+        @media (max-width: $md2)
+            flex-direction: row
+            align-items: flex-start
+            flex-wrap: wrap
+    &__nav-col
+        display: flex
+        flex-direction: column
+        width: 370px
+        @media screen and ( max-width: $md1 )
+            width: 270px
+
+        @media (max-width: $md2)
+            max-width: 35%
+
+        @media (max-width: $md3)
+            max-width: 45%
+
+        @media (max-width: $md4)
+            max-width: 80%
+
+    &__links
+        font-size: 16px
+        @media (max-width: $md2)
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 0px 10px
+            gap: 10px
+            // max-height: 32px
+        &-title
+            display: flex
+            height: 32px
+            align-items: center
+            color: #FFFFFF
+            user-select: none
+            position: relative
+            @media (max-width: $md2)
+                font-size: 1.8rem
+        &-link
+            display: flex
+            height: 32px
+            align-items: center
+            color: #A7A7A7
+            @media (max-width: $md2)
+                font-size: 1.2rem
+                border: 1px solid #A7A7A7
+                width: 100%
+                padding: 0px 10px
+                text-align: center
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+        &:not(:first-child)
+            margin-top: 50px
+
+    &__contact
+        &-container
+            padding-top: 40px
+            border-top: 1px solid #fff
+            display: flex
+            justify-content: space-between
+            @media (max-width: $md2)
+                flex-direction: column
+                justify-content: center
+                flex-wrap: wrap
+                padding-top: 12px
+                align-items: flex-start
+                // padding: 26px 10px 0px
+                gap: 12px
+        &-text
+            font-size: 16px
+            font-weight: 500
+            color: #fff
+            @media (max-width: $md2)
+                font-size: 1.5rem
+        &-link
+            font-size: 16px
+            font-weight: 500
+            margin-left: auto
+            margin-right: 40px
+            @media (max-width: $md2)
+                font-size: 1.2rem
+                margin: 0 0 0 0
+
+.footer-mobile
+    width: 100%
+    // height: 700px
+    background: #393939
+    display: flex
+    justify-content: center
+    @media screen and ( min-width:  $md2)
+        display: none
+
+    &__container
+        padding: 40px 20px 20px 20px
+        width: 100%
+
+        .social-container 
+            margin-left: auto
+            
+        @media (max-width: $md2)
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+    &__title
+        font-size: 24px
+        font-weight: 700
+        color: #fff
+        display: flex
+        padding-bottom: 50px
+        display: flex
+        justify-content: center
+        user-select: none
+
+    &__feedback
+        display: flex
+        align-items: center
+        gap: 50px
+        justify-content: space-between
+        padding: 0 0 30px 0
+        .text
+            color: #fff
+    &__contact
+        &-container
+            padding: 40px 0 0 0
+            position: relative
+            display: flex
+            justify-content: space-between
+            margin-top: 20px
+
+            @media screen and ( max-width: $md3 )
+                padding: 20px 0 0 0
+                flex-direction: column
+                align-items: center
+                justify-content: flex-start
+                gap: 20px
+                
+                & > *
+                    font-size: 15px !important
+
+                
+
+            &::after
+                content: ''
+                position: absolute
+                height: 1px
+                top: 0
+                left: 0
+                right: 0
+                background: #fff
+        &-text
+            font-size: 16px
+            font-weight: 500
+            color: #fff
+        &-link
+            font-size: 16px
+            font-weight: 500
+            margin-left: auto
+            color: #ffffffa6
+
+            @media screen and ( max-width: $md3 )
+                margin-left: 0

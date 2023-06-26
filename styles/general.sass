@@ -1,0 +1,389 @@
+.page-index
+
+    &__about-hotel
+        &.about-hotel
+            padding:
+                top: 100px
+                bottom: 100px
+            display: flex
+            flex-direction: column
+            gap: 150px
+
+            @media screen and ( max-width: $md2 )
+                gap: 80px
+
+            .about-hotel
+                &__wrapper
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    gap: 30px
+
+                    @media screen and ( max-width: $md2 )
+                        flex-direction: column
+                    &.reverse
+                        flex-direction: row-reverse
+                        @media screen and ( max-width: $md2 )
+                            flex-direction: column
+
+                    .page-aquatory__list
+                        padding-right: 70px
+                        @media screen and ( max-width: $md1 )
+                            padding-right: 0px
+
+                        @media screen and ( max-width: $md2 )
+                            padding:
+                                right: 20vw
+                                left: 20vw
+
+                            .page-aquatory__list-title
+                                text-align: center
+
+                        @media screen and ( max-width: $md3 )
+                            padding:
+                                right: 10vw
+                                left: 10vw
+                        @media screen and ( max-width: $md4 )
+                            padding:
+                                right: 5vw
+                                left: 5vw
+
+                &__about
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+                    max-width: 370px
+                &__text
+                    color: #262626
+                    font-size: 24px
+
+                    @media screen and ( max-width: $md2 )
+                        text-align: center
+                &__desc
+                    color: #393939
+                    font-size: 16px
+                    font-family: Lora
+                    font-style: italic
+                    letter-spacing: 0.48px
+
+                    @media screen and ( max-width: $md2 )
+                        text-align: center
+                &__img
+                    object-fit: cover
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                    &.img_min
+                        max-width: 670px
+                        max-height: 420px
+                        min-width: 670px
+                        min-height: 420px
+                        @media screen and ( max-width: $md1 )
+                            max-width: 470px
+                            max-height: 320px
+                            min-width: 470px
+                            min-height: 320px
+
+                        @media screen and ( max-width: $md2 )
+                            max-width: 100%
+                            max-height: 600px
+                    &.img_max
+                        max-width: 670px
+                        max-height: 550px
+                        min-width: 670px
+                        min-height: 550px
+                        overflow: hidden
+                        @media screen and ( max-width: $md1 )
+                            img
+                                height: auto
+                                width: auto
+                                max-width: 470px
+                                max-height: 550px
+                                min-width: 470px
+                                min-height: 550px
+
+                        @media screen and ( max-width: $md2 )
+                            max-width: 100%
+                            max-height: 600px
+                            img
+                                height: 100%
+                                width: 100%
+                                object-fit: cover
+                                max-width: 100%
+                                max-height: 100%
+
+                        @media screen and ( max-width: $md3 )
+
+                            min-width: 100%
+                            min-height: 390px
+                            max-height: 390px
+    &__scroll
+        // padding: 0 5vw 0 10vw
+        &.index-scroll
+            padding: 100px 5vw 170px 10vw
+            position: relative
+            @media (max-width: $md1)
+                padding: 100px 5vw 170px 5vw
+
+            .index-scroll
+                &__target
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    z-index: 0
+
+                &__text
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+                    width: 370px
+                    &-container
+                        display: flex
+                        // align-items: center
+                        height: 100vh
+                        @media (max-width: $md1)
+                            height: fit-content
+                            margin: 0 auto
+                            padding:
+                                left: 5vw
+                                right: 5vw
+                                bottom: 20px
+                            max-width: 100%
+                            .text
+                                text-align: center
+                                &-title
+                                    text-align: center
+
+                    &.--fixed-text
+                        margin-top: 70px
+
+                &__images
+                    width: 75rem
+                    display: flex
+                    flex-direction: column
+                    gap: 50px
+                    padding: 0 0 0 80px
+                    // max-width: 1140px
+                    // margin: 0 auto
+                    @media (max-width: $md1)
+                        gap: 20px
+                        padding: 40px 40px 0 40px
+                        flex-direction: column
+                        align-items: center
+
+                    @media (max-width: $md3)
+                        padding: 20px 0 0 0
+                        max-width: calc( 100% - 24px )
+
+                    &-container
+                        display: flex
+                        .visual
+                            &.visual-1
+                                // transform: translateY(-60px)
+                            &.visual-2
+                                @media (max-width: $md1)
+                                    transform: translateY(-30px) scale(1)
+                            &.visual-3
+                                @media (max-width: $md1)
+                                    transform: translateY(40px) scale(1.1)
+                            &.visual-4
+                                // transform: translateY(-60px)
+                            &.visual-5
+                                @media (max-width: $md1)
+                                    transform: translateY(-60px) scale(1.1)
+                            &.visual-6
+                                @media (max-width: $md1)
+                                    transform: translateY(40px)
+                            &.visual-7
+                                // transform: translateY(-60px)
+
+                        &.one-img
+                            img
+                                max-width: 670px
+                                max-height: 360px
+                                width: 87rem
+                                height: 46.8rem
+                                @media (max-width: $md3)
+                                    max-width: 100%
+                                    max-height: 260px
+                                    object-fit: cover
+
+                        &.two-img
+                            gap: 70px
+                            justify-content: center
+                            @media (max-width: $md4)
+                                gap: 10vw
+                                max-height: 240px
+                            img
+                                max-width: 270px
+                                max-height: 400px
+                                width: 36rem
+                                height: 52rem
+                                @media (max-width: $md4)
+                                    max-width: calc( 49% - 20px)
+                                    max-height: 180px
+                                    object-fit: cover
+
+                                &:last-child
+                                    // margin-top: 80px
+
+                            &.reverse
+                                img
+                                    &:last-child
+                                        margin-top: 0
+                                    &:first-child
+                                        // margin-top: 80px
+        &--inner
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            max-width: 1140px
+            margin: 0 auto
+            @media (max-width: $md1)
+                flex-direction: column
+                align-items: center
+
+    &__previews
+        &.preview-blocks
+            .preview-blocks
+                &__item-wrap
+                    display: flex
+                    width: 100%
+                    min-width: 100vw
+                    height: 100vh
+                    min-height: 100vh
+                    @media screen and ( max-width: $md2)
+                        flex-direction: column-reverse
+                        height: fit-content
+                    &:nth-child(2n)
+                        flex-direction: row-reverse
+                        @media screen and ( max-width: $md2)
+                            flex-direction: column-reverse
+
+                        // @media screen and ( max-width: $md2)
+                        //     flex-direction: column
+
+                        .preview-blocks__item
+                            justify-content: flex-end
+
+                    &:nth-child(2n - 1)
+                        .preview-blocks__item
+
+                &__item
+                    display: flex
+                    max-width: 50%
+                    width: 50%
+                    background: #F6F6F6
+                    @media screen and ( max-width: $md2)
+                        width: 100%
+                        max-width: 100%
+
+                    @media screen and ( max-width:  $md3)
+                        // padding-top: 10vh
+
+                    &.preview-image
+                        display: flex
+
+                        @media screen and ( max-width: $md2)
+                            max-height: 100vh
+                            overflow: hidden
+
+                        @media (max-height: 500px)
+                            max-height: 150vh
+                            height: 150vh
+                        .preview-image
+                            &__img-wrap
+                                position: relative
+                                height: 100%
+                                width: 100%
+                                overflow: hidden
+                                z-index: 0
+
+                                @media screen and (max-width: $md3)
+                                    width: 100vw
+                                    height: 100vw
+                            &__img
+                                display: block
+                                position: relative
+                                width: 100%
+                                height: 100%
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    -o-object-fit: cover
+                                    object-fit: cover
+                                    @media (max-width: $md3)
+                                        // object-fit: cover
+                                        width: 100vw
+                                        margin-bottom: 50%
+
+                &__preview-text
+                    display: flex
+                    flex-direction: column
+                    gap: 2rem
+                    justify-content: center
+                    background: #F6F6F6
+
+                    width: calc(50vw - 16rem)
+                    min-width: 29rem
+                    padding: 2rem 5vw
+                    @media screen and ( max-width: $md2)
+                        margin: 0 auto
+                        padding: 5vw 20vw
+                        width: calc(100vw - 16rem)
+                        align-items: center
+                        .text
+                            text-align: center
+
+                    @media screen and ( max-width: $md3)
+                        padding: 10vw 5vw
+
+                    @media screen and ( max-width: $md4)
+                        padding: 15vw 0vw
+    &__geo
+        &.index-geo
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 200px 0
+
+            @media screen and ( max-width: $md1 )
+                flex-direction: column-reverse
+                gap: 30px
+
+            .index-geo
+                &__map
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background: url(/img/index-map.png)
+                    width: 670px
+                    height: 500px
+                    position: relative
+                    overflow: hidden
+                    display: flex
+                    @media screen and ( max-width: $md3 )
+                        max-height: 300px
+
+                &__feed
+                    display: flex
+                    flex-direction: column
+                &__title
+                    display: flex
+                    font-weight: 400
+                    font-size: 32px
+                    letter-spacing: 0.04em
+                    text-transform: uppercase
+                    color: #262626
+
+                &__text
+                    margin: 8px 0 32px 0
+                    display: flex
+                    font-weight: 400
+                    font-size: 16px
+                    color: #393939
+
+                &__btn
+                    width: 370px

@@ -1,0 +1,122 @@
+.page-meals
+    .meals__promo
+        max-height: 1000vh
+        padding-top: 200px
+        padding-bottom: 200px
+        @media screen and ( max-width: $md3 )
+            padding-top: 150px
+
+    &__cards
+        display: flex
+        gap: 30px
+        width: 100%
+        justify-content: center
+
+        @media ( max-width: 1660px )
+            flex-direction: column
+            align-items: center
+
+    &__cards-section
+        display: flex
+        gap: 30px
+        max-width: 770px
+
+        @media ( max-width: 1660px )
+            padding: 0 24px
+            max-width: 1340px
+
+        @media ( max-width: $md1 )
+            max-width: 100%
+
+        @media ( max-width: $md3 )
+            flex-direction: column
+
+    &__card
+        display: flex
+        width: 370px
+        min-width: 370px
+        height: 600px
+        background: #000
+        position: relative
+        flex-direction: column
+        gap: 100px
+        align-items: center
+        justify-content: center
+        transition: all .61s ease-in-out
+        overflow: hidden
+
+        @media screen and ( max-width: $md3 )
+            min-width: 0
+
+        &-dimmer
+            background: #000
+            opacity: 0.4
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: 1
+            transition: all .61s ease-in-out
+            transition-delay: .21s
+
+        @media screen and ( max-width: 1660px )
+            height: 500px
+            width: 670px
+
+        @media ( max-width: $md3 )
+            gap: 70px
+            height: 340px
+            max-width: 100%
+
+        &-title
+            font-weight: 500
+            font-size: 32px
+            color: #fff
+            z-index: 2
+            position: relative
+        .btn
+            position: relative
+            z-index: 2
+        &::after
+            content: ''
+            position: absolute
+            height: 45%
+            width: 1px
+            background: #fff
+            top: 10px
+            left: 10px
+            transition: all .32s ease-in-out
+            z-index: 100
+
+        &::before
+            content: ''
+            position: absolute
+            height: 45%
+            width: 1px
+            background: #fff
+            bottom: 10px
+            right: 10px
+            transition: all .61s ease-in-out
+            z-index: 100
+
+        &:hover
+            .page-meals__card-dimmer
+                opacity: .7
+            &::before
+                bottom: 100%
+
+            &::after
+                top: 100%
+        &.card_banquet
+            background: url(/img/meals/1.jpg)
+            background-size: cover
+        &.card_rest
+            background: url(/img/meals/2.jpg)
+            background-size: cover
+        &.card_smash
+            background: url(/img/meals/3.jpg)
+            background-size: cover
+        &.card_tent
+            background: url(/img/meals/4.jpg)
+            background-size: cover

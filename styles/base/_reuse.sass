@@ -1,0 +1,724 @@
+.flex
+    display: flex
+.flex-col
+    display: flex
+    flex-direction: column
+.flex-row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+.nowrap
+    flex-wrap: nowrap
+
+.touch-scroll
+    overflow-x: hidden
+    overflow-y: scroll
+    // touch-action: none
+    // transition: all 1s linear
+    & > *
+        // pointer-events: none
+
+.fw
+    width: 100%
+.flex-row-c
+    justify-content: center
+.flex-col-c
+    align-items: center
+.flex-between
+    justify-content: space-between
+.items-end
+    align-items: flex-end
+
+@for $i from 1 through 50
+    .gap-#{$i * 5}
+        gap: #{$i * 5}px
+
+.relative
+    position: relative
+
+.text-normal
+    font-family: 'Lora'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    color: #393939
+
+.footnote-text
+    max-width: 770px
+    width: 100% !important
+    margin: 30px auto
+    text-align: center
+
+.uppercase
+    text-transform: uppercase
+
+.text
+    font-family: 'Lora'
+    font-style: italic
+    font-weight: 400
+    font-size: 1.6rem
+    line-height: 2rem
+    color: #393939
+    letter-spacing: 0.03em
+
+    &-title
+        font-family: 'Lora'
+        font-style: normal
+        font-weight: 400
+        font-size: 2.4rem
+        line-height: 31px
+        color: #393939
+
+.h2-title
+    margin: 15px 0
+    font-size: 32px
+    color: #393939
+    &-bold
+        font-weight: 400
+        color: #393939
+        margin: 0
+        font-size: 40px
+
+.footnote
+    display: flex
+    max-width: 770px
+    margin: 0 auto
+    padding: 150px 0 !important
+    @media screen and ( max-width: $md2 )
+        padding: 80px 24px !important
+        text-align: center
+
+    .text
+        font-style: italic
+        margin: 0 auto
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iNCIgdmlld0JveD0iMCAwIDI4IDQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxLjUiIHN0cm9rZT0iIzI2MjYyNiIvPgo8Y2lyY2xlIGN4PSIxNCIgY3k9IjIiIHI9IjEuNSIgc3Ryb2tlPSIjMjYyNjI2Ii8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMiIgcj0iMS41IiBzdHJva2U9IiMyNjI2MjYiLz4KPC9zdmc+Cg==')
+            width: 28px
+            height: 4px
+            background-repeat: repeat
+            left: 50%
+            transform: translateX(-50%)
+            top: -16px
+
+.separator
+    &-before,&-after
+        width: 100%
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iNCIgdmlld0JveD0iMCAwIDI4IDQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxLjUiIHN0cm9rZT0iIzI2MjYyNiIvPgo8Y2lyY2xlIGN4PSIxNCIgY3k9IjIiIHI9IjEuNSIgc3Ryb2tlPSIjMjYyNjI2Ii8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMiIgcj0iMS41IiBzdHJva2U9IiMyNjI2MjYiLz4KPC9zdmc+Cg==')
+            width: 28px
+            height: 4px
+            background-repeat: repeat
+            left: 50%
+            transform: translateX(-50%)
+    &-before
+        &::after
+            top: 0px
+    &-after
+        &::after
+            bottom: 0px
+
+.attr-list
+    display: flex
+    flex-direction: column
+    gap: 20px
+    width: 430px
+    margin-top: 30px
+    margin-bottom: 40px
+    &__row
+        display: flex
+        justify-content: space-between
+    &__item-title
+        font-weight: 600
+        font-size: 16px
+        line-height: 23px
+        letter-spacing: 0.03em
+        color: #262626
+
+    &__item-container
+        display: flex
+        flex-direction: column
+        gap: 5px
+
+    &__item-value
+        font-weight: 400
+        font-size: 16px
+        line-height: 23px
+        text-align: right
+        letter-spacing: 0.03em
+        color: #393939
+
+.text-section
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 auto
+    padding: 70px 0
+    position: relative
+    @media (max-width: $md1)
+        padding: 70px 0
+
+    &_big
+        .text
+            max-width: 970px
+    &_med
+        .text
+            max-width: 770px
+    .text
+        text-align: center
+        margin: 20px 0 0px 0
+        line-height: 23px
+        width: 100%
+        letter-spacing: 0.03em
+        @media screen and ( max-width:  $md3)
+            margin: 10px 0 0px 0
+
+        &:last-child
+            margin-bottom: 50px
+    .btn-container
+        margin-top: 20px
+    @media screen and ( max-width:  $md3)
+        .h2-title
+            text-align: center
+            font-size: 24px
+            margin: 10px 0
+
+.btn-container
+    display: flex
+    gap: 30px
+
+    &_go-down
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            display: flex
+            left: calc( 50% - 585px )
+            transform: translateX(-50%)
+            top: 0
+            border:
+                top: 1px solid #262626
+                left: 1px solid #262626
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            display: flex
+            bottom: -20px
+            right: calc(50% - 585px )
+            transform: translateX(-50%)
+            border:
+                top: 1px solid #262626
+                right: 1px solid #262626
+
+    &_go-up
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            display: flex
+            left: calc( 50% - 585px )
+            transform: translateX(-50%)
+            bottom: 10px
+            border:
+                bottom: 1px solid #262626
+                left: 1px solid #262626
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            display: flex
+            bottom: 10px
+            right: calc(50% - 585px )
+            transform: translateX(-50%)
+            border:
+                bottom: 1px solid #262626
+                right: 1px solid #262626
+
+.social-container
+    display: flex
+    gap: 12px
+    @media screen and ( max-width: $md3 )
+        gap: 18px
+    .social-icon
+        width: 32px
+        height: 32px
+        display: flex
+        background-size: contain
+        @media screen and ( max-width: $md3 )
+            width: 24px
+            height: 24px
+
+        &.vk
+            background-image: url(/svg/vk.svg)
+        &.tg
+            background-image: url(/svg/tg.svg)
+        &.inst
+            background-image: url(/svg/inst.svg)
+
+.text-list
+    display: flex
+    flex-direction: column
+    gap: 4px
+    font-size: 1.6rem
+    color: #393939
+    &__title
+        &.bold
+            font-weight: 600
+    &__item
+
+.btn
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1.3rem 7rem
+    font-size: 1.6rem
+    font-weight: 500
+    border-width: 1px
+    border-style: solid
+    width: fit-content
+    height: fit-content
+    background: transparent
+    cursor: pointer
+    transition: all .32s ease-in-out
+    @media screen and ( max-width:  $md3)
+        padding: 1.3rem 4.5rem
+        font-size: 1.5rem
+    @media screen and ( max-width:  $md4)
+        padding: 1.3rem 2rem
+
+    &_white
+        border-color: #fff
+        // background: #fff
+        color: #fff
+        &:hover
+            background: #fff
+            color: #393939
+
+    &_black
+        border-color: #393939
+        // background: #fff
+        color: #393939
+        &:hover
+            background: #393939
+            color: #fff
+
+.text-column
+    display: flex
+    flex-direction: column
+    gap: 16px
+    max-width: 570px
+    margin: 30px 0 80px 0
+.time-circle
+    height: 4px
+    width: 4px
+    border: 1px solid #262626
+    border-radius: 2px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+    &::after, &::before
+        content: ''
+        position: absolute
+        width: 4px
+        height: 4px
+        border: 1px solid #262626
+        border-radius: 2px
+        top: 50%
+        transform: translateY(-50%)
+
+    &::after
+        left: -12px
+    &::before
+        right: -12px
+
+.plazma-slider
+    height: 500px
+    width: 100%
+    display: flex
+    overflow: hidden
+    position: relative
+    justify-content: center
+    @media screen and ( max-width:  $md2)
+        height: 350px
+
+    &__content
+        display: flex
+        align-items: center
+        gap: 105px
+        transform: translateX(0)
+        transition: transform 0.5s ease-in-out
+        position: relative
+        @media screen and ( max-width:  $md2)
+            gap: 70px
+    &__item
+        display: flex
+        height: 410px
+        width: 615px
+        background-size: cover
+        background-repeat: no-repeat
+        transform: scale(1)
+        transition: transform .3s ease-in-out
+        max-width: 100%
+
+        @media screen and ( max-width:  $md2)
+            height: 310px
+            width: 455px
+        @media screen and ( max-width:  $md3)
+            height: 260px
+            width: 375px
+
+        @media screen and ( max-width:  $md4)
+            height: 260px
+            width: 375px
+
+        &.prev,&.next
+            transform: scale(1)
+        &.active
+            transform: scale(1.25)
+
+        &-fake-prev,
+        &-fake-next
+            position: absolute
+            height: 410px
+            width: 615px
+            background-size: cover
+            background-repeat: no-repeat
+            top: 50%
+            transform: translateY(-50%) scale(1)
+            @media screen and ( max-width:  $md2)
+                height: 310px
+                width: 455px
+
+        &-fake-prev
+            left: -720px
+            @media screen and ( max-width:  $md2)
+                left: -525px
+
+        &-fake-next
+            right: -720px
+            @media screen and ( max-width:  $md2)
+                right: -525px
+    &__nav
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        position: absolute
+        display: flex
+        justify-content: space-between
+        width: 830px
+        @media screen and ( max-width:  $md2)
+            width: calc( 100% - 40px )
+        @media screen and ( max-width:  $md3)
+            width: calc( 100% - 40px )
+
+    &__slider-btn
+        width: 64px
+        height: 64px
+        box-shadow: -2px 41px 11px rgba(0, 0, 0, 0.01), -1px 26px 11px rgba(0, 0, 0, 0.05), -1px 15px 9px rgba(0, 0, 0, 0.18), 0px 7px 7px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.34), 0px 0px 0px rgba(0, 0, 0, 0.35)
+        background: #fff
+        position: relative
+        font-size: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-transform: uppercase
+        color: #fff
+        @media screen and ( max-width: $md2 )
+            width: 48px
+            height: 48px
+
+        &::after
+            content: ''
+            position: absolute
+            height: 20px
+            width: 20px
+            left: 50%
+            top: 50%
+
+        &.btn-next::after
+            transform: translate(-70%, -50%) rotate(-45deg)
+            border-right: 2px solid #262626
+            border-bottom: 2px solid #262626
+
+        &.btn-prev::after
+            transform: translate(-30%, -50%) rotate(45deg)
+            border-left: 2px solid #262626
+            border-bottom: 2px solid #262626
+
+        &::before
+            content: ''
+            position: absolute
+            height: 60px
+            width: 60px
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            border: 1px solid #262626
+            transition: all .32s ease-in-out
+            @media screen and ( max-width: $md2 )
+                height: 44px
+                width: 44px
+
+        &:hover
+            &::before
+                border-color: #fff
+
+.images-hor-scroll
+    // position: relative
+    width: 100%
+    padding: 100px 0
+    display: flex
+    align-items: center
+    // margin-top: 200px
+    &__container
+        min-width: 100%
+        display: flex
+        padding: 50px
+        gap: 30px
+    &__img
+        display: flex
+        img
+            width: 370px
+            height: 500px
+            object-fit: cover
+
+        &.rest
+            img
+                width: 500px
+                height: 500px
+                object-fit: cover
+
+.big-p
+    display: flex
+    flex-direction: column
+    gap: 40px
+    position: relative
+    width: 100%
+    padding-bottom: 100px !important
+
+    @media screen and ( max-width:  $md1)
+        align-items: center
+
+    @media screen and ( max-width:  $md2)
+        padding-bottom: 60px !important
+
+    &.two-text-blocks
+        flex-direction: row
+        .big-p__desc
+            max-width: 370px
+    .dotted-text
+        font-size: 1.6rem
+        font-weight: normal
+        color: #262626
+        position: absolute
+        bottom: 100px
+        right: 0
+        display: flex
+        height: 28px
+        border-bottom: 1px dotted #393939
+        cursor: pointer
+        transition: all .32s ease-in-out
+        width: max-content
+        @media screen and ( max-width:  $md1)
+            bottom: 0px
+            right: 50%
+            transform: translateX(50%)
+        &:hover
+            color: #262626
+
+    &__title
+        font-weight: 400
+        font-size: 24px
+        line-height: 31px
+        color: #262626
+        @media screen and ( max-width:  $md1)
+            text-align: center
+            padding: 0 30px
+
+    &__desc
+        font-weight: 400
+        font-size: 16px
+        line-height: 23px
+        letter-spacing: 0.03em
+        color: #393939
+        max-width: 920px
+        @media screen and ( max-width:  $md1)
+            text-align: center
+
+    &__attr
+        display: flex
+        gap: 30px
+        font-size: 16px
+        color: #393939
+        line-height: 23px
+        letter-spacing: 0.48px
+        &-title
+            display: flex
+            width: 120px
+            font-weight: 700
+        &-desc
+            display: flex
+            flex-direction: column
+            gap: 6px
+            width: 580px
+            font-weight: 500
+
+    &__btn
+        position: absolute
+        bottom: 0
+        right: 0
+        @media screen and ( max-width:  $md1)
+            right: 50%
+            transform: translateX(50%)
+            bottom: -60px
+
+    &_border
+        &::after
+            content: ''
+            display: flex
+            position: absolute
+            width: 20px
+            height: 20px
+            border-right: 1px solid #262626
+            border-top: 1px solid #262626
+            top: 0
+            right: 0
+            @media screen and ( max-width:  $md1)
+                top: auto
+                bottom: -60px
+                right: 24px
+                border-top: none
+                border-right: 1px solid #262626
+                border-bottom: 1px solid #262626
+
+        &::before
+            content: ''
+            display: flex
+            position: absolute
+            width: 30px
+            height: 30px
+            border-left: 1px solid #262626
+            border-bottom: 1px solid #262626
+            bottom: 0
+            left: 0
+            @media screen and ( max-width: $md1)
+                top: auto
+                bottom: -60px
+                border-top: none
+                left: 24px
+                width: 20px
+                height: 20px
+                border-bottom: 1px solid #262626
+
+    &_border-top
+        &::after
+            content: ''
+            display: flex
+            position: absolute
+            width: 20px
+            height: 20px
+            border-right: 1px solid #262626
+            border-top: 1px solid #262626
+            top: 0
+            right: 0
+            @media screen and ( max-width:  $md1)
+                top: 0
+                right: 24px
+
+.worktime-section
+    &__about
+        display: flex
+        flex-direction: column
+        gap: 30px
+        max-width: 470px
+
+    &__title
+        font-weight: 400
+        font-size: 32px
+        line-height: 41px
+        color: #262626
+        @media screen and ( max-width:  $md1)
+            text-align: center
+    &__desc
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 23px
+        letter-spacing: 0.03em
+        color: #262626
+        @media screen and ( max-width:  $md1)
+            text-align: center
+
+    &__timetable
+        width: 570px
+        padding: 40px 100px 50px 100px
+        border: 1px solid #262626
+        display: flex
+        flex-direction: column
+        gap: 35px
+        transition: all .3s ease-in-out
+        @media screen and ( max-width:  $md2)
+            max-width: calc( 100% )
+            margin: 0 auto
+            gap: 25px
+            padding: 20px 40px 25px 40px
+
+        @media screen and ( max-width:  $md3)
+            padding: 20px 20px 25px 20px
+            gap: 15px
+
+        &-content
+            display: flex
+            flex-direction: column
+            gap: 16px
+        &-title
+            font-weight: 500
+            font-size: 20px
+            line-height: 26px
+            text-align: center
+            letter-spacing: 0.03em
+            color: #262626
+
+        &-row
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            position: relative
+
+        &-box
+            display: flex
+            flex-direction: column
+            gap: 5px
+            .worktime-section__timetable-text:last-child
+                font-size: 15px
+                @media screen and ( max-width: $md3 )
+                    font-size: 14px
+                    letter-spacing: 0
+        &-text
+            font-weight: 500
+            font-size: 16px
+            line-height: 20px
+            letter-spacing: 0.03em
+            color: #262626
+                
+.icon
+    width: 24px
+    height: 24px
+    display: flex

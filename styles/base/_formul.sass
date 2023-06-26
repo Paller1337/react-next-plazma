@@ -1,0 +1,37 @@
+//<Основная адаптивная сетка брэкпоинты
+
+.container
+    max-width: $maxWidthContainer + px
+    margin: 0 auto
+    @media (max-width: $md1)
+        max-width: 1440px
+        padding:
+            left: 70px 
+            right: 70px
+
+    @media (max-width: $md2)
+        max-width: 970px
+        padding: 
+            left: 24px 
+            right: 24px
+        
+    @media (max-width: $md3)
+        max-width: none
+        padding:
+            left: 12px
+            right: 12px
+    
+    @media (max-width: $md4)
+        max-width: 94% 
+        // padding: 0px 26px
+
+//<Основная адаптивная сетка
+
+.wrapper
+    width: 100%
+    min-height: 100%
+    overflow: hidden
+    display: flex
+    flex-direction: column
+
+    
