@@ -11,6 +11,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import useLocoScroll from '../components/functions/useLocoScroll'
 import { BnovoLoadContextProvider } from '../components/bnovo/bnovoContext'
+import { useRouter } from 'next/router'
+import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 
 // gsap.registerPlugin(ScrollTrigger)
 // gsap.registerPlugin(ScrollSmoother)
@@ -36,7 +38,19 @@ export default function App({ Component, pageProps }: AppProps) {
   //     }
   //   }
   // }, [])
+  const router = useRouter()
+  const loaderRef = useRef<LoadingBarRef>(null)
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => {
+      loaderRef.current?.continuousStart()
+    })
 
+    router.events.on('routeChangeComplete', () => {
+      loaderRef.current?.complete()
+    })
+
+
+  }, [pageProps])
 
 
   return (
@@ -48,6 +62,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <script src="https://widget.reservationsteps.ru/js/bnovo.js" async></script>
 
       </Head>
+
+      <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
       <div className='wrapper'>
         {/* <RLSProvider
