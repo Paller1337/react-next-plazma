@@ -18,9 +18,8 @@ export default function useLocoScroll() {
         // @ts-ignore
         import("locomotive-scroll").then((locomotiveModule) => {
             scroll = new locomotiveModule.default({
-                el: document.querySelector("[data-scroll-container]"),
+                el: document.querySelector("[data-scroll-container]") as HTMLElement,
                 smooth: true,
-                smoothMobile: true,
                 resetNativeScroll: true,
                 lerp: 0.12
             });
