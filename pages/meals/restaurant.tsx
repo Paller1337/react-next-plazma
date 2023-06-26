@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import PromoBackground from '../../components/PromoBackground'
+// import PromoBackground from '../../components/PromoBackground'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
@@ -46,12 +46,9 @@ export default function PageRestaurant() {
                         <div className='big-p big-p_border container'>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
-                                Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце
-                                Бирмингема, штат Мичиган, в викторианском особняке Пибоди. Шеф-повар Ллойд Робертс
-                                привносит с собой многолетний опыт и возглавляет команду кухни с инновациями и
-                                превосходной техникой. Adachi предлагает множество гастрономических приключений с
-                                множеством маленьких и больших тарелок, фирменными коктейлями и полным суши-баром,
-                                оборудованным блюдами сашими и нигири, привезенными из Японии.
+                                Мы очень заботимся о качестве наших услуг, поэтому практически все заказы мы делаем из-под ножа, используя самые свежие продукты,
+                                чтобы гость не усомнился, что это блюдо было приготовлено специально для него.
+                                Ресторан оформлен в темных коричневых тонах, предлагая укрыться от солнца летом и насладиться уютной обстановкой с камином зимой.
                             </span>
 
                             <div className='btn btn_black big-p__btn'>Наше меню</div>
@@ -69,10 +66,8 @@ export default function PageRestaurant() {
                         <div className='rest-welcome__work-time worktime-section container'>
                             <div className='worktime-section__about'>
                                 <span className='worktime-section__title'>Ресторан «PLAZMA»</span>
-                                <span className='worktime-section__desc'>Ресторан Adachi - это ресторан в японском стиле,
-                                    расположенный
-                                    в
-                                    самом сердце Бирмингема, штат Мичиган, в викторианском особняке Пибоди. </span>
+                                <span className='worktime-section__desc'>У нас есть столы на большие и маленькие компании, а также отдельные кабинки.
+                                    В ресторане возможна организация мероприятий любого уровня. </span>
                             </div>
 
                             <div className='worktime-section__timetable'>
@@ -87,7 +82,7 @@ export default function PageRestaurant() {
                                     <div className='worktime-section__timetable-row'>
                                         <span className='worktime-section__timetable-text'>Суббота:</span>
                                         <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
+                                        <span className='worktime-section__timetable-text'>11:00 - 02:00</span>
                                     </div>
 
                                     <div className='worktime-section__timetable-row'>
@@ -104,9 +99,7 @@ export default function PageRestaurant() {
                     <div className='text-section text-section_med container' data-scroll-section>
                         <span className='h2-title'>Банкеты и мероприятия</span>
                         <span className='text'>
-                            Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце Бирмингема, штат
-                            Мичиган, в викторианском особняке Пибоди. Шеф-повар Ллойд Робертс привносит с собой многолетний
-                            опыт и возглавляет команду кухни с инновациями и превосходной техникой.
+                            В ресторане возможна организация мероприятий любого уровня.
                         </span>
 
                         <div className='btn-container'>
@@ -116,10 +109,10 @@ export default function PageRestaurant() {
                     </div>
 
 
-                    <div className='footnote container' data-scroll-section>
+                    {/* <div className='footnote container' data-scroll-section>
                         <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.
                         </div>
-                    </div>
+                    </div> */}
                     <Footer />
                 </div >
             </main>

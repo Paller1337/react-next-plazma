@@ -5,9 +5,13 @@ export const slidersData = [
             '/img/hotel/promo-slides/1.jpg',
             '/img/hotel/promo-slides/2.jpg',
             '/img/hotel/promo-slides/3.jpg',
-            '/img/hotel/promo-slides/1.jpg',
-            '/img/hotel/promo-slides/2.jpg',
-            '/img/hotel/promo-slides/3.jpg',
+            '/img/hotel/promo-slides/4.jpg',
+            '/img/hotel/promo-slides/5.jpg',
+            '/img/hotel/promo-slides/6.jpg',
+            '/img/hotel/promo-slides/7.jpg',
+            '/img/hotel/promo-slides/8.jpg',
+            '/img/hotel/promo-slides/9.jpg',
+            '/img/hotel/promo-slides/10.jpg',
         ]
     },
     

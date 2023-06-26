@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Button from './Button'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 interface HeaderProps {
     darken?: boolean
@@ -10,7 +11,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
     const [burgerIsOpen, setBurgerIsOpen] = useState(false)
-
+    const router = useRouter()
 
     const menuOpen = (status: boolean) => {
         const HTMLItem = document.getElementsByTagName('html')[0]
@@ -130,7 +131,7 @@ export default function Header(props: HeaderProps) {
                             </object>
                         </div>
 
-                        <div className='menu__btn btn btn_white'>
+                        <div className='menu__btn btn btn_white' onClick={() => router.push('/hotel#hotelRooms')}>
                             Забронировать номер
                         </div>
 

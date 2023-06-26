@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import PromoBackground from '../../components/PromoBackground'
+
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
@@ -46,12 +46,14 @@ export default function PageBanquetHall() {
                         <div className='big-p big-p_border container'>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
-                                Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце
-                                Бирмингема, штат Мичиган, в викторианском особняке Пибоди. Шеф-повар Ллойд Робертс
-                                привносит с собой многолетний опыт и возглавляет команду кухни с инновациями и
-                                превосходной техникой. Adachi предлагает множество гастрономических приключений с
-                                множеством маленьких и больших тарелок, фирменными коктейлями и полным суши-баром,
-                                оборудованным блюдами сашими и нигири, привезенными из Японии.
+                                Наш банкетный зал - отличное место для особых событий и торжеств любого уровня. 
+                                Он находится в отдельном здании, чтобы никто вам не помешал. 
+                                Просторный и элегантный, он подарит вам ощущение особенности вашего события.  
+                                У нас вы сможете провести свою свадьбу, юбилей, корпоративное мероприятие или что-то другое. 
+                                Мы предлагаем разнообразные варианты оформления и меню, чтобы каждый гость остался доволен. 
+                                Наш профессиональный персонал будет обслуживать вас с начала мероприятия до самого конца, 
+                                мы готовы воплотить ваши идеи и позаботиться о каждой детали, чтобы ваше мероприятие было таким, как вы его задумали. 
+                                
                             </span>
 
                             <div className='btn btn_black big-p__btn'>Наше меню</div>
@@ -60,7 +62,7 @@ export default function PageBanquetHall() {
 
                         <PlazmaSlider data='banquetHall' />
 
-
+                        {/* 
                         <div className='rest-welcome__work-time worktime-section container'>
                             <div className='worktime-section__about'>
                                 <span className='worktime-section__title'>Столовая «SMASH»</span>
@@ -91,12 +93,12 @@ export default function PageBanquetHall() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
 
                     <div className='footnote container' data-scroll-section>
-                        <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.</div>
+                        <div className='text'>Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.</div>
                     </div>
                     <Footer />
                 </div >

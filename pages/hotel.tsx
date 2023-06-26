@@ -58,10 +58,10 @@ export default function PageHotel() {
                     </div>
 
 
-                    <div className='page-hotel__rooms hotel-rooms' data-scroll-section>
+                    <div id='hotelRooms' className='page-hotel__rooms hotel-rooms' data-scroll-section>
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
-                        <div id='hotelRooms' className='hotel-rooms__content container' data-scroll>
+                        <div className='hotel-rooms__content container' data-scroll>
                             {hotelRooms.map((x, i) =>
                                 <RoomObject
                                     key={i}
@@ -69,7 +69,7 @@ export default function PageHotel() {
                                     title={x.title}
                                     description={x.description}
                                     size={x.size}
-                                    image={x.image}
+                                    images={x.images}
                                     attributes={x.attributes}
                                     amenities={x.amenities}
                                 />

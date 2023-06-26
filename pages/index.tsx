@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import BookingPromo from '../components/bnovo/BookingPromo'
 
 
 
@@ -30,7 +31,7 @@ export default function PageIndex() {
               </h1>
             </div>
 
-            {/* @@include('./../components/_promo-action.html',{ }) */}
+            <BookingPromo />
           </div>
 
           <div className='base-bg' data-scroll-section></div>
@@ -57,7 +58,7 @@ export default function PageIndex() {
                 <ul>
                   <li className='page-aquatory__list-item'>7 гектар занимает территория отеля</li>
                   <li className='page-aquatory__list-item'>130 единиц составляет наш номерной фонд</li>
-                  <li className='page-aquatory__list-item'>320 человек вмещает отель</li>
+                  <li className='page-aquatory__list-item'>400 человек вмещает отель</li>
                   <li className='page-aquatory__list-item'>1 пляж с водоемом</li>
                   <li className='page-aquatory__list-item'>3 крытых спортивных объекта</li>
                   <li className='page-aquatory__list-item'>3 бани на дровах с бассейном</li>
@@ -91,7 +92,7 @@ export default function PageIndex() {
                     учетом удобства и современных тенденций. Мы уверены, что у нас вы сможете
                     расслабиться и в полной мере насладиться отдыхом. Наш номерной фонд настолько
                     разнообразен, что каждый сможет найти себе что-то по душе. В гостинице 130 номеров,
-                    которые вмещают 320 человек. У нас есть номера на 2,3,4,5,6,7,8 человек, некоторые
+                    которые вмещают 400 человек. У нас есть номера на 2,3,4,5,6,7,8 человек, некоторые
                     из них расположены в гостиничных корпусах, а некоторые –отдельные домики с видом на
                     набережную.
                   </span>
@@ -103,7 +104,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/2.png" alt='Парк-отель Plazma'/>
+                    <img className='js--mobile-parallax' src="img/index/previews/2.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -130,7 +131,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/4.png"  alt='Парк-отель Plazma'/>
+                    <img className='js--mobile-parallax' src="img/index/previews/4.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -160,7 +161,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/3.png"  alt='Парк-отель Plazma'/>
+                    <img className='js--mobile-parallax' src="img/index/previews/3.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -185,7 +186,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/5.png"  alt='Парк-отель Plazma'/>
+                    <img className='js--mobile-parallax' src="img/index/previews/5.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -197,11 +198,11 @@ export default function PageIndex() {
                 <div className='preview-blocks__preview-text'>
                   <span className='text-title'>МЕРОПРИЯТИЯ</span>
                   <span className='text'>
-                    У нас есть множество мест для проведения заличных мероприятий.. В ресторане можно
+                    У нас есть множество мест для проведения различных мероприятий.. В ресторане можно
                     провести выпускной, в банкетном зале – свадьбу, в шатре – юбилей, в беседках –
                     детский день рождения, в конференц-зале – тимбилдинг, на травяном пляже – групповые
                     занятия по йоге. У нас также есть 5 спортивных объектов, которые могут стать
-                    площадкой для спортивных мероприятий.
+                    площадками для спортивных мероприятий.
                   </span>
 
                   <a className='btn btn_black' href='events.html'>Подробнее</a>
@@ -211,7 +212,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src='img/index/previews/7.png'  alt='Парк-отель Plazma'/>
+                    <img className='js--mobile-parallax' src='img/index/previews/7.png' alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -238,7 +239,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    {/* <img className='js--mobile-parallax' src="img/index/previews/6.png"> */}
+                    <img className='js--mobile-parallax' src="img/index/previews/6.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>

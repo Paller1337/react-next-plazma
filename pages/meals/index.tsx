@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import PromoBackground from '../../components/PromoBackground'
+// import PromoBackground from '../../components/PromoBackground'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 

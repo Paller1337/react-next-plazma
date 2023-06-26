@@ -1,4 +1,6 @@
 html {
+    scroll-behavior: smooth;
+
     &.has-scroll-smooth {
         backface-visibility: hidden;
         // transform: translateZ(0);
@@ -35,6 +37,7 @@ body {
 
 [data-scroll-section] {
     perspective: 1px;
+
     [data-scroll-direction="horizontal"] & {
         display: inline-block;
         vertical-align: top;

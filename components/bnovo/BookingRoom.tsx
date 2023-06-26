@@ -4,13 +4,15 @@ declare var Bnovo_Widget: any
 
 
 
-export default function BookingRoom(room: { roomId: number, targetId: string }) {
+export default function BookingRoom(room: { roomId: number | number[], targetId: string }) {
     const btnRef = useRef<HTMLDivElement  | null>(null)
     const targetSection = useRef<HTMLDivElement  | null>(null)
-    const { bnovoIsLoad, setBnovoIsLoad } = useContext(BnovoContext)
+    const { bnovoIsLoad } = useContext(BnovoContext)
     const [bnovoIsOpen, setBnovoIsOpen] = useState(false)
 
-    const openRoomBooking = (id: number, target: string) => {
+    const rooms = room.roomId.toString()
+
+    const openRoomBooking = (id: string, target: string) => {
         if (bnovoIsOpen) return
         Bnovo_Widget.init(function () {
             setBnovoIsOpen(true)
@@ -47,7 +49,7 @@ export default function BookingRoom(room: { roomId: number, targetId: string }) 
                 dto_nextday: "on",
                 dto_value: "2",
                 cancel_preset: "on",
-                url: "http://kplazma.ru/%d0%b7%d0%b0%d0%b1%d1%80%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c/",
+                url: "http://192.168.1.19:3000/booking",
                 onlyrooms: `${id}`
             });
         });
@@ -56,7 +58,7 @@ export default function BookingRoom(room: { roomId: number, targetId: string }) 
     const bookingToggle = () => {
         const bookingSection = targetSection.current 
         if (bnovoIsLoad && !bnovoIsOpen) {
-            openRoomBooking(room.roomId, room.targetId)
+            openRoomBooking(rooms, room.targetId)
         } else {
             if(bookingSection){
                 bookingSection.innerHTML = ''

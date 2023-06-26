@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import PromoBackground from '../components/PromoBackground'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
 import { aquatoryObjData } from '../data/aquatoryObj'
@@ -43,8 +42,7 @@ export default function PageAquatory() {
                     <div className='page-aquatory__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>Акватория «PLAZMA»</span>
                         <span className='text'>
-                            Акватория парк-отеля «PLAZMA» – это настоящий оазис, место, где гости могут отвлечься от шума и
-                            суеты повседневной жизни и отдохнуть в успокаивающих объятиях природы.
+                            Plazma Акватория – это оазис внутри города, место, где гости могут отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.
                         </span>
                     </div>
 
@@ -52,8 +50,9 @@ export default function PageAquatory() {
                         <div className='promo-info__upper'>
                             <div className='promo-info__text-wrapper'>
                                 <span className='text-title uppercase'>Отдых для всей семьи</span>
-                                <span className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом
-                                    сердце Бирмингема, штат Мичиган, в викторианском особняке Пибоди.
+                                <span className='text'>Акватория объединяет людей с разными интересами, у нас найдется занятие для каждого члена вашей семьи.
+                                    Дети заводят новые знакомства на детской площадке или катаются на самокатах, подростки играют в волейбол или устраивают пикник,
+                                    родители с удовольствием жарят шашлык на мангале, а бабушки и дедушки могут отдохнуть в тени под соснами, наслаждаясь природой.
                                 </span>
                             </div>
 
@@ -74,9 +73,7 @@ export default function PageAquatory() {
                         </div>
 
                         <div className='flex-row'>
-                            <span className='footnote-text text-normal'>Ресторан Adachi - это ресторан в японском стиле,
-                                расположенный в самом сердце
-                                Бирмингема, штат Мичиган, в викторианском особняке Пибоди. </span>
+                            <span className='footnote-text text-normal'>На территории работают охранники-спасатели!</span>
                         </div>
                     </div>
 
@@ -129,22 +126,25 @@ export default function PageAquatory() {
                         <div className='aquatory-props__first'>
                             <div className='page-aquatory__list'>
                                 <span className='page-aquatory__list-title'>На территории:</span>
-                                <ul>
-                                    <li className='page-aquatory__list-item'>Водоём</li>
+                                <ul>               
+                                                     
+                                    <li className='page-aquatory__list-item'>Искусственный живой водоём 12000 кв.м.</li>
                                     <li className='page-aquatory__list-item'>Пляж</li>
                                     <li className='page-aquatory__list-item'>Кабинки для переодевания</li>
                                     <li className='page-aquatory__list-item'>Туалет</li>
                                     <li className='page-aquatory__list-item'>Душ</li>
-                                    <li className='page-aquatory__list-item'>Кафе Smash</li>
-                                    <li className='page-aquatory__list-item'>Гигантские шахматы</li>
+                                    <li className='page-aquatory__list-item'>Столовая Smash</li>
+                                    <li className='page-aquatory__list-item'>Шатёр-ресторан</li>
+                                    <li className='page-aquatory__list-item'>Большие шахматы</li>
                                     <li className='page-aquatory__list-item'>Мини-зоопарк</li>
-                                    <li className='page-aquatory__list-item'>Детская площадка</li>
+                                    <li className='page-aquatory__list-item'>2 детские площадки</li>
                                     <li className='page-aquatory__list-item'>Детская песочница</li>
+                                    <li className='page-aquatory__list-item'>Воркаут площадка</li>
                                     <li className='page-aquatory__list-item'>Беседки с мангалом (оплачивается дополнительно)
                                     </li>
                                     <li className='page-aquatory__list-item'>Полуостров с бассейном (оплачивается дополнительно)
                                     </li>
-                                    <li className='page-aquatory__list-item'>Шатёр (где можно перекусить по меню ресторана)</li>
+                                    <li className='page-aquatory__list-item'>Универсальные спортивные площадки (оплачивается дополнительно)</li>
                                     <li className='page-aquatory__list-item'>Волейбольные площадки (оплачивается дополнительно)
                                     </li>
                                 </ul>
@@ -166,6 +166,8 @@ export default function PageAquatory() {
                                     <li className='page-aquatory__list-item'>Аренда шезлонга – 150 рублей.</li>
                                     <li className='page-aquatory__list-item'>Аренда полотенца (180х100) – 200 рублей + залог
                                         1000 рублей наличными.</li>
+                                    <li className='page-aquatory__list-item'>Прокат веломобилей – 300 рублей (20 минут, 1 человек)</li>
+                                    <li className='page-aquatory__list-item'>Прокат электролодок  – 300 рублей (5 минут, 2 человека)</li>
                                     <li className='page-aquatory__list-item'>Для детей в продаже имеются нарукавники, жилеты,
                                         круги для плавания, водяные пистолеты.</li>
                                     <li className='page-aquatory__list-item'>Масла для загара</li>

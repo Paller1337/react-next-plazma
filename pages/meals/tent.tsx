@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import PromoBackground from '../../components/PromoBackground'
+
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
@@ -46,12 +46,11 @@ export default function PageTent() {
                         <div className='big-p big-p_border container'>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
-                                Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце
-                                Бирмингема, штат Мичиган, в викторианском особняке Пибоди. Шеф-повар Ллойд Робертс
-                                привносит с собой многолетний опыт и возглавляет команду кухни с инновациями и
-                                превосходной техникой. Adachi предлагает множество гастрономических приключений с
-                                множеством маленьких и больших тарелок, фирменными коктейлями и полным суши-баром,
-                                оборудованным блюдами сашими и нигири, привезенными из Японии.
+                                Расположенный на полуострове, он предлагает неповторимую атмосферу и вид на водоем. 
+                                В нашем шатре вы сможете насладиться прохладными напитками и изысканными блюдами, приготовленными нашими опытными поварами. 
+                                Мы стремимся создать комфортное пространство, где вы сможете расслабиться и насладиться приятной беседой с друзьями или близкими. 
+                                Независимо от того, ищете ли вы место для романтического ужина или большой семейной встречи, 
+                                наш летний шатер-ресторан позволит насладиться приятными моментами на свежем воздухе в уютной обстановке.
                             </span>
 
                             <div className='btn btn_black big-p__btn'>Наше меню</div>
@@ -61,19 +60,8 @@ export default function PageTent() {
 
                         <PlazmaSlider data='summerTentSlider' />
 
-                        <div id='plazmaSlider' className='plazma-slider smash-slider' data-scroll>
-                            <div className='plazma-slider__content' slider-content='summerTentSlider'>
 
-                            </div>
-
-                            <div className='plazma-slider__nav'>
-                                <div className='plazma-slider__slider-btn btn-prev'>НАЗАД</div>
-                                <div className='plazma-slider__slider-btn btn-next'>ВПЕРЕД</div>
-                            </div>
-                        </div>
-
-
-                        <div className='rest-welcome__work-time worktime-section container'>
+                        {/* <div className='rest-welcome__work-time worktime-section container'>
                             <div className='worktime-section__about'>
                                 <span className='worktime-section__title'>Столовая «SMASH»</span>
                                 <span className='worktime-section__desc'>Ресторан Adachi - это ресторан в японском стиле, расположенный
@@ -103,7 +91,7 @@ export default function PageTent() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
 

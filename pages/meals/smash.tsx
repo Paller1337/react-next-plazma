@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import PromoBackground from '../../components/PromoBackground'
+// import PromoBackground from '../../components/PromoBackground'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
@@ -43,7 +43,7 @@ export default function PageSmash() {
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
-                        <div className='big-p big-p_border container'>
+                        {/* <div className='big-p big-p_border container'>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
                                 Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце
@@ -55,49 +55,52 @@ export default function PageSmash() {
                             </span>
 
                             <div className='btn btn_black big-p__btn'>Наше меню</div>
-                        </div>
-
-                        <PlazmaSlider data='smashSlider' />
+                        </div> */}
 
 
 
-                        <div className='rest-welcome__work-time worktime-section container'>
+                        <div className='rest-welcome__work-time worktime-section mb container'>
                             <div className='worktime-section__about'>
                                 <span className='worktime-section__title'>Столовая «SMASH»</span>
-                                <span className='worktime-section__desc'>Ресторан Adachi - это ресторан в японском стиле, расположенный
-                                    в
-                                    самом сердце Бирмингема, штат Мичиган, в викторианском особняке Пибоди. </span>
+                                <span className='worktime-section__desc'>Столовая SMASH предлагает быструю и вкусную еду на завтрак, обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.
+                                </span>
                             </div>
 
                             <div className='worktime-section__timetable'>
                                 <span className='worktime-section__timetable-title'>Часы работы</span>
                                 <div className='worktime-section__timetable-content'>
                                     <div className='worktime-section__timetable-row'>
-                                        <span className='worktime-section__timetable-text'>Пн. - Пт.:</span>
+                                        <span className='worktime-section__timetable-text'>Пн. - Вс.:</span>
                                         <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
+                                        <span className='worktime-section__timetable-text'>07:00 - 23:00</span>
+                                    </div>
+                                    <div className='worktime-section__timetable-row'>
+                                        <span className='worktime-section__timetable-text'>Перерыв:</span>
+                                        <i className='time-circle'></i>
+                                        <span className='worktime-section__timetable-text'>12:30 - 13:30</span>
+                                    </div>
+                                </div>
+
+                                <span className='worktime-section__timetable-title'>Расписание кухни</span>
+                                <div className='worktime-section__timetable-content'>
+                                    <div className='worktime-section__timetable-row'>
+                                        <span className='worktime-section__timetable-text'>Все меню:</span>
+                                        <i className='time-circle'></i>
+                                        <span className='worktime-section__timetable-text'>07:00 - 19:00</span>
                                     </div>
 
                                     <div className='worktime-section__timetable-row'>
-                                        <span className='worktime-section__timetable-text'>Суббота:</span>
+                                        <span className='worktime-section__timetable-text'>Роллы и пицца:</span>
                                         <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
-                                    </div>
-
-                                    <div className='worktime-section__timetable-row'>
-                                        <span className='worktime-section__timetable-text'>Воскресенье:</span>
-                                        <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
+                                        <span className='worktime-section__timetable-text'>07:00 - 23:00</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <PlazmaSlider data='smashSlider' />
                     </div>
 
-
-                    <div className='footnote container' data-scroll-section>
-                        <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.</div>
-                    </div>
                     <Footer />
                 </div >
             </main>
