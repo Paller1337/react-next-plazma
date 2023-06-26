@@ -3,3 +3,6 @@ meta:
   toolchain:
     name: browser
     version: 18
+    
+run:
+  containerPort: 8080
