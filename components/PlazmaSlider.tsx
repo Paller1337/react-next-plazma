@@ -6,7 +6,7 @@ interface PlazmaSliderProps {
 }
 
 export default function PlazmaSlider(props: PlazmaSliderProps) {
-    const [currentIndex, setCurrentIndex] = useState(2); // Текущий индекс активного слайда
+    const [currentIndex, setCurrentIndex] = useState(0); // Текущий индекс активного слайда
     const sliderContentRef = useRef<HTMLDivElement>(null);
 
     const dataName = props.data || 'smashSlider';

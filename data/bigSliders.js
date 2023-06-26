@@ -84,14 +84,14 @@ export const slidersData = [
     {
         name: 'banquetHall',
         images: [
-            '/img/banquet-hall/slider/1.jpg',
+            '/img/banquet-hall/slider/6.jpg',
             '/img/banquet-hall/slider/2.jpg',
             '/img/banquet-hall/slider/3.jpg',
-            '/img/banquet-hall/slider/4.jpg',
             '/img/banquet-hall/slider/5.jpg',
-            '/img/banquet-hall/slider/6.jpg',
+            '/img/banquet-hall/slider/1.jpg',
             '/img/banquet-hall/slider/7.jpg',
             '/img/banquet-hall/slider/8.jpg',
+            '/img/banquet-hall/slider/9.jpg',
         ]
     },
 ]

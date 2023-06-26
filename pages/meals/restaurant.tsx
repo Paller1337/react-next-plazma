@@ -66,8 +66,9 @@ export default function PageRestaurant() {
                         <div className='rest-welcome__work-time worktime-section container'>
                             <div className='worktime-section__about'>
                                 <span className='worktime-section__title'>Ресторан «PLAZMA»</span>
-                                <span className='worktime-section__desc'>У нас есть столы на большие и маленькие компании, а также отдельные кабинки.
-                                    В ресторане возможна организация мероприятий любого уровня. </span>
+                                <span className='worktime-section__desc'>
+                                    У нас есть столы на большие и маленькие компании, а также отдельные кабинки.
+                                </span>
                             </div>
 
                             <div className='worktime-section__timetable'>
