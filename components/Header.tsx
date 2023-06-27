@@ -80,11 +80,11 @@ export default function Header(props: HeaderProps) {
                 <div className='menu-column'>
                     <ul className="menu-column__list">
                         <li><Link href="/" className="menu-column__link">Главная</Link></li>
-                        <li><Link href="hotel" className="menu-column__link">Гостиница</Link></li>
-                        <li><Link href="meals" className="menu-column__link">Питание</Link></li>
-                        <li><Link href="aquatory" className="menu-column__link">Акватория</Link></li>
-                        <li><Link href="sauna" className="menu-column__link">Сауна</Link></li>
-                        <li><Link href="events" className="menu-column__link">мероприятия</Link></li>
+                        <li><Link href="/hotel" className="menu-column__link">Гостиница</Link></li>
+                        <li><Link href="/meals" className="menu-column__link">Питание</Link></li>
+                        <li><Link href="/aquatory" className="menu-column__link">Акватория</Link></li>
+                        <li><Link href="/sauna" className="menu-column__link">Сауна</Link></li>
+                        <li><Link href="/events" className="menu-column__link">мероприятия</Link></li>
                     </ul>
                 </div>
             </div>

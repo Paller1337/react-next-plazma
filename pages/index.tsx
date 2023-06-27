@@ -41,7 +41,7 @@ export default function PageIndex() {
 
 
           <Promo booking video />
-
+          {/* <Header /> */}
           <div className='base-bg' data-scroll-section></div>
 
           <div className='page-index__about-hotel about-hotel container' data-scroll-section>
