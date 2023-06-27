@@ -11,9 +11,9 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
 
     const dataName = props.data || 'smashSlider';
     const data = slidersData.find(x => x.name === dataName);
-    useEffect(() =>{
-        console.log(data)
-    }, [])
+    // useEffect(() =>{
+    //     console.log(data)
+    // }, [])
 
     const handlePrevClick = () => setActiveSlide(currentIndex - 1)
     const handleNextClick = () => setActiveSlide(currentIndex + 1)

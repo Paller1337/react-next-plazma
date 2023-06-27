@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import BookingPromo from '../components/bnovo/BookingPromo'
+import ReactPlayer from 'react-player'
 
 
 
@@ -16,10 +17,18 @@ export default function PageIndex() {
             <Header />
             <div className="main__video-wrapper">
               <div className="main__video-box">
-                <video className="main__video" muted loop autoPlay>
-                  <source src="video/bgvideo.webm" type="video/webm" />
+                {/* <ReactPlayer
+                  width="530px"
+                  height="300px"
+                  url="/video/bgvideo.webm"
+                  light="/img/backgrounds/tent.jpg" /> */}
+                <video className="main__video" muted loop autoPlay playsInline>
+                  <source src="/video/bg.mp4" type="video/mp4" />
+                  <source src="/video/bgvideo.webm" type="video/webm" />
+                  {/* <img src=''></img> */}
 
-                  <source src="video/bgvideo.mp4" type="video/mp4" />
+
+                  Your browser does not support the video tag.
                 </video>
                 <div className='main__video-overlay'></div>
               </div>

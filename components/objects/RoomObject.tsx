@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
 
@@ -21,46 +21,80 @@ export default function RoomObject(data: RoomObjectProps) {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [isAnimating, setIsAnimating] = useState(false)
     const [galleryIsOpen, setGalleryIsOpen] = useState(false)
-
+    const previewImageRef = useRef<HTMLDivElement>(null)
     const [firstInit, setFirstInit] = useState(true)
 
     const images = data.images
 
     const goSlide = (i: number) => {
         setCurrentSlide(i)
-        setIsAnimating(true);
+
+        // const preview = previewImageRef.current;
+        // preview?.classList.add('fade-in-animating')
     }
 
-    useEffect(() => {
-        const animationTimeout = setTimeout(() => {
-            setIsAnimating(false)
-        }, 1000)
+    // useEffect(() => {
+    //     const preview = previewImageRef.current;
 
-        return () => clearTimeout(animationTimeout)
-    }, [currentSlide])
+    //     const handleTransitionEnd = () => {
+    //         preview?.classList.remove('fade-in-animating')
+    //     };
 
-    useEffect(() => {
-        let slideN = 0;
-        const interval = setInterval(() => {
-            if (slideN < images.length - 1) {
-                slideN++
-                goSlide(slideN)
-            } else {
-                slideN = 0
-                if (firstInit) {
-                    setCurrentSlide(0)
-                    setFirstInit(false)
-                } else {
-                    goSlide(0)
-                }
-            }
-        }, 4500)
+    //     if (preview) {
+    //         preview.addEventListener('transitionend', handleTransitionEnd);
 
-        return () => clearInterval(interval)
-    }, [images])
+    //         return () => {
+    //             preview.removeEventListener('transitionend', handleTransitionEnd);
+    //         };
+    //     }
+    // }, [currentSlide]);
+
+
+    // useEffect(() => {
+    //     let slideN = 0;
+    //     const interval = setInterval(() => {
+    //         if (slideN < images.length - 1) {
+    //             slideN++
+    //             goSlide(slideN)
+    //         } else {
+    //             slideN = 0
+    //             if (firstInit) {
+    //                 setCurrentSlide(0)
+    //                 setFirstInit(false)
+    //             } else {
+    //                 goSlide(0)
+    //             }
+    //         }
+    //     }, 4500)
+
+    //     return () => clearInterval(interval)
+    // }, [images])
 
     const closeGallery = () => {
         setGalleryIsOpen(false)
+    }
+
+    const nextSlide = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation()
+        if (e.target instanceof HTMLButtonElement) {
+            if (currentSlide < images.length - 1) {
+                goSlide(currentSlide + 1)
+            } else {
+                goSlide(0)
+            }
+        }
+    }
+
+
+    const prevSlide = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation()
+        if (e.target instanceof HTMLButtonElement) {
+            if (currentSlide > 0) {
+                goSlide(currentSlide - 1)
+            } else {
+                goSlide(images.length - 1)
+            }
+        }
     }
 
     return (<>
@@ -72,10 +106,13 @@ export default function RoomObject(data: RoomObjectProps) {
         />
         <div className='hotel-rooms__item hotel-room'>
             <div className='hotel-room__preview'>
-                <div className={`hotel-room__image  ${isAnimating ? 'fade-in-animating' : ''}`}
+                <div ref={previewImageRef} className={`hotel-room__image `}
                     style={{
                         backgroundImage: `url(${images ? images[currentSlide] : ''})`
                     }} onClick={() => setGalleryIsOpen(true)}>
+
+                    <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
+                    <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
                 </div>
 
                 {images && images.length > 1 ?

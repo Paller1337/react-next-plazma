@@ -71,8 +71,8 @@ export default function Header(props: HeaderProps) {
                     <span className="burger-menu"></span>
                 </div>
                 <div className='c-menu__logo'>
-                    <object data='svg/logo-plazma.svg' type='image/svg+xml'>
-                        <img src='img/logo-plazma.svg' alt='logo' />
+                    <object data='svg/dark-logo.svg' type='image/svg+xml'>
+                        <img src='img/dark-logo.svg' alt='logo' />
                     </object>
                 </div>
             </div>
@@ -118,16 +118,16 @@ export default function Header(props: HeaderProps) {
                     <div className='menu__head'>
                         <div className='menu__action'>
                             <object className='icon' data='svg/vk.svg' type='image/svg+xml'>
-                                <img src='img/logo.svg' alt='' />
+                                {/* <img src='img/new-logo.svg' alt='' /> */}
                             </object>
                             <object data='svg/phone.svg' type='image/svg+xml'>
-                                <img src='img/logo.svg' alt='' />
+                                {/* <img src='img/new-logo.svg' alt='' /> */}
                             </object>
                         </div>
 
                         <div className='menu__logo'>
-                            <object data='svg/logo.svg' type='image/svg+xml'>
-                                <img src='img/logo.svg' alt='' />
+                            <object data='svg/new-logo.svg' type='image/svg+xml'>
+                                <img src='img/new-logo.svg' alt='' />
                             </object>
                         </div>
 
