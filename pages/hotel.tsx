@@ -6,6 +6,7 @@ import { hotelRooms } from '../data/hotelRooms'
 import RoomObject from '../components/objects/RoomObject'
 import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
+import Promo from '../components/Promo'
 
 export default function PageHotel() {
 
@@ -14,15 +15,10 @@ export default function PageHotel() {
         <>
             <main className='page page-hotel'>
                 <div className='relative' data-scroll-container>
-                    <div className='main__promo' data-scroll-section>
+                    {/* <div className='main__promo' data-scroll-section>
                         <Header />
                         <div className="main__video-wrapper">
                             <div className="main__video-box">
-                                {/* <!-- <video className="main__video" muted loop autoPlay>
-                                <source src="video/bgvideo.webm" type="video/webm">
-
-                                    <source src="video/bgvideo.mp4" type="video/mp4">
-                                    </video> --> */}
                                 <div className='main__welcome-bg welcome-hotel'></div>
                                 <div className='main__video-overlay'></div>
                             </div>
@@ -35,7 +31,10 @@ export default function PageHotel() {
                         </div>
 
                         <BookingPromo />
-                    </div>
+                    </div> */}
+                    
+                    
+                    <Promo imgUrl='/img/backgrounds/hotel-welcome.png' booking/>
 
                     <div className='base-bg' data-scroll-section></div>
 

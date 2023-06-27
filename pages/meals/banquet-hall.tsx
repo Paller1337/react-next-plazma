@@ -6,6 +6,7 @@ import Header from '../../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
+import Promo from '../../components/Promo'
 
 export default function PageBanquetHall() {
 
@@ -16,17 +17,12 @@ export default function PageBanquetHall() {
 
             <main className='page page-smash'>
                 <div className='relative' data-scroll-container>
-                    <div className='main__promo' data-scroll-section>
+                    {/* <div className='main__promo' data-scroll-section>
                         <Header />
-                        {/* @@include('./../components/_header.html',{ }) */}
                         <div className="main__video-wrapper">
                             <div className="main__video-box">
-                                {/* <!-- <video className="main__video" muted loop autoplay>
-                                <source src="video/bgvideo.webm" type="video/webm">
 
-                                    <source src="video/bgvideo.mp4" type="video/mp4">
-                                    </video> --> */}
-                                <div className='main__welcome-bg welcome-banquet-hall'></div>
+                                <div className='main__welcome-bg '></div>
                                 <div className='main__video-overlay'></div>
                             </div>
                         </div>
@@ -37,23 +33,22 @@ export default function PageBanquetHall() {
                             </h1>
                         </div>
 
-                        {/* @@include('./../components/_promo-action.html',{ }) */}
-                    </div>
-
+                    </div> */}
+                    <Promo imgUrl='/img/backgrounds/banquet-hall.jpg'/>
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
                         <div className='big-p big-p_border container'>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
-                                Наш банкетный зал - отличное место для особых событий и торжеств любого уровня. 
-                                Он находится в отдельном здании, чтобы никто вам не помешал. 
-                                Просторный и элегантный, он подарит вам ощущение особенности вашего события.  
-                                У нас вы сможете провести свою свадьбу, юбилей, корпоративное мероприятие или что-то другое. 
-                                Мы предлагаем разнообразные варианты оформления и меню, чтобы каждый гость остался доволен. 
-                                Наш профессиональный персонал будет обслуживать вас с начала мероприятия до самого конца, 
-                                мы готовы воплотить ваши идеи и позаботиться о каждой детали, чтобы ваше мероприятие было таким, как вы его задумали. 
-                                
+                                Наш банкетный зал - отличное место для особых событий и торжеств любого уровня.
+                                Он находится в отдельном здании, чтобы никто вам не помешал.
+                                Просторный и элегантный, он подарит вам ощущение особенности вашего события.
+                                У нас вы сможете провести свою свадьбу, юбилей, корпоративное мероприятие или что-то другое.
+                                Мы предлагаем разнообразные варианты оформления и меню, чтобы каждый гость остался доволен.
+                                Наш профессиональный персонал будет обслуживать вас с начала мероприятия до самого конца,
+                                мы готовы воплотить ваши идеи и позаботиться о каждой детали, чтобы ваше мероприятие было таким, как вы его задумали.
+
                             </span>
 
                             <div className='btn btn_black big-p__btn'>Наше меню</div>

@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import ReactPlayer from 'react-player'
+import Promo from '../components/Promo'
 
 
 
@@ -13,23 +14,17 @@ export default function PageIndex() {
     <>
       <main className='page page-index'>
         <div className='relative' data-scroll-container>
-          <div className='main__promo' data-scroll-section>
+          {/* <div className='main__promo' data-scroll-section>
             <Header />
             <div className="main__video-wrapper">
               <div className="main__video-box">
-                {/* <ReactPlayer
-                  width="530px"
-                  height="300px"
-                  url="/video/bgvideo.webm"
-                  light="/img/backgrounds/tent.jpg" /> */}
+
                 <video className="main__video" muted loop autoPlay playsInline>
                   <source src="/video/bg.mp4" type="video/mp4" />
                   <source src="/video/bgvideo.webm" type="video/webm" />
-                  {/* <img src=''></img> */}
-
-
                   Your browser does not support the video tag.
                 </video>
+
                 <div className='main__video-overlay'></div>
               </div>
             </div>
@@ -42,6 +37,10 @@ export default function PageIndex() {
 
             <BookingPromo />
           </div>
+ */}
+
+
+          <Promo booking video />
 
           <div className='base-bg' data-scroll-section></div>
 

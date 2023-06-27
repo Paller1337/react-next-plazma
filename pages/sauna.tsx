@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { saunaObjData } from '../data/saunaObj'
 import SaunaObject from '../components/objects/SaunaObject'
+import Promo from '../components/Promo'
 export default function PageSauna() {
 
 
@@ -13,16 +14,10 @@ export default function PageSauna() {
 
             <main className='page page-saunas'>
                 <div className='relative' data-scroll-container>
-                    <div className='main__promo' data-scroll-section>
+                    {/* <div className='main__promo' data-scroll-section>
                         <Header />
-                        {/* @@include('./../components/_header.html',{}) */}
                         <div className="main__video-wrapper">
                             <div className="main__video-box">
-                                {/* <!-- <video className="main__video" muted loop autoplay>
-                                <source src="video/bgvideo.webm" type="video/webm">
-
-                                    <source src="video/bgvideo.mp4" type="video/mp4">
-                                    </video> --> */}
                                 <div className='main__welcome-bg welcome-saunas'></div>
                                 <div className='main__video-overlay'></div>
                             </div>
@@ -33,9 +28,10 @@ export default function PageSauna() {
                                 <span>plazma</span>
                             </h1>
                         </div>
+                    </div> */}
 
-                        {/* @@include('./../components/_promo-action.html',{ }) */}
-                    </div>
+
+                    <Promo imgUrl='/img/backgrounds/hotel-saunas.png' bg='welcome-saunas' />
 
                     <div className='base-bg' data-scroll-section></div>
 

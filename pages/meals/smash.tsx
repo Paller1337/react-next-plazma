@@ -6,6 +6,7 @@ import Header from '../../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
+import Promo from '../../components/Promo'
 
 export default function PageSmash() {
 
@@ -16,16 +17,11 @@ export default function PageSmash() {
 
             <main className='page page-smash'>
                 <div className='relative' data-scroll-container>
-                    <div className='main__promo' data-scroll-section>
+                    {/* <div className='main__promo' data-scroll-section>
 
                         <Header />
                         <div className="main__video-wrapper">
                             <div className="main__video-box">
-                                {/* <!-- <video className="main__video" muted loop autoplay>
-                                <source src="video/bgvideo.webm" type="video/webm">
-
-                                    <source src="video/bgvideo.mp4" type="video/mp4">
-                                    </video> --> */}
                                 <div className='main__welcome-bg welcome-smash'></div>
                                 <div className='main__video-overlay'></div>
                             </div>
@@ -36,9 +32,9 @@ export default function PageSmash() {
                                 <span>plazma</span>
                             </h1>
                         </div>
+                    </div> */}
 
-                        {/* @@include('./../components/_promo-action.html',{ }) */}
-                    </div>
+                    <Promo imgUrl='/img/backgrounds/hotel-smash.png'/>
 
                     <div className='base-bg' data-scroll-section></div>
 

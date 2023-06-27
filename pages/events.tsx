@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
+import PromoMin from '../components/PromoMin'
 
 export default function PageEvents() {
 
@@ -13,28 +14,9 @@ export default function PageEvents() {
         <>
             <main className='page page-events'>
                 <div className='relative' data-scroll-container>
-                    <div className='main__promo-min promo-min' data-scroll-section>
-                        <Header />
-                        <div className='dark-circle'></div>
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                {/* <!-- <video className="main__video" muted loop autoplay>
-                            <source src="video/bgvideo.webm" type="video/webm">
+                    
 
-                            <source src="video/bgvideo.mp4" type="video/mp4">
-                        </video> --> */}
-                                <div className='main__welcome-bg welcome-events-min'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='promo-min__text'>
-                            <h1>МЕРОПРИЯТИЯ В ПАРК-ОТЕЛЕ PLAZMA</h1>
-                            <span>Мы организуем увлекательные тематические вечера, где вы сможете насладиться изысканной
-                                кухней и разнообразным развлечением в атмосфере праздника.</span>
-                            <div className='btn btn_white'>Подробнее</div>
-                        </div>
-
-                    </div>
+                    <PromoMin imgUrl='/img/backgrounds/hotel-events-min.png' />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -86,7 +68,7 @@ export default function PageEvents() {
                     <div className='page-events__about-two-col about-two-col container' data-scroll-section>
                         <div className='about-two-col__left'>
                             <picture className='about-two-col__img'>
-                                <img src='/img/events/corp-1.png'  alt='Мероприятия в парк-отеле Plazma'/>
+                                <img src='/img/events/corp-1.png' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>
 
                             <div className='about-two-col__text'>
@@ -100,7 +82,7 @@ export default function PageEvents() {
                         </div>
                         <div className='about-two-col__right'>
                             <picture className='about-two-col__img'>
-                                <img src='/img/events/corp-2.png'  alt='Мероприятия в парк-отеле Plazma'/>
+                                <img src='/img/events/corp-2.png' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>
                         </div>
                     </div>

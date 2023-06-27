@@ -6,6 +6,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../components/Button'
 import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
+import Promo from '../components/Promo'
 export default function PageAquatory() {
 
 
@@ -14,15 +15,10 @@ export default function PageAquatory() {
         <>
             <main className='page page-aquatory'>
                 <div className='relative' data-scroll-container>
-                    <div className='main__promo' data-scroll-section>
+                    {/* <div className='main__promo' data-scroll-section>
                         <Header />
                         <div className="main__video-wrapper">
                             <div className="main__video-box">
-                                {/* <!-- <video className="main__video" muted loop autoplay>
-                                <source src="video/bgvideo.webm" type="video/webm">
-
-                                    <source src="video/bgvideo.mp4" type="video/mp4">
-                                    </video> --> */}
                                 <div className='main__welcome-bg welcome-aquatory'></div>
                                 <div className='main__video-overlay'></div>
                             </div>
@@ -33,10 +29,10 @@ export default function PageAquatory() {
                                 <span>plazma</span>
                             </h1>
                         </div>
+                    </div> */}
 
-                        {/* @@include('./../components/_promo-action.html',{ }) */}
-                    </div>
-
+                    <Promo imgUrl='/img/backgrounds/hotel-aquatory.png' />
+                    
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-aquatory__welcome text-section text-section_big container' data-scroll-section>
@@ -126,8 +122,8 @@ export default function PageAquatory() {
                         <div className='aquatory-props__first'>
                             <div className='page-aquatory__list'>
                                 <span className='page-aquatory__list-title'>На территории:</span>
-                                <ul>               
-                                                     
+                                <ul>
+
                                     <li className='page-aquatory__list-item'>Искусственный живой водоём 12000 кв.м.</li>
                                     <li className='page-aquatory__list-item'>Пляж</li>
                                     <li className='page-aquatory__list-item'>Кабинки для переодевания</li>
