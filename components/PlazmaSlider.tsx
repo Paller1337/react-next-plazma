@@ -1,10 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
 import { slidersData } from '../data/bigSliders';
 import Image from 'next/image';
+import { getBase64ImageUrl } from '../middleware/utils/getBlurData';
 
 interface PlazmaSliderProps {
     data?: string;
 }
+
+// export async function getStaticProps() {
+//     const imageSrc = process.env.CLOUDINARY_EXAMPLE_IMAGE_SRC;
+//     if (!imageSrc) {
+//         throw new Error('Missing CLOUDINARY_EXAMPLE_IMAGE_SRC env variable');
+//     }
+
+//     const blurDataUrl = await getBase64ImageUrl(imageSrc);
+//     return {
+//         props: {
+//             exampleImage: {
+//                 src: imageSrc,
+//                 blurDataUrl: blurDataUrl,
+//             },
+//         },
+//     };
+// }
 
 export default function PlazmaSlider(props: PlazmaSliderProps) {
     const [currentIndex, setCurrentIndex] = useState(0); // Текущий индекс активного слайда

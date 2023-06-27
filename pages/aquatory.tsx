@@ -7,6 +7,7 @@ import Button from '../components/Button'
 import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
+import PlazmaSertItem from '../components/PlazmaSertItem'
 export default function PageAquatory() {
 
 
@@ -32,7 +33,7 @@ export default function PageAquatory() {
                     </div> */}
 
                     <Promo imgUrl='/img/backgrounds/hotel-aquatory.png' />
-                    
+
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-aquatory__welcome text-section text-section_big container' data-scroll-section>
@@ -69,7 +70,7 @@ export default function PageAquatory() {
                         </div>
 
                         <div className='flex-row'>
-                            <span className='footnote-text text-normal'>На территории работают охранники-спасатели!</span>
+                            <span className='footnote-text text-normal'>На территории работают аттестованные охранники-спасатели!</span>
                         </div>
                     </div>
 
@@ -170,7 +171,7 @@ export default function PageAquatory() {
                                     <li className='page-aquatory__list-item'>Для игры в волейбол имеются мячи (на прокат)</li>
                                 </ul>
 
-                                <span className='text-normal'>На территории работают охранники-спасатели.</span>
+                                {/* <span className='text-normal'>На территории работают аттестованные охранники-спасатели.</span> */}
                             </div>
                         </div>
                     </div>
@@ -189,6 +190,14 @@ export default function PageAquatory() {
                             additionalText={x.additionalText}
                             attentionText={x.attentionText}
                         />)}
+
+
+                    <div className='aquatory-sert'>
+                        <PlazmaSertItem img={'/img/sert/1.jpg'} />
+                        <PlazmaSertItem img={'/img/sert/2-1.jpg'} />
+                        <PlazmaSertItem img={'/img/sert/2-2.jpg'} />
+                        <PlazmaSertItem img={'/img/sert/2-3.jpg'} />
+                    </div>
                     <Footer />
                 </div >
             </main>
