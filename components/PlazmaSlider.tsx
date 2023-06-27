@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { slidersData } from '../data/bigSliders';
+import Image from 'next/image';
 
 interface PlazmaSliderProps {
     data?: string;
@@ -62,22 +63,33 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
                 <div className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} />
                 {data.images.map((imagePath, index) => (
-                    <div
-                        key={index}
-                        className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
-                        style={{ backgroundImage: `url(${imagePath})` }}
-                        onClick={() => setActiveSlide(index)}
-                    />
+                    <>
+                        {/* <div
+                            key={index}
+                            className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
+                            style={{ backgroundImage: `url(${imagePath})` }}
+                            onClick={() => setActiveSlide(index)}
+                        /> */}
+
+                        <div
+                            key={index}
+                            className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
+                            onClick={() => setActiveSlide(index)}>
+                            <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
+                                placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAbEAADAAMBAQAAAAAAAAAAAAABAgMABAURUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8Anz9voy1dCI2mectSE5ioFCqia+KCwJ8HzGMZPqJb1oPEf//Z"
+                                />
+                        </div>
+                    </>
                 ))}
                 <div className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} />
             </div>
 
             <div className="plazma-slider__nav">
                 <div className="plazma-slider__slider-btn btn-prev" onClick={handlePrevClick}>
-                    
+
                 </div>
                 <div className="plazma-slider__slider-btn btn-next" onClick={handleNextClick}>
-                    
+
                 </div>
             </div>
         </div>

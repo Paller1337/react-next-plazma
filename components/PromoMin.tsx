@@ -18,31 +18,6 @@ export default function PromoMin(props: PromoMinProps) {
         height: 830,
     }
 
-    const [coff, setCoff] = useState(0)
-    const [imgProps, setImgProps] = useState({
-        width: 0,
-        height: 0
-    })
-
-    useEffect(() => {
-        if (window) {
-            const wh = window.innerHeight
-            const ww = window.innerWidth
-            if (wh / defaultImg.height > ww / defaultImg.width) {
-                let newCoff = wh / defaultImg.height
-                setCoff(newCoff)
-            } else {
-                let newCoff = ww / defaultImg.width
-                setCoff(newCoff)
-            }
-
-            setImgProps({
-                width: defaultImg.width * coff,
-                height: defaultImg.height * coff,
-            })
-        }
-    }, [imgProps])
-
     return (<>
         <div className='main__promo-min promo-min' data-scroll-section>
             <Header />
@@ -67,8 +42,8 @@ export default function PromoMin(props: PromoMinProps) {
 
                         <>
                             {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
-                            {props.imgUrl && imgProps.width != 0 ?
-                                <Image src={props.imgUrl} width={imgProps.width} height={imgProps.height} alt='Plazma'></Image>
+                            {props.imgUrl ?
+                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'></Image>
                                 : ''
                             }
                         </>
