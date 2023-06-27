@@ -137,8 +137,6 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img/hotel/room-previews/sports-corps-2/3.jpg',
             '/img/hotel/room-previews/sports-corps-2/4.jpg',
             '/img/hotel/room-previews/sports-corps-2/5.jpg',
-            '/img/hotel/room-previews/sports-corps-2/6.jpg',
-            '/img/hotel/room-previews/sports-corps-2/7.jpg',
         ],
         size: 'Размеры номеров 13 м² и 18 м².',
         attributes: [

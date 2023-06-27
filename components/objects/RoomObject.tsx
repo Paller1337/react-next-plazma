@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
+import Image from 'next/image'
 
 export interface RoomObjectProps {
 
@@ -118,8 +119,11 @@ export default function RoomObject(data: RoomObjectProps) {
                 {images && images.length > 1 ?
                     <div className='hotel-room__slides'>
                         {images.map((x, i) =>
-                            <div key={i} className='hotel-room__slide' onClick={() => goSlide(i)}
-                                style={{ backgroundImage: `url(${x})` }} />
+                            <div key={i} className='hotel-room__slide' onClick={() => goSlide(i)}>
+
+                                <Image src={x} height={60} width={80} alt={'Plazma гостиница'} />
+
+                            </div>
                         )}
                     </div>
                     : ''}

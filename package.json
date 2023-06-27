@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@types/dragscroll": "^0.0.0",
     "@types/node": "18.11.10",
     "@types/react": "18.0.25",

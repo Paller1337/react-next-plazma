@@ -13,31 +13,29 @@ import useLocoScroll from '../components/functions/useLocoScroll'
 import { BnovoLoadContextProvider } from '../components/bnovo/bnovoContext'
 import { useRouter } from 'next/router'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
+import barba from '@barba/core';
 
-// gsap.registerPlugin(ScrollTrigger)
-// gsap.registerPlugin(ScrollSmoother)
 
 
 export default function App({ Component, pageProps }: AppProps) {
   const [width, setWidth] = useState<Number>(100)
   const [height, setHeight] = useState<Number>(100)
 
-  // useLocoScroll()
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const updateDimensions = () => {
-  //       setWidth(window.innerWidth)
-  //       setHeight(window.innerHeight)
+  // barba.init({
+  //   views: [{
+  //     namespace: 'home',
+  //     beforeLeave(data) {
+  //       // do something before leaving the current `index` namespace
   //     }
+  //   }, {
+  //     namespace: 'sauna',
+  //     beforeEnter(data) {
+  //       // do something before entering the `contact` namespace
+  //     }
+  //   }]
+  // });
 
-  //     window.addEventListener('scroll', updateDimensions)
-  //     window.addEventListener('resize', updateDimensions)
-  //     return () => {
-  //       window.removeEventListener('scroll', updateDimensions)
-  //       window.removeEventListener('resize', updateDimensions)
-  //     }
-  //   }
-  // }, [])
+
   const router = useRouter()
   const loaderRef = useRef<LoadingBarRef>(null)
   useEffect(() => {
@@ -65,34 +63,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
-      <div className='wrapper'>
-        {/* <RLSProvider
-            options={{
-              smooth: true,
-              multiplier: .6,
-              lerp: 0.1
-              // ... all available Locomotive Scroll instance options
-            }}
-            watch={
-              [
-                //..all the dependencies you want to watch to update the scroll.
-                //  Basicaly, you would want to watch page/location changes
-                //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-              ]
-            }
-            // location={asPath}
-            onLocationChange={(scroll: any) => scroll.scrollTo(0, { duration: 0, disableLerp: true })}
-            // onUpdate={scroll}
-            containerRef={locoScrollRef}
-          > */}
-
+      <div className='wrapper' data-barba="wrapper">
         <BnovoLoadContextProvider>
           <Component {...pageProps} />
         </BnovoLoadContextProvider>
-
-
-        {/* </RLSProvider> */}
-        {/* </main> */}
       </div >
     </>
   )

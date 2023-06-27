@@ -13,7 +13,7 @@ export default function PageIndex() {
 
   return (
     <>
-      <main className='page page-index'>
+      <main className='page page-index' data-barba="container" data-barba-namespace="home">
         <div className='relative' data-scroll-container>
           {/* <div className='main__promo' data-scroll-section>
             <Header />
