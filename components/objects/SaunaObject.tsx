@@ -17,7 +17,7 @@ export default function SaunaObject(data: SaunaObjectProps) {
         <div className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
             <div className='big-p big-p_border-top container'>
                 <span className='big-p__title'>{data.name}</span>
-                <span className='big-p__desc'>{data.description}</span>
+                <span className='big-p__desc' dangerouslySetInnerHTML={{__html: data.description}}></span>
 
                 <div className='big-p__attr'>
                     <span className='big-p__attr-title'>Стоимость:</span>
@@ -28,8 +28,8 @@ export default function SaunaObject(data: SaunaObjectProps) {
 
                 <div className='big-p__attr'>
                     <span className='big-p__attr-title'>Вместимость:</span>
-                    <div className='big-p__attr-desc'>
-                        <span>{data.aboutSize}</span>
+                    <div className='big-p__attr-desc' dangerouslySetInnerHTML={{__html: data.aboutSize}}>
+                        {/* <span>{}</span> */}
                     </div>
                 </div>
 

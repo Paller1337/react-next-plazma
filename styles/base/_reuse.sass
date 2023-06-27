@@ -560,6 +560,7 @@
         max-width: 920px
         @media screen and ( max-width:  $md1)
             text-align: center
+            padding: 0 20px
 
     &__attr
         display: flex
@@ -568,6 +569,18 @@
         color: #393939
         line-height: 23px
         letter-spacing: 0.48px
+        @media screen and ( max-width: $md2 )
+            max-width: calc(100% - 24px)
+            padding:
+                left: 12px
+                right: 12px
+        
+        @media screen and ( max-width: $md3 )
+            gap: 8px
+            flex-direction: column
+            padding: 0
+
+
         &-title
             display: flex
             width: 120px
@@ -578,6 +591,7 @@
             gap: 6px
             width: 580px
             font-weight: 500
+            max-width: 100%
 
     &__btn
         position: absolute
@@ -651,8 +665,6 @@
         flex-direction: column
         gap: 30px
         max-width: 470px
-
-    
 
     &__title
         font-weight: 400

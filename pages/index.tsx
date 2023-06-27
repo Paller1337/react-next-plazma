@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import ReactPlayer from 'react-player'
 import Promo from '../components/Promo'
+import Link from 'next/link'
 
 
 
@@ -105,7 +106,7 @@ export default function PageIndex() {
                     набережную.
                   </span>
 
-                  <a className='btn btn_black' href='hotel.html'>Подробнее</a>
+                  <Link className='btn btn_black' href='/hotel'>Подробнее</Link>
                 </div>
               </div>
 
@@ -132,7 +133,7 @@ export default function PageIndex() {
                     нашем шатре на полуострове. Для особых мероприятий у нас есть банкетный зал.
                   </span>
 
-                  <a className='btn btn_black' href='meals.html'>Подробнее</a>
+                  <Link className='btn btn_black' href='/meals'>Подробнее</Link>
                 </div>
               </div>
 
@@ -162,7 +163,7 @@ export default function PageIndex() {
                     где вы сможете насладиться прохладным аперолем и нежнейшей пиццой.
                   </span>
 
-                  <a className='btn btn_black' href='aquatory.html'>Подробнее</a>
+                  <Link className='btn btn_black' href='/aquatory'>Подробнее</Link>
                 </div>
               </div>
 
@@ -187,7 +188,7 @@ export default function PageIndex() {
                     котором можно делать пенный массаж.
                   </span>
 
-                  <a className='btn btn_black' href='sauna.html'>Подробнее</a>
+                  <Link className='btn btn_black' href='/sauna'>Подробнее</Link>
                 </div>
               </div>
 
@@ -213,7 +214,7 @@ export default function PageIndex() {
                     площадками для спортивных мероприятий.
                   </span>
 
-                  <a className='btn btn_black' href='events.html'>Подробнее</a>
+                  <Link className='btn btn_black' href='/events'>Подробнее</Link>
                 </div>
               </div>
 
@@ -267,7 +268,7 @@ export default function PageIndex() {
 
               <span className='index-geo__text'>Тульская область, г. Донской, ул. Герцена, д. 14</span>
 
-              <div className='btn btn_black index-geo__btn'>Как до нас добраться</div>
+              {/* <div className='btn btn_black index-geo__btn'>Как до нас добраться</div> */}
             </div>
           </div>
 

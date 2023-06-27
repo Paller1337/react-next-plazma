@@ -74,10 +74,10 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
 
             <div className="plazma-slider__nav">
                 <div className="plazma-slider__slider-btn btn-prev" onClick={handlePrevClick}>
-                    НАЗАД
+                    
                 </div>
                 <div className="plazma-slider__slider-btn btn-next" onClick={handleNextClick}>
-                    ВПЕРЕД
+                    
                 </div>
             </div>
         </div>

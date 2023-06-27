@@ -11,7 +11,7 @@ export interface RoomObjectProps {
     size: string, // Добавить площадь терассы 9 кв.м.
     attributes: {
         name: string,
-        value: string
+        value: string[]
     }[],
     amenities: string[]
 }
@@ -129,7 +129,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 <span className='hotel-room__title'>{data.title}</span>
                 <span className='hotel-room__text'>{data.description}
                 </span>
-                <span className='hotel-room__text'>{data.size}</span>
+                <span className='hotel-room__text bold'>{data.size}</span>
 
                 {/* <div className='btn booking-btn'>Забронировать</div> */}
                 <BookingRoom roomId={data.id} targetId={`${data.id}-target`} />
@@ -137,8 +137,10 @@ export default function RoomObject(data: RoomObjectProps) {
                     {data.attributes.map((x, i) =>
                         <div key={i} className='hotel-room__attr-item'>
                             <span className='hotel-room__text attr-name'>{x.name}</span>
-                            <span className='hotel-room__text attr-value' dangerouslySetInnerHTML={{ __html: x.value }}>
-
+                            <span className='hotel-room__text attr-value'>
+                                {x.value.map((text, i) =>
+                                    <span key={i} dangerouslySetInnerHTML={{ __html: text }} />
+                                )}
                             </span>
                         </div>
                     )}

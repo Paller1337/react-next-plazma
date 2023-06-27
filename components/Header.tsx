@@ -135,7 +135,7 @@ export default function Header(props: HeaderProps) {
                             Забронировать номер
                         </div>
 
-                        <div className='menu__btn_min btn btn_white'>
+                        <div className='menu__btn_min btn btn_white' onClick={() => router.push('/hotel#hotelRooms')}>
                             Номера
                         </div>
                     </div>

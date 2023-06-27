@@ -173,6 +173,15 @@ body
                 display: flex
                 flex-direction: column
                 gap: 15px
+                
+
+                @media screen and ( max-width: $md3 )
+                    margin: 0 auto
+                    min-width: 0
+                    max-width: 90%
+                    text-align: center
+                    align-items: center
+                    
                 h1
                     font-weight: 400
                     font-size: 24px
@@ -184,6 +193,7 @@ body
                     line-height: 144%
                     letter-spacing: 0.02em
                     margin-bottom: 10px
+                
         .dark-circle
             position: absolute
             height: 50vw

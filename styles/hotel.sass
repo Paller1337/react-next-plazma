@@ -77,6 +77,15 @@
 
             &__content
                 width: 100%
+                max-width: 1170px
+                @media screen and ( max-width: $md1 )
+                    padding:
+                        left: 48px
+                        right: 48px
+                @media screen and ( max-width: $md2 )
+                    padding:
+                        left: 24px
+                        right: 24px
 
             &__item
                 &.hotel-room
@@ -182,17 +191,31 @@
                         &__text
                             font-size: 16px
                             color: #393939
+                            display: flex
+                            flex-wrap: wrap
+                            gap: 5px
+                            &.end
+                                justify-content: flex-end
+                            span
+                                display: flex
+                                white-space: nowrap
+                            &.bold
+                                font-weight: 700
 
                         &__info
                             display: flex
                             flex-direction: column
                             width: 470px
                             gap: 10px
+                            @media screen and ( max-width: $md1 )
+                                width: 370px
+
                             @media screen and ( max-width: $md2 )
                                 width: auto
 
                                 & > .hotel-room__text
                                     text-align: center
+                                    justify-content: center
 
                                 & > .hotel-room__title
                                     text-align: center
@@ -208,6 +231,8 @@
                         &__attr-item
                             display: flex
                             gap: 10px
+                            flex-basis: 50%
+                            justify-content: space-between
 
                             @media screen and ( max-width: $md2 )
                                 justify-content: space-between
@@ -219,6 +244,11 @@
                             .attr-value
                                 width: 330px
                                 line-height: 20px
+                                justify-content: flex-end
+                                span
+                                    @media screen and ( max-width: $md4 )
+                                        justify-content: flex-end
+                                        width: 100%
 
                                 @media screen and ( max-width: $md2 )
                                     text-align: right
