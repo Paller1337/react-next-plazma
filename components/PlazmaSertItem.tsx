@@ -10,6 +10,7 @@ interface PlazmaSertItemProps {
 
 export function OpenFullsizeImg(props: { img: string, onClose?: () => void, isOpen: boolean }) {
     const sliderOverlay = useRef<HTMLDivElement>(null)
+    const [browserLoad, setBrowserLoad] = useState(false)
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -24,22 +25,27 @@ export function OpenFullsizeImg(props: { img: string, onClose?: () => void, isOp
         return () => {
             sliderOverlay.current?.removeEventListener('click', handleClickOutside)
         }
-
     }, [props.img])
 
-    return createPortal(<>
+    useEffect(() => {
+        setBrowserLoad(true)
+    }, [])
 
-        {props.isOpen ?
-            <div className='modal' ref={sliderOverlay} onClick={props.onClose}>
-                <div className='modal--wrapper'>
+    if (browserLoad)
+        return createPortal(<>
 
-                    <Image src={props.img} width={715} height={1010} alt='Plazma санитарно-эпидемиологическое заключение' />
+            {props.isOpen ?
+                <div className='modal' ref={sliderOverlay} onClick={props.onClose}>
+                    <div className='modal--wrapper'>
 
+                        <Image src={props.img} width={715} height={1010} alt='Plazma санитарно-эпидемиологическое заключение' />
+
+                    </div>
                 </div>
-            </div>
-            : ''}
+                : ''}
 
-    </>, document.body)
+        </>, document.body)
+    else return null
 }
 
 
@@ -48,11 +54,11 @@ export default function PlazmaSertItem(props: PlazmaSertItemProps) {
 
     const [modalOpen, setModalOpen] = useState(false)
 
-
+    const onClose = () => setModalOpen(false)
 
 
     return (<>
-        <OpenFullsizeImg img={props.img} isOpen={modalOpen} />
+        <OpenFullsizeImg img={props.img} isOpen={modalOpen} onClose={onClose} />
 
         <div className='aquatory-sert__item' onClick={() => setModalOpen(true)}>
             <Image src={props.img} width={230} height={325} alt='Plazma санитарно-эпидемиологическое заключение' />

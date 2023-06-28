@@ -192,11 +192,13 @@ export default function PageAquatory() {
                         />)}
 
 
-                    <div className='aquatory-sert'>
-                        {/* <PlazmaSertItem img={'/img/sert/1.jpg'} />
+                    <div className='aquatory-sert container'>
+                        <span className='text'>Территория и бассейн зоны отдыха соответствуют всем санитарно-эпидемиологическим нормам.</span>
+                        <span className='text'> По всем лабораторным исследованиям и анализам вода в нашем водоеме имеет самые лучшие показатели в Тульской области .</span>
+                        <PlazmaSertItem img={'/img/sert/1.jpg'} />
                         <PlazmaSertItem img={'/img/sert/2-1.jpg'} />
                         <PlazmaSertItem img={'/img/sert/2-2.jpg'} />
-                        <PlazmaSertItem img={'/img/sert/2-3.jpg'} /> */}
+                        <PlazmaSertItem img={'/img/sert/2-3.jpg'} />
                     </div>
                 </div >
                 <Footer />

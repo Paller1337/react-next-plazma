@@ -349,18 +349,23 @@
 
 .modal
     z-index: 1000
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     right: 0
     bottom: 0
+    background: #262626e0
 
     &--wrapper
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-
+        img
+            width: 80vw
+            object-fit: contain
+            max-height: 90vh
+            
 .plazma-slider
     height: 500px
     width: 100%
