@@ -13,10 +13,13 @@ export default function PageEvents() {
     return (
         <>
             <main className='page page-events'>
-                <div className='relative' data-scroll-container>
-                    
+                <div className='relative main-wrap' data-scroll-container>
 
-                    <PromoMin imgUrl='/img/backgrounds/hotel-events-min.png' />
+
+                    <PromoMin imgUrl='/img/backgrounds/hotel-events-min.png'
+                        title='МЕРОПРИЯТИЯ В ПАРК-ОТЕЛЕ PLAZMA'
+                        description={`Мы организуем увлекательные тематические вечера, где вы сможете насладиться изысканной
+                        кухней и разнообразным развлечением в атмосфере праздника.`} />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -86,8 +89,8 @@ export default function PageEvents() {
                             </picture>
                         </div>
                     </div>
-                    <Footer />
                 </div >
+                <Footer />
             </main>
         </>
 

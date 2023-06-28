@@ -50,8 +50,17 @@
         height: 485px
         background-repeat: no-repeat
         background-size: cover !important
-        background: url(/img/events/family.png)
+        // background: url(/img/events/family.png)
         z-index: 3
+        position: relative
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            height: 100%
+            object-fit: cover
         @media screen and ( max-width: $md3 )
             min-height: 385px
             max-width: 90vw

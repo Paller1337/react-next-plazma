@@ -16,7 +16,7 @@ export default function PageTent() {
         <>
 
             <main className='page page-smash'>
-                <div className='relative' data-scroll-container>
+                <div className='relative main-wrap' data-scroll-container>
                     {/* <div className='main__promo' data-scroll-section>
 
                         <Header />
@@ -34,7 +34,7 @@ export default function PageTent() {
                         </div>
                     </div> */}
 
-                    <Promo imgUrl='/img/backgrounds/tent.jpg'/>
+                    <Promo imgUrl='/img/backgrounds/tent.jpg' />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -42,10 +42,10 @@ export default function PageTent() {
                         <div className='big-p big-p_border container'>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
-                                Расположенный на полуострове, он предлагает неповторимую атмосферу и вид на водоем. 
-                                В нашем шатре вы сможете насладиться прохладными напитками и изысканными блюдами, приготовленными нашими опытными поварами. 
-                                Мы стремимся создать комфортное пространство, где вы сможете расслабиться и насладиться приятной беседой с друзьями или близкими. 
-                                Независимо от того, ищете ли вы место для романтического ужина или большой семейной встречи, 
+                                Расположенный на полуострове, он предлагает неповторимую атмосферу и вид на водоем.
+                                В нашем шатре вы сможете насладиться прохладными напитками и изысканными блюдами, приготовленными нашими опытными поварами.
+                                Мы стремимся создать комфортное пространство, где вы сможете расслабиться и насладиться приятной беседой с друзьями или близкими.
+                                Независимо от того, ищете ли вы место для романтического ужина или большой семейной встречи,
                                 наш летний шатер-ресторан позволит насладиться приятными моментами на свежем воздухе в уютной обстановке.
                             </span>
 
@@ -94,8 +94,8 @@ export default function PageTent() {
                     <div className='footnote container' data-scroll-section>
                         <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.</div>
                     </div>
-                    <Footer />
                 </div >
+                <Footer />
             </main>
         </>
 

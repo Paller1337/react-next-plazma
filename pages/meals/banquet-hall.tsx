@@ -16,7 +16,7 @@ export default function PageBanquetHall() {
         <>
 
             <main className='page page-smash'>
-                <div className='relative' data-scroll-container>
+                <div className='relative main-wrap' data-scroll-container>
                     {/* <div className='main__promo' data-scroll-section>
                         <Header />
                         <div className="main__video-wrapper">
@@ -34,7 +34,7 @@ export default function PageBanquetHall() {
                         </div>
 
                     </div> */}
-                    <Promo imgUrl='/img/backgrounds/banquet-hall.jpg'/>
+                    <Promo imgUrl='/img/backgrounds/banquet-hall.jpg' />
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
@@ -95,8 +95,8 @@ export default function PageBanquetHall() {
                     <div className='footnote container' data-scroll-section>
                         <div className='text'>Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.</div>
                     </div>
-                    <Footer />
                 </div >
+                <Footer />
             </main>
         </>
 

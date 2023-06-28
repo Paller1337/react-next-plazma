@@ -2,9 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import { slidersData } from '../data/bigSliders';
 import Image from 'next/image';
 import { getBase64ImageUrl } from '../middleware/utils/getBlurData';
+import { v4 } from 'uuid';
 
 interface PlazmaSliderProps {
-    data?: string;
+    data: string;
 }
 
 // export async function getStaticProps() {
@@ -25,18 +26,16 @@ interface PlazmaSliderProps {
 // }
 
 export default function PlazmaSlider(props: PlazmaSliderProps) {
+
     const [currentIndex, setCurrentIndex] = useState(0); // Текущий индекс активного слайда
     const sliderContentRef = useRef<HTMLDivElement>(null);
 
     const dataName = props.data || 'smashSlider';
     const data = slidersData.find(x => x.name === dataName);
-    // useEffect(() =>{
-    //     console.log(data)
-    // }, [])
+
 
     const handlePrevClick = () => setActiveSlide(currentIndex - 1)
     const handleNextClick = () => setActiveSlide(currentIndex + 1)
-
 
     // useEffect(() => {
 
@@ -75,11 +74,29 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
         setCurrentIndex(newIndex)
     }
 
+    const convertImage = (w: number, h: number) => `
+  <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="g">
+        <stop stop-color="#333" offset="20%" />
+        <stop stop-color="#222" offset="50%" />
+        <stop stop-color="#333" offset="70%" />
+      </linearGradient>
+    </defs>
+    <rect width="${w}" height="${h}" fill="#333" />
+    <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+    <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+  </svg>`;
+
+    const toBase64 = (str: string) =>
+        typeof window === 'undefined'
+            ? Buffer.from(str).toString('base64')
+            : window.btoa(str);
 
     return (
-        <div id="plazmaSlider" className="plazma-slider" data-scroll>
+        <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll>
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
-                <div className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} />
+                <div key={`${props.data}-prev`} className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} />
                 {data.images.map((imagePath, index) => (
                     <>
                         {/* <div
@@ -90,16 +107,18 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         /> */}
 
                         <div
-                            key={index}
+                            key={v4()}
                             className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
                             onClick={() => setActiveSlide(index)}>
                             <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
-                                placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAbEAADAAMBAQAAAAAAAAAAAAABAgMABAURUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8Anz9voy1dCI2mectSE5ioFCqia+KCwJ8HzGMZPqJb1oPEf//Z"
-                                />
+                                placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                                    convertImage(700, 475)
+                                )}`}
+                            />
                         </div>
                     </>
                 ))}
-                <div className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} />
+                <div key={`${dataName}-next`} className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} />
             </div>
 
             <div className="plazma-slider__nav">

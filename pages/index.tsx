@@ -14,7 +14,7 @@ export default function PageIndex() {
   return (
     <>
       <main className='page page-index' data-barba="container" data-barba-namespace="home">
-        <div className='relative' data-scroll-container>
+        <div className='relative main-wrap' data-scroll-container>
           {/* <div className='main__promo' data-scroll-section>
             <Header />
             <div className="main__video-wrapper">
@@ -49,10 +49,9 @@ export default function PageIndex() {
             <div className='about-hotel__wrapper'>
               <div className='about-hotel__about'>
                 <span className='about-hotel__text'>Парк-отель «PLAZMA»</span>
-                <span className='about-hotel__desc'>Парк-отель расположен в городе Донской Тульской
-                  области, в 3 часах езды от Москвы. </span>
-                <span className='about-hotel__desc'>Место отлично подходит для семейного отдыха на природе,
-                  романтических выходных, торжественных и деловых мероприятий.</span>
+                <span className='about-hotel__desc'>Парк-отель «Plazma» расположен в городе Донской Тульской области, в 230 км от Москвы. </span>
+                <span className='about-hotel__desc'> Место отлично подходит для семейного отдыха на природе, романтических выходных, торжественных и деловых мероприятий,
+                  а также для спортивных сборов.</span>
               </div>
 
               <picture className='about-hotel__img img_min'>
@@ -113,7 +112,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/2.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/2.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -140,7 +139,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/4.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/4.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -170,7 +169,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/3.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/3.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -195,7 +194,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/5.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/5.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -221,7 +220,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src='img/index/previews/7.png' alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src='/img/index/previews/7.png' alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -248,7 +247,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="img/index/previews/6.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/6.png" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -273,8 +272,8 @@ export default function PageIndex() {
           </div>
 
 
-          <Footer />
         </div >
+        <Footer />
       </main>
     </>
 

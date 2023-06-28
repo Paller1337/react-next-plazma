@@ -14,7 +14,7 @@ export default function PageHotel() {
     return (
         <>
             <main className='page page-hotel'>
-                <div className='relative' data-scroll-container>
+                <div className='relative main-wrap' data-scroll-container>
                     {/* <div className='main__promo' data-scroll-section>
                         <Header />
                         <div className="main__video-wrapper">
@@ -32,9 +32,9 @@ export default function PageHotel() {
 
                         <BookingPromo />
                     </div> */}
-                    
-                    
-                    <Promo imgUrl='/img/backgrounds/hotel-welcome.png' booking/>
+
+
+                    <Promo imgUrl='/img/backgrounds/hotel-welcome.png' booking />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -177,8 +177,8 @@ export default function PageHotel() {
                         </div>
                     </div>
 
-                    <Footer />
                 </div >
+                <Footer />
             </main>
         </>
 

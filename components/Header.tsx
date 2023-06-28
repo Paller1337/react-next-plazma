@@ -71,20 +71,21 @@ export default function Header(props: HeaderProps) {
                     <span className="burger-menu"></span>
                 </div>
                 <div className='c-menu__logo'>
-                    <object data='svg/dark-logo.svg' type='image/svg+xml'>
-                        <img src='img/dark-logo.svg' alt='logo' />
+                    <object data='/svg/dark-logo.svg' type='image/svg+xml'>
+                        <img src='/img/dark-logo.svg' alt='logo' />
                     </object>
                 </div>
             </div>
             <div className='c-menu__container'>
                 <div className='menu-column'>
                     <ul className="menu-column__list">
-                        <li><Link href="/" className="menu-column__link">Главная</Link></li>
-                        <li><Link href="/hotel" className="menu-column__link">Гостиница</Link></li>
-                        <li><Link href="/meals" className="menu-column__link">Питание</Link></li>
-                        <li><Link href="/aquatory" className="menu-column__link">Акватория</Link></li>
-                        <li><Link href="/sauna" className="menu-column__link">Сауна</Link></li>
-                        <li><Link href="/events" className="menu-column__link">мероприятия</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/" className="menu-column__link">Главная</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/hotel" className="menu-column__link">Гостиница</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/meals" className="menu-column__link">Питание</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/aquatory" className="menu-column__link">Акватория</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/sauna" className="menu-column__link">Сауна</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/events" className="menu-column__link">мероприятия</Link></li>
+                        <li><Link onClick={() => menuOpen(false)} href="/active-leisure" className="menu-column__link">Активный отдых</Link></li>
                     </ul>
                 </div>
             </div>
@@ -118,16 +119,16 @@ export default function Header(props: HeaderProps) {
                     <div className='menu__head'>
                         <div className='menu__action'>
                             <object className='icon' data='svg/vk.svg' type='image/svg+xml'>
-                                {/* <img src='img/new-logo.svg' alt='' /> */}
+                                {/* <img src='/img/new-logo.svg' alt='' /> */}
                             </object>
-                            <object data='svg/phone.svg' type='image/svg+xml'>
-                                {/* <img src='img/new-logo.svg' alt='' /> */}
+                            <object data='/svg/phone.svg' type='image/svg+xml'>
+                                {/* <img src='/img/new-logo.svg' alt='' /> */}
                             </object>
                         </div>
 
                         <div className='menu__logo'>
-                            <object data='svg/new-logo.svg' type='image/svg+xml'>
-                                <img src='img/new-logo.svg' alt='' />
+                            <object data='/svg/new-logo.svg' type='image/svg+xml'>
+                                <img src='/img/new-logo.svg' alt='' />
                             </object>
                         </div>
 
@@ -178,8 +179,8 @@ export default function Header(props: HeaderProps) {
                         </div>
 
                         <div className='menu__item'>
-                            <Link href='#' className='menu__link'>
-                                Контакты
+                            <Link href='/active-leisure' className='menu__link'>
+                                Активный отдых
                             </Link>
                         </div>
 

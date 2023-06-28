@@ -7,6 +7,8 @@ interface PromoMinProps {
     video?: boolean
     imgUrl: string
     bg?: string
+    title?: string
+    description?: string
 }
 
 
@@ -51,10 +53,9 @@ export default function PromoMin(props: PromoMinProps) {
                 </div>
             </div>
             <div className='promo-min__text'>
-                <h1>МЕРОПРИЯТИЯ В ПАРК-ОТЕЛЕ PLAZMA</h1>
-                <span>Мы организуем увлекательные тематические вечера, где вы сможете насладиться изысканной
-                    кухней и разнообразным развлечением в атмосфере праздника.</span>
-                <div className='btn btn_white'>Подробнее</div>
+                <h1>{props.title}</h1>
+                <span>{props.description}</span>
+                {/* <div className='btn btn_white'>Подробнее</div> */}
             </div>
 
         </div>

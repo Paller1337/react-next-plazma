@@ -14,7 +14,7 @@ export default function PageMeals() {
         <>
 
             <main className='page page-meals'>
-                <div className='relative' data-scroll-container>
+                <div className='relative main-wrap' data-scroll-container>
                     <div className='meals__promo' data-scroll-section>
                         <Header darken />
 
@@ -65,8 +65,9 @@ export default function PageMeals() {
                     </div>
 
                     <div className='base-bg' data-scroll-section></div>
-                    <Footer />
+
                 </div >
+                <Footer />
             </main>
         </>
 

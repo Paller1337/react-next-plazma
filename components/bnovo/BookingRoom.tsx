@@ -1,17 +1,20 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { BnovoContext } from './bnovoContext';
+import { useRouter } from 'next/router';
 declare var Bnovo_Widget: any
 
 
 
 export default function BookingRoom(room: { roomId: number | number[], targetId: string }) {
-    const btnRef = useRef<HTMLDivElement  | null>(null)
-    const targetSection = useRef<HTMLDivElement  | null>(null)
+    const btnRef = useRef<HTMLDivElement | null>(null)
+    const targetSection = useRef<HTMLDivElement | null>(null)
     const { bnovoIsLoad } = useContext(BnovoContext)
     const [bnovoIsOpen, setBnovoIsOpen] = useState(false)
 
     const rooms = room.roomId.toString()
 
+
+    useEffect(() => { console.log(window.location.origin) }, [])
     const openRoomBooking = (id: string, target: string) => {
         if (bnovoIsOpen) return
         Bnovo_Widget.init(function () {
@@ -49,18 +52,18 @@ export default function BookingRoom(room: { roomId: number | number[], targetId:
                 dto_nextday: "on",
                 dto_value: "2",
                 cancel_preset: "on",
-                url: "http://192.168.1.19:3000/booking",
+                url: `${window.location.origin}/booking`,
                 onlyrooms: `${id}`
             });
         });
     }
 
     const bookingToggle = () => {
-        const bookingSection = targetSection.current 
+        const bookingSection = targetSection.current
         if (bnovoIsLoad && !bnovoIsOpen) {
             openRoomBooking(rooms, room.targetId)
         } else {
-            if(bookingSection){
+            if (bookingSection) {
                 bookingSection.innerHTML = ''
             }
             setBnovoIsOpen(false)

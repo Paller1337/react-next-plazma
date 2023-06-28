@@ -16,7 +16,7 @@ export default function PageSmash() {
         <>
 
             <main className='page page-smash'>
-                <div className='relative' data-scroll-container>
+                <div className='relative main-wrap' data-scroll-container>
                     {/* <div className='main__promo' data-scroll-section>
 
                         <Header />
@@ -34,7 +34,7 @@ export default function PageSmash() {
                         </div>
                     </div> */}
 
-                    <Promo imgUrl='/img/backgrounds/hotel-smash.png'/>
+                    <Promo imgUrl='/img/backgrounds/hotel-smash.png' />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -97,8 +97,8 @@ export default function PageSmash() {
                         <PlazmaSlider data='smashSlider' />
                     </div>
 
-                    <Footer />
                 </div >
+                <Footer />
             </main>
         </>
 

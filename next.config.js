@@ -15,8 +15,8 @@ module.exports = {
     runtime: 'experimental-edge',
 
     images: {
-        loader: "cloudinary",
-        path: cloudinaryBaseUrl,
+        // loader: "cloudinary",
+        // path: cloudinaryBaseUrl,
         domains: [
             'cloudflare-ipfs.com',
             'skin.klaun.ch',
@@ -32,7 +32,7 @@ module.exports = {
             'fonts.googleapis.com'
         ]
     },
-    
+
     // externals: ['pg', 'sqlite3', 'tedious', 'pg-hstore'],
 
     output: 'standalone',

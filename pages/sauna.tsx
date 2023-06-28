@@ -13,7 +13,7 @@ export default function PageSauna() {
         <>
 
             <main className='page page-saunas'>
-                <div className='relative' data-scroll-container>
+                <div className='relative main-wrap' data-scroll-container>
                     {/* <div className='main__promo' data-scroll-section>
                         <Header />
                         <div className="main__video-wrapper">
@@ -190,8 +190,8 @@ export default function PageSauna() {
                             </span>
                         </div>
                     </div>
-                    <Footer />
                 </div >
+                <Footer />
             </main>
         </>
 
