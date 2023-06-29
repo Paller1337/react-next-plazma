@@ -42,7 +42,9 @@ export default function PageEvents() {
                                 <span>Сыграйте свадьбу. Отпразднуйте день рождения или юбилей.</span>
                                 <div className='btn btn_black'>Подробнее</div>
                             </div>
-                            <div className='about-quatr__image'></div>
+                            <div className='about-quatr__image'>
+                                <Image src='/img/events/family.png' width={970} height={700} alt='' />
+                            </div>
                         </div>
                     </div>
 
