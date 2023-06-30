@@ -20,7 +20,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             {
                 cardName: "Дети",
                 cardAttr: "(до 11 лет)",
-                cardPrice: "400 рублей",
+                cardPrice: "500 рублей",
                 cardSize: "min"
             },
             {
