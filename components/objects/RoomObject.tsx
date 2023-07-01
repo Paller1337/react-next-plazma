@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
 import Image from 'next/image'
+import useNextBlurhash from "use-next-blurhash"
 
 export interface RoomObjectProps {
 
@@ -24,6 +25,8 @@ export default function RoomObject(data: RoomObjectProps) {
     const [galleryIsOpen, setGalleryIsOpen] = useState(false)
     const previewImageRef = useRef<HTMLDivElement>(null)
     const [firstInit, setFirstInit] = useState(true)
+
+    const [blurDataUrl] = useNextBlurhash("LEHV6nWB2yk8pyo0adR*.7kCMdnj")
 
     const images = data.images
 
@@ -109,8 +112,12 @@ export default function RoomObject(data: RoomObjectProps) {
             <div className='hotel-room__preview'>
                 <div ref={previewImageRef} className={`hotel-room__image `}
                     style={{
-                        backgroundImage: `url(${images ? images[currentSlide] : ''})`
+                        // backgroundImage: `url(${images ? images[currentSlide] : ''})`
                     }} onClick={() => setGalleryIsOpen(true)}>
+                    <Image src={images[currentSlide]} height={350} width={570} alt={'Plazma'}
+                        placeholder="blur"
+                        blurDataURL={blurDataUrl}
+                    />
 
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
