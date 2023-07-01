@@ -71,9 +71,11 @@ export default function Header(props: HeaderProps) {
                     <span className="burger-menu"></span>
                 </div>
                 <div className='c-menu__logo'>
-                    <object data='/svg/dark-logo.svg' type='image/svg+xml'>
-                        <img src='/img/dark-logo.svg' alt='logo' />
-                    </object>
+                    <Link href={'/'}>
+                        <object data='/svg/dark-logo.svg' type='image/svg+xml'>
+                            <img src='/img/dark-logo.svg' alt='logo' />
+                        </object>
+                    </Link>
                 </div>
             </div>
             <div className='c-menu__container'>
@@ -118,19 +120,35 @@ export default function Header(props: HeaderProps) {
                     </div>
                     <div className='menu__head'>
                         <div className='menu__action'>
-                            <object className='icon' data='svg/vk.svg' type='image/svg+xml'>
-                                {/* <img src='/img/new-logo.svg' alt='' /> */}
-                            </object>
-                            <object data='/svg/phone.svg' type='image/svg+xml'>
-                                {/* <img src='/img/new-logo.svg' alt='' /> */}
-                            </object>
+                            <a href='#' className='menu__action-link'>
+                                <object className='icon' data='svg/vk.svg' type='image/svg+xml'>
+                                    {/* <img src='/img/new-logo.svg' alt='' /> */}
+                                </object>
+                            </a>
+                            <a href='#' className='menu__action-link'>
+                                <object className='icon' data='/svg/phone.svg' type='image/svg+xml'>
+                                    {/* <img src='/img/new-logo.svg' alt='' /> */}
+                                </object>
+                            </a>
                         </div>
 
-                        <div className='menu__logo'>
-                            <object data='/svg/new-logo.svg' type='image/svg+xml'>
-                                <img src='/img/new-logo.svg' alt='' />
-                            </object>
-                        </div>
+                        <Link className='menu__logo' href='/'>
+                            <span style={{ display: 'block' }}>
+                                <object data='/svg/new-logo.svg' type='image/svg+xml'>
+                                    <img src='/img/new-logo.svg' alt='' />
+                                </object>
+                            </span>
+                        </Link>
+
+
+
+                        {/* <Link className='menu__logo' href='/'>
+                            <span style={{ maxWidth: 64 }}>
+                                <object className='pl-label' data='/svg/label-plazma.svg' type='image/svg+xml'>
+                                    <img src='/img/label-plazma.svg' alt='' />
+                                </object>
+                            </span>
+                        </Link> */}
 
                         <div className='menu__btn btn btn_white' onClick={() => router.push('/hotel#hotelRooms')}>
                             Забронировать номер
@@ -142,11 +160,11 @@ export default function Header(props: HeaderProps) {
                     </div>
 
                     <nav className="menu__body">
-                        <div className='menu__item'>
+                        {/* <div className='menu__item'>
                             <Link href='/' className='menu__link'>
                                 Главная
                             </Link>
-                        </div>
+                        </div> */}
 
                         <div className='menu__item'>
                             <Link href='/hotel' className='menu__link'>
@@ -157,12 +175,6 @@ export default function Header(props: HeaderProps) {
                         <div className='menu__item'>
                             <Link href='/meals' className='menu__link'>
                                 Питание
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/aquatory' className='menu__link'>
-                                Акватория
                             </Link>
                         </div>
 
@@ -179,8 +191,20 @@ export default function Header(props: HeaderProps) {
                         </div>
 
                         <div className='menu__item'>
+                            <Link href='/aquatory' className='menu__link'>
+                                Акватория
+                            </Link>
+                        </div>
+
+                        <div className='menu__item'>
                             <Link href='/active-leisure' className='menu__link'>
                                 Активный отдых
+                            </Link>
+                        </div>
+
+                        <div className='menu__item'>
+                            <Link href='/sports-camps' className='menu__link'>
+                                Спортивные сборы
                             </Link>
                         </div>
 

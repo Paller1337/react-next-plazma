@@ -47,7 +47,7 @@
 
     &__container
         //max-width: 1440px;
-        padding: 16px 32px 2px 32px
+        padding: 16px 32px 6px 32px
         margin: 0 auto
         @media (max-width: $md1)
             padding: 12px 12px 0 12px
@@ -89,7 +89,13 @@
 
     &__action
         display: flex
-        gap: 24px
+        // gap: 24px
+        &-link
+            padding: 14px
+                
+            .icon
+                width: 16px
+                height: 16px
         @media (max-width: $md1)
             display: none
     &__logo
@@ -155,7 +161,7 @@
 
     &__link
         font-weight: 400
-        font-size: 16px
+        font-size: 14px
         text-transform: uppercase
         line-height: 26px
         letter-spacing: .1em
@@ -163,6 +169,7 @@
         padding: 0px 10px
         transition: all 0.7s ease 0s
         position: relative
+        text-wrap: nowrap
         &::before
             content: ''
             position: absolute

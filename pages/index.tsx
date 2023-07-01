@@ -112,7 +112,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/2.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/2.jpg" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/4.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/4.jpg" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function PageIndex() {
               <div className='preview-blocks__item preview-image'>
                 <div className='preview-image__img-wrap'>
                   <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/5.png" alt='Парк-отель Plazma' />
+                    <img className='js--mobile-parallax' src="/img/index/previews/5.jpg" alt='Парк-отель Plazma' />
                   </picture>
                 </div>
               </div>

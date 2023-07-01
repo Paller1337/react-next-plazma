@@ -22,8 +22,12 @@ export default function RowCard(props: ColumnCardProps) {
             </div>
 
             <div className='row-card__text'>
-                <h3 className='row-card__title'>{props.title}</h3>
-                <span className='row-card__desc'>{props.desc}</span>
+                {props.title ?
+                    <h3 className='row-card__title'>{props.title}</h3>
+                    : <></>}
+                {props.desc ?
+                    <span className='row-card__desc'>{props.desc}</span>
+                    : <></>}
             </div>
         </div>
     </>)

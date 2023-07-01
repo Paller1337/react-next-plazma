@@ -1,0 +1,239 @@
+.input
+    width: 100%
+    position: relative
+
+    .label
+        color: #262626
+        font-size: 16px
+        font-family: Lora
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 0.48px
+        padding: 4px 0
+
+.input-range
+    &__labels
+        display: flex
+        width: 100%
+        justify-content: space-between
+        padding: 0 4px
+        span
+            font-size: 12px
+            color: #393939
+
+    &__table
+        background-image: url(/img/input-range-table.png)
+        height: 27px
+        width: 28px
+        position: relative
+        user-select: none
+
+        &--wrapper
+            position: absolute
+            left: -6px
+            right: 22px
+
+        &-text
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -11px)
+            color: #262626
+            text-align: center
+            font-size: 14px
+            font-family: Lora
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            letter-spacing: 0.42px
+
+.input-select
+    position: relative
+    &__select
+        display: flex
+        position: relative
+        flex-direction: column
+
+    &__now
+        margin-top: 4px
+        cursor: pointer
+        height: 40px
+        display: flex
+        align-items: center
+        padding: 0 12px
+        border: 1px solid #262626
+
+        color: #262626
+        font-size: 14px
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 0.42px
+        position: relative
+        transform: rotate(0deg)
+        &::after
+            content: ''
+            position: absolute
+            width: 12px
+            height: 12px
+            background-image: url(/img/input-arrow.svg)
+            right: 16px
+            top: 14px
+            transition: all .32s ease-in-out
+        &.opened
+            &::after
+                transform: rotate(180deg)
+
+    &__options
+        display: flex
+        flex-direction: column
+        position: absolute
+        left: 0
+        right: 0
+        top: 44px
+        transition: all .32s ease-in-out
+        opacity: 0
+        overflow: hidden
+        max-height: 0px
+        height: 0px
+        border: 0px
+        background: #fff
+        z-index: 100
+        border-color: #6d6d6d
+        &.opened
+            opacity: 1
+            max-height: 1000px
+            border:
+                right: 1px solid #6d6d6d
+                bottom: 1px solid #6d6d6d
+                left: 1px solid #6d6d6d
+        &:hover
+            border-color: #262626 !important
+            .input-select__option
+                color: #262626
+    &__option
+        cursor: pointer
+        height: 40px
+        display: flex
+        align-items: center
+        padding: 0 12px
+        color: #6d6d6d
+        text-align: center
+        font-size: 14px
+        font-family: Lora
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 0.42px
+        transition: all .32s ease-in-out
+        &:hover
+            background: #f7f7f78a
+            border:
+                top: 1px solid #262626
+                bottom: 1px solid #262626
+            &:first-child
+                border-top: none
+            &:last-child
+                border-bottom: none
+
+.input-radio
+    &__btn-wrap
+        display: flex
+        flex-direction: column
+        gap: 10px
+        margin-top: 12px
+    &__btn
+        display: flex
+        gap: 16px
+        align-items: center
+        label
+            color: #262626
+            text-align: center
+            font-size: 14px
+            font-family: Lora
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            letter-spacing: 0.42px
+        input
+            appearance: none
+            -webkit-appearance: none
+            border-radius: 50%
+            border: 1px solid #262626
+            position: relative
+            width: 20px
+            height: 20px
+            &:checked
+                &::before
+                    content: ''
+                    height: 12px
+                    width: 12px
+                    border-radius: 8px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    position: absolute
+                    background: #262626
+
+.strict-input
+    width: 100%
+
+    &__label
+        &_min
+        &_max
+    &[type='range']
+        margin-top: 27px
+        height: 2.2em
+        -webkit-appearance: none
+        position: relative
+        &::after
+            position: absolute
+            content: ''
+            height: 12px
+            width: 12px
+            background-image: url(/img/input-arrow.svg)
+            left: -2.5px
+            top: 8.5px
+            transform: rotate(-90deg)
+            z-index: 1
+        &.slider-progress
+            --range: calc(var(--max) - var(--min))
+            --ratio: calc((var(--value) - var(--min)) / var(--range))
+            --sx: calc(0.5 * 16px + var(--ratio) * (100% - 16px))
+
+        &:focus
+            outline: none
+
+        /*webkit*/
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            width: 16px
+            height: 16px
+            border-radius: 16px
+            background: #FFFFFF
+            border: 1px solid #262626
+            box-shadow: none
+            margin-top: calc(1px * 0.5 - max(16px * 0.5,1px))
+            cursor: e-resize
+            position: relative
+            z-index: 3
+        &::-webkit-slider-runnable-track
+            height: 1px
+            border: none
+            border-radius: 0
+            background: #D2D2D2
+            box-shadow: none
+
+        &.slider-progress::-webkit-slider-runnable-track
+            background: linear-gradient(#262626,#262626) 0/var(--sx) 100% no-repeat, #D2D2D2
+
+    &[type='text']
+        margin-top: 8px
+        height: 2.2em
+        -webkit-appearance: none
+        border: 1px solid #262626
+        height: 50px
+        max-height: 44px
+        padding: 0 16px
+        display: flex
+        align-items: center
