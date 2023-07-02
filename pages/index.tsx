@@ -6,10 +6,23 @@ import BookingPromo from '../components/bnovo/BookingPromo'
 import ReactPlayer from 'react-player'
 import Promo from '../components/Promo'
 import Link from 'next/link'
+// import { minFiles } from '../middleware/utils/getMinImages'
+import { GetServerSideProps } from 'next'
+import { useEffect } from 'react'
+
+import aboutHotelImgMin from '/public/img/index/about-hotel/min.png'
+import aboutHotelImgMax from '/public/img/index/about-hotel/max.png'
+import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
 
 
 
-export default function PageIndex() {
+interface PageIndexProps {
+  images: any
+}
+
+
+export default function PageIndex(props: PageIndexProps) {
+
 
   return (
     <>
@@ -42,7 +55,7 @@ export default function PageIndex() {
 
 
           <Promo booking video />
-          {/* <Header /> */}
+          <Header />
           <div className='base-bg' data-scroll-section></div>
 
           <div className='page-index__about-hotel about-hotel container' data-scroll-section>
@@ -55,7 +68,8 @@ export default function PageIndex() {
               </div>
 
               <picture className='about-hotel__img img_min'>
-                <img src='/img/index/about-hotel/min.png' alt='' />
+                <Image width={670} height={420} src={aboutHotelImgMin} alt=''
+                  placeholder='blur' />
               </picture>
             </div>
 
@@ -81,177 +95,103 @@ export default function PageIndex() {
               </div>
 
               <picture className='about-hotel__img img_max'>
-                <img src='/img/index/about-hotel/max.png' alt='' />
+                <Image width={670} height={550} src={aboutHotelImgMax} alt=''
+                  placeholder='blur' />
               </picture>
             </div>
           </div>
 
           <div className='page-index__previews preview-blocks' data-scroll-section>
+            <FullSizePreviewInfo
+              title={'ГОСТИНИЦА'}
+              description={`
+              Все наши номера выполнены из качественных материалов, а дизайн был разработан с
+              учетом удобства и современных тенденций. Мы уверены, что у нас вы сможете
+              расслабиться и в полной мере насладиться отдыхом. Наш номерной фонд настолько
+              разнообразен, что каждый сможет найти себе что-то по душе. В гостинице 130 номеров,
+              которые вмещают 400 человек. У нас есть номера на 2,3,4,5,6,7,8 человек, некоторые
+              из них расположены в гостиничных корпусах, а некоторые –отдельные домики с видом на
+              набережную.
+              `}
+              image={2}
+              href='/hotel'
+              btnTitle='Подробнее'
+            />
+
+            <FullSizePreviewInfo
+              title={'ПИТАНИЕ'}
+              description={`
+              У нас есть ресторан, столовая SMASH, летний шатер и банкетный зал. Ресторан оформлен
+              в темных коричневых тонах, предлагая укрыться от солнца летом и насладиться уютной
+              обстановкой с камином зимой. Столовая SMASH предлагает быструю и вкусную еду на
+              завтрак, обед, ужин. Летом вы можете насладиться нашими блюдами на свежем воздухе в
+              нашем шатре на полуострове. Для особых мероприятий у нас есть банкетный зал.
+              `}
+              image={4}
+              href='/meals'
+              btnTitle='Подробнее'
+            />
+
+            <FullSizePreviewInfo
+              title={'АКВАТОРИЯ'}
+              description={`
+              Территория акватории – это самый настоящий городской курорт. У нас вы сможете
+              насладиться прогулками вдоль набережной, искупаться в большом искусственном водоеме,
+              позагорать на травяном пляже, пожарить шашлыки в беседках, поиграть в волейбол на
+              кварцевом песке, устроить баскетбольный матч на открытой универсальной
+              спорт.площадке, а ваши дети смогут найти друзей со всей России на наших детских
+              площадках. У нас также есть полуостров с бассейном с подогревом и шатром-рестораном,
+              где вы сможете насладиться прохладным аперолем и нежнейшей пиццой.
+              `}
+              image={3}
+              href='/aquatory'
+              btnTitle='Подробнее'
+            />
+
+            <FullSizePreviewInfo
+              title={'САУНА'}
+              description={`
+              На территории отеля есть 3 отдельных бани на дровах со своими особенностями.
+              «Аква-люкс» предлагает большой бассейн с зоной джакузи и просторную комнату отдыха.
+              «1000 и 1 ночь» удивит вас восточным дизайном, расслабляющим хамамом и соляной
+              стеной в русской парилке. «Белая ночь» – это светлые тона и теплый камень, на
+              котором можно делать пенный массаж.
+              `}
+              image={5}
+              href='/sauna'
+              btnTitle='Подробнее'
+            />
 
 
+            <FullSizePreviewInfo
+              title={'МЕРОПРИЯТИЯ'}
+              description={`
+              У нас есть множество мест для проведения различных мероприятий.. В ресторане можно
+              провести выпускной, в банкетном зале – свадьбу, в шатре – юбилей, в беседках –
+              детский день рождения, в конференц-зале – тимбилдинг, на травяном пляже – групповые
+              занятия по йоге. У нас также есть 5 спортивных объектов, которые могут стать
+              площадками для спортивных мероприятий.
+              `}
+              image={7}
+              href='/events'
+              btnTitle='Подробнее'
+            />
 
-            <div className='preview-blocks__item-wrap'>
-              <div className='preview-blocks__item'>
-
-                <div className='preview-blocks__preview-text'>
-                  <span className='text-title'>ГОСТИНИЦА</span>
-                  <span className='text'>
-                    Все наши номера выполнены из качественных материалов, а дизайн был разработан с
-                    учетом удобства и современных тенденций. Мы уверены, что у нас вы сможете
-                    расслабиться и в полной мере насладиться отдыхом. Наш номерной фонд настолько
-                    разнообразен, что каждый сможет найти себе что-то по душе. В гостинице 130 номеров,
-                    которые вмещают 400 человек. У нас есть номера на 2,3,4,5,6,7,8 человек, некоторые
-                    из них расположены в гостиничных корпусах, а некоторые –отдельные домики с видом на
-                    набережную.
-                  </span>
-
-                  <Link className='btn btn_black' href='/hotel'>Подробнее</Link>
-                </div>
-              </div>
-
-              <div className='preview-blocks__item preview-image'>
-                <div className='preview-image__img-wrap'>
-                  <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/2.jpg" alt='Парк-отель Plazma' />
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-
-            <div className='preview-blocks__item-wrap'>
-              <div className='preview-blocks__item'>
-
-                <div className='preview-blocks__preview-text'>
-                  <span className='text-title'>ПИТАНИЕ</span>
-                  <span className='text'>
-                    У нас есть ресторан, столовая SMASH, летний шатер и банкетный зал. Ресторан оформлен
-                    в темных коричневых тонах, предлагая укрыться от солнца летом и насладиться уютной
-                    обстановкой с камином зимой. Столовая SMASH предлагает быструю и вкусную еду на
-                    завтрак, обед, ужин. Летом вы можете насладиться нашими блюдами на свежем воздухе в
-                    нашем шатре на полуострове. Для особых мероприятий у нас есть банкетный зал.
-                  </span>
-
-                  <Link className='btn btn_black' href='/meals'>Подробнее</Link>
-                </div>
-              </div>
-
-              <div className='preview-blocks__item preview-image'>
-                <div className='preview-image__img-wrap'>
-                  <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/4.jpg" alt='Парк-отель Plazma' />
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div className='preview-blocks__item-wrap'>
-              <div className='preview-blocks__item'>
-
-                <div className='preview-blocks__preview-text'>
-                  <span className='text-title'>АКВАТОРИЯ</span>
-                  <span className='text'>
-                    Территория акватории – это самый настоящий городской курорт. У нас вы сможете
-                    насладиться прогулками вдоль набережной, искупаться в большом искусственном водоеме,
-                    позагорать на травяном пляже, пожарить шашлыки в беседках, поиграть в волейбол на
-                    кварцевом песке, устроить баскетбольный матч на открытой универсальной
-                    спорт.площадке, а ваши дети смогут найти друзей со всей России на наших детских
-                    площадках. У нас также есть полуостров с бассейном с подогревом и шатром-рестораном,
-                    где вы сможете насладиться прохладным аперолем и нежнейшей пиццой.
-                  </span>
-
-                  <Link className='btn btn_black' href='/aquatory'>Подробнее</Link>
-                </div>
-              </div>
-
-              <div className='preview-blocks__item preview-image'>
-                <div className='preview-image__img-wrap'>
-                  <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/3.png" alt='Парк-отель Plazma' />
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-            <div className='preview-blocks__item-wrap'>
-              <div className='preview-blocks__item'>
-                <div className='preview-blocks__preview-text'>
-                  <span className='text-title'>САУНА</span>
-                  <span className='text'>
-                    На территории отеля есть 3 отдельных бани на дровах со своими особенностями.
-                    «Аква-люкс» предлагает большой бассейн с зоной джакузи и просторную комнату отдыха.
-                    «1000 и 1 ночь» удивит вас восточным дизайном, расслабляющим хамамом и соляной
-                    стеной в русской парилке. «Белая ночь» – это светлые тона и теплый камень, на
-                    котором можно делать пенный массаж.
-                  </span>
-
-                  <Link className='btn btn_black' href='/sauna'>Подробнее</Link>
-                </div>
-              </div>
-
-              <div className='preview-blocks__item preview-image'>
-                <div className='preview-image__img-wrap'>
-                  <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/5.jpg" alt='Парк-отель Plazma' />
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-
-            <div className='preview-blocks__item-wrap'>
-              <div className='preview-blocks__item'>
-                <div className='preview-blocks__preview-text'>
-                  <span className='text-title'>МЕРОПРИЯТИЯ</span>
-                  <span className='text'>
-                    У нас есть множество мест для проведения различных мероприятий.. В ресторане можно
-                    провести выпускной, в банкетном зале – свадьбу, в шатре – юбилей, в беседках –
-                    детский день рождения, в конференц-зале – тимбилдинг, на травяном пляже – групповые
-                    занятия по йоге. У нас также есть 5 спортивных объектов, которые могут стать
-                    площадками для спортивных мероприятий.
-                  </span>
-
-                  <Link className='btn btn_black' href='/events'>Подробнее</Link>
-                </div>
-              </div>
-
-              <div className='preview-blocks__item preview-image'>
-                <div className='preview-image__img-wrap'>
-                  <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src='/img/index/previews/7.png' alt='Парк-отель Plazma' />
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-            <div className='preview-blocks__item-wrap'>
-              <div className='preview-blocks__item'>
-                <div className='preview-blocks__preview-text'>
-                  <span className='text-title'>АКТИВНЫХ ОТДЫХ</span>
-                  <span className='text'>
-                    Парк-отель &quot;Plazma&quot; предлагает множество возможностей для активного отдыха.
-                    Разомнитесь на теннисном корте или в универсальном спортивном зале. Насладитесь
-                    пляжными видами спорта на крытых или открытых площадах. Пользуйтесь тренажерами под
-                    открытым небом и наслаждайтесь свежим воздухом. У нас также есть две универсальные
-                    спортивные площадки на улице с покрытием из резиновой крошки, где вы можете
-                    заниматься любимым спортом. Ну и, конечно, наша набережная 500 метром отлично
-                    подходит для утренней пробежки, велосипеда или самоката.
-                  </span>
-                  {/* 
-                        <!-- <div className='btn btn_black'>Подробнее</div> --> */}
-                </div>
-              </div>
-
-              <div className='preview-blocks__item preview-image'>
-                <div className='preview-image__img-wrap'>
-                  <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
-                    <img className='js--mobile-parallax' src="/img/index/previews/6.png" alt='Парк-отель Plazma' />
-                  </picture>
-                </div>
-              </div>
-            </div>
+            <FullSizePreviewInfo
+              title={'АКТИВНЫХ ОТДЫХ'}
+              description={`
+              Парк-отель &quot;Plazma&quot; предлагает множество возможностей для активного отдыха.
+              Разомнитесь на теннисном корте или в универсальном спортивном зале. Насладитесь
+              пляжными видами спорта на крытых или открытых площадах. Пользуйтесь тренажерами под
+              открытым небом и наслаждайтесь свежим воздухом. У нас также есть две универсальные
+              спортивные площадки на улице с покрытием из резиновой крошки, где вы можете
+              заниматься любимым спортом. Ну и, конечно, наша набережная 500 метром отлично
+              подходит для утренней пробежки, велосипеда или самоката.
+              `}
+              image={6}
+              href='/events'
+              btnTitle='Подробнее'
+            />
           </div>
 
 

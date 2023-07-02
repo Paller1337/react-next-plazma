@@ -13,6 +13,17 @@ const path = require('path')
 const cloudinaryBaseUrl = `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/`;
 module.exports = {
     runtime: 'experimental-edge',
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.fallback.fs = false;
+        }
+
+        return config;
+    },
+
+    experimental: {
+        workerThreads: true, 
+    },
 
     images: {
         // loader: "cloudinary",

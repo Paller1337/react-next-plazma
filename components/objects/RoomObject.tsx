@@ -115,8 +115,8 @@ export default function RoomObject(data: RoomObjectProps) {
                         // backgroundImage: `url(${images ? images[currentSlide] : ''})`
                     }} onClick={() => setGalleryIsOpen(true)}>
                     <Image src={images[currentSlide]} height={350} width={570} alt={'Plazma'}
-                        placeholder="blur"
-                        blurDataURL={blurDataUrl}
+                        // placeholder="blur"
+                        // blurDataURL={blurDataUrl}
                     />
 
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>

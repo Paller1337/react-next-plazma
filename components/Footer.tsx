@@ -1,12 +1,15 @@
+import { GetServerSideProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 interface FooterProps {
 
 }
 
-export default function Footer(props: FooterProps) {
 
+
+export default function Footer(props: FooterProps) {
     return (
         <>
             <div className="footer" data-scroll-section>

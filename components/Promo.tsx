@@ -2,7 +2,9 @@
 import Image from 'next/image';
 import Header from './Header';
 import BookingPromo from './bnovo/BookingPromo';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+// import Video from './Video';
+import dynamic from 'next/dynamic';
 
 interface PromoProps {
     bg?: string
@@ -11,7 +13,10 @@ interface PromoProps {
     imgUrl?: string
 }
 
-
+const Video = dynamic(() => import('./Video'), {
+    ssr: false,
+    loading: () => <p>Loading...</p>
+})
 
 export default function Promo(props: PromoProps) {
     const defaultImg = {
@@ -51,22 +56,30 @@ export default function Promo(props: PromoProps) {
             <Header />
             <div className="main__video-wrapper">
                 <div className="main__video-box">
+                    <Suspense>
+                        {props.video ?
+                            // <video className="main__video" muted loop autoPlay playsInline>
+                            //     <source src="/video/bg.mp4" type="video/mp4" />
+                            //     <source src="/video/bgvideo.webm" type="video/webm" />
+                            //     Your browser does not support the video tag.
+                            // </video> 
 
-                    {props.video ?
-                        <video className="main__video" muted loop autoPlay playsInline>
-                            <source src="/video/bg.mp4" type="video/mp4" />
-                            <source src="/video/bgvideo.webm" type="video/webm" />
-                            Your browser does not support the video tag.
-                        </video> :
+                            <Video className='main__video' muted loop autoPlay playsInline
+                                src={{
+                                    webm: '/video/bg.mp4',
+                                    mp4: '/video/bgvideo.webm',
+                                }} />
+                            :
 
-                        <>
-                            {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
-                            {props.imgUrl ?
-                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'></Image>
-                                : ''
-                            }
-                        </>
-                    }
+                            <>
+                                {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
+                                {props.imgUrl ?
+                                    <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'></Image>
+                                    : ''
+                                }
+                            </>
+                        }
+                    </Suspense>
 
 
                     <div className='main__video-overlay'></div>

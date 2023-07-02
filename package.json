@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "img": "node plugins/imagemin.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,8 +18,13 @@
     "aos": "^2.3.4",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
+    "fs-extra": "^11.1.1",
     "gsap": "^3.11.3",
     "gsap-trial": "^3.11.3",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "locomotive-scroll": "^4.1.4",
     "next": "13.0.5",
     "react": "18.2.0",
@@ -37,6 +43,7 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
+    "@types/imagemin": "^8.0.1",
     "@types/locomotive-scroll": "^4.1.0",
     "@types/uuid": "^9.0.2"
   }
