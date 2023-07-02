@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import useNextBlurhash from "use-next-blurhash"
 
 export interface RoomObjectProps {
@@ -9,8 +9,8 @@ export interface RoomObjectProps {
     id: number | number[],
     title: string,
     description: string,
-    images: string[],
-    size: string, // Добавить площадь терассы 9 кв.м.
+    images: StaticImageData[],
+    size: string,
     attributes: {
         name: string,
         value: string[]
@@ -19,17 +19,12 @@ export interface RoomObjectProps {
 }
 
 export default function RoomObject(data: RoomObjectProps) {
-    const [amenitiesOpened, setAmenitiesOpened] = useState(false)
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [isAnimating, setIsAnimating] = useState(false)
-    const [galleryIsOpen, setGalleryIsOpen] = useState(false)
-    const previewImageRef = useRef<HTMLDivElement>(null)
-    const [firstInit, setFirstInit] = useState(true)
-
-    const [blurDataUrl] = useNextBlurhash("LEHV6nWB2yk8pyo0adR*.7kCMdnj")
-
     const images = data.images
 
+    const [amenitiesOpened, setAmenitiesOpened] = useState(false)
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const [galleryIsOpen, setGalleryIsOpen] = useState(false)
+    const previewImageRef = useRef<HTMLDivElement>(null)
     const goSlide = (i: number) => {
         setCurrentSlide(i)
 
@@ -115,7 +110,7 @@ export default function RoomObject(data: RoomObjectProps) {
                         // backgroundImage: `url(${images ? images[currentSlide] : ''})`
                     }} onClick={() => setGalleryIsOpen(true)}>
                     <Image src={images[currentSlide]} height={350} width={570} alt={'Plazma'}
-                        // placeholder="blur"
+                        placeholder="blur"
                         // blurDataURL={blurDataUrl}
                     />
 

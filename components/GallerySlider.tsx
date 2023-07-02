@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { isDesktop, isMobile } from 'react-device-detect'
 import { createPortal } from 'react-dom'
@@ -5,7 +6,7 @@ import { createPortal } from 'react-dom'
 interface GallerySliderProps {
     isOpen?: boolean
     onClose?: () => void
-    slides: string[]
+    slides: StaticImageData[]
     startSlide?: number
 }
 

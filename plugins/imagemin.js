@@ -5,10 +5,25 @@ async function optimizeImages() {
   const path = await import('path');
   const fs = await import('fs');
 
-  const inputDir = 'public/no-optimize-img';
-  const outputDir = 'public/img';
+  const inputDir = 'public/img';
+  const outputDir = 'public/optimize-img';
 
-  // Рекурсивно обрабатываем все файлы в директории и ее поддиректориях
+  let imports = '';
+  let imagesObject = {};
+
+  function setPath(obj, pathArray, value) {
+    let lastKey = toCamelCase(pathArray.pop(), true);
+
+    pathArray.reduce((a, b) => {
+      return a[toCamelCase(b, false)] = a[toCamelCase(b, false)] || {};
+    }, obj)[lastKey] = value;
+  }
+
+  function toCamelCase(str, addPrefix) {
+    str = str.replace(/([-_.][a-z0-9])/ig, group => group.toUpperCase().replace('-', '_').replace('.', '_').replace('_', '')).replace(/[-.]/g, '_');
+    return addPrefix ? 'img' + str : str;
+  }
+
   function processFiles(dir) {
     const files = fs.readdirSync(dir);
 
@@ -17,20 +32,22 @@ async function optimizeImages() {
       const stat = fs.statSync(filePath);
 
       if (stat.isDirectory()) {
-        // Рекурсивно обрабатываем поддиректорию
         processFiles(filePath);
       } else {
-        // Обрабатываем только файлы изображений
         if (isImageFile(file)) {
           optimizeImage(filePath);
+          const relativePath = path.relative(inputDir, filePath).replace(/\\/g, '/');
+          const extension = path.extname(file);
+          const importVariable = toCamelCase(relativePath.replace(/\//g, '_'), true);
+          imports += `import ${importVariable} from '@/images/${relativePath}';\n`;
+          setPath(imagesObject, relativePath.split('/'), importVariable);
         }
       }
     });
   }
 
-  // Проверяем, является ли файл изображением
   function isImageFile(file) {
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
     const ext = path.extname(file).toLowerCase();
     return imageExtensions.includes(ext);
   }
@@ -40,7 +57,6 @@ async function optimizeImages() {
     const outputFilePath = path.join(outputDir, relativePath);
     const outputDirPath = path.dirname(outputFilePath);
 
-    // Создаем директорию для сохранения файла, если она не существует
     if (!fs.existsSync(outputDirPath)) {
       fs.mkdirSync(outputDirPath, { recursive: true });
     }
@@ -56,8 +72,11 @@ async function optimizeImages() {
     console.log(`Optimized image: ${outputFilePath}`);
   }
 
-  // Запускаем процесс обработки файлов
   processFiles(inputDir);
+
+  let imagesExport = 'export const images = ' + JSON.stringify(imagesObject, null, 2).replace(/"([^"]+)":/g, '$1:').replace(/"([^"]+)"/g, '$1');
+
+  fs.writeFileSync('imageImports.ts', imports + imagesExport);
 }
 
-optimizeImages()
+optimizeImages();

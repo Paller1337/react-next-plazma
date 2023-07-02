@@ -11,7 +11,6 @@ import img7 from '@/images/index/previews/7.jpg'
 
 
 
-
 interface FullsizePreviewInfoProps {
     title: string
     description: string
@@ -22,8 +21,10 @@ interface FullsizePreviewInfoProps {
 
 interface Images {
     [key: number]: StaticImageData;
-  }
-  
+}
+
+
+
 
 const images: Images = {
     1: img1,
@@ -56,7 +57,7 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
                 <div className='preview-image__img-wrap'>
                     <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
                         {props.image &&
-                            <Image height={960} width={960} className='js--mobile-parallax' src={images[props.image]} alt='Парк-отель Plazma' 
+                            <Image height={960} width={960} className='js--mobile-parallax' src={images[props.image]} alt='Парк-отель Plazma'
                                 placeholder='blur'
                             />}
                     </picture>

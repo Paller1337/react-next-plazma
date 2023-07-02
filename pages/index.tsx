@@ -10,8 +10,8 @@ import Link from 'next/link'
 import { GetServerSideProps } from 'next'
 import { useEffect } from 'react'
 
-import aboutHotelImgMin from '/public/img/index/about-hotel/min.png'
-import aboutHotelImgMax from '/public/img/index/about-hotel/max.png'
+import aboutHotelImgMin from '@/images/index/about-hotel/min.png'
+import aboutHotelImgMax from '@/images/index/about-hotel/max.png'
 import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
 
 
