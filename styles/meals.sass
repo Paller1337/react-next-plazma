@@ -44,6 +44,8 @@
         justify-content: center
         transition: all .61s ease-in-out
         overflow: hidden
+        &-image
+            position: absolute
 
         @media screen and ( max-width: $md3 )
             min-width: 0
@@ -108,18 +110,18 @@
 
             &::after
                 top: 100%
-        &.card_banquet
-            background: url(/img/backgrounds/banquet-hall.jpg)
-            background-size: cover
-        &.card_rest
-            background: url(/img/meals/2.jpg)
-            background-size: cover
-        &.card_smash
-            background: url(/img/meals/3.jpg)
-            background-size: cover
-        &.card_tent
-            background: url(/img/meals/4.jpg)
-            background-size: cover
+        // &.card_banquet
+        //     background: url(/img/backgrounds/banquet-hall.jpg)
+        //     background-size: cover
+        // &.card_rest
+        //     background: url(/img/meals/2.jpg)
+        //     background-size: cover
+        // &.card_smash
+        //     background: url(/img/meals/3.jpg)
+        //     background-size: cover
+        // &.card_tent
+        //     background: url(/img/meals/4.jpg)
+        //     background-size: cover
 
 .meals-preview-cards
     display: flex

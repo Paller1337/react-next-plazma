@@ -86,7 +86,7 @@ export default function PageSportsCamps() {
                     <div className='meals-preview-cards container'>
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <img src='/img/meals/min/1.jpg' alt='' />
+                                <Image width={0} height={0}  src={images.meals.min.img1Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Ресторан
@@ -95,7 +95,7 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <img src='/img/meals/min/2.jpg' alt='' />
+                                <Image width={0} height={0}  src={images.meals.min.img2Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Кафе-столовая Smash
@@ -104,7 +104,7 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <img src='/img/meals/min/3.jpg' alt='' />
+                                <Image width={0} height={0}  src={images.meals.min.img3Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Банкетный-конференц-зал
@@ -113,7 +113,7 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <img src='/img/meals/min/4.jpg' alt='' />
+                                <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur'/>
                             </picture>
                             <span className='meals-preview-card__text'>
                                 летний Шатер
@@ -130,22 +130,20 @@ export default function PageSportsCamps() {
                     />
 
                     <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
-                        <ColumnCard
+                        {/* <ColumnCard
                             title='Делюкс на набережной'
-                            img={{ h: 770, w: 570, src: images.hotel.roomPreviews.deluxe5Corps.img1Jpg }}
+                            img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 1 этаж'
-                            img={{ h: 770, w: 570, src: images.hotel.roomPreviews.deluxe5Corps.img2Jpg }}
+                            img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img2Jpg }}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 2 этаж'
-                            img={{
-                                h: 770, w: 570, src: images.hotel.roomPreviews.deluxe5Corps.img1Jpg
-                            }}
-                        />
+                            img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
+                        /> */}
                     </div>
 
 

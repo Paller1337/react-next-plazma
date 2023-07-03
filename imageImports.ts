@@ -222,6 +222,9 @@ import imgsport2Jpg from '@/images/sport/2.jpg';
 import imgsport3Jpg from '@/images/sport/3.jpg';
 import imgsportsCamps1Jpg from '@/images/sports-camps/1.jpg';
 import imgsportsCamps2Jpg from '@/images/sports-camps/2.jpg';
+import imgsportsCampsRooms1Jpg from '@/images/sports-camps/rooms/1.jpg';
+import imgsportsCampsRooms2Jpg from '@/images/sports-camps/rooms/2.jpg';
+import imgsportsCampsRooms3Jpg from '@/images/sports-camps/rooms/3.jpg';
 import imgtentSlider1Jpg from '@/images/tent/slider/1.jpg';
 import imgtentSlider2Jpg from '@/images/tent/slider/2.jpg';
 import imgtentSlider3Jpg from '@/images/tent/slider/3.jpg';
@@ -528,7 +531,12 @@ export const images = {
   },
   sportsCamps: {
     img1Jpg: imgsportsCamps1Jpg,
-    img2Jpg: imgsportsCamps2Jpg
+    img2Jpg: imgsportsCamps2Jpg,
+    rooms: {
+      img1Jpg: imgsportsCampsRooms1Jpg,
+      img2Jpg: imgsportsCampsRooms2Jpg,
+      img3Jpg: imgsportsCampsRooms3Jpg
+    }
   },
   tent: {
     slider: {

@@ -5,6 +5,8 @@ import Header from '../../components/Header'
 // import PromoBackground from '../../components/PromoBackground'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
+import Link from 'next/link'
+import { images } from 'imageImports'
 
 export default function PageMeals() {
 
@@ -22,40 +24,52 @@ export default function PageMeals() {
 
                             <div className='page-meals__cards-section'>
 
-                                <a className='page-meals__card card_rest' href='meals/restaurant'>
+                                <Link className='page-meals__card' href='meals/restaurant'>
+                                    <div className='page-meals__card-image'>
+                                        <Image src={images.meals.img1Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                    </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
                                         Ресторан
                                     </span>
-                                    <div className='btn btn_white'>Подробнееее</div>
-                                </a>
+                                    <div className='btn btn_white'>Подробнее</div>
+                                </Link>
 
-                                <a className='page-meals__card card_smash' href='meals/smash'>
+                                <Link className='page-meals__card' href='meals/smash'>
+                                    <div className='page-meals__card-image'>
+                                        <Image src={images.meals.img2Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                    </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
                                         Кафе SMASH
                                     </span>
                                     <div className='btn btn_white'>Подробнее</div>
-                                </a>
+                                </Link>
 
                             </div>
 
                             <div className='page-meals__cards-section'>
-                                <a className='page-meals__card card_banquet' href='meals/banquet-hall'>
+                                <Link className='page-meals__card' href='meals/banquet-hall'>
+                                    <div className='page-meals__card-image'>
+                                        <Image src={images.meals.img3Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                    </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
                                         Банкетный зал
                                     </span>
                                     <div className='btn btn_white'>Подробнее</div>
-                                </a>
+                                </Link>
 
-                                <a className='page-meals__card card_tent' href='meals/tent'>
+                                <Link className='page-meals__card' href='meals/tent'>
+                                    <div className='page-meals__card-image'>
+                                        <Image src={images.meals.img4Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                    </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
                                         Летний шатер
                                     </span>
                                     <div className='btn btn_white'>Подробнее</div>
-                                </a>
+                                </Link>
                             </div>
 
 
