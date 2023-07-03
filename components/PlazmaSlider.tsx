@@ -77,7 +77,6 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
     return (
         <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll>
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
-                {/* <div key={`${props.data}-prev`} className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} /> */}
                 <Image className="plazma-slider__item-fake-prev" height={1920} width={1056} src={data.images[data.images.length - 1]} alt='Plazma'
                     onClick={() => setActiveSlide(data.images.length - 1)}
                 />
@@ -103,7 +102,6 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                 <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma'
                     onClick={() => setActiveSlide(0)} 
                     />
-                {/* <div key={`${dataName}-next`} className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} /> */}
             </div>
 
             <div className="plazma-slider__nav">
