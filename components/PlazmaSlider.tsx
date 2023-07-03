@@ -61,7 +61,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
         const translateX = (sliderWidth - slideWidth) / 2 - items[currentIndex].offsetLeft;
 
         sliderContentWrapper.style.transform = `translateX(${translateX}px)`;
-    }, [currentIndex]);
+    }, [sliderContentRef.current, currentIndex]);
 
 
     if (!data) {
@@ -78,7 +78,9 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
         <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll>
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
                 {/* <div key={`${props.data}-prev`} className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} /> */}
-                <Image className="plazma-slider__item-fake-prev" height={1920} width={1056} src={data.images[data.images.length - 1]} alt='Plazma' />
+                <Image className="plazma-slider__item-fake-prev" height={1920} width={1056} src={data.images[data.images.length - 1]} alt='Plazma'
+                    onClick={() => setActiveSlide(data.images.length - 1)}
+                />
                 {data.images.map((imagePath, index) => (
                     <>
                         {/* <div
@@ -89,7 +91,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         /> */}
 
                         <div
-                            key={v4()}
+                            key={index}
                             className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
                             onClick={() => setActiveSlide(index)}>
                             <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
@@ -98,7 +100,9 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         </div>
                     </>
                 ))}
-                <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma' />
+                <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma'
+                    onClick={() => setActiveSlide(0)} 
+                    />
                 {/* <div key={`${dataName}-next`} className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} /> */}
             </div>
 

@@ -116,11 +116,24 @@
                             // background-size: cover
                             // background-repeat: no-repeat
                             // background-position: center center
-                            // width: 570px
+                            min-width: 570px
                             height: 330px
                             position: relative
                             // overflow: hidden
                             max-width: 570px
+                            overflow: hidden
+                            display: flex
+                            flex-direction: row
+                            &-wrapper
+                                position: relative
+                            &-content
+                                display: flex
+                                flex-wrap: nowrap
+                                transition: transform .32s ease-in-out
+                            &-images
+                                overflow: hidden
+                                display: flex
+
                             img
                                 object-fit: cover
                                 position: absolute
@@ -141,8 +154,7 @@
                                 // display: flex
                                 // height: 100%
                                 // width: 100%
-                            
-                            
+
                             &--prev, &--next
                                 position: absolute
                                 width: 50px

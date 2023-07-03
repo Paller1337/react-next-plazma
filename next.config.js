@@ -3,14 +3,15 @@
 module.exports = {
     // reactStrictMode: true,
     // swcMinify: true,
+    // assetPrefix: './',
     runtime: 'experimental-edge',
-    webpack: (config, { isServer }) => {
-        if (!isServer) {
-            config.resolve.fallback.fs = false;
-        }
+    // webpack: (config, { isServer }) => {
+    //     if (!isServer) {
+    //         config.resolve.fallback.fs = false;
+    //     }
 
-        return config;
-    },
+    //     return config;
+    // },
 
     images: {
         domains: [

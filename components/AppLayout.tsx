@@ -13,7 +13,7 @@ export default function AppLayout(props: AppLayoutProps) {
     const [headerBlack, setHeaderBlack] = useState(false)
 
     useEffect(() => {
-        console.log(props.asPath)
+        // console.log(props.asPath)
         switch(props.asPath){
             case '/meals':
                 setHeaderBlack(true)

@@ -24,13 +24,13 @@ export default function RoomObject(data: RoomObjectProps) {
     const [amenitiesOpened, setAmenitiesOpened] = useState(false)
     const [currentSlide, setCurrentSlide] = useState(0)
     const [galleryIsOpen, setGalleryIsOpen] = useState(false)
-    const previewImageRef = useRef<HTMLDivElement>(null)
+    const imageContentRef = useRef<HTMLDivElement>(null)
+    const [translate, setTranslate] = useState(0)
+
     const goSlide = (i: number) => {
         setCurrentSlide(i)
-
-        // const preview = previewImageRef.current;
-        // preview?.classList.add('fade-in-animating')
     }
+
 
     // useEffect(() => {
     //     const preview = previewImageRef.current;
@@ -96,6 +96,11 @@ export default function RoomObject(data: RoomObjectProps) {
         }
     }
 
+    useEffect(() => {
+        setTranslate(570 * currentSlide)
+    }, [currentSlide])
+
+
     return (<>
         <GallerySlider
             slides={images}
@@ -105,19 +110,23 @@ export default function RoomObject(data: RoomObjectProps) {
         />
         <div className='hotel-rooms__item hotel-room'>
             <div className='hotel-room__preview'>
-                <div ref={previewImageRef} className={`hotel-room__image `}
-                    style={{
-                        // backgroundImage: `url(${images ? images[currentSlide] : ''})`
-                    }} onClick={() => setGalleryIsOpen(true)}>
-                    <Image src={images[currentSlide]} height={350} width={570} alt={'Plazma'}
-                        placeholder="blur"
-                        // blurDataURL={blurDataUrl}
-                    />
-
+                <div className='hotel-room__image-wrapper'>
+                    <div className='hotel-room__image-images'>
+                        <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
+                            {images && images.map((image, i) =>
+                                <>
+                                    <div className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
+                                        <Image key={i} src={image} height={350} width={570} alt={'Plazma'}
+                                            placeholder="blur"
+                                        />
+                                    </div >
+                                </>
+                            )}
+                        </div>
+                    </div>
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
                 </div>
-
                 {images && images.length > 1 ?
                     <div className='hotel-room__slides'>
                         {images.map((x, i) =>
