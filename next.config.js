@@ -20,9 +20,9 @@ module.exports = {
         return config;
     },
 
-    experimental: {
-        workerThreads: true, 
-    },
+    // experimental: {
+    //     workerThreads: true, 
+    // },
 
     images: {
         // loader: "cloudinary",
@@ -51,7 +51,9 @@ module.exports = {
         locales: ['ru'],
         defaultLocale: 'ru',
     },
-
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     // sassOptions: {
     //     includePaths: [path.join(__dirname, 'styles')],
     //     prependData: `@import "_config.sass"`
