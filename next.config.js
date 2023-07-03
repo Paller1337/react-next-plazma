@@ -1,16 +1,8 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   swcMinify: true,
-// }
-
-// module.exports = nextConfig
-/* eslint-disable no-undef */
-// next.config.js
-
-const path = require('path')
+/** @type {import('next').NextConfig} */
 
 module.exports = {
+    // reactStrictMode: true,
+    // swcMinify: true,
     runtime: 'experimental-edge',
     webpack: (config, { isServer }) => {
         if (!isServer) {
@@ -20,13 +12,7 @@ module.exports = {
         return config;
     },
 
-    // experimental: {
-    //     workerThreads: true, 
-    // },
-
     images: {
-        // loader: "cloudinary",
-        // path: cloudinaryBaseUrl,
         domains: [
             'cloudflare-ipfs.com',
             'skin.klaun.ch',
@@ -43,16 +29,11 @@ module.exports = {
         ]
     },
 
-    // externals: ['pg', 'sqlite3', 'tedious', 'pg-hstore'],
-
     output: 'standalone',
 
     i18n: {
         locales: ['ru'],
         defaultLocale: 'ru',
-    },
-    eslint: {
-        ignoreDuringBuilds: true,
     },
     // sassOptions: {
     //     includePaths: [path.join(__dirname, 'styles')],
