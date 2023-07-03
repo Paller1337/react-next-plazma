@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import { images } from 'imageImports'
 
 export default function PageSmash() {
 
@@ -34,7 +35,7 @@ export default function PageSmash() {
                         </div>
                     </div> */}
 
-                    <Promo imgUrl='/img/backgrounds/hotel-smash.png' />
+                    <Promo imgUrl={images.backgrounds.imghotelSmashPng} />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -98,7 +99,7 @@ export default function PageSmash() {
                     </div>
 
                 </div >
-                <Footer />
+                {/* <Footer /> */}
             </main>
         </>
 

@@ -61,7 +61,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
         const translateX = (sliderWidth - slideWidth) / 2 - items[currentIndex].offsetLeft;
 
         sliderContentWrapper.style.transform = `translateX(${translateX}px)`;
-    }, [sliderContentRef, currentIndex]);
+    }, [currentIndex]);
 
 
     if (!data) {
@@ -74,29 +74,11 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
         setCurrentIndex(newIndex)
     }
 
-    const convertImage = (w: number, h: number) => `
-  <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <linearGradient id="g">
-        <stop stop-color="#333" offset="20%" />
-        <stop stop-color="#222" offset="50%" />
-        <stop stop-color="#333" offset="70%" />
-      </linearGradient>
-    </defs>
-    <rect width="${w}" height="${h}" fill="#333" />
-    <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-    <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
-  </svg>`;
-
-    const toBase64 = (str: string) =>
-        typeof window === 'undefined'
-            ? Buffer.from(str).toString('base64')
-            : window.btoa(str);
-
     return (
         <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll>
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
-                <div key={`${props.data}-prev`} className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} />
+                {/* <div key={`${props.data}-prev`} className="plazma-slider__item-fake-prev" style={{ backgroundImage: `url(${data.images[data.images.length - 1]})` }} /> */}
+                <Image className="plazma-slider__item-fake-prev" height={1920} width={1056} src={data.images[data.images.length - 1]} alt='Plazma' />
                 {data.images.map((imagePath, index) => (
                     <>
                         {/* <div
@@ -111,14 +93,13 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                             className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
                             onClick={() => setActiveSlide(index)}>
                             <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
-                                placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                                    convertImage(700, 475)
-                                )}`}
+                                placeholder='blur'
                             />
                         </div>
                     </>
                 ))}
-                <div key={`${dataName}-next`} className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} />
+                <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma' />
+                {/* <div key={`${dataName}-next`} className="plazma-slider__item-fake-next" style={{ backgroundImage: `url(${data.images[0]})` }} /> */}
             </div>
 
             <div className="plazma-slider__nav">

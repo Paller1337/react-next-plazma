@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
+import { images } from 'imageImports'
 
 export default function PageEvents() {
 
@@ -16,7 +17,7 @@ export default function PageEvents() {
                 <div className='relative main-wrap' data-scroll-container>
 
 
-                    <PromoMin imgUrl='/img/backgrounds/hotel-events-min.png'
+                    <PromoMin imgUrl={images.backgrounds.imghotelEventsMinPng}
                         title='МЕРОПРИЯТИЯ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы организуем увлекательные тематические вечера, где вы сможете насладиться изысканной
                         кухней и разнообразным развлечением в атмосфере праздника.`} />
@@ -92,7 +93,7 @@ export default function PageEvents() {
                         </div>
                     </div>
                 </div >
-                <Footer />
+                {/* <Footer /> */}
             </main>
         </>
 

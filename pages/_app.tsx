@@ -14,13 +14,14 @@ import { BnovoLoadContextProvider } from '../components/bnovo/bnovoContext'
 import { useRouter } from 'next/router'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import barba from '@barba/core';
+import AppLayout from '@/components/AppLayout'
 
 
 
 export default function App({ Component, pageProps }: AppProps) {
   const [width, setWidth] = useState<Number>(100)
   const [height, setHeight] = useState<Number>(100)
-
+  const router = useRouter()
   // barba.init({
   //   views: [{
   //     namespace: 'home',
@@ -35,8 +36,6 @@ export default function App({ Component, pageProps }: AppProps) {
   //   }]
   // });
 
-
-  const router = useRouter()
   const loaderRef = useRef<LoadingBarRef>(null)
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
@@ -63,11 +62,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
-      <div className='wrapper' data-barba="wrapper">
-        <BnovoLoadContextProvider>
+      <BnovoLoadContextProvider>
+        <AppLayout asPath={router.asPath}>
           <Component {...pageProps} />
-        </BnovoLoadContextProvider>
-      </div >
+        </AppLayout>
+      </BnovoLoadContextProvider>
     </>
   )
 }
+
+

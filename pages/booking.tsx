@@ -34,7 +34,7 @@ export default function PageBooking() {
             <main className='page page-booking'>
                 <div className='relative main-wrap' data-scroll-container>
                     <div className='page-booking__about' data-scroll-section>
-                        <Header darken />
+                        {/* <Header darken /> */}
 
 
                         <div className='big-p big-p_border-top container'>
@@ -65,7 +65,7 @@ export default function PageBooking() {
 
                     <div className='base-bg' data-scroll-section></div>
                 </div >
-                <Footer />
+                {/* <Footer /> */}
             </main>
         </>
 

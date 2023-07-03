@@ -7,6 +7,7 @@ import RoomObject from '../components/objects/RoomObject'
 import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
+import { images } from 'imageImports'
 
 export default function PageHotel() {
 
@@ -34,7 +35,7 @@ export default function PageHotel() {
                     </div> */}
 
 
-                    <Promo imgUrl='/img/backgrounds/hotel-welcome.png' booking />
+                    <Promo imgUrl={images.backgrounds.imghotelWelcomePng} booking />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -178,8 +179,8 @@ export default function PageHotel() {
                     </div>
 
                 </div >
-                <Footer />
             </main>
+            
         </>
 
     )

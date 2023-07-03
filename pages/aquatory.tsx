@@ -8,6 +8,7 @@ import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
 import PlazmaSertItem from '../components/PlazmaSertItem'
+import { images } from 'imageImports'
 export default function PageAquatory() {
 
 
@@ -32,7 +33,7 @@ export default function PageAquatory() {
                         </div>
                     </div> */}
 
-                    <Promo imgUrl='/img/backgrounds/hotel-aquatory.png' />
+                    <Promo imgUrl={images.backgrounds.imghotelAquatoryPng} />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -54,17 +55,17 @@ export default function PageAquatory() {
                             </div>
 
                             <picture className='img-big'>
-                                <img src='/img/aquatory/1.png' alt='' />
+                                <Image height={550} width={770} src={images.aquatory.img1Png} alt='' placeholder='blur' />
                             </picture>
                         </div>
 
                         <div className='promo-info__bottom'>
                             <picture className='img-med'>
-                                <img src='/img/aquatory/2.png' alt='' />
+                                <Image height={470} width={760} src={images.aquatory.img2Png} alt='' placeholder='blur' />
                             </picture>
 
                             <picture className='img-low'>
-                                <img src='/img/aquatory/3.png' alt='' />
+                                <Image height={470} width={370} src={images.aquatory.img3Png} alt='' placeholder='blur' />
                             </picture>
 
                         </div>
@@ -115,7 +116,7 @@ export default function PageAquatory() {
                         </div>
 
                         <picture className='page-aquatory__price-img'>
-                            <img src='/img/aquatory/5.png' alt='' />
+                            <Image width={11701170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' />
                         </picture>
                     </div>
 
@@ -148,13 +149,13 @@ export default function PageAquatory() {
                             </div>
 
                             <picture className='aquatory-props__img'>
-                                <img src='/img/aquatory/6.png' alt='' />
+                                <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' />
                             </picture>
                         </div>
 
                         <div className='aquatory-props__second'>
                             <picture className='aquatory-props__img'>
-                                <img src='/img/aquatory/7.png' alt='' />
+                                <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' />
                             </picture>
 
                             <div className='page-aquatory__list'>
@@ -201,7 +202,7 @@ export default function PageAquatory() {
                         <PlazmaSertItem img={'/img/sert/2-3.jpg'} />
                     </div>
                 </div >
-                <Footer />
+                {/* <Footer /> */}
             </main>
         </>
 

@@ -13,6 +13,7 @@ import InputText from '../components/form/InputText'
 import InputSelect from '../components/form/InputSelect'
 import InputRadio from '../components/form/InputRadio'
 import SportCalculator from '../components/SportCalculator'
+import { images } from 'imageImports'
 
 
 
@@ -25,7 +26,7 @@ export default function PageSportsCamps() {
                 <div className='relative main-wrap' data-scroll-container>
 
 
-                    <PromoMin imgUrl='/img/backgrounds/sports-camps-min.jpg'
+                    <PromoMin imgUrl={images.backgrounds.imgsportsCampsMinJpg}
                         title='СПОРТ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />
@@ -131,18 +132,18 @@ export default function PageSportsCamps() {
                     <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
                         <ColumnCard
                             title='Делюкс на набережной'
-                            img={{ h: 770, w: 570, src: '/img/hotel/room-previews/deluxe-5-corps/1.jpg' }}
+                            img={{ h: 770, w: 570, src: images.hotel.roomPreviews.deluxe5Corps.img1Jpg }}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 1 этаж'
-                            img={{ h: 770, w: 570, src: '/img/hotel/room-previews/deluxe-5-corps/2.jpg' }}
+                            img={{ h: 770, w: 570, src: images.hotel.roomPreviews.deluxe5Corps.img2Jpg }}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 2 этаж'
                             img={{
-                                h: 770, w: 570, src: '/img/hotel/room-previews/deluxe-5-corps/3.jpg'
+                                h: 770, w: 570, src: images.hotel.roomPreviews.deluxe5Corps.img1Jpg
                             }}
                         />
                     </div>
@@ -159,7 +160,7 @@ export default function PageSportsCamps() {
 
                 </div >
 
-                <Footer />
+                {/* <Footer /> */}
             </main>
 
         </>

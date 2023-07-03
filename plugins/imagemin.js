@@ -5,8 +5,8 @@ async function optimizeImages() {
   const path = await import('path');
   const fs = await import('fs');
 
-  const inputDir = 'public/img';
-  const outputDir = 'public/optimize-img';
+  const inputDir = 'public/no-optimize-img';
+  const outputDir = 'public/img';
 
   let imports = '';
   let imagesObject = {};

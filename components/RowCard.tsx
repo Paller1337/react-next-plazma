@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface ColumnCardProps {
     img: {
         h: number,
         w: number,
-        src: string
+        src: StaticImageData
     }
     title?: string
     desc?: string

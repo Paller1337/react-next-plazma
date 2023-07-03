@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import { images } from 'imageImports'
 
 export default function PageTent() {
 
@@ -34,7 +35,7 @@ export default function PageTent() {
                         </div>
                     </div> */}
 
-                    <Promo imgUrl='/img/backgrounds/tent.jpg' />
+                    <Promo imgUrl={images.backgrounds.imgtentJpg} />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -95,7 +96,7 @@ export default function PageTent() {
                         <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.</div>
                     </div>
                 </div >
-                <Footer />
+                {/* <Footer /> */}
             </main>
         </>
 

@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface ColumnCardProps {
     img: {
         h: number,
         w: number,
-        src: string
+        src: StaticImageData
     }
     title?: string
     desc?: string
@@ -17,7 +17,7 @@ export default function ColumnCard(props: ColumnCardProps) {
     return (<>
         <div className='column-card'>
             <div className='column-card__img'>
-                <Image src={props.img.src} width={props.img.w} height={props.img.h} alt='' />
+                <Image src={props.img.src} width={props.img.w} height={props.img.h} alt='' placeholder='blur' />
             </div>
 
             <div className='column-card__text'>

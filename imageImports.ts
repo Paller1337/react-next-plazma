@@ -163,9 +163,7 @@ import imgindexPreviews2_Jpg from '@/images/index/previews/2_.jpg';
 import imgindexPreviews3Jpg from '@/images/index/previews/3.jpg';
 import imgindexPreviews3Png from '@/images/index/previews/3.png';
 import imgindexPreviews4Jpg from '@/images/index/previews/4.jpg';
-import imgindexPreviews4Png from '@/images/index/previews/4.png';
 import imgindexPreviews5Jpg from '@/images/index/previews/5.jpg';
-import imgindexPreviews5Png from '@/images/index/previews/5.png';
 import imgindexPreviews6Jpg from '@/images/index/previews/6.jpg';
 import imgindexPreviews6Png from '@/images/index/previews/6.png';
 import imgindexPreviews7Jpg from '@/images/index/previews/7.jpg';
@@ -447,9 +445,7 @@ export const images = {
       img3Jpg: imgindexPreviews3Jpg,
       img3Png: imgindexPreviews3Png,
       img4Jpg: imgindexPreviews4Jpg,
-      img4Png: imgindexPreviews4Png,
       img5Jpg: imgindexPreviews5Jpg,
-      img5Png: imgindexPreviews5Png,
       img6Jpg: imgindexPreviews6Jpg,
       img6Png: imgindexPreviews6Png,
       img7Jpg: imgindexPreviews7Jpg,

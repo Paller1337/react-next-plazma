@@ -1,5 +1,5 @@
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Header from './Header';
 import BookingPromo from './bnovo/BookingPromo';
 import { Suspense, useEffect, useState } from 'react';
@@ -10,7 +10,7 @@ interface PromoProps {
     bg?: string
     booking?: boolean
     video?: boolean
-    imgUrl?: string
+    imgUrl?: StaticImageData
 }
 
 const Video = dynamic(() => import('./Video'), {
@@ -53,7 +53,7 @@ export default function Promo(props: PromoProps) {
 
     return (<>
         <div className='main__promo' data-scroll-section>
-            <Header />
+            {/* <Header /> */}
             <div className="main__video-wrapper">
                 <div className="main__video-box">
                     <Suspense>

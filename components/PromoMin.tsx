@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import Header from './Header';
 
 
 interface PromoMinProps {
     video?: boolean
-    imgUrl: string
+    imgUrl: StaticImageData
     bg?: string
     title?: string
     description?: string
@@ -22,7 +22,7 @@ export default function PromoMin(props: PromoMinProps) {
 
     return (<>
         <div className='main__promo-min promo-min' data-scroll-section>
-            <Header />
+            {/* <Header /> */}
             <div className='dark-circle'></div>
             <div className="main__video-wrapper">
                 <div className="main__video-box">
@@ -45,7 +45,7 @@ export default function PromoMin(props: PromoMinProps) {
                         <>
                             {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
                             {props.imgUrl ?
-                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'></Image>
+                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma' placeholder='blur'></Image>
                                 : ''
                             }
                         </>

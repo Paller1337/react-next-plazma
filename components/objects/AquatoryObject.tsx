@@ -1,10 +1,12 @@
+import Image, { StaticImageData } from 'next/image'
+
 type priceCardSize = 'min' | 'med'
 
 export interface AquatoryObjectProps {
     id: string,
     title: string,
     description: string,
-    images: string[],
+    images: StaticImageData[],
     priceCards: {
         cardName: string,
         cardAttr: string,
@@ -14,7 +16,7 @@ export interface AquatoryObjectProps {
     attentionText?: string,
     includedItems: string[],
 
-    includedImg: string,
+    includedImg: StaticImageData,
     additionalItems: string[],
     additionalText?: string
 }
@@ -34,7 +36,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
             <div className='aquatory-object__photos'>
                 {data.images.map((x, i) =>
                     <picture key={i} className='aquatory-object__img'>
-                        <img src={x} alt='' />
+                        <Image height={470} width={570} src={x} alt='' placeholder='blur' />
                     </picture>
                 )}
             </div>
@@ -77,7 +79,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 </div>
 
                 <picture className='aquatory-object__include-img'>
-                    <img src={data.includedImg} alt='' />
+                    <Image height={420} width={320} src={data.includedImg} alt='' placeholder='blur' />
                 </picture>
             </div>
 

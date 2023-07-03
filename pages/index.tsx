@@ -55,7 +55,7 @@ export default function PageIndex(props: PageIndexProps) {
 
 
           <Promo booking video />
-          <Header />
+          {/* <Header /> */}
           <div className='base-bg' data-scroll-section></div>
 
           <div className='page-index__about-hotel about-hotel container' data-scroll-section>
@@ -213,7 +213,7 @@ export default function PageIndex(props: PageIndexProps) {
 
 
         </div >
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
 

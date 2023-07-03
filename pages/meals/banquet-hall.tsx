@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import { images } from 'imageImports'
 
 export default function PageBanquetHall() {
 
@@ -34,7 +35,7 @@ export default function PageBanquetHall() {
                         </div>
 
                     </div> */}
-                    <Promo imgUrl='/img/backgrounds/banquet-hall.jpg' />
+                    <Promo imgUrl={images.backgrounds.imgbanquetHallJpg} />
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
@@ -96,7 +97,7 @@ export default function PageBanquetHall() {
                         <div className='text'>Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.</div>
                     </div>
                 </div >
-                <Footer />
+                {/* <Footer /> */}
             </main>
         </>
 

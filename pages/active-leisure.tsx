@@ -7,6 +7,7 @@ import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
+import { images } from 'imageImports'
 
 
 
@@ -19,7 +20,7 @@ export default function PageActiveLeisure() {
                 <div className='relative main-wrap' data-scroll-container>
 
 
-                    <PromoMin imgUrl='/img/backgrounds/active-leisure-min.png'
+                    <PromoMin imgUrl={images.backgrounds.imgactiveLeisureMinPng}
                         title='АКТИВНЫЙ ОТДЫХ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />
@@ -42,7 +43,7 @@ export default function PageActiveLeisure() {
                                 <div className='btn btn_black'>Подробнее</div>
                             </div>
                             <div className='about-quatr__image'>
-                                <Image src='/img/active-leisure/1.png' width={970} height={700} alt='' />
+                                <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' />
                             </div>
                         </div>
                     </div>
@@ -55,21 +56,21 @@ export default function PageActiveLeisure() {
                             title='площадка с резиновым покрытием'
                             desc={`это проект парк-отеля Plazma, расположенного в Тульской области в 220 км.
                                     от Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.`}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-1.png' }}
+                            img={{ h: 770, w: 570, src: images.activeLeisure.imgcol1Png }}
                         />
 
                         <ColumnCard
                             title='игровая площадка для детей'
                             desc={`это проект парк-отеля Plazma, расположенного в Тульской области в 220 км.
                                     от Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.`}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-2.png' }}
+                            img={{ h: 770, w: 570, src: images.activeLeisure.imgcol2Png }}
                         />
 
                         <ColumnCard
                             title='площадка для пляжных видов спорта'
                             desc={`это проект парк-отеля Plazma, расположенного в Тульской области в 220 км.
                                     от Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.`}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-3.png' }}
+                            img={{ h: 770, w: 570, src: images.activeLeisure.imgcol3Png }}
                         />
                     </div>
 
@@ -79,28 +80,28 @@ export default function PageActiveLeisure() {
                             title='площадка для пляжных видов спорта'
                             desc={`это проект парк-отеля Plazma, расположенного в Тульской области в 220 км.
                                     от Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.`}
-                            img={{ h: 510, w: 770, src: '/img/active-leisure/row-1.png' }}
+                            img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
                         />
 
                         <RowCard reverse
                             title='площадка для пляжных видов спорта'
                             desc={`это проект парк-отеля Plazma, расположенного в Тульской области в 220 км.
                                     от Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.`}
-                            img={{ h: 510, w: 770, src: '/img/active-leisure/row-2.png' }}
+                            img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
                         />
 
                         <RowCard
                             title='площадка для пляжных видов спорта'
                             desc={`это проект парк-отеля Plazma, расположенного в Тульской области в 220 км.
                                     от Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.`}
-                            img={{ h: 510, w: 770, src: '/img/active-leisure/row-3.png' }}
+                            img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
                         />
                     </div>
 
 
                 </div >
 
-                <Footer />
+                {/* <Footer /> */}
             </main>
 
         </>
