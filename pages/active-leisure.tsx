@@ -16,6 +16,29 @@ export default function PageActiveLeisure() {
 
     return (
         <>
+            <Head>
+                <title>Активный отдых в парк-отеле «PLAZMA»</title>
+                <meta name='description' content='это проект парк-отеля Plazma, 
+                расположенного в Тульской области в 220 км. от Москвы, 
+                ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.' />
+
+                <meta
+                    property='og:title'
+                    content='Активный отдых в парк-отеле «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='это проект парк-отеля Plazma, 
+                    расположенного в Тульской области в 220 км. от Москвы, 
+                    ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
+
             <main className='page page-events'>
                 <div className='relative main-wrap' data-scroll-container>
 

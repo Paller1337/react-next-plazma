@@ -15,26 +15,33 @@ export default function PageBanquetHall() {
 
     return (
         <>
+            <Head>
+                <title>Банкетный зал «PLAZMA»</title>
+                <meta name='description' content='Наш банкетный зал - отличное место для особых 
+                событий и торжеств любого уровня. Он находится в отдельном здании, чтобы 
+                никто вам не помешал. Просторный и элегантный, он подарит вам ощущение 
+                особенности вашего события.' />
+
+                <meta
+                    property='og:title'
+                    content='Банкетный зал «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='Наш банкетный зал - отличное место для особых 
+                    событий и торжеств любого уровня. Он находится в отдельном здании, чтобы 
+                    никто вам не помешал. Просторный и элегантный, он подарит вам ощущение 
+                    особенности вашего события.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-
-                                <div className='main__welcome-bg '></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>парк-отель</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-
-                    </div> */}
                     <Promo imgUrl={images.backgrounds.imgbanquetHallJpg} />
                     <div className='base-bg' data-scroll-section></div>
 

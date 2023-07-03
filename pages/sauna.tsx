@@ -12,25 +12,31 @@ export default function PageSauna() {
 
     return (
         <>
+            <Head>
+                <title>Сауна «PLAZMA»</title>
+                <meta name='description' content='Добро пожаловать в наш парк-отель, где время замедляется, 
+                а умиротворение становится вашим верным спутником. Всегда было так, что именно в саунах и 
+                банях люди находили путь к полному расслаблению и восстановлению души и тела.' />
+
+                <meta
+                    property='og:title'
+                    content='Парк-отель «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='Добро пожаловать в наш парк-отель, где время замедляется, 
+                    а умиротворение становится вашим верным спутником. Всегда было так, что именно в саунах и 
+                    банях люди находили путь к полному расслаблению и восстановлению души и тела.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-saunas'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                <div className='main__welcome-bg welcome-saunas'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>парк-отель</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-                    </div> */}
-
 
                     <Promo imgUrl={images.backgrounds.imghotelSaunasPng} bg='welcome-saunas' />
 

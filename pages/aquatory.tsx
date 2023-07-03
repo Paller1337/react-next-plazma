@@ -15,6 +15,27 @@ export default function PageAquatory() {
 
     return (
         <>
+            <Head>
+                <title>Акватория «PLAZMA»</title>
+                <meta name='description' content='Plazma Акватория – это оазис внутри города, место, где гости могут 
+                отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.' />
+
+                <meta
+                    property='og:title'
+                    content='Акватория «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='Plazma Акватория – это оазис внутри города, место, где гости могут 
+                    отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
+
             <main className='page page-aquatory'>
                 <div className='relative main-wrap' data-scroll-container>
                     {/* <div className='main__promo' data-scroll-section>
@@ -202,7 +223,6 @@ export default function PageAquatory() {
                         <PlazmaSertItem img={'/img/sert/2-3.jpg'} />
                     </div>
                 </div >
-                {/* <Footer /> */}
             </main>
         </>
 

@@ -3,38 +3,56 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { hotelRooms } from '../data/hotelRooms'
-import RoomObject from '../components/objects/RoomObject'
+import RoomObject, { RoomObjectProps } from '../components/objects/RoomObject'
 import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
 import { images } from 'imageImports'
 
-export default function PageHotel() {
 
+interface PageHotelProps {
+    rooms: RoomObjectProps[]
+}
+export async function getServerSideProps() {
+
+    const rooms = await hotelRooms
+
+    return {
+        props: {
+            rooms: rooms
+        } as PageHotelProps
+    }
+}
+
+
+
+export default function PageHotel(props: PageHotelProps) {
 
     return (
         <>
+            <Head>
+                <title>Размещение в парк-отеле «PLAZMA»</title>
+                <meta name='description' content='Место отлично подходит для семейного 
+                отдыха на природе, романтических выходных, торжественных и деловых мероприятий.' />
+
+                <meta
+                    property='og:title'
+                    content='Размещение в парк-отеле «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='Место отлично подходит для семейного 
+                    отдыха на природе, романтических выходных, торжественных и деловых мероприятий.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
+
             <main className='page page-hotel'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                <div className='main__welcome-bg welcome-hotel'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>Гостиница</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-
-                        <BookingPromo />
-                    </div> */}
-
-
                     <Promo imgUrl={images.backgrounds.imghotelWelcomePng} booking />
 
                     <div className='base-bg' data-scroll-section></div>
@@ -62,7 +80,7 @@ export default function PageHotel() {
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
                         <div className='hotel-rooms__content' data-scroll>
-                            {hotelRooms.map((x, i) =>
+                            {props.rooms.map((x, i) =>
                                 <RoomObject
                                     key={i}
                                     id={x.id}
@@ -180,7 +198,7 @@ export default function PageHotel() {
 
                 </div >
             </main>
-            
+
         </>
 
     )

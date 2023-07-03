@@ -13,6 +13,27 @@ export default function PageEvents() {
 
     return (
         <>
+            <Head>
+                <title>Мероприятия в «PLAZMA»</title>
+                {/* <meta name='description' content='Место отлично подходит для семейного 
+                отдыха на природе, романтических выходных, торжественных и деловых мероприятий.' /> */}
+
+                <meta
+                    property='og:title'
+                    content='Мероприятия в «PLAZMA»' />
+                {/* <meta
+                    property='og:description'
+                    content='Место отлично подходит для семейного 
+                    отдыха на природе, романтических выходных, торжественных и деловых мероприятий.' /> */}
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
+
             <main className='page page-events'>
                 <div className='relative main-wrap' data-scroll-container>
 

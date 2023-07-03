@@ -22,10 +22,31 @@ export default function PageSportsCamps() {
 
     return (
         <>
+            <Head>
+                <title>Спортивная база отдыха «PLAZMA.SPORT»</title>
+                <meta name='description' content='К 2023 году мы стали площадкой для 
+                спортивных сборов для более чем 100 команд, в том числе для Академии 
+                ФК «Локомотив» г.Москва, Академии Баскетбола «Олимпийская деревня-80» г.Москва.' />
+
+                <meta
+                    property='og:title'
+                    content='Спортивная база отдыха «PLAZMA.SPORT»' />
+                <meta
+                    property='og:description'
+                    content='К 2023 году мы стали площадкой для 
+                    спортивных сборов для более чем 100 команд, в том числе для Академии 
+                    ФК «Локомотив» г.Москва, Академии Баскетбола «Олимпийская деревня-80» г.Москва.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
+
             <main className='page page-sports-camps'>
                 <div className='relative main-wrap' data-scroll-container>
-
-
                     <PromoMin imgUrl={images.backgrounds.imgsportsCampsMinJpg}
                         title='СПОРТ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
@@ -86,7 +107,7 @@ export default function PageSportsCamps() {
                     <div className='meals-preview-cards container'>
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0}  src={images.meals.min.img1Jpg} alt='' placeholder='blur' />
+                                <Image width={0} height={0} src={images.meals.min.img1Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Ресторан
@@ -95,7 +116,7 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0}  src={images.meals.min.img2Jpg} alt='' placeholder='blur' />
+                                <Image width={0} height={0} src={images.meals.min.img2Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Кафе-столовая Smash
@@ -104,7 +125,7 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0}  src={images.meals.min.img3Jpg} alt='' placeholder='blur' />
+                                <Image width={0} height={0} src={images.meals.min.img3Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Банкетный-конференц-зал
@@ -113,10 +134,10 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur'/>
+                                <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur' />
                             </picture>
                             <span className='meals-preview-card__text'>
-                                летний Шатер
+                                Летний Шатер
                             </span>
                         </div>
                     </div>
@@ -130,7 +151,7 @@ export default function PageSportsCamps() {
                     />
 
                     <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
-                        {/* <ColumnCard
+                        <ColumnCard
                             title='Делюкс на набережной'
                             img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
                         />
@@ -143,7 +164,7 @@ export default function PageSportsCamps() {
                         <ColumnCard
                             title='Спортивный копрус - 2 этаж'
                             img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
-                        /> */}
+                        />
                     </div>
 
 

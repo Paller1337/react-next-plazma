@@ -15,26 +15,33 @@ export default function PageTent() {
 
     return (
         <>
+            <Head>
+                <title>Летний шатер «PLAZMA»</title>
+                <meta name='description' content='Расположенный на полуострове, 
+                он предлагает неповторимую атмосферу и вид на водоем. В нашем 
+                шатре вы сможете насладиться прохладными напитками и изысканными 
+                блюдами, приготовленными нашими опытными поварами.' />
+
+                <meta
+                    property='og:title'
+                    content='Летний шатер «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='Расположенный на полуострове, 
+                    он предлагает неповторимую атмосферу и вид на водоем. В нашем 
+                    шатре вы сможете насладиться прохладными напитками и изысканными 
+                    блюдами, приготовленными нашими опытными поварами.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                <div className='main__welcome-bg welcome-tent'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>парк-отель</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-                    </div> */}
-
                     <Promo imgUrl={images.backgrounds.imgtentJpg} />
 
                     <div className='base-bg' data-scroll-section></div>

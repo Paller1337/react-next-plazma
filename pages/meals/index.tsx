@@ -14,6 +14,24 @@ export default function PageMeals() {
 
     return (
         <>
+            <Head>
+                <title>Питание в парк-отеле «PLAZMA»</title>
+                {/* <meta name='description' content='' /> */}
+
+                <meta
+                    property='og:title'
+                    content='Питание в парк-отеле «PLAZMA»' />
+                {/* <meta
+                    property='og:description'
+                    content='' /> */}
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-meals'>
                 <div className='relative main-wrap' data-scroll-container>
@@ -26,7 +44,7 @@ export default function PageMeals() {
 
                                 <Link className='page-meals__card' href='meals/restaurant'>
                                     <div className='page-meals__card-image'>
-                                        <Image src={images.meals.img1Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                        <Image src={images.meals.img2Jpg} width={0} height={0} alt='' placeholder='blur' />
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
@@ -37,7 +55,7 @@ export default function PageMeals() {
 
                                 <Link className='page-meals__card' href='meals/smash'>
                                     <div className='page-meals__card-image'>
-                                        <Image src={images.meals.img2Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                        <Image src={images.meals.img3Jpg} width={0} height={0} alt='' placeholder='blur' />
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
@@ -51,7 +69,7 @@ export default function PageMeals() {
                             <div className='page-meals__cards-section'>
                                 <Link className='page-meals__card' href='meals/banquet-hall'>
                                     <div className='page-meals__card-image'>
-                                        <Image src={images.meals.img3Jpg} width={0} height={0} alt='' placeholder='blur' />
+                                        <Image src={images.meals.img1Jpg} width={0} height={0} alt='' placeholder='blur' />
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>

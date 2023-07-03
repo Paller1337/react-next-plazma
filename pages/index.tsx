@@ -26,32 +26,33 @@ export default function PageIndex(props: PageIndexProps) {
 
   return (
     <>
+      <Head>
+        <title>Парк-отель «PLAZMA»</title>
+        <meta name='description' content='Парк-отель «Plazma» расположен в городе 
+        Донской Тульской области, в 230 км от Москвы. Место отлично подходит для семейного 
+        отдыха на природе, романтических выходных, торжественных и деловых мероприятий,
+        а также для спортивных сборов.' />
+
+        <meta
+          property='og:title'
+          content='Парк-отель «PLAZMA»' />
+        <meta
+          property='og:description'
+          content='Парк-отель «Plazma» расположен в городе 
+          Донской Тульской области, в 230 км от Москвы. Место отлично подходит для семейного 
+          отдыха на природе, романтических выходных, торжественных и деловых мероприятий,
+          а также для спортивных сборов.' />
+        <meta
+          property='og:image'
+          content='' />
+
+        <meta
+          property='og:type'
+          content='website' />
+      </Head>
+      
       <main className='page page-index' data-barba="container" data-barba-namespace="home">
         <div className='relative main-wrap' data-scroll-container>
-          {/* <div className='main__promo' data-scroll-section>
-            <Header />
-            <div className="main__video-wrapper">
-              <div className="main__video-box">
-
-                <video className="main__video" muted loop autoPlay playsInline>
-                  <source src="/video/bg.mp4" type="video/mp4" />
-                  <source src="/video/bgvideo.webm" type="video/webm" />
-                  Your browser does not support the video tag.
-                </video>
-
-                <div className='main__video-overlay'></div>
-              </div>
-            </div>
-            <div className='main__promo-logo'>
-              <h1>
-                <span>парк-отель</span>
-                <span>plazma</span>
-              </h1>
-            </div>
-
-            <BookingPromo />
-          </div>
- */}
 
 
           <Promo booking video />

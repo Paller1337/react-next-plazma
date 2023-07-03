@@ -15,26 +15,32 @@ export default function PageRestaurant() {
 
     return (
         <>
+            <Head>
+                <title>Ресторан «SMASH»</title>
+                <meta name='description' content='Мы очень заботимся о качестве наших услуг, 
+                поэтому практически все заказы мы делаем из-под ножа, используя самые свежие продукты, 
+                чтобы гость не усомнился, что это блюдо было приготовлено специально для него.' />
+
+                <meta
+                    property='og:title'
+                    content='Ресторан «SMASH»' />
+                <meta
+                    property='og:description'
+                    content='Мы очень заботимся о качестве наших услуг, 
+                    поэтому практически все заказы мы делаем из-под ножа, используя самые свежие продукты, 
+                    чтобы гость не усомнился, что это блюдо было приготовлено специально для него.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-rest'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                <div className='main__welcome-bg welcome-restaurant'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>парк-отель</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-                    </div> */}
-
-                    <Promo imgUrl={images.backgrounds.imghotelRestaurantPng}/>
+                    <Promo imgUrl={images.backgrounds.imghotelRestaurantPng} />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -111,7 +117,6 @@ export default function PageRestaurant() {
                         </div>
                     </div> */}
                 </div >
-                {/* <Footer /> */}
             </main>
         </>
 

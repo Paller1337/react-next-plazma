@@ -15,25 +15,29 @@ export default function PageSmash() {
 
     return (
         <>
+            <Head>
+                <title>Кафе SMASH в «PLAZMA»</title>
+                <meta name='description' content='Кафе SMASH предлагает быструю и вкусную еду на завтрак,
+                обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.' />
+
+                <meta
+                    property='og:title'
+                    content='Кафе «SMASH»' />
+                <meta
+                    property='og:description'
+                    content='Кафе SMASH предлагает быструю и вкусную еду на завтрак,
+                    обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                <div className='main__welcome-bg welcome-smash'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>парк-отель</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-                    </div> */}
 
                     <Promo imgUrl={images.backgrounds.imghotelSmashPng} />
 
@@ -58,8 +62,9 @@ export default function PageSmash() {
 
                         <div className='rest-welcome__work-time worktime-section mb container'>
                             <div className='worktime-section__about'>
-                                <span className='worktime-section__title'>Столовая «SMASH»</span>
-                                <span className='worktime-section__desc'>Столовая SMASH предлагает быструю и вкусную еду на завтрак, обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.
+                                <span className='worktime-section__title'>Кафе «SMASH»</span>
+                                <span className='worktime-section__desc'>Кафе SMASH предлагает быструю и вкусную еду на завтрак,
+                                    обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.
                                 </span>
                             </div>
 
@@ -99,7 +104,6 @@ export default function PageSmash() {
                     </div>
 
                 </div >
-                {/* <Footer /> */}
             </main>
         </>
 

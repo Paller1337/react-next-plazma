@@ -30,6 +30,24 @@ export default function PageBooking() {
 
     return (
         <>
+            <Head>
+                <title>Бронирование номера в парк-отеле «PLAZMA»</title>
+                <meta name='description' content='При прямом бронировании действует скидка 16.7%.' />
+
+                <meta
+                    property='og:title'
+                    content='Бронирование номера в парк-отеле «PLAZMA»' />
+                <meta
+                    property='og:description'
+                    content='При прямом бронировании действует скидка 16.7%.' />
+                <meta
+                    property='og:image'
+                    content='' />
+
+                <meta
+                    property='og:type'
+                    content='website' />
+            </Head>
 
             <main className='page page-booking'>
                 <div className='relative main-wrap' data-scroll-container>
