@@ -75,7 +75,7 @@ export default function PageHotel(props: PageHotelProps) {
                         <div className='hotel-rooms__content' data-scroll>
                             {rooms.map(x =>
                                 <RoomObject
-                                    key={x.id.toString()}
+                                    key={'room-' + x.id.toString()}
                                     id={x.id}
                                     title={x.title}
                                     description={x.description}

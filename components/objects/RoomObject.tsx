@@ -67,6 +67,8 @@ export default function RoomObject(data: RoomObjectProps) {
     }, [currentSlide])
 
 
+    useEffect(() => console.log('roomId: ', data.id, 'key: ', data.id.toString()), [])
+
     return (<>
         <GallerySlider
             slides={images}
@@ -74,8 +76,8 @@ export default function RoomObject(data: RoomObjectProps) {
             isOpen={galleryIsOpen}
             onClose={closeGallery}
         />
-        <Suspense fallback={() => <Loading/>}>
-            <div className='hotel-rooms__item hotel-room' key={data.id.toString()}>
+        <Suspense fallback={() => <Loading />}>
+            <div className='hotel-rooms__item hotel-room' key={data.id?.toString()}>
                 <div className='hotel-room__preview'>
                     <div className='hotel-room__image-wrapper'>
                         <div className='hotel-room__image-images'>
