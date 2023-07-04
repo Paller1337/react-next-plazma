@@ -30,8 +30,11 @@ module.exports = {
         ]
     },
 
-    output: 'standalone',
+    // output: 'standalone',
 
+    experimental: {
+        outputStandalone: true,
+    },
     i18n: {
         locales: ['ru'],
         defaultLocale: 'ru',
