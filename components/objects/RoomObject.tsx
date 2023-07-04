@@ -8,7 +8,7 @@ export interface RoomObjectProps {
     id: number | number[],
     title: string,
     description: string,
-    images: StaticImageData[],
+    images: string[],
     size: string,
     attributes: {
         name: string,
@@ -85,7 +85,7 @@ export default function RoomObject(data: RoomObjectProps) {
                             {images && images.map((image, i) =>
                                 <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
                                     <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
-                                        placeholder='blur'
+                                        // placeholder='blur'
                                     />
                                 </div >
                             )}
