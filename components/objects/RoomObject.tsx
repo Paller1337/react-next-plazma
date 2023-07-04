@@ -86,7 +86,7 @@ export default function RoomObject(data: RoomObjectProps) {
                     </div>
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
-                </div>
+                </div> */}
                 {images && images.length > 1 ?
                     <div className='hotel-room__slides'>
                         {images.map((x, i) =>
@@ -97,7 +97,7 @@ export default function RoomObject(data: RoomObjectProps) {
                             </div>
                         )}
                     </div>
-                    : ''} */}
+                    : ''}
             </div>
 
             <div className='hotel-room__info'>
