@@ -1,7 +1,7 @@
 import '../styles/style.sass'
 
 import type { AppProps } from 'next/app'
-import React, { ReactDOM, RefObject, useEffect, useRef, useState } from 'react'
+import React, { ReactDOM, RefObject, useContext, useEffect, useRef, useState } from 'react'
 
 // import LocomotiveScroll from 'locomotive-scroll'
 import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll'
@@ -10,17 +10,19 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import useLocoScroll from '../components/functions/useLocoScroll'
-import { BnovoLoadContextProvider } from '../components/bnovo/bnovoContext'
+import { BnovoContext, BnovoLoadContextProvider } from '../components/bnovo/bnovoContext'
 import { useRouter } from 'next/router'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import barba from '@barba/core';
 import AppLayout from '@/components/AppLayout'
+import Script from 'next/script'
 
 
 
 export default function App({ Component, pageProps }: AppProps) {
   const [width, setWidth] = useState<Number>(100)
   const [height, setHeight] = useState<Number>(100)
+  const { setBnovoIframeIsLoad, setBnovoIsLoad } = useContext(BnovoContext)
   const router = useRouter()
   // barba.init({
   //   views: [{
@@ -66,6 +68,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <AppLayout asPath={router.asPath}>
           <Component {...pageProps} />
         </AppLayout>
+        <Script src='https://widget.reservationsteps.ru/js/bnovo.js' onLoad={() => setBnovoIsLoad(true)} />
+        <Script src='https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js' onLoad={() => setBnovoIframeIsLoad(true)} />
       </BnovoLoadContextProvider>
     </>
   )

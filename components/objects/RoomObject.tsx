@@ -5,7 +5,6 @@ import Image, { StaticImageData } from 'next/image'
 import useNextBlurhash from "use-next-blurhash"
 
 export interface RoomObjectProps {
-
     id: number | number[],
     title: string,
     description: string,
@@ -31,43 +30,6 @@ export default function RoomObject(data: RoomObjectProps) {
         setCurrentSlide(i)
     }
 
-
-    // useEffect(() => {
-    //     const preview = previewImageRef.current;
-
-    //     const handleTransitionEnd = () => {
-    //         preview?.classList.remove('fade-in-animating')
-    //     };
-
-    //     if (preview) {
-    //         preview.addEventListener('transitionend', handleTransitionEnd);
-
-    //         return () => {
-    //             preview.removeEventListener('transitionend', handleTransitionEnd);
-    //         };
-    //     }
-    // }, [currentSlide]);
-
-
-    // useEffect(() => {
-    //     let slideN = 0;
-    //     const interval = setInterval(() => {
-    //         if (slideN < images.length - 1) {
-    //             slideN++
-    //             goSlide(slideN)
-    //         } else {
-    //             slideN = 0
-    //             if (firstInit) {
-    //                 setCurrentSlide(0)
-    //                 setFirstInit(false)
-    //             } else {
-    //                 goSlide(0)
-    //             }
-    //         }
-    //     }, 4500)
-
-    //     return () => clearInterval(interval)
-    // }, [images])
 
     const closeGallery = () => {
         setGalleryIsOpen(false)
@@ -108,19 +70,17 @@ export default function RoomObject(data: RoomObjectProps) {
             isOpen={galleryIsOpen}
             onClose={closeGallery}
         />
-        <div className='hotel-rooms__item hotel-room'>
+        <div className='hotel-rooms__item hotel-room' key={data.id.toString()}>
             <div className='hotel-room__preview'>
-                <div className='hotel-room__image-wrapper'>
+                {/* <div className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
                             {images && images.map((image, i) =>
-                                <>
-                                    <div className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
-                                        <Image key={i} src={image} height={350} width={570} alt={'Plazma'}
-                                            placeholder="blur"
-                                        />
-                                    </div >
-                                </>
+                                <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
+                                    <Image key={i} src={image} height={0} width={0} alt={'Plazma'}
+                                        placeholder="blur"
+                                    />
+                                </div >
                             )}
                         </div>
                     </div>
@@ -137,7 +97,7 @@ export default function RoomObject(data: RoomObjectProps) {
                             </div>
                         )}
                     </div>
-                    : ''}
+                    : ''} */}
             </div>
 
             <div className='hotel-room__info'>

@@ -13,8 +13,7 @@ export default function BookingRoom(room: { roomId: number | number[], targetId:
 
     const rooms = room.roomId.toString()
 
-
-    useEffect(() => { console.log(window.location.origin) }, [])
+    // useEffect(() => { console.log(window.location.origin) }, [])
     const openRoomBooking = (id: string, target: string) => {
         if (bnovoIsOpen) return
         Bnovo_Widget.init(function () {

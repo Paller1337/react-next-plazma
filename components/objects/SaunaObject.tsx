@@ -14,7 +14,7 @@ export default function SaunaObject(data: SaunaObjectProps) {
 
     return (<>
 
-        <div className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
+        <div key={data.id.toString()} className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
             <div className='big-p big-p_border-top container'>
                 <span className='big-p__title'>{data.name}</span>
                 <span className='big-p__desc' dangerouslySetInnerHTML={{__html: data.description}}></span>

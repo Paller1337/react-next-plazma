@@ -8,22 +8,6 @@ interface PlazmaSliderProps {
     data: string;
 }
 
-// export async function getStaticProps() {
-//     const imageSrc = process.env.CLOUDINARY_EXAMPLE_IMAGE_SRC;
-//     if (!imageSrc) {
-//         throw new Error('Missing CLOUDINARY_EXAMPLE_IMAGE_SRC env variable');
-//     }
-
-//     const blurDataUrl = await getBase64ImageUrl(imageSrc);
-//     return {
-//         props: {
-//             exampleImage: {
-//                 src: imageSrc,
-//                 blurDataUrl: blurDataUrl,
-//             },
-//         },
-//     };
-// }
 
 export default function PlazmaSlider(props: PlazmaSliderProps) {
 
@@ -81,27 +65,18 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                     onClick={() => setActiveSlide(data.images.length - 1)}
                 />
                 {data.images.map((imagePath, index) => (
-                    <>
-                        {/* <div
-                            key={index}
-                            className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
-                            style={{ backgroundImage: `url(${imagePath})` }}
-                            onClick={() => setActiveSlide(index)}
-                        /> */}
-
-                        <div
-                            key={index}
-                            className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
-                            onClick={() => setActiveSlide(index)}>
-                            <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
-                                placeholder='blur'
-                            />
-                        </div>
-                    </>
+                    <div
+                        key={index}
+                        className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
+                        onClick={() => setActiveSlide(index)}>
+                        <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
+                            placeholder='blur'
+                        />
+                    </div>
                 ))}
                 <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma'
-                    onClick={() => setActiveSlide(0)} 
-                    />
+                    onClick={() => setActiveSlide(0)}
+                />
             </div>
 
             <div className="plazma-slider__nav">

@@ -8,25 +8,18 @@ import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
 import { images } from 'imageImports'
+import { useEffect, useMemo } from 'react'
 
 
 interface PageHotelProps {
     rooms: RoomObjectProps[]
 }
-export async function getServerSideProps() {
-
-    const rooms = await hotelRooms
-
-    return {
-        props: {
-            rooms: rooms
-        } as PageHotelProps
-    }
-}
-
-
 
 export default function PageHotel(props: PageHotelProps) {
+
+    const rooms = useMemo(() => hotelRooms.map(x => x), [])
+    // const rooms = hotelRooms
+    useEffect(() => console.log('render'), [rooms])
 
     return (
         <>
@@ -61,7 +54,7 @@ export default function PageHotel(props: PageHotelProps) {
                     <div className='page-hotel__placement hotel-placement' data-scroll-section>
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
-                        <PlazmaSlider data='hotelPromoSlider' />
+                        <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
 
                         <span className='text' data-scroll>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и
@@ -80,9 +73,9 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
                         <div className='hotel-rooms__content' data-scroll>
-                            {props.rooms.map((x, i) =>
+                            {rooms.map(x =>
                                 <RoomObject
-                                    key={i}
+                                    key={x.id.toString()}
                                     id={x.id}
                                     title={x.title}
                                     description={x.description}
