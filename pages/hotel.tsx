@@ -73,7 +73,7 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
                         <div className='hotel-rooms__content' data-scroll>
-                            {/* {rooms.map(x =>
+                        {rooms.map(x =>
                                 <RoomObject
                                     key={'room-' + x.id.toString()}
                                     id={x.id}
@@ -84,9 +84,9 @@ export default function PageHotel(props: PageHotelProps) {
                                     attributes={x.attributes}
                                     amenities={x.amenities}
                                 />
-                            )} */}
+                            )}
 
-                            <RoomObject
+                            {/* <RoomObject
                                 id={rooms[0].id}
                                 title={rooms[0].title}
                                 description={rooms[0].description}
@@ -144,7 +144,7 @@ export default function PageHotel(props: PageHotelProps) {
                                 images={rooms[5].images}
                                 attributes={rooms[5].attributes}
                                 amenities={rooms[5].amenities}
-                            />
+                            /> */}
                         </div>
                     </div>
 

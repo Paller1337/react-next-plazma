@@ -2,8 +2,6 @@ import { Suspense, useEffect, useRef, useState } from 'react'
 import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
 import Image, { StaticImageData } from 'next/image'
-import useNextBlurhash from "use-next-blurhash"
-
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
@@ -79,7 +77,7 @@ export default function RoomObject(data: RoomObjectProps) {
         {/* <Suspense fallback={() => <Loading />}> */}
         <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}>
             <div className='hotel-room__preview'>
-                {/* <div className='hotel-room__image-wrapper'>
+                <div className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
                             {images && images.map((image, i) =>
@@ -93,7 +91,7 @@ export default function RoomObject(data: RoomObjectProps) {
                     </div>
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
-                </div> */}
+                </div>
                 {images && images.length > 1 ?
                     <div className='hotel-room__slides'>
                         {images.map((x, i) =>
