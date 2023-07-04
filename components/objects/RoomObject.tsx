@@ -76,7 +76,7 @@ export default function RoomObject(data: RoomObjectProps) {
             isOpen={galleryIsOpen}
             onClose={closeGallery}
         />
-        <Suspense fallback={() => <Loading />}>
+        {/* <Suspense fallback={() => <Loading />}> */}
             <div className='hotel-rooms__item hotel-room' key={data.id?.toString()}>
                 <div className='hotel-room__preview'>
                     <div className='hotel-room__image-wrapper'>
@@ -140,6 +140,6 @@ export default function RoomObject(data: RoomObjectProps) {
 
                 </div >
             </div >
-        </Suspense>
+        {/* </Suspense> */}
     </>)
 }
