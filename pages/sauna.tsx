@@ -58,7 +58,7 @@ export default function PageSauna() {
 
                     {saunaObjData.map((x, i) =>
                         <SaunaObject
-                            key={i}
+                            key={'sauna-' + x.id.toString()}
                             id={x.id}
                             name={x.name}
                             description={x.description}
