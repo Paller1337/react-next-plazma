@@ -79,7 +79,7 @@ export default function RoomObject(data: RoomObjectProps) {
         {/* <Suspense fallback={() => <Loading />}> */}
         <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}>
             <div className='hotel-room__preview'>
-                <div className='hotel-room__image-wrapper'>
+                {/* <div className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
                             {images && images.map((image, i) =>
@@ -104,7 +104,7 @@ export default function RoomObject(data: RoomObjectProps) {
                             </div>
                         )}
                     </div>
-                    : ''}
+                    : ''} */}
             </div>
 
             <div className='hotel-room__info'>
