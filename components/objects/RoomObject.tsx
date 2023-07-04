@@ -8,7 +8,7 @@ export interface RoomObjectProps {
     id: number | number[],
     title: string,
     description: string,
-    images: StaticImageData[],
+    images: string[],
     size: string,
     attributes: {
         name: string,
@@ -72,13 +72,12 @@ export default function RoomObject(data: RoomObjectProps) {
         />
         <div className='hotel-rooms__item hotel-room' key={data.id.toString()}>
             <div className='hotel-room__preview'>
-                {/* <div className='hotel-room__image-wrapper'>
+                <div className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
                             {images && images.map((image, i) =>
                                 <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
                                     <Image key={i} src={image} height={0} width={0} alt={'Plazma'}
-                                        placeholder="blur"
                                     />
                                 </div >
                             )}
@@ -86,7 +85,7 @@ export default function RoomObject(data: RoomObjectProps) {
                     </div>
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
-                </div> */}
+                </div>
                 {images && images.length > 1 ?
                     <div className='hotel-room__slides'>
                         {images.map((x, i) =>

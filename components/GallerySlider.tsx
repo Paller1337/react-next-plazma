@@ -6,7 +6,7 @@ import { createPortal } from 'react-dom'
 interface GallerySliderProps {
     isOpen?: boolean
     onClose?: () => void
-    slides: StaticImageData[]
+    slides: string[]
     startSlide?: number
 }
 
