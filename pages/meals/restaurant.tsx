@@ -7,7 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 
 export default function PageRestaurant() {
 
@@ -40,7 +40,8 @@ export default function PageRestaurant() {
 
             <main className='page page-rest'>
                 <div className='relative main-wrap' data-scroll-container>
-                    <Promo imgUrl={images.backgrounds.imghotelRestaurantPng} />
+                    {/* <Promo imgUrl={images.backgrounds.imghotelRestaurantPng} /> */}
+                    <Promo imgUrl={'/img/backgrounds/hotel-restaurant.webp'} />
 
                     <div className='base-bg' data-scroll-section></div>
 

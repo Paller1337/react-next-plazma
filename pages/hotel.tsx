@@ -7,9 +7,11 @@ import RoomObject, { RoomObjectProps } from '../components/objects/RoomObject'
 import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
-import { images } from 'imageImports'
-import { useEffect, useMemo } from 'react'
+// import { images } from 'imageImports'
+import { Suspense, lazy, useEffect, useMemo } from 'react'
+import BlockLoader from '@/components/BlockLoader'
 
+// const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 
 interface PageHotelProps {
     rooms: RoomObjectProps[]
@@ -46,7 +48,7 @@ export default function PageHotel(props: PageHotelProps) {
 
             <main className='page page-hotel'>
                 <div className='relative main-wrap' data-scroll-container>
-                    <Promo imgUrl={images.backgrounds.imghotelWelcomePng} booking />
+                    <Promo imgUrl={'/img/backgrounds/hotel-welcome.webp'} booking />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -54,7 +56,7 @@ export default function PageHotel(props: PageHotelProps) {
                     <div className='page-hotel__placement hotel-placement' data-scroll-section>
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
-                        <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
+                        {/* <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' /> */}
 
                         <span className='text' data-scroll>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и
@@ -73,7 +75,7 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
                         <div className='hotel-rooms__content' data-scroll>
-                        {rooms.map(x =>
+                            {rooms.map(x =>
                                 <RoomObject
                                     key={'room-' + x.id.toString()}
                                     id={x.id}

@@ -8,7 +8,7 @@ import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
 import PlazmaSertItem from '../components/PlazmaSertItem'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 export default function PageAquatory() {
 
 
@@ -54,7 +54,8 @@ export default function PageAquatory() {
                         </div>
                     </div> */}
 
-                    <Promo imgUrl={images.backgrounds.imghotelAquatoryPng} />
+                    {/* <Promo imgUrl={images.backgrounds.imghotelAquatoryPng} /> */}
+                    <Promo imgUrl={'/img/backgrounds/hotel-aquatory.webp'} />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -76,17 +77,20 @@ export default function PageAquatory() {
                             </div>
 
                             <picture className='img-big'>
-                                <Image height={550} width={770} src={images.aquatory.img1Png} alt='' placeholder='blur' />
+                                {/* <Image height={550} width={770} src={images.aquatory.img1Png} alt='' placeholder='blur' /> */}
+                                <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt='' />
                             </picture>
                         </div>
 
                         <div className='promo-info__bottom'>
                             <picture className='img-med'>
-                                <Image height={470} width={760} src={images.aquatory.img2Png} alt='' placeholder='blur' />
+                                {/* <Image height={470} width={760} src={images.aquatory.img2Png} alt='' placeholder='blur' /> */}
+                                <Image height={470} width={760} src={'/img/aquatory/2.webp'} alt='' />
                             </picture>
 
                             <picture className='img-low'>
-                                <Image height={470} width={370} src={images.aquatory.img3Png} alt='' placeholder='blur' />
+                                {/* <Image height={470} width={370} src={images.aquatory.img3Png} alt='' placeholder='blur' /> */}
+                                <Image height={470} width={370} src={'/img/aquatory/3.webp'} alt='' />
                             </picture>
 
                         </div>
@@ -137,7 +141,8 @@ export default function PageAquatory() {
                         </div>
 
                         <picture className='page-aquatory__price-img'>
-                            <Image width={11701170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' />
+                            {/* <Image width={1170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' /> */}
+                            <Image height={1170} width={700} src={'/img/aquatory/5.webp'} alt='' />
                         </picture>
                     </div>
 
@@ -170,13 +175,15 @@ export default function PageAquatory() {
                             </div>
 
                             <picture className='aquatory-props__img'>
-                                <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' />
+                                {/* <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' /> */}
+                                <Image height={1170} width={660} src={'/img/aquatory/6.webp'} alt='' />
                             </picture>
                         </div>
 
                         <div className='aquatory-props__second'>
                             <picture className='aquatory-props__img'>
-                                <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' />
+                                {/* <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' /> */}
+                            <Image height={1170} width={638} src={'/img/aquatory/7.webp'} alt='' />
                             </picture>
 
                             <div className='page-aquatory__list'>
@@ -217,10 +224,10 @@ export default function PageAquatory() {
                     <div className='aquatory-sert container'>
                         <span className='text'>Территория и бассейн зоны отдыха соответствуют всем санитарно-эпидемиологическим нормам.</span>
                         <span className='text'> По всем лабораторным исследованиям и анализам вода в нашем водоеме имеет самые лучшие показатели в Тульской области .</span>
-                        <PlazmaSertItem img={'/img/sert/1.jpg'} />
-                        <PlazmaSertItem img={'/img/sert/2-1.jpg'} />
-                        <PlazmaSertItem img={'/img/sert/2-2.jpg'} />
-                        <PlazmaSertItem img={'/img/sert/2-3.jpg'} />
+                        <PlazmaSertItem img={'/img/sert/1.webp'} />
+                        <PlazmaSertItem img={'/img/sert/2-1.webp'} />
+                        <PlazmaSertItem img={'/img/sert/2-2.webp'} />
+                        <PlazmaSertItem img={'/img/sert/2-3.webp'} />
                     </div>
                 </div >
             </main>

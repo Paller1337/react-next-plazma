@@ -10,7 +10,7 @@ interface PromoProps {
     bg?: string
     booking?: boolean
     video?: boolean
-    imgUrl?: StaticImageData
+    imgUrl?: string
 }
 
 const Video = dynamic(() => import('./Video'), {

@@ -70,7 +70,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
                         onClick={() => setActiveSlide(index)}>
                         <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
-                            placeholder='blur'
+                            // placeholder='blur'
                         />
                     </div>
                 ))}

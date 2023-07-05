@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import { saunaObjData } from '../data/saunaObj'
 import SaunaObject from '../components/objects/SaunaObject'
 import Promo from '../components/Promo'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 export default function PageSauna() {
 
 
@@ -38,7 +38,9 @@ export default function PageSauna() {
             <main className='page page-saunas'>
                 <div className='relative main-wrap' data-scroll-container>
 
-                    <Promo imgUrl={images.backgrounds.imghotelSaunasPng} bg='welcome-saunas' />
+                    {/* <Promo imgUrl={images.backgrounds.imghotelSaunasPng} bg='welcome-saunas' /> */}
+
+                    <Promo imgUrl={'/img/backgrounds/hotel-saunas.webp'} bg='welcome-saunas' />
 
                     <div className='base-bg' data-scroll-section></div>
 

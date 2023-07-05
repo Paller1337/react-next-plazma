@@ -2,6 +2,7 @@ import { Suspense, useEffect, useRef, useState } from 'react'
 import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
 import Image, { StaticImageData } from 'next/image'
+import BlockLoader from '../BlockLoader'
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
@@ -16,9 +17,9 @@ export interface RoomObjectProps {
 }
 
 export const Loading = () => {
-
     return <p>Loading</p>
 }
+
 export default function RoomObject(data: RoomObjectProps) {
     const images = data.images
 
@@ -51,6 +52,7 @@ export default function RoomObject(data: RoomObjectProps) {
 
     const prevSlide = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation()
+        console.log('123')
         if (e.target instanceof HTMLButtonElement) {
             if (currentSlide > 0) {
                 goSlide(currentSlide - 1)
@@ -83,7 +85,7 @@ export default function RoomObject(data: RoomObjectProps) {
                             {images && images.map((image, i) =>
                                 <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
                                     <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
-                                        // placeholder='blur'
+                                    // placeholder='blur'
                                     />
                                 </div >
                             )}

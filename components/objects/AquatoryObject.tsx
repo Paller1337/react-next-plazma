@@ -6,7 +6,7 @@ export interface AquatoryObjectProps {
     id: string,
     title: string,
     description: string,
-    images: StaticImageData[],
+    images: StaticImageData[] | string[],
     priceCards: {
         cardName: string,
         cardAttr: string,
@@ -16,7 +16,7 @@ export interface AquatoryObjectProps {
     attentionText?: string,
     includedItems: string[],
 
-    includedImg: StaticImageData,
+    includedImg: StaticImageData | string,
     additionalItems: string[],
     additionalText?: string
 }
@@ -36,7 +36,8 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
             <div className='aquatory-object__photos'>
                 {data.images.map((x, i) =>
                     <picture key={i} className='aquatory-object__img'>
-                        <Image height={470} width={570} src={x} alt='' placeholder='blur' />
+                    {/* <Image height={470} width={570} src={x} alt='' placeholder='blur' /> */}
+                        <Image height={470} width={570} src={x} alt='' />
                     </picture>
                 )}
             </div>
@@ -79,7 +80,8 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 </div>
 
                 <picture className='aquatory-object__include-img'>
-                    <Image height={420} width={320} src={data.includedImg} alt='' placeholder='blur' />
+                    {/* <Image height={420} width={320} src={data.includedImg} alt='' placeholder='blur' /> */}
+                    <Image height={420} width={320} src={data.includedImg} alt='' />
                 </picture>
             </div>
 

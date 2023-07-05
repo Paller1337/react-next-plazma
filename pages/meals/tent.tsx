@@ -7,7 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 
 export default function PageTent() {
 
@@ -42,7 +42,9 @@ export default function PageTent() {
 
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
-                    <Promo imgUrl={images.backgrounds.imgtentJpg} />
+                    {/* <Promo imgUrl={images.backgrounds.imgtentJpg} /> */}
+                    
+                    <Promo imgUrl={'/img/backgrounds/tent.webp'} />
 
                     <div className='base-bg' data-scroll-section></div>
 

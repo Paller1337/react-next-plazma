@@ -1,4 +1,4 @@
-import { images } from 'imageImports';
+// import { images } from 'imageImports';
 import { AquatoryObjectProps } from '../components/objects/AquatoryObject'
 
 export const aquatoryObjData: AquatoryObjectProps[] = [
@@ -7,9 +7,9 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
         title: "Полуостров с бассейном",
         description: "Не Аравийский, но тоже полуостров. Слева омывается основной частью водоема, а не Красным море, а справа – мелководной частью водоема, а не Оманским заливом, внутри– бассейн с подогревом, почти как внутреннее море.",
         images: [
-            images.aquatory.imgpen1Png,
-            images.aquatory.imgpen2Png,
-            images.aquatory.imgpen3Png,
+            '/img/aquatory/pen-1.webp',
+            '/img/aquatory/pen-2.webp',
+            '/img/aquatory/pen-3.webp',
         ],
         priceCards: [
             {
@@ -39,7 +39,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             "Зонт"
         ],
 
-        includedImg: images.aquatory.imgpen4Png,
+        includedImg: '/img/aquatory/pen-4.webp',
 
         additionalItems: [
             "Аренда полотенца (180х100) – 200 рублей."
@@ -56,9 +56,9 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
         вдруг вы
         захотите устроить командные игры или расстелить поле для твистера.`,
         images: [
-            images.aquatory.imggaz1Png,
-            images.aquatory.imggaz2Png,
-            images.aquatory.imggaz3Png,
+            '/img/aquatory/gaz-1.webp',
+            '/img/aquatory/gaz-2.webp',
+            '/img/aquatory/gaz-3.webp',
         ],
         priceCards: [
             {
@@ -77,7 +77,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             'Розетки'
         ],
 
-        includedImg: images.aquatory.imggaz4Png,
+        includedImg: '/img/aquatory/gaz-4.webp',
 
         additionalItems: [
             "Уголь",
@@ -94,9 +94,9 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
         Столы и лавки находятся под крышей, а мангал расположен на открытом воздухе. Беседка находится немного обособлено от пляжа, 
         возле волейбольных площадок.`,
         images: [
-            images.aquatory.imggazVip1Png,
-            images.aquatory.imggazVip2Png,
-            images.aquatory.imggazVip3Png,
+            '/img/aquatory/gaz-vip-1.webp',
+            '/img/aquatory/gaz-vip-2.webp',
+            '/img/aquatory/gaz-vip-3.webp',
         ],
         priceCards: [
             {
@@ -112,7 +112,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             "Стол с лавочками",
         ],
 
-        includedImg: images.aquatory.imggazVip4Png,
+        includedImg: '/img/aquatory/gaz-vip-4.webp',
 
         additionalItems: [
             "Уголь",
@@ -128,9 +128,9 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
         description: `Отличная возможность собраться небольшой компаний для дружеских встреч, пожарить шашлык и насладиться видом на водоем. 
         Беседки распложены на травяном пляже, поэтому смело берите с собой покрывало, чтобы позагорать.`,
         images: [
-            images.aquatory.imggazMini1Png,
-            images.aquatory.imggazMini2Png,
-            images.aquatory.imggazMini3Png,
+            '/img/aquatory/gaz-mini-1.webp',
+            '/img/aquatory/gaz-mini-2.webp',
+            '/img/aquatory/gaz-mini-3.webp',
         ],
         priceCards: [
             {
@@ -147,7 +147,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             'Розетки'
         ],
 
-        includedImg: images.aquatory.imggazMini4Png,
+        includedImg: '/img/aquatory/gaz-mini-4.webp',
 
         additionalItems: [
             "Уголь",

@@ -13,7 +13,7 @@ import InputText from '../components/form/InputText'
 import InputSelect from '../components/form/InputSelect'
 import InputRadio from '../components/form/InputRadio'
 import SportCalculator from '../components/SportCalculator'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 
 
 
@@ -47,7 +47,9 @@ export default function PageSportsCamps() {
 
             <main className='page page-sports-camps'>
                 <div className='relative main-wrap' data-scroll-container>
-                    <PromoMin imgUrl={images.backgrounds.imgsportsCampsMinJpg}
+                    <PromoMin
+                        // imgUrl={images.backgrounds.imgsportsCampsMinJpg}
+                        imgUrl={'/img/backgrounds/sports-camps-min.webp'}
                         title='СПОРТ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />
@@ -75,7 +77,7 @@ export default function PageSportsCamps() {
                             </div>
 
                             <picture className='about-hotel__img img_min'>
-                                <img src='/img/sports-camps/1.jpg' alt='' />
+                                <img src='/img/sports-camps/1.webp' alt='' />
                             </picture>
                         </div>
 
@@ -89,7 +91,7 @@ export default function PageSportsCamps() {
                             </div>
 
                             <picture className='about-hotel__img img_min'>
-                                <img src='/img/sports-camps/2.jpg' alt='' />
+                                <img src='/img/sports-camps/2.webp' alt='' />
                             </picture>
                         </div>
                     </div>
@@ -107,7 +109,8 @@ export default function PageSportsCamps() {
                     <div className='meals-preview-cards container'>
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0} src={images.meals.min.img1Jpg} alt='' placeholder='blur' />
+                                {/* <Image width={0} height={0} src={images.meals.min.img1Jpg} alt='' placeholder='blur' /> */}
+                                <Image width={570} height={320} src={'/img/meals/min/1.webp'} alt='' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Ресторан
@@ -116,7 +119,8 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0} src={images.meals.min.img2Jpg} alt='' placeholder='blur' />
+                                {/* <Image width={0} height={0} src={images.meals.min.img2Jpg} alt='' placeholder='blur' /> */}
+                                <Image width={570} height={320} src={'/img/meals/min/2.webp'} alt='' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Кафе-столовая Smash
@@ -125,7 +129,8 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0} src={images.meals.min.img3Jpg} alt='' placeholder='blur' />
+                                {/* <Image width={0} height={0} src={images.meals.min.img3Jpg} alt='' placeholder='blur' /> */}
+                                <Image width={570} height={320} src={'/img/meals/min/3.webp'} alt='' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Банкетный-конференц-зал
@@ -134,7 +139,8 @@ export default function PageSportsCamps() {
 
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
-                                <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur' />
+                                {/* <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur' /> */}
+                                <Image width={570} height={320} src={'/img/meals/min/4.webp'} alt='' />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Летний Шатер
@@ -153,17 +159,20 @@ export default function PageSportsCamps() {
                     <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
                         <ColumnCard
                             title='Делюкс на набережной'
-                            img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
+                            // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
+                            img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/1.webp' }}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 1 этаж'
-                            img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img2Jpg }}
+                            // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img2Jpg }}
+                            img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/2.webp' }}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 2 этаж'
-                            img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
+                            // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
+                            img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }}
                         />
                     </div>
 

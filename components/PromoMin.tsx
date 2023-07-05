@@ -5,7 +5,7 @@ import Header from './Header';
 
 interface PromoMinProps {
     video?: boolean
-    imgUrl: StaticImageData
+    imgUrl: StaticImageData | string
     bg?: string
     title?: string
     description?: string
@@ -45,7 +45,9 @@ export default function PromoMin(props: PromoMinProps) {
                         <>
                             {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
                             {props.imgUrl ?
-                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma' placeholder='blur'></Image>
+                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
+                                //  placeholder='blur'
+                                ></Image>
                                 : ''
                             }
                         </>

@@ -2,21 +2,19 @@ async function optimizeImages() {
   const imagemin = await import('imagemin');
   const imageminMozjpeg = await import('imagemin-mozjpeg');
   const imageminPngquant = await import('imagemin-pngquant');
+  const imageminWebp = await import('imagemin-webp');
   const path = await import('path');
   const fs = await import('fs');
 
   const inputDir = 'public/no-optimize-img';
-  const outputDir = 'public/img';
+  const outputDir = 'public/optimize-img';
 
   let imports = '';
   let imagesObject = {};
 
   function setPath(obj, pathArray, value) {
     let lastKey = toCamelCase(pathArray.pop(), true);
-
-    pathArray.reduce((a, b) => {
-      return a[toCamelCase(b, false)] = a[toCamelCase(b, false)] || {};
-    }, obj)[lastKey] = value;
+    pathArray.reduce((a, b) => a[toCamelCase(b, false)] = a[toCamelCase(b, false)] || {}, obj)[lastKey] = value;
   }
 
   function toCamelCase(str, addPrefix) {
@@ -65,7 +63,8 @@ async function optimizeImages() {
       destination: outputDirPath,
       plugins: [
         imageminMozjpeg.default({ quality: 80 }),
-        imageminPngquant.default({ quality: [0.6, 0.8] })
+        imageminPngquant.default({ quality: [0.6, 0.8] }),
+        imageminWebp.default({ quality: 50 })
       ]
     });
 

@@ -7,7 +7,7 @@ import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 
 
 
@@ -43,7 +43,7 @@ export default function PageActiveLeisure() {
                 <div className='relative main-wrap' data-scroll-container>
 
 
-                    <PromoMin imgUrl={images.backgrounds.imgactiveLeisureMinPng}
+                    <PromoMin imgUrl={'/img/backgrounds/active-leisure-min.webp'}
                         title='АКТИВНЫЙ ОТДЫХ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />
@@ -66,7 +66,10 @@ export default function PageActiveLeisure() {
                                 <div className='btn btn_black'>Подробнее</div>
                             </div>
                             <div className='about-quatr__image'>
-                                <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' />
+                                {/* <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' /> */}
+                                <Image src={'/img/active-leisure/1.webp'} width={970} height={700} alt=''
+                                //  placeholder='blur' 
+                                />
                             </div>
                         </div>
                     </div>
@@ -80,7 +83,9 @@ export default function PageActiveLeisure() {
                             desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
                             баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                             экологичность. Идеально подходит для детей и взрослых.`}
-                            img={{ h: 770, w: 570, src: images.activeLeisure.imgcol1Png }}
+                            // img={{ h: 770, w: 570, src: images.activeLeisure.imgcol1Png }}
+                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-1.webp' }}
+
                         />
 
                         <ColumnCard
@@ -88,7 +93,8 @@ export default function PageActiveLeisure() {
                             desc={`Безопасная игровая площадка с разными развлечениями 
                             для детей. Качественное оборудование, способствующее активности 
                             и творчеству. Там создается дружба и хорошее настроение`}
-                            img={{ h: 770, w: 570, src: images.activeLeisure.imgcol2Png }}
+                            // img={{ h: 770, w: 570, src: images.activeLeisure.imgcol2Png }}
+                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-2.webp' }}
                         />
 
                         <ColumnCard
@@ -96,7 +102,8 @@ export default function PageActiveLeisure() {
                             desc={`Отличное место для пляжного волейбола, футбола и других активных 
                             игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
                             или просто повесилиться с друзьями.`}
-                            img={{ h: 770, w: 570, src: images.activeLeisure.imgcol3Png }}
+                            // img={{ h: 770, w: 570, src: images.activeLeisure.imgcol3Png }}
+                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-3.webp' }}
                         />
                     </div>
 
@@ -108,7 +115,8 @@ export default function PageActiveLeisure() {
                             песком. Глубина песка 40 см, фракция 0.1-0.63. В зале 4 пляжные площадки с местом для забега, 
                             2 раздевалки, трибуны на 100 человек. В летний период у нас работает 7 открытых площадок для 
                             пляжного волейбола с кварцевым песком.`}
-                            img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
+                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
+                            img={{ h: 770, w: 570, src: '/img/active-leisure/row-1.webp' }}
                         />
 
                         <RowCard reverse
@@ -116,14 +124,16 @@ export default function PageActiveLeisure() {
                             desc={`Размер манежа составляет 25х44 метра, высота — 11 метров. Зал предназначен для мини-футбола, 
                             волейбола, баскетбола, танцев, гимнастики, единоборств. В манеже 2 раздевалки на 60 человек, 2 
                             кабинета для тренеров, трибуны и новейший мобильный инвентарь.`}
-                            img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
+                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
+                            img={{ h: 770, w: 570, src: '/img/active-leisure/row-2.webp' }}
                         />
 
                         <RowCard
                             title='Теннисный корт'
                             desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
                             хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
-                            img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
+                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
+                            img={{ h: 770, w: 570, src: '/img/active-leisure/row-3.webp' }}
                         />
                     </div>
 

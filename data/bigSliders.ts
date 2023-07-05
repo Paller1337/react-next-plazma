@@ -1,97 +1,100 @@
-import { images } from 'imageImports';
+// import { images } from 'imageImports';
 
 export const slidersData = [
     {
         name: 'hotelPromoSlider',
         images: [
-            images.hotel.promoSlides.img1Jpg,
-            images.hotel.promoSlides.img2Jpg,
-            images.hotel.promoSlides.img3Jpg,
-            images.hotel.promoSlides.img4Jpg,
-            images.hotel.promoSlides.img5Jpg,
-            images.hotel.promoSlides.img6Jpg,
-            images.hotel.promoSlides.img7Jpg,
-            images.hotel.promoSlides.img8Jpg,
-            images.hotel.promoSlides.img9Jpg,
-            images.hotel.promoSlides.img10Jpg,
+            '/img/hotel/promo-slides/1.webp',
+            '/img/hotel/promo-slides/2.webp',
+            '/img/hotel/promo-slides/3.webp',
+            '/img/hotel/promo-slides/4.webp',
+            '/img/hotel/promo-slides/5.webp',
+            '/img/hotel/promo-slides/6.webp',
+            '/img/hotel/promo-slides/7.webp',
+            '/img/hotel/promo-slides/8.webp',
+            '/img/hotel/promo-slides/9.webp',
+            '/img/hotel/promo-slides/10.webp',
         ]
     },
     
     {
         name: 'smashSlider',
         images: [
-            images.smash.img1Jpg,
-            images.smash.img2Jpg,
-            images.smash.img3Jpg,
-            images.smash.img4Jpg,
-            images.smash.img5Jpg,
-            images.smash.img6Jpg,
+            '/img/smash/1.webp',
+            '/img/smash/2.webp',
+            '/img/smash/3.webp',
+            '/img/smash/4.webp',
+            '/img/smash/5.webp',
+            '/img/smash/6.webp',
         ]
     },
     
     {
         name: 'restSlider',
         images: [
-            images.rest.img1Jpg,
-            images.rest.img2Jpg,
-            images.rest.img3Jpg,
-            images.rest.img4Jpg,
-            images.rest.img5Jpg,
-            images.rest.img6Jpg,
+            '/img/rest/1.webp',
+            '/img/rest/2.webp',
+            '/img/rest/3.webp',
+            '/img/rest/4.webp',
+            '/img/rest/5.webp',
+            '/img/rest/6.webp',
         ]
     },
 
     {
         name: 'summerTentSlider',
         images: [
-            images.tent.slider.img2Jpg,
-            images.tent.slider.img3Jpg,
-            images.tent.slider.img4Jpg,
-            images.tent.slider.img5Jpg,
+            '/img/tent/slider/1.webp',
+            '/img/tent/slider/2.webp',
+            '/img/tent/slider/3.webp',
+            '/img/tent/slider/4.webp',
+            '/img/tent/slider/5.webp',
+            '/img/tent/slider/6.webp',
+            '/img/tent/slider/7.webp',
         ]
     },
     
     {
         name: 'saunaWhiteNight',
         images: [
-            images.saunas.whiteNight.img1Jpg,
-            images.saunas.whiteNight.img2Jpg,
-            images.saunas.whiteNight.img3Jpg,
-            images.saunas.whiteNight.img4Jpg,
+            '/img/saunas/white-night/1.webp',
+            '/img/saunas/white-night/2.webp',
+            '/img/saunas/white-night/3.webp',
+            '/img/saunas/white-night/4.webp',
         ]
     },
     
     {
         name: 'sauna1001Night',
         images: [
-            images.saunas.night1001.img1Jpg,
-            images.saunas.night1001.img2Jpg,
-            images.saunas.night1001.img3Jpg,
-            images.saunas.night1001.img4Jpg,
+            '/img/saunas/night-1001/1.webp',
+            '/img/saunas/night-1001/2.webp',
+            '/img/saunas/night-1001/3.webp',
+            '/img/saunas/night-1001/4.webp',
         ]
     },
     
     {
         name: 'saunaAquaLux',
         images: [
-            images.saunas.aquaLux.img1Jpg,
-            images.saunas.aquaLux.img2Jpg,
-            images.saunas.aquaLux.img3Jpg,
-            images.saunas.aquaLux.img4Jpg,
+            '/img/saunas/aqua-lux/1.webp',
+            '/img/saunas/aqua-lux/2.webp',
+            '/img/saunas/aqua-lux/3.webp',
+            '/img/saunas/aqua-lux/4.webp',
         ]
     },
 
     {
         name: 'banquetHall',
         images: [
-            images.banquetHall.slider.img6Jpg,
-            images.banquetHall.slider.img2Jpg,
-            images.banquetHall.slider.img3Jpg,
-            images.banquetHall.slider.img5Jpg,
-            images.banquetHall.slider.img1Jpg,
-            images.banquetHall.slider.img7Jpg,
-            images.banquetHall.slider.img8Jpg,
-            images.banquetHall.slider.img9Jpg,
+            '/img/banquet-hall/slider/6.webp',
+            '/img/banquet-hall/slider/2.webp',
+            '/img/banquet-hall/slider/3.webp',
+            '/img/banquet-hall/slider/5.webp',
+            '/img/banquet-hall/slider/1.webp',
+            '/img/banquet-hall/slider/7.webp',
+            '/img/banquet-hall/slider/8.webp',
+            '/img/banquet-hall/slider/9.webp',
         ]
     },
 ]

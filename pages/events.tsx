@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
-import { images } from 'imageImports'
+// import { images } from 'imageImports'
 
 export default function PageEvents() {
 
@@ -38,7 +38,9 @@ export default function PageEvents() {
                 <div className='relative main-wrap' data-scroll-container>
 
 
-                    <PromoMin imgUrl={images.backgrounds.imghotelEventsMinPng}
+                    <PromoMin
+                        // imgUrl={images.backgrounds.imghotelEventsMinPng}
+                        imgUrl={'/img/backgrounds/hotel-events-min.webp'}
                         title='МЕРОПРИЯТИЯ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы организуем увлекательные тематические вечера, где вы сможете насладиться изысканной
                         кухней и разнообразным развлечением в атмосфере праздника.`} />
@@ -65,20 +67,20 @@ export default function PageEvents() {
                                 <div className='btn btn_black'>Подробнее</div>
                             </div>
                             <div className='about-quatr__image'>
-                                <Image src='/img/events/family.png' width={970} height={700} alt='' />
+                                <Image src='/img/events/family.webp' width={970} height={700} alt='' />
                             </div>
                         </div>
                     </div>
 
                     <div className='page-events__about-img-bg about-img-bg' data-scroll-section>
                         <picture className='about-img-bg__img' data-scroll data-scroll-speed="-4">
-                            <img className='js--mobile-parallax' src='/img/events/about-img.png' alt='Мероприятия в парк-отеле Plazma' />
+                            <img className='js--mobile-parallax' src='/img/events/about-img.webp' alt='Мероприятия в парк-отеле Plazma' />
                         </picture>
 
 
                         <div className='about-img-bg__inner'>
                             <picture className='about-img-bg__in-img'>
-                                <img src='/img/events/about-img-bg-inner.png' alt='' />
+                                <img src='/img/events/about-img-bg-inner.webp' alt='' />
                             </picture>
                             <div className='about-img-bg__text'>
                                 <h2>Праздничные и тематические мероприятия</h2>
@@ -95,7 +97,7 @@ export default function PageEvents() {
                     <div className='page-events__about-two-col about-two-col container' data-scroll-section>
                         <div className='about-two-col__left'>
                             <picture className='about-two-col__img'>
-                                <img src='/img/events/corp-1.png' alt='Мероприятия в парк-отеле Plazma' />
+                                <img src='/img/events/corp-1.webp' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>
 
                             <div className='about-two-col__text'>
@@ -109,7 +111,7 @@ export default function PageEvents() {
                         </div>
                         <div className='about-two-col__right'>
                             <picture className='about-two-col__img'>
-                                <img src='/img/events/corp-2.png' alt='Мероприятия в парк-отеле Plazma' />
+                                <img src='/img/events/corp-2.webp' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ interface ColumnCardProps {
     img: {
         h: number,
         w: number,
-        src: StaticImageData
+        src: StaticImageData | string
     }
     title?: string
     desc?: string
@@ -18,7 +18,9 @@ export default function RowCard(props: ColumnCardProps) {
     return (<>
         <div className={`row-card ${props.reverse ? 'reverse' : ''}`}>
             <div className='row-card__img'>
-                <Image src={props.img.src} width={props.img.w} height={props.img.h} alt='' placeholder='blur'/>
+                <Image src={props.img.src} width={props.img.w} height={props.img.h} alt='' 
+                // placeholder='blur'
+                />
             </div>
 
             <div className='row-card__text'>
