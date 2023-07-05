@@ -8,6 +8,7 @@ export interface RoomObjectProps {
     title: string,
     description: string,
     images: string[],
+    previews: string[]
     size: string,
     attributes: {
         name: string,
@@ -22,6 +23,7 @@ export const Loading = () => {
 
 export default function RoomObject(data: RoomObjectProps) {
     const images = data.images
+    const previews = data.previews
 
     const [amenitiesOpened, setAmenitiesOpened] = useState(false)
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -82,7 +84,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 <div className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
-                            {images && images.map((image, i) =>
+                            {previews && previews.map((image, i) =>
                                 <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
                                     <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
                                     // placeholder='blur'
@@ -94,9 +96,9 @@ export default function RoomObject(data: RoomObjectProps) {
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
                 </div>
-                {images && images.length > 1 ?
+                {previews && previews.length > 1 ?
                     <div className='hotel-room__slides'>
-                        {images.map((x, i) =>
+                        {previews.map((x, i) =>
                             <div key={'img-min-' + data.id.toString() + i} className='hotel-room__slide' onClick={() => goSlide(i)}>
 
                                 <Image src={x} height={60} width={80} alt={'Plazma гостиница'} />

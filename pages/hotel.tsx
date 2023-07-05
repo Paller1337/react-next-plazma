@@ -83,6 +83,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     description={x.description}
                                     size={x.size}
                                     images={x.images}
+                                    previews={x.previews}
                                     attributes={x.attributes}
                                     amenities={x.amenities}
                                 />

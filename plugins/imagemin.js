@@ -79,3 +79,64 @@ async function optimizeImages() {
 }
 
 optimizeImages();
+
+
+// Функция для оптимизации изображений
+async function optimizeImage(filePath, outputDirPath) {
+  const imagemin = await import('imagemin');
+  const imageminMozjpeg = await import('imagemin-mozjpeg');
+  const imageminPngquant = await import('imagemin-pngquant');
+  const imageminWebp = await import('imagemin-webp');
+  await imagemin([filePath], {
+    destination: outputDirPath,
+    plugins: [
+      imageminMozjpeg({ quality: 80 }),
+      imageminPngquant({ quality: [0.6, 0.8] })
+    ]
+  });
+
+  console.log(`Optimized image: ${outputDirPath}`);
+}
+
+// Функция для конвертации изображений в формат WebP
+async function convertImageToWebP(filePath, outputDirPath) {
+  await imagemin([filePath], {
+    destination: outputDirPath,
+    plugins: [
+      imageminWebp({ quality: 50 })
+    ]
+  });
+
+  console.log(`Converted to WebP: ${outputDirPath}`);
+}
+
+// Измененная функция обработки файлов
+async function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      processFiles(filePath);
+    } else {
+      if (isImageFile(file)) {
+        const relativePath = path.relative(inputDir, filePath);
+        const outputFilePath = path.join(outputDir, relativePath);
+        const outputDirPath = path.dirname(outputFilePath);
+
+        if (!fs.existsSync(outputDirPath)) {
+          fs.mkdirSync(outputDirPath, { recursive: true });
+        }
+
+        optimizeImage(filePath, outputDirPath);
+        convertImageToWebP(filePath, outputDirPath);
+
+        const importVariable = toCamelCase(relativePath.replace(/\//g, '_'), true);
+        imports += `import ${importVariable} from '@/images/${relativePath}';\n`;
+        setPath(imagesObject, relativePath.split('/'), importVariable);
+      }
+    }
+  });
+}
