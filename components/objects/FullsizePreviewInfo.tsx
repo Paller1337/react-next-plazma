@@ -20,20 +20,30 @@ interface FullsizePreviewInfoProps {
 }
 
 interface Images {
-    [key: number]: StaticImageData;
+    [key: number]: StaticImageData | string;
 }
 
 
 
 
+// const images: Images = {
+//     1: img1,
+//     2: img2,
+//     3: img3,
+//     4: img4,
+//     5: img5,
+//     6: img6,
+//     7: img7,
+// }
+
 const images: Images = {
-    1: img1,
-    2: img2,
-    3: img3,
-    4: img4,
-    5: img5,
-    6: img6,
-    7: img7,
+    1: '/img/index/previews/1.webp',
+    2: '/img/index/previews/2.webp',
+    3: '/img/index/previews/3.webp',
+    4: '/img/index/previews/4.webp',
+    5: '/img/index/previews/5.webp',
+    6: '/img/index/previews/6.webp',
+    7: '/img/index/previews/7.webp',
 }
 
 export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
@@ -58,7 +68,7 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
                     <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
                         {props.image &&
                             <Image height={960} width={960} className='js--mobile-parallax' src={images[props.image]} alt='Парк-отель Plazma'
-                                placeholder='blur'
+                                // placeholder='blur'
                             />}
                     </picture>
                 </div>

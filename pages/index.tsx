@@ -10,9 +10,10 @@ import Link from 'next/link'
 import { GetServerSideProps } from 'next'
 import { useEffect } from 'react'
 
-import aboutHotelImgMin from '@/images/index/about-hotel/min.png'
-import aboutHotelImgMax from '@/images/index/about-hotel/max.png'
 import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
+
+// import aboutHotelImgMin from '@/images/index/about-hotel/min.png'
+// import aboutHotelImgMax from '@/images/index/about-hotel/max.png'
 
 
 
@@ -50,7 +51,7 @@ export default function PageIndex(props: PageIndexProps) {
           property='og:type'
           content='website' />
       </Head>
-      
+
       <main className='page page-index' data-barba="container" data-barba-namespace="home">
         <div className='relative main-wrap' data-scroll-container>
 
@@ -69,8 +70,9 @@ export default function PageIndex(props: PageIndexProps) {
               </div>
 
               <picture className='about-hotel__img img_min'>
-                <Image width={670} height={420} src={aboutHotelImgMin} alt=''
-                  placeholder='blur' />
+                <Image width={670} height={420} src={'/img/index/about-hotel/min.webp'} alt=''
+                // placeholder='blur' 
+                />
               </picture>
             </div>
 
@@ -96,8 +98,9 @@ export default function PageIndex(props: PageIndexProps) {
               </div>
 
               <picture className='about-hotel__img img_max'>
-                <Image width={670} height={550} src={aboutHotelImgMax} alt=''
-                  placeholder='blur' />
+                <Image width={670} height={550} src={'/img/index/about-hotel/max.webp'} alt=''
+                // placeholder='blur'
+                />
               </picture>
             </div>
           </div>
