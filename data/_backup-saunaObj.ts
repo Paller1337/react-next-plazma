@@ -1,5 +1,5 @@
 // import { SaunaObjectProps } from '../components/objects/SaunaObject'
-
+export const slopeE = null
 // export const saunaObjData: SaunaObjectProps[] = [
 //     {
 //         id: 'sauna1001Night',

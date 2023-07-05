@@ -1,5 +1,5 @@
 // import { images } from 'imageImports';
-// import { AquatoryObjectProps } from '../components/objects/AquatoryObject'
+import { AquatoryObjectProps } from '../components/objects/AquatoryObject'
 
 // export const aquatoryObjData: AquatoryObjectProps[] = [
 //     {

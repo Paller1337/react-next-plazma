@@ -1,4 +1,5 @@
 // import { RoomObjectProps } from '../components/objects/RoomObject';
+export const onePlazne = 'null'
 // const defaultAmenities = [
 //     'Кондиционер',
 //     'Холодильник',

@@ -1,5 +1,5 @@
 // import { images } from 'imageImports';
-
+export const oneSlide = null
 // export const slidersData = [
 //     {
 //         name: 'hotelPromoSlider',

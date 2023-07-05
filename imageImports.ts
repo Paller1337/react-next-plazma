@@ -1,3 +1,5 @@
+export const tempConst = null
+
 // import imgactiveLeisure1Png from '@/images/active-leisure/1.png';
 // import imgactiveLeisureCol1Png from '@/images/active-leisure/col-1.png';
 // import imgactiveLeisureCol2Png from '@/images/active-leisure/col-2.png';
