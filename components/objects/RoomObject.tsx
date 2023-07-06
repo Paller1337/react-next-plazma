@@ -99,7 +99,9 @@ export default function RoomObject(data: RoomObjectProps) {
                 {previews && previews.length > 1 ?
                     <div className='hotel-room__slides'>
                         {previews.map((x, i) =>
-                            <div key={'img-min-' + data.id.toString() + i} className='hotel-room__slide' onClick={() => goSlide(i)}>
+                            <div key={'img-min-' + data.id.toString() + i}
+                                className={`hotel-room__slide ${currentSlide === i ? 'current' : ''}`}
+                                onClick={() => goSlide(i)}>
 
                                 <Image src={x} height={60} width={80} alt={'Plazma гостиница'} />
 

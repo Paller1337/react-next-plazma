@@ -8,6 +8,40 @@ interface HeaderProps {
     darken?: boolean
 }
 
+const headerItems = [
+    {
+        name: 'Главная',
+        link: '/',
+    },
+    {
+        name: 'Гостиница',
+        link: '/hotel',
+    },
+    {
+        name: 'Питание',
+        link: '/meals',
+    },
+    {
+        name: 'Сауна',
+        link: '/sauna',
+    },
+    {
+        name: 'Мероприятия',
+        link: '/events',
+    },
+    {
+        name: 'Акватория',
+        link: '/aquatory',
+    },
+    {
+        name: 'Активный отдых',
+        link: '/active-leisure',
+    },
+    {
+        name: 'Спортивные сборы',
+        link: '/sports-camps',
+    },
+]
 
 export default function Header(props: HeaderProps) {
     const [burgerIsOpen, setBurgerIsOpen] = useState(false)
@@ -81,13 +115,13 @@ export default function Header(props: HeaderProps) {
             <div className='c-menu__container'>
                 <div className='menu-column'>
                     <ul className="menu-column__list">
-                        <li><Link onClick={() => menuOpen(false)} href="/" className="menu-column__link">Главная</Link></li>
-                        <li><Link onClick={() => menuOpen(false)} href="/hotel" className="menu-column__link">Гостиница</Link></li>
-                        <li><Link onClick={() => menuOpen(false)} href="/meals" className="menu-column__link">Питание</Link></li>
-                        <li><Link onClick={() => menuOpen(false)} href="/aquatory" className="menu-column__link">Акватория</Link></li>
-                        <li><Link onClick={() => menuOpen(false)} href="/sauna" className="menu-column__link">Сауна</Link></li>
-                        <li><Link onClick={() => menuOpen(false)} href="/events" className="menu-column__link">мероприятия</Link></li>
-                        <li><Link onClick={() => menuOpen(false)} href="/active-leisure" className="menu-column__link">Активный отдых</Link></li>
+                        {headerItems.map((item, i) =>
+                            <li key={item.name + i}>
+                                <Link onClick={() => menuOpen(false)} href={item.link} className="menu-column__link">
+                                    {item.name}
+                                </Link>
+                            </li>)
+                        }
                     </ul>
                 </div>
             </div>
@@ -160,54 +194,13 @@ export default function Header(props: HeaderProps) {
                     </div>
 
                     <nav className="menu__body">
-                        {/* <div className='menu__item'>
-                            <Link href='/' className='menu__link'>
-                                Главная
-                            </Link>
-                        </div> */}
-
-                        <div className='menu__item'>
-                            <Link href='/hotel' className='menu__link'>
-                                Гостиница
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/meals' className='menu__link'>
-                                Питание
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/sauna' className='menu__link'>
-                                Сауна
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/events' className='menu__link'>
-                                Мероприятия
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/aquatory' className='menu__link'>
-                                Акватория
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/active-leisure' className='menu__link'>
-                                Активный отдых
-                            </Link>
-                        </div>
-
-                        <div className='menu__item'>
-                            <Link href='/sports-camps' className='menu__link'>
-                                Спортивные сборы
-                            </Link>
-                        </div>
-
+                        {headerItems.map((item, i) =>
+                            <div className='menu__item' key={item.name + i}>
+                                <Link href={item.link} className='menu__link'>
+                                    {item.name}
+                                </Link>
+                            </div>
+                        )}
                     </nav>
                 </div>
             </div>

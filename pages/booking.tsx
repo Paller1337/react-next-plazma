@@ -6,11 +6,13 @@ import Header from '../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
 import { BnovoContext } from '../components/bnovo/bnovoContext'
+import TouchSlider from '@/components/TouchSlider'
+import { MailSubscribe } from '@/components/modals/MailSubscribe'
 declare var Bnovo_Widget: any
 declare var BookingIframe: any
 
 export default function PageBooking() {
-
+    const mailModalRef = useRef(null)
 
     const { bnovoIframeIsLoad } = useContext(BnovoContext)
     useEffect(() => {
@@ -30,6 +32,7 @@ export default function PageBooking() {
 
     return (
         <>
+            <MailSubscribe ref={mailModalRef} />
             <Head>
                 <title>Бронирование номера в парк-отеле «PLAZMA»</title>
                 <meta name='description' content='При прямом бронировании действует скидка 16.7%.' />
@@ -52,8 +55,6 @@ export default function PageBooking() {
             <main className='page page-booking'>
                 <div className='relative main-wrap' data-scroll-container>
                     <div className='page-booking__about' data-scroll-section>
-                        {/* <Header darken /> */}
-
 
                         <div className='big-p big-p_border-top container'>
                             <span className='big-p__title'>Правила бронирования:</span>
@@ -80,12 +81,11 @@ export default function PageBooking() {
                         <div id="booking_iframe" className='container'></div>
 
                     </div>
-
+                    {/* <TouchSlider />
+                    <div className='btn btn_dark' onClick={() => mailModalRef.current?.openModal()}>Txt</div> */}
                     <div className='base-bg' data-scroll-section></div>
                 </div >
                 {/* <Footer /> */}
             </main>
-        </>
-
-    )
+        </>)
 }
