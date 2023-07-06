@@ -40,7 +40,7 @@ export default function PageSauna() {
 
                     {/* <Promo imgUrl={images.backgrounds.imghotelSaunasPng} bg='welcome-saunas' /> */}
 
-                    <Promo imgUrl={'/img/backgrounds/hotel-saunas.webp'} bg='welcome-saunas' />
+                    <Promo image='saunas' bg='welcome-saunas' />
 
                     <div className='base-bg' data-scroll-section></div>
 

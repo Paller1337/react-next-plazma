@@ -40,7 +40,7 @@ export default function PageEvents() {
 
                     <PromoMin
                         // imgUrl={images.backgrounds.imghotelEventsMinPng}
-                        imgUrl={'/img/backgrounds/hotel-events-min.webp'}
+                        image='events'
                         title='МЕРОПРИЯТИЯ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы организуем увлекательные тематические вечера, где вы сможете насладиться изысканной
                         кухней и разнообразным развлечением в атмосфере праздника.`} />

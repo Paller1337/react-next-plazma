@@ -55,7 +55,7 @@ export default function PageAquatory() {
                     </div> */}
 
                     {/* <Promo imgUrl={images.backgrounds.imghotelAquatoryPng} /> */}
-                    <Promo imgUrl={'/img/backgrounds/hotel-aquatory.webp'} />
+                    <Promo image='aquatory' />
 
                     <div className='base-bg' data-scroll-section></div>
 
@@ -142,7 +142,7 @@ export default function PageAquatory() {
 
                         <picture className='page-aquatory__price-img'>
                             {/* <Image width={1170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' /> */}
-                            <Image height={1170} width={700} src={'/img/aquatory/5.webp'} alt='' />
+                            <Image height={700} width={470} src={'/img/aquatory/5.webp'} alt='' />
                         </picture>
                     </div>
 
@@ -176,14 +176,14 @@ export default function PageAquatory() {
 
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' /> */}
-                                <Image height={1170} width={660} src={'/img/aquatory/6.webp'} alt='' />
+                                <Image height={570} width={660} src={'/img/aquatory/6.webp'} alt='' />
                             </picture>
                         </div>
 
                         <div className='aquatory-props__second'>
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' /> */}
-                            <Image height={1170} width={638} src={'/img/aquatory/7.webp'} alt='' />
+                            <Image height={570} width={640} src={'/img/aquatory/7.webp'} alt='' />
                             </picture>
 
                             <div className='page-aquatory__list'>

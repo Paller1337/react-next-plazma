@@ -44,7 +44,7 @@ export default function PageTent() {
                 <div className='relative main-wrap' data-scroll-container>
                     {/* <Promo imgUrl={images.backgrounds.imgtentJpg} /> */}
                     
-                    <Promo imgUrl={'/img/backgrounds/tent.webp'} />
+                    <Promo image='tent' />
 
                     <div className='base-bg' data-scroll-section></div>
 

@@ -41,7 +41,7 @@ export default function PageSmash() {
 
                     {/* <Promo imgUrl={images.backgrounds.imghotelSmashPng} /> */}
 
-                    <Promo imgUrl={'/img/backgrounds/hotel-smash.webp'} />
+                    <Promo image='smash' />
 
                     <div className='base-bg' data-scroll-section></div>
 

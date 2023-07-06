@@ -43,7 +43,8 @@ export default function PageActiveLeisure() {
                 <div className='relative main-wrap' data-scroll-container>
 
 
-                    <PromoMin imgUrl={'/img/backgrounds/active-leisure-min.webp'}
+                    <PromoMin
+                        image='active-leisure'
                         title='АКТИВНЫЙ ОТДЫХ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />

@@ -49,7 +49,7 @@ export default function PageSportsCamps() {
                 <div className='relative main-wrap' data-scroll-container>
                     <PromoMin
                         // imgUrl={images.backgrounds.imgsportsCampsMinJpg}
-                        imgUrl={'/img/backgrounds/sports-camps-min.webp'}
+                        image='sports-camp'
                         title='СПОРТ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />

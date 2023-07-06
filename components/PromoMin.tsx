@@ -2,24 +2,46 @@ import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import Header from './Header';
 
+import activeLeisure from '@/images/backgrounds/active-leisure-min.webp'
+import events from '@/images/backgrounds/hotel-events-min.webp'
+import sportsCamp from '@/images/backgrounds/sports-camps-min.webp'
+
+
+type PromoMinImage = 'active-leisure' | 'events' | 'sports-camp'
 
 interface PromoMinProps {
     video?: boolean
-    imgUrl: StaticImageData | string
     bg?: string
     title?: string
     description?: string
+    image?: PromoMinImage
 }
 
 
 
 
 export default function PromoMin(props: PromoMinProps) {
+    const [previewSrc, setPreviewSrc] = useState<string | undefined | StaticImageData>('')
+
     const defaultImg = {
         width: 1920,
         height: 830,
     }
+    useEffect(() => {
+        switch (props.image) {
+            case 'active-leisure':
+                setPreviewSrc(activeLeisure)
+                break
+            case 'events':
+                setPreviewSrc(events)
+                break
+            case 'sports-camp':
+                setPreviewSrc(sportsCamp)
+                break
+            default: setPreviewSrc('')
 
+        }
+    }, [props.image])
     return (<>
         <div className='main__promo-min promo-min' data-scroll-section>
             {/* <Header /> */}
@@ -44,9 +66,9 @@ export default function PromoMin(props: PromoMinProps) {
 
                         <>
                             {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
-                            {props.imgUrl ?
-                                <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
-                                //  placeholder='blur'
+                            {previewSrc ?
+                                <Image src={previewSrc} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
+                                    placeholder='blur'
                                 ></Image>
                                 : ''
                             }

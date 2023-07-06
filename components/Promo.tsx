@@ -6,11 +6,22 @@ import { Suspense, useEffect, useState } from 'react';
 // import Video from './Video';
 import dynamic from 'next/dynamic';
 
+import banquetHall from '@/images/backgrounds/banquet-hall.webp'
+import aquatory from '@/images/backgrounds/hotel-aquatory.webp'
+// import img5 from '@/images/backgrounds/hotel-events.webp'
+import rest from '@/images/backgrounds/hotel-restaurant.webp'
+import saunas from '@/images/backgrounds/hotel-saunas.webp'
+import smash from '@/images/backgrounds/hotel-smash.webp'
+import hotel from '@/images/backgrounds/hotel-welcome.webp'
+import tent from '@/images/backgrounds/tent.webp'
+
+type PromoImage = 'active-leisure' | 'banquet-hall' | 'aquatory' | 'events' |
+    'rest' | 'saunas' | 'smash' | 'hotel' | 'sports-camp' | 'tent'
 interface PromoProps {
     bg?: string
     booking?: boolean
     video?: boolean
-    imgUrl?: string
+    image?: PromoImage
 }
 
 const Video = dynamic(() => import('./Video'), {
@@ -19,10 +30,49 @@ const Video = dynamic(() => import('./Video'), {
 })
 
 export default function Promo(props: PromoProps) {
+    const [previewSrc, setPreviewSrc] = useState<string | undefined | StaticImageData>('')
+
     const defaultImg = {
         width: 1920,
         height: 1056,
     }
+
+    useEffect(() => {
+        switch(props.image){
+            // case 'active-leisure':
+            //     setPreviewSrc(activeLeisure)
+            //     break
+            case 'aquatory':
+                setPreviewSrc(aquatory)
+                break
+            case 'banquet-hall': 
+                setPreviewSrc(banquetHall)
+                break
+            // case 'events':
+            //     setPreviewSrc(events)
+            //     break
+            case 'hotel':
+                setPreviewSrc(hotel)
+                break
+            case 'rest':
+                setPreviewSrc(rest)
+                break
+            case 'saunas':
+                setPreviewSrc(saunas)
+                break
+            case 'smash':
+                setPreviewSrc(smash)
+                break
+            // case 'sports-camp':
+            //     setPreviewSrc(sportsCamp)
+            //     break
+            case 'tent':
+                setPreviewSrc(tent)
+                break
+            default: setPreviewSrc('')
+            
+        }
+    }, [props.image])
 
     // const [coff, setCoff] = useState(0)
     // const [imageLoaded, setImageLoaded] = useState(false)
@@ -49,7 +99,7 @@ export default function Promo(props: PromoProps) {
     //         })
     //     }
     // }, [imageLoaded])
-
+    const src = ''
 
     return (<>
         <div className='main__promo' data-scroll-section>
@@ -73,8 +123,10 @@ export default function Promo(props: PromoProps) {
 
                             <>
                                 {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
-                                {props.imgUrl ?
-                                    <Image src={props.imgUrl} width={defaultImg.width} height={defaultImg.height} alt='Plazma'></Image>
+                                {previewSrc ?
+                                    <Image src={previewSrc} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
+                                        placeholder='blur'
+                                    ></Image>
                                     : ''
                                 }
                             </>

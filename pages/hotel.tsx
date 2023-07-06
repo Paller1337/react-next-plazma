@@ -48,7 +48,7 @@ export default function PageHotel(props: PageHotelProps) {
 
             <main className='page page-hotel'>
                 <div className='relative main-wrap' data-scroll-container>
-                    <Promo imgUrl={'/img/backgrounds/hotel-welcome.webp'} booking />
+                    <Promo image='hotel' booking />
 
                     <div className='base-bg' data-scroll-section></div>
 

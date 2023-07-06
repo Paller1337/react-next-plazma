@@ -289,20 +289,25 @@
 
                             @media screen and ( max-width: $md2 )
                                 justify-content: space-between
-                                gap: 8px
+                                gap: 12px
 
                             .attr-name
                                 width: 130px
                                 line-height: 150%
 
                             .attr-value
-                                width: 330px
+                                width: fit-content
                                 line-height: 150%
                                 justify-content: flex-end
                                 span
+                                    // width: 100px
+                                    white-space: normal
+                                    word-break: break-word
                                     @media screen and ( max-width: $md4 )
                                         justify-content: flex-end
-                                        width: 100%
+                                        // width: 100%
+                                        display: flex
+                                        // width: 50%
 
                                 @media screen and ( max-width: $md2 )
                                     text-align: right

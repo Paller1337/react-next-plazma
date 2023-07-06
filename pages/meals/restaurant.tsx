@@ -41,7 +41,7 @@ export default function PageRestaurant() {
             <main className='page page-rest'>
                 <div className='relative main-wrap' data-scroll-container>
                     {/* <Promo imgUrl={images.backgrounds.imghotelRestaurantPng} /> */}
-                    <Promo imgUrl={'/img/backgrounds/hotel-restaurant.webp'} />
+                    <Promo image='rest' />
 
                     <div className='base-bg' data-scroll-section></div>
 

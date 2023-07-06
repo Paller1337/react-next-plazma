@@ -1,4 +1,4 @@
-import ContentLoader from 'react-content-loader'
+// import ContentLoader from 'react-content-loader'
 
 export default function BlockLoader(props: { width: number | string, height: number, color?: string }): JSX.Element {
     return (

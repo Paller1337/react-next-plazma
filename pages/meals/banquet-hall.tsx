@@ -43,7 +43,7 @@ export default function PageBanquetHall() {
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
                     {/* <Promo imgUrl={images.backgrounds.imgbanquetHallJpg} /> */}
-                    <Promo imgUrl={'/img/backgrounds/banquet-hall.webp'} />
+                    <Promo image='banquet-hall' />
 
                     <div className='base-bg' data-scroll-section></div>
 
