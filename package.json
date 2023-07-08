@@ -29,10 +29,12 @@
     "locomotive-scroll": "^4.1.4",
     "next": "13.0.5",
     "next-images": "^1.8.5",
+    "nodemailer": "^6.9.3",
     "react": "18.2.0",
     "react-content-loader": "^6.2.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-locomotive-scroll": "^0.2.2",
     "react-modal-image": "^2.6.0",
     "react-player": "^2.12.0",
@@ -49,6 +51,7 @@
     "@types/aos": "^3.0.4",
     "@types/imagemin": "^8.0.1",
     "@types/locomotive-scroll": "^4.1.0",
+    "@types/nodemailer": "^6.4.8",
     "@types/uuid": "^9.0.2"
   }
 }

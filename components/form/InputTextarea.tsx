@@ -1,11 +1,11 @@
 import { ChangeEvent, useState } from 'react';
 
 
-interface InputTextProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputTextProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
     label?: string
 }
 
-export default function InputText(props: InputTextProps) {
+export default function InputTextarea(props: InputTextProps) {
 
     return (<>
         <div className='input input-range'>
@@ -15,7 +15,7 @@ export default function InputText(props: InputTextProps) {
             }
 
 
-            <input className='strict-input slider-progress' {...props} type='text' />
+            <textarea className='strict-input textarea' {...props} />
         </div>
     </>)
 }

@@ -4,6 +4,7 @@ import Button from './Button'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 
+import svgVk from '/public/svg/vk.svg'
 interface HeaderProps {
     darken?: boolean
 }
@@ -138,7 +139,7 @@ export default function Header(props: HeaderProps) {
                     </div>
                 </div>
                 <div className='copyright'>
-                    <Link href="/" className="social-list__soc">plazma@yandex.ru</Link>
+                    <Link href="/" className="social-list__soc">hotel@kplazma.ru</Link>
                     <span>plazma</span>
                 </div>
             </div>
@@ -154,16 +155,18 @@ export default function Header(props: HeaderProps) {
                     </div>
                     <div className='menu__head'>
                         <div className='menu__action'>
-                            <a href='#' className='menu__action-link'>
+                            <span className='menu__action-link'>
                                 <object className='icon' data='svg/vk.svg' type='image/svg+xml'>
-                                    {/* <img src='/img/new-logo.svg' alt='' /> */}
+                                    {/* <img src='/img/new-logo.svg' alt='' />  */}
                                 </object>
-                            </a>
-                            <a href='#' className='menu__action-link'>
+                                <Link href='https://vk.com/park_hotel_plazma' />
+                            </span>
+                            <span className='menu__action-link'>
                                 <object className='icon' data='/svg/phone.svg' type='image/svg+xml'>
                                     {/* <img src='/img/new-logo.svg' alt='' /> */}
                                 </object>
-                            </a>
+                                {/* <a href='tel:' /> */}
+                            </span>
                         </div>
 
                         <Link className='menu__logo' href='/'>

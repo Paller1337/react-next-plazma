@@ -1,17 +1,28 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 
 interface InputRangeProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string
+    newValue?: (v: any) => void
 }
 
 export default function InputRange(props: InputRangeProps) {
     const [value, setValue] = useState<number>(0);
     const min = props.min !== undefined ? props.min : 0;
     const max = props.max !== undefined ? props.max : 50;
+    const inputRef = useRef(null)
 
     const inputOnChange = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(parseInt(e.target.value))
+        // props.newValue(value)
     }
+
+    // useEffect(() => {
+    //     if (inputRef.current) {
+    //         const input = inputRef.current as HTMLInputElement
+    //         setValue(parseInt(input.value))
+    //         console.log('inp: ', input.value)
+    //     }
+    // }, [inputRef.current?.value])
 
     const inputStyle = {
         '--value': value,
@@ -24,7 +35,7 @@ export default function InputRange(props: InputRangeProps) {
         left: `${100 / maxToNum * value}%`
     }
 
-
+    const onChangeValue = props.onChange ?? function () { null }
 
     return (<>
         <div className='input input-range'>
@@ -42,7 +53,11 @@ export default function InputRange(props: InputRangeProps) {
             </div>
 
             <input min={min} max={max} className='strict-input slider-progress' {...props} style={inputStyle}
-                onChange={(e) => inputOnChange(e)} defaultValue={0} />
+                onChange={(e) => {
+                    inputOnChange(e)
+                    onChangeValue(e)
+                }}
+                defaultValue={0} />
 
             <div className='input-range__labels'>
                 <span className='strict-input__label label_min'>{min}</span>

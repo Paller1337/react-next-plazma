@@ -31,6 +31,8 @@ export default function RoomObject(data: RoomObjectProps) {
     const imageContentRef = useRef<HTMLDivElement>(null)
     const [translate, setTranslate] = useState(0)
 
+    const sliderWrapper = useRef(null)
+
     const goSlide = (i: number) => {
         setCurrentSlide(i)
     }
@@ -65,8 +67,15 @@ export default function RoomObject(data: RoomObjectProps) {
     }
 
     useEffect(() => {
-        setTranslate(570 * currentSlide)
-    }, [currentSlide])
+        if (sliderWrapper.current) {
+            const content = imageContentRef.current as HTMLElement
+            const anyImage = content.getElementsByClassName('hotel-room__image')[0]
+
+            const wrapperWidth = anyImage.clientWidth
+
+            setTranslate(wrapperWidth * currentSlide)
+        }
+    }, [currentSlide, sliderWrapper])
 
 
     useEffect(() => console.log('roomId: ', data.id, 'key: ', data.id.toString()), [])
@@ -81,7 +90,7 @@ export default function RoomObject(data: RoomObjectProps) {
         {/* <Suspense fallback={() => <Loading />}> */}
         <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}>
             <div className='hotel-room__preview'>
-                <div className='hotel-room__image-wrapper'>
+                <div ref={sliderWrapper} className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
                             {previews && previews.map((image, i) =>

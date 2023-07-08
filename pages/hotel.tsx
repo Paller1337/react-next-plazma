@@ -53,10 +53,10 @@ export default function PageHotel(props: PageHotelProps) {
                     <div className='base-bg' data-scroll-section></div>
 
 
-                    <div className='page-hotel__placement hotel-placement' data-scroll-section>
+                    <div id='HotelPlacement' className='page-hotel__placement hotel-placement' data-scroll-section>
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
-                        {/* <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' /> */}
+                        <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
 
                         <span className='text' data-scroll>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и
@@ -202,7 +202,7 @@ export default function PageHotel(props: PageHotelProps) {
                             </div>
 
 
-                            <div id='hotelFAQHandle' className='hotel-faq__item faq-item'>
+                            {/* <div id='hotelFAQHandle' className='hotel-faq__item faq-item'>
                                 <div className='faq-item__question'>
                                     <span className='faq-item__icon'>В</span>
                                     <span className='faq-item__text'>
@@ -246,7 +246,7 @@ export default function PageHotel(props: PageHotelProps) {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
 
                         </div>

@@ -55,6 +55,8 @@ export default function PageBooking() {
             <main className='page page-booking'>
                 <div className='relative main-wrap' data-scroll-container>
                     <div className='page-booking__about' data-scroll-section>
+                        <div id="booking_iframe" className='container'></div>
+
 
                         <div className='big-p big-p_border-top container'>
                             <span className='big-p__title'>Правила бронирования:</span>
@@ -76,10 +78,6 @@ export default function PageBooking() {
                                 Максимально можно забронировать на 7 суток. При бронировании на более длительный срок свяжитесь с администратором по телефону.
                             </span>
                         </div>
-
-
-                        <div id="booking_iframe" className='container'></div>
-
                     </div>
                     {/* <TouchSlider />
                     <div className='btn btn_dark' onClick={() => mailModalRef.current?.openModal()}>Txt</div> */}

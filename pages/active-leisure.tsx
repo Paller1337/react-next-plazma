@@ -51,7 +51,7 @@ export default function PageActiveLeisure() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div className='page-events__welcome text-section text-section_big container' data-scroll-section>
+                    <div id='AboutSport' className='page-events__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
                         <span className='text'>
                             это проект парк-отеля Plazma, расположенного в Тульской области в 220 км. от
@@ -77,7 +77,7 @@ export default function PageActiveLeisure() {
 
 
 
-                    <div className='column-cards--wrapper container'>
+                    <div id='SportsObjects' className='column-cards--wrapper container'>
 
                         <ColumnCard
                             title='площадка с резиновым покрытием'
@@ -117,7 +117,7 @@ export default function PageActiveLeisure() {
                             2 раздевалки, трибуны на 100 человек. В летний период у нас работает 7 открытых площадок для 
                             пляжного волейбола с кварцевым песком.`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/row-1.webp' }}
+                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-1.webp' }}
                         />
 
                         <RowCard reverse
@@ -126,7 +126,7 @@ export default function PageActiveLeisure() {
                             волейбола, баскетбола, танцев, гимнастики, единоборств. В манеже 2 раздевалки на 60 человек, 2 
                             кабинета для тренеров, трибуны и новейший мобильный инвентарь.`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/row-2.webp' }}
+                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-2.webp' }}
                         />
 
                         <RowCard
@@ -134,7 +134,7 @@ export default function PageActiveLeisure() {
                             desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
                             хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/row-3.webp' }}
+                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-3.webp' }}
                         />
                     </div>
 

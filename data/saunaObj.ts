@@ -2,7 +2,7 @@ import { SaunaObjectProps } from '../components/objects/SaunaObject'
 
 export const saunaObjData: SaunaObjectProps[] = [
     {
-        id: 'sauna1001Night',
+        id: '1001Night',
         name: 'Баня на дровах «Тысяча и одна ночь» с турецким хамамом',
         description: ` Баня на дровах и турецкий хамам. Бассейн 6м х 3м с противотоком. Комфортная зона отдыха с
         большим столом.<br />
@@ -19,7 +19,7 @@ export const saunaObjData: SaunaObjectProps[] = [
     },
 
     {
-        id: 'sauna1001Night',
+        id: 'AquaLux',
         name: 'Баня на дровах «Аква-люкс»',
         description: ` Баня на дровах с большим бассейном 10м х 5м с зоной джакузи. Ледяная купель +4°C. Комфортная
         зона отдыха с большим столом. Холодильник, микроволновая печь и необходимая посуда. Открытая
@@ -36,7 +36,7 @@ export const saunaObjData: SaunaObjectProps[] = [
     },
 
     {
-        id: 'sauna1001Night',
+        id: 'WhiteNight',
         name: 'Сауна «Белая ночь»',
         description: `Баня на дровах. Бассейн 6м х 3м с противотоком. Ледяная купель +4°C. Комфортная зона отдыха
         с большим столом.<br />

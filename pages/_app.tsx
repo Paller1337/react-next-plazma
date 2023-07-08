@@ -18,7 +18,6 @@ import AppLayout from '@/components/AppLayout'
 import Script from 'next/script'
 
 
-
 export default function App({ Component, pageProps }: AppProps) {
   const [width, setWidth] = useState<Number>(100)
   const [height, setHeight] = useState<Number>(100)
@@ -65,7 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
       <BnovoLoadContextProvider>
-        <AppLayout asPath={router.asPath}>
+        <AppLayout asPath={router.asPath} pageProps={pageProps}>
           <Component {...pageProps} />
         </AppLayout>
       </BnovoLoadContextProvider>

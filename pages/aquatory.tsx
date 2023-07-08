@@ -59,7 +59,7 @@ export default function PageAquatory() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div className='page-aquatory__welcome text-section text-section_big container' data-scroll-section>
+                    <div id='AboutAquatory' className='page-aquatory__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>Акватория «PLAZMA»</span>
                         <span className='text'>
                             Plazma Акватория – это оазис внутри города, место, где гости могут отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.
@@ -100,7 +100,7 @@ export default function PageAquatory() {
                         </div>
                     </div>
 
-                    <div className='page-aquatory__price container' data-scroll-section>
+                    <div id='AquatoryPrice' className='page-aquatory__price container' data-scroll-section>
                         <div className='worktime-section'>
                             <div className='aquatory-worktime__heading'>
                                 <span className='title'>Время работы акватории</span>
@@ -142,7 +142,7 @@ export default function PageAquatory() {
 
                         <picture className='page-aquatory__price-img'>
                             {/* <Image width={1170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' /> */}
-                            <Image height={700} width={470} src={'/img/aquatory/5.webp'} alt='' />
+                            <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' />
                         </picture>
                     </div>
 
@@ -176,14 +176,14 @@ export default function PageAquatory() {
 
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' /> */}
-                                <Image height={570} width={660} src={'/img/aquatory/6.webp'} alt='' />
+                                <Image width={1170} height={660} src={'/img/aquatory/6.webp'} alt='' />
                             </picture>
                         </div>
 
                         <div className='aquatory-props__second'>
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' /> */}
-                            <Image height={570} width={640} src={'/img/aquatory/7.webp'} alt='' />
+                                <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' />
                             </picture>
 
                             <div className='page-aquatory__list'>

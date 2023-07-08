@@ -9,10 +9,11 @@ interface InputRadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
         name: string
         value: number
     }[]
+    changeValue: (x: number) => void
 }
 
 export default function InputRadio(props: InputRadioProps) {
-    // const [value, setValue] = useState('')
+    const [value, setValue] = useState(0)
     // const [isOpen, setIsOpen] = useState(false)
     // const [optHeight, setOptHeight] = useState(0)
 
@@ -23,11 +24,15 @@ export default function InputRadio(props: InputRadioProps) {
     //     }
     // }, [props.options])
 
-    // const changeValue = (x: string) => {
-    //     setIsOpen(false)
-    //     setValue(x)
-    // }
+    const changeValue = (x: number) => {
+        setValue(x)
+    }
 
+    useEffect(() => {
+        if (props.changeValue) {
+            props.changeValue(value)
+        }
+    }, [value])
     // const optionsStyle = {
     //     height: optHeight
     // } as CSSProperties
@@ -43,7 +48,9 @@ export default function InputRadio(props: InputRadioProps) {
 
                 {props.options && props.options.length > 0 ?
                     props.options.map((x, i) =>
-                        <div key={i} className='input-radio__btn'>
+                        <div key={i} className='input-radio__btn'
+                            onClick={() => changeValue(x.value)}
+                        >
                             <input id={props.radioKey + '-' + i} type="radio" name={props.radioKey} value={x.value} />
                             <label htmlFor={props.radioKey + '-' + i}>{x.name}</label>
                         </div>

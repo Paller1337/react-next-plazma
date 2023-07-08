@@ -8,6 +8,7 @@ import { BnovoContext } from './bnovo/bnovoContext'
 interface AppLayoutProps {
     children: React.ReactNode
     asPath: string
+    pageProps: any
 }
 
 export default function AppLayout(props: AppLayoutProps) {
@@ -15,20 +16,23 @@ export default function AppLayout(props: AppLayoutProps) {
     const [headerBlack, setHeaderBlack] = useState(false)
     const { setBnovoIframeIsLoad, setBnovoIsLoad } = useContext(BnovoContext)
 
+    const meals = props.asPath.includes('meals') &&
+        !props.asPath.includes('rest') &&
+        !props.asPath.includes('smash') &&
+        !props.asPath.includes('tent') &&
+        !props.asPath.includes('hall')
+
     useEffect(() => {
-        // console.log(props.asPath)
-        switch (props.asPath) {
-            case '/meals':
-                setHeaderBlack(true)
-                break
-            case '/booking':
-                setHeaderBlack(true)
-                break
-            default:
-                setHeaderBlack(false)
-                break
+        console.log(props.asPath)
+        if (
+            meals ||
+            props.asPath.includes('booking')
+        ) {
+            setHeaderBlack(true)
+        } else {
+            setHeaderBlack(false)
         }
-    }, [props.asPath])
+    }, [props.asPath, props.pageProps])
     return (<>
 
         <div className='wrapper' data-barba="wrapper">

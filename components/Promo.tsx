@@ -125,7 +125,7 @@ export default function Promo(props: PromoProps) {
                                 {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
                                 {previewSrc ?
                                     <Image src={previewSrc} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
-                                        placeholder='blur'
+                                        placeholder='blur' priority
                                     ></Image>
                                     : ''
                                 }
