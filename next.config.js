@@ -32,9 +32,9 @@ module.exports = {
 
     // output: 'standalone',
 
-    experimental: {
-        outputStandalone: true,
-    },
+    // experimental: {
+    //     outputStandalone: true,
+    // },
     i18n: {
         locales: ['ru'],
         defaultLocale: 'ru',

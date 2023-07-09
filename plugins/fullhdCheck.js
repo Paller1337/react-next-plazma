@@ -3,8 +3,12 @@ async function fullhdCheck() {
     const fs = await import('fs');
     const path = await import('path');
 
-    const inputDir = 'public/opt-img';  // замените на вашу директорию
-    const outputDir = 'public/img';  // замените на вашу директорию
+
+    
+    //Проверка на разрешение (пропорциональное уменьшение) #2
+
+    const inputDir = 'public/compressed-img';  // замените на вашу директорию
+    const outputDir = 'public/resized-img';  // замените на вашу директорию
 
     function isImageFile(file) {
         const ext = path.extname(file);

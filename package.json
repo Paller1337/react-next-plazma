@@ -6,8 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "img": "node plugins/imagemin.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "imgMin": "node plugins/optImages.js",
+    "imgWebp": "node plugins/toWebp.js",
+    "imgResize": "node plugins/fullhdCheck.js",
+    "imgPreviews": "node plugins/genPreview.js"
   },
   "dependencies": {
     "@barba/core": "^2.9.7",

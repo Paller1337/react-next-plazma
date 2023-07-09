@@ -33,18 +33,12 @@ export default function PageActiveLeisure() {
     const mobileObjects =
         <div id='SportsObjects' className='column-cards--wrapper container'>
             <Swiper
-                modules={[FreeMode, Pagination]}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-
-                slidesPerView={slidesInPreview}
-                spaceBetween={20}
-            // freeMode={true}
-            // pagination={{
-            //     clickable: true,
-            //     type: 'progressbar',
-            // }}
-            // centeredSlidesBounds
+                // modules={[FreeMode, Pagination]}
+                // onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                
+                // slidesPerView={slidesInPreview}
+                // spaceBetween={20}
             >
                 <SwiperSlide>
                     <ColumnCard

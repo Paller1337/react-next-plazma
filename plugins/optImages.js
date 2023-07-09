@@ -2,9 +2,10 @@ async function optimizeImages() {
     const fs = await import('fs');
     const path = await import('path');
 
+    //Оптимизация изобрображение (компрессия) #1
 
-    const input = 'public/_to-opt'; // замените на вашу директорию
-    const output = 'public/_webp-to'; // замените на вашу директорию
+    const input = 'public/no-optimize-img'; // замените на вашу директорию
+    const output = 'public/compressed-img'; // замените на вашу директорию
 
 
     // функция определения является ли файл изображением

@@ -35,7 +35,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "plugins/imagemin.js"
+    "plugins/__imagemin.js"
   ],
   "exclude": [
     "node_modules"

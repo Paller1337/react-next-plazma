@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import { Navigation, Pagination, A11y } from 'swiper/modules'
+
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface ColumnCardProps {
@@ -35,16 +36,18 @@ export default function ColumnCard(props: ColumnCardProps) {
         <div className={`column-card ${props.inSlider ? 'slider-card' : ''}`}>
             <div ref={containerRef} className='column-card__img'>
                 <Swiper
-                    modules={[Pagination]}
-                    pagination={{
-                        clickable: true,
-                        type: 'bullets',
-                    }}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    width={swiperWidth}
+                    // spaceBetween={0}
+                    // slidesPerView={1}
+
+                    // modules={[Pagination]}
+                    // pagination={{
+                    //     clickable: true,
+                    //     type: 'bullets',
+                    // }}
+
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
+                    // width={swiperWidth}
                 >
                     {props.img.length > 0 ? props.img.map(x =>
                         <SwiperSlide key={'col-img-' + x.src}>
