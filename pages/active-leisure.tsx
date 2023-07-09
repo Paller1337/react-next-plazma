@@ -7,12 +7,123 @@ import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { isMobile, MobileView, BrowserView } from 'react-device-detect'
+import { FreeMode, Pagination } from 'swiper/modules'
 // import { images } from 'imageImports'
 
 
 
 
 export default function PageActiveLeisure() {
+    const [slideWidth, setSlideWidth] = useState(0)
+    const [slidesInPreview, setSlidesInPreview] = useState(1.2)
+    const [objectsContent, setObjectsContent] = useState<JSX.Element>()
+
+    useEffect(() => {
+        if (window) {
+            console.log(window.innerWidth)
+            setSlideWidth(window.innerWidth)
+            if (window.innerWidth < 428) setSlidesInPreview(1.1)
+            if (window.innerWidth >= 768) setSlidesInPreview(2.2)
+        }
+    }, [])
+
+
+    const mobileObjects =
+        <div id='SportsObjects' className='column-cards--wrapper container'>
+            <Swiper
+                modules={[FreeMode, Pagination]}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+
+                slidesPerView={slidesInPreview}
+                spaceBetween={20}
+            // freeMode={true}
+            // pagination={{
+            //     clickable: true,
+            //     type: 'progressbar',
+            // }}
+            // centeredSlidesBounds
+            >
+                <SwiperSlide>
+                    <ColumnCard
+                        title='площадка с резиновым покрытием'
+                        desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
+                                            баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
+                                            экологичность. Идеально подходит для детей и взрослых.`}
+                        img={[{ h: 770, w: 570, src: '/img/active-leisure/col-1.webp' }]}
+                        inSlider
+                    />
+
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ColumnCard
+                        title='игровая площадка для детей'
+                        desc={`Безопасная игровая площадка с разными развлечениями 
+                                            для детей. Качественное оборудование, способствующее активности 
+                                            и творчеству. Там создается дружба и хорошее настроение`}
+                        img={[{ h: 770, w: 570, src: '/img/active-leisure/col-2.webp' }]}
+                        inSlider
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ColumnCard
+                        title='площадка для пляжных видов спорта'
+                        desc={`Отличное место для пляжного волейбола, футбола и других активных 
+                                            игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
+                                            или просто повесилиться с друзьями.`}
+                        img={[{ h: 770, w: 570, src: '/img/active-leisure/col-3.webp' }]}
+                        inSlider
+                    />
+                </SwiperSlide>
+            </Swiper>
+        </div>
+
+    const desktopObjects =
+        <div id='SportsObjects' className='column-cards--wrapper container'>
+            <ColumnCard
+                title='площадка с резиновым покрытием'
+                desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
+                                баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
+                                экологичность. Идеально подходит для детей и взрослых.`}
+                img={[
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1.webp' },
+                ]}
+
+            />
+
+            <ColumnCard
+                title='игровая площадка для детей'
+                desc={`Безопасная игровая площадка с разными развлечениями 
+                                для детей. Качественное оборудование, способствующее активности 
+                                и творчеству. Там создается дружба и хорошее настроение`}
+                img={[
+                    { h: 770, w: 570, src: '/img/active-leisure/col-2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-2.webp' },
+                ]}
+            />
+
+            <ColumnCard
+                title='площадка для пляжных видов спорта'
+                desc={`Отличное место для пляжного волейбола, футбола и других активных 
+                                игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
+                                или просто повесилиться с друзьями.`}
+                img={[
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3.webp' },
+                ]}
+            />
+        </div>
+
+    useEffect(() => {
+        if (isMobile) setObjectsContent(mobileObjects)
+        else setObjectsContent(desktopObjects)
+    }, [])
 
     return (
         <>
@@ -77,36 +188,9 @@ export default function PageActiveLeisure() {
 
 
 
-                    <div id='SportsObjects' className='column-cards--wrapper container'>
 
-                        <ColumnCard
-                            title='площадка с резиновым покрытием'
-                            desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
-                            баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
-                            экологичность. Идеально подходит для детей и взрослых.`}
-                            // img={{ h: 770, w: 570, src: images.activeLeisure.imgcol1Png }}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-1.webp' }}
+                    {objectsContent}
 
-                        />
-
-                        <ColumnCard
-                            title='игровая площадка для детей'
-                            desc={`Безопасная игровая площадка с разными развлечениями 
-                            для детей. Качественное оборудование, способствующее активности 
-                            и творчеству. Там создается дружба и хорошее настроение`}
-                            // img={{ h: 770, w: 570, src: images.activeLeisure.imgcol2Png }}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-2.webp' }}
-                        />
-
-                        <ColumnCard
-                            title='площадка для пляжных видов спорта'
-                            desc={`Отличное место для пляжного волейбола, футбола и других активных 
-                            игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
-                            или просто повесилиться с друзьями.`}
-                            // img={{ h: 770, w: 570, src: images.activeLeisure.imgcol3Png }}
-                            img={{ h: 770, w: 570, src: '/img/active-leisure/col-3.webp' }}
-                        />
-                    </div>
 
                     <div className='row-cards--wrapper container'>
 
@@ -142,7 +226,7 @@ export default function PageActiveLeisure() {
                 </div >
 
                 {/* <Footer /> */}
-            </main>
+            </main >
 
         </>
 

@@ -1,10 +1,12 @@
 // import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
 import Button from './Button'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 
 import svgVk from '/public/svg/vk.svg'
+
 interface HeaderProps {
     darken?: boolean
 }
@@ -48,6 +50,9 @@ export default function Header(props: HeaderProps) {
     const [burgerIsOpen, setBurgerIsOpen] = useState(false)
     const router = useRouter()
 
+    const tel = '+7 (930) 897-77-01'
+    const [telNum, setTelNum] = useState(tel)
+
     const menuOpen = (status: boolean) => {
         const HTMLItem = document.getElementsByTagName('html')[0]
 
@@ -59,44 +64,15 @@ export default function Header(props: HeaderProps) {
             setBurgerIsOpen(false)
         }
     }
-    // if (openIcon) {
-    //     const menuBody = document.querySelector('.c-menu');
-    //     const jsMenu = document.querySelector('.js-menu');
-    //     const veilMenu = document.querySelector('.menu-veil');
-    //     let isOpen = false;
-    //     openIcon.addEventListener("click", function (e) {
-    //         document.body.classList.toggle('is_lock');
-    //         // openIcon.classList.toggle('_active');
-    //         // jsMenu.classList.toggle('_active');
-
-    //         HTMLItem.classList.add('burger-opened')
-    //         // menuBody.style.display = 'flex';
-    //         if (isOpen) {
 
 
-    //             // setTimeout(function() {
-    //             //     menuBody.classList.add('_active');
-    //             // }, 5000);
-    //             isOpen = true;
-    //         }
-    //     });
-    // }
-    // if (closeIcon) {
-    //     const menuBody = document.querySelector('.c-menu');
-    //     const jsMenu = document.querySelector('.js-menu');
-    //     const veilMenu = document.querySelector('.menu-veil');
-
-    //     closeIcon.addEventListener("click", function (e) {
-    //         jsMenu.classList.remove('_active');
-    //         menuBody.classList.remove('_active');
-    //         veilMenu.classList.remove('is-enter')
-    //         HTMLItem.classList.remove('burger-opened')
-
-    //         document.body.classList.remove('is_lock');
-    //         // menuBody.style.display = 'none';
-    //     })
-    // }
-
+    const copyNumber = async (x: string) => {
+        
+        await navigator.clipboard.writeText('+79308977701')
+        setTelNum('Скопировано')
+        const timeout = setTimeout(() => setTelNum(tel), 2000)
+        return () => clearTimeout(timeout)
+    }
 
     return <>
         <div className={`c-menu js-menu ${burgerIsOpen ? '_active' : ''}`}>
@@ -108,7 +84,7 @@ export default function Header(props: HeaderProps) {
                 <div className='c-menu__logo'>
                     <Link href={'/'}>
                         <object data='/svg/dark-logo.svg' type='image/svg+xml'>
-                            <img src='/img/dark-logo.svg' alt='logo' />
+                            <Image width={64} height={64} src='/img/dark-logo.svg' alt='' />
                         </object>
                     </Link>
                 </div>
@@ -165,14 +141,18 @@ export default function Header(props: HeaderProps) {
                                 <object className='icon' data='/svg/phone.svg' type='image/svg+xml'>
                                     {/* <img src='/img/new-logo.svg' alt='' /> */}
                                 </object>
-                                {/* <a href='tel:' /> */}
+                                <a className='popover pop-right'
+                                    // href='tel: +790000000'
+                                    popover-data={telNum}
+                                    onClick={() => copyNumber('+7 (900) 900-00-00')}
+                                />
                             </span>
                         </div>
 
                         <Link className='menu__logo' href='/'>
                             <span style={{ display: 'block' }}>
                                 <object data='/svg/new-logo.svg' type='image/svg+xml'>
-                                    <img src='/img/new-logo.svg' alt='' />
+                                    <Image width={64} height={64} src='/img/new-logo.svg' alt='' />
                                 </object>
                             </span>
                         </Link>

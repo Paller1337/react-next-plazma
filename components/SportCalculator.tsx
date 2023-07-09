@@ -65,6 +65,9 @@ export default function SportCalculator(props: SportCalculatorProps) {
                         duration: 3000,
                         style: {
                             fontSize: 15,
+                            borderRadius: 0,
+                            border: '1px solid #393939',
+                            padding: '12px 18px'
                         }
                     });
                 } else {
@@ -73,6 +76,9 @@ export default function SportCalculator(props: SportCalculatorProps) {
                         duration: 3000,
                         style: {
                             fontSize: 15,
+                            borderRadius: 0,
+                            border: '1px solid #393939',
+                            padding: '12px 18px'
                         }
                     });
                 }

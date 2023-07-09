@@ -160,19 +160,19 @@ export default function PageSportsCamps() {
                         <ColumnCard
                             title='Делюкс на набережной'
                             // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
-                            img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/1.webp' }}
+                            img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/1.webp' }]}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 1 этаж'
                             // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img2Jpg }}
-                            img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/2.webp' }}
+                            img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/2.webp' }]}
                         />
 
                         <ColumnCard
                             title='Спортивный копрус - 2 этаж'
                             // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
-                            img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }}
+                            img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }]}
                         />
                     </div>
 

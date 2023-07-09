@@ -51,7 +51,7 @@ export const MailSubscribe = forwardRef((_props, ref) => {
                 <ColumnCard
                     title='Спортивный копрус - 2 этаж'
                     // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
-                    img={{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }}
+                    img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }]}
                 />
             </div>
         </MobileModal>

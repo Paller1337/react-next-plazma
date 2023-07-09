@@ -1,4 +1,6 @@
 import '../styles/style.sass'
+import 'swiper/css'
+import 'swiper/css/bundle'
 
 import type { AppProps } from 'next/app'
 import React, { ReactDOM, RefObject, useContext, useEffect, useRef, useState } from 'react'

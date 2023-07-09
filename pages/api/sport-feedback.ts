@@ -35,7 +35,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
         await send('max.paller@yandex.ru')
-        await send('max@kplazma.ru')
+        // await send('max@kplazma.ru')
+        // await send('dnd@kplazma.ru')
+        // await send('nastya@kplazma.ru')
 
         return res.status(200).json({ status: 'Сообщение отправлено!' });
     } catch (error) {
