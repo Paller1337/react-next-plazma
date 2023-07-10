@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import Link from 'next/link'
 // import { images } from 'imageImports'
 
 export default function PageTent() {
@@ -43,7 +44,7 @@ export default function PageTent() {
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
                     {/* <Promo imgUrl={images.backgrounds.imgtentJpg} /> */}
-                    
+
                     <Promo image='tent' />
 
                     <div className='base-bg' data-scroll-section></div>
@@ -59,7 +60,11 @@ export default function PageTent() {
                                 наш летний шатер-ресторан позволит насладиться приятными моментами на свежем воздухе в уютной обстановке.
                             </span>
 
-                            <div className='btn btn_black big-p__btn'>Наше меню</div>
+                            <Link className='btn btn_black big-p__btn'
+                                href={'https://disk.yandex.ru/i/V4BQnEX5aGscyw'}
+                                target='_blank' rel='noopener noreferrer'>
+                                Наше меню
+                            </Link>
                         </div>
 
 

@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import Link from 'next/link'
 // import { images } from 'imageImports'
 
 export default function PageRestaurant() {
@@ -54,7 +55,11 @@ export default function PageRestaurant() {
                                 Ресторан оформлен в темных коричневых тонах, предлагая укрыться от солнца летом и насладиться уютной обстановкой с камином зимой.
                             </span>
 
-                            <div className='btn btn_black big-p__btn'>Наше меню</div>
+                            <Link className='btn btn_black big-p__btn'
+                                href={'https://disk.yandex.ru/i/V4BQnEX5aGscyw'}
+                                target='_blank' rel='noopener noreferrer'>
+                                Наше меню
+                            </Link>
                         </div>
 
 

@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import Link from 'next/link'
 // import { images } from 'imageImports'
 
 export default function PageBanquetHall() {
@@ -61,7 +62,11 @@ export default function PageBanquetHall() {
 
                             </span>
 
-                            <div className='btn btn_black big-p__btn'>Наше меню</div>
+                            <Link className='btn btn_black big-p__btn'
+                                href={'https://disk.yandex.ru/i/qb6G8jtChJMmCA'}
+                                target='_blank' rel='noopener noreferrer'>
+                                Наше меню
+                            </Link>
                         </div>
 
 
