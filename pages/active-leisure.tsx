@@ -16,37 +16,57 @@ import { FreeMode, Pagination } from 'swiper/modules'
 
 
 export default function PageActiveLeisure() {
-    const [slideWidth, setSlideWidth] = useState(0)
-    const [slidesInPreview, setSlidesInPreview] = useState(1.2)
     const [objectsContent, setObjectsContent] = useState<JSX.Element>()
-
-    useEffect(() => {
-        if (window) {
-            console.log(window.innerWidth)
-            setSlideWidth(window.innerWidth)
-            if (window.innerWidth < 428) setSlidesInPreview(1.1)
-            if (window.innerWidth >= 768) setSlidesInPreview(2.2)
-        }
-    }, [])
+    const colCardRef = useRef(null)
 
 
     const mobileObjects =
-        <div id='SportsObjects' className='column-cards--wrapper container'>
+        <div id='SportsObjects' className='column-cards--wrapper container --swiper-container'>
             <Swiper
-                // modules={[FreeMode, Pagination]}
-                // onSlideChange={() => console.log('slide change')}
-                // onSwiper={(swiper) => console.log(swiper)}
-                
-                // slidesPerView={slidesInPreview}
-                // spaceBetween={20}
+
+                {...({
+                    modules: [FreeMode, Pagination],
+                    // slidesPerView: slidesInPreview,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        1: {
+                            slidesPerView: 1.1,
+                            centeredSlides: false,
+                            enabled: true
+                        },
+                        420: {
+                            slidesPerView: 1.2,
+                            enabled: true
+                        },
+                        768: {
+                            slidesPerView: 2.2,
+                            centeredSlides: true,
+                            enabled: true
+                        },
+                        1100: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                            initialSlide: 2,
+                            enabled: false,
+                            onchange: (swiper) => swiper.update()
+                        },
+                    },
+
+                } as any)}
             >
                 <SwiperSlide>
                     <ColumnCard
+                        ref={colCardRef}
                         title='площадка с резиновым покрытием'
                         desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
                                             баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                                             экологичность. Идеально подходит для детей и взрослых.`}
-                        img={[{ h: 770, w: 570, src: '/img/active-leisure/col-1.webp' }]}
+                        img={[
+                            { h: 770, w: 570, src: '/img/active-leisure/col-1/1.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-1/2.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-1/3.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-1/4.webp' },
+                        ]}
                         inSlider
                     />
 
@@ -57,7 +77,11 @@ export default function PageActiveLeisure() {
                         desc={`Безопасная игровая площадка с разными развлечениями 
                                             для детей. Качественное оборудование, способствующее активности 
                                             и творчеству. Там создается дружба и хорошее настроение`}
-                        img={[{ h: 770, w: 570, src: '/img/active-leisure/col-2.webp' }]}
+                        img={[
+                            { h: 770, w: 570, src: '/img/active-leisure/col-2/1.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-2/2.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-2/3.webp' },
+                        ]}
                         inSlider
                     />
                 </SwiperSlide>
@@ -67,7 +91,11 @@ export default function PageActiveLeisure() {
                         desc={`Отличное место для пляжного волейбола, футбола и других активных 
                                             игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
                                             или просто повесилиться с друзьями.`}
-                        img={[{ h: 770, w: 570, src: '/img/active-leisure/col-3.webp' }]}
+                        img={[
+                            { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-3/3.webp' },
+                        ]}
                         inSlider
                     />
                 </SwiperSlide>

@@ -150,7 +150,7 @@ export default function PageHotel(props: PageHotelProps) {
                             /> */}
                         </div>
                     </div>
-
+{/* 
                     <div className='page-hotel__faq hotel-faq' data-scroll-section>
                         <span className='hotel-faq__title' data-scroll>Вопросы и ответы</span>
 
@@ -201,8 +201,7 @@ export default function PageHotel(props: PageHotelProps) {
                                 </div>
                             </div>
 
-
-                            {/* <div id='hotelFAQHandle' className='hotel-faq__item faq-item'>
+                            <div id='hotelFAQHandle' className='hotel-faq__item faq-item'>
                                 <div className='faq-item__question'>
                                     <span className='faq-item__icon'>В</span>
                                     <span className='faq-item__text'>
@@ -246,11 +245,11 @@ export default function PageHotel(props: PageHotelProps) {
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
 
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div >
             </main>

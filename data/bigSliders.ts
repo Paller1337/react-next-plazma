@@ -61,6 +61,8 @@ export const slidersData = [
             '/img/saunas/white-night/2.webp',
             '/img/saunas/white-night/3.webp',
             '/img/saunas/white-night/4.webp',
+            '/img/saunas/white-night/5.webp',
+            '/img/saunas/white-night/6.webp',
         ]
     },
     
@@ -71,6 +73,9 @@ export const slidersData = [
             '/img/saunas/night-1001/2.webp',
             '/img/saunas/night-1001/3.webp',
             '/img/saunas/night-1001/4.webp',
+            '/img/saunas/night-1001/5.webp',
+            '/img/saunas/night-1001/6.webp',
+            '/img/saunas/night-1001/7.webp',
         ]
     },
     

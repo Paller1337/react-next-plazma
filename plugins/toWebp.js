@@ -6,7 +6,7 @@ async function convertToWebP() {
     //Конвертация в WebP (опционально) #3
 
     const input = 'public/resized-img';  
-    const output = 'public/1img';  
+    const output = 'public/img';  
 
     function isImageFile(file) {
         const ext = path.extname(file);

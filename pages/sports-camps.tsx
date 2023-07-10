@@ -13,6 +13,8 @@ import InputText from '../components/form/InputText'
 import InputSelect from '../components/form/InputSelect'
 import InputRadio from '../components/form/InputRadio'
 import SportCalculator from '../components/SportCalculator'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode, Pagination } from 'swiper/modules'
 // import { images } from 'imageImports'
 
 
@@ -156,7 +158,76 @@ export default function PageSportsCamps() {
                         style={{ paddingBottom: 0, paddingTop: '220px' }}
                     />
 
-                    <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
+                    <div className='column-cards--wrapper container --swiper-container' style={{ paddingTop: 0 }}>
+                        <Swiper
+                            {...({
+                                modules: [FreeMode, Pagination],
+                                // slidesPerView: slidesInPreview,
+                                spaceBetween: 20,
+                                breakpoints: {
+                                    1: {
+                                        slidesPerView: 1.1,
+                                        centeredSlides: false,
+                                        enabled: true
+                                    },
+                                    420: {
+                                        slidesPerView: 1.2,
+                                        enabled: true
+                                    },
+                                    768: {
+                                        slidesPerView: 2.2,
+                                        centeredSlides: true,
+                                        enabled: true
+                                    },
+                                    1100: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                        initialSlide: 2,
+                                        enabled: false,
+                                        onchange: (swiper) => swiper.update()
+                                    },
+                                },
+
+                            } as any)}
+                        >
+                            <SwiperSlide>
+                                <ColumnCard
+                                    title='Делюкс на набережной'
+                                    img={[
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-1/1.webp' },
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-1/2.webp' },
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-1/3.webp' },
+                                    ]}
+                                    inSlider
+                                />
+
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ColumnCard
+                                    title='Евростандарт на набережной'
+                                    img={[
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-2/1.webp' },
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-2/2.webp' },
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-2/3.webp' },
+                                    ]}
+                                    inSlider
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <ColumnCard
+                                    title='Спортивный копрус - 2 этаж'
+                                    img={[
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-3/1.webp' },
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-3/2.webp' },
+                                        { h: 770, w: 570, src: '/img/sports-camps/rooms/col-3/3.webp' },
+                                    ]}
+                                    inSlider
+                                />
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+
+                    {/* <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
                         <ColumnCard
                             title='Делюкс на набережной'
                             // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
@@ -174,7 +245,7 @@ export default function PageSportsCamps() {
                             // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
                             img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }]}
                         />
-                    </div>
+                    </div> */}
 
 
                     <div className='page-sports-camps__calculate container'>

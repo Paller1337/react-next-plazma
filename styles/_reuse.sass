@@ -780,6 +780,7 @@
 
 .popover
     position: relative
+    cursor: pointer
     &:hover
         &::before
             opacity: 1
@@ -808,7 +809,6 @@
         opacity: 0
         text-align: center
         visibility: hidden
-        // filter: invert(1)
         transition: all .32s ease-in-out
 
     &.pop-right
@@ -822,6 +822,8 @@
             left: 50%
             bottom: 120%
             transform: translateX(-50%)
+            @media screen and ( max-width: $md3)
+                display: none
 
 object
     .pl-label
@@ -982,6 +984,9 @@ object
             padding-right: 10vw
             justify-content: flex-start
             padding-bottom: 30px
+            @media screen and ( max-width: $md3 )
+                padding-left: 5vw
+                padding-right: 5vw
 
         &::after, &::before
             position: absolute
@@ -1145,3 +1150,8 @@ object
     outline: 1px solid #2c2c2c57
 .swiper-pagination-progressbar-fill
     background: #262626 !important
+
+.--swiper-container
+    @media screen and ( max-width: $md1 )
+        max-width: 100%
+        padding: 0

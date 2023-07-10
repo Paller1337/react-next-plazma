@@ -1,7 +1,11 @@
+
+//Создание превьюшек изобрображений
+
 async function generatePreview() {
     const sharp = await import('sharp');
     const fs = await import('fs');
     const path = await import('path');
+
 
     const input = 'public/img';  // замените на вашу директорию
     const output = 'public/img-previews';  // замените на вашу директорию

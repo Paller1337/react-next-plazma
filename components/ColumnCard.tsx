@@ -1,11 +1,12 @@
 import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { LegacyRef, useEffect, useRef, useState } from 'react'
 
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface ColumnCardProps {
+    ref?: LegacyRef<HTMLDivElement>
     img: ColumnCardImageProps[]
     title?: string
     desc?: string
@@ -29,25 +30,41 @@ export default function ColumnCard(props: ColumnCardProps) {
         if (containerRef.current) {
             const container = containerRef.current as HTMLElement
             setSwiperWidth(container.clientWidth)
+
+
+            const observer = new ResizeObserver((entries) => {
+                entries.forEach((entry) => {
+                    const width = entry.contentRect.width
+                    setSwiperWidth(width)
+                })
+            })
+
+            observer.observe(container);
+
+            return () => {
+                if (container) {
+                    observer.unobserve(container);
+                }
+            }
         }
     }, [containerRef.current])
 
     return (<>
-        <div className={`column-card ${props.inSlider ? 'slider-card' : ''}`}>
+        <div ref={props.ref} className={`column-card ${props.inSlider ? 'slider-card' : ''}`}>
             <div ref={containerRef} className='column-card__img'>
                 <Swiper
-                    // spaceBetween={0}
-                    // slidesPerView={1}
-
-                    // modules={[Pagination]}
-                    // pagination={{
-                    //     clickable: true,
-                    //     type: 'bullets',
-                    // }}
-
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
-                    // width={swiperWidth}
+                    {...({
+                        spaceBetween: 0,
+                        slidesPerView: 1,
+                        modules: [Pagination],
+                        pagination: {
+                            clickable: true,
+                            type: 'bullets',
+                        },
+                        onSlideChange: () => console.log('slide change'),
+                        onSwiper: (swiper) => console.log(swiper),
+                        width: swiperWidth,
+                    } as any)}
                 >
                     {props.img.length > 0 ? props.img.map(x =>
                         <SwiperSlide key={'col-img-' + x.src}>
