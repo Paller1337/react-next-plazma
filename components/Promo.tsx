@@ -132,7 +132,9 @@ export default function Promo(props: PromoProps) {
                                     placeholder='blur'
                                     priority
                                     loading='eager'
-
+                                    quality={90}
+                                    // fill
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
                                 />
                                 : ''
                             }

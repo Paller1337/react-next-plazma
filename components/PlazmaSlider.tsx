@@ -72,6 +72,8 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
                             // placeholder='blur'
                             loading="lazy"
+                            quality={90}
+                            sizes="(max-width: 768px) 60vw, (max-width: 1200px) 70vw, 100vw"
                         />
                     </div>
                 ))}

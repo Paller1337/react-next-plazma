@@ -98,6 +98,8 @@ export default function RoomObject(data: RoomObjectProps) {
                                     <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
                                         // placeholder='blur'
                                         loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
                                     />
                                 </div >
                             )}
@@ -113,7 +115,11 @@ export default function RoomObject(data: RoomObjectProps) {
                                 className={`hotel-room__slide ${currentSlide === i ? 'current' : ''}`}
                                 onClick={() => goSlide(i)}>
 
-                                <Image src={x} height={60} width={80} alt={'Plazma гостиница'} />
+                                <Image src={x} height={60} width={80} alt={'Plazma гостиница'} 
+                                loading="lazy"
+                                quality={90}
+                                sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
+                                />
 
                             </div>
                         )}
