@@ -67,8 +67,17 @@ export default function PromoMin(props: PromoMinProps) {
                         <>
                             {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
                             {previewSrc ?
-                                <Image src={previewSrc} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
-                                    placeholder='blur' priority
+                                <Image
+                                    src={previewSrc}
+                                    width={defaultImg.width}
+                                    height={defaultImg.height}
+                                    alt='Plazma'
+                                    placeholder='blur'
+                                    
+                                    priority
+                                    loading='eager'
+                                    quality={90}
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
                                 ></Image>
                                 : ''
                             }

@@ -14,6 +14,7 @@ import saunas from '@/images/backgrounds/hotel-saunas.webp'
 import smash from '@/images/backgrounds/hotel-smash.webp'
 import hotel from '@/images/backgrounds/hotel-welcome.webp'
 import tent from '@/images/backgrounds/tent.webp'
+import { Rings } from 'react-loader-spinner';
 
 type PromoImage = 'active-leisure' | 'banquet-hall' | 'aquatory' | 'events' |
     'rest' | 'saunas' | 'smash' | 'hotel' | 'sports-camp' | 'tent'
@@ -24,9 +25,21 @@ interface PromoProps {
     image?: PromoImage
 }
 
+// import Video from './Video';
+
 const Video = dynamic(() => import('./Video'), {
     ssr: false,
-    loading: () => <p>Loading...</p>
+    loading: () =>
+        <Rings
+            height="80"
+            width="80"
+            color="#262626"
+            radius="6"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            ariaLabel="rings-loading"
+        />
 })
 
 export default function Promo(props: PromoProps) {
@@ -107,18 +120,21 @@ export default function Promo(props: PromoProps) {
             <div className="main__video-wrapper">
                 <div className="main__video-box">
                     {props.video ?
-                        // <video className="main__video" muted loop autoPlay playsInline>
+                        <Video className='main__video'
+                            muted
+                            loop
+                            autoPlay
+                            // playsInline
+                            src={{
+                                webm: '/video/bg.mp4',
+                                mp4: '/video/bgvideo.webm',
+                            }} />
+
+                        //     <video className="main__video" muted loop autoPlay playsInline>
                         //     <source src="/video/bg.mp4" type="video/mp4" />
                         //     <source src="/video/bgvideo.webm" type="video/webm" />
                         //     Your browser does not support the video tag.
-                        // </video> 
-                        <>
-                        </>
-                        // <Video className='main__video' muted loop autoPlay playsInline
-                        //     src={{
-                        //         webm: '/video/bg.mp4',
-                        //         mp4: '/video/bgvideo.webm',
-                        //     }} />
+                        // </video>
                         :
 
                         <>
@@ -130,10 +146,10 @@ export default function Promo(props: PromoProps) {
                                     height={defaultImg.height}
                                     alt='Plazma'
                                     placeholder='blur'
+
                                     priority
                                     loading='eager'
                                     quality={90}
-                                    // fill
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
                                 />
                                 : ''

@@ -10,6 +10,7 @@ import Promo from '../components/Promo'
 // import { images } from 'imageImports'
 import React, { Suspense, lazy, useEffect, useMemo } from 'react'
 import BlockLoader from '@/components/BlockLoader'
+import { Rings } from 'react-loader-spinner'
 
 const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -59,7 +60,18 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
 
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={
+                            <Rings
+                                height="80"
+                                width="80"
+                                color="#262626"
+                                radius="6"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                                visible={true}
+                                ariaLabel="rings-loading"
+                            />
+                        }>
                             <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
                         </Suspense>
 
@@ -83,7 +95,18 @@ export default function PageHotel(props: PageHotelProps) {
                             {rooms.map(x =>
                                 <Suspense
                                     key={'sus-room-' + x.id.toString()}
-                                    fallback={<div>Loading...</div>}>
+                                    fallback={
+                                        <Rings
+                                            height="80"
+                                            width="80"
+                                            color="#262626"
+                                            radius="6"
+                                            wrapperStyle={{}}
+                                            wrapperClass=""
+                                            visible={true}
+                                            ariaLabel="rings-loading"
+                                        />
+                                    }>
 
                                     <RoomObject
                                         key={'room-' + x.id.toString()}
