@@ -74,8 +74,8 @@ export default function Header(props: HeaderProps) {
         return () => clearTimeout(timeout)
     }
 
-    // return <>
-    // </>
+    return <>
+    </>
 
     return <>
         <div className={`c-menu js-menu ${burgerIsOpen ? '_active' : ''}`}>

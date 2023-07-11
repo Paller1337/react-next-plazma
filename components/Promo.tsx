@@ -106,38 +106,37 @@ export default function Promo(props: PromoProps) {
             {/* <Header /> */}
             <div className="main__video-wrapper">
                 <div className="main__video-box">
-                    <Suspense>
-                        {props.video ?
-                            // <video className="main__video" muted loop autoPlay playsInline>
-                            //     <source src="/video/bg.mp4" type="video/mp4" />
-                            //     <source src="/video/bgvideo.webm" type="video/webm" />
-                            //     Your browser does not support the video tag.
-                            // </video> 
+                    {props.video ?
+                        // <video className="main__video" muted loop autoPlay playsInline>
+                        //     <source src="/video/bg.mp4" type="video/mp4" />
+                        //     <source src="/video/bgvideo.webm" type="video/webm" />
+                        //     Your browser does not support the video tag.
+                        // </video> 
+                        <>
+                        </>
+                        // <Video className='main__video' muted loop autoPlay playsInline
+                        //     src={{
+                        //         webm: '/video/bg.mp4',
+                        //         mp4: '/video/bgvideo.webm',
+                        //     }} />
+                        :
 
-                            <Video className='main__video' muted loop autoPlay playsInline
-                                src={{
-                                    webm: '/video/bg.mp4',
-                                    mp4: '/video/bgvideo.webm',
-                                }} />
-                            :
+                        <>
+                            {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
+                            {/* {previewSrc ?
+                                <Image
+                                    src={previewSrc}
+                                    width={defaultImg.width}
+                                    height={defaultImg.height}
+                                    alt='Plazma'
+                                    placeholder='blur'
+                                    priority
 
-                            <>
-                                {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
-                                {previewSrc ?
-                                    <Image
-                                        src={previewSrc}
-                                        width={defaultImg.width}
-                                        height={defaultImg.height}
-                                        alt='Plazma'
-                                        placeholder='blur'
-                                        priority
-                                        
-                                    />
-                                    : ''
-                                }
-                            </>
-                        }
-                    </Suspense>
+                                />
+                                : ''
+                            } */}
+                        </>
+                    }
 
 
                     <div className='main__video-overlay'></div>
