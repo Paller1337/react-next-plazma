@@ -56,7 +56,7 @@ export default function PageHotel(props: PageHotelProps) {
                     <div id='HotelPlacement' className='page-hotel__placement hotel-placement' data-scroll-section>
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
-                        <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
+                        {/* <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' /> */}
 
                         <span className='text' data-scroll>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и
