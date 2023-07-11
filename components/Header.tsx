@@ -144,7 +144,7 @@ export default function Header(props: HeaderProps) {
                                 <object className='icon' data='/svg/phone.svg' type='image/svg+xml'>
                                     {/* <img src='/img/new-logo.svg' alt='' /> */}
                                 </object>
-                                <a className='popover pop-right'
+                                <div className='popover pop-right'
                                     // href='tel: +790000000'
                                     popover-data={telNum}
                                     onClick={() => copyNumber('+7 (900) 900-00-00')}

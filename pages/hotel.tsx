@@ -75,7 +75,7 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
                         <div className='hotel-rooms__content' data-scroll>
-                            {/* {rooms.map(x =>
+                            {rooms.map(x =>
                                 <Suspense
                                     key={'sus-room-' + x.id.toString()}
                                     fallback={<div>Loading...</div>}>
@@ -92,7 +92,7 @@ export default function PageHotel(props: PageHotelProps) {
                                         amenities={x.amenities}
                                     />
                                 </Suspense>
-                            )} */}
+                            )}
                         </div>
                     </div>
                     {/* 
