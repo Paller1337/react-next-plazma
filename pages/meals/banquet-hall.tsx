@@ -63,9 +63,9 @@ export default function PageBanquetHall() {
                             </span>
 
                             <Link className='btn btn_black big-p__btn'
-                                href={'https://disk.yandex.ru/i/qb6G8jtChJMmCA'}
+                                href={'https://disk.yandex.ru/i/O15H5bA_ZSwh1A'}
                                 target='_blank' rel='noopener noreferrer'>
-                                Наше меню
+                                Банкетное меню
                             </Link>
                         </div>
 
