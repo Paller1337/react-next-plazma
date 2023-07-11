@@ -4,16 +4,16 @@ export const slidersData = [
     {
         name: 'hotelPromoSlider',
         images: [
-            '/img/hotel/promo-slides/1.webp',
-            '/img/hotel/promo-slides/2.webp',
-            '/img/hotel/promo-slides/3.webp',
-            '/img/hotel/promo-slides/4.webp',
-            '/img/hotel/promo-slides/5.webp',
-            '/img/hotel/promo-slides/6.webp',
-            '/img/hotel/promo-slides/7.webp',
-            '/img/hotel/promo-slides/8.webp',
-            '/img/hotel/promo-slides/9.webp',
-            '/img/hotel/promo-slides/10.webp',
+            '/img-previews/hotel/promo-slides/1.webp',
+            '/img-previews/hotel/promo-slides/2.webp',
+            '/img-previews/hotel/promo-slides/3.webp',
+            '/img-previews/hotel/promo-slides/4.webp',
+            '/img-previews/hotel/promo-slides/5.webp',
+            '/img-previews/hotel/promo-slides/6.webp',
+            '/img-previews/hotel/promo-slides/7.webp',
+            '/img-previews/hotel/promo-slides/8.webp',
+            '/img-previews/hotel/promo-slides/9.webp',
+            '/img-previews/hotel/promo-slides/10.webp',
         ]
     },
     
