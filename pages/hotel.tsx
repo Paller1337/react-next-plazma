@@ -75,7 +75,7 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
 
                         <div className='hotel-rooms__content' data-scroll>
-                            {rooms.map(x =>
+                            {/* {rooms.map(x =>
                                 <Suspense
                                     key={'sus-room-' + x.id.toString()}
                                     fallback={<div>Loading...</div>}>
@@ -92,67 +92,7 @@ export default function PageHotel(props: PageHotelProps) {
                                         amenities={x.amenities}
                                     />
                                 </Suspense>
-                            )}
-
-                            {/* <RoomObject
-                                id={rooms[0].id}
-                                title={rooms[0].title}
-                                description={rooms[0].description}
-                                size={rooms[0].size}
-                                images={rooms[0].images}
-                                attributes={rooms[0].attributes}
-                                amenities={rooms[0].amenities}
-                            />
-
-                            <RoomObject
-                                id={rooms[1].id}
-                                title={rooms[1].title}
-                                description={rooms[1].description}
-                                size={rooms[1].size}
-                                images={rooms[1].images}
-                                attributes={rooms[1].attributes}
-                                amenities={rooms[1].amenities}
-                            />
-
-                            <RoomObject
-                                id={rooms[2].id}
-                                title={rooms[2].title}
-                                description={rooms[2].description}
-                                size={rooms[2].size}
-                                images={rooms[2].images}
-                                attributes={rooms[2].attributes}
-                                amenities={rooms[2].amenities}
-                            />
-
-                            <RoomObject
-                                id={rooms[3].id}
-                                title={rooms[3].title}
-                                description={rooms[3].description}
-                                size={rooms[3].size}
-                                images={rooms[3].images}
-                                attributes={rooms[3].attributes}
-                                amenities={rooms[3].amenities}
-                            />
-
-                            <RoomObject
-                                id={rooms[4].id}
-                                title={rooms[4].title}
-                                description={rooms[4].description}
-                                size={rooms[4].size}
-                                images={rooms[4].images}
-                                attributes={rooms[4].attributes}
-                                amenities={rooms[4].amenities}
-                            />
-
-                            <RoomObject
-                                id={rooms[5].id}
-                                title={rooms[5].title}
-                                description={rooms[5].description}
-                                size={rooms[5].size}
-                                images={rooms[5].images}
-                                attributes={rooms[5].attributes}
-                                amenities={rooms[5].amenities}
-                            /> */}
+                            )} */}
                         </div>
                     </div>
                     {/* 
