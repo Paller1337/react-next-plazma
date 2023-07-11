@@ -38,14 +38,14 @@ export default function Promo(props: PromoProps) {
     }
 
     useEffect(() => {
-        switch(props.image){
+        switch (props.image) {
             // case 'active-leisure':
             //     setPreviewSrc(activeLeisure)
             //     break
             case 'aquatory':
                 setPreviewSrc(aquatory)
                 break
-            case 'banquet-hall': 
+            case 'banquet-hall':
                 setPreviewSrc(banquetHall)
                 break
             // case 'events':
@@ -70,7 +70,7 @@ export default function Promo(props: PromoProps) {
                 setPreviewSrc(tent)
                 break
             default: setPreviewSrc('')
-            
+
         }
     }, [props.image])
 
@@ -124,9 +124,15 @@ export default function Promo(props: PromoProps) {
                             <>
                                 {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
                                 {previewSrc ?
-                                    <Image src={previewSrc} width={defaultImg.width} height={defaultImg.height} alt='Plazma'
-                                        placeholder='blur' priority
-                                    ></Image>
+                                    <Image
+                                        src={previewSrc}
+                                        width={defaultImg.width}
+                                        height={defaultImg.height}
+                                        alt='Plazma'
+                                        placeholder='blur'
+                                        priority
+                                        
+                                    />
                                     : ''
                                 }
                             </>

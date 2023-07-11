@@ -67,12 +67,15 @@ export default function Header(props: HeaderProps) {
 
 
     const copyNumber = async (x: string) => {
-        
+
         await navigator.clipboard.writeText('+79308977701')
         setTelNum('Скопировано')
         const timeout = setTimeout(() => setTelNum(tel), 2000)
         return () => clearTimeout(timeout)
     }
+
+    // return <>
+    // </>
 
     return <>
         <div className={`c-menu js-menu ${burgerIsOpen ? '_active' : ''}`}>

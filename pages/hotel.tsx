@@ -3,15 +3,15 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { hotelRooms } from '../data/hotelRooms'
-import RoomObject, { RoomObjectProps } from '../components/objects/RoomObject'
+import { RoomObjectProps } from '../components/objects/RoomObject'
 import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
 // import { images } from 'imageImports'
-import { Suspense, lazy, useEffect, useMemo } from 'react'
+import React, { Suspense, lazy, useEffect, useMemo } from 'react'
 import BlockLoader from '@/components/BlockLoader'
 
-// const RoomObject = lazy(() => import('../components/objects/RoomObject'))
+const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 
 interface PageHotelProps {
     rooms: RoomObjectProps[]
@@ -76,17 +76,22 @@ export default function PageHotel(props: PageHotelProps) {
 
                         <div className='hotel-rooms__content' data-scroll>
                             {rooms.map(x =>
-                                <RoomObject
-                                    key={'room-' + x.id.toString()}
-                                    id={x.id}
-                                    title={x.title}
-                                    description={x.description}
-                                    size={x.size}
-                                    images={x.images}
-                                    previews={x.previews}
-                                    attributes={x.attributes}
-                                    amenities={x.amenities}
-                                />
+                                <Suspense
+                                    key={'sus-room-' + x.id.toString()}
+                                    fallback={<div>Loading...</div>}>
+
+                                    <RoomObject
+                                        key={'room-' + x.id.toString()}
+                                        id={x.id}
+                                        title={x.title}
+                                        description={x.description}
+                                        size={x.size}
+                                        images={x.images}
+                                        previews={x.previews}
+                                        attributes={x.attributes}
+                                        amenities={x.amenities}
+                                    />
+                                </Suspense>
                             )}
 
                             {/* <RoomObject
@@ -150,7 +155,7 @@ export default function PageHotel(props: PageHotelProps) {
                             /> */}
                         </div>
                     </div>
-{/* 
+                    {/* 
                     <div className='page-hotel__faq hotel-faq' data-scroll-section>
                         <span className='hotel-faq__title' data-scroll>Вопросы и ответы</span>
 
