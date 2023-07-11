@@ -41,7 +41,7 @@ export default function AppLayout(props: AppLayoutProps) {
             <Footer />
         </div >
 
-        {/* <Script
+        <Script
             src='https://widget.reservationsteps.ru/js/bnovo.js'
             strategy='lazyOnload'
             onLoad={() => setBnovoIsLoad(true)}
@@ -50,6 +50,6 @@ export default function AppLayout(props: AppLayoutProps) {
             src='https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js'
             strategy='lazyOnload'
             onLoad={() => setBnovoIframeIsLoad(true)}
-        /> */}
+        />
     </>)
 }
