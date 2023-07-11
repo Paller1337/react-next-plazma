@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { hotelRooms } from '../data/hotelRooms'
 import { RoomObjectProps } from '../components/objects/RoomObject'
-import PlazmaSlider from '../components/PlazmaSlider'
+// import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
 // import { images } from 'imageImports'
@@ -12,6 +12,8 @@ import React, { Suspense, lazy, useEffect, useMemo } from 'react'
 import BlockLoader from '@/components/BlockLoader'
 
 const RoomObject = lazy(() => import('../components/objects/RoomObject'))
+const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
+
 
 interface PageHotelProps {
     rooms: RoomObjectProps[]
@@ -56,7 +58,10 @@ export default function PageHotel(props: PageHotelProps) {
                     <div id='HotelPlacement' className='page-hotel__placement hotel-placement' data-scroll-section>
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
-                        {/* <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' /> */}
+
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
+                        </Suspense>
 
                         <span className='text' data-scroll>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и

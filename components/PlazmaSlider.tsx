@@ -71,6 +71,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         onClick={() => setActiveSlide(index)}>
                         <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
                             // placeholder='blur'
+                            loading="lazy"
                         />
                     </div>
                 ))}

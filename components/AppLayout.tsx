@@ -43,7 +43,7 @@ export default function AppLayout(props: AppLayoutProps) {
 
         <Script
             src='https://widget.reservationsteps.ru/js/bnovo.js'
-            strategy='lazyOnload'
+            strategy='afterInteractive'
             onLoad={() => setBnovoIsLoad(true)}
         />
         <Script

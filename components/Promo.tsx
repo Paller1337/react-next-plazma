@@ -123,7 +123,7 @@ export default function Promo(props: PromoProps) {
 
                         <>
                             {/* <div className={`main__welcome-bg ${props.bg}`}></div> */}
-                            {/* {previewSrc ?
+                            {previewSrc ?
                                 <Image
                                     src={previewSrc}
                                     width={defaultImg.width}
@@ -131,10 +131,11 @@ export default function Promo(props: PromoProps) {
                                     alt='Plazma'
                                     placeholder='blur'
                                     priority
+                                    loading='eager'
 
                                 />
                                 : ''
-                            } */}
+                            }
                         </>
                     }
 
