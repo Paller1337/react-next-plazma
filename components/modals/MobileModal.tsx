@@ -56,6 +56,7 @@ export default function MobileModal(props: MobileModalProps) {
     }, [props.calculate])
 
     useEffect(() => {
+        console.log('display change')
         if (window && document !== null) {
             const htmlElement = document.getElementsByTagName('html')[0]
             const nextElement = document.getElementById('__next') as HTMLElement
@@ -163,6 +164,7 @@ export default function MobileModal(props: MobileModalProps) {
         setOpenState(false)
         setWrapState(false)
         setPosition(100)
+        console.log('close')
         //Это для того, чтобы модалка скрывалась после того, как завершится transition
         if (modalContent.current) {
             const modContent = modalContent.current as HTMLElement
@@ -171,6 +173,7 @@ export default function MobileModal(props: MobileModalProps) {
                     props.onClose()
                     setPosition(50)
                     setPreviousPosition(50)
+                    setModalDisplay(false)
                 }
             })
             return () => {
@@ -179,6 +182,7 @@ export default function MobileModal(props: MobileModalProps) {
                         props.onClose()
                         setPosition(50)
                         setPreviousPosition(50)
+                        setModalDisplay(false)
                     }
                 })
             }
@@ -251,7 +255,7 @@ export default function MobileModal(props: MobileModalProps) {
                                         {props.title}
                                     </span>
                                     <div className='close'
-                                        onTouchEnd={(e) => { e.stopPropagation(); close() }}
+                                        onClick={(e) => { e.stopPropagation(); close() }}
                                     >
                                         {/* <KLIcon fa={'close'} iconHeight={'m'} /> */}
                                         X

@@ -3,6 +3,9 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 're
 import MobileModal from './MobileModal'
 import Router, { useRouter } from 'next/router'
 import ColumnCard from '../ColumnCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode, Pagination } from 'swiper/modules'
+import InputText from '../form/InputText'
 
 
 
@@ -47,12 +50,15 @@ export const MailSubscribe = forwardRef((_props, ref) => {
             calculate={modalIsCalculate}
             callBack={modalUpdate}
         >
-            <div className='mobile-modal--input' ref={input}>
-                <ColumnCard
-                    title='Спортивный копрус - 2 этаж'
-                    // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
-                    img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }]}
+            <div className='mobile-modal--input modal_mail-subscribe' ref={input}>
+                <span className='modal__text'>
+                    Подпишитесь на рассылку для того, чтобы всегда оставаться в курсе наших
+                    специальных предложений, бонусных и скидочных программ.
+                </span>
+                <InputText
+                    placeholder='Введите Email'
                 />
+                <div className='btn btn_dark'>Подписаться</div>
             </div>
         </MobileModal>
     )

@@ -79,8 +79,8 @@ export default function PageBooking() {
                             </span>
                         </div>
                     </div>
-                    {/* <TouchSlider />
-                    <div className='btn btn_dark' onClick={() => mailModalRef.current?.openModal()}>Txt</div> */}
+                    {/* <TouchSlider /> */}
+                    {/* <div className='btn btn_dark' onClick={() => mailModalRef.current?.openModal()}>Txt</div> */}
                     <div className='base-bg' data-scroll-section></div>
                 </div >
                 {/* <Footer /> */}
