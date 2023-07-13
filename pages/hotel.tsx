@@ -15,6 +15,14 @@ import { Rings } from 'react-loader-spinner'
 const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
 
+export async function getStaticProps() {
+    return {
+        props: {
+            rooms: hotelRooms,
+        },
+    };
+}
+
 
 interface PageHotelProps {
     rooms: RoomObjectProps[]
@@ -22,7 +30,8 @@ interface PageHotelProps {
 
 export default function PageHotel(props: PageHotelProps) {
 
-    const rooms = useMemo(() => hotelRooms.map(x => x), [])
+    // const rooms = useMemo(() => hotelRooms.map(x => x), [])
+    const rooms = props.rooms
     // const rooms = hotelRooms
     useEffect(() => console.log('render'), [rooms])
 
