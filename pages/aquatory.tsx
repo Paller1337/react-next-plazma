@@ -146,6 +146,38 @@ export default function PageAquatory() {
                         </picture>
                     </div>
 
+
+                    <div id='AquatoryPrice' className='page-aquatory__price reverse container' data-scroll-section>
+                        <div className='worktime-section'>
+                            <div className='aquatory-worktime__heading'>
+                                <span className='title'>Правила посещения акватории</span>
+                            </div>
+
+                            <div className='worktime-section__timetable rules-section'>
+                                <div className='worktime-section__timetable-content'>
+                                    <div className='worktime-section__timetable-row'>
+                                        <ul>
+                                            <li className='page-aquatory__list-item'>Приглашать диджеев, музыкантов гостям строго запрещено!</li>
+                                            <li className='page-aquatory__list-item'>Запрещено использование личной музыкальной аппаратуры.</li>
+                                            <li className='page-aquatory__list-item'>На всей территории Парк-отеля фото и видеосъёмка с
+                                                дальнейшим использованием материалов в коммерческих целях запрещена!</li>
+                                            <li className='page-aquatory__list-item'>Купание в водоёме лицам до 18 лет без сопровождения взрослых запрещено!</li>
+                                            <li className='page-aquatory__list-item'>Вход на территорию в состоянии алкогольного опьянения запрещен.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <picture className='page-aquatory__price-img vert'>
+                            <Image className='vert' width={470} height={700} src={'/img/aquatory/5-1.webp'} alt='' />
+                        </picture>
+
+                        <picture className='page-aquatory__price-img hor'>
+                            <Image className='hor' width={1170} height={700} src={'/img/aquatory/5-2.webp'} alt='' />
+                        </picture>
+                    </div>
+
                     <div className='page-aquatory__props aquatory-props container separator-after' data-scroll-section>
                         <div className='aquatory-props__first'>
                             <div className='page-aquatory__list'>

@@ -732,6 +732,18 @@
         flex-direction: column
         gap: 35px
         transition: all .3s ease-in-out
+
+        &.rules-section
+            padding: 30px 20px 30px 40px
+            ul
+                display: flex
+                flex-direction: column
+                gap: 20px
+            li
+                line-height: 150%
+            @media screen and ( max-width:  $md3)
+                padding: 20px 20px 20px 30px
+
         @media screen and ( max-width:  $md2)
             max-width: calc( 100% )
             margin: 0 auto
