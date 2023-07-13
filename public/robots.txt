@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: https://app.kplazma.ru/sitemap.xml
+Host: https://app.kplazma.ru
+
+Disallow: /404
