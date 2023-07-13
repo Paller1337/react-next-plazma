@@ -32,8 +32,6 @@ export default function PageHotel(props: PageHotelProps) {
 
     // const rooms = useMemo(() => hotelRooms.map(x => x), [])
     const rooms = props.rooms
-    // const rooms = hotelRooms
-    useEffect(() => console.log('render'), [rooms])
 
     return (
         <>
