@@ -27,7 +27,6 @@ export default function SaunaObject(data: SaunaObjectProps) {
         });
     }
     return (<>
-        <Toaster />
         <div key={data.id.toString()} id={data.id} className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
             <div className='big-p big-p_border-top container'>
                 <span className='big-p__title'>{data.name}</span>

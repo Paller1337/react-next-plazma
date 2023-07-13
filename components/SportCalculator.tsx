@@ -87,7 +87,6 @@ export default function SportCalculator(props: SportCalculatorProps) {
             })
     }
     return (<>
-        <Toaster />
         <div className='sport-calculator'>
             <InputRange name='p' label='Количество спортсменов' min={0} max={50} type='range'
                 onChange={(e) => setP(parseInt(e.target.value))}

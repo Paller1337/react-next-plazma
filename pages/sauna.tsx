@@ -40,17 +40,16 @@ export default function PageSauna() {
 
                     {/* <Promo imgUrl={images.backgrounds.imghotelSaunasPng} bg='welcome-saunas' /> */}
 
-                    <Promo image='saunas' bg='welcome-saunas' />
+                    <Promo image='saunas' bg='welcome-saunas'
+                        btnGroup={{ text: 'Уточнить наличие свободных бань или забронировать', callbackBtn: true }}
+                    />
 
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-saunas__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>Сауна «PLAZMA»</span>
-                        <span className='text'>
-                            Добро пожаловать в наш парк-отель, где время замедляется, а умиротворение становится вашим
-                            верным спутником. Всегда было так, что именно в саунах и банях люди находили путь к полному
-                            расслаблению и восстановлению души и тела.
-                        </span>
+                        {/* <span className='text'>
+                        </span> */}
                         <span className='text'>
                             Мы приглашаем вас в наш парк-отель, где каждый посетитель является гостем, а каждая сауна и баня
                             - уголком покоя и гармонии. Будьте готовы окунуться в исцеляющую атмосферу, которая наполнит вас

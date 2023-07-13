@@ -54,7 +54,7 @@ export default function PromoMin(props: PromoMinProps) {
                             <source src="video/bgvideo.mp4" type="video/mp4">
                         </video> --> */}
                     <div className={`main__welcome-bg ${props.bg}`}></div>
-                    <div className='main__video-overlay'></div>
+                    <div className={`main__video-overlay ${props.video ? '' : 'not-video'}`}></div>
 
 
                     {props.video ?

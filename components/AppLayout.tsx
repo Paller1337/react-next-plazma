@@ -4,6 +4,7 @@ import Header from './Header'
 import { useContext, useEffect, useState } from 'react'
 import Script from 'next/script'
 import { BnovoContext } from './bnovo/bnovoContext'
+import { Toaster } from 'react-hot-toast'
 
 interface AppLayoutProps {
     children: React.ReactNode
@@ -36,12 +37,13 @@ export default function AppLayout(props: AppLayoutProps) {
     return (<>
 
         <div className='wrapper' data-barba="wrapper">
+            <Toaster />
             <Header darken={headerBlack} />
             {props.children}
             <Footer />
         </div >
 
-        {/* <Script
+        <Script
             src='https://widget.reservationsteps.ru/js/bnovo.js'
             strategy='afterInteractive'
             onLoad={() => setBnovoIsLoad(true)}
@@ -50,6 +52,6 @@ export default function AppLayout(props: AppLayoutProps) {
             src='https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js'
             strategy='lazyOnload'
             onLoad={() => setBnovoIframeIsLoad(true)}
-        /> */}
+        />
     </>)
 }

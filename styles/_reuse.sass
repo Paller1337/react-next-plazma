@@ -90,7 +90,7 @@
     text-align: center
     @media screen and ( max-width: $md3 )
         font-size: 20px
-        
+
     &-bold
         font-weight: 400
         color: #262626
@@ -821,6 +821,19 @@
             top: 50%
             transform: translateY(-50%)
             filter: invert(1)
+
+    &.pop-bottom
+        &::before
+            left: 50%
+            top: 120%
+            transform: translateX(-50%)
+            filter: invert(1)
+        &.btn_white
+            // background: #ffffff27
+            &::before
+                background: #fff
+                filter: invert(0)
+
     &.pop-top
         &::before
             left: 50%

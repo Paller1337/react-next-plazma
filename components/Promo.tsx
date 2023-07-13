@@ -15,6 +15,8 @@ import smash from '@/images/backgrounds/hotel-smash.webp'
 import hotel from '@/images/backgrounds/hotel-welcome.webp'
 import tent from '@/images/backgrounds/tent.webp'
 import { Rings } from 'react-loader-spinner';
+import Link from 'next/link';
+import toast from 'react-hot-toast';
 
 type PromoImage = 'active-leisure' | 'banquet-hall' | 'aquatory' | 'events' |
     'rest' | 'saunas' | 'smash' | 'hotel' | 'sports-camp' | 'tent'
@@ -23,6 +25,11 @@ interface PromoProps {
     booking?: boolean
     video?: boolean
     image?: PromoImage
+    promoText?: string
+    btnGroup?: {
+        text?: string
+        callbackBtn?: boolean
+    }
 }
 
 // import Video from './Video';
@@ -48,6 +55,20 @@ export default function Promo(props: PromoProps) {
     const defaultImg = {
         width: 1920,
         height: 1056,
+    }
+
+    const copyNumber = (x: string) => {
+        navigator.clipboard.writeText(x)
+        toast.success('Номер скопирован', {
+            duration: 3000,
+            style: {
+                fontSize: 15,
+                borderRadius: 0,
+                border: '1px solid #393939',
+                padding: '12px 18px'
+            },
+            position: 'top-center'
+        });
     }
 
     useEffect(() => {
@@ -158,9 +179,14 @@ export default function Promo(props: PromoProps) {
                     }
 
 
-                    <div className='main__video-overlay'></div>
+                    <div className={`main__video-overlay ${props.video ? '' : 'not-video'}`}></div>
                 </div>
             </div>
+
+            {props.booking ?
+                <BookingPromo />
+                : ''}
+                
             <div className='main__promo-logo'>
                 <h1>
                     <span>парк-отель</span>
@@ -168,9 +194,28 @@ export default function Promo(props: PromoProps) {
                 </h1>
             </div>
 
-            {props.booking ?
-                <BookingPromo />
-                : ''}
+            {/* <div className='main__promo-text'>
+                <span>{props.promoText}</span>
+            </div> */}
+
+            <div className='main__promo-btn-group'>
+                {props.btnGroup?.text ?
+                    <div className='text-group'>
+                        <span className='text'>{props.btnGroup?.text}</span>
+                    </div>
+                    : <></>
+                }
+
+                <div className='btn-group'>
+                    {props.btnGroup?.callbackBtn ?
+                        <Link href='' className='btn btn_white popover pop-top'
+                            popover-data={'+7 (930) 897-77-01'}
+                            onClick={() => copyNumber('+79308977701')}
+                        >Позвонить</Link>
+                        : <></>
+                    }
+                </div>
+            </div>
         </div>
 
     </>)

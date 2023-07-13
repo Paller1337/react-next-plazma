@@ -225,10 +225,11 @@ body
             // transform: translateY(-30%)
             opacity: 1
             transition: all .32s ease-in-out
-            margin-bottom: 20vh
+            margin-bottom: 10vw
 
             @media (max-height: 630px)
-                opacity: 0
+                margin-bottom: 0
+                // opacity: 0
 
             @media (max-width: $md3)
                 transform: scale(.7)
@@ -245,6 +246,34 @@ body
                 span:first-child
                     font-weight: 400
                     font-size: 24px
+
+        &-text
+            color: #fff
+            font-size: 14px
+            text-align: center
+            line-height: 150%
+            padding: 0 24px
+
+        &-btn-group
+            display: flex
+            align-items: center
+            gap: 20px
+            flex-wrap: wrap
+            flex-direction: column
+            z-index: 100
+
+            .text-group
+                max-width: 600px
+                width: 80vw
+                display: flex
+                flex-direction: column
+                gap: 6px
+                .text
+                    color: #fff
+                    font-size: 16px
+                    line-height: 150%
+                    text-align: center
+                    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45)
 
         // &-actions
         //     display: flex
@@ -277,8 +306,23 @@ body
             overflow: hidden
             &.bnovo-target
                 max-height: 600px
-            @media screen and ( max-width:  $md2 )
-                max-width: calc( 100% - 24px )
+
+            @media screen and (max-width: $md3 )
+                & ~ .main__promo-logo
+                    margin-bottom: 20vh
+
+            @media screen and (max-width: $md4 )
+                & ~ .main__promo-logo
+                    opacity: 0
+            @media screen and (max-height: 655px)
+                & ~ .main__promo-logo
+                    margin-bottom: 30vh
+            @media screen and (max-height: 635px)
+                & ~ .main__promo-logo
+                    opacity: 0
+
+        @media screen and ( max-width:  $md2 )
+            max-width: calc( 100% - 24px )
 
     &__video-wrapper
         position: absolute
@@ -320,6 +364,9 @@ body
         height: 100%
         z-index: 2
         background: rgba(57, 57, 57, 0.5)
+        &.not-video
+            @media screen and ( max-width: $md3 )
+                backdrop-filter: blur(3px)
 
     &__welcome-bg
         background-size: cover
