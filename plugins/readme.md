@@ -8,3 +8,7 @@ npm run imgResize
 
 //Конвертация в WebP (опционально) #3
 npm run imgWebp
+
+
+//Конвертация в WebP (опционально) #4
+npm run imgPreviews
