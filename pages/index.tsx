@@ -50,6 +50,8 @@ export default function PageIndex(props: PageIndexProps) {
         <meta
           property='og:type'
           content='website' />
+          
+        <meta name="yandex-verification" content="ad1bbd813f73344a" />
       </Head>
 
       <main className='page page-index' data-barba="container" data-barba-namespace="home">
