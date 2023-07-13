@@ -18,6 +18,7 @@ import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import barba from '@barba/core';
 import AppLayout from '@/components/AppLayout'
 import Script from 'next/script'
+import { YMProvider } from '@/components/ym/YMProvider'
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -65,9 +66,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
       <BnovoLoadContextProvider>
-        <AppLayout asPath={router.asPath} pageProps={pageProps}>
-          <Component {...pageProps} />
-        </AppLayout>
+        <YMProvider counterId={94295952} options={{ trackLinks: true, clickmap: true }}>
+          <AppLayout asPath={router.asPath} pageProps={pageProps}>
+            <Component {...pageProps} />
+          </AppLayout>
+        </YMProvider>
       </BnovoLoadContextProvider>
     </>
   )
