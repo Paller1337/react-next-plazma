@@ -142,9 +142,8 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
         ],
         // attentionText: "Дети до 11 лет обязательно при сопровождении взрослого.",
         includedItems: [
-            "Большой мангал",
-            "2 больших деревянных стола с лавочками",
-            'Розетки'
+            "Мангал",
+            "Стол с двумя лавочками"
         ],
 
         includedImg: '/img/aquatory/gaz-mini-4.webp',

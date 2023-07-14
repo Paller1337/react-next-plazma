@@ -275,7 +275,7 @@ export const hotelRooms: RoomObjectProps[] = [
     {
         id: [16539, 16540],
         title: 'Коттедж',
-        description: 'Просторный номер класса "Люкс" с панорамным видом на море.',
+        description: `Уютный двухэтажный домик c гостинной, кухней и двумя спальнями. Во дворе мангал, стол, лавочки.`,
         images: [
             '/img/hotel/room-previews/cottage/1.webp',
             '/img/hotel/room-previews/cottage/2.webp',
@@ -314,7 +314,7 @@ export const hotelRooms: RoomObjectProps[] = [
     {
         id: 16538,
         title: 'Таунхаус',
-        description: 'Просторный номер класса "Люкс" с панорамным видом на море.',
+        description: 'Двухэтажные апартаменты. Возле каждого таунхауса – веранда с местами для отдыха на свежем воздухе и мангалом.',
         images: [
             '/img/hotel/room-previews/townhouse/1.webp',
             '/img/hotel/room-previews/townhouse/2.webp',
