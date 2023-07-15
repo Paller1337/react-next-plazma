@@ -4,7 +4,7 @@ import MobileModal from './MobileModal'
 import Router, { useRouter } from 'next/router'
 import ColumnCard from '../ColumnCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Pagination } from 'swiper/modules'
+import { FreeMode, Pagination } from 'swiper'
 import InputText from '../form/InputText'
 
 

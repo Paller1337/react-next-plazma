@@ -86,7 +86,7 @@ export default function Header(props: HeaderProps) {
                 </div>
                 <div className='c-menu__logo'>
                     <Link href={'/'}>
-                        <object data='/svg/dark-logo.svg' type='image/svg+xml'>
+                        <object data='/svg/dark-logo.svg' type='image/svg+xml' title='Главная'>
                             <Image width={64} height={64} src='/img/dark-logo.svg' alt='' />
                         </object>
                     </Link>
@@ -135,13 +135,13 @@ export default function Header(props: HeaderProps) {
                     <div className='menu__head'>
                         <div className='menu__action'>
                             <span className='menu__action-link'>
-                                <object className='icon' data='svg/vk.svg' type='image/svg+xml'>
+                                <object className='icon' data='svg/vk.svg' type='image/svg+xml' title='Мы ВКонтакте'>
                                     {/* <img src='/img/new-logo.svg' alt='' />  */}
                                 </object>
                                 <Link href='https://vk.com/park_hotel_plazma' />
                             </span>
                             <span className='menu__action-link'>
-                                <object className='icon' data='/svg/phone.svg' type='image/svg+xml'>
+                                <object className='icon' data='/svg/phone.svg' type='image/svg+xml' title='Наш номер'>
                                     {/* <img src='/img/new-logo.svg' alt='' /> */}
                                 </object>
                                 <div className='popover pop-right'
@@ -154,7 +154,7 @@ export default function Header(props: HeaderProps) {
 
                         <Link className='menu__logo' href='/'>
                             <span style={{ display: 'block' }}>
-                                <object data='/svg/new-logo.svg' type='image/svg+xml'>
+                                <object data='/svg/new-logo.svg' type='image/svg+xml' title='Главная'>
                                     <Image width={64} height={64} src='/img/new-logo.svg' alt='' />
                                 </object>
                             </span>

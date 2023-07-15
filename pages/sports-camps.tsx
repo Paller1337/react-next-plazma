@@ -14,7 +14,7 @@ import InputSelect from '../components/form/InputSelect'
 import InputRadio from '../components/form/InputRadio'
 import SportCalculator from '../components/SportCalculator'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Pagination } from 'swiper/modules'
+import { FreeMode, Pagination } from 'swiper'
 // import { images } from 'imageImports'
 
 

@@ -9,7 +9,7 @@ import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { isMobile, MobileView, BrowserView } from 'react-device-detect'
-import { FreeMode, Pagination } from 'swiper/modules'
+import { FreeMode, Pagination } from 'swiper'
 // import { images } from 'imageImports'
 
 

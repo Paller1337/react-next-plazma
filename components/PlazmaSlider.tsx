@@ -75,6 +75,8 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                             quality={90}
                             sizes="(max-width: 768px) 60vw, (max-width: 1200px) 70vw, 100vw"
                         />
+
+                        <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
                     </div>
                 ))}
                 <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma'

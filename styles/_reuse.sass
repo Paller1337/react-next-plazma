@@ -555,10 +555,10 @@
 
     @media screen and ( max-width:  $md1)
         align-items: center
+        margin-bottom: 100px !important
 
     @media screen and ( max-width:  $md2)
         padding-bottom: 30px !important
-        margin-bottom: 60px !important
 
     &.two-text-blocks
         flex-direction: row
@@ -642,6 +642,25 @@
             right: 50%
             transform: translateX(50%)
             bottom: -60px
+
+    &__btn-group
+        position: absolute
+        bottom: 0
+        right: 0
+        display: flex
+        gap: 20px
+        @media screen and ( max-width:  $md1)
+            right: 50%
+            transform: translateX(50%)
+            bottom: -60px
+            .btn
+                padding: 1.3rem 3rem
+                white-space: nowrap
+
+        @media screen and ( max-width:  $md4)
+            flex-direction: column
+            gap: 10px
+            bottom: -110px
 
     &_border
         &::after
@@ -732,6 +751,7 @@
         flex-direction: column
         gap: 35px
         transition: all .3s ease-in-out
+        background: #fff
 
         &.rules-section
             padding: 30px 20px 30px 40px

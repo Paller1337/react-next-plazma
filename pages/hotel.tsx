@@ -12,7 +12,9 @@ import React, { Suspense, lazy, useEffect, useMemo } from 'react'
 import BlockLoader from '@/components/BlockLoader'
 import { Rings } from 'react-loader-spinner'
 
-const RoomObject = lazy(() => import('../components/objects/RoomObject'))
+import RoomObject from '../components/objects/RoomObject'
+
+// const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
 
 export async function getStaticProps() {
@@ -100,20 +102,20 @@ export default function PageHotel(props: PageHotelProps) {
 
                         <div className='hotel-rooms__content' data-scroll>
                             {rooms.map(x =>
-                                <Suspense
-                                    key={'sus-room-' + x.id.toString()}
-                                    fallback={
-                                        <Rings
-                                            height="80"
-                                            width="80"
-                                            color="#262626"
-                                            radius="6"
-                                            wrapperStyle={{}}
-                                            wrapperClass=""
-                                            visible={true}
-                                            ariaLabel="rings-loading"
-                                        />
-                                    }>
+                                // <Suspense
+                                //     key={'sus-room-' + x.id.toString()}
+                                //     fallback={
+                                //         <Rings
+                                //             height="80"
+                                //             width="80"
+                                //             color="#262626"
+                                //             radius="6"
+                                //             wrapperStyle={{}}
+                                //             wrapperClass=""
+                                //             visible={true}
+                                //             ariaLabel="rings-loading"
+                                //         />
+                                //     }>
 
                                     <RoomObject
                                         key={'room-' + x.id.toString()}
@@ -126,7 +128,7 @@ export default function PageHotel(props: PageHotelProps) {
                                         attributes={x.attributes}
                                         amenities={x.amenities}
                                     />
-                                </Suspense>
+                                // </Suspense>
                             )}
                         </div>
                     </div>

@@ -86,7 +86,7 @@ export default function BookingPromo(props: any) {
         if (bnovoIsLoad && !bookingLoaded) {
             loadBnovo()
         }
-    }, [bnovoIsLoad]);
+    }, [bnovoIsLoad, bookingLoaded]);
 
 
     useEffect(() => {

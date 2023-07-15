@@ -3,6 +3,9 @@ import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
 import Image, { StaticImageData } from 'next/image'
 import BlockLoader from '../BlockLoader'
+import { Swiper, SwiperSlide } from 'swiper/react'
+// import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper/modules'
+import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper'
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
@@ -30,6 +33,8 @@ export default function RoomObject(data: RoomObjectProps) {
     const [galleryIsOpen, setGalleryIsOpen] = useState(false)
     const imageContentRef = useRef<HTMLDivElement>(null)
     const [translate, setTranslate] = useState(0)
+
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     const sliderWrapper = useRef(null)
 
@@ -81,16 +86,61 @@ export default function RoomObject(data: RoomObjectProps) {
     useEffect(() => console.log('roomId: ', data.id, 'key: ', data.id.toString()), [])
 
     return (<>
-        <GallerySlider
+        {/* <GallerySlider
             slides={images}
             startSlide={currentSlide}
             isOpen={galleryIsOpen}
             onClose={closeGallery}
-        />
+        /> */}
         {/* <Suspense fallback={() => <Loading />}> */}
         <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}>
-            <div className='hotel-room__preview'>
-                <div ref={sliderWrapper} className='hotel-room__image-wrapper'>
+            <div className='hotel-room__preview-swiper'>
+                <Swiper
+                    {...({
+                        modules: [Lazy, FreeMode, Pagination, Navigation, Thumbs],
+                        navigation: {
+                            enable: true
+                        },
+
+                        lazy: 'true',
+                        thumbs: { swiper: thumbsSwiper },
+
+                        spaceBetween: 20,
+                        // innerWidth: 1000,
+                        breakpoints: {
+                            1: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            991: {
+                                slidesPerView: 1,
+                                centeredSlides: false,
+                                spaceBetween: 20,
+                            },
+                            1100: {
+                                slidesPerView: 1,
+                                initialSlide: 1,
+                            },
+                        },
+
+                    } as any)}
+                >
+                    {previews && previews.map((image, i) =>
+                        <SwiperSlide key={image + '-swipe-item'}>
+                            <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
+                                <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
+                                    // placeholder='blur'
+                                    loading="lazy"
+                                    quality={90}
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                />
+                                {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
+                            </div >
+                        </SwiperSlide>
+                    )}
+                </Swiper>
+
+                {/* <div ref={sliderWrapper} className='hotel-room__image-wrapper'>
                     <div className='hotel-room__image-images'>
                         <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
                             {previews && previews.map((image, i) =>
@@ -107,24 +157,107 @@ export default function RoomObject(data: RoomObjectProps) {
                     </div>
                     <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
                     <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
-                </div>
-                {previews && previews.length > 1 ?
+                </div> */}
+
+                <Swiper
+                    // modules={[Lazy, FreeMode, Thumbs]}
+                    // watchSlidesProgress={true}
+                    // // lazy: 'true',
+
+                    // onSwiper={setThumbsSwiper}
+                    // spaceBetween={10}
+                    // slidesPerView={5}
+                    // freeMode={true}
+                    // // thumbs: {swiper: thumbsSwiper },
+
+                    // // breakpoints: {
+                    // //     1: {
+                    // //         slidesPerView: 1,
+                    // //         spaceBetween: 20,
+                    // //     },
+                    // //     991: {
+                    // //         slidesPerView: 1,
+                    // //         centeredSlides: false,
+                    // //         spaceBetween: 20,
+                    // //     },
+                    // //     1100: {
+                    // //         slidesPerView: 1,
+                    // //         initialSlide: 1,
+                    // //     },
+                    // // },
+                    // style={{
+                    //     marginTop: 10,
+                    // }}
+                    {...({
+                        modules: [Lazy, FreeMode, Thumbs],
+                        watchSlidesProgress: true,
+                        // lazy: 'true',
+
+                        onSwiper: setThumbsSwiper,
+                        spaceBetween: 10,
+                        slidesPerView: 5,
+                        freeMode: true,
+                        // thumbs: { swiper: thumbsSwiper },
+
+                        // breakpoints: {
+                        //     1: {
+                        //         slidesPerView: 1,
+                        //         spaceBetween: 20,
+                        //     },
+                        //     991: {
+                        //         slidesPerView: 1,
+                        //         centeredSlides: false,
+                        //         spaceBetween: 20,
+                        //     },
+                        //     1100: {
+                        //         slidesPerView: 1,
+                        //         initialSlide: 1,
+                        //     },
+                        // },
+                        style: {
+                            marginTop: 10,
+                        }
+                    } as any)}
+                >
+
+                    <div className='hotel-room__slides'>
+                        {previews && previews.map((image, i) =>
+                            <SwiperSlide key={image + '-swipe-item'}>
+                                <div key={i} className={`hotel-room__slide `}
+                                    onClick={() => setGalleryIsOpen(true)}>
+
+                                    <Image src={image} height={60} width={80} alt={'Plazma гостиница'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
+                                    />
+
+                                    {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
+                                </div >
+                            </SwiperSlide>
+                        )}
+                    </div>
+                </Swiper>
+
+                {/* {previews && previews.length > 1 ?
                     <div className='hotel-room__slides'>
                         {previews.map((x, i) =>
                             <div key={'img-min-' + data.id.toString() + i}
                                 className={`hotel-room__slide ${currentSlide === i ? 'current' : ''}`}
                                 onClick={() => goSlide(i)}>
 
-                                <Image src={x} height={60} width={80} alt={'Plazma гостиница'} 
-                                loading="lazy"
-                                quality={90}
-                                sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
+                                <Image src={x} height={60} width={80} alt={'Plazma гостиница'}
+                                    loading="lazy"
+                                    quality={90}
+                                    sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
                                 />
 
                             </div>
                         )}
                     </div>
-                    : ''}
+                    : ''} */}
+
+
             </div>
 
             <div className='hotel-room__info'>

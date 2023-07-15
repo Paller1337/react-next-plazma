@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
 import { LegacyRef, useEffect, useRef, useState } from 'react'
 
-import { Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface ColumnCardProps {

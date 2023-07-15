@@ -18,15 +18,21 @@ async function optimizeImages() {
         const imagemin = await import('imagemin');
         const imageminMozjpeg = await import('imagemin-mozjpeg');
         const imageminPngquant = await import('imagemin-pngquant');
-        await imagemin.default([filePath], {
-            destination: outputDirPath,
-            plugins: [
-                imageminMozjpeg.default({ quality: 80 }),
-                imageminPngquant.default({ quality: [0.6, 0.8] })
-            ]
-        });
 
-        console.log(`Optimized image: ${outputDirPath}`);
+        try {
+            await imagemin.default([filePath], {
+                destination: outputDirPath,
+                plugins: [
+                    imageminMozjpeg.default({ quality: 80 }),
+                    imageminPngquant.default({ quality: [0.6, 0.8] })
+                ]
+            });
+
+            console.log(`Optimized image: ${outputDirPath}`);
+        } catch (error) {
+            console.error(`Error optimizing image: ${outputDirPath}`);
+            console.error(error);
+        }
     }
 
     async function processFiles(dir) {
@@ -48,13 +54,19 @@ async function optimizeImages() {
                         fs.mkdirSync(outputDirPath, { recursive: true });
                     }
 
-                    optimizeImage(filePath, outputDirPath);
+                    
+                    try {
+                        optimizeImage(filePath, outputDirPath);
+                    } catch (error) {
+                        console.error(`Error optimizing image: ${outputFilePath}`);
+                        console.error(error);
+                    }
                 }
             }
         });
     }
 
-    
+
     processFiles(input, output);
 }
 

@@ -8,6 +8,9 @@ import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
 import PlazmaSertItem from '../components/PlazmaSertItem'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode, Navigation, Pagination } from 'swiper'
+
 // import { images } from 'imageImports'
 export default function PageAquatory() {
 
@@ -76,10 +79,51 @@ export default function PageAquatory() {
                                 </span>
                             </div>
 
-                            <picture className='img-big'>
-                                {/* <Image height={550} width={770} src={images.aquatory.img1Png} alt='' placeholder='blur' /> */}
+
+                            {/* <picture className='img-big'>
                                 <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt='' />
-                            </picture>
+                            </picture> */}
+
+                            <div className='img-big'>
+
+                                <Swiper
+                                    {...({
+                                        modules: [FreeMode, Pagination, Navigation],
+                                        navigation: {
+                                            enable: true
+                                        },
+                                        // slidesPerView: slidesInPreview,
+                                        spaceBetween: 20,
+                                        breakpoints: {
+                                            1: {
+                                                // centeredSlides: true,
+                                                slidesPerView: 1.2,
+                                                spaceBetween: 20,
+                                                
+                                            },
+                                            991: {
+                                                slidesPerView: 1,
+                                                centeredSlides: false,
+                                                spaceBetween: 20,
+                                            },
+                                            1100: {
+                                                slidesPerView: 1,
+                                                initialSlide: 1,
+                                                // enabled: false,
+                                                // onchange: (swiper) => swiper.update()
+                                            },
+                                        },
+
+                                    } as any)}
+                                >
+                                    <SwiperSlide>
+                                        <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt='' />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Image height={550} width={770} src={'/img/aquatory/1-2.webp'} alt='' />
+                                    </SwiperSlide>
+                                </Swiper>
+                            </div>
                         </div>
 
                         <div className='promo-info__bottom'>
