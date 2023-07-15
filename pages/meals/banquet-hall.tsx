@@ -76,7 +76,7 @@ export default function PageBanquetHall() {
                                 </Link>
 
                                 <Link className='btn btn_black'
-                                    href={'https://disk.yandex.ru/i/O15H5bA_ZSwh1A'}
+                                    href={'https://disk.yandex.ru/i/peP4mC-yM1HJqw'}
                                     target='_blank' rel='noopener noreferrer'>
                                     Меню ресторана
                                 </Link>
