@@ -110,9 +110,10 @@ export default function PageActiveLeisure() {
                                 баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                                 экологичность. Идеально подходит для детей и взрослых.`}
                 img={[
-                    { h: 770, w: 570, src: '/img/active-leisure/col-1.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-1.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1/1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1/2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1/3.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-1/4.webp' },
                 ]}
 
             />
@@ -123,9 +124,9 @@ export default function PageActiveLeisure() {
                                 для детей. Качественное оборудование, способствующее активности 
                                 и творчеству. Там создается дружба и хорошее настроение`}
                 img={[
-                    { h: 770, w: 570, src: '/img/active-leisure/col-2.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-2.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-2/1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-2/2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-2/3.webp' },
                 ]}
             />
 
@@ -135,9 +136,9 @@ export default function PageActiveLeisure() {
                                 игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
                                 или просто повесилиться с друзьями.`}
                 img={[
-                    { h: 770, w: 570, src: '/img/active-leisure/col-3.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-3.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-3.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3/3.webp' },
                 ]}
             />
         </div>
