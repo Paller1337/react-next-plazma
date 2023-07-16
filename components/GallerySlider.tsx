@@ -1,7 +1,8 @@
 import { StaticImageData } from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import { isDesktop, isMobile } from 'react-device-detect'
+// import { isDesktop, isMobile } from 'react-device-detect'
 import { createPortal } from 'react-dom'
+import { useDeviceDetect } from './hooks/useDeviceDetect'
 
 interface GallerySliderProps {
     isOpen?: boolean
@@ -16,6 +17,8 @@ export default function GallerySlider(props: GallerySliderProps) {
     const sliderOverlay = useRef<HTMLDivElement>(null)
     const pagRef = useRef(null)
 
+    const { isMobile, isDesktop } = useDeviceDetect()
+    
     const start = props.startSlide || 0
     const slides = props.slides
     const [currentSlide, setCurrentSlide] = useState(slides[start])

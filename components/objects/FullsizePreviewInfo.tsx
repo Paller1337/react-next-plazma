@@ -37,13 +37,13 @@ interface Images {
 // }
 
 const images: Images = {
-    1: '/img/index/previews/1.webp',
-    2: '/img/index/previews/2.webp',
-    3: '/img/index/previews/3.webp',
-    4: '/img/index/previews/4.webp',
-    5: '/img/index/previews/5.webp',
-    6: '/img/index/previews/6.webp',
-    7: '/img/index/previews/7.webp',
+    1: '/img/index/previews/x1200/1.webp',
+    2: '/img/index/previews/x1200/2.webp',
+    3: '/img/index/previews/x1200/3.webp',
+    4: '/img/index/previews/x1200/4.webp',
+    5: '/img/index/previews/x1200/5.webp',
+    6: '/img/index/previews/x1200/6.webp',
+    7: '/img/index/previews/x1200/7.webp',
 }
 
 export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
@@ -67,8 +67,11 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
                 <div className='preview-image__img-wrap'>
                     <picture className='preview-image__img' data-scroll data-scroll-speed="-4">
                         {props.image &&
-                            <Image height={960} width={960} className='js--mobile-parallax' src={images[props.image]} alt='Парк-отель Plazma'
-                                // placeholder='blur'
+                            <Image height={960} width={960}
+                                loading='lazy'
+                                className='js--mobile-parallax'
+                                src={images[props.image]}
+                                alt='Парк-отель Plazma'
                             />}
                     </picture>
                 </div>

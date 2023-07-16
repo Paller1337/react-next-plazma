@@ -8,8 +8,9 @@ import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { isMobile, MobileView, BrowserView } from 'react-device-detect'
+// import { isMobile, MobileView, BrowserView } from 'react-device-detect'
 import { FreeMode, Pagination } from 'swiper'
+import { useDeviceDetect } from '@/components/hooks/useDeviceDetect'
 // import { images } from 'imageImports'
 
 
@@ -19,6 +20,8 @@ export default function PageActiveLeisure() {
     const [objectsContent, setObjectsContent] = useState<JSX.Element>()
     const colCardRef = useRef(null)
 
+
+    const { isMobile, isDesktop } = useDeviceDetect()
 
     const mobileObjects =
         <div id='SportsObjects' className='column-cards--wrapper container --swiper-container'>
@@ -146,7 +149,7 @@ export default function PageActiveLeisure() {
     useEffect(() => {
         if (isMobile) setObjectsContent(mobileObjects)
         else setObjectsContent(desktopObjects)
-    }, [])
+    }, [isMobile])
 
     return (
         <>
