@@ -9,7 +9,7 @@ import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
 import PlazmaSertItem from '../components/PlazmaSertItem'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Navigation, Pagination } from 'swiper'
+import { FreeMode, Lazy, Navigation, Pagination } from 'swiper'
 
 // import { images } from 'imageImports'
 export default function PageAquatory() {
@@ -88,15 +88,14 @@ export default function PageAquatory() {
 
                                 <Swiper
                                     {...({
-                                        modules: [FreeMode, Pagination, Navigation],
+                                        modules: [Lazy, FreeMode, Pagination, Navigation],
                                         navigation: {
                                             enable: true
                                         },
-                                        // slidesPerView: slidesInPreview,
+                                        
                                         spaceBetween: 20,
                                         breakpoints: {
                                             1: {
-                                                // centeredSlides: true,
                                                 slidesPerView: 1.2,
                                                 spaceBetween: 20,
                                                 

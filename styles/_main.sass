@@ -261,7 +261,20 @@ body
             flex-wrap: wrap
             flex-direction: column
             z-index: 100
+            position: relative
 
+            &::before
+                content: ''
+                position: absolute
+                height: 150%
+                width: 150%
+                background: #262626
+                border-radius: 100%
+                z-index: -1
+                top: 50%
+                transform: translateY(-50%)
+                filter: blur(50px)
+                opacity: .5
             .text-group
                 max-width: 600px
                 width: 80vw

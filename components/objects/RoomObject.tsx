@@ -6,6 +6,7 @@ import BlockLoader from '../BlockLoader'
 import { Swiper, SwiperSlide } from 'swiper/react'
 // import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper/modules'
 import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper'
+import { useDeviceDetect } from '../hooks/useDeviceDetect'
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
@@ -27,6 +28,8 @@ export const Loading = () => {
 export default function RoomObject(data: RoomObjectProps) {
     const images = data.images
     const previews = data.previews
+
+    const { isMobile, isDesktop } = useDeviceDetect()
 
     const [amenitiesOpened, setAmenitiesOpened] = useState(false)
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -93,6 +96,7 @@ export default function RoomObject(data: RoomObjectProps) {
             onClose={closeGallery}
         /> */}
         {/* <Suspense fallback={() => <Loading />}> */}
+
         <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}>
             <div className='hotel-room__preview-swiper'>
                 <Swiper
@@ -101,12 +105,9 @@ export default function RoomObject(data: RoomObjectProps) {
                         navigation: {
                             enable: true
                         },
-
-                        lazy: 'true',
                         thumbs: { swiper: thumbsSwiper },
 
                         spaceBetween: 20,
-                        // innerWidth: 1000,
                         breakpoints: {
                             1: {
                                 slidesPerView: 1,
