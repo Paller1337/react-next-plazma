@@ -96,7 +96,7 @@ export default function PageAquatory() {
                                         spaceBetween: 20,
                                         breakpoints: {
                                             1: {
-                                                slidesPerView: 1.2,
+                                                slidesPerView: 1,
                                                 spaceBetween: 20,
                                                 
                                             },
