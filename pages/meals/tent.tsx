@@ -106,9 +106,9 @@ export default function PageTent() {
                     </div>
 
 
-                    <div className='footnote container' data-scroll-section>
+                    {/* <div className='footnote container' data-scroll-section>
                         <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.</div>
-                    </div>
+                    </div> */}
                 </div >
                 {/* <Footer /> */}
             </main>

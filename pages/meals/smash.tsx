@@ -96,7 +96,7 @@ export default function PageSmash() {
                                     <div className='worktime-section__timetable-row'>
                                         <span className='worktime-section__timetable-text'>Роллы и пицца:</span>
                                         <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>07:00 - 23:00</span>
+                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
                                     </div>
                                 </div>
                             </div>
