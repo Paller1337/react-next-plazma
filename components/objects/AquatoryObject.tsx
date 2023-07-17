@@ -36,13 +36,21 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
             <div className='aquatory-object__photos'>
                 {data.images.map((x, i) =>
                     <picture key={i} className='aquatory-object__img'>
-                    {/* <Image height={470} width={570} src={x} alt='' placeholder='blur' /> */}
+                        {/* <Image height={470} width={570} src={x} alt='' placeholder='blur' /> */}
                         <Image height={470} width={570} src={x} alt='' />
                     </picture>
                 )}
             </div>
 
             <div className='aquatory-object__price'>
+                {data.additionalText ?
+                    <div className='aquatory-object__attention'>
+                        <span className='text'>
+                            {data.additionalText}
+                        </span>
+                    </div>
+                    : ''}
+                    
                 <span className='text-normal'>Стоимость посещения</span>
 
                 <div className='price-card__wrapper'>
@@ -85,13 +93,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 </picture>
             </div>
 
-            {data.additionalText ?
-                <div className='aquatory-object__attention'>
-                    <span className='text'>
-                        {data.additionalText}
-                    </span>
-                </div>
-                : ''}
+
         </div >
     </>)
 }

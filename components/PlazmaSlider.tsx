@@ -1,13 +1,42 @@
 import { useState, useEffect, useRef } from 'react';
 import { slidersData } from '../data/bigSliders';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import { getBase64ImageUrl } from '../middleware/utils/getBlurData';
 import { v4 } from 'uuid';
+import { TailSpin } from 'react-loader-spinner';
 
 interface PlazmaSliderProps {
     data: string;
 }
 
+interface ImageWithPreloaderProps extends ImageProps {
+    preloaderColor?: string
+}
+function ImageWithPreloader(props: ImageWithPreloaderProps) {
+    const color = props.preloaderColor || '#262626'
+    const [isLoading, setIsLoading] = useState(true)
+    return (<>
+        <Image {...props as Omit<ImageWithPreloaderProps, 'preloaderColor'>}
+            onLoad={() => setIsLoading(false)}
+        />
+
+        {isLoading ?
+            <div className="preloader">
+                <TailSpin
+                    height="80"
+                    width="80"
+                    color={color}
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </div> :
+            <></>
+        }
+    </>)
+}
 
 export default function PlazmaSlider(props: PlazmaSliderProps) {
 
@@ -69,14 +98,13 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         key={index}
                         className={`plazma-slider__item ${index === currentIndex ? 'active' : ''}`}
                         onClick={() => setActiveSlide(index)}>
-                        <Image src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
-                            // placeholder='blur'
+
+                        <ImageWithPreloader
+                            src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
                             loading="lazy"
                             quality={90}
                             sizes="(max-width: 768px) 60vw, (max-width: 1200px) 70vw, 100vw"
                         />
-                        
-                        {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
                     </div>
                 ))}
                 <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma'

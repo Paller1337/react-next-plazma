@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { hotelRooms } from '../data/hotelRooms'
 import { RoomObjectProps } from '../components/objects/RoomObject'
-// import PlazmaSlider from '../components/PlazmaSlider'
+import PlazmaSlider from '../components/PlazmaSlider'
 import BookingPromo from '../components/bnovo/BookingPromo'
 import Promo from '../components/Promo'
 // import { images } from 'imageImports'
@@ -15,7 +15,7 @@ import { Rings } from 'react-loader-spinner'
 import RoomObject from '../components/objects/RoomObject'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
-const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
+// const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
 
 export async function getStaticProps() {
     return {
@@ -69,20 +69,8 @@ export default function PageHotel(props: PageHotelProps) {
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
 
-                        <Suspense fallback={
-                            <Rings
-                                height="80"
-                                width="80"
-                                color="#262626"
-                                radius="6"
-                                wrapperStyle={{}}
-                                wrapperClass=""
-                                visible={true}
-                                ariaLabel="rings-loading"
-                            />
-                        }>
-                            <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
-                        </Suspense>
+
+                        <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
 
                         <span className='text' data-scroll>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и
@@ -117,17 +105,17 @@ export default function PageHotel(props: PageHotelProps) {
                                 //         />
                                 //     }>
 
-                                    <RoomObject
-                                        key={'room-' + x.id.toString()}
-                                        id={x.id}
-                                        title={x.title}
-                                        description={x.description}
-                                        size={x.size}
-                                        images={x.images}
-                                        previews={x.previews}
-                                        attributes={x.attributes}
-                                        amenities={x.amenities}
-                                    />
+                                <RoomObject
+                                    key={'room-' + x.id.toString()}
+                                    id={x.id}
+                                    title={x.title}
+                                    description={x.description}
+                                    size={x.size}
+                                    images={x.images}
+                                    previews={x.previews}
+                                    attributes={x.attributes}
+                                    amenities={x.amenities}
+                                />
                                 // </Suspense>
                             )}
                         </div>

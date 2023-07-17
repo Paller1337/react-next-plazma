@@ -73,8 +73,6 @@ export const slidersData = [
             '/img/saunas/night-1001/2.webp',
             '/img/saunas/night-1001/3.webp',
             '/img/saunas/night-1001/4.webp',
-            '/img/saunas/night-1001/5.webp',
-            '/img/saunas/night-1001/6.webp',
             '/img/saunas/night-1001/7.webp',
         ]
     },
@@ -86,6 +84,9 @@ export const slidersData = [
             '/img/saunas/aqua-lux/2.webp',
             '/img/saunas/aqua-lux/3.webp',
             '/img/saunas/aqua-lux/4.webp',
+            '/img/saunas/aqua-lux/5.webp',
+            '/img/saunas/aqua-lux/6.webp',
+            '/img/saunas/aqua-lux/7.webp',
         ]
     },
 

@@ -15,20 +15,14 @@ module.exports = {
 
     images: {
         domains: [
-            'cloudflare-ipfs.com',
-            'skin.klaun.ch',
-            'repos.klaun.ch',
-            'localhost',
-            'klauncher.ru',
-            'i.ytimg.com',
-            'static-cdn.jtvnw.net',
-            'media.forgecdn.net',
-            'loremflickr.com',
-            'lostmine.ru',
-            'loremflickr.com',
-            'fonts.googleapis.com'
-        ]
+            // 'localhost',
+            'cdn.kplazma.ru',
+            // 'fonts.googleapis.com'
+        ],
+        loader: 'custom',
+        loaderFile: './middleware/utils/imageLoader.js',
     },
+    // assetPrefix: 'https://cdn.kplazma.ru',
 
     // output: 'standalone',
 
