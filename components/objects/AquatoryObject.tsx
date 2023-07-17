@@ -1,3 +1,4 @@
+import vkCloudLoader from '@/mw/utils/imageLoader'
 import Image, { StaticImageData } from 'next/image'
 
 type priceCardSize = 'min' | 'med'
@@ -37,7 +38,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 {data.images.map((x, i) =>
                     <picture key={i} className='aquatory-object__img'>
                         {/* <Image height={470} width={570} src={x} alt='' placeholder='blur' /> */}
-                        <Image height={470} width={570} src={x} alt='' />
+                        <Image height={470} width={570} src={x} alt='' loader={vkCloudLoader}/>
                     </picture>
                 )}
             </div>
@@ -50,7 +51,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                         </span>
                     </div>
                     : ''}
-                    
+
                 <span className='text-normal'>Стоимость посещения</span>
 
                 <div className='price-card__wrapper'>
@@ -89,7 +90,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
 
                 <picture className='aquatory-object__include-img'>
                     {/* <Image height={420} width={320} src={data.includedImg} alt='' placeholder='blur' /> */}
-                    <Image height={420} width={320} src={data.includedImg} alt='' />
+                    <Image height={420} width={320} src={data.includedImg} alt='' loader={vkCloudLoader}/>
                 </picture>
             </div>
 

@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 // import { images } from 'imageImports'
 
 export default function PageEvents() {
@@ -68,7 +69,7 @@ export default function PageEvents() {
                                 {/* <div className='btn btn_black'>Подробнее</div> */}
                             </div>
                             <div className='about-quatr__image'>
-                                <Image src='/img/events/family.webp' width={970} height={700} alt='' />
+                                <Image src='/img/events/family.webp' width={970} height={700} alt='' loader={vkCloudLoader}/>
                             </div>
                         </div>
                     </div>

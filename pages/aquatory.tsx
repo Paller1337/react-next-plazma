@@ -10,6 +10,7 @@ import Promo from '../components/Promo'
 import PlazmaSertItem from '../components/PlazmaSertItem'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Lazy, Navigation, Pagination } from 'swiper'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 
 // import { images } from 'imageImports'
 export default function PageAquatory() {
@@ -92,13 +93,13 @@ export default function PageAquatory() {
                                         navigation: {
                                             enable: true
                                         },
-                                        
+
                                         spaceBetween: 20,
                                         breakpoints: {
                                             1: {
                                                 slidesPerView: 1,
                                                 spaceBetween: 20,
-                                                
+
                                             },
                                             991: {
                                                 slidesPerView: 1,
@@ -116,10 +117,12 @@ export default function PageAquatory() {
                                     } as any)}
                                 >
                                     <SwiperSlide>
-                                        <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt='' />
+                                        <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt=''
+                                            loader={vkCloudLoader} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <Image height={550} width={770} src={'/img/aquatory/1-2.webp'} alt='' />
+                                        <Image height={550} width={770} src={'/img/aquatory/1-2.webp'} alt=''
+                                            loader={vkCloudLoader} />
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
@@ -128,12 +131,14 @@ export default function PageAquatory() {
                         <div className='promo-info__bottom'>
                             <picture className='img-med'>
                                 {/* <Image height={470} width={760} src={images.aquatory.img2Png} alt='' placeholder='blur' /> */}
-                                <Image height={470} width={760} src={'/img/aquatory/2.webp'} alt='' />
+                                <Image height={470} width={760} src={'/img/aquatory/2.webp'} alt=''
+                                    loader={vkCloudLoader} />
                             </picture>
 
                             <picture className='img-low'>
                                 {/* <Image height={470} width={370} src={images.aquatory.img3Png} alt='' placeholder='blur' /> */}
-                                <Image height={470} width={370} src={'/img/aquatory/3.webp'} alt='' />
+                                <Image height={470} width={370} src={'/img/aquatory/3.webp'} alt=''
+                                    loader={vkCloudLoader} />
                             </picture>
 
                         </div>
@@ -185,7 +190,7 @@ export default function PageAquatory() {
 
                         <picture className='page-aquatory__price-img'>
                             {/* <Image width={1170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' /> */}
-                            <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' />
+                            <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' loader={vkCloudLoader}/>
                         </picture>
                     </div>
 
@@ -213,11 +218,11 @@ export default function PageAquatory() {
                         </div>
 
                         <picture className='page-aquatory__price-img vert'>
-                            <Image className='vert' width={470} height={700} src={'/img/aquatory/5-1.webp'} alt='' />
+                            <Image className='vert' width={470} height={700} src={'/img/aquatory/5-1.webp'} alt='' loader={vkCloudLoader}/>
                         </picture>
 
                         <picture className='page-aquatory__price-img hor'>
-                            <Image className='hor' width={1170} height={700} src={'/img/aquatory/5-2.webp'} alt='' />
+                            <Image className='hor' width={1170} height={700} src={'/img/aquatory/5-2.webp'} alt='' loader={vkCloudLoader}/>
                         </picture>
                     </div>
 
@@ -251,14 +256,14 @@ export default function PageAquatory() {
 
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' /> */}
-                                <Image width={1170} height={660} src={'/img/aquatory/6.webp'} alt='' />
+                                <Image width={1170} height={660} src={'/img/aquatory/6.webp'} alt='' loader={vkCloudLoader}/>
                             </picture>
                         </div>
 
                         <div className='aquatory-props__second'>
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' /> */}
-                                <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' />
+                                <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' loader={vkCloudLoader}/>
                             </picture>
 
                             <div className='page-aquatory__list'>

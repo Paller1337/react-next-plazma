@@ -8,6 +8,7 @@ import img4 from '@/images/index/previews/4.jpg'
 import img5 from '@/images/index/previews/5.jpg'
 import img6 from '@/images/index/previews/6.jpg'
 import img7 from '@/images/index/previews/7.jpg'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 
 
 
@@ -72,6 +73,7 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
                                 className='js--mobile-parallax'
                                 src={images[props.image]}
                                 alt='Парк-отель Plazma'
+                                loader={vkCloudLoader}
                             />}
                     </picture>
                 </div>

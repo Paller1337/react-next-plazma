@@ -24,6 +24,9 @@
       "@/components/*": [
         "components/*"
       ],
+      "@/mw/*": [
+        "middleware/*"
+      ],
       "@/public/*": [
         "public/*"
       ],

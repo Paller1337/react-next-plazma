@@ -11,6 +11,7 @@ import { GetServerSideProps } from 'next'
 import { useEffect } from 'react'
 
 import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 
 // import aboutHotelImgMin from '@/images/index/about-hotel/min.png'
 // import aboutHotelImgMax from '@/images/index/about-hotel/max.png'
@@ -50,7 +51,7 @@ export default function PageIndex(props: PageIndexProps) {
         <meta
           property='og:type'
           content='website' />
-          
+
         <meta name="yandex-verification" content="ad1bbd813f73344a" />
       </Head>
 
@@ -73,7 +74,7 @@ export default function PageIndex(props: PageIndexProps) {
 
               <picture className='about-hotel__img img_min'>
                 <Image width={670} height={420} src={'/img/index/about-hotel/min.webp'} alt=''
-                // placeholder='blur' 
+                  loader={vkCloudLoader}
                 />
               </picture>
             </div>
@@ -101,7 +102,7 @@ export default function PageIndex(props: PageIndexProps) {
 
               <picture className='about-hotel__img img_max'>
                 <Image width={670} height={550} src={'/img/index/about-hotel/max.webp'} alt=''
-                // placeholder='blur'
+                  loader={vkCloudLoader}
                 />
               </picture>
             </div>

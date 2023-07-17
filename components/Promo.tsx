@@ -17,6 +17,7 @@ import tent from '@/images/backgrounds/tent.webp'
 import { Rings } from 'react-loader-spinner';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
+import vkCloudLoader from '@/mw/utils/imageLoader';
 
 type PromoImage = 'active-leisure' | 'banquet-hall' | 'aquatory' | 'events' |
     'rest' | 'saunas' | 'smash' | 'hotel' | 'sports-camp' | 'tent'
@@ -172,6 +173,7 @@ export default function Promo(props: PromoProps) {
                                     loading='eager'
                                     quality={90}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    loader={vkCloudLoader}
                                 />
                                 : ''
                             }

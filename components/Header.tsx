@@ -87,7 +87,7 @@ export default function Header(props: HeaderProps) {
                 <div className='c-menu__logo'>
                     <Link href={'/'}>
                         <object data='/svg/dark-logo.svg' type='image/svg+xml' title='Главная'>
-                            <Image width={64} height={64} src='/img/dark-logo.svg' alt='' />
+                            <img width={64} height={64} src='/svg/dark-logo.svg' alt='' />
                         </object>
                     </Link>
                 </div>
@@ -155,7 +155,7 @@ export default function Header(props: HeaderProps) {
                         <Link className='menu__logo' href='/'>
                             <span style={{ display: 'block' }}>
                                 <object data='/svg/new-logo.svg' type='image/svg+xml' title='Главная'>
-                                    <Image width={64} height={64} src='/img/new-logo.svg' alt='' />
+                                    <img width={64} height={64} src='/img/new-logo.svg' alt='' />
                                 </object>
                             </span>
                         </Link>

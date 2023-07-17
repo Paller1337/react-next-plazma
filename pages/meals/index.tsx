@@ -6,6 +6,7 @@ import Header from '../../components/Header'
 import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
 import Button from '../../components/Button'
 import Link from 'next/link'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 // import { images } from 'imageImports'
 
 export default function PageMeals() {
@@ -45,7 +46,7 @@ export default function PageMeals() {
                                 <Link className='page-meals__card' href='meals/restaurant'>
                                     <div className='page-meals__card-image'>
                                         {/* <Image src={images.meals.img2Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
-                                        <Image src={'/img/meals/2.webp'} width={670} height={600} alt='' />
+                                        <Image src={'/img/meals/2.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
@@ -57,7 +58,7 @@ export default function PageMeals() {
                                 <Link className='page-meals__card' href='meals/smash'>
                                     <div className='page-meals__card-image'>
                                         {/* <Image src={images.meals.img3Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
-                                        <Image src={'/img/meals/3.webp'} width={670} height={600} alt='' />
+                                        <Image src={'/img/meals/3.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
@@ -72,7 +73,7 @@ export default function PageMeals() {
                                 <Link className='page-meals__card' href='meals/banquet-hall'>
                                     <div className='page-meals__card-image'>
                                         {/* <Image src={images.meals.img1Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
-                                        <Image src={'/img/meals/1.webp'} width={670} height={600} alt='' />
+                                        <Image src={'/img/meals/1.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>
@@ -84,7 +85,7 @@ export default function PageMeals() {
                                 <Link className='page-meals__card' href='meals/tent'>
                                     <div className='page-meals__card-image'>
                                         {/* <Image src={images.meals.img4Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
-                                        <Image src={'/img/meals/4.webp'} width={670} height={600} alt='' />
+                                        <Image src={'/img/meals/4.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
                                     <span className='page-meals__card-title'>

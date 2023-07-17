@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // import { isMobile, MobileView, BrowserView } from 'react-device-detect'
 import { FreeMode, Pagination } from 'swiper'
 import { useDeviceDetect } from '@/components/hooks/useDeviceDetect'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 // import { images } from 'imageImports'
 
 
@@ -206,7 +207,7 @@ export default function PageActiveLeisure() {
                             <div className='about-quatr__image'>
                                 {/* <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' /> */}
                                 <Image src={'/img/active-leisure/1.webp'} width={970} height={700} alt=''
-                                //  placeholder='blur' 
+                                    loader={vkCloudLoader}
                                 />
                             </div>
                         </div>

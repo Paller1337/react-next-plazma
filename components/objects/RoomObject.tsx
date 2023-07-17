@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper/modules'
 import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper'
 import { useDeviceDetect } from '../hooks/useDeviceDetect'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
@@ -134,6 +135,7 @@ export default function RoomObject(data: RoomObjectProps) {
                                     loading="lazy"
                                     quality={90}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    loader={vkCloudLoader}
                                 />
                                 {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
                             </div >
@@ -231,6 +233,7 @@ export default function RoomObject(data: RoomObjectProps) {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
+                                        loader={vkCloudLoader}
                                     />
 
                                     {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}

@@ -4,6 +4,7 @@ import Image, { ImageProps } from 'next/image';
 import { getBase64ImageUrl } from '../middleware/utils/getBlurData';
 import { v4 } from 'uuid';
 import { TailSpin } from 'react-loader-spinner';
+import vkCloudLoader from '@/mw/utils/imageLoader';
 
 interface PlazmaSliderProps {
     data: string;
@@ -17,7 +18,7 @@ function ImageWithPreloader(props: ImageWithPreloaderProps) {
     const [isLoading, setIsLoading] = useState(true)
     return (<>
         <Image {...props as Omit<ImageWithPreloaderProps, 'preloaderColor'>}
-            onLoad={() => setIsLoading(false)}
+            onLoad={() => setIsLoading(false)} loader={vkCloudLoader}
         />
 
         {isLoading ?
@@ -91,7 +92,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
         <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll>
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
                 <Image className="plazma-slider__item-fake-prev" height={1920} width={1056} src={data.images[data.images.length - 1]} alt='Plazma'
-                    onClick={() => setActiveSlide(data.images.length - 1)}
+                    onClick={() => setActiveSlide(data.images.length - 1)} loader={vkCloudLoader}
                 />
                 {data.images.map((imagePath, index) => (
                     <div
@@ -108,7 +109,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                     </div>
                 ))}
                 <Image className="plazma-slider__item-fake-next" height={1920} width={1056} src={data.images[0]} alt='Plazma'
-                    onClick={() => setActiveSlide(0)}
+                    onClick={() => setActiveSlide(0)} loader={vkCloudLoader}
                 />
             </div>
 

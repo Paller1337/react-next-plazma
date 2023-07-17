@@ -4,7 +4,7 @@ import { LegacyRef, useEffect, useRef, useState } from 'react'
 
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import vkCloudLoader from '@/mw/utils/imageLoader'
 interface ColumnCardProps {
     ref?: LegacyRef<HTMLDivElement>
     img: ColumnCardImageProps[]
@@ -68,7 +68,7 @@ export default function ColumnCard(props: ColumnCardProps) {
                 >
                     {props.img.length > 0 ? props.img.map(x =>
                         <SwiperSlide key={'col-img-' + x.src}>
-                            <Image src={x.src} width={x.w} height={x.h} alt='' />
+                            <Image src={x.src} width={x.w} height={x.h} alt='' loader={vkCloudLoader} />
                         </SwiperSlide>
                     ) : ''}
                 </Swiper>

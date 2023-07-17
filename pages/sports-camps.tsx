@@ -15,6 +15,7 @@ import InputRadio from '../components/form/InputRadio'
 import SportCalculator from '../components/SportCalculator'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Pagination } from 'swiper'
+import vkCloudLoader from '@/mw/utils/imageLoader'
 // import { images } from 'imageImports'
 
 
@@ -112,7 +113,8 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img1Jpg} alt='' placeholder='blur' /> */}
-                                <Image width={570} height={320} src={'/img/meals/min/1.webp'} alt='' />
+                                <Image width={570} height={320} src={'/img/meals/min/1.webp'} alt=''
+                                    loader={vkCloudLoader} />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Ресторан
@@ -122,7 +124,8 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img2Jpg} alt='' placeholder='blur' /> */}
-                                <Image width={570} height={320} src={'/img/meals/min/2.webp'} alt='' />
+                                <Image width={570} height={320} src={'/img/meals/min/2.webp'} alt=''
+                                    loader={vkCloudLoader} />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Кафе-столовая Smash
@@ -132,7 +135,8 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img3Jpg} alt='' placeholder='blur' /> */}
-                                <Image width={570} height={320} src={'/img/meals/min/3.webp'} alt='' />
+                                <Image width={570} height={320} src={'/img/meals/min/3.webp'} alt=''
+                                    loader={vkCloudLoader} />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Банкетный-конференц-зал
@@ -142,7 +146,8 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur' /> */}
-                                <Image width={570} height={320} src={'/img/meals/min/4.webp'} alt='' />
+                                <Image width={570} height={320} src={'/img/meals/min/4.webp'} alt=''
+                                    loader={vkCloudLoader} />
                             </picture>
                             <span className='meals-preview-card__text'>
                                 Летний Шатер
