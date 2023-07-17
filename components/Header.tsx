@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Button from './Button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import svgVk from '/public/svg/vk.svg'
@@ -48,6 +48,7 @@ const headerItems = [
 
 export default function Header(props: HeaderProps) {
     const [burgerIsOpen, setBurgerIsOpen] = useState(false)
+
     const router = useRouter()
 
     const tel = '+7 (930) 897-77-01'

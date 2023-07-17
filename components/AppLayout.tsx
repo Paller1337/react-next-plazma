@@ -16,6 +16,15 @@ export default function AppLayout(props: AppLayoutProps) {
     const router = useRouter()
     const [headerBlack, setHeaderBlack] = useState(false)
     const { setBnovoIframeIsLoad, setBnovoIsLoad } = useContext(BnovoContext)
+    const [isNotFound, setIsNotFound] = useState(false);
+
+
+    const checkIfNotFound = async () => {
+        const response = await fetch(window.location.href)
+        setIsNotFound(response.status === 404)
+    }
+
+
 
     const meals = props.asPath.includes('meals') &&
         !props.asPath.includes('rest') &&
@@ -24,16 +33,18 @@ export default function AppLayout(props: AppLayoutProps) {
         !props.asPath.includes('hall')
 
     useEffect(() => {
-        console.log(props.asPath)
+        checkIfNotFound()
+        
         if (
             meals ||
-            props.asPath.includes('booking')
+            props.asPath.includes('booking') ||
+            isNotFound
         ) {
             setHeaderBlack(true)
         } else {
             setHeaderBlack(false)
         }
-    }, [props.asPath, props.pageProps])
+    }, [props.asPath, props.pageProps, isNotFound])
     return (<>
 
         <div className='wrapper' data-barba="wrapper">

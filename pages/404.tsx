@@ -34,16 +34,14 @@ export default function PageNotFound() {
 
                 <meta property='og:type' content='website' />
             </Head>
-            <main className='page page-booking' style={{ background: `#262626` }}>
+            <main className='page page-booking page-not-found' style={{ background: `#262626` }}>
                 <div className='relative main-wrap' data-scroll-container>
-                    <div className='page-booking__about' data-scroll-section>
+                    <div className='page-not-found__about' data-scroll-section>
                         <div id="booking_iframe" className='container'></div>
 
                         <div className='big-p container'>
                             <span className='big-p__title'>404. Страница не найдена</span>
-                            <span className='big-p__desc'>
-                                <br />
-                            </span>
+                            <Link href={'/'} className='btn btn_black'>На главную</Link>
                         </div>
                     </div>
                     <div className='base-bg' data-scroll-section></div>
