@@ -66,7 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
       <BnovoLoadContextProvider>
-        <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true }}>
+        <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true, webVisor: true }}>
           <AppLayout asPath={router.asPath} pageProps={pageProps}>
             <Component {...pageProps} />
           </AppLayout>
