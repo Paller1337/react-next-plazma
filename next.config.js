@@ -19,8 +19,8 @@ module.exports = {
             'cdn.kplazma.ru',
             // 'fonts.googleapis.com'
         ],
-        loader: 'custom',
-        loaderFile: './middleware/utils/imageLoader.js',
+        // loader: 'custom',
+        // loaderFile: './middleware/utils/imageLoader.js',
     },
     // assetPrefix: 'https://cdn.kplazma.ru',
 
