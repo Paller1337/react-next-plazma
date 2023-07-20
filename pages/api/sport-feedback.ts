@@ -5,10 +5,38 @@ type Data = {
     name: string
 }
 
+
+const BOT_TOKEN = '6367007621:AAHTbiLDTTSQ-cDKa9NW3kaKcj2PoLUUvEg'; // Замените на ваш токен бота
+
+
+// Функция для отправки сообщения в Telegram
+function sendTelegramMessage(message) {
+    const chatId = '-1001699514488'; // Замените на ваш chat_id (ID чата, куда хотите отправить сообщение)
+
+    const data = {
+        chat_id: chatId,
+        text: message,
+        parse_mode: 'Markdown',
+    };
+
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((responseData) => {
+            console.log('Сообщение успешно отправлено:', responseData);
+        })
+        .catch((error) => {
+            console.error('Ошибка отправки сообщения в Telegram:', error);
+        });
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const body = JSON.parse(req.body);
-    // console.log(body);
-    // res.status(200).json({ status: 'OK' });
 
     const transporter = nodemailer.createTransport({
         host: "mail.kplazma.ru",
@@ -24,11 +52,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await transporter.sendMail({
             from: 'noreply@kplazma.ru',
             to: toEmail,
-            subject: `${body.name} просит связаться`,
-            html: `<p>Спортивные сборы kplazma.ru, нужно позвонить</p><br>
-            <p><strong>Телефон: </strong> ${body.phone}</p><br>
-            <p><strong>Сообщение: </strong> ${body.message}</p><br>
-            <p><strong>Стоимость сборов на калькуляторе: </strong> ${body.result}</p><br>
+            subject: `${body.name ? body.name : ' отсутствует'} просит связаться`,
+            html: `<p>Спортивные сборы kplazma.ru </p><br>
+            <p><strong>Телефон: </strong> ${body.phone ? body.phone : ' отсутствует'}</p>
+            <p><strong>Сообщение: </strong> ${body.message ? body.message : ' отсутствует'}</p>
+            <p><strong>Стоимость сборов на калькуляторе: </strong> ${body.result ? body.result : 0}</p>
           `
         });
     }
@@ -37,6 +65,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // await send('max.paller@yandex.ru')
         await send('max@kplazma.ru')
         await send('dnd@kplazma.ru')
+        sendTelegramMessage(`*Заявка с kplazma.ru*\n\n` +
+            `*Имя:* ${body.name ? body.name : ' отсутствует'}\n` +
+            `*Телефон:* ${body.phone ? body.phone : ' отсутствует'}\n` +
+            `*Сообщение:* ${body.message ? body.message : ' отсутствует'}\n` +
+            `*Стоимость сборов на калькуляторе:* ${body.result ? body.result : 0}`);
         await send('nastya@kplazma.ru')
 
         return res.status(200).json({ status: 'Сообщение отправлено!' });

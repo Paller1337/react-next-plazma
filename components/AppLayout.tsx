@@ -61,7 +61,7 @@ export default function AppLayout(props: AppLayoutProps) {
         />
         <Script
             src='https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js'
-            strategy='lazyOnload'
+            strategy='afterInteractive'
             onLoad={() => setBnovoIframeIsLoad(true)}
         />
     </>)

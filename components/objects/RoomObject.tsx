@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image'
 import BlockLoader from '../BlockLoader'
 import { Swiper, SwiperSlide } from 'swiper/react'
 // import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper/modules'
-import { FreeMode, Lazy, Navigation, Pagination, Thumbs } from 'swiper'
+import { FreeMode, Lazy, Navigation, Pagination, Thumbs, Virtual } from 'swiper'
 import { useDeviceDetect } from '../hooks/useDeviceDetect'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 export interface RoomObjectProps {
@@ -102,11 +102,12 @@ export default function RoomObject(data: RoomObjectProps) {
             <div className='hotel-room__preview-swiper'>
                 <Swiper
                     {...({
-                        modules: [Lazy, FreeMode, Pagination, Navigation, Thumbs],
+                        modules: [Lazy, FreeMode, Pagination, Navigation, Thumbs, Virtual],
                         navigation: {
                             enable: true
                         },
                         thumbs: { swiper: thumbsSwiper },
+                        virtual: true,
 
                         spaceBetween: 20,
                         breakpoints: {
@@ -128,7 +129,7 @@ export default function RoomObject(data: RoomObjectProps) {
                     } as any)}
                 >
                     {previews && previews.map((image, i) =>
-                        <SwiperSlide key={image + '-swipe-item'}>
+                        <SwiperSlide key={image + '-swipe-item'} virtualIndex={i}>
                             <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
                                 <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
                                     // placeholder='blur'
@@ -192,7 +193,8 @@ export default function RoomObject(data: RoomObjectProps) {
                     //     marginTop: 10,
                     // }}
                     {...({
-                        modules: [Lazy, FreeMode, Thumbs],
+                        modules: [Lazy, FreeMode, Thumbs, Virtual],
+                        virtual: true,
                         watchSlidesProgress: true,
                         // lazy: 'true',
 
@@ -225,7 +227,7 @@ export default function RoomObject(data: RoomObjectProps) {
 
                     <div className='hotel-room__slides'>
                         {previews && previews.map((image, i) =>
-                            <SwiperSlide key={image + '-swipe-item'}>
+                            <SwiperSlide key={image + '-swipe-item'} virtualIndex={i}>
                                 <div key={i} className={`hotel-room__slide `}
                                     onClick={() => setGalleryIsOpen(true)}>
 
