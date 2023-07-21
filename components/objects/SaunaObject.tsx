@@ -55,8 +55,8 @@ export default function SaunaObject(data: SaunaObjectProps) {
 
             <div className='btn-container btn-container_go-up'>
                 <a className='btn btn_black popover pop-top'
-                    popover-data={'+7 (930) 897-77-01'}
-                    onClick={() => copyNumber('+79308977701')}
+                    popover-data={'+7 (910) 168-17-61'}
+                    onClick={() => copyNumber('+79101681761')}
                 >
                     Забронировать
                 </a>

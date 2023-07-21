@@ -51,7 +51,7 @@ export default function Header(props: HeaderProps) {
 
     const router = useRouter()
 
-    const tel = '+7 (930) 897-77-01'
+    const tel = '+7 (910) 168-17-61'
     const [telNum, setTelNum] = useState(tel)
 
     const menuOpen = (status: boolean) => {
@@ -69,7 +69,7 @@ export default function Header(props: HeaderProps) {
 
     const copyNumber = async (x: string) => {
 
-        await navigator.clipboard.writeText('+79308977701')
+        await navigator.clipboard.writeText('+79101681761')
         setTelNum('Скопировано')
         const timeout = setTimeout(() => setTelNum(tel), 2000)
         return () => clearTimeout(timeout)
@@ -148,7 +148,7 @@ export default function Header(props: HeaderProps) {
                                 <div className='popover pop-right'
                                     // href='tel: +790000000'
                                     popover-data={telNum}
-                                    onClick={() => copyNumber('+7 (900) 900-00-00')}
+                                    onClick={() => copyNumber('+7 (910) 168-17-61')}
                                 />
                             </span>
                         </div>

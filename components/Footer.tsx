@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import toast from 'react-hot-toast'
 
 interface FooterProps {
 
@@ -10,6 +11,34 @@ interface FooterProps {
 
 
 export default function Footer(props: FooterProps) {
+    const copyNumber = async () => {
+        navigator.clipboard.writeText('+79101681761')
+        toast.success('Номер скопирован', {
+            duration: 3000,
+            style: {
+                fontSize: 15,
+                borderRadius: 0,
+                border: '1px solid #393939',
+                padding: '12px 18px'
+            },
+            position: 'top-center'
+        })
+    }
+
+    const copyAddress = async () => {
+        navigator.clipboard.writeText('Тульская область, г. Донской, ул. Герцена, д. 14')
+        toast.success('Адрес скопирован', {
+            duration: 3000,
+            style: {
+                fontSize: 15,
+                borderRadius: 0,
+                border: '1px solid #393939',
+                padding: '12px 18px'
+            },
+            position: 'top-center'
+        })
+    }
+
     return (
         <>
             <div className="footer" data-scroll-section>
@@ -72,10 +101,10 @@ export default function Footer(props: FooterProps) {
                     </div>
 
                     <div className='footer__contact-container'>
-                        <span className='footer__contact-text copy-click address'>Тульская область, г. Донской, ул. Герцена, д.
+                        <span className='footer__contact-text copy-click address' onClick={() => copyAddress()}>Тульская область, г. Донской, ул. Герцена, д.
                             14</span>
                         <Link href='#' className='footer__contact-link'>Политика конфидециальности</Link>
-                        <span className='footer__contact-text copy-click number'>+7(930) 897-77-01</span>
+                        <span className='footer__contact-text copy-click number' onClick={() => copyNumber()}>+7 (910) 168-17-61</span>
                     </div>
                 </div>
             </div>
@@ -102,7 +131,7 @@ export default function Footer(props: FooterProps) {
                     </div>
 
                     <div className='footer-mobile__contact-container'>
-                        <span className='footer-mobile__contact-text copy-click address'>Тульская область, г. Донской, ул. Герцена, д.
+                        <span className='footer-mobile__contact-text copy-click address' onClick={() => copyAddress()}>Тульская область, г. Донской, ул. Герцена, д.
                             14</span>
                         <Link href='#' className='footer-mobile__contact-link'>Политика конфидециальности</Link>
                     </div>

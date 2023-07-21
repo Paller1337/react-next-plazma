@@ -211,8 +211,8 @@ export default function Promo(props: PromoProps) {
                 <div className='btn-group'>
                     {props.btnGroup?.callbackBtn ?
                         <Link href='' className='btn btn_white popover pop-bottom'
-                            popover-data={'+7 (930) 897-77-01'}
-                            onClick={() => copyNumber('+79308977701')}
+                            popover-data={'+7 (910) 168-17-61'}
+                            onClick={() => copyNumber('+79101681761')}
                         >Позвонить</Link>
                         : <></>
                     }

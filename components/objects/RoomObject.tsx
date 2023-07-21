@@ -8,6 +8,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Lazy, Navigation, Pagination, Thumbs, Virtual } from 'swiper'
 import { useDeviceDetect } from '../hooks/useDeviceDetect'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import toast from 'react-hot-toast'
+import { useRouter } from 'next/router'
+import * as Icon from 'react-feather'
+
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
@@ -29,6 +33,7 @@ export const Loading = () => {
 export default function RoomObject(data: RoomObjectProps) {
     const images = data.images
     const previews = data.previews
+    const router = useRouter()
 
     const { isMobile, isDesktop } = useDeviceDetect()
 
@@ -75,6 +80,21 @@ export default function RoomObject(data: RoomObjectProps) {
         }
     }
 
+    const copyLink = (id) => {
+        let link = window.location.host + window.location.pathname
+        navigator.clipboard.writeText(link.toString() + '#room-' + id)
+        toast.success('Ссылка скопирована', {
+            duration: 3000,
+            style: {
+                fontSize: 15,
+                borderRadius: 0,
+                border: '1px solid #393939',
+                padding: '12px 18px'
+            },
+            position: 'top-center'
+        });
+    }
+
     useEffect(() => {
         if (sliderWrapper.current) {
             const content = imageContentRef.current as HTMLElement
@@ -98,7 +118,7 @@ export default function RoomObject(data: RoomObjectProps) {
         /> */}
         {/* <Suspense fallback={() => <Loading />}> */}
 
-        <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}>
+        <div className='hotel-rooms__item hotel-room' id={`room-${data.id}`} key={'room-content-' + data.id?.toString()}>
             <div className='hotel-room__preview-swiper'>
                 <Swiper
                     {...({
@@ -267,7 +287,9 @@ export default function RoomObject(data: RoomObjectProps) {
             </div>
 
             <div className='hotel-room__info'>
-                <span className='hotel-room__title'>{data.title}</span>
+                <span className='hotel-room__title' onClick={() => copyLink(data.id)} style={{ cursor: 'pointer' }}>
+                    <Icon.Link size={20} /> {data.title}
+                </span>
                 <span className='hotel-room__text'>{data.description}
                 </span>
                 <span className='hotel-room__text bold'>{data.size}</span>
