@@ -95,6 +95,7 @@
                         right: 24px
 
             &__item
+                position: relative
                 &.hotel-room
                     display: flex
                     justify-content: space-between
@@ -111,6 +112,12 @@
                             width: 50%
                             margin: 10px auto 20px auto
                     .hotel-room
+                        &__anchor
+                            position: absolute
+                            top: -150px
+                            @media screen and ( max-width: $md4 )
+                                top: -100px
+                                
                         &__preview
                             display: flex
                             flex-direction: column

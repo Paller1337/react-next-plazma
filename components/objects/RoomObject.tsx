@@ -118,8 +118,9 @@ export default function RoomObject(data: RoomObjectProps) {
         /> */}
         {/* <Suspense fallback={() => <Loading />}> */}
 
-        <div className='hotel-rooms__item hotel-room' id={`room-${data.id}`} key={'room-content-' + data.id?.toString()}
+        <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}
             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+            <div id={`room-${data.id}`} className='hotel-room__anchor' />
             <div className='hotel-room__preview-swiper'>
                 <Swiper
                     {...({
