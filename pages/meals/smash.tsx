@@ -7,6 +7,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 
 export default function PageSmash() {
@@ -63,14 +64,18 @@ export default function PageSmash() {
 
 
                         <div className='rest-welcome__work-time worktime-section mb container'>
-                            <div className='worktime-section__about'>
+                            <div className='worktime-section__about'
+                                data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration}
+                                data-aos-once={DEFAULTS.AOS.once}>
                                 <span className='worktime-section__title'>Кафе «SMASH»</span>
                                 <span className='worktime-section__desc'>Кафе SMASH предлагает быструю и вкусную еду на завтрак,
                                     обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.
                                 </span>
                             </div>
 
-                            <div className='worktime-section__timetable'>
+                            <div className='worktime-section__timetable'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration}
+                                data-aos-once={DEFAULTS.AOS.once}>
                                 <span className='worktime-section__timetable-title'>Часы работы</span>
                                 <div className='worktime-section__timetable-content'>
                                     <div className='worktime-section__timetable-row'>

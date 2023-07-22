@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react'
 import Script from 'next/script'
 import { BnovoContext } from './bnovo/bnovoContext'
 import { Toaster } from 'react-hot-toast'
+import Aos from 'aos'
 
 interface AppLayoutProps {
     children: React.ReactNode
@@ -24,7 +25,9 @@ export default function AppLayout(props: AppLayoutProps) {
         setIsNotFound(response.status === 404)
     }
 
-
+    useEffect(() => {
+        Aos.init()
+    }, [])
 
     const meals = props.asPath.includes('meals') &&
         !props.asPath.includes('rest') &&
@@ -34,7 +37,7 @@ export default function AppLayout(props: AppLayoutProps) {
 
     useEffect(() => {
         checkIfNotFound()
-        
+
         if (
             meals ||
             props.asPath.includes('booking') ||

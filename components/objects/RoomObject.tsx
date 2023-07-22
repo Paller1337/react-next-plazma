@@ -11,6 +11,8 @@ import vkCloudLoader from '@/mw/utils/imageLoader'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/router'
 import * as Icon from 'react-feather'
+import Aos from 'aos'
+import { DEFAULTS } from 'defaults'
 
 export interface RoomObjectProps {
     id: number | number[],
@@ -70,7 +72,6 @@ export default function RoomObject(data: RoomObjectProps) {
 
     const prevSlide = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation()
-        console.log('123')
         if (e.target instanceof HTMLButtonElement) {
             if (currentSlide > 0) {
                 goSlide(currentSlide - 1)
@@ -106,8 +107,7 @@ export default function RoomObject(data: RoomObjectProps) {
         }
     }, [currentSlide, sliderWrapper])
 
-
-    useEffect(() => console.log('roomId: ', data.id, 'key: ', data.id.toString()), [])
+    // useEffect(() => console.log('roomId: ', data.id, 'key: ', data.id.toString()), [])
 
     return (<>
         {/* <GallerySlider
@@ -118,7 +118,8 @@ export default function RoomObject(data: RoomObjectProps) {
         /> */}
         {/* <Suspense fallback={() => <Loading />}> */}
 
-        <div className='hotel-rooms__item hotel-room' id={`room-${data.id}`} key={'room-content-' + data.id?.toString()}>
+        <div className='hotel-rooms__item hotel-room' id={`room-${data.id}`} key={'room-content-' + data.id?.toString()}
+            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
             <div className='hotel-room__preview-swiper'>
                 <Swiper
                     {...({

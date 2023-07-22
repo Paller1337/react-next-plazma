@@ -11,6 +11,7 @@ import PlazmaSertItem from '../components/PlazmaSertItem'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Lazy, Navigation, Pagination } from 'swiper'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
 
 // import { images } from 'imageImports'
 export default function PageAquatory() {
@@ -63,7 +64,8 @@ export default function PageAquatory() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div id='AboutAquatory' className='page-aquatory__welcome text-section text-section_big container' data-scroll-section>
+                    <div id='AboutAquatory' className='page-aquatory__welcome text-section text-section_big container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>Акватория «PLAZMA»</span>
                         <span className='text'>
                             Plazma Акватория – это оазис внутри города, место, где гости могут отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.
@@ -71,7 +73,8 @@ export default function PageAquatory() {
                     </div>
 
                     <div className='page-aquatory__promo-info promo-info container' data-scroll-section>
-                        <div className='promo-info__upper'>
+                        <div className='promo-info__upper'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='promo-info__text-wrapper'>
                                 <span className='text-title uppercase'>Отдых для всей семьи</span>
                                 <span className='text'>Акватория объединяет людей с разными интересами, у нас найдется занятие для каждого члена вашей семьи.
@@ -128,7 +131,8 @@ export default function PageAquatory() {
                             </div>
                         </div>
 
-                        <div className='promo-info__bottom'>
+                        <div className='promo-info__bottom'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='img-med'>
                                 {/* <Image height={470} width={760} src={images.aquatory.img2Png} alt='' placeholder='blur' /> */}
                                 <Image height={470} width={760} src={'/img/aquatory/2.webp'} alt=''
@@ -148,7 +152,8 @@ export default function PageAquatory() {
                         </div>
                     </div>
 
-                    <div id='AquatoryPrice' className='page-aquatory__price container' data-scroll-section>
+                    <div id='AquatoryPrice' className='page-aquatory__price container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <div className='worktime-section'>
                             <div className='aquatory-worktime__heading'>
                                 <span className='title'>Время работы акватории</span>
@@ -190,12 +195,13 @@ export default function PageAquatory() {
 
                         <picture className='page-aquatory__price-img'>
                             {/* <Image width={1170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' /> */}
-                            <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' loader={vkCloudLoader}/>
+                            <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' loader={vkCloudLoader} />
                         </picture>
                     </div>
 
 
-                    <div id='AquatoryPrice' className='page-aquatory__price reverse container' data-scroll-section>
+                    <div id='AquatoryPrice' className='page-aquatory__price reverse container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <div className='worktime-section'>
                             <div className='aquatory-worktime__heading'>
                                 <span className='title'>Правила посещения акватории</span>
@@ -218,16 +224,17 @@ export default function PageAquatory() {
                         </div>
 
                         <picture className='page-aquatory__price-img vert'>
-                            <Image className='vert' width={470} height={700} src={'/img/aquatory/5-1.webp'} alt='' loader={vkCloudLoader}/>
+                            <Image className='vert' width={470} height={700} src={'/img/aquatory/5-1.webp'} alt='' loader={vkCloudLoader} />
                         </picture>
 
                         <picture className='page-aquatory__price-img hor'>
-                            <Image className='hor' width={1170} height={700} src={'/img/aquatory/5-2.webp'} alt='' loader={vkCloudLoader}/>
+                            <Image className='hor' width={1170} height={700} src={'/img/aquatory/5-2.webp'} alt='' loader={vkCloudLoader} />
                         </picture>
                     </div>
 
                     <div className='page-aquatory__props aquatory-props container separator-after' data-scroll-section>
-                        <div className='aquatory-props__first'>
+                        <div className='aquatory-props__first'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='page-aquatory__list'>
                                 <span className='page-aquatory__list-title'>На территории:</span>
                                 <ul>
@@ -256,14 +263,15 @@ export default function PageAquatory() {
 
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' /> */}
-                                <Image width={1170} height={660} src={'/img/aquatory/6.webp'} alt='' loader={vkCloudLoader}/>
+                                <Image width={1170} height={660} src={'/img/aquatory/6.webp'} alt='' loader={vkCloudLoader} />
                             </picture>
                         </div>
 
-                        <div className='aquatory-props__second'>
+                        <div className='aquatory-props__second'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='aquatory-props__img'>
                                 {/* <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' /> */}
-                                <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' loader={vkCloudLoader}/>
+                                <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' loader={vkCloudLoader} />
                             </picture>
 
                             <div className='page-aquatory__list'>
@@ -301,7 +309,8 @@ export default function PageAquatory() {
                         />)}
 
 
-                    <div className='aquatory-sert container'>
+                    <div className='aquatory-sert container'
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='text'>Территория и бассейн зоны отдыха соответствуют всем санитарно-эпидемиологическим нормам.</span>
                         <span className='text'> По всем лабораторным исследованиям и анализам вода в нашем водоеме имеет самые лучшие показатели в Тульской области .</span>
                         <PlazmaSertItem img={'/img/sert/1.webp'} />

@@ -8,6 +8,7 @@ import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
 import Link from 'next/link'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 
 export default function PageRestaurant() {
@@ -47,7 +48,9 @@ export default function PageRestaurant() {
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
-                        <div className='big-p big-p_border container'>
+                        <div className='big-p big-p_border container'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                            data-aos-once={DEFAULTS.AOS.once}>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
                                 Мы очень заботимся о качестве наших услуг, поэтому практически все заказы мы делаем из-под ножа, используя самые свежие продукты,
@@ -78,14 +81,18 @@ export default function PageRestaurant() {
                         <PlazmaSlider key={'restSlider'} data='restSlider' />
 
                         <div className='rest-welcome__work-time worktime-section container'>
-                            <div className='worktime-section__about'>
+                            <div className='worktime-section__about'
+                                data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration}
+                                data-aos-once={DEFAULTS.AOS.once}>
                                 <span className='worktime-section__title'>Ресторан «PLAZMA»</span>
                                 <span className='worktime-section__desc'>
                                     У нас есть столы на большие и маленькие компании, а также отдельные кабинки.
                                 </span>
                             </div>
 
-                            <div className='worktime-section__timetable'>
+                            <div className='worktime-section__timetable'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration}
+                                data-aos-once={DEFAULTS.AOS.once}>
                                 <span className='worktime-section__timetable-title'>Часы работы</span>
                                 <div className='worktime-section__timetable-content'>
                                     <div className='worktime-section__timetable-row'>
@@ -111,7 +118,9 @@ export default function PageRestaurant() {
                     </div>
 
 
-                    <div className='text-section text-section_med container' data-scroll-section>
+                    <div className='text-section text-section_med container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                        data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>Банкеты и мероприятия</span>
                         <span className='text'>
                             В ресторане возможна организация мероприятий любого уровня.

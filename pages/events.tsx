@@ -6,6 +6,7 @@ import { createContext, MutableRefObject, useContext, useEffect, useRef, useStat
 import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 
 export default function PageEvents() {
@@ -48,7 +49,8 @@ export default function PageEvents() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div id='AboutEvents' className='page-events__welcome text-section text-section_big container' data-scroll-section>
+                    <div id='AboutEvents' className='page-events__welcome text-section text-section_big container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>Мероприятия в «PLAZMA»</span>
                         <span className='text'>
                             Вы можете использовать в качестве площадки наш банкетный зал, который трансформируется в конференц-зал,
@@ -62,14 +64,16 @@ export default function PageEvents() {
                     </div>
 
                     <div className='page-events__about-quatr about-quatr' data-scroll-section>
-                        <div className='about-quatr__wrapper'>
+                        <div className='about-quatr__wrapper'
+                            data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-quatr__text'>
                                 <h2>семейные торжества</h2>
                                 <span>Сыграйте свадьбу. Отпразднуйте день рождения или юбилей с нами.</span>
                                 {/* <div className='btn btn_black'>Подробнее</div> */}
                             </div>
-                            <div className='about-quatr__image'>
-                                <Image src='/img/events/family.webp' width={970} height={700} alt='' loader={vkCloudLoader}/>
+                            <div className='about-quatr__image'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                <Image src='/img/events/family.webp' width={970} height={700} alt='' loader={vkCloudLoader} />
                             </div>
                         </div>
                     </div>
@@ -80,7 +84,8 @@ export default function PageEvents() {
                         </picture>
 
 
-                        <div className='about-img-bg__inner'>
+                        <div className='about-img-bg__inner'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='about-img-bg__in-img'>
                                 <img src='/img/events/about-img-bg-inner.webp' alt='' />
                             </picture>
@@ -96,7 +101,9 @@ export default function PageEvents() {
                     </div>
 
                     <div id='Conferences' className='page-events__about-two-col about-two-col container' data-scroll-section>
-                        <div className='about-two-col__left'>
+                        <div className='about-two-col__left'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                            data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='about-two-col__img'>
                                 <img src='/img/events/corp-1.webp' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>
@@ -110,7 +117,9 @@ export default function PageEvents() {
                                 {/* <!-- <div className='btn btn_black'>Подробнее</div> --> */}
                             </div>
                         </div>
-                        <div className='about-two-col__right'>
+                        <div className='about-two-col__right'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                            data-aos-once={DEFAULTS.AOS.once} data-aos-delay='400'>
                             <picture className='about-two-col__img'>
                                 <img src='/img/events/corp-2.webp' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>

@@ -13,6 +13,7 @@ import BlockLoader from '@/components/BlockLoader'
 import { Rings } from 'react-loader-spinner'
 
 import RoomObject from '../components/objects/RoomObject'
+import { DEFAULTS } from 'defaults'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 // const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -65,19 +66,22 @@ export default function PageHotel(props: PageHotelProps) {
                     <div className='base-bg' data-scroll-section></div>
 
 
-                    <div id='HotelPlacement' className='page-hotel__placement hotel-placement' data-scroll-section>
+                    <div id='HotelPlacement' className='page-hotel__placement hotel-placement' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='hotel-placement__title' data-scroll>Размещение</span>
 
 
 
                         <PlazmaSlider key={'hotelPromoSlider'} data='hotelPromoSlider' />
 
-                        <span className='text' data-scroll>
+                        <span className='text' data-scroll
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             Вне зависимости от выбранного Вами варианта размещения, ваш отдых будет сопровождать уютная и
                             чистая территория.
                         </span>
 
-                        <span className='text' data-scroll>
+                        <span className='text' data-scroll
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             Место отлично подходит для
                             семейного отдыха на природе, романтических выходных,
                             торжественных и деловых мероприятий. </span>

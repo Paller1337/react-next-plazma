@@ -8,6 +8,7 @@ import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
 import Link from 'next/link'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 
 export default function PageBanquetHall() {
@@ -49,7 +50,9 @@ export default function PageBanquetHall() {
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
-                        <div className='big-p big-p_border container'>
+                        <div className='big-p big-p_border container'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                            data-aos-once={DEFAULTS.AOS.once}>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
                                 Наш банкетный зал - отличное место для особых событий и торжеств любого уровня.
@@ -121,7 +124,9 @@ export default function PageBanquetHall() {
                     </div>
 
 
-                    <div className='footnote container' data-scroll-section>
+                    <div className='footnote container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                        data-aos-once={DEFAULTS.AOS.once}>
                         <div className='text'>Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.</div>
                     </div>
                 </div >

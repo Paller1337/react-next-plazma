@@ -9,6 +9,7 @@ import img5 from '@/images/index/previews/5.jpg'
 import img6 from '@/images/index/previews/6.jpg'
 import img7 from '@/images/index/previews/7.jpg'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
 
 
 
@@ -54,7 +55,8 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
         <div className='preview-blocks__item-wrap'>
             <div className='preview-blocks__item'>
 
-                <div className='preview-blocks__preview-text'>
+                <div className='preview-blocks__preview-text'
+                    data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                     <span className='text-title'>{props.title}</span>
                     <span className='text'>{props.description}</span>
 
@@ -78,6 +80,6 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
                     </picture>
                 </div>
             </div>
-        </div>
+        </div >
     </>)
 }

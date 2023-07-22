@@ -100,7 +100,7 @@ export default function BookingPromo(props: any) {
                             setBnovoIsTarget(true)
 
                             if (document.contains(e.target) && !bnovoBlock.contains(e.target)) {
-                                console.log('target', bnovoIsTarget)
+                                // console.log('target', bnovoIsTarget)
                                 if (bnovoIsTarget) {
                                     bnovoInit()
                                 }

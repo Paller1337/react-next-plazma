@@ -12,6 +12,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Pagination } from 'swiper'
 import { useDeviceDetect } from '@/components/hooks/useDeviceDetect'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
+import copy from '@/components/functions/copy'
 // import { images } from 'imageImports'
 
 
@@ -198,13 +200,18 @@ export default function PageActiveLeisure() {
                     </div>
 
                     <div className='page-events__about-quatr about-quatr' data-scroll-section>
-                        <div className='about-quatr__wrapper'>
+                        <div className='about-quatr__wrapper'
+                            data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-quatr__text'>
                                 <h2>Уличные тренажеры</h2>
                                 <span>Оборудование, специально разработанное для тренировки на открытом воздухе.</span>
-                                <div className='btn btn_black'>Подробнее</div>
+                                {/* <div className='btn btn_black popover pop-top'
+                                    popover-data={'+7 (910) 168-17-61'}
+                                    onClick={() => copy('+79101681761', 'Номер скопирован.', { metric: 'number' })}>
+                                    Подробнее</div> */}
                             </div>
-                            <div className='about-quatr__image'>
+                            <div className='about-quatr__image'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                 {/* <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' /> */}
                                 <Image src={'/img/active-leisure/1.webp'} width={970} height={700} alt=''
                                     loader={vkCloudLoader}

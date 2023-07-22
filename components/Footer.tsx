@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
 import toast from 'react-hot-toast'
+import copy from './functions/copy'
 
 interface FooterProps {
 
@@ -11,33 +12,33 @@ interface FooterProps {
 
 
 export default function Footer(props: FooterProps) {
-    const copyNumber = async () => {
-        navigator.clipboard.writeText('+79101681761')
-        toast.success('Номер скопирован', {
-            duration: 3000,
-            style: {
-                fontSize: 15,
-                borderRadius: 0,
-                border: '1px solid #393939',
-                padding: '12px 18px'
-            },
-            position: 'top-center'
-        })
-    }
+    // const copyNumber = async () => {
+    //     navigator.clipboard.writeText('+79101681761')
+    //     toast.success('Номер скопирован', {
+    //         duration: 3000,
+    //         style: {
+    //             fontSize: 15,
+    //             borderRadius: 0,
+    //             border: '1px solid #393939',
+    //             padding: '12px 18px'
+    //         },
+    //         position: 'top-center'
+    //     })
+    // }
 
-    const copyAddress = async () => {
-        navigator.clipboard.writeText('Тульская область, г. Донской, ул. Герцена, д. 14')
-        toast.success('Адрес скопирован', {
-            duration: 3000,
-            style: {
-                fontSize: 15,
-                borderRadius: 0,
-                border: '1px solid #393939',
-                padding: '12px 18px'
-            },
-            position: 'top-center'
-        })
-    }
+    // const copyAddress = async () => {
+    //     navigator.clipboard.writeText('Тульская область, г. Донской, ул. Герцена, д. 14')
+    //     toast.success('Адрес скопирован', {
+    //         duration: 3000,
+    //         style: {
+    //             fontSize: 15,
+    //             borderRadius: 0,
+    //             border: '1px solid #393939',
+    //             padding: '12px 18px'
+    //         },
+    //         position: 'top-center'
+    //     })
+    // }
 
     return (
         <>
@@ -101,10 +102,13 @@ export default function Footer(props: FooterProps) {
                     </div>
 
                     <div className='footer__contact-container'>
-                        <span className='footer__contact-text copy-click address' onClick={() => copyAddress()}>Тульская область, г. Донской, ул. Герцена, д.
-                            14</span>
+                        <span className='footer__contact-text copy-click address'
+                            onClick={() => copy('Тульская область, г. Донской, ул. Герцена, д. 14', 'Адрес скопирован', { metric: 'address' })}
+                        >Тульская область, г. Донской, ул. Герцена, д. 14</span>
                         <Link href='#' className='footer__contact-link'>Политика конфидециальности</Link>
-                        <span className='footer__contact-text copy-click number' onClick={() => copyNumber()}>+7 (910) 168-17-61</span>
+                        <span className='footer__contact-text copy-click number'
+                            onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
+                        >+7 (910) 168-17-61</span>
                     </div>
                 </div>
             </div>
@@ -120,19 +124,20 @@ export default function Footer(props: FooterProps) {
                             Мы ответим на любые ваши вопросы
                         </span>
 
-                        <div className='btn btn_white'>Позвонить</div>
+                        <a className='btn btn_white' href='tel: +79101681761'>Позвонить</a>
 
                     </div>
 
                     <div className='social-container'>
-                        <div className='social-icon vk'></div>
-                        <div className='social-icon tg'></div>
-                        <div className='social-icon inst'></div>
+                        <Link className='social-icon vk' href='https://vk.com/park_hotel_plazma' target='blank' ></Link>
+                        <Link className='social-icon tg' href='https://t.me/plazmadonskoy' target='blank' ></Link>
+                        {/* <div className='social-icon inst'></div> */}
                     </div>
 
                     <div className='footer-mobile__contact-container'>
-                        <span className='footer-mobile__contact-text copy-click address' onClick={() => copyAddress()}>Тульская область, г. Донской, ул. Герцена, д.
-                            14</span>
+                        <span className='footer-mobile__contact-text copy-click address'
+                            onClick={() => copy('Тульская область, г. Донской, ул. Герцена, д. 14', 'Адрес скопирован', { metric: 'address' })}
+                        >Тульская область, г. Донской, ул. Герцена, д. 14</span>
                         <Link href='#' className='footer-mobile__contact-link'>Политика конфидециальности</Link>
                     </div>
                 </div>

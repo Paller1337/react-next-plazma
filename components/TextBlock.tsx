@@ -1,3 +1,4 @@
+import { DEFAULTS } from 'defaults'
 import { CSSProperties } from 'react'
 
 
@@ -21,7 +22,8 @@ interface TextBlockProps {
 export default function TextBlock(props: TextBlockProps) {
 
     return (<>
-        <div className={`text-section text-section_big ${props.className}`} style={props.style} data-scroll-section>
+        <div className={`text-section text-section_big ${props.className}`} style={props.style} data-scroll-section
+            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
             {props.title ? <span className={`${props.title.type}-title`}>{props.title.text}</span>
                 : <></>}
 

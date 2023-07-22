@@ -12,7 +12,18 @@ interface SportCalculatorProps {
     name?: string
 }
 
+interface humanInfo {
+    name?: string
+    phone?: string
+}
+
 export default function SportCalculator(props: SportCalculatorProps) {
+    // const [human, setHuman] = useState<humanInfo>({
+    //     name: '',
+    //     phone: '',
+    // })
+    const [error, setError] = useState(false)
+
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
@@ -44,13 +55,27 @@ export default function SportCalculator(props: SportCalculatorProps) {
 
 
     const handleSubmit = () => {
+        if (!name || !phone) {
+            toast.error('Заполните необходимые поля', {
+                duration: 3000,
+                style: {
+                    fontSize: 15,
+                    borderRadius: 0,
+                    border: '1px solid #393939',
+                    padding: '12px 18px'
+                }
+            });
+            setError(true)
+
+            return
+        }
         const data = {
             name,
             phone,
             message,
             result,
         };
-        console.log(data);
+        // console.log(data);
 
 
 
@@ -231,8 +256,12 @@ export default function SportCalculator(props: SportCalculatorProps) {
                 changeValue={setV}
             />
 
-            <InputText label='Имя' placeholder='Имя Фамилия' onChange={(e) => setName(e.target.value)} />
-            <InputText label='Телефон' placeholder='+7 (900) 000-00-00' onChange={(e) => setPhone(e.target.value)} />
+            <InputText label='Имя' placeholder='Имя Фамилия'
+                onChange={(e) => setName(e.target.value)} isError={error && !name ? true : false} />
+
+            <InputText label='Телефон' placeholder='+7 (900) 000-00-00'
+                onChange={(e) => setPhone(e.target.value)} isError={error && !phone ? true : false} />
+
             <InputTextarea label='Сообщение' placeholder='По желанию вы можете сразу описать свой вопрос, чтобы мы позвонили вам с готовым ответом.'
                 onChange={(e) => setMessage(e.target.value)} />
             <div className='btn btn_black' onClick={handleSubmit}>Позвоните мне</div>

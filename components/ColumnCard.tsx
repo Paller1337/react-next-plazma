@@ -5,6 +5,7 @@ import { LegacyRef, useEffect, useRef, useState } from 'react'
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults';
 interface ColumnCardProps {
     ref?: LegacyRef<HTMLDivElement>
     img: ColumnCardImageProps[]
@@ -51,7 +52,8 @@ export default function ColumnCard(props: ColumnCardProps) {
 
     return (<>
         <div ref={props.ref} className={`column-card ${props.inSlider ? 'slider-card' : ''}`}>
-            <div ref={containerRef} className='column-card__img'>
+            <div ref={containerRef} className='column-card__img'
+                data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <Swiper
                     {...({
                         spaceBetween: 0,
@@ -61,8 +63,6 @@ export default function ColumnCard(props: ColumnCardProps) {
                             clickable: true,
                             type: 'bullets',
                         },
-                        onSlideChange: () => console.log('slide change'),
-                        onSwiper: (swiper) => console.log(swiper),
                         width: swiperWidth,
                     } as any)}
                 >
@@ -73,7 +73,7 @@ export default function ColumnCard(props: ColumnCardProps) {
                     ) : ''}
                 </Swiper>
             </div>
-            <div className='column-card__text'>
+            <div className='column-card__text' data-aos="fade-zoom-in" data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <h3 className='column-card__title'>{props.title}</h3>
                 <span className='column-card__desc'>{props.desc}</span>
             </div>

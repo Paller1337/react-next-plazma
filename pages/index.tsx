@@ -12,6 +12,7 @@ import { useEffect } from 'react'
 
 import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
 
 // import aboutHotelImgMin from '@/images/index/about-hotel/min.png'
 // import aboutHotelImgMax from '@/images/index/about-hotel/max.png'
@@ -63,8 +64,9 @@ export default function PageIndex(props: PageIndexProps) {
           {/* <Header /> */}
           <div className='base-bg' data-scroll-section></div>
 
-          <div className='page-index__about-hotel about-hotel container' data-scroll-section>
-            <div className='about-hotel__wrapper'>
+          <div className='page-index__about-hotel about-hotel container' data-scroll-section >
+            <div className='about-hotel__wrapper'
+              data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
               <div className='about-hotel__about'>
                 <span className='about-hotel__text'>Парк-отель «PLAZMA»</span>
                 <span className='about-hotel__desc'>Парк-отель «Plazma» расположен в городе Донской Тульской области, в 230 км от Москвы. </span>
@@ -80,7 +82,8 @@ export default function PageIndex(props: PageIndexProps) {
             </div>
 
 
-            <div className='about-hotel__wrapper reverse'>
+            <div className='about-hotel__wrapper reverse'
+              data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
               <div className='page-aquatory__list'>
                 <span className='page-aquatory__list-title'>Парк-отель «PLAZMA» в цифрах:</span>
                 <ul>
@@ -202,7 +205,8 @@ export default function PageIndex(props: PageIndexProps) {
           </div>
 
 
-          <div className='page-index__geo index-geo container' data-scroll-section>
+          <div className='page-index__geo index-geo container' data-scroll-section
+            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
             <div className='index-geo__map'>
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A0188186de97a445d0d506425f4fd40ce6840238ccefe968d6d2b153b1b53cc45&amp;source=constructor"

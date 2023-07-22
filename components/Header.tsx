@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import svgVk from '/public/svg/vk.svg'
+import copy from './functions/copy'
 
 interface HeaderProps {
     darken?: boolean
@@ -67,13 +68,12 @@ export default function Header(props: HeaderProps) {
     }
 
 
-    const copyNumber = async (x: string) => {
-
-        await navigator.clipboard.writeText('+79101681761')
-        setTelNum('Скопировано')
-        const timeout = setTimeout(() => setTelNum(tel), 2000)
-        return () => clearTimeout(timeout)
-    }
+    // const copyNumber = async (x: string) => {
+    //     await navigator.clipboard.writeText('+79101681761')
+    //     setTelNum('Скопировано')
+    //     const timeout = setTimeout(() => setTelNum(tel), 2000)
+    //     return () => clearTimeout(timeout)
+    // }
 
     // return <>
     // </>
@@ -139,7 +139,13 @@ export default function Header(props: HeaderProps) {
                                 <object className='icon' data='svg/vk.svg' type='image/svg+xml' title='Мы ВКонтакте'>
                                     {/* <img src='/img/new-logo.svg' alt='' />  */}
                                 </object>
-                                <Link href='https://vk.com/park_hotel_plazma' />
+                                <Link href='https://vk.com/park_hotel_plazma' target='blank' />
+                            </span>
+                            <span className='menu__action-link'>
+                                <object className='icon' data='svg/tg.svg' type='image/svg+xml' title='Наш Телеграм'>
+                                    {/* <img src='/img/new-logo.svg' alt='' />  */}
+                                </object>
+                                <Link href='https://t.me/plazmadonskoy' target='blank' />
                             </span>
                             <span className='menu__action-link'>
                                 <object className='icon' data='/svg/phone.svg' type='image/svg+xml' title='Наш номер'>
@@ -148,7 +154,7 @@ export default function Header(props: HeaderProps) {
                                 <div className='popover pop-right'
                                     // href='tel: +790000000'
                                     popover-data={telNum}
-                                    onClick={() => copyNumber('+7 (910) 168-17-61')}
+                                    onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
                                 />
                             </span>
                         </div>

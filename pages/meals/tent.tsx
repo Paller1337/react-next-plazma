@@ -8,6 +8,7 @@ import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
 import Link from 'next/link'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 
 export default function PageTent() {
@@ -50,7 +51,9 @@ export default function PageTent() {
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
-                        <div className='big-p big-p_border container'>
+                        <div className='big-p big-p_border container'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                            data-aos-once={DEFAULTS.AOS.once}>
                             <span className='big-p__title'>Мы рады каждому гостю.</span>
                             <span className='big-p__desc'>
                                 Расположенный на полуострове, он предлагает неповторимую атмосферу и вид на водоем.

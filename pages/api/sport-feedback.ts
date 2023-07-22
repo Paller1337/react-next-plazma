@@ -27,9 +27,9 @@ function sendTelegramMessage(message) {
         body: JSON.stringify(data),
     })
         .then((response) => response.json())
-        .then((responseData) => {
-            console.log('Сообщение успешно отправлено:', responseData);
-        })
+        // .then((responseData) => {
+        //     console.log('Сообщение успешно отправлено:', responseData);
+        // })
         .catch((error) => {
             console.error('Ошибка отправки сообщения в Telegram:', error);
         });

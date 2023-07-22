@@ -18,6 +18,7 @@ import { Rings } from 'react-loader-spinner';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
 import vkCloudLoader from '@/mw/utils/imageLoader';
+import copy from './functions/copy';
 
 type PromoImage = 'active-leisure' | 'banquet-hall' | 'aquatory' | 'events' |
     'rest' | 'saunas' | 'smash' | 'hotel' | 'sports-camp' | 'tent'
@@ -58,19 +59,19 @@ export default function Promo(props: PromoProps) {
         height: 1056,
     }
 
-    const copyNumber = (x: string) => {
-        navigator.clipboard.writeText(x)
-        toast.success('Номер скопирован', {
-            duration: 3000,
-            style: {
-                fontSize: 15,
-                borderRadius: 0,
-                border: '1px solid #393939',
-                padding: '12px 18px'
-            },
-            position: 'top-center'
-        });
-    }
+    // const copyNumber = (x: string) => {
+    //     navigator.clipboard.writeText(x)
+    //     toast.success('Номер скопирован', {
+    //         duration: 3000,
+    //         style: {
+    //             fontSize: 15,
+    //             borderRadius: 0,
+    //             border: '1px solid #393939',
+    //             padding: '12px 18px'
+    //         },
+    //         position: 'top-center'
+    //     });
+    // }
 
     useEffect(() => {
         switch (props.image) {
@@ -212,7 +213,7 @@ export default function Promo(props: PromoProps) {
                     {props.btnGroup?.callbackBtn ?
                         <Link href='' className='btn btn_white popover pop-bottom'
                             popover-data={'+7 (910) 168-17-61'}
-                            onClick={() => copyNumber('+79101681761')}
+                            onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
                         >Позвонить</Link>
                         : <></>
                     }

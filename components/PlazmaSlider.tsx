@@ -5,6 +5,7 @@ import { getBase64ImageUrl } from '../middleware/utils/getBlurData';
 import { v4 } from 'uuid';
 import { TailSpin } from 'react-loader-spinner';
 import vkCloudLoader from '@/mw/utils/imageLoader';
+import { DEFAULTS } from 'defaults';
 
 interface PlazmaSliderProps {
     data: string;
@@ -89,7 +90,9 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
     }
 
     return (
-        <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll>
+        <div key={`${dataName}`} id="plazmaSlider" className="plazma-slider" data-scroll
+            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+            data-aos-once={DEFAULTS.AOS.once}>
             <div className="plazma-slider__content" ref={sliderContentRef} slider-content={data.name}>
                 <Image className="plazma-slider__item-fake-prev" height={1920} width={1056} src={data.images[data.images.length - 1]} alt='Plazma'
                     onClick={() => setActiveSlide(data.images.length - 1)} loader={vkCloudLoader}

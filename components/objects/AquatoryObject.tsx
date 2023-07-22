@@ -1,4 +1,5 @@
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
 import Image, { StaticImageData } from 'next/image'
 
 type priceCardSize = 'min' | 'med'
@@ -25,25 +26,29 @@ export interface AquatoryObjectProps {
 
 export default function AquatoryObject(data: AquatoryObjectProps) {
     return (<>
-        <div id={data.id} className='page-aquatory__object aquatory-object separator-after' data-scroll-section>
+        <div id={data.id} className='page-aquatory__object aquatory-object separator-after' data-scroll-section
+            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
 
-            <div className='text-section text-section_big'>
+            <div className='text-section text-section_big'
+                data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <span className='h2-title'>{data.title}</span>
                 <span className='text'>
                     {data.description}
                 </span>
             </div>
 
-            <div className='aquatory-object__photos'>
+            <div className='aquatory-object__photos'
+                data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 {data.images.map((x, i) =>
                     <picture key={i} className='aquatory-object__img'>
                         {/* <Image height={470} width={570} src={x} alt='' placeholder='blur' /> */}
-                        <Image height={470} width={570} src={x} alt='' loader={vkCloudLoader}/>
+                        <Image height={470} width={570} src={x} alt='' loader={vkCloudLoader} />
                     </picture>
                 )}
             </div>
 
-            <div className='aquatory-object__price'>
+            <div className='aquatory-object__price'
+                data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 {data.additionalText ?
                     <div className='aquatory-object__attention'>
                         <span className='text'>
@@ -67,7 +72,8 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 {data.attentionText ? <span className='attention'>{data.attentionText}</span> : ''}
             </div>
 
-            <div className='aquatory-object__include'>
+            <div className='aquatory-object__include'
+                data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <div className='aquatory-object__include-info'>
                     <div className='page-aquatory__list'>
                         <span className='page-aquatory__list-title'>Включено:</span>
@@ -90,7 +96,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
 
                 <picture className='aquatory-object__include-img'>
                     {/* <Image height={420} width={320} src={data.includedImg} alt='' placeholder='blur' /> */}
-                    <Image height={420} width={320} src={data.includedImg} alt='' loader={vkCloudLoader}/>
+                    <Image height={420} width={320} src={data.includedImg} alt='' loader={vkCloudLoader} />
                 </picture>
             </div>
 

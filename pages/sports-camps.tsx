@@ -16,6 +16,7 @@ import SportCalculator from '../components/SportCalculator'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Pagination } from 'swiper'
 import vkCloudLoader from '@/mw/utils/imageLoader'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 
 
@@ -59,7 +60,8 @@ export default function PageSportsCamps() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div className='page-events__welcome text-section text-section_big container' data-scroll-section>
+                    <div className='page-events__welcome text-section text-section_big container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
                         <span className='text'>
                             К 2023 году мы стали площадкой для спортивных сборов для более чем 100 команд,
@@ -70,7 +72,8 @@ export default function PageSportsCamps() {
 
 
                     <div className='page-index__about-hotel about-hotel container' data-scroll-section>
-                        <div className='about-hotel__wrapper'>
+                        <div className='about-hotel__wrapper'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-hotel__about'>
                                 <span className='about-hotel__text'>Качество и комфорт</span>
                                 <span className='about-hotel__desc'>В наших спортивных объектах проводится регулярный
@@ -85,7 +88,8 @@ export default function PageSportsCamps() {
                         </div>
 
 
-                        <div className='about-hotel__wrapper reverse'>
+                        <div className='about-hotel__wrapper reverse'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-hotel__about'>
                                 <span className='about-hotel__desc'>Мы как никто понимаем, что качество спортивных
                                     объектов является ключом к успешному спортивному мероприятию, именно поэтому мы
@@ -110,7 +114,8 @@ export default function PageSportsCamps() {
 
 
                     <div className='meals-preview-cards container'>
-                        <div className='meals-preview-card'>
+                        <div className='meals-preview-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img1Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/1.webp'} alt=''
@@ -121,7 +126,8 @@ export default function PageSportsCamps() {
                             </span>
                         </div>
 
-                        <div className='meals-preview-card'>
+                        <div className='meals-preview-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img2Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/2.webp'} alt=''
@@ -132,7 +138,8 @@ export default function PageSportsCamps() {
                             </span>
                         </div>
 
-                        <div className='meals-preview-card'>
+                        <div className='meals-preview-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img3Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/3.webp'} alt=''
@@ -143,7 +150,8 @@ export default function PageSportsCamps() {
                             </span>
                         </div>
 
-                        <div className='meals-preview-card'>
+                        <div className='meals-preview-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
                                 {/* <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/4.webp'} alt=''
@@ -253,7 +261,8 @@ export default function PageSportsCamps() {
                     </div> */}
 
 
-                    <div className='page-sports-camps__calculate container'>
+                    <div className='page-sports-camps__calculate container'
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <TextBlock title={{ type: 'h2', text: 'Сколько стоят сборы в «PLAZMA»' }}
                             style={{ paddingBottom: 70, paddingTop: 70 }}
                         />

@@ -56,7 +56,7 @@ export default function MobileModal(props: MobileModalProps) {
     }, [props.calculate])
 
     useEffect(() => {
-        console.log('display change')
+        // console.log('display change')
         if (window && document !== null) {
             const htmlElement = document.getElementsByTagName('html')[0]
             const nextElement = document.getElementById('__next') as HTMLElement
@@ -164,7 +164,7 @@ export default function MobileModal(props: MobileModalProps) {
         setOpenState(false)
         setWrapState(false)
         setPosition(100)
-        console.log('close')
+        // console.log('close')
         //Это для того, чтобы модалка скрывалась после того, как завершится transition
         if (modalContent.current) {
             const modContent = modalContent.current as HTMLElement

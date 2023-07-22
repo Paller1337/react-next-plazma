@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import { saunaObjData } from '../data/saunaObj'
 import SaunaObject from '../components/objects/SaunaObject'
 import Promo from '../components/Promo'
+import { DEFAULTS } from 'defaults'
 // import { images } from 'imageImports'
 export default function PageSauna() {
 
@@ -46,7 +47,9 @@ export default function PageSauna() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div className='page-saunas__welcome text-section text-section_big container' data-scroll-section>
+                    <div className='page-saunas__welcome text-section text-section_big container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                        data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>Сауна «PLAZMA»</span>
                         {/* <span className='text'>
                         </span> */}
@@ -175,7 +178,9 @@ export default function PageSauna() {
                         </div>
                     </div > */}
 
-                    <div className='page-saunas__attention container' data-scroll-section>
+                    <div className='page-saunas__attention container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                        data-aos-once={DEFAULTS.AOS.once}>
                         <div className='text-column'>
                             <span className='text-normal'>
                                 Бронирование бани осуществляется на основании задатка,внесённого гостем заблаговременно.
