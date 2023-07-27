@@ -10,6 +10,7 @@ interface ColumnCardProps {
     }
     title?: string
     desc?: string
+    italicDesc?: string
     reverse?: boolean
 }
 
@@ -33,6 +34,11 @@ export default function RowCard(props: ColumnCardProps) {
                     : <></>}
                 {props.desc ?
                     <span className='row-card__desc'>{props.desc}</span>
+                    : <></>}
+                {props.italicDesc ?
+                    <span className='column-card__desc' style={{ fontStyle: 'italic', fontWeight: '600' }}>
+                        {props.italicDesc}
+                    </span>
                     : <></>}
             </div>
         </div>

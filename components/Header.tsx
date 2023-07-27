@@ -18,7 +18,7 @@ const headerItems = [
         link: '/',
     },
     {
-        name: 'Гостиница',
+        name: 'Проживание',
         link: '/hotel',
     },
     {

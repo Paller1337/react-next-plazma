@@ -7,10 +7,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults';
 interface ColumnCardProps {
-    ref?: LegacyRef<HTMLDivElement>
     img: ColumnCardImageProps[]
     title?: string
     desc?: string
+    italicDesc?: string
     inSlider?: boolean
 }
 
@@ -51,7 +51,7 @@ export default function ColumnCard(props: ColumnCardProps) {
     }, [containerRef.current])
 
     return (<>
-        <div ref={props.ref} className={`column-card ${props.inSlider ? 'slider-card' : ''}`}>
+        <div className={`column-card ${props.inSlider ? 'slider-card' : ''}`}>
             <div ref={containerRef} className='column-card__img'
                 data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <Swiper
@@ -75,6 +75,11 @@ export default function ColumnCard(props: ColumnCardProps) {
             </div>
             <div className='column-card__text' data-aos="fade-zoom-in" data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <h3 className='column-card__title'>{props.title}</h3>
+                {props.italicDesc ?
+                    <span className='column-card__desc' style={{ fontStyle: 'italic', fontWeight: '600' }}>
+                        {props.italicDesc}
+                    </span>
+                    : <></>}
                 <span className='column-card__desc'>{props.desc}</span>
             </div>
         </div >

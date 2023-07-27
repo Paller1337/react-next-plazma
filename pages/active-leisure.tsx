@@ -7,9 +7,9 @@ import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
 // import { isMobile, MobileView, BrowserView } from 'react-device-detect'
-import { FreeMode, Pagination } from 'swiper'
+import { FreeMode, Navigation, Pagination } from 'swiper'
 import { useDeviceDetect } from '@/components/hooks/useDeviceDetect'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
@@ -62,11 +62,11 @@ export default function PageActiveLeisure() {
             >
                 <SwiperSlide>
                     <ColumnCard
-                        ref={colCardRef}
                         title='площадка с резиновым покрытием'
                         desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
                                             баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                                             экологичность. Идеально подходит для детей и взрослых.`}
+                        italicDesc={`Цена: от 700 руб/час`}
                         img={[
                             { h: 770, w: 570, src: '/img/active-leisure/col-1/1.webp' },
                             { h: 770, w: 570, src: '/img/active-leisure/col-1/2.webp' },
@@ -79,28 +79,28 @@ export default function PageActiveLeisure() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <ColumnCard
-                        title='игровая площадка для детей'
-                        desc={`Безопасная игровая площадка с разными развлечениями 
-                                            для детей. Качественное оборудование, способствующее активности 
-                                            и творчеству. Там создается дружба и хорошее настроение`}
+                        title='площадка для пляжных видов спорта'
+                        desc={`Отличное место для пляжного волейбола, футбола и других активных 
+                                            игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
+                                            или просто повесилиться с друзьями.`}
+                        italicDesc={`Цена: от 700 руб/час`}
                         img={[
-                            { h: 770, w: 570, src: '/img/active-leisure/col-2/1.webp' },
-                            { h: 770, w: 570, src: '/img/active-leisure/col-2/2.webp' },
-                            { h: 770, w: 570, src: '/img/active-leisure/col-2/3.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-3/3.webp' },
                         ]}
                         inSlider
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <ColumnCard
-                        title='площадка для пляжных видов спорта'
-                        desc={`Отличное место для пляжного волейбола, футбола и других активных 
-                                            игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
-                                            или просто повесилиться с друзьями.`}
+                        title='Уличные тренажеры'
+                        desc={`Оборудование, специально разработанное для тренировки на открытом воздухе.`}
+                        italicDesc={`Цена: бесплатно`}
                         img={[
-                            { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
-                            { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
-                            { h: 770, w: 570, src: '/img/active-leisure/col-3/3.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-2/1.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-2/2.webp' },
+                            { h: 770, w: 570, src: '/img/active-leisure/col-2/3.webp' },
                         ]}
                         inSlider
                     />
@@ -115,6 +115,7 @@ export default function PageActiveLeisure() {
                 desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
                                 баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                                 экологичность. Идеально подходит для детей и взрослых.`}
+                italicDesc={`Цена: от 700 руб/час`}
                 img={[
                     { h: 770, w: 570, src: '/img/active-leisure/col-1/1.webp' },
                     { h: 770, w: 570, src: '/img/active-leisure/col-1/2.webp' },
@@ -125,10 +126,22 @@ export default function PageActiveLeisure() {
             />
 
             <ColumnCard
-                title='игровая площадка для детей'
-                desc={`Безопасная игровая площадка с разными развлечениями 
-                                для детей. Качественное оборудование, способствующее активности 
-                                и творчеству. Там создается дружба и хорошее настроение`}
+                title='площадка для пляжных видов спорта'
+                desc={`Отличное место для пляжного волейбола, футбола и других активных 
+                                игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
+                                или просто повесилиться с друзьями.`}
+                italicDesc={`Цена: от 700 руб/час`}
+                img={[
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
+                    { h: 770, w: 570, src: '/img/active-leisure/col-3/3.webp' },
+                ]}
+            />
+
+            <ColumnCard
+                title='Уличные тренажеры'
+                desc={`Оборудование, специально разработанное для тренировки на открытом воздухе.`}
+                italicDesc={`Цена: бесплатно`}
                 img={[
                     { h: 770, w: 570, src: '/img/active-leisure/col-2/1.webp' },
                     { h: 770, w: 570, src: '/img/active-leisure/col-2/2.webp' },
@@ -136,17 +149,6 @@ export default function PageActiveLeisure() {
                 ]}
             />
 
-            <ColumnCard
-                title='площадка для пляжных видов спорта'
-                desc={`Отличное место для пляжного волейбола, футбола и других активных 
-                                игр на песке. На ней вы сможете провести товарищеский матч, соревнования 
-                                или просто повесилиться с друзьями.`}
-                img={[
-                    { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
-                    { h: 770, w: 570, src: '/img/active-leisure/col-3/3.webp' },
-                ]}
-            />
         </div>
 
     useEffect(() => {
@@ -199,24 +201,92 @@ export default function PageActiveLeisure() {
                         </span>
                     </div>
 
+
+
                     <div className='page-events__about-quatr about-quatr' data-scroll-section>
                         <div className='about-quatr__wrapper'
                             data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-quatr__text'>
-                                <h2>Уличные тренажеры</h2>
-                                <span>Оборудование, специально разработанное для тренировки на открытом воздухе.</span>
+                                <h2>игровая площадка для детей</h2>
+                                <span>Безопасная игровая площадка с разными развлечениями
+                                    для детей. Качественное оборудование, способствующее активности
+                                    и творчеству. Там создается дружба и хорошее настроение</span>
                                 {/* <div className='btn btn_black popover pop-top'
                                     popover-data={'+7 (910) 168-17-61'}
                                     onClick={() => copy('+79101681761', 'Номер скопирован.', { metric: 'number' })}>
                                     Подробнее</div> */}
                             </div>
-                            <div className='about-quatr__image'
+                            {/* <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                                {/* <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' /> */}
-                                <Image src={'/img/active-leisure/1.webp'} width={970} height={700} alt=''
-                                    loader={vkCloudLoader}
-                                />
+                                <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' />
+
+                            </div> */}
+                            <div className='about-quatr__slider'>
+                                <Swiper
+                                    {...({
+                                        modules: [FreeMode, Pagination, Navigation],
+                                        navigation: {
+                                            enable: true
+                                        },
+                                        pagination: {
+                                            enabled: true
+                                        },
+                                        spaceBetween: 20,
+                                        slidesPerView: 1,
+                                        // breakpoints: {
+                                        //     1: {
+                                        //         centeredSlides: false,
+                                        //         enabled: true
+                                        //     },
+                                        //     420: {
+                                        //         enabled: true
+                                        //     },
+                                        //     768: {
+                                        //         centeredSlides: true,
+                                        //         enabled: true
+                                        //     },
+                                        // },
+
+                                    } as SwiperProps)}
+                                >
+                                    <SwiperSlide>
+                                        <div style={{ position: 'relative', display: 'flex' }}>
+                                            <Image src={'/img/active-leisure/quatr-1/1.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div style={{ position: 'relative', display: 'flex' }}>
+                                            <Image src={'/img/active-leisure/quatr-1/2.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div style={{ position: 'relative', display: 'flex' }}>
+                                            <Image src={'/img/active-leisure/quatr-1/3.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div style={{ position: 'relative', display: 'flex' }}>
+                                            <Image src={'/img/active-leisure/quatr-1/4.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div style={{ position: 'relative', display: 'flex' }}>
+                                            <Image src={'/img/active-leisure/quatr-1/5.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
+
                         </div>
                     </div>
 
@@ -234,6 +304,7 @@ export default function PageActiveLeisure() {
                             песком. Глубина песка 40 см, фракция 0.1-0.63. В зале 4 пляжные площадки с местом для забега, 
                             2 раздевалки, трибуны на 100 человек. В летний период у нас работает 7 открытых площадок для 
                             пляжного волейбола с кварцевым песком.`}
+                            italicDesc={`Цена: от 800 до 2000 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
                             img={{ w: 770, h: 570, src: '/img/active-leisure/row-1.webp' }}
                         />
@@ -243,6 +314,7 @@ export default function PageActiveLeisure() {
                             desc={`Размер манежа составляет 25х44 метра, высота — 11 метров. Зал предназначен для мини-футбола, 
                             волейбола, баскетбола, танцев, гимнастики, единоборств. В манеже 2 раздевалки на 60 человек, 2 
                             кабинета для тренеров, трибуны и новейший мобильный инвентарь.`}
+                            italicDesc={`Цена: до 2500 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
                             img={{ w: 770, h: 570, src: '/img/active-leisure/row-2.webp' }}
                         />
@@ -251,6 +323,7 @@ export default function PageActiveLeisure() {
                             title='Теннисный корт'
                             desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
                             хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
+                            italicDesc={`Цена: от 1400 до 1700 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
                             img={{ w: 770, h: 570, src: '/img/active-leisure/row-3.webp' }}
                         />

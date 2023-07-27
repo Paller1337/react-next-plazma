@@ -6,12 +6,11 @@ type Data = {
 }
 
 
-const BOT_TOKEN = '6367007621:AAHTbiLDTTSQ-cDKa9NW3kaKcj2PoLUUvEg'; // Замените на ваш токен бота
+const BOT_TOKEN = process.env.TG_BOT_TOKEN
 
 
-// Функция для отправки сообщения в Telegram
 function sendTelegramMessage(message) {
-    const chatId = '-1001699514488'; // Замените на ваш chat_id (ID чата, куда хотите отправить сообщение)
+    const chatId = '-1001699514488'; // chat_id 
 
     const data = {
         chat_id: chatId,
@@ -43,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         port: 465,
         secure: true,
         auth: {
-            user: 'noreply@kplazma.ru',
+            user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS
         }
     });
