@@ -1,29 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../components/Button'
+import { useEffect, useState } from 'react'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import RowCard from '../components/RowCard'
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
-// import { isMobile, MobileView, BrowserView } from 'react-device-detect'
 import { FreeMode, Navigation, Pagination } from 'swiper'
 import { useDeviceDetect } from '@/components/hooks/useDeviceDetect'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import copy from '@/components/functions/copy'
-// import { images } from 'imageImports'
 
 
 
 
 export default function PageActiveLeisure() {
     const [objectsContent, setObjectsContent] = useState<JSX.Element>()
-    const colCardRef = useRef(null)
-
-
     const { isMobile, isDesktop } = useDeviceDetect()
 
     const mobileObjects =
@@ -183,8 +175,6 @@ export default function PageActiveLeisure() {
 
             <main className='page page-events'>
                 <div className='relative main-wrap' data-scroll-container>
-
-
                     <PromoMin
                         image='active-leisure'
                         title='АКТИВНЫЙ ОТДЫХ В ПАРК-ОТЕЛЕ PLAZMA'
@@ -200,8 +190,6 @@ export default function PageActiveLeisure() {
                             Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.
                         </span>
                     </div>
-
-
 
                     <div className='page-events__about-quatr about-quatr' data-scroll-section>
                         <div className='about-quatr__wrapper'
@@ -290,14 +278,9 @@ export default function PageActiveLeisure() {
                         </div>
                     </div>
 
-
-
-
                     {objectsContent}
 
-
                     <div className='row-cards--wrapper container'>
-
                         <RowCard
                             title='пляжный корт'
                             desc={`Первый в Тульской области крытый зал для пляжных видов спорта с кварцевым подогреваемым 
@@ -328,11 +311,7 @@ export default function PageActiveLeisure() {
                             img={{ w: 770, h: 570, src: '/img/active-leisure/row-3.webp' }}
                         />
                     </div>
-
-
                 </div >
-
-                {/* <Footer /> */}
             </main >
 
         </>
