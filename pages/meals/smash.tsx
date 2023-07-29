@@ -39,30 +39,10 @@ export default function PageSmash() {
 
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
-
-                    {/* <Promo imgUrl={images.backgrounds.imghotelSmashPng} /> */}
-
                     <Promo image='smash' />
-
                     <div className='base-bg' data-scroll-section></div>
-
+                    
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
-                        {/* <div className='big-p big-p_border container'>
-                            <span className='big-p__title'>Мы рады каждому гостю.</span>
-                            <span className='big-p__desc'>
-                                Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце
-                                Бирмингема, штат Мичиган, в викторианском особняке Пибоди. Шеф-повар Ллойд Робертс
-                                привносит с собой многолетний опыт и возглавляет команду кухни с инновациями и
-                                превосходной техникой. Adachi предлагает множество гастрономических приключений с
-                                множеством маленьких и больших тарелок, фирменными коктейлями и полным суши-баром,
-                                оборудованным блюдами сашими и нигири, привезенными из Японии.
-                            </span>
-
-                            <div className='btn btn_black big-p__btn'>Наше меню</div>
-                        </div> */}
-
-
-
                         <div className='rest-welcome__work-time worktime-section mb container'>
                             <div className='worktime-section__about'
                                 data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration}

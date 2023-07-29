@@ -1,29 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
-import RowCard from '../components/RowCard'
 import TextBlock from '../components/TextBlock'
-import InputRange from '../components/form/InputRange'
-import InputText from '../components/form/InputText'
-import InputSelect from '../components/form/InputSelect'
-import InputRadio from '../components/form/InputRadio'
 import SportCalculator from '../components/SportCalculator'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Pagination } from 'swiper'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
-// import { images } from 'imageImports'
-
-
-
 
 export default function PageSportsCamps() {
-
     return (
         <>
             <Head>
@@ -268,12 +254,8 @@ export default function PageSportsCamps() {
                         />
 
                         <SportCalculator />
-
                     </div>
-
                 </div >
-
-                {/* <Footer /> */}
             </main>
 
         </>

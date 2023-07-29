@@ -1,9 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../components/Button'
 import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
@@ -13,11 +9,8 @@ import { FreeMode, Lazy, Navigation, Pagination } from 'swiper'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 
-// import { images } from 'imageImports'
+
 export default function PageAquatory() {
-
-
-
     return (
         <>
             <Head>
@@ -43,23 +36,6 @@ export default function PageAquatory() {
 
             <main className='page page-aquatory'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <div className='main__promo' data-scroll-section>
-                        <Header />
-                        <div className="main__video-wrapper">
-                            <div className="main__video-box">
-                                <div className='main__welcome-bg welcome-aquatory'></div>
-                                <div className='main__video-overlay'></div>
-                            </div>
-                        </div>
-                        <div className='main__promo-logo'>
-                            <h1>
-                                <span>парк-отель</span>
-                                <span>plazma</span>
-                            </h1>
-                        </div>
-                    </div> */}
-
-                    {/* <Promo imgUrl={images.backgrounds.imghotelAquatoryPng} /> */}
                     <Promo image='aquatory' />
 
                     <div className='base-bg' data-scroll-section></div>
@@ -82,7 +58,6 @@ export default function PageAquatory() {
                                     родители с удовольствием жарят шашлык на мангале, а бабушки и дедушки могут отдохнуть в тени под соснами, наслаждаясь природой.
                                 </span>
                             </div>
-
 
                             {/* <picture className='img-big'>
                                 <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt='' />
@@ -112,8 +87,6 @@ export default function PageAquatory() {
                                             1100: {
                                                 slidesPerView: 1,
                                                 initialSlide: 1,
-                                                // enabled: false,
-                                                // onchange: (swiper) => swiper.update()
                                             },
                                         },
 
@@ -134,13 +107,11 @@ export default function PageAquatory() {
                         <div className='promo-info__bottom'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='img-med'>
-                                {/* <Image height={470} width={760} src={images.aquatory.img2Png} alt='' placeholder='blur' /> */}
                                 <Image height={470} width={760} src={'/img/aquatory/2.webp'} alt=''
                                     loader={vkCloudLoader} />
                             </picture>
 
                             <picture className='img-low'>
-                                {/* <Image height={470} width={370} src={images.aquatory.img3Png} alt='' placeholder='blur' /> */}
                                 <Image height={470} width={370} src={'/img/aquatory/3.webp'} alt=''
                                     loader={vkCloudLoader} />
                             </picture>
@@ -194,7 +165,6 @@ export default function PageAquatory() {
                         </div>
 
                         <picture className='page-aquatory__price-img'>
-                            {/* <Image width={1170} height={700} src={images.aquatory.img5Png} alt='' placeholder='blur' /> */}
                             <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' loader={vkCloudLoader} />
                         </picture>
                     </div>
@@ -262,7 +232,6 @@ export default function PageAquatory() {
                             </div>
 
                             <picture className='aquatory-props__img'>
-                                {/* <Image width={1170} height={660} src={images.aquatory.img6Png} alt='' placeholder='blur' /> */}
                                 <Image width={1170} height={660} src={'/img/aquatory/6.webp'} alt='' loader={vkCloudLoader} />
                             </picture>
                         </div>
@@ -270,7 +239,6 @@ export default function PageAquatory() {
                         <div className='aquatory-props__second'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='aquatory-props__img'>
-                                {/* <Image width={1170} height={638} src={images.aquatory.img7Png} alt='' placeholder='blur' /> */}
                                 <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' loader={vkCloudLoader} />
                             </picture>
 
@@ -287,8 +255,6 @@ export default function PageAquatory() {
                                     <li className='page-aquatory__list-item'>Масла для загара</li>
                                     <li className='page-aquatory__list-item'>Для игры в волейбол имеются мячи (на прокат)</li>
                                 </ul>
-
-                                {/* <span className='text-normal'>На территории работают аттестованные охранники-спасатели.</span> */}
                             </div>
                         </div>
                     </div>

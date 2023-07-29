@@ -94,21 +94,6 @@ export default function PageHotel(props: PageHotelProps) {
 
                         <div className='hotel-rooms__content' data-scroll>
                             {rooms.map(x =>
-                                // <Suspense
-                                //     key={'sus-room-' + x.id.toString()}
-                                //     fallback={
-                                //         <Rings
-                                //             height="80"
-                                //             width="80"
-                                //             color="#262626"
-                                //             radius="6"
-                                //             wrapperStyle={{}}
-                                //             wrapperClass=""
-                                //             visible={true}
-                                //             ariaLabel="rings-loading"
-                                //         />
-                                //     }>
-
                                 <RoomObject
                                     key={'room-' + x.id.toString()}
                                     id={x.id}
@@ -120,7 +105,6 @@ export default function PageHotel(props: PageHotelProps) {
                                     attributes={x.attributes}
                                     amenities={x.amenities}
                                 />
-                                // </Suspense>
                             )}
                         </div>
                     </div>

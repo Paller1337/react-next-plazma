@@ -6,11 +6,9 @@ import { saunaObjData } from '../data/saunaObj'
 import SaunaObject from '../components/objects/SaunaObject'
 import Promo from '../components/Promo'
 import { DEFAULTS } from 'defaults'
-// import { images } from 'imageImports'
+
+
 export default function PageSauna() {
-
-
-
     return (
         <>
             <Head>
@@ -39,8 +37,6 @@ export default function PageSauna() {
             <main className='page page-saunas'>
                 <div className='relative main-wrap' data-scroll-container>
 
-                    {/* <Promo imgUrl={images.backgrounds.imghotelSaunasPng} bg='welcome-saunas' /> */}
-
                     <Promo image='saunas' bg='welcome-saunas'
                         btnGroup={{ text: 'Уточнить наличие свободных бань или забронировать', callbackBtn: true }}
                     />
@@ -51,8 +47,6 @@ export default function PageSauna() {
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
                         data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>Сауна «PLAZMA»</span>
-                        {/* <span className='text'>
-                        </span> */}
                         <span className='text'>
                             Мы приглашаем вас в наш парк-отель, где каждый посетитель является гостем, а каждая сауна и баня
                             - уголком покоя и гармонии. Будьте готовы окунуться в исцеляющую атмосферу, которая наполнит вас
@@ -71,112 +65,6 @@ export default function PageSauna() {
                             sliderData={x.sliderData}
                         />
                     )}
-                    {/* <div className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
-                        <div className='big-p big-p_border-top container'>
-                            <span className='big-p__title'>Сауна «Белая ночь»</span>
-                            <span className='big-p__desc'>
-                                Баня на дровах. Бассейн 6м х 3м с противотоком. Ледяная купель +4°C. Комфортная зона отдыха
-                                с большим столом.<br />
-                                Холодильник, микроволновая печь и необходимая посуда. Открытая веранда с мангалом. <br />
-                            </span>
-
-                            <div className='big-p__attr'>
-                                <span className='big-p__attr-title'>Стоимость:</span>
-                                <div className='big-p__attr-desc'>
-                                    <span>Будние дни с 8:00 до 17:00 – 1400 р/час</span>
-                                    <span>Выходные и будни после 17:00 – 1600 р/час</span>
-                                </div>
-                            </div>
-
-                            <div className='big-p__attr'>
-                                <span className='big-p__attr-title'>Вместимость:</span>
-                                <div className='big-p__attr-desc'>
-                                    <span>В стоимость входит 6 взрослых + 4 ребенка (0 - 12 лет). <br />
-                                        Максимальное количество взрослых - 10 (за дополнительную плату). <br />
-                                        Доплата - 250 р/час с человека</span>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <PlazmaSlider data='saunaWhiteNight' />
-
-                        <div className='btn-container btn-container_go-up'>
-                            <div className='btn btn_black'>Забронировать</div>
-                        </div>
-                    </div >
-
-                    <div className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
-                        <div className='big-p big-p_border-top container'>
-                            <span className='big-p__title'>Баня на дровах «Тысяча и одна ночь» с турецким хамамом</span>
-                            <span className='big-p__desc'>
-                                Баня на дровах и турецкий хамам. Бассейн 6м х 3м с противотоком. Комфортная зона отдыха с
-                                большим столом.<br />
-                                Холодильник, микроволновая печь и необходимая посуда. Открытая веранда с мангалом.<br />
-                            </span>
-
-                            <div className='big-p__attr'>
-                                <span className='big-p__attr-title'>Стоимость:</span>
-                                <div className='big-p__attr-desc'>
-                                    <span>Будние дни с 8:00 до 17:00 – 1800 р/час</span>
-                                    <span>Выходные и будни после 17:00 – 1600 р/час</span>
-                                </div>
-                            </div>
-
-                            <div className='big-p__attr'>
-                                <span className='big-p__attr-title'>Вместимость:</span>
-                                <div className='big-p__attr-desc'>
-                                    <span>В стоимость входит 6 взрослых + 4 ребенка (0 - 12 лет). <br />
-                                        Максимальное количество взрослых - 10 (за дополнительную плату). <br />
-                                        Доплата - 250 р/час с человека</span>
-                                </div >
-                            </div >
-                            
-                        </div >
-
-                        <PlazmaSlider data='sauna1001Night' />
-
-                        <div className='btn-container btn-container_go-up'>
-                            <div className='btn btn_black'>Забронировать</div>
-                        </div>
-                    </div>
-
-                    <div className='page-saunas__sauna-info text-section text-section_med separator-after' data-scroll-section>
-                        <div className='big-p big-p_border-top container'>
-                            <span className='big-p__title'>Баня на дровах «Аква-люкс»</span>
-                            <span className='big-p__desc'>
-                                Баня на дровах с большим бассейном 10м х 5м с зоной джакузи. Ледяная купель +4°C. Комфортная
-                                зона отдыха с большим столом. Холодильник, микроволновая печь и необходимая посуда. Открытая
-                                веранда с мангалом. <br />
-                            </span>
-
-                            <div className='big-p__attr'>
-                                <span className='big-p__attr-title'>Стоимость:</span>
-                                <div className='big-p__attr-desc'>
-                                    <span>Будние дни с 8:00 до 17:00 – 1600 р/час</span>
-                                    <span>Выходные и будни после 17:00 – 1900 р/час</span>
-                                </div>
-                            </div>
-
-                            <div className='big-p__attr'>
-                                <span className='big-p__attr-title'>Вместимость:</span>
-                                <div className='big-p__attr-desc'>
-                                    <span>В стоимость входит 6 взрослых + 4 ребенка (0 - 12 лет). <br />
-                                        Максимальное количество взрослых - 10 (за дополнительную плату). <br />
-                                        Доплата - 250 р/час с человека</span>
-                                </div>
-                            </div >
-
-                        </div >
-
-                        <PlazmaSlider data='saunaAquaLux' />
-
-
-                        <div className='btn-container btn-container_go-up'>
-                            <div className='btn btn_black'>Забронировать</div>
-                        </div>
-                    </div > */}
 
                     <div className='page-saunas__attention container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
@@ -204,7 +92,6 @@ export default function PageSauna() {
                         </div>
                     </div>
                 </div >
-                {/* <Footer /> */}
             </main>
         </>
 

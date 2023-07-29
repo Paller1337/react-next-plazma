@@ -1,18 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-// import PromoBackground from '../../components/PromoBackground'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../../components/Button'
 import Link from 'next/link'
 import vkCloudLoader from '@/mw/utils/imageLoader'
-// import { images } from 'imageImports'
+
 
 export default function PageMeals() {
-
-
-
     return (
         <>
             <Head>
@@ -45,7 +37,6 @@ export default function PageMeals() {
 
                                 <Link className='page-meals__card' href='meals/restaurant'>
                                     <div className='page-meals__card-image'>
-                                        {/* <Image src={images.meals.img2Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
                                         <Image src={'/img/meals/2.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
@@ -57,7 +48,6 @@ export default function PageMeals() {
 
                                 <Link className='page-meals__card' href='meals/smash'>
                                     <div className='page-meals__card-image'>
-                                        {/* <Image src={images.meals.img3Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
                                         <Image src={'/img/meals/3.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
@@ -72,7 +62,6 @@ export default function PageMeals() {
                             <div className='page-meals__cards-section'>
                                 <Link className='page-meals__card' href='meals/banquet-hall'>
                                     <div className='page-meals__card-image'>
-                                        {/* <Image src={images.meals.img1Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
                                         <Image src={'/img/meals/1.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
@@ -84,7 +73,6 @@ export default function PageMeals() {
 
                                 <Link className='page-meals__card' href='meals/tent'>
                                     <div className='page-meals__card-image'>
-                                        {/* <Image src={images.meals.img4Jpg} width={0} height={0} alt='' placeholder='blur' /> */}
                                         <Image src={'/img/meals/4.webp'} width={670} height={600} alt='' loader={vkCloudLoader}/>
                                     </div>
                                     <div className='page-meals__card-dimmer'></div>
@@ -94,17 +82,10 @@ export default function PageMeals() {
                                     <div className='btn btn_white'>Подробнее</div>
                                 </Link>
                             </div>
-
-
-
                         </div>
-
                     </div>
-
                     <div className='base-bg' data-scroll-section></div>
-
                 </div >
-                {/* <Footer /> */}
             </main>
         </>
 

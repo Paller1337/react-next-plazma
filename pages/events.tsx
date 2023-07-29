@@ -1,18 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../components/Button'
 import PromoMin from '../components/PromoMin'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
-// import { images } from 'imageImports'
+
 
 export default function PageEvents() {
-
-
-
     return (
         <>
             <Head>

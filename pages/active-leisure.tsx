@@ -251,36 +251,36 @@ export default function PageActiveLeisure() {
                                 >
                                     <SwiperSlide>
                                         <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'/img/active-leisure/quatr-1/1.webp'} width={970} height={700} alt=''
-                                                // loader={vkCloudLoader}
+                                            <Image src={'img/active-leisure/quatr-1/1.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
                                             />
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'/img/active-leisure/quatr-1/2.webp'} width={970} height={700} alt=''
-                                                // loader={vkCloudLoader}
+                                            <Image src={'img/active-leisure/quatr-1/2.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
                                             />
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'/img/active-leisure/quatr-1/3.webp'} width={970} height={700} alt=''
-                                                // loader={vkCloudLoader}
+                                            <Image src={'img/active-leisure/quatr-1/3.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
                                             />
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'/img/active-leisure/quatr-1/4.webp'} width={970} height={700} alt=''
-                                                // loader={vkCloudLoader}
+                                            <Image src={'img/active-leisure/quatr-1/4.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
                                             />
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'/img/active-leisure/quatr-1/5.webp'} width={970} height={700} alt=''
-                                                // loader={vkCloudLoader}
+                                            <Image src={'img/active-leisure/quatr-1/5.webp'} width={970} height={700} alt=''
+                                                loader={vkCloudLoader}
                                             />
                                         </div>
                                     </SwiperSlide>

@@ -1,19 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
 import Link from 'next/link'
 import { DEFAULTS } from 'defaults'
-// import { images } from 'imageImports'
+
 
 export default function PageTent() {
-
-
 
     return (
         <>
@@ -44,10 +36,7 @@ export default function PageTent() {
 
             <main className='page page-smash'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <Promo imgUrl={images.backgrounds.imgtentJpg} /> */}
-
                     <Promo image='tent' />
-
                     <div className='base-bg' data-scroll-section></div>
 
                     <div className='page-rest__welcome rest-welcome' data-scroll-section>
@@ -70,50 +59,9 @@ export default function PageTent() {
                             </Link>
                         </div>
 
-
-
                         <PlazmaSlider data='summerTentSlider' />
-
-
-                        {/* <div className='rest-welcome__work-time worktime-section container'>
-                            <div className='worktime-section__about'>
-                                <span className='worktime-section__title'>Столовая «SMASH»</span>
-                                <span className='worktime-section__desc'>Ресторан Adachi - это ресторан в японском стиле, расположенный
-                                    в
-                                    самом сердце Бирмингема, штат Мичиган, в викторианском особняке Пибоди. </span>
-                            </div>
-
-                            <div className='worktime-section__timetable'>
-                                <span className='worktime-section__timetable-title'>Часы работы</span>
-                                <div className='worktime-section__timetable-content'>
-                                    <div className='worktime-section__timetable-row'>
-                                        <span className='worktime-section__timetable-text'>Пн. - Пт.:</span>
-                                        <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
-                                    </div>
-
-                                    <div className='worktime-section__timetable-row'>
-                                        <span className='worktime-section__timetable-text'>Суббота:</span>
-                                        <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
-                                    </div>
-
-                                    <div className='worktime-section__timetable-row'>
-                                        <span className='worktime-section__timetable-text'>Воскресенье:</span>
-                                        <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>11:00 - 23:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
-
-
-                    {/* <div className='footnote container' data-scroll-section>
-                        <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.</div>
-                    </div> */}
                 </div >
-                {/* <Footer /> */}
             </main>
         </>
 

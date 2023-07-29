@@ -1,14 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-// import PromoBackground from '../../components/PromoBackground'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../components/Button'
+import { useContext, useEffect, useRef } from 'react'
 import { BnovoContext } from '../components/bnovo/bnovoContext'
-import TouchSlider from '@/components/TouchSlider'
 import { MailSubscribe } from '@/components/modals/MailSubscribe'
-declare var Bnovo_Widget: any
 declare var BookingIframe: any
 
 export default function PageBooking() {
@@ -83,7 +76,6 @@ export default function PageBooking() {
                     {/* <div className='btn btn_dark' onClick={() => mailModalRef.current?.openModal()}>Txt</div> */}
                     <div className='base-bg' data-scroll-section></div>
                 </div >
-                {/* <Footer /> */}
             </main>
         </>)
 }

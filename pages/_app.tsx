@@ -4,43 +4,19 @@ import 'swiper/css/bundle'
 import "aos/dist/aos.css"
 
 import type { AppProps } from 'next/app'
-import React, { ReactDOM, RefObject, useContext, useEffect, useRef, useState } from 'react'
-
-// import LocomotiveScroll from 'locomotive-scroll'
-import { LocomotiveScrollProvider as RLSProvider } from 'react-locomotive-scroll'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import useLocoScroll from '../components/functions/useLocoScroll'
 import { BnovoContext, BnovoLoadContextProvider } from '../components/bnovo/bnovoContext'
 import { useRouter } from 'next/router'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
-import barba from '@barba/core';
 import AppLayout from '@/components/AppLayout'
-import Script from 'next/script'
 import { YMProvider } from '@/components/ym/YMProvider'
 
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [width, setWidth] = useState<Number>(100)
-  const [height, setHeight] = useState<Number>(100)
-  const { setBnovoIframeIsLoad, setBnovoIsLoad } = useContext(BnovoContext)
   const router = useRouter()
-  // barba.init({
-  //   views: [{
-  //     namespace: 'home',
-  //     beforeLeave(data) {
-  //       // do something before leaving the current `index` namespace
-  //     }
-  //   }, {
-  //     namespace: 'sauna',
-  //     beforeEnter(data) {
-  //       // do something before entering the `contact` namespace
-  //     }
-  //   }]
-  // });
-
+  
   const loaderRef = useRef<LoadingBarRef>(null)
   useEffect(() => {
     router.events.on('routeChangeStart', () => {

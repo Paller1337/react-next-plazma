@@ -1,23 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import BookingPromo from '../components/bnovo/BookingPromo'
-import ReactPlayer from 'react-player'
 import Promo from '../components/Promo'
-import Link from 'next/link'
-// import { minFiles } from '../middleware/utils/getMinImages'
-import { GetServerSideProps } from 'next'
-import { useEffect } from 'react'
-
 import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
-
-// import aboutHotelImgMin from '@/images/index/about-hotel/min.png'
-// import aboutHotelImgMax from '@/images/index/about-hotel/max.png'
-
-
 
 interface PageIndexProps {
   images: any
@@ -25,7 +11,6 @@ interface PageIndexProps {
 
 
 export default function PageIndex(props: PageIndexProps) {
-
 
   return (
     <>
@@ -204,7 +189,6 @@ export default function PageIndex(props: PageIndexProps) {
             />
           </div>
 
-
           <div className='page-index__geo index-geo container' data-scroll-section
             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
             <div className='index-geo__map'>
@@ -217,14 +201,10 @@ export default function PageIndex(props: PageIndexProps) {
               <span className='index-geo__title'>местонахождение</span>
 
               <span className='index-geo__text'>Тульская область, г. Донской, ул. Герцена, д. 14</span>
-
-              {/* <div className='btn btn_black index-geo__btn'>Как до нас добраться</div> */}
             </div>
           </div>
 
-
         </div >
-        {/* <Footer /> */}
       </main>
     </>
 

@@ -1,19 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-// import PromoBackground from '../../components/PromoBackground'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../../components/Button'
 import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
 import Link from 'next/link'
 import { DEFAULTS } from 'defaults'
-// import { images } from 'imageImports'
 
 export default function PageRestaurant() {
-
-
 
     return (
         <>
@@ -42,7 +33,6 @@ export default function PageRestaurant() {
 
             <main className='page page-rest'>
                 <div className='relative main-wrap' data-scroll-container>
-                    {/* <Promo imgUrl={images.backgrounds.imghotelRestaurantPng} /> */}
                     <Promo image='rest' />
 
                     <div className='base-bg' data-scroll-section></div>
@@ -70,13 +60,6 @@ export default function PageRestaurant() {
                                 Меню ресторана
                             </Link>
                         </div>
-
-
-                        {/* <!-- <div className='rest-welcome__images'>
-                        <img className='visual visual-1' src='/img/rest/promo-1.png' alt='' data-scroll data-scroll-speed="5">
-                            <img className='visual visual-2' src='/img/rest/promo-2.png' alt='' data-scroll data-scroll-speed="1">
-                                <img className='visual visual-3' src='/img/rest/promo-3.png' alt='' data-scroll data-scroll-speed="2">
-                                </div> --> */}
 
                         <PlazmaSlider key={'restSlider'} data='restSlider' />
 
@@ -131,12 +114,6 @@ export default function PageRestaurant() {
                             <div className='btn btn_black'>Позвонить</div>
                         </div>
                     </div>
-
-
-                    {/* <div className='footnote container' data-scroll-section>
-                        <div className='text'>Ресторан Adachi - это ресторан в японском стиле, расположенный в самом сердце.
-                        </div>
-                    </div> */}
                 </div >
             </main>
         </>

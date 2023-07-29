@@ -1,23 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-// import PromoBackground from '../../components/PromoBackground'
-import { createContext, MutableRefObject, useContext, useEffect, useRef, useState } from 'react'
-import Button from '../components/Button'
-import { BnovoContext } from '../components/bnovo/bnovoContext'
-import TouchSlider from '@/components/TouchSlider'
-import { MailSubscribe } from '@/components/modals/MailSubscribe'
 import Link from 'next/link'
-
-export async function getStaticProps() {
-    // Пример: отправка данных на сервер аналитики (предполагается наличие библиотеки для работы с аналитикой, такой как Google Analytics)
-    
-
-    return {
-        props: {},
-    };
-}
 
 export default function PageNotFound() {
     return (
