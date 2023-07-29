@@ -68,7 +68,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
                 cardSize: "med"
             }
         ],
-        // attentionText: "Дети до 11 лет обязательно при сопровождении взрослого.",
+        attentionText: "Вход оплачивается отдельно.",
         includedItems: [
             "Зона готовки с раковиной и разделочным столом",
             "Большой каменный мангал",
@@ -106,7 +106,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
                 cardSize: "med"
             }
         ],
-        // attentionText: "Дети до 11 лет обязательно при сопровождении взрослого.",
+        attentionText: "Вход оплачивается отдельно.",
         includedItems: [
             "Мангал",
             "Два больших деревянных стола с лавочками",
@@ -141,7 +141,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
                 cardSize: "med"
             }
         ],
-        // attentionText: "Дети до 11 лет обязательно при сопровождении взрослого.",
+        attentionText: "Вход оплачивается отдельно.",
         includedItems: [
             "Мангал",
             "Стол с двумя лавочками"
