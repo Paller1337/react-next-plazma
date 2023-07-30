@@ -4,6 +4,7 @@ import Promo from '../components/Promo'
 import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
+import YoutubeVideo from '@/components/YoutubeVideo'
 
 interface PageIndexProps {
   images: any
@@ -95,6 +96,10 @@ export default function PageIndex(props: PageIndexProps) {
               </picture>
             </div>
           </div>
+
+          <YoutubeVideo
+            title='Обзорное видео парк-отеля'
+            src='vL15ngFeBNM' />
 
           <div className='page-index__previews preview-blocks' data-scroll-section>
             <FullSizePreviewInfo

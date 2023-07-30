@@ -10,6 +10,7 @@ import { useDeviceDetect } from '@/components/hooks/useDeviceDetect'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import copy from '@/components/functions/copy'
+import YoutubeVideo from '@/components/YoutubeVideo'
 
 
 
@@ -190,6 +191,12 @@ export default function PageActiveLeisure() {
                             Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.
                         </span>
                     </div>
+
+                    <YoutubeVideo
+                        title='Спорт в «PLAZMA»'
+                        src='VVBzBIcLERU'
+                        reverse
+                    />
 
                     <div className='page-events__about-quatr about-quatr' data-scroll-section>
                         <div className='about-quatr__wrapper'

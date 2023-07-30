@@ -1219,3 +1219,21 @@ object
     // border: 4px solid var(--swiper-preloader-color,var(--swiper-theme-color))
     border-radius: 50%
     border-top-color: transparent
+
+.youtube-frame
+    width: 100%
+    iframe
+        width: 100%
+        min-height: 460px
+        @media screen and ( max-width: $md3 )
+            min-height: 320px
+        
+        @media screen and ( max-width: $md4 )
+            min-height: 220px
+
+.fs-video-container
+    text-align: center
+    display: flex
+    flex-direction: column
+    gap: 20px
+    align-items: center
