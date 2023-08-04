@@ -5,6 +5,7 @@ import InputSelect from './form/InputSelect';
 import InputText from './form/InputText';
 import InputTextarea from './form/InputTextarea'
 import toast, { Toaster } from 'react-hot-toast';
+import { createPortal } from 'react-dom';
 
 
 
@@ -17,11 +18,44 @@ interface humanInfo {
     phone?: string
 }
 
+
+const SportCalculatorResult = (props: { result: number }) => {
+    const [browserLoad, setBrowserLoad] = useState(false)
+    const [result, setResult] = useState(props.result)
+    const [visible, setVisible] = useState(false)
+    useEffect(() => setResult(props.result), [props.result])
+
+    useEffect(() => setBrowserLoad(true), [])
+
+    const handleVisible = () => {
+        const calc = document.querySelector('.sport-calculator');
+        if (calc) {
+            const calcPosition = calc.getBoundingClientRect();
+            const wh = window.innerHeight
+
+            if (calcPosition.top < wh / 1.3 && calcPosition.bottom > wh / 2) {
+                setVisible(true);
+            } else {
+                setVisible(false);
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleVisible)
+        return () => window.removeEventListener('scroll', handleVisible)
+    }, [])
+
+
+    if (!browserLoad) return null
+    return createPortal(<>
+        <div className={`sport-calculator__result mobile ${!visible ? 'hidden' : ''}`}>
+            Итого: {result} Рублей
+        </div>
+    </>, document.body)
+}
+
 export default function SportCalculator(props: SportCalculatorProps) {
-    // const [human, setHuman] = useState<humanInfo>({
-    //     name: '',
-    //     phone: '',
-    // })
     const [error, setError] = useState(false)
 
     const [name, setName] = useState('')
@@ -111,7 +145,11 @@ export default function SportCalculator(props: SportCalculatorProps) {
             .then(res => {
             })
     }
+
+
+
     return (<>
+        <SportCalculatorResult result={result} />
         <div className='sport-calculator'>
             <InputRange name='p' label='Количество спортсменов' min={0} max={50} type='range'
                 onChange={(e) => setP(parseInt(e.target.value))}
@@ -265,6 +303,6 @@ export default function SportCalculator(props: SportCalculatorProps) {
             <InputTextarea label='Сообщение' placeholder='По желанию вы можете сразу описать свой вопрос, чтобы мы позвонили вам с готовым ответом.'
                 onChange={(e) => setMessage(e.target.value)} />
             <div className='btn btn_black' onClick={handleSubmit}>Позвоните мне</div>
-        </div >
+        </div>
     </>)
 }

@@ -11,7 +11,8 @@ const defaultAmenities = [
     'Мыльные пренадлежности',
 ]
 
-
+const checkInHouse = ['Заезд:', ' <b>16:00</b>;', ' Выезд:', ' <b>12:00</b>']
+const checkInRoom = ['Заезд:', ' <b>14:00</b>;', ' Выезд:', ' <b>12:00</b>']
 // import { images } from 'imageImports'
 
 
@@ -45,6 +46,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['<b>9200 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['5 человек. 4 взрослых и 1 ребенок.'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
             ...defaultAmenities,
@@ -88,6 +90,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['воскресенье - четверг ', ' <b>15950 руб/сутки</b></br>', ' пятница и суббота ', '<b>18950 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['8 человек. 6 взрослых и 2 детей.'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
             ...defaultAmenities,
@@ -127,6 +130,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['<b>4150 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека.'] },
             { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,
@@ -159,6 +163,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['воскресенье - четверг', '<b>5980 руб/сутки</b></br>', ' пятница и суббота ', ' <b>6980 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,
@@ -193,6 +198,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['<b>3000 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека.'] },
             { name: 'Доп. гости', value: ['нет'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,
@@ -224,6 +230,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['воскресенье - четверг', '<b>4980 руб/сутки</b></br>', 'пятница и суббота', '<b>5980 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,
@@ -261,6 +268,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['воскресенье - четверг', '<b>5480 руб/сутки</b></br>', ' пятница и суббота', ' <b>6480 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,
@@ -298,6 +306,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['воскресенье - четверг', ' <b>6900 руб/сутки</b></br>', ' пятница и суббота', ' <b>7900 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['5 человек'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
             ...defaultAmenities,
@@ -338,6 +347,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['воскресенье - четверг', ' <b>10900 руб/сутки</b></br>', ' пятница и суббота', ' <b>12900 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['4 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
             ...defaultAmenities,
@@ -380,6 +390,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['<b>3100 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,
@@ -409,6 +420,7 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цены', value: ['<b>2490 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека.'] },
             { name: 'Доп. гости', value: ['нет'] },
+            { name: 'Заселение', value: checkInRoom },
         ],
         amenities: [
             ...defaultAmenities,

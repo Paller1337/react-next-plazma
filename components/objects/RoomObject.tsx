@@ -106,9 +106,7 @@ export default function RoomObject(data: RoomObjectProps) {
             setTranslate(wrapperWidth * currentSlide)
         }
     }, [currentSlide, sliderWrapper])
-
-    // useEffect(() => console.log('roomId: ', data.id, 'key: ', data.id.toString()), [])
-
+    
     return (<>
         {/* <GallerySlider
             slides={images}
@@ -154,93 +152,24 @@ export default function RoomObject(data: RoomObjectProps) {
                         <SwiperSlide key={image + '-swipe-item'} virtualIndex={i}>
                             <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
                                 <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
-                                    // placeholder='blur'
                                     loading="lazy"
                                     quality={90}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
                                     loader={vkCloudLoader}
                                 />
-                                {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
                             </div >
                         </SwiperSlide>
                     )}
                 </Swiper>
-
-                {/* <div ref={sliderWrapper} className='hotel-room__image-wrapper'>
-                    <div className='hotel-room__image-images'>
-                        <div ref={imageContentRef} className='hotel-room__image-content' style={{ transform: `translateX(-${translate}px)` }}>
-                            {previews && previews.map((image, i) =>
-                                <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
-                                    <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
-                                        // placeholder='blur'
-                                        loading="lazy"
-                                        quality={90}
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    />
-                                </div >
-                            )}
-                        </div>
-                    </div>
-                    <button className='hotel-room__image--prev' onClick={(e) => prevSlide(e)}></button>
-                    <button className='hotel-room__image--next' onClick={(e) => nextSlide(e)}></button>
-                </div> */}
-
                 <Swiper
-                    // modules={[Lazy, FreeMode, Thumbs]}
-                    // watchSlidesProgress={true}
-                    // // lazy: 'true',
-
-                    // onSwiper={setThumbsSwiper}
-                    // spaceBetween={10}
-                    // slidesPerView={5}
-                    // freeMode={true}
-                    // // thumbs: {swiper: thumbsSwiper },
-
-                    // // breakpoints: {
-                    // //     1: {
-                    // //         slidesPerView: 1,
-                    // //         spaceBetween: 20,
-                    // //     },
-                    // //     991: {
-                    // //         slidesPerView: 1,
-                    // //         centeredSlides: false,
-                    // //         spaceBetween: 20,
-                    // //     },
-                    // //     1100: {
-                    // //         slidesPerView: 1,
-                    // //         initialSlide: 1,
-                    // //     },
-                    // // },
-                    // style={{
-                    //     marginTop: 10,
-                    // }}
                     {...({
                         modules: [Lazy, FreeMode, Thumbs, Virtual],
                         virtual: true,
                         watchSlidesProgress: true,
-                        // lazy: 'true',
-
                         onSwiper: setThumbsSwiper,
                         spaceBetween: 10,
                         slidesPerView: 5,
                         freeMode: true,
-                        // thumbs: { swiper: thumbsSwiper },
-
-                        // breakpoints: {
-                        //     1: {
-                        //         slidesPerView: 1,
-                        //         spaceBetween: 20,
-                        //     },
-                        //     991: {
-                        //         slidesPerView: 1,
-                        //         centeredSlides: false,
-                        //         spaceBetween: 20,
-                        //     },
-                        //     1100: {
-                        //         slidesPerView: 1,
-                        //         initialSlide: 1,
-                        //     },
-                        // },
                         style: {
                             marginTop: 10,
                         }
@@ -266,25 +195,6 @@ export default function RoomObject(data: RoomObjectProps) {
                         )}
                     </div>
                 </Swiper>
-
-                {/* {previews && previews.length > 1 ?
-                    <div className='hotel-room__slides'>
-                        {previews.map((x, i) =>
-                            <div key={'img-min-' + data.id.toString() + i}
-                                className={`hotel-room__slide ${currentSlide === i ? 'current' : ''}`}
-                                onClick={() => goSlide(i)}>
-
-                                <Image src={x} height={60} width={80} alt={'Plazma гостиница'}
-                                    loading="lazy"
-                                    quality={90}
-                                    sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
-                                />
-
-                            </div>
-                        )}
-                    </div>
-                    : ''} */}
-
 
             </div>
 
