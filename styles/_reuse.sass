@@ -1227,7 +1227,7 @@ object
         min-height: 460px
         @media screen and ( max-width: $md3 )
             min-height: 320px
-        
+
         @media screen and ( max-width: $md4 )
             min-height: 220px
 
@@ -1237,3 +1237,109 @@ object
     flex-direction: column
     gap: 20px
     align-items: center
+
+.gallery-cards
+    display: flex
+    gap: 30px
+    flex-wrap: wrap
+    justify-content: center
+
+.gallery-card
+    display: flex
+    flex-direction: column
+    gap: 10px
+    position: relative
+    width: calc( 50% - 15px )
+    min-width: calc( 50% - 15px )
+    @media screen and ( max-width: $md2 )
+        min-width: 320px
+
+    @media screen and ( max-width: $md3 )
+        flex-basis: 100%
+        max-width: 100%
+    &__img
+        min-width: calc(50% - 85px)
+        min-height: 320px
+        // flex-basis: 50%
+        overflow: hidden
+        position: relative
+        @media screen and ( max-width: $md2 )
+            min-width: 320px
+
+        @media screen and ( max-width: $md3 )
+            flex-basis: 100%
+            max-width: 100%
+            // max-width: 100%
+            // min-width: 100%
+            // max-height: 320px
+
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__text
+        color: #393939
+        text-align: center
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 0.48px
+        text-transform: uppercase
+        max-width: 100%
+        display: block
+
+.plazma-ui
+
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 12px
+        font-weight: 400
+        color: #393939
+        @media screen and ( max-width: $md3 )
+            gap: 8px
+        ul
+            display: flex
+            flex-direction: column
+            gap: 12px
+            padding-left: 24px
+            @media screen and ( max-width: $md3 )
+                gap: 8px
+
+        .text-normal
+            @media screen and ( max-width: $md3 )
+                font-size: 14px
+
+        &-title
+            font-size: 24px
+            line-height: 150%
+            &.centered
+                text-align: center
+            @media screen and ( max-width: $md3 )
+                font-size: 20px
+                line-height: 150%
+
+        &-item
+            font-size: 16px
+            line-height: 20px
+            list-style: none
+            position: relative
+            @media screen and ( max-width: $md3 )
+                font-size: 14px
+
+            &::after
+                content: ''
+                position: absolute
+                left: -14px
+                top: 50%
+                transform: translateY(-50%)
+                width: 4px
+                height: 4px
+                border: 1px solid #393939
+                border-radius: 2px

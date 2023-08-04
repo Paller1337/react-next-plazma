@@ -92,7 +92,7 @@ export default function PromoMin(props: PromoMinProps) {
                                     loading='eager'
                                     quality={90}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                    // loader={vkCloudLoader}
                                 ></Image>
                                 : ''
                             }

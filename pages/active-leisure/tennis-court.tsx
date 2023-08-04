@@ -11,6 +11,8 @@ import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import copy from '@/components/functions/copy'
 import YoutubeVideo from '@/components/YoutubeVideo'
+import TextBlock from '@/components/TextBlock'
+import SportObjectForm from '@/components/SportObjectForm'
 
 
 
@@ -152,14 +154,14 @@ export default function PageTennisCourt() {
     return (
         <>
             <Head>
-                <title>Активный отдых в парк-отеле «PLAZMA»</title>
+                <title>Теннисные корты в парк-отеле «PLAZMA»</title>
                 <meta name='description' content='это проект парк-отеля Plazma, 
                 расположенного в Тульской области в 220 км. от Москвы, 
                 ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.' />
 
                 <meta
                     property='og:title'
-                    content='Активный отдых в парк-отеле «PLAZMA»' />
+                    content='Теннисные корты в парк-отеле «PLAZMA»' />
                 <meta
                     property='og:description'
                     content='это проект парк-отеля Plazma, 
@@ -178,146 +180,94 @@ export default function PageTennisCourt() {
                 <div className='relative main-wrap' data-scroll-container>
                     <PromoMin
                         image='tennis-court'
-                        title='АКТИВНЫЙ ОТДЫХ В ПАРК-ОТЕЛЕ PLAZMA'
+                        title='ТЕННИСНЫЕ КОРТЫ'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
                         комфортабельные условия для тренировок, питания и проживания.`} />
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <div id='AboutSport' className='page-events__welcome text-section text-section_big container' data-scroll-section>
-                        <span className='h2-title'>«PLAZMA.SPORT»</span>
-                        <span className='text'>
-                            это проект парк-отеля Plazma, расположенного в Тульской области в 220 км. от
-                            Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.
-                        </span>
-                    </div>
+                    <div className='page-index__about-hotel about-hotel container' data-scroll-section>
+                        <div className='about-hotel__wrapper'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <div className='about-hotel__about'>
+                                <span className='about-hotel__text'>«PLAZMA.SPORT»</span>
+                                <span className='about-hotel__desc'>
+                                    Теннисный манеж располагает площадью 2600 м², включающей в
+                                    себя 4 теннисные площадки с покрытием хард, 2 просторные раздевалки с душевыми,
+                                    а также кабинет судьи и медицинский кабинет.
+                                </span>
 
-                    <YoutubeVideo
-                        title='Спорт в «PLAZMA»'
-                        src='VVBzBIcLERU'
-                        reverse
-                    />
-
-                    <div className='page-events__about-quatr about-quatr' data-scroll-section>
-                        <div className='about-quatr__wrapper'
-                            data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <div className='about-quatr__text'>
-                                <h2>игровая площадка для детей</h2>
-                                <span>Безопасная игровая площадка с разными развлечениями
-                                    для детей. Качественное оборудование, способствующее активности
-                                    и творчеству. Там создается дружба и хорошее настроение</span>
-                                {/* <div className='btn btn_black popover pop-top'
-                                    popover-data={'+7 (910) 168-17-61'}
-                                    onClick={() => copy('+79101681761', 'Номер скопирован.', { metric: 'number' })}>
-                                    Подробнее</div> */}
-                            </div>
-                            {/* <div className='about-quatr__image'
-                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                                <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' />
-
-                            </div> */}
-                            <div className='about-quatr__slider'>
-                                <Swiper
-                                    {...({
-                                        modules: [FreeMode, Pagination, Navigation],
-                                        navigation: {
-                                            enable: true
-                                        },
-                                        pagination: {
-                                            enabled: true
-                                        },
-                                        spaceBetween: 20,
-                                        slidesPerView: 1,
-                                        // breakpoints: {
-                                        //     1: {
-                                        //         centeredSlides: false,
-                                        //         enabled: true
-                                        //     },
-                                        //     420: {
-                                        //         enabled: true
-                                        //     },
-                                        //     768: {
-                                        //         centeredSlides: true,
-                                        //         enabled: true
-                                        //     },
-                                        // },
-
-                                    } as SwiperProps)}
-                                >
-                                    <SwiperSlide>
-                                        <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'img/active-leisure/quatr-1/1.webp'} width={970} height={700} alt=''
-                                                loader={vkCloudLoader}
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'img/active-leisure/quatr-1/2.webp'} width={970} height={700} alt=''
-                                                loader={vkCloudLoader}
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'img/active-leisure/quatr-1/3.webp'} width={970} height={700} alt=''
-                                                loader={vkCloudLoader}
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'img/active-leisure/quatr-1/4.webp'} width={970} height={700} alt=''
-                                                loader={vkCloudLoader}
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div style={{ position: 'relative', display: 'flex' }}>
-                                            <Image src={'img/active-leisure/quatr-1/5.webp'} width={970} height={700} alt=''
-                                                loader={vkCloudLoader}
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
+                                <span className='about-hotel__desc'>
+                                    Мы готовы предложить вам комфортное и функциональное пространство для занятий теннисом на высшем уровне.
+                                </span>
                             </div>
 
+                            <picture className='about-hotel__img img_min'>
+                                <Image width={670} height={420} src={'/img/active-leisure/tennis-court/1.webp'} alt=''
+                                    loader={vkCloudLoader} />
+                            </picture>
+                        </div>
+
+
+                        <div className='about-hotel__wrapper reverse'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <div className='about-hotel__about'>
+                                <div className='plazma-ui__list'>
+                                    <span className='plazma-ui__list-title centered'>ХАРАКТЕРИСТИКИ</span>
+                                    <ul>
+                                        <li className='plazma-ui__list-item'>размер 25х44</li>
+                                        <li className='plazma-ui__list-item'>высота потолка - 11 метров в коньке</li>
+                                        <li className='plazma-ui__list-item'>профессиональное освещение</li>
+                                        <li className='plazma-ui__list-item'>две раздевалки с душевыми вместимостью по 30 человек</li>
+                                        <li className='plazma-ui__list-item'>смотровые трибуны вместимостью 58 человек</li>
+                                        <li className='plazma-ui__list-item'>административный кабинет</li>
+                                        <li className='plazma-ui__list-item'>медицинский кабинет</li>
+                                        <li className='plazma-ui__list-item'>просторная зона ожидания с видео-трансляцией зала</li>
+                                        <li className='plazma-ui__list-item'>спортивный паркет из бразильской гевеи</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <picture className='about-hotel__img img_min'>
+                                <Image width={670} height={420} src={'/img/active-leisure/tennis-court/2.webp'} alt=''
+                                    loader={vkCloudLoader} />
+                            </picture>
                         </div>
                     </div>
 
-                    {objectsContent}
+                    <TextBlock title={{ type: 'h3', text: 'Медицинский кабинет' }}
+                        description={[
+                            `На территории теннисного корта есть медицинский кабинет. </br>
+                            В нем присутствует все необходимое для оказания первой </br>
+                            помощи спортсменам.`,
+                        ]}
+                        style={{ paddingBottom: 0 }}
+                    />
 
-                    <div className='row-cards--wrapper container'>
-                        <RowCard
-                            title='пляжный корт'
-                            desc={`Первый в Тульской области крытый зал для пляжных видов спорта с кварцевым подогреваемым 
-                            песком. Глубина песка 40 см, фракция 0.1-0.63. В зале 4 пляжные площадки с местом для забега, 
-                            2 раздевалки, трибуны на 100 человек. В летний период у нас работает 7 открытых площадок для 
-                            пляжного волейбола с кварцевым песком.`}
-                            italicDesc={`Цена: от 800 до 2000 руб/час`}
-                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
-                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-1.webp' }}
-                        />
 
-                        <RowCard reverse
-                            title='Универсальный спортивный зал'
-                            desc={`Размер манежа составляет 25х44 метра, высота — 11 метров. Зал предназначен для мини-футбола, 
-                            волейбола, баскетбола, танцев, гимнастики, единоборств. В манеже 2 раздевалки на 60 человек, 2 
-                            кабинета для тренеров, трибуны и новейший мобильный инвентарь.`}
-                            italicDesc={`Цена: до 2500 руб/час`}
-                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
-                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-2.webp' }}
-                        />
+                    <div className='gallery-cards container'>
+                        <div className='gallery-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <picture className='gallery-card__img'>
+                                <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-1.webp'} alt=''
+                                    loader={vkCloudLoader}
+                                />
+                            </picture>
+                        </div>
 
-                        <RowCard
-                            title='Теннисный корт'
-                            desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
-                            хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
-                            italicDesc={`Цена: от 1400 до 1700 руб/час`}
-                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
-                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-3.webp' }}
-                        />
+                        <div className='gallery-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <picture className='meals-preview-card__img'>
+                                <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-2.webp'} alt=''
+                                    loader={vkCloudLoader}
+                                />
+                            </picture>
+                        </div>
                     </div>
+
+                    <SportObjectForm />
+
+
                 </div >
             </main >
 
