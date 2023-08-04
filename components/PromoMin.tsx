@@ -2,13 +2,17 @@ import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import Header from './Header';
 
+import tennisCourt from '@/images/backgrounds/tennis-court.webp'
+import beachCenter from '@/images/backgrounds/beach-center.webp'
+import sportsHall from '@/images/backgrounds/sports-hall.webp'
+
 import activeLeisure from '@/images/backgrounds/active-leisure-min.webp'
 import events from '@/images/backgrounds/hotel-events-min.webp'
 import sportsCamp from '@/images/backgrounds/sports-camps-min.webp'
 import vkCloudLoader from '@/mw/utils/imageLoader';
 
 
-type PromoMinImage = 'active-leisure' | 'events' | 'sports-camp'
+type PromoMinImage = 'active-leisure' | 'events' | 'sports-camp' | 'sports-hall' | 'tennis-court' | 'beach-center'
 
 interface PromoMinProps {
     video?: boolean
@@ -38,6 +42,15 @@ export default function PromoMin(props: PromoMinProps) {
                 break
             case 'sports-camp':
                 setPreviewSrc(sportsCamp)
+                break
+            case 'sports-hall':
+                setPreviewSrc(sportsHall)
+                break
+            case 'tennis-court':
+                setPreviewSrc(tennisCourt)
+                break
+            case 'beach-center':
+                setPreviewSrc(beachCenter)
                 break
             default: setPreviewSrc('')
 
@@ -74,7 +87,7 @@ export default function PromoMin(props: PromoMinProps) {
                                     height={defaultImg.height}
                                     alt='Plazma'
                                     placeholder='blur'
-                                    
+
                                     priority
                                     loading='eager'
                                     quality={90}
