@@ -13,6 +13,7 @@ import copy from '@/components/functions/copy'
 import YoutubeVideo from '@/components/YoutubeVideo'
 import TextBlock from '@/components/TextBlock'
 import SportObjectForm from '@/components/SportObjectForm'
+import SportObjectsMenu from '@/components/SportObjectsMenu'
 
 
 
@@ -267,7 +268,7 @@ export default function PageTennisCourt() {
 
                     <SportObjectForm />
 
-
+                    <SportObjectsMenu />
                 </div >
             </main >
 
