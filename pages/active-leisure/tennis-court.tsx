@@ -19,10 +19,6 @@ import SportObjectsMenu from '@/components/SportObjectsMenu'
 
 
 export default function PageTennisCourt() {
-    const [objectsContent, setObjectsContent] = useState<JSX.Element>()
-    const { isMobile, isDesktop } = useDeviceDetect()
-
-
     return (
         <>
             <Head>
@@ -69,9 +65,6 @@ export default function PageTennisCourt() {
                                     а также кабинет судьи и медицинский кабинет.
                                 </span>
 
-                                <span className='about-hotel__desc'>
-                                    Мы готовы предложить вам комфортное и функциональное пространство для занятий теннисом на высшем уровне.
-                                </span>
                             </div>
 
                             <picture className='about-hotel__img img_min'>
@@ -84,20 +77,9 @@ export default function PageTennisCourt() {
                         <div className='about-hotel__wrapper reverse'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-hotel__about'>
-                                <div className='plazma-ui__list'>
-                                    <span className='plazma-ui__list-title centered'>ХАРАКТЕРИСТИКИ</span>
-                                    <ul>
-                                        <li className='plazma-ui__list-item'>размер 25х44</li>
-                                        <li className='plazma-ui__list-item'>высота потолка - 11 метров в коньке</li>
-                                        <li className='plazma-ui__list-item'>профессиональное освещение</li>
-                                        <li className='plazma-ui__list-item'>две раздевалки с душевыми вместимостью по 30 человек</li>
-                                        <li className='plazma-ui__list-item'>смотровые трибуны вместимостью 58 человек</li>
-                                        <li className='plazma-ui__list-item'>административный кабинет</li>
-                                        <li className='plazma-ui__list-item'>медицинский кабинет</li>
-                                        <li className='plazma-ui__list-item'>просторная зона ожидания с видео-трансляцией зала</li>
-                                        <li className='plazma-ui__list-item'>спортивный паркет из бразильской гевеи</li>
-                                    </ul>
-                                </div>
+                                <span className='about-hotel__desc'>
+                                    Мы готовы предложить вам комфортное и функциональное пространство для занятий теннисом на высшем уровне.
+                                </span>
                             </div>
 
                             <picture className='about-hotel__img img_min'>

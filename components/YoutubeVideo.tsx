@@ -18,8 +18,8 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
                 <div className='about-hotel__about'
                     style={{ width: '100%' }}>
                     <span className='about-hotel__text'>{props.title}</span>
-                    <span className='about-hotel__desc'>
-                        {props.desc}
+                    <span className='about-hotel__desc' dangerouslySetInnerHTML={{ __html: props.desc }}>
+
                     </span>
                 </div>
 

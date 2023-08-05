@@ -10,7 +10,7 @@ export default function SportObjectsMenu() {
         <div className='cards-menu container'>
             <span className='cards-menu__title'>Наши спортивные объекты</span>
             <div className='cards-menu__content'>
-                <Link href={'#'} className='cards-menu__card'>
+                <Link href={'/active-leisure/tennis-court'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>
                         <Image width={370} height={560} src={'/img/sport/sports-objects-previews/tennis.webp'} alt=''
                             loader={vkCloudLoader}
@@ -26,9 +26,9 @@ export default function SportObjectsMenu() {
                     <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
                 </Link>
 
-                <Link href={'#'} className='cards-menu__card'>
+                <Link href={'/active-leisure/sports-hall'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>
-                        <Image width={370} height={560} src={'/img/sport/sports-objects-previews/tennis.webp'} alt=''
+                        <Image width={370} height={560} src={'/img/sport/sports-objects-previews/sports-hall.webp'} alt=''
                             loader={vkCloudLoader}
                         />
                         <div className='cards-menu__card-text'>
@@ -42,9 +42,9 @@ export default function SportObjectsMenu() {
                     <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
                 </Link>
 
-                <Link href={'#'} className='cards-menu__card'>
+                <Link href={'/active-leisure/beach'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>
-                        <Image width={370} height={560} src={'/img/sport/sports-objects-previews/tennis.webp'} alt=''
+                        <Image width={370} height={560} src={'/img/sport/sports-objects-previews/beach.webp'} alt=''
                             loader={vkCloudLoader}
                         />
                         <div className='cards-menu__card-text'>
