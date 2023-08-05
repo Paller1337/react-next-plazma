@@ -79,6 +79,9 @@
             width: 100%
 
 .cards-menu
+    padding-top: 100px
+    padding-bottom: 100px
+    cursor: pointer
     &__title
         color: #262626
         font-size: 24px
@@ -90,12 +93,31 @@
         flex-direction: row
         gap: 30px
 
+        .btn
+            width: 100%
+            gap: 20px
+            align-items: center
+            .svg
+                height: 16px
+                padding-top: 1px
+            &:hover
+                .svg
+                    // filter: invert(1)
+                    path
+                        fill: #fff
     &__card
         width: 370px
         position: relative
         display: flex
         flex-direction: column
         gap: 20px
+
+        &-wrapper
+            height: 560px
+            position: relative
+            display: flex
+            flex-direction: column
+
         &-text
             position: absolute
             z-index: 1
