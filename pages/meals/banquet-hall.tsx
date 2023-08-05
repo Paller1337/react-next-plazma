@@ -62,13 +62,13 @@ export default function PageBanquetHall() {
 
                             <div className='big-p__btn-group'>
                                 <Link className='btn btn_black'
-                                    href={'https://disk.yandex.ru/i/O15H5bA_ZSwh1A'}
+                                    href={DEFAULTS.MENU.BANQUET}
                                     target='_blank' rel='noopener noreferrer'>
                                     Банкетное меню
                                 </Link>
 
                                 <Link className='btn btn_black'
-                                    href={'https://disk.yandex.ru/i/peP4mC-yM1HJqw'}
+                                    href={DEFAULTS.MENU.REST}
                                     target='_blank' rel='noopener noreferrer'>
                                     Меню ресторана
                                 </Link>

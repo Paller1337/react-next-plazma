@@ -53,7 +53,7 @@ export default function PageTent() {
                             </span>
 
                             <Link className='btn btn_black big-p__btn'
-                                href={'https://disk.yandex.ru/i/peP4mC-yM1HJqw'}
+                                href={DEFAULTS.MENU.REST}
                                 target='_blank' rel='noopener noreferrer'>
                                 Меню ресторана
                             </Link>

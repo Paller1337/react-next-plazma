@@ -3,6 +3,7 @@ import PlazmaSlider from '../../components/PlazmaSlider'
 import Promo from '../../components/Promo'
 import Link from 'next/link'
 import { DEFAULTS } from 'defaults'
+import copy from '@/components/functions/copy'
 
 export default function PageRestaurant() {
 
@@ -55,7 +56,7 @@ export default function PageRestaurant() {
                             </Link> */}
 
                             <Link className='btn btn_black big-p__btn'
-                                href={'https://disk.yandex.ru/i/peP4mC-yM1HJqw'}
+                                href={DEFAULTS.MENU.REST}
                                 target='_blank' rel='noopener noreferrer'>
                                 Меню ресторана
                             </Link>
@@ -110,8 +111,16 @@ export default function PageRestaurant() {
                         </span>
 
                         <div className='btn-container'>
-                            <div className='btn btn_black'>Банкетное меню</div>
-                            <div className='btn btn_black'>Позвонить</div>
+                            <Link className='btn btn_black'
+                                href={DEFAULTS.MENU.BANQUET}
+                                target='_blank' rel='noopener noreferrer'>
+                                Банкетное меню
+                            </Link>
+                            {/* <div className='btn btn_black'>Позвонить</div> */}
+                            <div className='btn btn_black'
+                                popover-data={'+7 (910) 168-17-61'}
+                                onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
+                            >Позвонить</div>
                         </div>
                     </div>
                 </div >

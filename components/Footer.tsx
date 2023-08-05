@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 import toast from 'react-hot-toast'
 import copy from './functions/copy'
+import { DEFAULTS } from 'defaults'
 
 interface FooterProps {
 
@@ -58,7 +59,7 @@ export default function Footer(props: FooterProps) {
 
                             <div className='footer__links'>
                                 <span className='footer__links-title'>Питание</span>
-                                <Link href='https://disk.yandex.ru/i/peP4mC-yM1HJqw'
+                                <Link href={DEFAULTS.MENU.REST}
                                     className='footer__links-link' target='_blank'>Меню ресторана</Link>
                                 <Link href='/meals/restaurant' className='footer__links-link'>Ресторан</Link>
                                 <Link href='/meals/banquet-hall' className='footer__links-link'>Банкетный зал</Link>
