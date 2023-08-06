@@ -159,7 +159,7 @@ export default function PageSportsHall() {
                             администрации команды. Вы сможете им воспользоваться в любой </br>
                              момент тренировки.`,
                         ]}
-                        style={{ paddingBottom: 0 }}
+                        style={{ paddingBottom: 0, marginTop: 50 }}
                     />
                     <div className='gallery-cards two-cards container'>
                         <div className='gallery-card'
