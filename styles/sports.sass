@@ -46,6 +46,9 @@
     padding-top: 200px
     padding-bottom: 200px
     flex-direction: column
+    @media screen and ( max-width: $md3 )
+        padding-top: 50px
+        padding-bottom: 50px
 
     &__heading
         color: #262626
@@ -66,6 +69,8 @@
         max-width: 570px
         text-align: center
         margin: 12px 0 60px 0
+        @media screen and ( max-width: $md3 )
+            margin: 12px 0 20px 0
 
     &__wrapper
         max-width: 370px
@@ -114,7 +119,7 @@
 
         max-width: 370px
         overflow: hidden
-        min-width: 320px
+        min-width: 96%
 
         &-wrapper
             height: 560px

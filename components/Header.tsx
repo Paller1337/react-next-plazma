@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 
 import svgVk from '/public/svg/vk.svg'
 import copy from './functions/copy'
+import { ReactSVG } from 'react-svg'
 
 interface HeaderProps {
     darken?: boolean
@@ -108,7 +109,7 @@ export default function Header(props: HeaderProps) {
             </div>
             <div className='c-menu__footer flex-col fw'>
                 <div className='c-menu__footer-feedback'>
-                    <button className='btn btn_black'>Написать нам</button>
+                    <Link href={'https://vk.com/im?media=&sel=-43242132'} target='_blank' className='btn btn_black'>Написать нам</Link>
                     <div className='c-menu__footer-column'>
                         <div className='c-menu__footer-desc'>Наши контакты</div>
                         <ul className="c-menu__footer-list sub">
@@ -120,7 +121,16 @@ export default function Header(props: HeaderProps) {
                 </div>
                 <div className='copyright'>
                     <Link href="/" className="social-list__soc">hotel@kplazma.ru</Link>
-                    <span>plazma</span>
+                    {/* <span>plazma</span> */}
+                    <div className='social-container'>
+                        <Link className='social-icon' href='https://vk.com/park_hotel_plazma' target='blank' >
+                            <ReactSVG src='/svg/vk.svg' className='dark-icon' />
+                        </Link>
+                        <Link className='social-icon' href='https://t.me/plazmadonskoy' target='blank' >
+                            <ReactSVG src='/svg/tg.svg' className='dark-icon' />
+                        </Link>
+                        {/* <div className='social-icon inst'></div> */}
+                    </div>
                 </div>
             </div>
         </div>
