@@ -1244,34 +1244,52 @@ object
     flex-wrap: wrap
     justify-content: center
 
+    &.two-cards
+        .gallery-card
+            width: calc( 50% - 15px )
+            min-width: calc( 50% - 15px )
+            @media screen and ( max-width: $md2 )
+                min-width: 320px
+            @media screen and ( max-width: $md3 )
+                flex-basis: 100%
+                max-width: 100%
+            &__img
+                min-width: calc(50% - 85px)
+                min-height: 320px
+                @media screen and ( max-width: $md2 )
+                    min-width: 320px
+
+                @media screen and ( max-width: $md3 )
+                    flex-basis: 100%
+                    max-width: 100%
+    &.three-cards
+        .gallery-card
+            width: calc( 32% - 15px )
+            min-width: calc( 32% - 15px )
+            @media screen and ( max-width: $md2 )
+                min-width: 320px
+            @media screen and ( max-width: $md3 )
+                flex-basis: 100%
+                max-width: 100%
+            &__img
+                min-width: calc(50% - 85px)
+                min-height: 520px
+                @media screen and ( max-width: $md2 )
+                    min-width: 320px
+
+                @media screen and ( max-width: $md3 )
+                    flex-basis: 100%
+                    max-width: 100%
+
 .gallery-card
     display: flex
     flex-direction: column
     gap: 10px
     position: relative
-    width: calc( 50% - 15px )
-    min-width: calc( 50% - 15px )
-    @media screen and ( max-width: $md2 )
-        min-width: 320px
 
-    @media screen and ( max-width: $md3 )
-        flex-basis: 100%
-        max-width: 100%
     &__img
-        min-width: calc(50% - 85px)
-        min-height: 320px
-        // flex-basis: 50%
         overflow: hidden
         position: relative
-        @media screen and ( max-width: $md2 )
-            min-width: 320px
-
-        @media screen and ( max-width: $md3 )
-            flex-basis: 100%
-            max-width: 100%
-            // max-width: 100%
-            // min-width: 100%
-            // max-height: 320px
 
         img
             position: absolute

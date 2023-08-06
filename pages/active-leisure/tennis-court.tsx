@@ -99,7 +99,7 @@ export default function PageTennisCourt() {
                     />
 
 
-                    <div className='gallery-cards container'>
+                    <div className='gallery-cards two-cards container'>
                         <div className='gallery-card'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='gallery-card__img'>

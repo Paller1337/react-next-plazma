@@ -114,6 +114,45 @@ export default function PageSportsHall() {
                         сопротивление скольжению — 83.</br>
                         `}
                     />
+                    <TextBlock title={{ type: 'h3', text: 'Раздевалки и душевые' }}
+                        description={[
+                            `Две просторные раздевалки, вместимостью по 30 человек, </br>
+                            которыми вы сможете пользоваться во время тренировок.</br></br>
+                            В каждой раздевалке есть несколько комфортных душевых.`,
+                        ]}
+                        style={{ paddingBottom: 0 }}
+                    />
+                    <div className='gallery-cards three-cards container'>
+                        <div className='gallery-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <picture className='gallery-card__img'>
+                                <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-1.webp'} alt=''
+                                    loader={vkCloudLoader}
+                                />
+                            </picture>
+                        </div>
+
+                        <div className='gallery-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <picture className='gallery-card__img'>
+                                <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-2.webp'} alt=''
+                                    loader={vkCloudLoader}
+                                />
+                            </picture>
+                        </div>
+
+                        <div className='gallery-card'
+                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <picture className='gallery-card__img'>
+                                <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-3.webp'} alt=''
+                                    loader={vkCloudLoader}
+                                />
+                            </picture>
+                        </div>
+                    </div>
+
+
+
                     <TextBlock title={{ type: 'h3', text: 'Кабинет для тренеров' }}
                         description={[
                             `Кабинет на втором ярусе манежа — это рабочая зона для </br>
@@ -122,9 +161,7 @@ export default function PageSportsHall() {
                         ]}
                         style={{ paddingBottom: 0 }}
                     />
-
-
-                    <div className='gallery-cards container'>
+                    <div className='gallery-cards two-cards container'>
                         <div className='gallery-card'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='gallery-card__img'>
@@ -136,7 +173,7 @@ export default function PageSportsHall() {
 
                         <div className='gallery-card'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <picture className='meals-preview-card__img'>
+                            <picture className='gallery-card__img'>
                                 <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-2.webp'} alt=''
                                     loader={vkCloudLoader}
                                 />
