@@ -3,7 +3,10 @@ import Image from 'next/image'
 import PromoMin from '../components/PromoMin'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
-
+import Link from 'next/link'
+import TextBlock from '@/components/TextBlock'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode, Lazy, Navigation, Pagination, Thumbs, Virtual } from 'swiper'
 
 export default function PageEvents() {
     return (
@@ -60,17 +63,96 @@ export default function PageEvents() {
                         <div className='about-quatr__wrapper'
                             data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-quatr__text'>
-                                <h2>семейные торжества</h2>
-                                <span>Сыграйте свадьбу. Отпразднуйте день рождения или юбилей с нами.</span>
-                                {/* <div className='btn btn_black'>Подробнее</div> */}
+                                <h2>БАНКЕТЫ</h2>
+                                <span>
+                                    Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.
+                                </span>
+                                <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
                             <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                                <Image src='/img/events/family.webp' width={970} height={700} alt='' loader={vkCloudLoader} />
+                                <Image src='/img/events/banquet-prev.webp' width={670} height={485} alt=''
+                                // loader={vkCloudLoader}
+                                />
                             </div>
                         </div>
                     </div>
 
+
+
+
+                    <TextBlock title={{ type: 'h4', text: 'Оформление на любой вкус' }}
+                        description={[
+                            `Питание подобрано с учетом возраста и нагрузок спортсменов. </br> Также мы можем составить индивидуальное меню!`,
+                        ]}
+                        style={{ paddingBottom: 0 }}
+                    />
+
+                    <div className='event-slider container'>
+                        <Swiper
+                            {...({
+                                modules: [Lazy, FreeMode, Pagination, Navigation, Virtual],
+                                navigation: {
+                                    enable: true
+                                },
+                                virtual: true,
+
+                                spaceBetween: 20,
+                                breakpoints: {
+                                    1: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20,
+                                    },
+                                    991: {
+                                        slidesPerView: 1,
+                                        centeredSlides: false,
+                                        spaceBetween: 20,
+                                    },
+                                    1100: {
+                                        slidesPerView: 1,
+                                        initialSlide: 1,
+                                    },
+                                },
+
+                            } as any)}
+                        >
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    // loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    // loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    // loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+
+
+
+
+                    
                     <div id='PlazmaCelebrate' className='page-events__about-img-bg about-img-bg' data-scroll-section>
                         <picture className='about-img-bg__img' data-scroll data-scroll-speed="-4">
                             <img className='js--mobile-parallax' src='/img/events/about-img.webp' alt='Мероприятия в парк-отеле Plazma' />
@@ -93,6 +175,94 @@ export default function PageEvents() {
                         </div>
                     </div>
 
+                    <div className='page-events__about-quatr about-quatr reverse' data-scroll-section>
+                        <div className='about-quatr__wrapper'
+                            data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <div className='about-quatr__text'>
+                                <h2>КОРПОРАТИВЫ</h2>
+                                <span>
+                                    Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.
+                                </span>
+                                <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
+                            </div>
+                            <div className='about-quatr__image'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                <Image src='/img/events/corp-prev.webp' width={670} height={485} alt=''
+                                // loader={vkCloudLoader}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <TextBlock title={{ type: 'h4', text: 'Оформление на любой вкус' }}
+                        description={[
+                            `Питание подобрано с учетом возраста и нагрузок спортсменов. </br> Также мы можем составить индивидуальное меню!`,
+                        ]}
+                        style={{ paddingBottom: 0 }}
+                    />
+
+                    <div className='event-slider container'>
+                        <Swiper
+                            {...({
+                                modules: [Lazy, FreeMode, Pagination, Navigation, Virtual],
+                                navigation: {
+                                    enable: true
+                                },
+                                virtual: true,
+
+                                spaceBetween: 20,
+                                breakpoints: {
+                                    1: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20,
+                                    },
+                                    991: {
+                                        slidesPerView: 1,
+                                        centeredSlides: false,
+                                        spaceBetween: 20,
+                                    },
+                                    1100: {
+                                        slidesPerView: 1,
+                                        initialSlide: 1,
+                                    },
+                                },
+
+                            } as any)}
+                        >
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    // loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    // loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    // loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+
                     <div id='Conferences' className='page-events__about-two-col about-two-col container' data-scroll-section>
                         <div className='about-two-col__left'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
@@ -102,7 +272,7 @@ export default function PageEvents() {
                             </picture>
 
                             <div className='about-two-col__text'>
-                                <h2>Конференции</h2>
+                                <h2>Корпоративные мероприятия</h2>
                                 <span>Конференц-зал вместимостью до 100 человек.<br />
                                     Проектор с выдвижным экраном и звуковое оборудование.<br />
                                     Возможность организации фуршета.<br />
