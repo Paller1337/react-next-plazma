@@ -227,7 +227,7 @@ export default function PageSportsHall() {
                                 <div className='gallery-card'
                                     data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                     <picture className='gallery-card__img'>
-                                        <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-1.webp'} alt=''
+                                        <Image width={570} height={390} src={'/img/active-leisure/sports-hall/trainer-1.webp'} alt=''
                                             loader={vkCloudLoader}
                                         />
                                     </picture>
@@ -237,7 +237,7 @@ export default function PageSportsHall() {
                                 <div className='gallery-card'
                                     data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                     <picture className='gallery-card__img'>
-                                        <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-2.webp'} alt=''
+                                        <Image width={570} height={390} src={'/img/active-leisure/sports-hall/trainer-2.webp'} alt=''
                                             loader={vkCloudLoader}
                                         />
                                     </picture>

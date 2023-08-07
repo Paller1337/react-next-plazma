@@ -17,6 +17,7 @@ export module DEFAULTS {
     export const MENU = {
         BANQUET: 'https://disk.yandex.ru/i/O15H5bA_ZSwh1A',
         REST: 'https://disk.yandex.ru/i/peP4mC-yM1HJqw',
+        BAR: 'https://disk.yandex.ru/i/Ppnk2wOmcpd01Q',
     }
 
 }

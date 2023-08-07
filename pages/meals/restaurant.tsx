@@ -52,7 +52,7 @@ export default function PageRestaurant() {
 
                             <div className='big-p__btn-group'>
                                 <Link className='btn btn_black'
-                                    href={'https://disk.yandex.ru/i/Ppnk2wOmcpd01Q'}
+                                    href={DEFAULTS.MENU.BAR}
                                     target='_blank' rel='noopener noreferrer'>
                                     Барное меню
                                 </Link>
