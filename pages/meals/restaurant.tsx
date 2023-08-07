@@ -49,17 +49,20 @@ export default function PageRestaurant() {
                                 Ресторан оформлен в темных коричневых тонах, предлагая укрыться от солнца летом и насладиться уютной обстановкой с камином зимой.
                             </span>
 
-                            {/* <Link className='btn btn_black big-p__btn'
-                                href={'https://disk.yandex.ru/i/Ppnk2wOmcpd01Q'}
-                                target='_blank' rel='noopener noreferrer'>
-                                Барное меню
-                            </Link> */}
 
-                            <Link className='btn btn_black big-p__btn'
-                                href={DEFAULTS.MENU.REST}
-                                target='_blank' rel='noopener noreferrer'>
-                                Меню ресторана
-                            </Link>
+                            <div className='big-p__btn-group'>
+                                <Link className='btn btn_black'
+                                    href={'https://disk.yandex.ru/i/Ppnk2wOmcpd01Q'}
+                                    target='_blank' rel='noopener noreferrer'>
+                                    Барное меню
+                                </Link>
+
+                                <Link className='btn btn_black'
+                                    href={DEFAULTS.MENU.REST}
+                                    target='_blank' rel='noopener noreferrer'>
+                                    Меню ресторана
+                                </Link>
+                            </div>
                         </div>
 
                         <PlazmaSlider key={'restSlider'} data='restSlider' />

@@ -655,6 +655,7 @@
         right: 0
         display: flex
         gap: 20px
+        align-items: center
         @media screen and ( max-width:  $md1)
             right: 50%
             transform: translateX(50%)
@@ -1254,6 +1255,10 @@ object
         .gallery-card
             width: calc( 50% - 15px )
             min-width: calc( 50% - 15px )
+
+            width: 570px
+            min-width: 570px
+            // min-width: 370px
             @media screen and ( max-width: $md2 )
                 min-width: 320px
             @media screen and ( max-width: $md3 )
@@ -1270,8 +1275,10 @@ object
                     max-width: 100%
     &.three-cards
         .gallery-card
-            width: calc( 32% - 15px )
-            min-width: calc( 32% - 15px )
+            // width: calc( 32% - 15px )
+            // min-width: calc( 32% - 15px )
+            width: 370px
+            min-width: 370px
             @media screen and ( max-width: $md2 )
                 min-width: 320px
             @media screen and ( max-width: $md3 )
@@ -1296,6 +1303,7 @@ object
     &__img
         overflow: hidden
         position: relative
+        height: 100%
 
         img
             position: absolute

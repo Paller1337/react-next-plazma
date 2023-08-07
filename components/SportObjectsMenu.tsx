@@ -1,15 +1,39 @@
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import { ReactSVG } from 'react-svg'
 
 export default function SportObjectsMenu() {
+    const contentRef = useRef(null)
+    const [coords, setCoords] = useState({ x: 0, y: 0 });
 
+    // useEffect(() => {
+    //     const handleWindowMouseMove = event => {
+    //         setCoords({
+    //             x: event.clientX,
+    //             y: event.clientY,
+    //         });
+    //         console.log('cord: ', coords)
+    //     };
+
+    //     window.addEventListener('mousemove', handleWindowMouseMove);
+    //     return () => {
+    //         window.removeEventListener(
+    //             'mousemove',
+    //             handleWindowMouseMove,
+    //         );
+    //     };
+    // }, []);
+
+    useEffect(() => {
+
+    }, [contentRef.current])
 
     return (
         <div className='cards-menu container'>
             <span className='cards-menu__title'>Наши спортивные объекты</span>
-            <div className='cards-menu__content'>
+            <div ref={contentRef} className='cards-menu__content'>
                 <Link href={'/active-leisure/tennis-court'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>
                         <Image width={370} height={560} src={'/img/sport/sports-objects-previews/tennis.webp'} alt=''

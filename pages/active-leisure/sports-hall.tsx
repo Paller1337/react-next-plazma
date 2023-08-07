@@ -121,35 +121,70 @@ export default function PageSportsHall() {
                         ]}
                         style={{ paddingBottom: 0 }}
                     />
+
                     <div className='gallery-cards three-cards container'>
-                        <div className='gallery-card'
-                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <picture className='gallery-card__img'>
-                                <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-1.webp'} alt=''
-                                    loader={vkCloudLoader}
-                                />
-                            </picture>
-                        </div>
+                        <Swiper
+                            {...({
+                                modules: [FreeMode, Pagination],
+                                spaceBetween: 20,
+                                breakpoints: {
+                                    1: {
+                                        slidesPerView: 1.1,
+                                        centeredSlides: false,
+                                        enabled: true
+                                    },
+                                    420: {
+                                        slidesPerView: 1.2,
+                                        enabled: true
+                                    },
+                                    768: {
+                                        slidesPerView: 2.2,
+                                        // centeredSlides: true,
+                                        enabled: true
+                                    },
+                                    1100: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                        initialSlide: 2,
+                                        enabled: false,
+                                        onchange: (swiper) => swiper.update()
+                                    },
+                                },
 
-                        <div className='gallery-card'
-                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <picture className='gallery-card__img'>
-                                <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-2.webp'} alt=''
-                                    loader={vkCloudLoader}
-                                />
-                            </picture>
-                        </div>
-
-                        <div className='gallery-card'
-                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <picture className='gallery-card__img'>
-                                <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-3.webp'} alt=''
-                                    loader={vkCloudLoader}
-                                />
-                            </picture>
-                        </div>
+                            } as any)}
+                        >
+                            <SwiperSlide>
+                                <div className='gallery-card'
+                                    data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                    <picture className='gallery-card__img'>
+                                        <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-1.webp'} alt=''
+                                            loader={vkCloudLoader}
+                                        />
+                                    </picture>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='gallery-card'
+                                    data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                    <picture className='gallery-card__img'>
+                                        <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-2.webp'} alt=''
+                                            loader={vkCloudLoader}
+                                        />
+                                    </picture>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='gallery-card'
+                                    data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                    <picture className='gallery-card__img'>
+                                        <Image width={370} height={520} src={'/img/active-leisure/sports-hall/showers-3.webp'} alt=''
+                                            loader={vkCloudLoader}
+                                        />
+                                    </picture>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
-
 
 
                     <TextBlock title={{ type: 'h3', text: 'Кабинет для тренеров' }}
@@ -161,27 +196,57 @@ export default function PageSportsHall() {
                         style={{ paddingBottom: 0, marginTop: 50 }}
                     />
                     <div className='gallery-cards two-cards container'>
-                        <div className='gallery-card'
-                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <picture className='gallery-card__img'>
-                                <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-1.webp'} alt=''
-                                    loader={vkCloudLoader}
-                                />
-                            </picture>
-                        </div>
+                        <Swiper
+                            {...({
+                                modules: [FreeMode, Pagination],
+                                spaceBetween: 20,
+                                breakpoints: {
+                                    1: {
+                                        centeredSlides: false,
+                                        enabled: true,
+                                        slidesPerView: 1.1,
+                                    },
+                                    500: {
+                                        slidesPerView: 1.3,
+                                    },
+                                    800: {
+                                        slidesPerView: 1.6,
+                                    },
+                                    1100: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                        initialSlide: 2,
+                                        enabled: false,
+                                        onchange: (swiper) => swiper.update()
+                                    },
+                                },
 
-                        <div className='gallery-card'
-                            data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                            <picture className='gallery-card__img'>
-                                <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-2.webp'} alt=''
-                                    loader={vkCloudLoader}
-                                />
-                            </picture>
-                        </div>
+                            } as any)}
+                        >
+                            <SwiperSlide>
+                                <div className='gallery-card'
+                                    data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                    <picture className='gallery-card__img'>
+                                        <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-1.webp'} alt=''
+                                            loader={vkCloudLoader}
+                                        />
+                                    </picture>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='gallery-card'
+                                    data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                    <picture className='gallery-card__img'>
+                                        <Image width={570} height={390} src={'/img/active-leisure/tennis-court/med-2.webp'} alt=''
+                                            loader={vkCloudLoader}
+                                        />
+                                    </picture>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
 
                     <SportObjectForm />
-
                     <SportObjectsMenu />
                 </div >
             </main >

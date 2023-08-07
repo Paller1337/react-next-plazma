@@ -1,6 +1,7 @@
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
 interface ColumnCardProps {
     img: {
@@ -12,6 +13,10 @@ interface ColumnCardProps {
     desc?: string
     italicDesc?: string
     reverse?: boolean
+    btn?: {
+        link: string,
+        text: string,
+    }
 }
 
 
@@ -39,6 +44,11 @@ export default function RowCard(props: ColumnCardProps) {
                     <span className='column-card__desc' style={{ fontStyle: 'italic', fontWeight: '600' }}>
                         {props.italicDesc}
                     </span>
+                    : <></>}
+
+                {props.btn ?
+                    <Link href={props.btn.link} className='btn btn_black'
+                        style={{ marginLeft: 'auto', marginRight: 'auto' }}>{props.btn.text}</Link>
                     : <></>}
             </div>
         </div>
