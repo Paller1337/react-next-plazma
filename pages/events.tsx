@@ -73,7 +73,7 @@ export default function PageEvents() {
                             <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                 <Image src='/img/events/banquet-prev.webp' width={670} height={485} alt=''
-                                loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                 />
                             </div>
                         </div>
@@ -84,12 +84,12 @@ export default function PageEvents() {
 
                     <TextBlock title={{ type: 'h4', text: 'Оформление на любой вкус' }}
                         // description={[
-                            // `Вы можете провести незабываемый праздник`,
+                        // `Вы можете провести незабываемый праздник`,
                         // ]}
                         style={{ paddingBottom: 0 }}
                     />
 
-                    <div className='event-slider container' style={{marginTop: 30}}>
+                    <div className='event-slider container' style={{ marginTop: 30 }}>
                         <Swiper
                             {...({
                                 modules: [Lazy, FreeMode, Pagination, Navigation, Virtual],
@@ -123,7 +123,7 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -133,7 +133,7 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -143,7 +143,7 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -153,7 +153,7 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -163,7 +163,7 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -210,7 +210,7 @@ export default function PageEvents() {
                             <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                 <Image src='/img/events/corp-prev.webp' width={670} height={485} alt=''
-                                loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                 />
                             </div>
                         </div>
@@ -252,15 +252,15 @@ export default function PageEvents() {
 
                             } as any)}
                         >
-                            
+
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
                                     <Image src='/img/events/corp-slides/1.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
-                                    /> 
+                                        loader={vkCloudLoader}
+                                    />
                                 </div >
                             </SwiperSlide>
                             <SwiperSlide >
@@ -269,7 +269,7 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -279,10 +279,10 @@ export default function PageEvents() {
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
+                                        loader={vkCloudLoader}
                                     />
                                 </div >
-                            </SwiperSlide>                           
+                            </SwiperSlide>
                         </Swiper>
                     </div>
 
@@ -332,7 +332,7 @@ export default function PageEvents() {
                                     <span className='condition-name'>Аренда зала:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>цена под ключ</span>
+                                        <span className='condition-value'>30 000 рублей</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
@@ -350,7 +350,7 @@ export default function PageEvents() {
 
                         <div className='event-conditions__item'>
                             <span className='event-conditions__title'>
-                                Ресторан
+                                Банкетный зал
                             </span>
 
                             <div className='event-conditions__info'>
@@ -384,7 +384,7 @@ export default function PageEvents() {
 
                         <div className='event-conditions__item'>
                             <span className='event-conditions__title'>
-                                Банкетный зал
+                                Ресторан
                             </span>
 
                             <div className='event-conditions__info'>
