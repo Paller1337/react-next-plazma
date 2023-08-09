@@ -252,9 +252,20 @@ export default function PageEvents() {
 
                             } as any)}
                         >
+                            
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/copr-slides/1.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/corp-slides/1.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    loader={vkCloudLoader}
+                                    /> 
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/corp-slides/2.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
@@ -264,17 +275,7 @@ export default function PageEvents() {
                             </SwiperSlide>
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/copr-slides/2.webp' height={600} width={970} alt={'Plazma'}
-                                        loading="lazy"
-                                        quality={90}
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
-                                    />
-                                </div >
-                            </SwiperSlide>
-                            <SwiperSlide >
-                                <div className={`event-slider__image`} >
-                                    <Image src='/img/events/copr-slides/3.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/corp-slides/3.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
