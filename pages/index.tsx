@@ -178,7 +178,7 @@ export default function PageIndex(props: PageIndexProps) {
             />
 
             <FullSizePreviewInfo
-              title={'АКТИВНЫХ ОТДЫХ'}
+              title={'АКТИВНЫЙ ОТДЫХ'}
               description={`
               Парк-отель «Plazma» предлагает множество возможностей для активного отдыха.
               Разомнитесь на теннисном корте или в универсальном спортивном зале. Насладитесь

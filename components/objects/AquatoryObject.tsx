@@ -51,8 +51,8 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 {data.additionalText ?
                     <div className='aquatory-object__attention'>
-                        <span className='text'>
-                            {data.additionalText}
+                        <span className='text' dangerouslySetInnerHTML={{ __html: data.additionalText }}>
+                            {/* {} */}
                         </span>
                     </div>
                     : ''}
@@ -69,7 +69,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                     )}
                 </div>
 
-                {data.attentionText ? <span className='attention'>{data.attentionText}</span> : ''}
+                {data.attentionText ? <span className='attention' dangerouslySetInnerHTML={{ __html: data.attentionText }}></span> : ''}
             </div>
 
             <div className='aquatory-object__include'

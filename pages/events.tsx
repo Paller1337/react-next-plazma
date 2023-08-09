@@ -65,14 +65,15 @@ export default function PageEvents() {
                             <div className='about-quatr__text'>
                                 <h2>БАНКЕТЫ</h2>
                                 <span>
-                                    Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.
+                                    Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания. <br></br>
+                                    <b>Минимальный заказ - 2500 руб. на человека</b>
                                 </span>
                                 <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
                             <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                 <Image src='/img/events/banquet-prev.webp' width={670} height={485} alt=''
-                                // loader={vkCloudLoader}
+                                loader={vkCloudLoader}
                                 />
                             </div>
                         </div>
@@ -82,13 +83,13 @@ export default function PageEvents() {
 
 
                     <TextBlock title={{ type: 'h4', text: 'Оформление на любой вкус' }}
-                        description={[
-                            `Питание подобрано с учетом возраста и нагрузок спортсменов. </br> Также мы можем составить индивидуальное меню!`,
-                        ]}
+                        // description={[
+                            // `Вы можете провести незабываемый праздник`,
+                        // ]}
                         style={{ paddingBottom: 0 }}
                     />
 
-                    <div className='event-slider container'>
+                    <div className='event-slider container' style={{marginTop: 30}}>
                         <Swiper
                             {...({
                                 modules: [Lazy, FreeMode, Pagination, Navigation, Virtual],
@@ -118,31 +119,51 @@ export default function PageEvents() {
                         >
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/banquet-slides/1.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/banquet-slides/2.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/banquet-slides/3.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/banquet-slides/4.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    loader={vkCloudLoader}
+                                    />
+                                </div >
+                            </SwiperSlide>
+                            <SwiperSlide >
+                                <div className={`event-slider__image`} >
+                                    <Image src='/img/events/banquet-slides/5.webp' height={600} width={970} alt={'Plazma'}
+                                        loading="lazy"
+                                        quality={90}
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
+                                    loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
@@ -152,7 +173,7 @@ export default function PageEvents() {
 
 
 
-                    
+
                     <div id='PlazmaCelebrate' className='page-events__about-img-bg about-img-bg' data-scroll-section>
                         <picture className='about-img-bg__img' data-scroll data-scroll-speed="-4">
                             <img className='js--mobile-parallax' src='/img/events/about-img.webp' alt='Мероприятия в парк-отеле Plazma' />
@@ -181,26 +202,27 @@ export default function PageEvents() {
                             <div className='about-quatr__text'>
                                 <h2>КОРПОРАТИВЫ</h2>
                                 <span>
-                                    Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания.
+                                    Отвлекитесь от деловой обстановки вместе со своими коллегами. <br></br>
+                                    <b>Минимальный заказ - 2500 руб. на человека</b>
                                 </span>
                                 <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
                             <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                 <Image src='/img/events/corp-prev.webp' width={670} height={485} alt=''
-                                // loader={vkCloudLoader}
+                                loader={vkCloudLoader}
                                 />
                             </div>
                         </div>
                     </div>
 
 
-                    <TextBlock title={{ type: 'h4', text: 'Оформление на любой вкус' }}
+                    {/* <TextBlock title={{ type: 'h4', text: 'Оформление на любой вкус' }}
                         description={[
                             `Питание подобрано с учетом возраста и нагрузок спортсменов. </br> Также мы можем составить индивидуальное меню!`,
                         ]}
                         style={{ paddingBottom: 0 }}
-                    />
+                    /> */}
 
                     <div className='event-slider container'>
                         <Swiper
@@ -232,34 +254,34 @@ export default function PageEvents() {
                         >
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/copr-slides/1.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/copr-slides/2.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                     />
                                 </div >
                             </SwiperSlide>
                             <SwiperSlide >
                                 <div className={`event-slider__image`} >
-                                    <Image src='/img/events/to-slider.webp' height={600} width={970} alt={'Plazma'}
+                                    <Image src='/img/events/copr-slides/3.webp' height={600} width={970} alt={'Plazma'}
                                         loading="lazy"
                                         quality={90}
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                    loader={vkCloudLoader}
                                     />
                                 </div >
-                            </SwiperSlide>
+                            </SwiperSlide>                           
                         </Swiper>
                     </div>
 
@@ -272,7 +294,7 @@ export default function PageEvents() {
                             </picture>
 
                             <div className='about-two-col__text'>
-                                <h2>Корпоративные мероприятия</h2>
+                                <h2>Конференции</h2>
                                 <span>Конференц-зал вместимостью до 100 человек.<br />
                                     Проектор с выдвижным экраном и звуковое оборудование.<br />
                                     Возможность организации фуршета.<br />
@@ -286,6 +308,109 @@ export default function PageEvents() {
                             <picture className='about-two-col__img'>
                                 <img src='/img/events/corp-2.webp' alt='Мероприятия в парк-отеле Plazma' />
                             </picture>
+                        </div>
+                    </div>
+
+
+
+                    <div className=' event-conditions'>
+                        <div className='event-conditions__item'>
+                            <span className='event-conditions__title'>
+                                Летний шатер
+                            </span>
+
+                            <div className='event-conditions__info'>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Вместимость:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>~ 70-80 человек</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Аренда зала:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>цена под ключ</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Часы работы:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>с 10:00 до 23:00</span>
+                                        <span className='condition-value'>громкая музыка до 22:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='event-conditions__divider' />
+
+                        <div className='event-conditions__item'>
+                            <span className='event-conditions__title'>
+                                Ресторан
+                            </span>
+
+                            <div className='event-conditions__info'>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Вместимость:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>~ 70-80 человек</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Аренда зала:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>вс. – чт. – 30 000 рублей</span>
+                                        <span className='condition-value'>пт. – сб. - 40 000 рублей</span>
+                                        <span className='condition-value'>праздники - 40 000 рублей</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Часы работы:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>с 10:00 до 23:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='event-conditions__divider' />
+
+                        <div className='event-conditions__item'>
+                            <span className='event-conditions__title'>
+                                Банкетный зал
+                            </span>
+
+                            <div className='event-conditions__info'>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Вместимость:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>I зал ~ 30 чел,</span>
+                                        <span className='condition-value'>II зал ~ 60 чел.</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Аренда зала:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>цена под ключ</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Часы работы:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>вс. - пт. с 11:00 до 23:00</span>
+                                        <span className='condition-value'>суббота с 11:00 до 02:00</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div >

@@ -156,7 +156,6 @@
     @media screen and ( max-width: $md3 )
         margin-top: 50px
         margin-bottom: 50px
-        
 
     &__img
         display: block
@@ -256,17 +255,17 @@
 .about-two-col
     display: flex
     padding:
-        top: 200px
-        bottom: 200px
+        top: 150px
+        bottom: 100px
     height: max-content
     @media screen and ( max-width: $md2 )
         padding:
             top: 100px
-            bottom: 100px
+            bottom: 50px
     @media screen and ( max-width: $md3 )
         padding:
             top: 50px
-            bottom: 50px
+            bottom: 25px
         flex-direction: column-reverse
         gap: 20px
 
@@ -363,3 +362,75 @@
             left: 50%
             transform: translate(-50%, -50%)
             z-index: 1
+
+.event-conditions
+    display: flex
+    flex-direction: row
+    // gap: 40px
+    justify-content: space-between
+    padding-top: 250px
+    padding-bottom: 250px
+    flex-wrap: wrap
+    max-width: 1420px
+    margin-left: auto
+    margin-right: auto
+    @media screen and ( max-width: $md1 )
+        flex-direction: column
+        gap: 40px
+        align-items: center
+        padding-top: 100px
+        padding-bottom: 50px
+
+    &__divider
+        height: auto
+        width: 1px
+        background: #d4d4d488
+        @media screen and ( max-width: $md1 )   
+            width: 50%
+            height: 1px
+    &__item
+        max-width: 340px
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 24px
+
+    &__title
+        color: #262626
+        text-align: center
+        font-size: 24px
+        font-weight: 400
+        line-height: 150%
+
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 24px
+        width: 100%
+
+    &__row
+        display: flex
+        justify-content: space-between
+
+    &__col
+        display: flex
+        flex-direction: column
+        gap: 4px
+
+    .condition-name
+        color: #262626
+        text-align: center
+        font-size: 16px
+        font-style: normal
+        font-weight: 600
+        line-height: 150%
+        letter-spacing: 0.48px
+
+    .condition-value
+        color: #393939
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        text-align: right
