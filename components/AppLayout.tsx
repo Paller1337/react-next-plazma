@@ -35,11 +35,14 @@ export default function AppLayout(props: AppLayoutProps) {
         !props.asPath.includes('tent') &&
         !props.asPath.includes('hall')
 
+    const job = props.asPath.includes('job')
+
     useEffect(() => {
         checkIfNotFound()
 
         if (
             meals ||
+            job ||
             props.asPath.includes('booking') ||
             isNotFound
         ) {

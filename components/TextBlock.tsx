@@ -6,7 +6,7 @@ import { CSSProperties } from 'react'
 
 interface TextBlockProps {
     title?: {
-        type: 'h2' | 'h3' | 'h4'
+        type: 'h1' | 'h2' | 'h3' | 'h4'
         text: string
     }
     description?: string | string[]

@@ -18,6 +18,45 @@ const checkInRoom = ['Заезд:', ' <b>14:00</b>;', ' Выезд:', ' <b>12:00
 
 export const hotelRooms: RoomObjectProps[] = [
     {
+        id: 367933,
+        title: 'Дача',
+        description: 'Расположенный в дачном дворике дом с панорамными окнами, в котором есть мини-кухня с посудой, две односпальные кровати, раскладывающийся диван и санузел.',
+        images: [
+            '/img/hotel/room-previews/dacha/1.webp',
+            '/img/hotel/room-previews/dacha/2.webp',
+            '/img/hotel/room-previews/dacha/3.webp',
+            '/img/hotel/room-previews/dacha/4.webp',
+            '/img/hotel/room-previews/dacha/5.webp',
+            '/img/hotel/room-previews/dacha/6.webp',
+            '/img/hotel/room-previews/dacha/7.webp',
+        ],
+        previews: [
+            '/img-previews/hotel/room-previews/dacha/1.webp',
+            '/img-previews/hotel/room-previews/dacha/2.webp',
+            '/img-previews/hotel/room-previews/dacha/3.webp',
+            '/img-previews/hotel/room-previews/dacha/4.webp',
+            '/img-previews/hotel/room-previews/dacha/5.webp',
+            '/img-previews/hotel/room-previews/dacha/6.webp',
+            '/img-previews/hotel/room-previews/dacha/7.webp',
+        ],
+        size: 'Размер номера 28 м².', // Добавить площадь терассы 9 кв.м.
+        attributes: [
+            { name: 'Цены', value: ['<b>6200 руб/сутки</b>'] },
+            { name: 'Вместимость', value: ['2 человека.'] },
+            { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInHouse },
+        ],
+        amenities: [
+            ...defaultAmenities,
+            'Мангальная зона',
+            'Микроволновая печь',
+            'Набор посуды',
+            'Халаты и сланцы',
+            'Сейф',
+        ]
+    },
+
+    {
         id: 320518,
         title: 'Домик на набережной',
         description: 'Уютный домик на набережной, включающий в себя мини-кухню, душевую, спальную и зал в панорамными окнами.',
@@ -57,6 +96,7 @@ export const hotelRooms: RoomObjectProps[] = [
             'Сейф',
         ]
     },
+
     {
         id: 90446,
         title: 'Австрийский таунхаус',
