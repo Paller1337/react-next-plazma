@@ -2,5 +2,5 @@
 
 export default function vkCloudLoader({ src }) {
     // const params = [`width=${width}`, `quality=${quality || 75}`, 'format=auto']
-    return `https://kplazma.ru/${src}`
+    return `https://cdn0.kplazma.ru/${src}`
   }
