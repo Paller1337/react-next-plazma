@@ -61,7 +61,7 @@ export default function PageJob() {
                             <h1 className='h1-title'>Вакансии в «PLAZMA»</h1>
                             <span className='job-page__description'>
                                 Если вас заинтересовала одна из предложнных вакансий - звоните по номеру:
-                                <b>+7 (910) 168-17-61</b>
+                                <b> +7 (910) 168-17-61</b>
                             </span>
                         </div>
 
