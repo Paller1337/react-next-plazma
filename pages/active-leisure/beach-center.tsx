@@ -127,7 +127,7 @@ export default function PageBeachCenter() {
                     </div>
 
 
-                    <SportObjectForm />
+                    <SportObjectForm obj={'ПЛЯЖНЫЙ ЦЕНТР'}/>
 
                     <SportObjectsMenu />
                 </div >

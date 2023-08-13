@@ -149,7 +149,7 @@ export default function PageTennisCourt() {
                         </Swiper>
                     </div>
 
-                    <SportObjectForm />
+                    <SportObjectForm obj={'ТЕННИСНЫЙ КОРТ'}/>
 
                     <SportObjectsMenu />
                 </div >

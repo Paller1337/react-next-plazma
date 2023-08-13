@@ -246,7 +246,7 @@ export default function PageSportsHall() {
                         </Swiper>
                     </div>
 
-                    <SportObjectForm />
+                    <SportObjectForm obj={'УНИВЕРСАЛЬНЫЙ СПОРТИВНЫЙ ЗАЛ'}/>
                     <SportObjectsMenu />
                 </div >
             </main >
