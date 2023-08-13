@@ -163,6 +163,20 @@ export default function PageJob() {
                                     Скользящий.
                                 </JobText>
                             </Job>
+
+                            <Job job={{
+                                name: 'Менеджер по подбору персонала',
+                                price: '~ 40.000',
+                            }}>
+                                <JobText bold>Требования: </JobText>
+                                <JobText>
+                                    Опыт работы, честность, отличные коммуникативные навыки.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    5/2.
+                                </JobText>
+                            </Job>
                         </div>
                     </div>
                     <div className='base-bg' data-scroll-section></div>

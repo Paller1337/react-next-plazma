@@ -1,12 +1,17 @@
 .job-page
     padding-top: 220px
     padding-bottom: 100px
+    @media screen and ( max-width: $md3 )
+        padding-top: 120px
+        
 
     &__heading
         display: flex
         flex-direction: column
         align-items: center
         gap: 24px
+        .h1-title
+            text-align: center
 
     &__description
         font-size: 24px
@@ -15,6 +20,11 @@
         color: #262626
         display: flex
         gap: 10px
+        @media screen and ( max-width: $md2 )
+            flex-direction: column
+            align-items: center
+        @media screen and ( max-width: $md3 )
+            text-align: center
 
     &__content
         display: flex
@@ -26,6 +36,7 @@
 .job-item
     display: flex
     width: 900px
+    max-width: 100%
     padding: 24px
     flex-direction: column
     align-items: flex-start
@@ -37,13 +48,29 @@
         justify-content: space-between
         width: 100%
         align-items: flex-end
+        flex-wrap: wrap
+        @media screen and ( max-width: $md3 )
+            flex-direction: column
+            align-items: center
+            gap: 16px
 
     &__job-name
         color: #262626
         font-size: 24px
+        white-space: nowrap
+        @media screen and ( max-width: $md4 )
+            font-size: 20px
+            font-weight: 500
+            white-space: normal
+            text-align: center
     &__job-price
         color: #262626
         font-size: 20px
+        @media screen and ( max-width: $md3 )
+            text-align: center
+
+        @media screen and ( max-width: $md4 )
+            font-size: 16px
         // text-decoration-line: underline
 
     &__body

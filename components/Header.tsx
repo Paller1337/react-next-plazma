@@ -46,6 +46,10 @@ const headerItems = [
         name: 'Спортивные сборы',
         link: '/sports-camps',
     },
+    {
+        name: 'Вакансии',
+        link: '/job',
+    },
 ]
 
 export default function Header(props: HeaderProps) {
