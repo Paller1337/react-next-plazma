@@ -6,6 +6,7 @@ import { saunaObjData } from '../data/saunaObj'
 import SaunaObject from '../components/objects/SaunaObject'
 import Promo from '../components/Promo'
 import { DEFAULTS } from 'defaults'
+import TextBlock from '@/components/TextBlock'
 
 
 export default function PageSauna() {
@@ -54,21 +55,12 @@ export default function PageSauna() {
                         </span>
                     </div>
 
-                    {saunaObjData.map((x, i) =>
-                        <SaunaObject
-                            key={'sauna-' + x.id.toString()}
-                            id={x.id}
-                            name={x.name}
-                            description={x.description}
-                            aboutSize={x.aboutSize}
-                            price={x.price}
-                            sliderData={x.sliderData}
-                        />
-                    )}
-
                     <div className='page-saunas__attention container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
                         data-aos-once={DEFAULTS.AOS.once}>
+                        <TextBlock title={{ type: 'h2', text: 'Правила бронирования' }}
+                            style={{ paddingBottom: 10 }}
+                        />
                         <div className='text-column'>
                             <span className='text-normal'>
                                 Бронирование бани осуществляется на основании задатка,внесённого гостем заблаговременно.
@@ -91,6 +83,20 @@ export default function PageSauna() {
                             </span>
                         </div>
                     </div>
+
+                    {saunaObjData.map((x, i) =>
+                        <SaunaObject
+                            key={'sauna-' + x.id.toString()}
+                            id={x.id}
+                            name={x.name}
+                            description={x.description}
+                            aboutSize={x.aboutSize}
+                            price={x.price}
+                            sliderData={x.sliderData}
+                        />
+                    )}
+
+
                 </div >
             </main>
         </>

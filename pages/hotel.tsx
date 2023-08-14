@@ -14,6 +14,7 @@ import { Rings } from 'react-loader-spinner'
 
 import RoomObject from '../components/objects/RoomObject'
 import { DEFAULTS } from 'defaults'
+import TextBlock from '@/components/TextBlock'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 // const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -88,6 +89,36 @@ export default function PageHotel(props: PageHotelProps) {
 
                     </div>
 
+
+
+                    <div className='page-saunas__attention container' data-scroll-section
+                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
+                        data-aos-once={DEFAULTS.AOS.once} style={{paddingTop: 0}}>
+                        <TextBlock title={{ type: 'h2', text: 'Правила бронирования' }}
+                            style={{ paddingTop: 0 }}
+                        />
+
+                        <div className='text-column'>
+
+                            <span className='text-normal'>
+                                При бронировании номера взимается оплата 1х суток проживания.
+                            </span>
+                            <span className='text-normal'>
+                                При отмене номера менее, чем за 5 суток до даты заезда, оплата 1х суток проживания не возвращается, кроме случаев, обговариваемых с
+                                администратором индивидуально.
+                            </span>
+                            <span className='text-normal'>
+                                Для возврата денежных средств позвоните 89101681761 или 89308977701.
+                            </span>
+                            <span className='text-normal'>
+                                Незаезд штрафуется в размере первых суток проживания.
+                            </span>
+
+                            <span className='text-normal'>
+                                При заезде администратор имеет право взять с гостей депозит в размере от 2000 до 10000 рублей.
+                            </span>
+                        </div>
+                    </div>
 
                     <div id='hotelRooms' className='page-hotel__rooms hotel-rooms' data-scroll-section>
                         <span className='hotel-rooms__title' data-scroll>Номера</span>
