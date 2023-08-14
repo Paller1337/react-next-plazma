@@ -42,8 +42,8 @@ export const hotelRooms: RoomObjectProps[] = [
         size: 'Размер номера 28 м².', // Добавить площадь терассы 9 кв.м.
         attributes: [
             { name: 'Цены', value: ['<b>6200 руб/сутки</b>'] },
-            { name: 'Вместимость', value: ['2 человека.'] },
-            { name: 'Доп. гости', value: ['+1 дополнительное место'] },
+            { name: 'Вместимость', value: ['2 + 1 человек.'] },
+            // { name: 'Доп. гости', value: ['+1 дополнительное место'] },
             { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
