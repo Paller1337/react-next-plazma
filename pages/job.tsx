@@ -96,7 +96,7 @@ export default function PageJob() {
 
                             <Job job={{
                                 name: 'Повар в ресторан',
-                                price: '~ 40.000 - 50.000',
+                                price: '~ 40.000 - 60.000',
                             }}>
                                 <JobText bold>Требования: </JobText>
                                 <JobText>

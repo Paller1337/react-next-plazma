@@ -4,10 +4,12 @@ import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import TextBlock from '../components/TextBlock'
 import SportCalculator from '../components/SportCalculator'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Pagination } from 'swiper'
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
+import { FreeMode, Navigation, Pagination } from 'swiper'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
+import SportObjectsMenu from '@/components/SportObjectsMenu'
+import RowCard from '@/components/RowCard'
 
 export default function PageSportsCamps() {
     return (
@@ -89,6 +91,7 @@ export default function PageSportsCamps() {
                         </div>
                     </div>
 
+                    <SportObjectsMenu />
 
                     <TextBlock title={{ type: 'h3', text: 'Питание для спортсменов' }}
                         description={[
@@ -224,6 +227,25 @@ export default function PageSportsCamps() {
                                 />
                             </SwiperSlide>
                         </Swiper>
+                    </div>
+
+
+                    <TextBlock className='container' title={{ type: 'h2', text: 'Площадки, с которыми мы сотрудничаем' }}
+                        style={{ paddingBottom: 20, paddingTop: '220px' }}
+                    />
+
+                    <div className='container'>
+                        <RowCard
+                            title='МУНИЦИПАЛЬЙ СТАДИОН'
+                            desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
+                            хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
+                            italicDesc={`Цена: от 1400 до 1700 руб/час`}
+                            img={{ w: 770, h: 570, src: ['/img/active-leisure/row-3.webp'] }}
+                            btn={{
+                                link: '/active-leisure/tennis-court',
+                                text: 'Подробнее',
+                            }}
+                        />
                     </div>
 
                     {/* <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>

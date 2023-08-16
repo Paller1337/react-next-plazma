@@ -296,7 +296,7 @@ export default function PageActiveLeisure() {
                             пляжного волейбола с кварцевым песком.`}
                             italicDesc={`Цена: от 800 до 2000 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
-                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-1.webp' }}
+                            img={{ w: 770, h: 570, src: ['/img/active-leisure/row-1.webp'] }}
                             btn={{
                                 link: '/active-leisure/beach-center',
                                 text: 'Подробнее',
@@ -310,7 +310,7 @@ export default function PageActiveLeisure() {
                             кабинета для тренеров, трибуны и новейший мобильный инвентарь.`}
                             italicDesc={`Цена: до 2500 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow2Png }}
-                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-2.webp' }}
+                            img={{ w: 770, h: 570, src: ['/img/active-leisure/row-2.webp'] }}
                             btn={{
                                 link: '/active-leisure/sports-hall',
                                 text: 'Подробнее',
@@ -323,7 +323,7 @@ export default function PageActiveLeisure() {
                             хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
                             italicDesc={`Цена: от 1400 до 1700 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
-                            img={{ w: 770, h: 570, src: '/img/active-leisure/row-3.webp' }}
+                            img={{ w: 770, h: 570, src: ['/img/active-leisure/row-3.webp'] }}
                             btn={{
                                 link: '/active-leisure/tennis-court',
                                 text: 'Подробнее',

@@ -57,9 +57,9 @@ export default function PageSauna() {
 
                     <div className='page-saunas__attention container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
-                        data-aos-once={DEFAULTS.AOS.once}>
-                        <TextBlock title={{ type: 'h2', text: 'Правила бронирования' }}
-                            style={{ paddingBottom: 10 }}
+                        data-aos-once={DEFAULTS.AOS.once} style={{ paddingTop: 0 }}>
+                        <TextBlock title={{ type: 'h3', text: 'Правила бронирования' }}
+                            style={{ paddingBottom: 10, paddingTop: 0 }}
                         />
                         <div className='text-column'>
                             <span className='text-normal'>
@@ -84,6 +84,10 @@ export default function PageSauna() {
                         </div>
                     </div>
 
+                    <TextBlock title={{ type: 'h2', text: 'Бани' }}
+                        style={{ paddingBottom: 10, paddingTop: 0 }}
+                    />
+                    
                     {saunaObjData.map((x, i) =>
                         <SaunaObject
                             key={'sauna-' + x.id.toString()}
