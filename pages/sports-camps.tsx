@@ -118,7 +118,6 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
-                                {/* <Image width={0} height={0} src={images.meals.min.img2Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/2.webp'} alt=''
                                     loader={vkCloudLoader} />
                             </picture>
@@ -130,7 +129,6 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
-                                {/* <Image width={0} height={0} src={images.meals.min.img3Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/3.webp'} alt=''
                                     loader={vkCloudLoader} />
                             </picture>
@@ -142,7 +140,6 @@ export default function PageSportsCamps() {
                         <div className='meals-preview-card'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='meals-preview-card__img'>
-                                {/* <Image width={0} height={0} src={images.meals.min.img4Jpg} alt='' placeholder='blur' /> */}
                                 <Image width={570} height={320} src={'/img/meals/min/4.webp'} alt=''
                                     loader={vkCloudLoader} />
                             </picture>
@@ -236,50 +233,41 @@ export default function PageSportsCamps() {
 
                     <div className='container'>
                         <RowCard
-                            title='МУНИЦИПАЛЬЙ СТАДИОН'
-                            desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
-                            хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
-                            italicDesc={`Цена: договорная`}
-                            img={{ w: 770, h: 570, src: ['/img/sport/other-objects/football/1.webp'] }}
-                            // btn={{
-                            //     link: '/active-leisure/tennis-court',
-                            //     text: 'Подробнее',
-                            // }}
+                            title='СТАДИОН'
+                            desc={`Профессиональное футбольное поле с искусственным покрытием имеет размеры 105 м x 75 м. 
+                            Идеально подходит для тренировок и соревнований. Обеспечивает ровную поверхность, амортизацию и дренажную систему.`}
+                            italicDesc={`Цена: 2500 руб./час`}
+                            img={{
+                                w: 770, h: 570, src: [
+                                    '/img/sport/other-objects/football/1.webp',
+                                    '/img/sport/other-objects/football/1.webp',
+                                    '/img/sport/other-objects/football/1.webp'
+                                ]
+                            }}
+                        // btn={{
+                        //     link: '/active-leisure/tennis-court',
+                        //     text: 'Подробнее',
+                        // }}
                         />
                         <RowCard
-                            title='МУНИЦИПАЛЬЙ БАССЕЙН'
-                            desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
-                            хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
-                            italicDesc={`Цена: договорная`}
-                            img={{ w: 770, h: 570, src: ['/img/sport/other-objects/pool/1.webp'] }}
-                            // btn={{
-                            //     link: '/active-leisure/tennis-court',
-                            //     text: 'Подробнее',
-                            // }}
+                            title='БАССЕЙН'
+                            desc={`Бассейн площадью 625 м2 и длиной 25 метров предоставляет идеальные условия для занятий плаванием. 
+                            Оборудован 6 дорожками, а его глубина варьируется от 4.5 метров до 1.2 метров.`}
+                            italicDesc={`Цена: 1000 руб./час одна дорожка, рассчитано на 5-6 человек.`}
+                            img={{
+                                w: 770, h: 570, src:
+                                    [
+                                        '/img/sport/other-objects/pool/1.webp',
+                                        '/img/sport/other-objects/pool/2.webp',
+                                        '/img/sport/other-objects/pool/3.webp'
+                                    ]
+                            }}
+                        // btn={{
+                        //     link: '/active-leisure/tennis-court',
+                        //     text: 'Подробнее',
+                        // }}
                         />
                     </div>
-
-                    {/* <div className='column-cards--wrapper container' style={{ paddingTop: 0 }}>
-                        <ColumnCard
-                            title='Делюкс на набережной'
-                            // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img1Jpg }}
-                            img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/1.webp' }]}
-                        />
-
-                        <ColumnCard
-                            title='Спортивный копрус - 1 этаж'
-                            // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img2Jpg }}
-                            img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/2.webp' }]}
-                        />
-
-                        <ColumnCard
-                            title='Спортивный копрус - 2 этаж'
-                            // img={{ h: 770, w: 570, src: images.sportsCamps.rooms.img3Jpg }}
-                            img={[{ h: 770, w: 570, src: '/img/sports-camps/rooms/3.webp' }]}
-                        />
-                    </div> */}
-
-
                     <div className='page-sports-camps__calculate container'
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <TextBlock title={{ type: 'h2', text: 'Сколько стоят сборы в «PLAZMA»' }}

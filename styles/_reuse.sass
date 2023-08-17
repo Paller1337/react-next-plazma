@@ -1028,12 +1028,29 @@ object
 
     // @media screen and ( max-width: $md3 )
     //     min-width: 100%
+    &__image
+        min-height: 440px
+        max-width: 770px
+        width: 100% !important
+        display: flex
+        @media screen and ( max-width: $md1 )
+            max-width: 550px !important
+
+        @media screen and ( max-width: $md2 )
+            max-width: 1000px !important
+        @media screen and ( max-width: $md3 )
+            max-height: 70vw
+
+        .swiper-slide
+            display: flex
+            align-items: center
+            justify-content: center
 
     &__img
         display: flex
         height: 100%
         width: 100%
-        flex-basis: 100% 
+        flex-basis: 100%
         max-width: 770px
         position: relative
 
@@ -1067,9 +1084,11 @@ object
             max-width: 100%
             padding-left: 10vw
             padding-right: 10vw
+            padding-top: 20px
             justify-content: flex-start
             padding-bottom: 30px
             @media screen and ( max-width: $md3 )
+                padding-top: 5px
                 padding-left: 5vw
                 padding-right: 5vw
 
@@ -1090,9 +1109,9 @@ object
             bottom: 0
             @media screen and ( max-width: $md2 )
                 left: 50%
-                width: 10vw
+                width: 80vw
                 transform: translateX(-50%)
-                max-width: 100px
+                max-width: 100%
 
     &__title
         color: #262626

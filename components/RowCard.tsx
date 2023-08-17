@@ -2,7 +2,7 @@ import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FreeMode, Lazy, Navigation, Pagination, Thumbs, Virtual } from 'swiper'
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
 
@@ -25,61 +25,66 @@ interface ColumnCardProps {
 
 
 export default function RowCard(props: ColumnCardProps) {
+    const [browserLoad, setBrowserLoad] = useState(false)
+
+    const containerRef = useRef(null)
+    const [swiperWidth, setSwiperWidth] = useState(770)
+
+    useEffect(() => {
+        if (containerRef.current) {
+            const container = document.body as HTMLElement
+            // setSwiperWidth(container.clientWidth)
+
+
+            const observer = new ResizeObserver((entries) => {
+                entries.forEach((entry) => {
+                    const width = entry.contentRect.width
+                    setSwiperWidth(width)
+
+                    console.log(width)
+                })
+            })
+
+            observer.observe(container);
+
+            return () => {
+                if (container) {
+                    observer.unobserve(container);
+                }
+            }
+        }
+    }, [containerRef.current])
+
+    useEffect(() => setBrowserLoad(true), [])
+    if (!browserLoad) return null
 
     return (<>
         <div className={`row-card ${props.reverse ? 'reverse' : ''}`}>
-            <div className='row-card__img'
-                data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
-                >
-                {/* {props.img.src.length && props.img.src.length > 10 ? */}
-                    <Image src={props.img.src[0]} width={props.img.w} height={props.img.h} alt=''
-                        loader={vkCloudLoader}
-                    /> 
-                    {/* : */}
-                    {/* <> */}
-
-                    {/* </>} */}
-                {/* <Swiper
+            <div className='row-card__image'>
+                <Swiper
                     {...({
-                        modules: [Lazy, Pagination, Navigation, Thumbs, Virtual],
-                        navigation: {
-                            enable: true
-                        },
-                        virtual: true,
+                        spaceBetween: 0,
                         slidesPerView: 1,
-                        // spaceBetween: 20,
-                        breakpoints: {
-                            1: {
-                                slidesPerView: 1,
-                                // spaceBetween: 20,
-                            },
-                            991: {
-                                slidesPerView: 1,
-                                // centeredSlides: false,
-                                // spaceBetween: 20,
-                            },
-                            1100: {
-                                slidesPerView: 1,
-                                initialSlide: 1,
-                            },
+                        modules: [Pagination, Navigation],
+                        navigation: {
+                            enabled: true,
                         },
-
+                        pagination: {
+                            clickable: true,
+                            type: 'bullets',
+                        },
                     } as SwiperProps)}
                 >
-                    {props.img.src && props.img.src.map((image, i) =>
-                        <SwiperSlide key={image + '-swipe-item'} virtualIndex={i}>
-                            <div key={i} className={`hotel-room__image`}>
-                                <Image key={'img-' + i} src={image} height={props.img.h} width={props.img.w} alt={'Plazma'}
-                                    loading="lazy"
-                                    quality={90}
-                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    loader={vkCloudLoader}
-                                />
-                            </div >
+                    {props.img.src.length > 0 ? props.img.src.map(x =>
+                        <SwiperSlide key={'row-img-' + x}>
+                            <Image src={x} width={props.img.w} height={props.img.h} alt=''
+                            loader={vkCloudLoader} 
+                            />
                         </SwiperSlide>
-                    )}
-                </Swiper> */}
+                    ) : ''}
+                </Swiper>
             </div>
+
 
             <div className='row-card__text'
                 data-aos={props.reverse ? 'fade-right' : 'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
