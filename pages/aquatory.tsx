@@ -131,6 +131,9 @@ export default function PageAquatory() {
                                 <span className='text-normal'>с 10:00 до 22:00</span>
                             </div>
 
+                            <span className='worktime-section__text'>Вы можете посетить наш парк-отель, не проживая в
+                                гостинице, воспользовавшись функцией дневного посещения. </span>
+                                
                             <div className='worktime-section__timetable'>
                                 <span className='worktime-section__timetable-title'>Стоимость посещения</span>
                                 <div className='worktime-section__timetable-content'>

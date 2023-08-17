@@ -244,10 +244,6 @@ export default function PageSportsCamps() {
                                     '/img/sport/other-objects/football/3.webp'
                                 ]
                             }}
-                        // btn={{
-                        //     link: '/active-leisure/tennis-court',
-                        //     text: 'Подробнее',
-                        // }}
                         />
                         <RowCard
                             title='БАССЕЙН'
@@ -262,10 +258,20 @@ export default function PageSportsCamps() {
                                         '/img/sport/other-objects/pool/3.webp'
                                     ]
                             }}
-                        // btn={{
-                        //     link: '/active-leisure/tennis-court',
-                        //     text: 'Подробнее',
-                        // }}
+                        />
+                        <RowCard
+                            title='ТРЕНАЖЕРНЫЙ ЗАЛ'
+                            desc={`Бассейн площадью 625 м2 и длиной 25 метров предоставляет идеальные условия для занятий плаванием. 
+                            Оборудован 6 дорожками, а его глубина варьируется от 4.5 метров до 1.2 метров.`}
+                            italicDesc={`Цена: 150 руб./час.`}
+                            img={{
+                                w: 770, h: 570, src:
+                                    [
+                                        '/img/sport/other-objects/workout-room/1.webp',
+                                        '/img/sport/other-objects/workout-room/2.webp',
+                                        '/img/sport/other-objects/workout-room/3.webp'
+                                    ]
+                            }}
                         />
                     </div>
                     <div className='page-sports-camps__calculate container'
