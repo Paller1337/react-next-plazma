@@ -231,7 +231,7 @@ export default function PageSportsCamps() {
 
 
                     <TextBlock className='container' title={{ type: 'h2', text: 'Площадки, с которыми мы сотрудничаем' }}
-                        style={{ paddingBottom: 20, paddingTop: '220px' }}
+                        style={{ paddingBottom: 20, paddingTop: '50px' }}
                     />
 
                     <div className='container'>
@@ -239,12 +239,23 @@ export default function PageSportsCamps() {
                             title='МУНИЦИПАЛЬЙ СТАДИОН'
                             desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
                             хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
-                            italicDesc={`Цена: от 1400 до 1700 руб/час`}
-                            img={{ w: 770, h: 570, src: ['/img/active-leisure/row-3.webp'] }}
-                            btn={{
-                                link: '/active-leisure/tennis-court',
-                                text: 'Подробнее',
-                            }}
+                            italicDesc={`Цена: договорная`}
+                            img={{ w: 770, h: 570, src: ['/img/sport/other-objects/football/1.webp'] }}
+                            // btn={{
+                            //     link: '/active-leisure/tennis-court',
+                            //     text: 'Подробнее',
+                            // }}
+                        />
+                        <RowCard
+                            title='МУНИЦИПАЛЬЙ БАССЕЙН'
+                            desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
+                            хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
+                            italicDesc={`Цена: договорная`}
+                            img={{ w: 770, h: 570, src: ['/img/sport/other-objects/pool/1.webp'] }}
+                            // btn={{
+                            //     link: '/active-leisure/tennis-court',
+                            //     text: 'Подробнее',
+                            // }}
                         />
                     </div>
 
