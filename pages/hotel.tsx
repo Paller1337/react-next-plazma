@@ -101,7 +101,7 @@ export default function PageHotel(props: PageHotelProps) {
                         <div className='text-column'>
 
                             <span className='text-normal'>
-                                При бронировании номера взимается оплата 1х суток проживания.
+                                При бронировании номера взимается оплата в размере 1х суток проживания.
                             </span>
                             <span className='text-normal'>
                                 При отмене номера менее, чем за 7 суток до даты заезда, оплата 1х суток проживания не возвращается, кроме случаев, обговариваемых с

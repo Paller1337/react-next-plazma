@@ -63,17 +63,22 @@ export default function PageSauna() {
                         />
                         <div className='text-column'>
                             <span className='text-normal'>
-                                Бронирование бани осуществляется на основании задатка,внесённого гостем заблаговременно.
+                                Бронирование бани осуществляется на основании задатка, внесённого гостем заблаговременно.
                             </span>
                             <span className='text-normal'>
-                                Отмена бронирования с полным возвратом внесённых денежных средств осуществляется не позднее
-                                чем за 5 дней до даты бронирования.
+                                При отмене бронирования менее, чем за 7 суток до даты посещения, задаток не возвращается, кроме случаев, обговариваемых с
+                                администратором индивидуально.
                             </span>
                             <div className='text-list'>
                                 <span className='text-list__title'>В иных случаях задаток возвращается при условии:</span>
                                 <li className='text-list__item'>Cдачи бани на забронированное вами время другому гостю</li>
                                 <li className='text-list__item'>Подтверждение диагноза COVID-19</li>
                             </div>
+
+                            <span className='text-normal'>
+                                Для возврата денежных средств, позвоните по телефонам  +7(48746) 5-18-24; +7(930) 897-77-01;
+                                +7 (910) 168-17-61 администраторам (круглосуточно).<br />
+                            </span>
                             <span className='text-normal'>
                                 При посещении бани с гостя (заказчика) берётся страховочный залог от 2000 до 10000 рублей.
                             </span>
@@ -87,7 +92,7 @@ export default function PageSauna() {
                     <TextBlock title={{ type: 'h2', text: 'Бани' }}
                         style={{ paddingBottom: 10, paddingTop: 0 }}
                     />
-                    
+
                     {saunaObjData.map((x, i) =>
                         <SaunaObject
                             key={'sauna-' + x.id.toString()}

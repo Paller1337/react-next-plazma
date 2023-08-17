@@ -240,8 +240,8 @@ export default function PageSportsCamps() {
                             img={{
                                 w: 770, h: 570, src: [
                                     '/img/sport/other-objects/football/1.webp',
-                                    '/img/sport/other-objects/football/1.webp',
-                                    '/img/sport/other-objects/football/1.webp'
+                                    '/img/sport/other-objects/football/2.webp',
+                                    '/img/sport/other-objects/football/3.webp'
                                 ]
                             }}
                         // btn={{

@@ -54,8 +54,6 @@ export default function PageBooking() {
                         <div className='big-p big-p_border-top container'>
                             <span className='big-p__title'>Правила бронирования:</span>
                             <span className='big-p__desc'>
-                                При прямом бронировании действует скидка 16.7%.<br />
-
                                 Ниже указаны цены со скидкой.<br />
 
                                 Бронируя или оплачивая услуги отеля вы принимаете условия договора публичной Оферты<br />

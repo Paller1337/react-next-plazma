@@ -8,7 +8,7 @@ export interface SaunaObjectProps {
     id: string,
     name: string,
     description: string,
-    price: string[],
+    price: string[][],
     aboutSize: string,
     sliderData: string,
 
@@ -40,7 +40,12 @@ export default function SaunaObject(data: SaunaObjectProps) {
                 <div className='big-p__attr'>
                     <span className='big-p__attr-title'>Стоимость:</span>
                     <div className='big-p__attr-desc'>
-                        {data.price.map((x, i) => <span key={i}> {x} </span>)}
+
+                        {data.price.map((x, i) => <span key={i}>
+                            {x.map((y, j) => <span key={y} style={{whiteSpace: j % 2 === 0 ? 'normal' : 'nowrap'}}>
+                                    {y}
+                            </span>)}
+                        </span>)}
                     </div>
                 </div>
 
