@@ -325,14 +325,16 @@ export default function PageEvents() {
                                     <span className='condition-name'>Вместимость:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>~ 70-80 человек</span>
+                                        <span className='condition-value'>~ 90 человек</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
                                     <span className='condition-name'>Аренда зала:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>30 000 рублей</span>
+                                        <span className='condition-value'>пн. – чт. – 20 000 рублей</span>
+                                        <span className='condition-value'>пт. – вс. - 30 000 рублей</span>
+                                        <span className='condition-value'>праздники - 30 000 рублей</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
