@@ -40,10 +40,13 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/dacha/7.webp',
         ],
         size: 'Размер номера 28 м².', // Добавить площадь терассы 9 кв.м.
+
+        price: [
+            { name: 'Цена', value: ['<b>6200 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['<b>6200 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 + 1 человек.'] },
-            // { name: 'Доп. гости', value: ['+1 дополнительное место'] },
             { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
@@ -81,8 +84,15 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/module-house/8.webp',
         ],
         size: 'Размер номера 48 м².', // Добавить площадь терассы 9 кв.м.
+
+        price: [
+            { name: 'Цена', value: ['<b>9200 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>8500 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>9200 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['<b>9200 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['5 человек. 4 взрослых и 1 ребенок.'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInHouse },
@@ -126,8 +136,16 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/austr-townhouse/10.webp',
         ],
         size: 'Размер номера 145 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>15950 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>18950 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>14450 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>17450 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['воскресенье - четверг ', ' <b>15950 руб/сутки</b></br>', ' пятница и суббота ', '<b>18950 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['8 человек. 6 взрослых и 2 детей.'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInHouse },
@@ -166,8 +184,12 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/deluxe-5-corps/5.webp',
         ],
         size: 'Размер номера 26 м².',
+
+        price: [
+            { name: 'Цена', value: ['<b>4150 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['<b>4150 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека.'] },
             { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
             { name: 'Заселение', value: checkInRoom },
@@ -199,8 +221,16 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort-5/6.webp',
         ],
         size: 'Размер номера 50 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>5980 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6980 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>5200 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6200 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['воскресенье - четверг', '<b>5980 руб/сутки</b></br>', ' пятница и суббота ', ' <b>6980 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInRoom },
@@ -234,8 +264,12 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/sports-corps-2/5.webp',
         ],
         size: 'Размеры номеров 13 м² и 18 м².',
+
+        price: [
+            { name: 'Цена', value: ['<b>3000 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['<b>3000 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека.'] },
             { name: 'Доп. гости', value: ['нет'] },
             { name: 'Заселение', value: checkInRoom },
@@ -266,8 +300,16 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort/6.webp',
         ],
         size: 'Размер номера 33 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>4980 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>5980 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>4550 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>5550 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['воскресенье - четверг', '<b>4980 руб/сутки</b></br>', 'пятница и суббота', '<b>5980 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInRoom },
@@ -304,8 +346,16 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort-sauna/7.webp',
         ],
         size: 'Размер номера 33 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>5480 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6480 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>4750 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>5750 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['воскресенье - четверг', '<b>5480 руб/сутки</b></br>', ' пятница и суббота', ' <b>6480 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInRoom },
@@ -342,8 +392,16 @@ export const hotelRooms: RoomObjectProps[] = [
         ],
 
         size: 'Размер номера 64 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>6900 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>7900 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>5700 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6700 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['воскресенье - четверг', ' <b>6900 руб/сутки</b></br>', ' пятница и суббота', ' <b>7900 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['5 человек'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInHouse },
@@ -383,8 +441,16 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/townhouse/7.webp',
         ],
         size: 'Размер номера 96 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>10900 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>12900 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>8800 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>10800 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['воскресенье - четверг', ' <b>10900 руб/сутки</b></br>', ' пятница и суббота', ' <b>12900 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['4 человека'] },
             { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
             { name: 'Заселение', value: checkInHouse },
@@ -426,6 +492,15 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/deluxe-balcony/6.webp',
         ],
         size: 'Размер номера 25 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>5980 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6980 руб/сутки</b>',] },
+            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
+            { name: 'Цена вс-чт', value: ['<b>5200 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6200 руб/сутки</b>',] },
+        ],
+
         attributes: [
             { name: 'Цены', value: ['<b>3100 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
@@ -456,8 +531,12 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/eurostandard-sport-corps/3.webp',
         ],
         size: 'Размеры номеров от 12,7 м² до 15 м².',
+
+        price: [
+            { name: 'Цена вс-чт', value: ['<b>2490 руб/сутки</b>',] },
+        ],
+
         attributes: [
-            { name: 'Цены', value: ['<b>2490 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека.'] },
             { name: 'Доп. гости', value: ['нет'] },
             { name: 'Заселение', value: checkInRoom },

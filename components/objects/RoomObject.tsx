@@ -21,6 +21,10 @@ export interface RoomObjectProps {
     images: string[],
     previews: string[]
     size: string,
+    price: {
+        name: string,
+        value: string[],
+    }[],
     attributes: {
         name: string,
         value: string[]
@@ -106,7 +110,11 @@ export default function RoomObject(data: RoomObjectProps) {
             setTranslate(wrapperWidth * currentSlide)
         }
     }, [currentSlide, sliderWrapper])
-    
+
+    useEffect(() => {
+        console.log(data.title, ':')
+        console.log(data)
+    }, [data])
     return (<>
         {/* <GallerySlider
             slides={images}
@@ -209,6 +217,20 @@ export default function RoomObject(data: RoomObjectProps) {
                 {/* <div className='btn booking-btn'>Забронировать</div> */}
                 <BookingRoom roomId={data.id} targetId={`${data.id}-target`} />
                 <div className='hotel-room__attrs'>
+                    {/* {data.price ? */}
+                        <div className='hotel-room__price'>
+                            {data.price?.map((price, i) =>
+                                <div key={price.name} className='hotel-room__attr-item'>
+                                    <span className='hotel-room__text attr-name'>{price.name}</span>
+                                    {price.value.map(x =>
+                                        <span key={x} className='hotel-room__text attr-value' dangerouslySetInnerHTML={{
+                                            __html: x
+                                        }}
+                                        />)}
+                                </div>
+                            )}
+                        </div>
+                        {/* : <></>} */}
                     {data.attributes.map((x, i) =>
                         <div key={i} className='hotel-room__attr-item'>
                             <span className='hotel-room__text attr-name'>{x.name}</span>
