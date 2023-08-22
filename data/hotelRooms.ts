@@ -494,15 +494,10 @@ export const hotelRooms: RoomObjectProps[] = [
         size: 'Размер номера 25 м².',
 
         price: [
-            { name: 'Цена вс-чт', value: ['<b>5980 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>6980 руб/сутки</b>',] },
-            { name: '', value: ['<span style="color: red">с 3 сентября снижение цены:</span>',] },
-            { name: 'Цена вс-чт', value: ['<b>5200 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>6200 руб/сутки</b>',] },
+            { name: 'Цена', value: ['<b>3100 руб/сутки</b>',] },
         ],
 
         attributes: [
-            { name: 'Цены', value: ['<b>3100 руб/сутки</b>'] },
             { name: 'Вместимость', value: ['2 человека'] },
             { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
             { name: 'Заселение', value: checkInRoom },
