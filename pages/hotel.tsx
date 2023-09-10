@@ -95,7 +95,7 @@ export default function PageHotel(props: PageHotelProps) {
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
                         data-aos-once={DEFAULTS.AOS.once} style={{paddingTop: 0}}>
                         <TextBlock title={{ type: 'h2', text: 'Правила бронирования' }}
-                            style={{ paddingTop: 0 }}
+                            style={{ paddingTop: 0, paddingBottom: 0 }}
                         />
 
                         <div className='text-column'>

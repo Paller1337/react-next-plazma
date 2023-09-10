@@ -50,6 +50,67 @@ export default function PageIndex(props: PageIndexProps) {
           {/* <Header /> */}
           <div className='base-bg' data-scroll-section></div>
 
+          <div className='page-index__new-year i-new-year container'>
+            <div className='i-new-year__left'>
+              <h2 className='i-new-year__title'>
+                Бронирование на Новый Год и новогодние каникулы.
+              </h2>
+              <div className='i-new-year__container'>
+                <div className='i-new-year__text-container line'>
+                  <span className='i-new-year__text'>
+                    В этом году возможно раннее бронирование
+                    со скидкой 10% по НЕвозвратному тарифу.
+                  </span>
+
+                  <span className='i-new-year__text bold' style={{ marginTop: 12, marginBottom: 2 }}>
+                    Условия:
+                  </span>
+
+                  <span className='i-new-year__text'>
+                    1. 100% оплата, которая не возвращается в случае отмены<br />
+                    2. Действует скидка 10%<br />
+                    3. Срок действия тарифа: 6 сентября – 31 октября.<br />
+                  </span>
+                </div>
+
+                <div className='i-new-year__text-container line'>
+                  <span className='i-new-year__text'>
+                    После 31 октября бронирование возможно только по стандартному тарифу (без скидки)
+                  </span>
+
+                  <span className='i-new-year__text bold' style={{ marginTop: 12, marginBottom: 2 }}>
+                    Условия:
+                  </span>
+
+                  <span className='i-new-year__text'>
+                    1. Для бронирования – оплата в размере 20% от общей стоимости<br />
+                    2. 100% оплата должна быть выполнена к 10 декабря<br />
+                  </span>
+                </div>
+
+                <div className='i-new-year__text-container'>
+                  <span className='i-new-year__text'>
+                    Также на период новогодних праздников правило «отмена за 7 дней до заезда» не
+                    действует, поэтому, пожалуйста, будьте внимательны и обязательно уточните все
+                    интересующие вас вопросы у наших администраторов, они с радостью вас проконсультируют.
+                  </span>
+                </div>
+
+                <div className='i-new-year__text-container'>
+                  <span className='i-new-year__text'>
+                    Узнать цены и забронировать номер можно только по телефону +7 (910) 168-17-61.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className='i-new-year__right'>
+              <div className='i-new-year__fakebg'></div>
+              <Image width={570} height={685} src={'/no-optimize-img/index/new-year.jpg'} alt=''
+              // loader={vkCloudLoader}
+              />
+            </div>
+          </div>
+
           <div className='page-index__about-hotel about-hotel container' data-scroll-section >
             <div className='about-hotel__wrapper'
               data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
