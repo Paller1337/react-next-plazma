@@ -273,6 +273,13 @@
                             display: flex
                             flex-wrap: wrap
                             gap: 5px
+                            &.pets
+                                display: flex
+                                flex-direction: row
+                                flex-wrap: nowrap
+                                align-items: center
+                                &::before
+                                    content: '🐾'
                             &.end
                                 justify-content: flex-end
                             span

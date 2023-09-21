@@ -13,11 +13,13 @@ import { useRouter } from 'next/router'
 import * as Icon from 'react-feather'
 import Aos from 'aos'
 import { DEFAULTS } from 'defaults'
+import { ReactSVG } from 'react-svg'
 
 export interface RoomObjectProps {
     id: number | number[],
     title: string,
     description: string,
+    pets: boolean,
     images: string[],
     previews: string[]
     size: string,
@@ -212,25 +214,29 @@ export default function RoomObject(data: RoomObjectProps) {
                 </span>
                 <span className='hotel-room__text'>{data.description}
                 </span>
+                {data.pets ?
+                    <span className='hotel-room__text pets'>
+                        Возможно размещение с животными (до 7 кг) + 500 рублей
+                    </span> : <></>}
                 <span className='hotel-room__text bold'>{data.size}</span>
 
                 {/* <div className='btn booking-btn'>Забронировать</div> */}
                 <BookingRoom roomId={data.id} targetId={`${data.id}-target`} />
                 <div className='hotel-room__attrs'>
                     {/* {data.price ? */}
-                        <div className='hotel-room__price'>
-                            {data.price?.map((price, i) =>
-                                <div key={price.name} className='hotel-room__attr-item'>
-                                    <span className='hotel-room__text attr-name'>{price.name}</span>
-                                    {price.value.map(x =>
-                                        <span key={x} className='hotel-room__text attr-value' dangerouslySetInnerHTML={{
-                                            __html: x
-                                        }}
-                                        />)}
-                                </div>
-                            )}
-                        </div>
-                        {/* : <></>} */}
+                    <div className='hotel-room__price'>
+                        {data.price?.map((price, i) =>
+                            <div key={price.name} className='hotel-room__attr-item'>
+                                <span className='hotel-room__text attr-name'>{price.name}</span>
+                                {price.value.map(x =>
+                                    <span key={x} className='hotel-room__text attr-value' dangerouslySetInnerHTML={{
+                                        __html: x
+                                    }}
+                                    />)}
+                            </div>
+                        )}
+                    </div>
+                    {/* : <></>} */}
                     {data.attributes.map((x, i) =>
                         <div key={i} className='hotel-room__attr-item'>
                             <span className='hotel-room__text attr-name'>{x.name}</span>

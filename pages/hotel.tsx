@@ -130,6 +130,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     id={x.id}
                                     title={x.title}
                                     description={x.description}
+                                    pets={x.pets}
                                     size={x.size}
                                     price={x.price}
                                     images={x.images}
