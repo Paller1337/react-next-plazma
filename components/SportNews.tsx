@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ReactSVG } from 'react-svg'
 import { FreeMode, Pagination } from 'swiper'
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
+import TextBlock from './TextBlock'
 
 interface NewsItemProps {
     general?: boolean
@@ -80,18 +81,24 @@ export default function SportNews(props) {
     }, [containerRef.current])
 
     return (<>
-        <div className='sports-news container'>
-            <NewsItem post={vkGroudPosts} index={0} general />
-            <div className='sports-news__wrapper-min'>
-                <NewsItem post={vkGroudPosts} index={1} />
-                <NewsItem post={vkGroudPosts} index={2} />
-            </div>
-        </div>
+        {vkGroudPosts ? <>
+            <TextBlock title={{ type: 'h2', text: 'Последние события' }}
+                style={{ paddingBottom: 0, }}
+            />
 
-        <div className='sports-news news-slider container'>
-            <NewsItem post={vkGroudPosts} index={0} general />
-            <NewsItem post={vkGroudPosts} index={1} general />
-            <NewsItem post={vkGroudPosts} index={2} general />
-        </div>
+            <div className='sports-news container'>
+                <NewsItem post={vkGroudPosts} index={0} general />
+                <div className='sports-news__wrapper-min'>
+                    <NewsItem post={vkGroudPosts} index={1} />
+                    <NewsItem post={vkGroudPosts} index={2} />
+                </div>
+            </div>
+
+            <div className='sports-news news-slider container'>
+                <NewsItem post={vkGroudPosts} index={0} general />
+                <NewsItem post={vkGroudPosts} index={1} general />
+                <NewsItem post={vkGroudPosts} index={2} general />
+            </div>
+        </> : <></>}
     </>)
 }

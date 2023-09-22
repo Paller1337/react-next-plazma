@@ -189,10 +189,7 @@ export default function PageActiveLeisure() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <TextBlock title={{ type: 'h2', text: 'Последние события' }}
-                        style={{ paddingBottom: 0,  }}
-                    />
-
+                    
                     <SportNews />
 
                     <div id='AboutSport' className='page-events__welcome text-section text-section_big container' data-scroll-section>
