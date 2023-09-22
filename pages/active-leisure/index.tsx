@@ -11,12 +11,15 @@ import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import copy from '@/components/functions/copy'
 import YoutubeVideo from '@/components/YoutubeVideo'
+import SportNews from '@/components/SportNews'
+import TextBlock from '@/components/TextBlock'
 
 
 
 
 export default function PageActiveLeisure() {
     const [objectsContent, setObjectsContent] = useState<JSX.Element>()
+    const [vkGroudPosts, setVkGroudPosts] = useState()
     const { isMobile, isDesktop } = useDeviceDetect()
 
     const mobileObjects =
@@ -149,6 +152,8 @@ export default function PageActiveLeisure() {
         else setObjectsContent(desktopObjects)
     }, [isMobile])
 
+
+
     return (
         <>
             <Head>
@@ -184,6 +189,12 @@ export default function PageActiveLeisure() {
 
                     <div className='base-bg' data-scroll-section></div>
 
+                    <TextBlock title={{ type: 'h2', text: 'Последние события' }}
+                        style={{ paddingBottom: 0,  }}
+                    />
+
+                    <SportNews />
+
                     <div id='AboutSport' className='page-events__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
                         <span className='text'>
@@ -191,6 +202,7 @@ export default function PageActiveLeisure() {
                             Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.
                         </span>
                     </div>
+
 
                     <YoutubeVideo
                         title='Спорт в «PLAZMA»'

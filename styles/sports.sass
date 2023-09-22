@@ -161,3 +161,138 @@
             line-height: 150%
             z-index: 2
             position: relative
+
+.sports-news
+    display: flex
+    gap: 30px
+    margin-top: 20px
+    margin-bottom: 100px
+    @media screen and ( max-width: $md2 )
+        display: none
+    &.news-slider
+        display: none
+        flex-direction: row
+        gap: 30px
+        overflow-x: scroll
+        @media screen and ( max-width: $md2 )
+            display: flex
+        .news-slide
+            max-width: 100vw
+    @media screen and ( max-width: $md2 )
+        flex-direction: column
+    &__item
+        display: flex
+        align-items: flex-end
+        position: relative
+        min-width: 310px
+        &-meta
+            display: flex
+            align-items: center
+            gap: 24px
+            font-size: 14px
+            line-height: 150%
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                top: 27px
+                right: 0px
+                left: 0
+                height: 1px
+                background: #fff
+                opacity: .3
+            .svg-meta
+                div
+                    display: flex
+                    align-items: center
+            .news-meta-content
+                display: flex
+                flex-wrap: nowrap
+                align-items: center
+                gap: 8px
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+        &-footer
+            position: relative
+            z-index: 100
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 16px
+            padding: 100px 30px 35px 30px
+            background: linear-gradient(179deg, rgba(57, 57, 57, 0.00) 0.44%, rgba(57, 57, 57, 0.53) 39.16%, #393939 99.05%)
+            color: #fff
+            font-size: 15px
+            cursor: pointer
+            span
+                overflow: hidden
+                display: -webkit-box
+                -webkit-line-clamp: 4
+                -webkit-box-orient: vertical
+                position: relative
+            .svg-link
+                position: absolute
+                top: 100px
+                right: 30px
+
+        &.general
+            height: 510px
+            width: 770px
+            max-width: 100%
+            @media screen and ( max-width: $md2 )
+                height: 310px
+                max-width: 570px
+                margin: 0 auto
+                .sports-news__item-footer
+                    span
+                        -webkit-line-clamp: 3
+            @media screen and ( max-width: $md3 )
+                height: 240px
+                width: 100%
+                .sports-news__item-footer
+                    padding: 80px 20px 25px 20px
+                    span
+                        -webkit-line-clamp: 2
+
+                .svg-link
+                    position: absolute
+                    top: 80px
+                    right: 20px
+            @media screen and ( max-width: $md4 )
+                height: 260px
+                .sports-news__item-footer
+                    span
+                        -webkit-line-clamp: 2
+
+        &.min
+            height: 240px
+            width: 370px
+            @media screen and ( max-width: $md2 )
+                height: 310px
+                width: 100%
+                max-width: 570px
+                margin: 0 auto
+                .sports-news__item-footer
+                    span
+                        -webkit-line-clamp: 3
+            @media screen and ( max-width: $md3 )
+                height: 310px
+                .sports-news__item-footer
+                    span
+                        -webkit-line-clamp: 4
+            @media screen and ( max-width: $md4 )
+                height: 260px
+                .sports-news__item-footer
+                    span
+                        -webkit-line-clamp: 4
+
+    &__wrapper-min
+        display: flex
+        flex-direction: column
+        gap: 30px
+        width: 370px
+        @media screen and ( max-width: $md2 )
+            width: 100%

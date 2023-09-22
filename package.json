@@ -33,6 +33,7 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-webp": "^8.0.0",
     "locomotive-scroll": "^4.1.4",
+    "luxon": "^3.4.3",
     "next": "13.0.5",
     "next-images": "^1.8.5",
     "nodemailer": "^6.9.3",
@@ -63,6 +64,7 @@
     "@types/aos": "^3.0.4",
     "@types/imagemin": "^8.0.1",
     "@types/locomotive-scroll": "^4.1.0",
+    "@types/luxon": "^3.3.2",
     "@types/nodemailer": "^6.4.8",
     "@types/uuid": "^9.0.2"
   }
