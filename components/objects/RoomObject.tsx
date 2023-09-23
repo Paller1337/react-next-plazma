@@ -216,7 +216,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 </span>
                 {data.pets ?
                     <span className='hotel-room__text pets'>
-                        Возможно размещение с животными (до 7 кг) + 500 рублей
+                        Возможно размещение с животными (до 7 кг) + 500 рублей/сутки
                     </span> : <></>}
                 <span className='hotel-room__text bold'>{data.size}</span>
 
