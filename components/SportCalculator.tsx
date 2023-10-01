@@ -6,6 +6,7 @@ import InputText from './form/InputText';
 import InputTextarea from './form/InputTextarea'
 import toast, { Toaster } from 'react-hot-toast';
 import { createPortal } from 'react-dom';
+import { useMetrika } from './ym/YMContext';
 
 
 
@@ -56,6 +57,8 @@ const SportCalculatorResult = (props: { result: number }) => {
 }
 
 export default function SportCalculator(props: SportCalculatorProps) {
+    const ym = useMetrika()
+
     const [error, setError] = useState(false)
 
     const [name, setName] = useState('')
@@ -87,6 +90,10 @@ export default function SportCalculator(props: SportCalculatorProps) {
     //     console.log('Стоимость: ', result)
     // }, [result])
 
+    const metrikaSubmit = () => {
+        ym.reachGoal('sportsCampSubmit')
+        toast('metrika send')
+    }
 
     const handleSubmit = () => {
         if (!name || !phone) {
@@ -303,6 +310,11 @@ export default function SportCalculator(props: SportCalculatorProps) {
             <InputTextarea label='Сообщение' placeholder='По желанию вы можете сразу описать свой вопрос, чтобы мы позвонили вам с готовым ответом.'
                 onChange={(e) => setMessage(e.target.value)} />
             <div className='btn btn_black' onClick={handleSubmit}>Позвоните мне</div>
+
+
+
+            <div className='btn btn_black' onClick={metrikaSubmit}
+                style={{ color: '#dcdcdc', marginTop: 300, fontSize: 12, borderColor: '#fff', background: '#fff' }}>Метрика тест</div>
         </div>
     </>)
 }
