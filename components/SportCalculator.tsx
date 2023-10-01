@@ -92,7 +92,7 @@ export default function SportCalculator(props: SportCalculatorProps) {
 
     const metrikaSubmit = () => {
         ym.reachGoal('sportsCampSubmit')
-        toast('metrika send')
+        // toast('metrika send')
     }
 
     const handleSubmit = () => {
@@ -136,6 +136,7 @@ export default function SportCalculator(props: SportCalculatorProps) {
                             padding: '12px 18px'
                         }
                     });
+                    metrikaSubmit()
                 } else {
                     const data = await res.json()
                     toast.error(data.status, {
