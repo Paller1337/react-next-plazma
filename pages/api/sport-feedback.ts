@@ -51,12 +51,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await transporter.sendMail({
             from: 'noreply@kplazma.ru',
             to: toEmail,
-            subject: `${body.name ? body.name : ' отсутствует'} просит связаться`,
+            subject: `${body.name ? body.name : ' "Без имени"'} просит связаться`,
             html: `<p>Спортивные сборы kplazma.ru </p><br>
             <p><strong>Телефон: </strong> ${body.phone ? body.phone : ' отсутствует'}</p>
             <p><strong>Сообщение: </strong> ${body.message ? body.message : ' отсутствует'}</p>
             <p><strong>Стоимость сборов на калькуляторе: </strong> ${body.result ? body.result : 0}</p>
-          `
+            ${body.utm ? `<p><strong>UTM : </strong> ${body.utm}</p>` : ''}
+            `
         });
     }
 
@@ -64,11 +65,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // await send('max.paller@yandex.ru')
         await send('max@kplazma.ru')
         await send('dnd@kplazma.ru')
-        sendTelegramMessage(`*Заявка с kplazma.ru*\n\n` +
-            `*Имя:* ${body.name ? body.name : ' отсутствует'}\n` +
-            `*Телефон:* ${body.phone ? body.phone : ' отсутствует'}\n` +
-            `*Сообщение:* ${body.message ? body.message : ' отсутствует'}\n` +
-            `*Стоимость сборов на калькуляторе:* ${body.result ? body.result : 0}`);
+        sendTelegramMessage(`* Заявка с kplazma.ru *\n\n` +
+            `* Имя:* ${body.name ? body.name : ' отсутствует'}\n` +
+            `* Телефон:* ${body.phone ? body.phone : ' отсутствует'}\n` +
+            `* Сообщение:* ${body.message ? body.message : ' отсутствует'}\n` +
+            `* Стоимость сборов на калькуляторе:* ${body.result ? body.result : 0}`);
         await send('nastya@kplazma.ru')
 
         return res.status(200).json({ status: 'Сообщение отправлено!' });

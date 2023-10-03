@@ -7,6 +7,7 @@ import InputTextarea from './form/InputTextarea'
 import toast, { Toaster } from 'react-hot-toast';
 import { createPortal } from 'react-dom';
 import { useMetrika } from './ym/YMContext';
+import { useRouter } from 'next/router';
 
 
 
@@ -58,8 +59,10 @@ const SportCalculatorResult = (props: { result: number }) => {
 
 export default function SportCalculator(props: SportCalculatorProps) {
     const ym = useMetrika()
+    const router = useRouter()
 
     const [error, setError] = useState(false)
+    const [utm, setUtm] = useState('utm_campaign=sports_camps')
 
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
@@ -77,6 +80,22 @@ export default function SportCalculator(props: SportCalculatorProps) {
     const [e, setE] = useState(0)
     const [vd, setVd] = useState(0)
     const [v, setV] = useState(0)
+
+    useEffect(() => {
+        const hashIndex = router.asPath.indexOf('#');
+        if (hashIndex !== -1) {
+            const afterHash = router.asPath.slice(hashIndex + 1);
+            const questionMarkIndex = afterHash.indexOf('?');
+            if (questionMarkIndex !== -1) {
+                const queryParams = new URLSearchParams(afterHash.slice(questionMarkIndex + 1));
+                const utm = queryParams.get('utm_campaign')
+                if (utm) {
+                    console.log('UTM:', utm);
+                    setUtm(utm);
+                }
+            }
+        }
+    }, []);
 
     const calcResult = () => {
         const res = (p * n + nt * t + p * e + k * e) * c + m * md + v * vd
@@ -115,6 +134,7 @@ export default function SportCalculator(props: SportCalculatorProps) {
             phone,
             message,
             result,
+            utm,
         };
         // console.log(data);
 
@@ -159,6 +179,7 @@ export default function SportCalculator(props: SportCalculatorProps) {
     return (<>
         {/* <SportCalculatorResult result={result} /> */}
         <div className='sport-calculator'>
+            <div id='calculator' className='anchor' style={{ position: 'absolute', top: -200 }}></div>
             <InputRange name='p' label='Количество спортсменов' min={0} max={50} type='range'
                 onChange={(e) => setP(parseInt(e.target.value))}
             />
@@ -314,8 +335,8 @@ export default function SportCalculator(props: SportCalculatorProps) {
 
 
 
-            <div className='btn btn_black' onClick={metrikaSubmit}
-                style={{ color: '#dcdcdc', marginTop: 300, fontSize: 12, borderColor: '#fff', background: '#fff' }}>Метрика тест</div>
+            {/* <div className='btn btn_black' onClick={metrikaSubmit}
+                style={{ color: '#dcdcdc', marginTop: 300, fontSize: 12, borderColor: '#fff', background: '#fff' }}>Метрика тест</div> */}
         </div>
     </>)
 }

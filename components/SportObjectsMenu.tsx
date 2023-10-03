@@ -31,7 +31,7 @@ export default function SportObjectsMenu() {
     }, [contentRef.current])
 
     return (
-        <div className='cards-menu container'>
+        <div id='sports-objects' className='cards-menu container'>
             <span className='cards-menu__title'>Наши спортивные объекты</span>
             <div ref={contentRef} className='cards-menu__content'>
                 <Link href={'/active-leisure/tennis-court'} className='cards-menu__card'>
