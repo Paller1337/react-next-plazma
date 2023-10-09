@@ -10,6 +10,8 @@ import activeLeisure from '@/images/backgrounds/active-leisure-min.webp'
 import events from '@/images/backgrounds/hotel-events-min.webp'
 import sportsCamp from '@/images/backgrounds/sports-camps-min.webp'
 import vkCloudLoader from '@/mw/utils/imageLoader';
+import { ReactSVG } from 'react-svg';
+import Link from 'next/link';
 
 
 type PromoMinImage = 'active-leisure' | 'events' | 'sports-camp' | 'sports-hall' | 'tennis-court' | 'beach-center'
@@ -20,6 +22,11 @@ interface PromoMinProps {
     title?: string
     description?: string
     image?: PromoMinImage
+    button?: {
+        text: string
+        link: string
+        icon?: string
+    }
 }
 
 
@@ -92,7 +99,7 @@ export default function PromoMin(props: PromoMinProps) {
                                     loading='eager'
                                     quality={90}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
-                                    // loader={vkCloudLoader}
+                                // loader={vkCloudLoader}
                                 ></Image>
                                 : ''
                             }
@@ -103,7 +110,13 @@ export default function PromoMin(props: PromoMinProps) {
             <div className='promo-min__text'>
                 <h1>{props.title}</h1>
                 <span>{props.description}</span>
-                {/* <div className='btn btn_white'>Подробнее</div> */}
+                {props.button ?
+                    <Link href={props.button.link} className='btn btn_white'>
+                        {props.button.text}
+                        {props.button.icon ? <ReactSVG src={props.button.icon} className='btn__icon' /> : <></>}
+                    </Link>
+                    : <></>
+                }
             </div>
 
         </div>

@@ -44,7 +44,13 @@ export default function PageSportsCamps() {
                         image='sports-camp'
                         title='СПОРТ В ПАРК-ОТЕЛЕ PLAZMA'
                         description={`Мы любим спорт и поэтому предоставляем нашим единомышленникам 
-                        комфортабельные условия для тренировок, питания и проживания.`} />
+                        комфортабельные условия для тренировок, питания и проживания.`}
+                        button={{
+                            text: 'Рассчитать сборы',
+                            link: '/sports-camps#calculator',
+                            icon: '/svg/calc.svg',
+                        }}
+                    />
 
                     <div className='base-bg' data-scroll-section></div>
 

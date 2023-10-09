@@ -341,6 +341,7 @@
     height: fit-content
     background: transparent
     cursor: pointer
+    gap: 12px
     transition: all .32s ease-in-out
     @media screen and ( max-width:  $md3)
         padding: 1.3rem 4.5rem
@@ -355,6 +356,9 @@
         &:hover
             background: #fff
             color: #393939
+            .btn__icon
+                path
+                    fill: #393939
 
     &_black
         border-color: #393939
@@ -363,7 +367,10 @@
         &:hover
             background: #393939
             color: #fff
-
+    &__icon
+        svg
+            height: 24px
+            width: 24px
 .text-column
     display: flex
     flex-direction: column
