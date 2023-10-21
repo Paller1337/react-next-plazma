@@ -62,7 +62,7 @@ export default function SportCalculator(props: SportCalculatorProps) {
     const router = useRouter()
 
     const [error, setError] = useState(false)
-    const [utm, setUtm] = useState('utm_campaign=sports_camps')
+    const [utm, setUtm] = useState('')
 
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
