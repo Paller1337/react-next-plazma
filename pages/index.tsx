@@ -53,7 +53,7 @@ export default function PageIndex(props: PageIndexProps) {
           <div className='page-index__new-year i-new-year container'>
             <div className='i-new-year__left'>
               <h2 className='i-new-year__title'>
-                Бронирование на Новый Год и новогодние каникулы.
+                Бронирование на Новый Год.
               </h2>
               <div className='i-new-year__container'>
                 <div className='i-new-year__text-container line'>
