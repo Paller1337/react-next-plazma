@@ -48,8 +48,9 @@ export default function PageBooking() {
             <main className='page page-booking'>
                 <div className='relative main-wrap' data-scroll-container>
                     <div className='page-booking__about' data-scroll-section>
-                        <div id="booking_iframe" className='container'></div>
-
+                        {/* <div id="booking_iframe" className='container'></div> */}
+                        <p id='tl-anchor'>С помощью приведенной ниже формы вы можете забронировать наши номера в режиме онлайн и получить гарантированную бронь.</p>
+                        <div id='tl-booking-form'>&nbsp;</div>
 
                         <div className='big-p big-p_border-top container'>
                             <span className='big-p__title'>Правила бронирования:</span>

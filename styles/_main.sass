@@ -334,6 +334,36 @@ body
                 & ~ .main__promo-logo
                     opacity: 0
 
+        &-tl
+            position: absolute
+            width: 100%
+            left: 50%
+            transform: translate(-50%, -100%)
+            z-index: 1000
+            top: 85vh
+
+            // transition: top .32s ease-in-out
+            // transition: height 0.5s ease
+            height: auto
+            transition: max-height 0.5s ease
+            max-height: 380px
+            overflow: hidden
+
+            @media screen and (max-width: $md3 )
+                & ~ .main__promo-logo
+                    margin-bottom: 20vh
+
+            @media screen and (max-width: $md4 )
+                & ~ .main__promo-logo
+                    // opacity: 0
+                    transform: scale(.6)
+            @media screen and (max-height: 655px)
+                & ~ .main__promo-logo
+                    margin-bottom: 30vh
+            // @media screen and (max-height: 635px)
+            //     & ~ .main__promo-logo
+            //         opacity: 0
+
         @media screen and ( max-width:  $md2 )
             max-width: calc( 100% - 24px )
             margin: 0 auto

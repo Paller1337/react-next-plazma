@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useRef, useState } from 'react'
-import BookingRoom from '../bnovo/BookingRoom'
+import BookingRoom from '../travelline/BookingRoom'
 import GallerySlider from '../GallerySlider'
 import Image, { StaticImageData } from 'next/image'
 import BlockLoader from '../BlockLoader'
@@ -16,7 +16,8 @@ import { DEFAULTS } from 'defaults'
 import { ReactSVG } from 'react-svg'
 
 export interface RoomObjectProps {
-    id: number | number[],
+    tlid: number | number[],
+    bnid: number | number[],
     title: string,
     description: string,
     pets: boolean,
@@ -42,6 +43,7 @@ export default function RoomObject(data: RoomObjectProps) {
     const images = data.images
     const previews = data.previews
     const router = useRouter()
+    const roomId = data.tlid
 
     const { isMobile, isDesktop } = useDeviceDetect()
 
@@ -126,9 +128,9 @@ export default function RoomObject(data: RoomObjectProps) {
         /> */}
         {/* <Suspense fallback={() => <Loading />}> */}
 
-        <div className='hotel-rooms__item hotel-room' key={'room-content-' + data.id?.toString()}
+        <div className='hotel-rooms__item hotel-room' key={'room-content-' + roomId?.toString()}
             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-            <div id={`room-${data.id}`} className='hotel-room__anchor' />
+            <div id={`room-${roomId}`} className='hotel-room__anchor' />
             <div className='hotel-room__preview-swiper'>
                 <Swiper
                     {...({
@@ -161,7 +163,7 @@ export default function RoomObject(data: RoomObjectProps) {
                     {previews && previews.map((image, i) =>
                         <SwiperSlide key={image + '-swipe-item'} virtualIndex={i}>
                             <div key={i} className={`hotel-room__image`} onClick={() => setGalleryIsOpen(true)}>
-                                <Image key={'img-' + data.id.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
+                                <Image key={'img-' + roomId.toString() + i} src={image} height={330} width={570} alt={'Plazma'}
                                     loading="lazy"
                                     quality={90}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, 100vw"
@@ -209,7 +211,7 @@ export default function RoomObject(data: RoomObjectProps) {
             </div>
 
             <div className='hotel-room__info'>
-                <span className='hotel-room__title' onClick={() => copyLink(data.id)} style={{ cursor: 'pointer' }}>
+                <span className='hotel-room__title' onClick={() => copyLink(roomId)} style={{ cursor: 'pointer' }}>
                     <Icon.Link size={20} /> {data.title}
                 </span>
                 <span className='hotel-room__text'>{data.description}
@@ -221,7 +223,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 <span className='hotel-room__text bold'>{data.size}</span>
 
                 {/* <div className='btn booking-btn'>Забронировать</div> */}
-                <BookingRoom roomId={data.id} targetId={`${data.id}-target`} />
+                <BookingRoom roomId={roomId} targetId={`${roomId}-target`} />
                 <div className='hotel-room__attrs'>
                     {/* {data.price ? */}
                     <div className='hotel-room__price'>

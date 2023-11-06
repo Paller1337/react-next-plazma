@@ -1,4 +1,13 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { useEffect } from 'react';
+declare global {
+    interface Window {
+        travelline: any
+        TL: any
+    }
+}
+
+
 
 export default function Document() {
     return (

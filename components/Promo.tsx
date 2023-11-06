@@ -1,7 +1,7 @@
 
 import Image, { StaticImageData } from 'next/image';
 import Header from './Header';
-import BookingPromo from './bnovo/BookingPromo';
+import BookingPromo from './travelline//BookingPromo';
 import { Suspense, useEffect, useState } from 'react';
 // import Video from './Video';
 import dynamic from 'next/dynamic';
