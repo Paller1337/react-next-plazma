@@ -5,6 +5,10 @@ import FullSizePreviewInfo from '../components/objects/FullsizePreviewInfo'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import YoutubeVideo from '@/components/YoutubeVideo'
+import { ReactSVG } from 'react-svg'
+import Link from 'next/link'
+import NYBookingRoom from '@/components/NYBookingRoom'
+import NYBookingSlider from '@/components/NYBookingSlider'
 
 interface PageIndexProps {
   images: any
@@ -50,6 +54,52 @@ export default function PageIndex(props: PageIndexProps) {
           {/* <Header /> */}
           <div className='base-bg' data-scroll-section></div>
 
+          {/* New Year Booking */}
+          <div className='page-index__ny-booking ny-booking'>
+            <div className='container'>
+              <div className='ny-booking__head'>
+                <h2 className='ny-booking__title'>Новый год 2024.</h2>
+                <span className='ny-booking__desc'>Открыто бронирование! Заезд - 2 дня (31.12-02.01)</span>
+                <div className='ny-booking__separator'>
+                  <ReactSVG src='/svg/separator.svg' />
+                </div>
+              </div>
+
+              <div className='ny-booking__info'>
+                <div className='ny-booking__text-container line'>
+                  <h2 className='ny-booking__text-container-title'>
+                    В стоимость включено:
+                  </h2>
+
+                  <span className='ny-booking__text'>
+                    1. Проживание на 2 дня.
+                  </span>
+                  <span className='ny-booking__text'>
+                    2. Дискотека в ресторане в новогоднюю ночь, где будет работать бар.
+                  </span>
+                  <span className='ny-booking__text'>
+                    3. Развлекательная программа 1 января на свежем воздухе с Дедом Морозом, Снегурочкой, призами, горячими напитками и закусками.
+                  </span>
+                </div>
+
+                <div className='ny-booking__billboard'>
+                  <span className='ny-booking__billboard-title'>Новогодние праздники можно забронировать только по телефону: 8-910-168-17-61</span>
+                  <div className='ny-booking__billboard-separator' />
+
+                  <span className='ny-booking__billboard-desc'>Наши администраторы с радостью ответят на все ваши вопросы.</span>
+                  <span className='ny-booking__billboard-desc bold'>Для бронирования необходимо внести оплату в размере 20% от общей стоимости.</span>
+                  <span className='ny-booking__billboard-desc bold'>100% оплата к 10 декабря.</span>
+                </div>
+              </div>
+            </div>
+            <div className='ny-booking__rooms'>
+              <span className='ny-booking__rooms-title'>Свободные номера на Новогоднее бронирование</span>
+
+              <NYBookingSlider />
+            </div>
+          </div>
+
+{/* 
           <div className='page-index__new-year i-new-year container'>
             <div className='i-new-year__left'>
               <h2 className='i-new-year__title'>
@@ -109,7 +159,7 @@ export default function PageIndex(props: PageIndexProps) {
               // loader={vkCloudLoader}
               />
             </div>
-          </div>
+          </div> */}
 
           <div className='page-index__about-hotel about-hotel container' data-scroll-section >
             <div className='about-hotel__wrapper'
@@ -271,7 +321,7 @@ export default function PageIndex(props: PageIndexProps) {
           </div>
 
         </div >
-      </main>
+      </main >
     </>
 
   )
