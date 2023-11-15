@@ -97,11 +97,11 @@ export default function NYBookingSlider(props) {
                 onTouchMove={onTouchMove}   // Добавлено для сенсорных устройств
                 onTouchEnd={onTouchEnd}     // Добавлено для сенсорных устройств
             >
-                <NYBookingRoom
+                {/* <NYBookingRoom
                     img='/img-previews/hotel/room-previews/cottage/1.webp'
                     title='Коттедж'
                     desc={['Вместимость: 5 чел.', 'Цена за 2 дня: 42.500 руб. (~4 250 сутки/чел)']}
-                />
+                /> */}
 
                 <NYBookingRoom
                     img='/img-previews/hotel/room-previews/module-house/1.webp'
@@ -115,11 +115,11 @@ export default function NYBookingSlider(props) {
                     desc={['Вместимость: 2 + 1 чел.', 'Цена за 2 дня: 25.500 руб. (~4 250 сутки/чел)']}
                 />
 
-                <NYBookingRoom
+                {/* <NYBookingRoom
                     img='/img-previews/hotel/room-previews/deluxe-5-corps/3.webp'
                     title='Номера в корпусах'
                     desc={['Вместимость: 2 чел. (+1 за доп. плату)', 'Цена за 2 дня: от 9.300 руб. (~2 325 сутки/чел)']}
-                />
+                /> */}
             </div>
         </div>
     </>)

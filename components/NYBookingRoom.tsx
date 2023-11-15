@@ -32,6 +32,18 @@ export default function NYBookingRoom(props: NYBookingRoomProps) {
         <div className='ny-booking-room'>
             <div className='ny-booking-room__image'>
                 <Image src={props.img} height={310} width={470} alt='' />
+                <div className='ny-booking-room__image-decorate'>
+                    <div className='ny-booking-room__image-lines'>
+                        <div className='ny-booking-room__image-line--up' />
+                        <div className='ny-booking-room__image-line--left' />
+                        <div className='ny-booking-room__image-line--right' />
+                    </div>
+                    <div className='ny-booking-room__image-logo'>
+                        <object data='/svg/new-logo.svg' type='image/svg+xml' title='Главная' width={48} height={48}>
+                            <img width={48} height={48} src='/img/new-logo.svg' alt='' />
+                        </object>
+                    </div>
+                </div>
             </div>
             <div className='ny-booking-room__footer'>
                 <div className='ny-booking-room__footer-desc'>

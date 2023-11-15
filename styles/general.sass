@@ -71,7 +71,6 @@
                 gap: 8px
                 @media screen and ( max-width: $md1 )
                     max-width: 100%
-                    
 
                 &-title
                     color: #262626
@@ -180,6 +179,49 @@
                         display: flex
                         align-items: center
                         justify-content: center
+                        position: relative
+                        &-decorate
+                            position: absolute
+                            left: 0
+                            right: 0
+                            top: 0
+                            bottom: 0
+                        &-lines
+                            opacity: .75
+                        &-line--up
+                            position: absolute
+                            left: 0
+                            right: 0
+                            top: 10px
+                            height: 1px
+                            background: #fff
+
+                        &-line--left
+                            position: absolute
+                            left: 10px
+                            bottom: 0
+                            top: 0px
+                            width: 1px
+                            background: #fff
+
+                        &-line--right
+                            position: absolute
+                            right: 10px
+                            bottom: 0
+                            top: 0px
+                            width: 1px
+                            background: #fff
+                        &-logo
+                            height: 64px
+                            width: 64px
+                            background: #262626
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            position: absolute
+                            right: 0
+                            top: 0
+
                     &__footer
                         background: #262626
                         padding: 20px 0px
