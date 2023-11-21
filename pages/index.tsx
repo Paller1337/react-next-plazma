@@ -83,7 +83,7 @@ export default function PageIndex(props: PageIndexProps) {
                 </div>
 
                 <div className='ny-booking__billboard'>
-                  <span className='ny-booking__billboard-title'>Новогодние праздники можно забронировать только по телефону: 8-910-168-17-61</span>
+                  <span className='ny-booking__billboard-title'>Новогодние праздники можно забронировать только по телефону: <br />8-910-168-17-61</span>
                   <div className='ny-booking__billboard-separator' />
 
                   <span className='ny-booking__billboard-desc'>Наши администраторы с радостью ответят на все ваши вопросы.</span>
@@ -99,7 +99,7 @@ export default function PageIndex(props: PageIndexProps) {
             </div>
           </div>
 
-{/* 
+          {/* 
           <div className='page-index__new-year i-new-year container'>
             <div className='i-new-year__left'>
               <h2 className='i-new-year__title'>
