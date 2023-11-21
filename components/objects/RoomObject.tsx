@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useRef, useState } from 'react'
-import BookingRoom from '../travelline/BookingRoom'
+import BookingRoom from '../bnovo/BookingRoom'
 import GallerySlider from '../GallerySlider'
 import Image, { StaticImageData } from 'next/image'
 import BlockLoader from '../BlockLoader'
