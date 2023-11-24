@@ -190,7 +190,6 @@ export default function PageActiveLeisure() {
                     <div className='base-bg' data-scroll-section></div>
 
                     
-                    <SportNews />
 
                     <div id='AboutSport' className='page-events__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
