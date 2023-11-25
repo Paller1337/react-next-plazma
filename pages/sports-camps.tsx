@@ -56,14 +56,14 @@ export default function PageSportsCamps() {
                     <div className='base-bg' data-scroll-section></div>
 
                     <SportNews />
-                    
+
                     <div className='page-events__welcome text-section text-section_big container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
                         <span className='text'>
-                            К 2023 году мы стали площадкой для спортивных сборов для более чем 150 команд,
-                            в том числе для ФК академии «Локомотив» г.Москва, баскетболистов из школы олимпийского резерва ЦСКА г. Москва, 
-                            гимнасток из школы олимпийского резерва Пушкинского района г. Санкт-Петербург.
+                            К 2023 году мы стали площадкой для спортивных сборов для более чем 150 команд, 
+                            в том числе для Академии ФК «Локомотив» г.Москва, СШОР «ЦСКА» по баскетболу г. Москва, 
+                            гимнасток из СШОР Пушкинского района г. Санкт-Петербург.
                         </span>
                     </div>
 
