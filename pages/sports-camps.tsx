@@ -48,7 +48,7 @@ export default function PageSportsCamps() {
                         комфортабельные условия для тренировок, питания и проживания.`}
                         button={{
                             text: 'Рассчитать сборы',
-                            link: '/sports-camps#calculator',
+                            link: '#calculator',
                             icon: '/svg/calc.svg',
                         }}
                     />

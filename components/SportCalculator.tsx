@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import InputRadio from './form/InputRadio';
 import InputRange from './form/InputRange';
 import InputSelect from './form/InputSelect';
@@ -8,7 +8,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { createPortal } from 'react-dom';
 import { useMetrika } from './ym/YMContext';
 import { useRouter } from 'next/router';
-
+import luxon, { DateTime } from 'luxon';
+import { useCookies } from 'react-cookie'
 
 
 interface SportCalculatorProps {
@@ -60,6 +61,7 @@ const SportCalculatorResult = (props: { result: number }) => {
 export default function SportCalculator(props: SportCalculatorProps) {
     const ym = useMetrika()
     const router = useRouter()
+    const [cookies, setCookie, removeCookie] = useCookies(['utm']);
 
     const [error, setError] = useState(false)
     const [utm, setUtm] = useState('')
@@ -81,21 +83,23 @@ export default function SportCalculator(props: SportCalculatorProps) {
     const [vd, setVd] = useState(0)
     const [v, setV] = useState(0)
 
+    const pageQuery = router.query
+
     useEffect(() => {
-        const hashIndex = router.asPath.indexOf('#');
-        if (hashIndex !== -1) {
-            const afterHash = router.asPath.slice(hashIndex + 1);
-            const questionMarkIndex = afterHash.indexOf('?');
-            if (questionMarkIndex !== -1) {
-                const queryParams = new URLSearchParams(afterHash.slice(questionMarkIndex + 1));
-                const utm = queryParams.get('utm_campaign')
-                if (utm) {
-                    console.log('UTM:', utm);
-                    setUtm(utm);
-                }
+        const utmCookie = cookies.utm
+
+        if (pageQuery) {
+            if (utmCookie) {
+                console.log('utm-cookie: ', utmCookie)
+                setUtm(utmCookie)
+            }
+            if (pageQuery.utm_campaign) {
+                setUtm(pageQuery.utm_campaign.toString())
+                setCookie('utm', `${pageQuery.utm_campaign.toString()}_${DateTime.now().toLocaleString()}-${DateTime.now().hour}.${DateTime.now().minute}`)
             }
         }
-    }, []);
+        console.log('utm: ', utm)
+    }, [pageQuery]);
 
     const calcResult = () => {
         const res = (p * n + nt * t + p * e + k * e) * c + m * md + v * vd
@@ -179,6 +183,7 @@ export default function SportCalculator(props: SportCalculatorProps) {
     return (<>
         {/* <SportCalculatorResult result={result} /> */}
         <div className='sport-calculator'>
+            <span>{utm}</span>
             <div id='calculator' className='anchor' style={{ position: 'absolute', top: -200 }}></div>
             <InputRange name='p' label='Количество спортсменов' min={0} max={50} type='range'
                 onChange={(e) => setP(parseInt(e.target.value))}

@@ -56,7 +56,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             <p><strong>Телефон: </strong> ${body.phone ? body.phone : ' отсутствует'}</p>
             <p><strong>Сообщение: </strong> ${body.message ? body.message : ' отсутствует'}</p>
             <p><strong>Стоимость сборов на калькуляторе: </strong> ${body.result ? body.result : 0}</p>
-            ${body.utm ? `<p><strong>UTM : </strong> ${body.utm}</p>` : ''}
+            ${body.utm ? `<p><strong>UTM: </strong> ${body.utm}</p>` : ''}
             `
         });
     }

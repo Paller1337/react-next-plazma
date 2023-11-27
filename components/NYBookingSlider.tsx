@@ -103,11 +103,11 @@ export default function NYBookingSlider(props) {
                     desc={['Вместимость: 5 чел.', 'Цена за 2 дня: 42.500 руб. (~4 250 сутки/чел)']}
                 /> */}
 
-                <NYBookingRoom
+                {/* <NYBookingRoom
                     img='/img-previews/hotel/room-previews/module-house/1.webp'
                     title='Домик на набережной'
                     desc={['Вместимость: 5 чел. (+2 за доп. плату)', 'Цена за 2 дня: 40.000 руб. (~4 200 сутки/чел)']}
-                />
+                /> */}
 
                 <NYBookingRoom
                     img='/img-previews/hotel/room-previews/dacha/3.webp'
