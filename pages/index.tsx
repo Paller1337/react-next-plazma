@@ -92,11 +92,11 @@ export default function PageIndex(props: PageIndexProps) {
                 </div>
               </div>
             </div>
-            <div className='ny-booking__rooms'>
+            {/* <div className='ny-booking__rooms'>
               <span className='ny-booking__rooms-title'>Свободные номера на Новогоднее бронирование</span>
 
               <NYBookingSlider />
-            </div>
+            </div> */}
           </div>
 
           {/* 
