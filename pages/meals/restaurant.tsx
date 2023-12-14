@@ -121,8 +121,8 @@ export default function PageRestaurant() {
                             </Link>
                             {/* <div className='btn btn_black'>Позвонить</div> */}
                             <div className='btn btn_black'
-                                popover-data={'+7 (910) 168-17-61'}
-                                onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
+                                popover-data={'+7 (920) 275-63-12'}
+                                onClick={() => copy('+79202756312', 'Номер скопирован', { metric: 'number' })}
                             >Позвонить</div>
                         </div>
                     </div>

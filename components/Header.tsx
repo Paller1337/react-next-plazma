@@ -57,8 +57,9 @@ export default function Header(props: HeaderProps) {
 
     const router = useRouter()
 
-    const tel = '+7 (910) 168-17-61'
-    const [telNum, setTelNum] = useState(tel)
+    const telReception = '+7 (910) 168-17-61'
+    const telRest = '+7 (920) 275-63-12'
+    const [telNum, setTelNum] = useState(telReception)
 
     const menuOpen = (status: boolean) => {
         const HTMLItem = document.getElementsByTagName('html')[0]
@@ -150,26 +151,36 @@ export default function Header(props: HeaderProps) {
                     <div className='menu__head'>
                         <div className='menu__action'>
                             <span className='menu__action-link'>
-                                <object className='icon' data='svg/vk.svg' type='image/svg+xml' title='Мы ВКонтакте'>
-                                    {/* <img src='/img/new-logo.svg' alt='' />  */}
+                                <object className='icon' data='/svg/vk.svg' type='image/svg+xml' title='Мы ВКонтакте'>
+                                    <img src='/svg/vk.svg' alt='' /> 
                                 </object>
                                 <Link href='https://vk.com/park_hotel_plazma' target='blank' />
                             </span>
                             <span className='menu__action-link'>
-                                <object className='icon' data='svg/tg.svg' type='image/svg+xml' title='Наш Телеграм'>
-                                    {/* <img src='/img/new-logo.svg' alt='' />  */}
+                                <object className='icon' data='/svg/tg.svg' type='image/svg+xml' title='Наш Телеграм'>
+                                    <img src='/svg/tg.svg' alt='' /> 
                                 </object>
                                 <Link href='https://t.me/plazmadonskoy' target='blank' />
                             </span>
-                            <span className='menu__action-link'>
+                            <span className='menu__action-link popover-link'>
                                 <object className='icon' data='/svg/phone.svg' type='image/svg+xml' title='Наш номер'>
-                                    {/* <img src='/img/new-logo.svg' alt='' /> */}
+                                    <img src='/svg/phone.svg' alt='' />
                                 </object>
-                                <div className='popover pop-right'
+                                <div className='popover-header'
                                     // href='tel: +790000000'
-                                    popover-data={telNum}
-                                    onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
-                                />
+                                    // popover-data={telNum}
+                                    onClick={() => copy(telNum, 'Номер скопирован', { metric: 'number' })}
+                                >
+                                    <div className='popover-header__item' onMouseEnter={() => setTelNum(telReception)}>
+                                        <div className='popover-header__title'>Ресепшен</div>
+                                        <div className='popover-header__text'>{telReception}</div>
+                                    </div>
+                                    <div className='popover-header__divider' />
+                                    <div className='popover-header__item' onMouseEnter={() => setTelNum(telRest)}>
+                                        <div className='popover-header__title'>Ресторан</div>
+                                        <div className='popover-header__text'>{telRest}</div>
+                                    </div>
+                                </div>
                             </span>
                         </div>
 

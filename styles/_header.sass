@@ -34,7 +34,7 @@
         .menu__logo
             filter: invert(.75)
 
-        .menu__action
+        .menu__action-link object
             filter: invert(.75)
 
         .burger-menu
@@ -93,12 +93,57 @@
         &-link
             padding: 14px
             position: relative
-            .popover
+            object
+                img
+                    width: 16px
+                    height: 16px
+            &.popover-link
+                &:hover
+                    .popover-header
+                        visibility: visible
+                        opacity: 1
+
+            .popover-header
                 position: absolute
-                left: 0
-                right: 0
+                left: 64px
                 top: 0
-                bottom: 0
+                cursor: pointer
+                border: 1px solid #262626
+                color: #262626
+                padding: 6px 12px
+                background: #fff
+                z-index: 100
+                display: flex
+                flex-direction: column
+                gap: 4px
+                visibility: hidden
+                opacity: 0
+                transition: all .24s ease-in-out
+                .text
+                    color: #fff
+                &__divider
+                    height: 1px
+                    width: 100%
+                    background: #000
+                    opacity: .4
+                &__item
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    gap: 8px
+                    padding: 12px 12px
+                &__title
+                    font-size: 16px
+                    text-align: center
+                &__text
+                    font-size: 16px
+                    text-wrap: nowrap
+                    text-align: center
+                &:hover
+                    &::before
+                        opacity: 1
+                        visibility: visible
+                        color: #000
             a
                 height: 100%
                 width: 100%
@@ -174,7 +219,6 @@
             transition: all .7s ease-in-out
             @media screen and ( max-width: 1300px )
                 margin: 0 7px
-                
 
     &__link
         font-weight: 400
@@ -189,9 +233,9 @@
         text-wrap: nowrap
         @media screen and ( max-width: 1400px )
             letter-spacing: 0
-                
+
             // font-size: 13px
-            
+
         &::before
             content: ''
             position: absolute
@@ -278,7 +322,7 @@
     .menu__logo
         filter: invert(.75)
 
-    .menu__action
+    .menu__action-link object
         filter: invert(.75)
 
     .burger-menu
