@@ -53,6 +53,7 @@ export default function Footer(props: FooterProps) {
                             <div className='footer__links'>
                                 <span className='footer__links-title'>Гостиница</span>
                                 <Link href='/hotel#HotelPlacement' className='footer__links-link'>О гостинице</Link>
+                                <Link href='/awards' className='footer__links-link'>Достижения и награды</Link>
                                 <Link href='/hotel#hotelRooms' className='footer__links-link'>Фотографии номеров</Link>
                                 <Link href='/booking' className='footer__links-link'>Забронировать номер</Link>
                             </div>
