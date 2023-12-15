@@ -12,11 +12,12 @@ interface IAward {
     number?: number
     onChangeSlide?: (n) => void
     onGalleryOpen: () => void
+    big?: boolean
 }
 
 const Award = (props: IAward) => {
     return (
-        <div className='award-item'
+        <div className={`award-item ${props.big ? 'award-item_big' : ''}`}
             onMouseEnter={() => props.onChangeSlide(props.number)}
             onClick={(e) => {
                 e.stopPropagation()
@@ -24,7 +25,8 @@ const Award = (props: IAward) => {
             }}
         >
             <div className='award-item__photo'>
-                <Image src={props.src} width={322} height={456} alt='' />
+                {!props.big ? <Image src={props.src} width={322} height={456} alt='' />
+                    : <img src={props.src} alt='' />}
             </div>
             <div className='award-item__scale'>
                 <div className='award-item__scale-btn'>
@@ -47,6 +49,7 @@ export default function PageAwards() {
         '/img/awards/7-min.jpg',
         '/img/awards/8-min.jpg',
         '/img/awards/9-min.jpg',
+        '/img/awards/10-min.png',
     ]
     const [currentSlide, setCurrentSlide] = useState(0)
     const [galleryIsOpen, setGalleryIsOpen] = useState(false)
@@ -101,6 +104,7 @@ export default function PageAwards() {
                                     number={i}
                                     onChangeSlide={setCurrentSlide}
                                     onGalleryOpen={openGallery}
+                                    big={i === 9}
                                 />)}
 
                         </div>

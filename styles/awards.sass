@@ -44,6 +44,16 @@
     gap: 16px
     border: 1px solid #393939
     position: relative
+    @media screen and ( max-width: 840px )
+        width: 320px
+        max-width: 320px
+    @media screen and ( max-width: 680px )
+        width: 240px
+        max-width: 240px
+    &_big 
+        width: 770px
+        max-width: 770px
+        img
     &:hover
         .award-item__scale
             opacity: 1
@@ -96,6 +106,11 @@
 
     &__photo
         width: 100%
+        img
+            max-width: 100%
+            object-fit: contain
+            height: fit-content
+
 
     &__header
         display: flex
