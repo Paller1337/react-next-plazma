@@ -97,22 +97,22 @@ export default function NYBookingSlider(props) {
                 onTouchMove={onTouchMove}   // Добавлено для сенсорных устройств
                 onTouchEnd={onTouchEnd}     // Добавлено для сенсорных устройств
             >
-                {/* <NYBookingRoom
+                <NYBookingRoom
                     img='/img-previews/hotel/room-previews/cottage/1.webp'
                     title='Коттедж'
-                    desc={['Вместимость: 5 чел.', 'Цена за 2 дня: 42.500 руб. (~4 250 сутки/чел)']}
-                /> */}
-
-                {/* <NYBookingRoom
-                    img='/img-previews/hotel/room-previews/module-house/1.webp'
-                    title='Домик на набережной'
-                    desc={['Вместимость: 5 чел. (+2 за доп. плату)', 'Цена за 2 дня: 40.000 руб. (~4 200 сутки/чел)']}
-                /> */}
+                    desc={['Вместимость: 5 чел.', 'Цена: 14900 руб/сутки']}
+                />
 
                 <NYBookingRoom
-                    img='/img-previews/hotel/room-previews/dacha/3.webp'
-                    title='Дача'
-                    desc={['Вместимость: 2 + 1 чел.', 'Цена за 2 дня: 25.500 руб. (~4 250 сутки/чел)']}
+                    img='/img-previews/hotel/room-previews/module-house/1.webp'
+                    title='Домик на набережной'
+                    desc={['Вместимость: 5 чел. (4 взрослых + 1 ребенок)', 'Цена: 15900 руб/сутки']}
+                />
+
+                <NYBookingRoom
+                    img='/img-previews/hotel/room-previews/townhouse/1.webp'
+                    title='Танхаус'
+                    desc={['Вместимость: 4 чел.', 'Цена: 17800 руб/сутки']}
                 />
 
                 {/* <NYBookingRoom

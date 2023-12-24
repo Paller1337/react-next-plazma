@@ -58,8 +58,8 @@ export default function PageIndex(props: PageIndexProps) {
           <div className='page-index__ny-booking ny-booking'>
             <div className='container'>
               <div className='ny-booking__head'>
-                <h2 className='ny-booking__title'>Новый год 2024.</h2>
-                <span className='ny-booking__desc'>Открыто бронирование! Заезд - 2 дня (31.12-02.01)</span>
+                <h2 className='ny-booking__title'>Новогодние праздники 2024.</h2>
+                <span className='ny-booking__desc'>Открыто бронирование 02.01 - 08.01!</span>
                 <div className='ny-booking__separator'>
                   <ReactSVG src='/svg/separator.svg' />
                 </div>
@@ -92,11 +92,11 @@ export default function PageIndex(props: PageIndexProps) {
                 </div>
               </div>
             </div>
-            {/* <div className='ny-booking__rooms'>
+            <div className='ny-booking__rooms'>
               <span className='ny-booking__rooms-title'>Свободные номера на Новогоднее бронирование</span>
 
               <NYBookingSlider />
-            </div> */}
+            </div>
           </div>
 
           {/* 
