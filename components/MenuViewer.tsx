@@ -1,25 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Document, Page } from 'react-pdf'
 
+const cdn = 'https://cdn0.kplazma.ru'
 const menus = [
     {
         name: 'Меню ресторана',
-        img: '/pdf/rest-pizza-sushi2612.pdf',
+        img: cdn + '/pdf/rest-pizza-sushi2612.pdf',
         sM: 1,
     },
     {
         name: 'Банкетное меню',
-        img: '/pdf/banquet.pdf',
+        img: cdn + '/pdf/banquet.pdf',
         sM: .8,
     },
     {
         name: 'Барная карта',
-        img: '/pdf/bar.pdf',
+        img: cdn + '/pdf/bar.pdf',
         sM: 1,
     },
     {
         name: 'Чайная карта',
-        img: '/pdf/tea.pdf',
+        img: cdn + '/pdf/tea.pdf',
         sM: 1,
     },
 ]
