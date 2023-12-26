@@ -16,7 +16,7 @@ module.exports = {
     images: {
         domains: [
             // 'localhost',
-            'cdn.kplazma.ru',
+            'cdn0.kplazma.ru',
             // 'fonts.googleapis.com'
         ],
         // loader: 'custom',

@@ -80,6 +80,23 @@ export default function SportObjectsMenu() {
                     </div>
                     <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
                 </Link>
+
+                {/* <Link href={'/active-leisure/beach-center'} className='cards-menu__card'>
+                    <div className='cards-menu__card-wrapper'>
+                        <Image width={370} height={560} src={'/img/sport/sports-objects-previews/outside-objects.webp'} alt=''
+                            // loader={vkCloudLoader}
+                        />
+                        <div className='cards-menu__card-text'>
+                            <span className='cards-menu__card-title'>Уличные площадки</span>
+                            <span className='cards-menu__card-desc'>
+                                .....................................
+                                .....................................
+                                .............................
+                            </span>
+                        </div>
+                    </div>
+                    <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
+                </Link> */}
             </div>
         </div>
     )

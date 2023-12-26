@@ -4,7 +4,7 @@ import { Document, Page } from 'react-pdf'
 const menus = [
     {
         name: 'Меню ресторана',
-        img: '/pdf/rest-pizza-sushi.pdf',
+        img: '/pdf/rest-pizza-sushi2612.pdf',
         sM: 1,
     },
     {
@@ -15,6 +15,11 @@ const menus = [
     {
         name: 'Барная карта',
         img: '/pdf/bar.pdf',
+        sM: 1,
+    },
+    {
+        name: 'Чайная карта',
+        img: '/pdf/tea.pdf',
         sM: 1,
     },
 ]
@@ -74,7 +79,7 @@ function MenuViewer() {
                     ))}
                 </div>
                 <div className='menu-viewer__pdf'>
-                    <Document file={currentMenu.img} onLoadSuccess={onDocumentLoadSuccess}>
+                    <Document file={currentMenu.img} onLoadSuccess={onDocumentLoadSuccess} onLoadError={(error) => console.log('Image load: ', error)}>
                         {Array.from(new Array(numPages), (el, index) => (
                             <Page key={`page_${index + 1}`} pageNumber={index + 1} renderTextLayer={false} scale={scale} />
                         ))}
