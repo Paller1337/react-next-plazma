@@ -189,7 +189,7 @@ export default function PageActiveLeisure() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    
+
 
                     <div id='AboutSport' className='page-events__welcome text-section text-section_big container' data-scroll-section>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
@@ -334,6 +334,18 @@ export default function PageActiveLeisure() {
                             img={{ w: 770, h: 570, src: ['/img/active-leisure/row-3.webp'] }}
                             btn={{
                                 link: '/active-leisure/tennis-court',
+                                text: 'Подробнее',
+                            }}
+                        />
+
+                        <RowCard reverse
+                            title='Уличные спортивные площадки'
+                            desc={`Универсальные площадки с резиновым покрытием, и площадки с кварцевым песком.`}
+                            // italicDesc={`Цена: от 1400 до 1700 руб/час`}
+                            // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow3Png }}
+                            img={{ w: 770, h: 570, src: ['/img/active-leisure/row-4.webp'] }}
+                            btn={{
+                                link: '/active-leisure/outdoor-playgrounds',
                                 text: 'Подробнее',
                             }}
                         />
