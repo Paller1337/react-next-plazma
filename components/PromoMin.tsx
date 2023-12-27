@@ -9,12 +9,13 @@ import sportsHall from '@/images/backgrounds/sports-hall.webp'
 import activeLeisure from '@/images/backgrounds/active-leisure-min.webp'
 import events from '@/images/backgrounds/hotel-events-min.webp'
 import sportsCamp from '@/images/backgrounds/sports-camps-min.webp'
+import outdoorPlaygrounds from '@/images/backgrounds/outdoor-playgrounds.webp'
 import vkCloudLoader from '@/mw/utils/imageLoader';
 import { ReactSVG } from 'react-svg';
 import Link from 'next/link';
 
 
-type PromoMinImage = 'active-leisure' | 'events' | 'sports-camp' | 'sports-hall' | 'tennis-court' | 'beach-center'
+type PromoMinImage = 'active-leisure' | 'events' | 'sports-camp' | 'sports-hall' | 'tennis-court' | 'beach-center' | 'outdoor-playgrounds'
 
 interface PromoMinProps {
     video?: boolean
@@ -58,6 +59,9 @@ export default function PromoMin(props: PromoMinProps) {
                 break
             case 'beach-center':
                 setPreviewSrc(beachCenter)
+                break
+            case 'outdoor-playgrounds':
+                setPreviewSrc(outdoorPlaygrounds)
                 break
             default: setPreviewSrc('')
 

@@ -81,22 +81,20 @@ export default function SportObjectsMenu() {
                     <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
                 </Link>
 
-                {/* <Link href={'/active-leisure/beach-center'} className='cards-menu__card'>
+                <Link href={'/active-leisure/outdoor-playgrounds'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>
                         <Image width={370} height={560} src={'/img/sport/sports-objects-previews/outside-objects.webp'} alt=''
-                            // loader={vkCloudLoader}
+                        // loader={vkCloudLoader}
                         />
                         <div className='cards-menu__card-text'>
-                            <span className='cards-menu__card-title'>Уличные площадки</span>
+                            <span className='cards-menu__card-title'>Уличные спортивные площадки</span>
                             <span className='cards-menu__card-desc'>
-                                .....................................
-                                .....................................
-                                .............................
+                                Наши спортивные площадки — это сочетание функциональности, безопасности и комфорта.
                             </span>
                         </div>
                     </div>
                     <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
-                </Link> */}
+                </Link>
             </div>
         </div>
     )
