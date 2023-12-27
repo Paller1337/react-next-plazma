@@ -141,7 +141,7 @@ export default function PageOutdoorPlaygrounds() {
                                 <div className='gallery-card'
                                     data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                     <picture className='meals-preview-card__img'>
-                                        <Image width={570} height={390} src={'/img/active-leisure/tennis-court/4.webp'} alt=''
+                                        <Image width={570} height={390} src={'/img/active-leisure/outdoor-playgrounds/4.webp'} alt=''
                                             loader={vkCloudLoader}
                                         />
                                     </picture>
