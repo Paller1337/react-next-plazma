@@ -90,11 +90,9 @@ export default function PageOutdoorPlaygrounds() {
                         </div>
                     </div>
 
-                    <TextBlock title={{ type: 'h3', text: 'Медицинский кабинет' }}
+                    <TextBlock title={{ type: 'h3', text: 'Наши площадки ждут вас для игры и спорта на свежем воздухе.' }}
                         description={[
-                            `На территории теннисного корта есть медицинский кабинет. </br>
-                            В нем присутствует все необходимое для оказания первой </br>
-                            помощи спортсменам.`,
+                            ` `,
                         ]}
                         style={{ paddingBottom: 0 }}
                     />
@@ -151,7 +149,7 @@ export default function PageOutdoorPlaygrounds() {
                     </div>
 
 
-                    <SportObjectForm obj={'ПЛЯЖНЫЙ ЦЕНТР'} />
+                    <SportObjectForm obj={'УЛИЧНЫЕ ПЛОЩАДКИ'} />
 
                     <SportObjectsMenu />
                 </div >
