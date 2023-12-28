@@ -91,6 +91,11 @@ module.exports = {
                 destination: '/hotel',
                 permanent: true,
             },
+            {
+                source: '/glhs',
+                destination: 'https://c4.glhs.ru/pr/0b1d8440a7711c27d68ced7768526d4a/index',
+                permanent: true,
+            },
         ]
     },
 }
