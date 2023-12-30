@@ -98,6 +98,12 @@ export default function NYBookingSlider(props) {
                 onTouchEnd={onTouchEnd}     // Добавлено для сенсорных устройств
             >
                 <NYBookingRoom
+                    img='/img-previews/hotel/room-previews/austr-townhouse/1.webp'
+                    title='Австрийский таунхаус'
+                    desc={['Вместимость: 8 чел. (6 взрослых + 2 ребенок)', 'Цена: 29700 руб/сутки']}
+                />
+
+                <NYBookingRoom
                     img='/img-previews/hotel/room-previews/cottage/1.webp'
                     title='Коттедж'
                     desc={['Вместимость: 5 чел.', 'Цена: 14900 руб/сутки']}
@@ -115,11 +121,7 @@ export default function NYBookingSlider(props) {
                     desc={['Вместимость: 4 чел.', 'Цена: 17800 руб/сутки']}
                 />
 
-                <NYBookingRoom
-                    img='/img-previews/hotel/room-previews/austr-townhouse/1.webp'
-                    title='Австрийский таунхаус'
-                    desc={['Вместимость: 8 чел. (6 взрослых + 2 ребенок)', 'Цена: 29700 руб/сутки']}
-                />
+
 
                 {/* <NYBookingRoom
                     img='/img-previews/hotel/room-previews/deluxe-5-corps/3.webp'
