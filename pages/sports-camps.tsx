@@ -61,8 +61,8 @@ export default function PageSportsCamps() {
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='h2-title'>«PLAZMA.SPORT»</span>
                         <span className='text'>
-                            К 2023 году мы стали площадкой для спортивных сборов для более чем 150 команд, 
-                            в том числе для Академии ФК «Локомотив» г.Москва, СШОР «ЦСКА» по баскетболу г. Москва, 
+                            К 2023 году мы стали площадкой для спортивных сборов для более чем 150 команд,
+                            в том числе для Академии ФК «Локомотив» г.Москва, СШОР «ЦСКА» по баскетболу г. Москва,
                             гимнасток из СШОР Пушкинского района г. Санкт-Петербург.
                         </span>
                     </div>
@@ -167,11 +167,16 @@ export default function PageSportsCamps() {
                         style={{ paddingBottom: 0, paddingTop: '220px' }}
                     />
 
-                    <div className='column-cards--wrapper container --swiper-container' style={{ paddingTop: 0 }}>
+                    <div className='column-cards--wrapper container --swiper-container relative' style={{ paddingTop: 0 }}>
                         <Swiper
                             {...({
-                                modules: [FreeMode, Pagination],
+                                modules: [FreeMode, Pagination, Navigation],
                                 // slidesPerView: slidesInPreview,
+                                navigation: {
+                                    enabled: true,
+                                    prevEl: '#SportsCampsSwiperNav--Prev',
+                                    nextEl: '#SportsCampsSwiperNav--Next',
+                                },
                                 spaceBetween: 20,
                                 breakpoints: {
                                     1: {
@@ -197,7 +202,7 @@ export default function PageSportsCamps() {
                                     },
                                 },
 
-                            } as any)}
+                            } as SwiperProps)}
                         >
                             <SwiperSlide>
                                 <ColumnCard
@@ -234,8 +239,12 @@ export default function PageSportsCamps() {
                                 />
                             </SwiperSlide>
                         </Swiper>
-                    </div>
 
+                        {/* <div className='page-sports-camps__swiper-nav'> */}
+                        <div id='SportsCampsSwiperNav--Prev'><div className='swiper-button-prev' /></div>
+                        <div id='SportsCampsSwiperNav--Next'><div className='swiper-button-next' /></div>
+                        {/* </div> */}
+                    </div>
 
                     <TextBlock className='container' title={{ type: 'h2', text: 'Площадки, с которыми мы сотрудничаем' }}
                         style={{ paddingBottom: 20, paddingTop: '50px' }}

@@ -67,7 +67,7 @@ export default function RowCard(props: ColumnCardProps) {
                         slidesPerView: 1,
                         modules: [Pagination, Navigation],
                         navigation: {
-                            enabled: true,
+                            enabled: true
                         },
                         pagination: {
                             clickable: true,

@@ -41,6 +41,30 @@
     flex-direction: column
     gap: 40px
 
+.page-sports-camps
+    &__swiper-nav
+        height: 64px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        position: absolute
+        top: 50%
+        transform: translateY(-100%)
+        z-index: 1000
+
+#SportsCampsSwiperNav--Prev, #SportsCampsSwiperNav--Next
+    display: flex
+    padding: 48px
+    background: #fff
+    margin-bottom: 40px
+    position: absolute
+#SportsCampsSwiperNav--Prev
+    top: 30%
+    left: 10px
+#SportsCampsSwiperNav--Next
+    top: 30%
+    right: 10px
+
 .sport-object-form
     display: flex
     align-items: center
@@ -87,6 +111,11 @@
 .cards-menu
     padding-top: 100px
     padding-bottom: 100px
+    @media screen and ( max-width: $md2 )
+        display: flex
+        flex-direction: column
+        align-items: center
+
     &__title
         color: #262626
         font-size: 24px
@@ -96,9 +125,14 @@
         margin-top: 20px
         display: flex
         flex-direction: row
-        gap: 30px
+        gap: 60px 30px
         overflow-x: scroll
 
+        @media screen and ( max-width: $md2 )
+            flex-wrap: wrap
+            max-width: 100%
+            justify-content: center
+            gap: 60px 2%
         .btn
             width: 100%
             gap: 20px
@@ -121,6 +155,13 @@
         max-width: 370px
         overflow: hidden
         min-width: 370px
+        @media screen and ( max-width: $md2 )
+            max-width: 45vw
+            min-width: 45vw
+            width: 100%
+        @media screen and ( max-width: $md3 )
+            width: 100%
+            max-width: 80vw
         @media screen and ( max-width: $md4 )
             min-width: 90%
 
@@ -130,6 +171,13 @@
             display: flex
             flex-direction: column
             cursor: pointer
+            overflow: hidden
+            @media screen and ( max-width: $md3 )
+                height: 410px
+            img
+                @media screen and ( max-width: $md2 )
+                    width: 100%
+                    object-fit: cover
 
         &-text
             position: absolute
@@ -251,7 +299,7 @@
                     span
                         -webkit-line-clamp: 3
             @media screen and ( max-width: $md3 )
-                height: 240px
+                height: 340px
                 width: 100%
                 .sports-news__item-footer
                     padding: 80px 20px 25px 20px
@@ -263,7 +311,7 @@
                     top: 80px
                     right: 20px
             @media screen and ( max-width: $md4 )
-                height: 260px
+                height: 340px
                 .sports-news__item-footer
                     span
                         -webkit-line-clamp: 2
