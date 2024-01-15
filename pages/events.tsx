@@ -66,7 +66,7 @@ export default function PageEvents() {
                                 <h2>БАНКЕТЫ</h2>
                                 <span>
                                     Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания. <br></br>
-                                    <b>Минимальный заказ - 2500 руб. на человека</b>
+                                    <b>Минимальный заказ - 3000 руб. на человека</b>
                                 </span>
                                 <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
@@ -203,7 +203,7 @@ export default function PageEvents() {
                                 <h2>КОРПОРАТИВЫ</h2>
                                 <span>
                                     Отвлекитесь от деловой обстановки вместе со своими коллегами. <br></br>
-                                    <b>Минимальный заказ - 2500 руб. на человека</b>
+                                    <b>Минимальный заказ - 3000 руб. на человека</b>
                                 </span>
                                 <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
@@ -338,6 +338,13 @@ export default function PageEvents() {
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
+                                    <span className='condition-name'>Обслуживание:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>10%</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
                                     <span className='condition-name'>Часы работы:</span>
 
                                     <div className='event-conditions__col'>
@@ -373,6 +380,13 @@ export default function PageEvents() {
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
+                                    <span className='condition-name'>Обслуживание:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>10%</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
                                     <span className='condition-name'>Часы работы:</span>
 
                                     <div className='event-conditions__col'>
@@ -403,6 +417,13 @@ export default function PageEvents() {
 
                                     <div className='event-conditions__col'>
                                         <span className='condition-value'>цена под ключ</span>
+                                    </div>
+                                </div>
+                                <div className='event-conditions__row'>
+                                    <span className='condition-name'>Обслуживание:</span>
+
+                                    <div className='event-conditions__col'>
+                                        <span className='condition-value'>10%</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>

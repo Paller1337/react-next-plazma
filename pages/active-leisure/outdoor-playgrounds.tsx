@@ -60,9 +60,9 @@ export default function PageOutdoorPlaygrounds() {
                             <div className='about-hotel__about'>
                                 <span className='about-hotel__text'>«PLAZMA.SPORT»</span>
                                 <span className='about-hotel__desc'>
-                                    Откройте для себя наши универсальные открытые спортивные площадки, идеально подходящие для баскетбола,
-                                    мини-футбола и классического волейбола. С идеальным освещением и просторным размером, наши площадки
-                                    обеспечивают комфортные условия для любителей и профессионалов.
+                                    Любителям пляжного волейбола мы предлагаем корты с качественным кварцевым песком, подходящие для игр
+                                    и тренировок на открытом воздухе. Наши площадки, оборудованные для дневных сессий,
+                                    ждут вас для проведения как тренировок, так и полноценных турниров.
                                 </span>
 
                             </div>
@@ -78,9 +78,9 @@ export default function PageOutdoorPlaygrounds() {
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <div className='about-hotel__about'>
                                 <span className='about-hotel__desc'>
-                                    Любителям пляжного волейбола мы предлагаем корты с качественным кварцевым песком, подходящие для игр
-                                    и тренировок на открытом воздухе. Наши площадки, оборудованные для дневных сессий,
-                                    ждут вас для проведения как тренировок, так и полноценных турниров.
+                                    Откройте для себя наши универсальные открытые спортивные площадки, идеально подходящие для баскетбола,
+                                    мини-футбола и классического волейбола. С идеальным освещением и просторным размером, наши площадки
+                                    обеспечивают комфортные условия для любителей и профессионалов.
                                 </span>
                             </div>
                             <picture className='about-hotel__img img_min'>
@@ -129,7 +129,7 @@ export default function PageOutdoorPlaygrounds() {
                                 <div className='gallery-card'
                                     data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                     <picture className='gallery-card__img'>
-                                        <Image width={570} height={390} src={'/img/active-leisure/outdoor-playgrounds/3.webp'} alt=''
+                                        <Image width={570} height={390} src={'/img/active-leisure/outdoor-playgrounds/3-2.webp'} alt=''
                                             loader={vkCloudLoader}
                                         />
                                     </picture>
@@ -139,7 +139,7 @@ export default function PageOutdoorPlaygrounds() {
                                 <div className='gallery-card'
                                     data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                                     <picture className='meals-preview-card__img'>
-                                        <Image width={570} height={390} src={'/img/active-leisure/outdoor-playgrounds/4.webp'} alt=''
+                                        <Image width={570} height={390} src={'/img/active-leisure/outdoor-playgrounds/4-2.webp'} alt=''
                                             loader={vkCloudLoader}
                                         />
                                     </picture>
