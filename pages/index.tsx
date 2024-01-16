@@ -55,7 +55,7 @@ export default function PageIndex(props: PageIndexProps) {
           <div className='base-bg' data-scroll-section></div>
 
           {/* New Year Booking */}
-          <div className='page-index__ny-booking ny-booking'>
+          {/* <div className='page-index__ny-booking ny-booking'>
             <div className='container'>
               <div className='ny-booking__head'>
                 <h2 className='ny-booking__title'>Новогодние праздники 2024.</h2>
@@ -66,7 +66,7 @@ export default function PageIndex(props: PageIndexProps) {
               </div>
 
               <div className='ny-booking__info'>
-                {/* <div className='ny-booking__text-container line'>
+                <div className='ny-booking__text-container line'>
                   <h2 className='ny-booking__text-container-title'>
                     В стоимость включено:
                   </h2>
@@ -80,15 +80,15 @@ export default function PageIndex(props: PageIndexProps) {
                   <span className='ny-booking__text'>
                     3. Развлекательная программа 1 января на свежем воздухе с Дедом Морозом, Снегурочкой, призами, горячими напитками и закусками.
                   </span>
-                </div> */}
+                </div>
 
                 <div className='ny-booking__billboard'>
                   <span className='ny-booking__billboard-title'>Новогодние праздники можно забронировать только по телефону: <br />8-910-168-17-61</span>
                   <div className='ny-booking__billboard-separator' />
 
                   <span className='ny-booking__billboard-desc'>Наши администраторы с радостью ответят на все ваши вопросы.</span>
-                  {/* <span className='ny-booking__billboard-desc bold'>Для бронирования необходимо внести оплату в размере 20% от общей стоимости.</span>
-                  <span className='ny-booking__billboard-desc bold'>100% оплата к 10 декабря.</span> */}
+                  <span className='ny-booking__billboard-desc bold'>Для бронирования необходимо внести оплату в размере 20% от общей стоимости.</span>
+                  <span className='ny-booking__billboard-desc bold'>100% оплата к 10 декабря.</span>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function PageIndex(props: PageIndexProps) {
 
               <NYBookingSlider />
             </div>
-          </div>
+          </div> */}
 
           {/* 
           <div className='page-index__new-year i-new-year container'>

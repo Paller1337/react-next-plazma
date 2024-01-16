@@ -341,7 +341,7 @@ export default function PageEvents() {
                                     <span className='condition-name'>Обслуживание:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>10%</span>
+                                        <span className='condition-value'>10% от заказа по меню</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
@@ -383,7 +383,7 @@ export default function PageEvents() {
                                     <span className='condition-name'>Обслуживание:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>10%</span>
+                                        <span className='condition-value'>10% от заказа по меню</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
@@ -423,7 +423,7 @@ export default function PageEvents() {
                                     <span className='condition-name'>Обслуживание:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>10%</span>
+                                        <span className='condition-value'>10% от заказа по меню</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
