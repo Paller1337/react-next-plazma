@@ -34,7 +34,7 @@ export default function SportObjectsMenu() {
         <div id='sports-objects' className='cards-menu container'>
             <span className='cards-menu__title'>Наши спортивные объекты</span>
             <div ref={contentRef} className='cards-menu__content'>
-                <Link href={'/active-leisure/tennis-court'} className='cards-menu__card'>
+                {/* <Link href={'/active-leisure/tennis-court'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>
                         <Image width={370} height={560} src={'/img/sport/sports-objects-previews/tennis.webp'} alt=''
                             loader={vkCloudLoader}
@@ -48,7 +48,7 @@ export default function SportObjectsMenu() {
                         </div>
                     </div>
                     <div className='btn btn_black'>Подробнее <ReactSVG className='svg' src='/svg/arrow-forward.svg' /></div>
-                </Link>
+                </Link> */}
 
                 <Link href={'/active-leisure/sports-hall'} className='cards-menu__card'>
                     <div className='cards-menu__card-wrapper'>

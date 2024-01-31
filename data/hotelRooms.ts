@@ -16,7 +16,7 @@ const checkInRoom = ['Заезд:', ' <b>14:00</b>;', ' Выезд:', ' <b>12:00
 // import { images } from 'imageImports'
 
 const saleTitle = '<span style="color: red; white-space: nowrap;">с 3 сентября снижение цены:</span>'
-
+const nextSeason = '<span style="color: green; white-space: nowrap;">Цены с 1 июня по 31 августа:</span>'
 
 export const hotelRooms: RoomObjectProps[] = [
     {
@@ -46,7 +46,11 @@ export const hotelRooms: RoomObjectProps[] = [
         size: 'Размер номера 28 м².', // Добавить площадь терассы 9 кв.м.
 
         price: [
-            { name: 'Цена', value: ['<b>6200 руб/сутки</b>',] },
+            { name: 'Цена вс-чт', value: ['<b>6200 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">7900</span><b>6200 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>6200 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>7900 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -95,7 +99,11 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: 'Цена', value: ['<b>9200 руб/сутки</b>',] },
             // { name: '', value: [saleTitle,] },
             { name: 'Цена вс-чт', value: ['<span class="op">9200</span><b>8500 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>9200 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">10800</span><b>9200 руб/сутки</b>',] },
+
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>9200 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>10800 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -149,8 +157,11 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: 'Цена вс-чт', value: ['<b>15950 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>18950 руб/сутки</b>',] },
             // { name: '', value: [saleTitle,] },
-            { name: 'Цена вс-чт', value: ['<b>17450 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>19950 руб/сутки</b>',] },
+            { name: 'Цена вс-чт', value: ['<span class="op">19950</span><b>17450 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">22450</span><b>19950 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>19950 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>22450 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -240,6 +251,9 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: '', value: [saleTitle,] },
             { name: 'Цена вс-чт', value: ['<span class="op">5980</span><b>5200 руб/сутки</b>',] },
             { name: 'Цена пт-сб', value: ['<span class="op">6980</span><b>6200 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>5980 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6980 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -323,6 +337,9 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: '', value: [saleTitle,] },
             { name: 'Цена вс-чт', value: ['<span class="op">4980</span><b>4550 руб/сутки</b>',] },
             { name: 'Цена пт-сб', value: ['<span class="op">5980</span><b>5550 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>4980 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>5980 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -371,6 +388,9 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: '', value: [saleTitle,] },
             { name: 'Цена вс-чт', value: ['<span class="op">5480</span><b>4750 руб/сутки</b>',] },
             { name: 'Цена пт-сб', value: ['<span class="op">6480</span><b>5750 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>5480 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>6480 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -419,6 +439,9 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: '', value: [saleTitle,] },
             { name: 'Цена вс-чт', value: ['<span class="op">6900</span><b>5700 руб/сутки</b>',] },
             { name: 'Цена пт-сб', value: ['<span class="op">7900</span><b>6700 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>6900 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>7900 руб/сутки</b>',] },
         ],
 
         attributes: [
@@ -468,8 +491,11 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: 'Цена вс-чт', value: ['<b>10900 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>12900 руб/сутки</b>',] },
             // { name: '', value: [saleTitle,] },
-            { name: 'Цена вс-чт', value: ['<b>11950 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>14450 руб/сутки</b>',] },
+            { name: 'Цена вс-чт', value: ['<span class="op">13950</span><b>11950 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">16550</span><b>14450 руб/сутки</b>',] },
+            { name: '', value: [nextSeason] },
+            { name: 'Цена вс-чт', value: ['<b>13950 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>16550 руб/сутки</b>',] },
         ],
 
         attributes: [

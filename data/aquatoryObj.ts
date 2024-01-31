@@ -64,9 +64,15 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
         ],
         priceCards: [
             {
-                cardName: "На весь день",
+                cardName: "Понедельник - пятница",
                 cardAttr: "(10-30 человек)",
                 cardPrice: "8700 рублей",
+                cardSize: "med"
+            },
+            {
+                cardName: "Суббота и воскресенье",
+                cardAttr: "(10-30 человек)",
+                cardPrice: "9700 рублей",
                 cardSize: "med"
             }
         ],

@@ -144,7 +144,7 @@ export default function PageAquatory() {
                                             <span className='worktime-section__timetable-text'>(11 лет и старше)</span>
                                         </div>
                                         <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>300 рублей</span>
+                                        <span className='worktime-section__timetable-text'>400 рублей</span>
                                     </div>
 
                                     <div className='worktime-section__timetable-row'>
@@ -153,7 +153,7 @@ export default function PageAquatory() {
                                             <span className='worktime-section__timetable-text'>(5 - 10 лет)</span>
                                         </div>
                                         <i className='time-circle'></i>
-                                        <span className='worktime-section__timetable-text'>200 рублей</span>
+                                        <span className='worktime-section__timetable-text'>300 рублей</span>
                                     </div>
 
                                     <div className='worktime-section__timetable-row'>

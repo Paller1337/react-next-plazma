@@ -62,7 +62,7 @@ export default function PageActiveLeisure() {
                         desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
                                             баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                                             экологичность. Идеально подходит для детей и взрослых.`}
-                        italicDesc={`Цена: 700 руб/час`}
+                        italicDesc={`Цена: 1000 руб/час`}
                         img={[
                             { h: 770, w: 570, src: '/img/active-leisure/col-1/1.webp' },
                             { h: 770, w: 570, src: '/img/active-leisure/col-1/2.webp' },
@@ -79,7 +79,7 @@ export default function PageActiveLeisure() {
                         desc={`Отличное место с кварцевым песком для пляжного волейбола, футбола и других активных 
                             игр. На ней вы сможете провести товарищеский матч, соревнования 
                             или просто повесилиться с друзьями.`}
-                        italicDesc={`Цена: 700 руб/час`}
+                        italicDesc={`Цена: 1000 руб/час. </br>Целый день (с 9 до 22): 7000 руб.`}
                         img={[
                             { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
                             { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
@@ -111,7 +111,7 @@ export default function PageActiveLeisure() {
                 desc={`Безопасная и удобная площадка с резиновым покрытием для волейбола, 
                                 баскетбола, мини-футбола и других активностей. Износостойкость, долговечность и 
                                 экологичность. Идеально подходит для детей и взрослых.`}
-                italicDesc={`Цена: 700 руб/час`}
+                italicDesc={`Цена: 1000 руб/час`}
                 img={[
                     { h: 770, w: 570, src: '/img/active-leisure/col-1/1.webp' },
                     { h: 770, w: 570, src: '/img/active-leisure/col-1/2.webp' },
@@ -126,7 +126,7 @@ export default function PageActiveLeisure() {
                 desc={`Отличное место с кварцевым песком для пляжного волейбола, футбола и других активных 
                     игр. На ней вы сможете провести товарищеский матч, соревнования 
                     или просто повесилиться с друзьями.`}
-                italicDesc={`Цена: 700 руб/час`}
+                italicDesc={`Цена: 1000 руб/час. </br>Целый день (с 9 до 22): 7000 руб.`}
                 img={[
                     { h: 770, w: 570, src: '/img/active-leisure/col-3/1.webp' },
                     { h: 770, w: 570, src: '/img/active-leisure/col-3/2.webp' },
@@ -302,7 +302,7 @@ export default function PageActiveLeisure() {
                             песком. Глубина песка 40 см, фракция 0.1-0.63. В зале 4 пляжные площадки с местом для забега, 
                             2 раздевалки, трибуны на 100 человек. В летний период у нас работает 7 открытых площадок для 
                             пляжного волейбола с кварцевым песком.`}
-                            italicDesc={`Цена: от 800 до 2000 руб/час`}
+                            italicDesc={`Цена: 2000 руб/час`}
                             // img={{ h: 510, w: 770, src: images.activeLeisure.imgrow1Png }}
                             img={{ w: 770, h: 570, src: ['/img/active-leisure/row-1.webp'] }}
                             btn={{
@@ -325,7 +325,7 @@ export default function PageActiveLeisure() {
                             }}
                         />
 
-                        <RowCard
+                        {/* <RowCard
                             title='Теннисный корт'
                             desc={`Площадь манежа составляет 2600 м2, куда входит 4 теннисные площадки с покрытием 
                             хард, 2 раздевалки с душевыми, кабинет судьи и медицинский кабинет.`}
@@ -336,7 +336,7 @@ export default function PageActiveLeisure() {
                                 link: '/active-leisure/tennis-court',
                                 text: 'Подробнее',
                             }}
-                        />
+                        /> */}
 
                         <RowCard reverse
                             title='Уличные спортивные площадки'

@@ -76,8 +76,9 @@ export default function ColumnCard(props: ColumnCardProps) {
             <div className='column-card__text' data-aos="fade-zoom-in" data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <h3 className='column-card__title'>{props.title}</h3>
                 {props.italicDesc ?
-                    <span className='column-card__desc' style={{ fontStyle: 'italic', fontWeight: '600' }}>
-                        {props.italicDesc}
+                    <span className='column-card__desc' style={{ fontStyle: 'italic', fontWeight: '600' }}
+                        dangerouslySetInnerHTML={{ __html: props.italicDesc }}
+                    >
                     </span>
                     : <></>}
                 <span className='column-card__desc'>{props.desc}</span>
