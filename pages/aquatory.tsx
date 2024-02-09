@@ -93,6 +93,18 @@ export default function PageAquatory() {
                                     } as any)}
                                 >
                                     <SwiperSlide>
+                                        <Image height={550} width={770} src={'/img/aquatory/0-1.webp'} alt=''
+                                            loader={vkCloudLoader} />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Image height={550} width={770} src={'/img/aquatory/0-2.webp'} alt=''
+                                            loader={vkCloudLoader} />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <Image height={550} width={770} src={'/img/aquatory/0-3.webp'} alt=''
+                                            loader={vkCloudLoader} />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
                                         <Image height={550} width={770} src={'/img/aquatory/1.webp'} alt=''
                                             loader={vkCloudLoader} />
                                     </SwiperSlide>
