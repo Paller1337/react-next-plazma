@@ -4,7 +4,7 @@ import { aquatoryObjData } from '../data/aquatoryObj'
 import AquatoryObject from '../components/objects/AquatoryObject'
 import Promo from '../components/Promo'
 import PlazmaSertItem from '../components/PlazmaSertItem'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
 import { FreeMode, Lazy, Navigation, Pagination } from 'swiper'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
@@ -77,12 +77,13 @@ export default function PageAquatory() {
                                             1: {
                                                 slidesPerView: 1,
                                                 spaceBetween: 20,
-
+                                                height: 340
                                             },
                                             991: {
                                                 slidesPerView: 1,
                                                 centeredSlides: false,
                                                 spaceBetween: 20,
+                                                height: 360
                                             },
                                             1100: {
                                                 slidesPerView: 1,
@@ -90,7 +91,7 @@ export default function PageAquatory() {
                                             },
                                         },
 
-                                    } as any)}
+                                    } as SwiperProps)}
                                 >
                                     <SwiperSlide>
                                         <Image height={550} width={770} src={'/img/aquatory/0-1.webp'} alt=''
