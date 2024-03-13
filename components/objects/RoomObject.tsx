@@ -43,7 +43,7 @@ export default function RoomObject(data: RoomObjectProps) {
     const images = data.images
     const previews = data.previews
     const router = useRouter()
-    const roomId = data.tlid
+    const roomId = data.bnid
 
     const { isMobile, isDesktop } = useDeviceDetect()
 
