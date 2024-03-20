@@ -2,6 +2,8 @@ import '../styles/style.sass'
 import 'swiper/css'
 import 'swiper/css/bundle'
 import "aos/dist/aos.css"
+import '@mantine/core/styles.css'
+import '@mantine/dates/styles.css'
 
 import type { AppProps } from 'next/app'
 import React, { useContext, useEffect, useRef, useState } from 'react'
@@ -12,11 +14,13 @@ import { useRouter } from 'next/router'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import AppLayout from '@/components/AppLayout'
 import { YMProvider } from '@/components/ym/YMProvider'
+import { createTheme, MantineProvider } from '@mantine/core'
 
+const theme = createTheme({})
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
-  
+
   const loaderRef = useRef<LoadingBarRef>(null)
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
@@ -43,11 +47,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <LoadingBar color='#262626' ref={loaderRef} height={2} />
 
       <BnovoLoadContextProvider>
-        <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true, webVisor: true }}>
-          <AppLayout asPath={router.asPath} pageProps={pageProps}>
-            <Component {...pageProps} />
-          </AppLayout>
-        </YMProvider>
+        <MantineProvider theme={theme}>
+          <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true, webVisor: true }}>
+            <AppLayout asPath={router.asPath} pageProps={pageProps}>
+              <Component {...pageProps} />
+            </AppLayout>
+          </YMProvider>
+        </MantineProvider>
       </BnovoLoadContextProvider>
     </>
   )

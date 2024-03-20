@@ -11,6 +11,7 @@ import { DEFAULTS } from 'defaults'
 import SportObjectsMenu from '@/components/SportObjectsMenu'
 import RowCard from '@/components/RowCard'
 import SportNews from '@/components/SportNews'
+import SportRequest from '@/components/SportRequest'
 
 export default function PageSportsCamps() {
     return (
@@ -294,11 +295,12 @@ export default function PageSportsCamps() {
                     </div>
                     <div className='page-sports-camps__calculate container'
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                        <TextBlock title={{ type: 'h2', text: 'Сколько стоят сборы в «PLAZMA»' }}
-                            style={{ paddingBottom: 70, paddingTop: 70 }}
+                        <TextBlock title={{ type: 'h2', text: 'Заявка на расчет сборов в «PLAZMA»' }}
+                            style={{ paddingBottom: 40, paddingTop: 70 }}
                         />
 
-                        <SportCalculator />
+                        {/* <SportCalculator /> */}
+                        <SportRequest />
                     </div>
                 </div >
             </main>

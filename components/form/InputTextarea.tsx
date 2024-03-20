@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 
 
-interface InputTextProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
+interface InputTextProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
     label?: string
 }
 

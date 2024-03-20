@@ -6,6 +6,35 @@
     gap: 20px
     position: relative
 
+    &__dates
+        display: flex
+        flex-direction: row
+        gap: 20px
+        flex-wrap: nowrap
+    &__date
+        position: relative
+        width: -webkit-fill-available
+    &__date-separator
+        font-size: 32px
+        color: #262626
+        padding-top: 20px
+        margin: auto 0 
+    &__datepicker
+        padding: 20px
+        border: 1px solid #262626
+        outline: 3px silid #fff
+        width: fit-content
+        background: #fff
+        position: absolute
+        top: 80px
+        z-index: 100
+        visibility: hidden
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20)
+        &.right
+            right: 0
+        &.visible
+            visibility: visible
+
     &__result
         padding: 20px 40px
         border: 1px solid #262626
