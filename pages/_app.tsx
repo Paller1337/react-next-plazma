@@ -1,9 +1,9 @@
-import '../styles/style.sass'
 import 'swiper/css'
 import 'swiper/css/bundle'
 import "aos/dist/aos.css"
 import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
+import '../styles/style.sass'
 
 import type { AppProps } from 'next/app'
 import React, { useContext, useEffect, useRef, useState } from 'react'

@@ -5,17 +5,17 @@ const cdn = 'https://cdn0.kplazma.ru'
 const menus = [
     {
         name: 'Меню ресторана',
-        img: '/pdf/rest-pizza-sushi2612.pdf',
+        img: '/pdf/28.03/rest-2.pdf',
         sM: 1,
     },
     {
         name: 'Банкетное меню',
-        img: '/pdf/banquet.pdf',
+        img: '/pdf/28.03/banquet-2.pdf',
         sM: .8,
     },
     {
         name: 'Барная карта',
-        img: '/pdf/bar.pdf',
+        img: '/pdf/28.03/bar-2.pdf',
         sM: 1,
     },
     {
