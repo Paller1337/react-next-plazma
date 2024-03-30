@@ -179,6 +179,9 @@ export default function PageAquatory() {
                                     </div>
                                 </div>
                             </div>
+                            <span className='worktime-section__text' style={{ maxWidth: '100%', fontWeight: 'bold' }}>
+                                В период с 1.05.24 по 24.05.24 на вход на территорию акватории 
+                                действует фиксированная 200 рублей(взрослые и дети).</span>
                         </div>
 
                         <picture className='page-aquatory__price-img'>
