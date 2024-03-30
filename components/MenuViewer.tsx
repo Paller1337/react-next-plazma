@@ -10,7 +10,7 @@ const menus = [
     },
     {
         name: 'Банкетное меню',
-        img: '/pdf/28.03/banquet-2.pdf',
+        img: '/pdf/28.03/banquet-3.pdf',
         sM: .8,
     },
     {
@@ -18,11 +18,11 @@ const menus = [
         img: '/pdf/28.03/bar-2.pdf',
         sM: 1,
     },
-    {
-        name: 'Чайная карта',
-        img: '/pdf/tea.pdf',
-        sM: 1,
-    },
+    // {
+    //     name: 'Чайная карта',
+    //     img: '/pdf/tea.pdf',
+    //     sM: 1,
+    // },
 ]
 
 function MenuViewer() {
