@@ -175,13 +175,13 @@ export default function PageIndex(props: PageIndexProps) {
 
                 <div className='i-new-year__text-container line'>
                   <span className='i-new-year__text'>
-                    Цена входа на территорию акватории фиксированная - 200 рублей для взрослых и детей.
+                    Цена входа на территорию акватории фиксированная - 200 рублей для взрослых и детей до 24 мая включительно.
                   </span>
                 </div>
 
                 <div className='i-new-year__text-container line'>
                   <span className='i-new-year__text'>
-                    Открыто бронирование беседок на набережной. Цена фиксированная - 8700 рублей по будням и в выходные.
+                    Открыто бронирование беседок на набережной. Цена фиксированная - 8700 рублей по будням и в выходные до 24 мая включительно.
                   </span>
                 </div>
 
