@@ -186,7 +186,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job>
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Посудомойщицы',
                                 price: '1600 р./смена, ~ 30.000',
                             }}>
@@ -198,7 +198,7 @@ export default function PageJob() {
                                 <JobText>
                                     Смена 12 часов, график 3/2 (есть дневные и ночные смены).
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             {/* <Job job={{
                                 name: 'Сотрудник на раздачу в столовую',
@@ -214,7 +214,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job> */}
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Повар в столовую',
                                 price: '1700 р./смена, ~ 25.500 - 37.400',
                             }}>
@@ -226,7 +226,7 @@ export default function PageJob() {
                                 <JobText>
                                     2/2 или 5/2.
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             <Job job={{
                                 name: 'Официант на постоянную работу',
