@@ -13,21 +13,22 @@ const JobText = (props: { children: any, bold?: boolean }) => {
 }
 
 interface IJob {
-    job: { name: string, price: string }
+    job: { name: string, price: string, tag?: string }
     children: any
 }
 
 const Job = (props: IJob) => {
     return (
         <div className='job-item'>
+            {props.job.tag ? <span className='job-item__job-name-tag mobile'>{props.job.tag}</span> : <></>}
             <div className='job-item__header'>
-                <span className='job-item__job-name'>{props.job.name}</span>
+                <span className='job-item__job-name'>{props.job.name}{props.job.tag ? <span className='job-item__job-name-tag'>{props.job.tag}</span> : <></>}</span>
                 <span className='job-item__job-price'>{props.job.price} р./месяц.</span>
             </div>
             <div className='job-item__body'>
                 {props.children}
             </div>
-        </div>
+        </div >
     )
 }
 
@@ -66,6 +67,83 @@ export default function PageJob() {
                         </div>
 
                         <div className='job-page__content'>
+                            <Job job={{
+                                name: 'Посудомойщица',
+                                tag: 'на лето',
+                                price: '2100 р./смена, 37.800',
+                            }}>
+                                <JobText bold>Требования: </JobText>
+                                <JobText>
+                                    Своевременно и качественно мыть посуду и относить на сушку. Следить за чистотой производственного инвентаря.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    3/2 - день, день, ночь. По 12 часов.
+                                </JobText>
+                            </Job>
+
+                            <Job job={{
+                                name: 'Уборщица в столовую',
+                                tag: 'на лето',
+                                price: '1300 р./смена, 19.500',
+                            }}>
+                                <JobText bold>Описание: </JobText>
+                                <JobText>
+                                    Убирать производственные помещения. Сдедить за чистотой окон и своевременно протирать пыль.
+                                    Собирать и выносить мусор, соблюдать правила санитарии в убираемых помещениях.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    2/2 с 6:00 до 17:00 (11 часов).
+                                </JobText>
+                            </Job>
+
+                            <Job job={{
+                                name: 'Повар',
+                                tag: 'на лето',
+                                price: '3000 р./смена, 45.000 - 63.000',
+                            }}>
+                                <JobText bold>Описание: </JobText>
+                                <JobText>
+                                    Приготовление полуфабрикатов, блюд и напитков в соответствии с рецептурой, соблюдение порядка и чистоты на рабочем месте.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    4/2 и 2/2. Дневные и ночные смены с 8:00 до 20:00, с 10:00 до 22:00, с 20:00 до 8:00.
+                                </JobText>
+                            </Job>
+
+                            <Job job={{
+                                name: 'Кухонный работник',
+                                tag: 'на лето',
+                                price: '2400 р./смена, 36.000 - 50.400',
+                            }}>
+                                <JobText bold>Описание: </JobText>
+                                <JobText>
+                                    Чистка и нарезание овощей овощей, приготовление полуфабрикатов и несложных блюд.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    4/2 и 2/2. Дневные и ночные смены с 8:00 до 20:00, с 20:00 до 8:00.
+                                </JobText>
+                            </Job>
+
+                            <Job job={{
+                                name: 'Работник зала в столовую',
+                                tag: 'на лето',
+                                price: '2000 р./смена, 30.000 - 42.000',
+                            }}>
+                                <JobText bold>Описание: </JobText>
+                                <JobText>
+                                    Раздача готовых блюд, обслуживание гостей на линии раздачи в столовой, поддержание чистоты и порядка на рабочем месте,
+                                    соблюдение санитарных и гигиенических норм, перемещение чистой посуды с мойки на место раздачи.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    4/2, 3/2 и 2/2. Дневные и ночные смены с 7:00 до 19:00, с 8:00 до 20:00, с 10:00 до 22:00.
+                                </JobText>
+                            </Job>
+
                             <Job job={{
                                 name: 'Администраторы',
                                 price: '~ 40.000 - 43.000',
@@ -122,7 +200,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job>
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Сотрудник на раздачу в столовую',
                                 price: '1400 р./смена, ~ 22.000',
                             }}>
@@ -134,7 +212,7 @@ export default function PageJob() {
                                 <JobText>
                                     2/2.
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             <Job job={{
                                 name: 'Повар в столовую',
@@ -164,7 +242,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job>
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Менеджер по подбору персонала',
                                 price: '~ 40.000',
                             }}>
@@ -176,7 +254,7 @@ export default function PageJob() {
                                 <JobText>
                                     5/2.
                                 </JobText>
-                            </Job>
+                            </Job> */}
                         </div>
                     </div>
                     <div className='base-bg' data-scroll-section></div>
