@@ -286,6 +286,7 @@ export default function PageAquatory() {
                             title={x.title}
                             description={x.description}
                             images={x.images}
+                            priceTitleAdditional={x.priceTitleAdditional}
                             additionalItems={x.additionalItems}
                             includedImg={x.includedImg}
                             includedItems={x.includedItems}

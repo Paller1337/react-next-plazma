@@ -9,6 +9,7 @@ export interface AquatoryObjectProps {
     title: string,
     description: string,
     images: StaticImageData[] | string[],
+    priceTitleAdditional?: string,
     priceCards: {
         cardName: string,
         cardAttr: string,
@@ -57,7 +58,8 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                     </div>
                     : ''}
 
-                <span className='text-normal'>Стоимость посещения</span>
+                <span className={`text-normal`} style={data.priceTitleAdditional ? { paddingBottom: '0px' } : {}}>Стоимость посещения</span>
+                {data.priceTitleAdditional ? <span className='attention' dangerouslySetInnerHTML={{ __html: data.priceTitleAdditional }}></span> : ''}
 
                 <div className='price-card__wrapper'>
                     {data.priceCards.map((x, i) =>
