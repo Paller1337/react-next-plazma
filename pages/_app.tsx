@@ -15,8 +15,12 @@ import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import AppLayout from '@/components/AppLayout'
 import { YMProvider } from '@/components/ym/YMProvider'
 import { createTheme, MantineProvider } from '@mantine/core'
+import ReactModal from 'react-modal'
 
 const theme = createTheme({})
+
+
+ReactModal.setAppElement('#__next')
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()

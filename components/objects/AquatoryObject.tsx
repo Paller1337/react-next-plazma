@@ -17,6 +17,7 @@ export interface AquatoryObjectProps {
         cardSize: priceCardSize
     }[],
     attentionText?: string,
+    warningText?: string,
     includedItems: string[],
 
     includedImg: StaticImageData | string,
@@ -72,6 +73,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 </div>
 
                 {data.attentionText ? <span className='attention' dangerouslySetInnerHTML={{ __html: data.attentionText }}></span> : ''}
+                {data.warningText ? <span className='warning' dangerouslySetInnerHTML={{ __html: data.warningText }}></span> : ''}
             </div>
 
             <div className='aquatory-object__include'

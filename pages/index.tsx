@@ -161,16 +161,13 @@ export default function PageIndex(props: PageIndexProps) {
             </div>
           </div> */}
 
-          <div className='page-index__new-year i-new-year container'>
+          {/* <div className='page-index__new-year i-new-year container'>
             <div className='i-new-year__left'>
               <h2 className='i-new-year__title'>
                 Начало сезона в акватории.
               </h2>
               <div className='i-new-year__container'>
                 <div className='i-new-year__text-container'>
-                  {/* <span className='i-new-year__text'>
-                    
-                  </span> */}
                 </div>
 
                 <div className='i-new-year__text-container line'>
@@ -194,11 +191,9 @@ export default function PageIndex(props: PageIndexProps) {
             </div>
             <div className='i-new-year__right'>
               <div className='i-new-year__fakebg'></div>
-              <Image width={570} height={470} src={'/img/aquatory/gaz-1.webp'} alt=''
-              // loader={vkCloudLoader}
-              />
+              <Image width={570} height={470} src={'/img/aquatory/gaz-1.webp'} alt='' />
             </div>
-          </div>
+          </div> */}
 
           <div className='page-index__about-hotel about-hotel container' data-scroll-section >
             <div className='about-hotel__wrapper'

@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { BnovoContext } from '../components/bnovo/bnovoContext'
 import { MailSubscribe } from '@/components/modals/MailSubscribe'
+import RulesModal from '@/components/modals/Rules'
 declare var BookingIframe: any
 
 export default function PageBooking() {
+    const [isOpenRules, setIsOpenRules] = useState(false)
     const mailModalRef = useRef(null)
 
     const { bnovoIframeIsLoad } = useContext(BnovoContext)
@@ -22,10 +24,20 @@ export default function PageBooking() {
         }
     }, [bnovoIframeIsLoad])
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsOpenRules(true)
+        }, 1000)
+
+        return () => clearTimeout(timer)
+    }, [])
 
     return (
         <>
             <MailSubscribe ref={mailModalRef} />
+
+            <RulesModal isOpen={isOpenRules} contentLabel={'123'} onRequestClose={() => setIsOpenRules(false)} />
+
             <Head>
                 <title>Бронирование номера в парк-отеле «PLAZMA»</title>
                 <meta name='description' content='При прямом бронировании действует скидка 16.7%.' />
