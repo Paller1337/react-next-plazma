@@ -490,6 +490,40 @@
             padding-bottom: 20px
 
         .aquatory-object
+            &__ad-pen
+                gap: 24px
+                padding: 24px 32px
+                display: flex
+                flex-direction: column
+                color: #262626
+                max-width: 570px
+                width: 100%
+                border: 1px solid #262626
+                margin: 0px 0 100px 0
+                position: relative  
+                .heading
+                    font-size: 20px
+                    font-weight: medium
+                .text
+                    font-size: 16px
+                    max-width: 360px
+                    line-height: 140%
+                    &.red
+                        color: #f23
+                .coclail-circle-traced
+                    transform: rotate(30deg)
+                    position: absolute
+                    right: 12px
+                    top: 48px
+                
+                @media screen and ( max-width: $md3 )
+                    align-items: center
+                    margin-bottom: 60px
+                    .coclail-circle-traced
+                        opacity: 0
+                    .text
+                        text-align: center
+                        max-width: none
             &__photos
                 display: flex
                 gap: 30px

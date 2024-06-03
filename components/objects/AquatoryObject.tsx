@@ -1,6 +1,7 @@
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import Image, { StaticImageData } from 'next/image'
+import { ReactSVG } from 'react-svg'
 
 type priceCardSize = 'min' | 'med'
 
@@ -75,6 +76,18 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 {data.attentionText ? <span className='attention' dangerouslySetInnerHTML={{ __html: data.attentionText }}></span> : ''}
                 {data.warningText ? <span className='warning' dangerouslySetInnerHTML={{ __html: data.warningText }}></span> : ''}
             </div>
+
+            {data.id === 'pen' ?
+                <div className='aquatory-object__ad-pen'>
+                    <h3 className='heading'>Взрослая пятница</h3>
+                    <span className='text'>
+                        Приглашаем вас провести незабываемую пятницу в нашей зоне бассейна на полуострове. 
+                        Вас ждет вечер, наполненный хорошей музыкой, освежающими коктейлями и вкусными блюдами от наших поваров.
+                    </span>
+                    <span className='text red'>Только для гостей старше 16 лет. </span>
+                    <ReactSVG src='/svg/coctail-circle-traced.svg' className='coclail-circle-traced' />
+                </div>
+                : <></>}
 
             <div className='aquatory-object__include'
                 data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
