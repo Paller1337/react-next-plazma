@@ -79,12 +79,12 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
 
             {data.id === 'pen' ?
                 <div className='aquatory-object__ad-pen'>
-                    <h3 className='heading'>Взрослая пятница</h3>
+                    <h3 className='heading'>Взрослая пятница 16+</h3>
                     <span className='text'>
-                        Приглашаем вас провести незабываемую пятницу в нашей зоне бассейна на полуострове. 
-                        Вас ждет вечер, наполненный хорошей музыкой, освежающими коктейлями и вкусными блюдами от наших поваров.
+                        Теперь у нас появился день, который можно посвятить себе и комфортно отдохнуть.
+                        Каждую пятницу – взрослый день, то есть вход в зону полуострова с бассейном возможен
+                        <span className='text red'> только для гостей старше 16 лет. </span>
                     </span>
-                    <span className='text red'>Только для гостей старше 16 лет. </span>
                     <ReactSVG src='/svg/coctail-circle-traced.svg' className='coclail-circle-traced' />
                 </div>
                 : <></>}

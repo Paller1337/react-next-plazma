@@ -36,7 +36,7 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
 
         includedItems: [
             "Шезлонг",
-            "Матрас на шезлонг",
+            // "Матрас на шезлонг",
             "Горка для детей",
             "Зонт"
         ],
