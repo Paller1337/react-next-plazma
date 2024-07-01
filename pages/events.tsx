@@ -374,9 +374,9 @@ export default function PageEvents() {
                                     <span className='condition-name'>Аренда зала:</span>
 
                                     <div className='event-conditions__col'>
-                                        <span className='condition-value'>пн. – чт. – 30 000 рублей</span>
-                                        <span className='condition-value'>пт. – вс. - 40 000 рублей</span>
-                                        <span className='condition-value'>праздники - 40 000 рублей</span>
+                                        <span className='condition-value'>пн. – чт. – 40 000 рублей</span>
+                                        <span className='condition-value'>пт. – вс. - 50 000 рублей</span>
+                                        <span className='condition-value'>праздники - 50 000 рублей</span>
                                     </div>
                                 </div>
                                 <div className='event-conditions__row'>
