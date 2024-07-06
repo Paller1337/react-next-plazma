@@ -77,7 +77,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 {data.warningText ? <span className='warning' dangerouslySetInnerHTML={{ __html: data.warningText }}></span> : ''}
             </div>
 
-            {data.id === 'pen' ?
+           {/*} {data.id === 'pen' ?
                 <div className='aquatory-object__ad-pen'>
                     <h3 className='heading'>Взрослая пятница 16+</h3>
                     <span className='text'>
@@ -88,7 +88,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                     <ReactSVG src='/svg/coctail-circle-traced.svg' className='coclail-circle-traced' />
                 </div>
                 : <></>}
-
+*/}
             <div className='aquatory-object__include'
                 data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                 <div className='aquatory-object__include-info'>
