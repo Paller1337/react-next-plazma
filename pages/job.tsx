@@ -67,7 +67,7 @@ export default function PageJob() {
                         </div>
 
                         <div className='job-page__content'>
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Посудомойщица',
                                 tag: 'на лето',
                                 price: '2100 р./смена, 37.800',
@@ -80,12 +80,12 @@ export default function PageJob() {
                                 <JobText>
                                     3/2 - день, день, ночь. По 12 часов.
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             <Job job={{
                                 name: 'Уборщица в столовую',
                                 tag: 'на лето',
-                                price: '1300 р./смена, 19.500',
+                                price: '1500 р./смена, 22.500',
                             }}>
                                 <JobText bold>Требования: </JobText>
                                 <JobText>
@@ -96,7 +96,7 @@ export default function PageJob() {
                                     2/2 с 6:00 до 17:00 (11 часов).
                                 </JobText>
                             </Job>
-
+{/* 
                             <Job job={{
                                 name: 'Повар',
                                 tag: 'на лето',
@@ -110,7 +110,7 @@ export default function PageJob() {
                                 <JobText>
                                     4/2 и 2/2. Дневные и ночные смены с 8:00 до 20:00, с 10:00 до 22:00, с 20:00 до 8:00.
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             <Job job={{
                                 name: 'Кухонный работник',
@@ -136,10 +136,10 @@ export default function PageJob() {
                                 <JobText>
                                     Физическая выностивость, добросовестность.
                                 </JobText>
-                                <JobText bold>График: </JobText>
+                                {/* <JobText bold>График: </JobText>
                                 <JobText>
                                     4/2, 3/2 и 2/2. Дневные и ночные смены с 7:00 до 19:00, с 8:00 до 20:00, с 10:00 до 22:00.
-                                </JobText>
+                                </JobText> */}
                             </Job>
 
                             <Job job={{
@@ -158,7 +158,7 @@ export default function PageJob() {
 
                             <Job job={{
                                 name: 'Горничные',
-                                price: '2000 р./смена, ~ 40.000',
+                                price: '3000 р./смена, ~ 54.000 - 60.000',
                             }}>
                                 <JobText bold>Требования: </JobText>
                                 <JobText>
@@ -170,7 +170,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job>
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Повар в ресторан',
                                 price: '~ 40.000 - 60.000',
                             }}>
@@ -182,7 +182,7 @@ export default function PageJob() {
                                 <JobText>
                                     Скользящий.
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             {/* <Job job={{
                                 name: 'Посудомойщицы',
@@ -228,7 +228,7 @@ export default function PageJob() {
 
                             <Job job={{
                                 name: 'Официант на постоянную работу',
-                                price: ' 1200 р./смена, ~ 24.000',
+                                price: ' 1600 р./смена, ~ 24.000-26.000',
                             }}>
                                 <JobText bold>Требования: </JobText>
                                 <JobText>
@@ -236,7 +236,7 @@ export default function PageJob() {
                                 </JobText>
                                 <JobText bold>График: </JobText>
                                 <JobText>
-                                    Скользящий.
+                                    Скользящий. Смены с 7:00 до 19:00, с 11:00 до 23:00, с 14:00 до 02:00.
                                 </JobText>
                             </Job>
 
