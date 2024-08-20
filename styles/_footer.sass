@@ -15,7 +15,16 @@
     // margin-top: 700px
     bottom: 0
     z-index: 100
-
+    &__info
+        padding-top: 40px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 24px
+        a
+            margin: 0 auto
+            cursor: pointer
     @media screen and ( max-width:  $md2)
         display: none
 
@@ -141,6 +150,20 @@
     background: #262626
     display: flex
     justify-content: center
+    &__info
+        padding-top: 40px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 12px
+        text-align: center
+        line-height: 200%
+        padding-bottom: 40px
+        a
+            margin: 0 auto
+            cursor: pointer
+            font-size: 14px
     @media screen and ( min-width:  $md2)
         display: none
 

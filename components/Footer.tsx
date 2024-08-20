@@ -108,10 +108,20 @@ export default function Footer(props: FooterProps) {
                         <span className='footer__contact-text copy-click address'
                             onClick={() => copy('Тульская область, г. Донской, ул. Герцена, д. 14', 'Адрес скопирован', { metric: 'address' })}
                         >Тульская область, г. Донской, ул. Герцена, д. 14</span>
-                        <Link href='#' className='footer__contact-link'>Политика конфидециальности</Link>
+                        {/* <Link href='#' className='footer__contact-link'>Политика конфидециальности</Link> */}
                         <span className='footer__contact-text copy-click number'
                             onClick={() => copy('+79101681761', 'Номер скопирован', { metric: 'number' })}
                         >+7 (910) 168-17-61</span>
+                    </div>
+
+                    <div className='footer__info'>
+                        <Link href='#' className='footer__contact-link'>Политика конфидециальности</Link>
+                        <a
+                            className='footer__contact-link'
+                            onClick={() => copy('ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031', 'Юридические реквизиты скопированы')}
+                        >
+                            ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031
+                        </a>
                     </div>
                 </div>
             </div>
@@ -141,7 +151,16 @@ export default function Footer(props: FooterProps) {
                         <span className='footer-mobile__contact-text copy-click address'
                             onClick={() => copy('Тульская область, г. Донской, ул. Герцена, д. 14', 'Адрес скопирован', { metric: 'address' })}
                         >Тульская область, г. Донской, ул. Герцена, д. 14</span>
+                    </div>
+                    
+                    <div className='footer-mobile__info'>
                         <Link href='#' className='footer-mobile__contact-link'>Политика конфидециальности</Link>
+                        <a
+                            className='footer-mobile__contact-link'
+                            onClick={() => copy('ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031', 'Юридические реквизиты скопированы')}
+                        >
+                            ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031
+                        </a>
                     </div>
                 </div>
             </div>
