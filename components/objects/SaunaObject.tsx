@@ -42,8 +42,8 @@ export default function SaunaObject(data: SaunaObjectProps) {
                     <div className='big-p__attr-desc'>
 
                         {data.price.map((x, i) => <span key={i}>
-                            {x.map((y, j) => <span key={y} style={{whiteSpace: j % 2 === 0 ? 'normal' : 'nowrap'}}>
-                                    {y}
+                            {x.map((y, j) => <span key={y} style={{whiteSpace: j % 2 === 0 ? 'normal' : 'nowrap'}}  dangerouslySetInnerHTML={{ __html: y }}>
+                                    
                             </span>)}
                         </span>)}
                     </div>
