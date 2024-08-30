@@ -307,7 +307,7 @@ export default function PageAquatory() {
                         <PlazmaSertItem img={'/img/sert/1new.webp'} />
                         <PlazmaSertItem img={'/img/sert/2_1new.webp'} />
                         <PlazmaSertItem img={'/img/sert/2_2new.webp'} />
-                     { /*  <PlazmaSertItem img={'/img/sert/2-3.webp'} />*/}
+                        <PlazmaSertItem img={'/img/sert/3new.webp'} />
                     </div>
                 </div >
             </main>
