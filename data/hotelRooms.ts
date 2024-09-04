@@ -186,7 +186,7 @@ export const hotelRooms: RoomObjectProps[] = [
     },
     {
         tlid: 245516,
-        bnid: 100646,
+        bnid: 489229,
         title: 'Делюкс на набережной двухместный',
         description: 'Корпус на набережной с прекрасным видом на водоём.',
         pets: false,
