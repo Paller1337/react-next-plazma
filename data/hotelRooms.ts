@@ -309,42 +309,42 @@ export const hotelRooms: RoomObjectProps[] = [
             'Сейф',
         ]
     },
-    {
-        tlid: [245527, 246236],
-        bnid: [16546, 212319],
-        title: 'Евростандарт спортивный корпус 2 этаж',
-        description: 'Однокомнатный номер на двоих. Корпус находится в 30 метрах от основной территории парк-отеля через дорогу.',
-        pets: false,
-        images: [
-            '/img/hotel/room-previews/sports-corps-2/1.webp',
-            '/img/hotel/room-previews/sports-corps-2/2.webp',
-            '/img/hotel/room-previews/sports-corps-2/3.webp',
-            '/img/hotel/room-previews/sports-corps-2/4.webp',
-            '/img/hotel/room-previews/sports-corps-2/5.webp',
-        ],
-        previews: [
-            '/img-previews/hotel/room-previews/sports-corps-2/1.webp',
-            '/img-previews/hotel/room-previews/sports-corps-2/2.webp',
-            '/img-previews/hotel/room-previews/sports-corps-2/3.webp',
-            '/img-previews/hotel/room-previews/sports-corps-2/4.webp',
-            '/img-previews/hotel/room-previews/sports-corps-2/5.webp',
-        ],
-        size: 'Размеры номеров 13 м² и 18 м².',
+    // {
+    //     tlid: [245527, 246236],
+    //     bnid: [16546, 212319],
+    //     title: 'Евростандарт спортивный корпус 2 этаж',
+    //     description: 'Однокомнатный номер на двоих. Корпус находится в 30 метрах от основной территории парк-отеля через дорогу.',
+    //     pets: false,
+    //     images: [
+    //         '/img/hotel/room-previews/sports-corps-2/1.webp',
+    //         '/img/hotel/room-previews/sports-corps-2/2.webp',
+    //         '/img/hotel/room-previews/sports-corps-2/3.webp',
+    //         '/img/hotel/room-previews/sports-corps-2/4.webp',
+    //         '/img/hotel/room-previews/sports-corps-2/5.webp',
+    //     ],
+    //     previews: [
+    //         '/img-previews/hotel/room-previews/sports-corps-2/1.webp',
+    //         '/img-previews/hotel/room-previews/sports-corps-2/2.webp',
+    //         '/img-previews/hotel/room-previews/sports-corps-2/3.webp',
+    //         '/img-previews/hotel/room-previews/sports-corps-2/4.webp',
+    //         '/img-previews/hotel/room-previews/sports-corps-2/5.webp',
+    //     ],
+    //     size: 'Размеры номеров 13 м² и 18 м².',
 
-        price: [
-            { name: 'Цена', value: ['<b>3000 руб/сутки</b>',] },
-        ],
+    //     price: [
+    //         { name: 'Цена', value: ['<b>3000 руб/сутки</b>',] },
+    //     ],
 
-        attributes: [
-            { name: 'Вместимость', value: ['2 человека.'] },
-            { name: 'Доп. гости', value: ['нет'] },
-            { name: 'Заселение', value: checkInRoom },
-        ],
-        amenities: [
-            ...defaultAmenities,
-            'Две односпальные или одна двуспальная кровать',
-        ]
-    },
+    //     attributes: [
+    //         { name: 'Вместимость', value: ['2 человека.'] },
+    //         { name: 'Доп. гости', value: ['нет'] },
+    //         { name: 'Заселение', value: checkInRoom },
+    //     ],
+    //     amenities: [
+    //         ...defaultAmenities,
+    //         'Две односпальные или одна двуспальная кровать',
+    //     ]
+    // },
     {
         tlid: 245528,
         bnid: 16535,
@@ -557,84 +557,84 @@ export const hotelRooms: RoomObjectProps[] = [
         ]
     },
 
-    {
-        tlid: 100,
-        bnid: [16543, 16544],
-        title: 'Делюкс с балконом',
-        description: 'Однокомнатный номер на двоих с большим балконом.',
-        pets: false,
-        images: [
-            '/img/hotel/room-previews/deluxe-balcony/1.webp',
-            '/img/hotel/room-previews/deluxe-balcony/2.webp',
-            '/img/hotel/room-previews/deluxe-balcony/3.webp',
-            '/img/hotel/room-previews/deluxe-balcony/4.webp',
-            '/img/hotel/room-previews/deluxe-balcony/5.webp',
-            '/img/hotel/room-previews/deluxe-balcony/6.webp',
-        ],
-        previews: [
-            '/img-previews/hotel/room-previews/deluxe-balcony/1.webp',
-            '/img-previews/hotel/room-previews/deluxe-balcony/2.webp',
-            '/img-previews/hotel/room-previews/deluxe-balcony/3.webp',
-            '/img-previews/hotel/room-previews/deluxe-balcony/4.webp',
-            '/img-previews/hotel/room-previews/deluxe-balcony/5.webp',
-            '/img-previews/hotel/room-previews/deluxe-balcony/6.webp',
-        ],
-        size: 'Размер номера 25 м².',
+    // {
+    //     tlid: 100,
+    //     bnid: [16543, 16544],
+    //     title: 'Делюкс с балконом',
+    //     description: 'Однокомнатный номер на двоих с большим балконом.',
+    //     pets: false,
+    //     images: [
+    //         '/img/hotel/room-previews/deluxe-balcony/1.webp',
+    //         '/img/hotel/room-previews/deluxe-balcony/2.webp',
+    //         '/img/hotel/room-previews/deluxe-balcony/3.webp',
+    //         '/img/hotel/room-previews/deluxe-balcony/4.webp',
+    //         '/img/hotel/room-previews/deluxe-balcony/5.webp',
+    //         '/img/hotel/room-previews/deluxe-balcony/6.webp',
+    //     ],
+    //     previews: [
+    //         '/img-previews/hotel/room-previews/deluxe-balcony/1.webp',
+    //         '/img-previews/hotel/room-previews/deluxe-balcony/2.webp',
+    //         '/img-previews/hotel/room-previews/deluxe-balcony/3.webp',
+    //         '/img-previews/hotel/room-previews/deluxe-balcony/4.webp',
+    //         '/img-previews/hotel/room-previews/deluxe-balcony/5.webp',
+    //         '/img-previews/hotel/room-previews/deluxe-balcony/6.webp',
+    //     ],
+    //     size: 'Размер номера 25 м².',
 
-        price: [
-            { name: 'Цена', value: ['<b>3100 руб/сутки</b>',] },
-        ],
+    //     price: [
+    //         { name: 'Цена', value: ['<b>3100 руб/сутки</b>',] },
+    //     ],
 
-        attributes: [
-            { name: 'Вместимость', value: ['2 человека'] },
-            { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
-            { name: 'Заселение', value: checkInRoom },
-        ],
-        amenities: [
-            ...defaultAmenities,
-            'Мангальная зона',
-            'Микроволновая печь',
-            'Набор посуды',
-            'Халаты и сланцы',
-            'Сейф',
-        ]
-    },
-    {
-        tlid: 100,
-        bnid: 16545,
-        title: 'Евростандарт спортивный корпус',
-        description: 'Однокомнатный номер на двоих. Корпус находится в 30 метрах от основной территории парк-отеля через дорогу.',
-        pets: false,
-        images: [
-            '/img/hotel/room-previews/eurostandard-sport-corps/1.webp',
-            '/img/hotel/room-previews/eurostandard-sport-corps/2.webp',
-            '/img/hotel/room-previews/eurostandard-sport-corps/3.webp',
-        ],
-        previews: [
-            '/img-previews/hotel/room-previews/eurostandard-sport-corps/1.webp',
-            '/img-previews/hotel/room-previews/eurostandard-sport-corps/2.webp',
-            '/img-previews/hotel/room-previews/eurostandard-sport-corps/3.webp',
-        ],
-        size: 'Размеры номеров от 12,7 м² до 15 м².',
+    //     attributes: [
+    //         { name: 'Вместимость', value: ['2 человека'] },
+    //         { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
+    //         { name: 'Заселение', value: checkInRoom },
+    //     ],
+    //     amenities: [
+    //         ...defaultAmenities,
+    //         'Мангальная зона',
+    //         'Микроволновая печь',
+    //         'Набор посуды',
+    //         'Халаты и сланцы',
+    //         'Сейф',
+    //     ]
+    // },
+    // {
+    //     tlid: 100,
+    //     bnid: 16545,
+    //     title: 'Евростандарт спортивный корпус',
+    //     description: 'Однокомнатный номер на двоих. Корпус находится в 30 метрах от основной территории парк-отеля через дорогу.',
+    //     pets: false,
+    //     images: [
+    //         '/img/hotel/room-previews/eurostandard-sport-corps/1.webp',
+    //         '/img/hotel/room-previews/eurostandard-sport-corps/2.webp',
+    //         '/img/hotel/room-previews/eurostandard-sport-corps/3.webp',
+    //     ],
+    //     previews: [
+    //         '/img-previews/hotel/room-previews/eurostandard-sport-corps/1.webp',
+    //         '/img-previews/hotel/room-previews/eurostandard-sport-corps/2.webp',
+    //         '/img-previews/hotel/room-previews/eurostandard-sport-corps/3.webp',
+    //     ],
+    //     size: 'Размеры номеров от 12,7 м² до 15 м².',
 
-        price: [
-            { name: 'Цена вс-чт', value: ['<b>2490 руб/сутки</b>',] },
-        ],
+    //     price: [
+    //         { name: 'Цена вс-чт', value: ['<b>2490 руб/сутки</b>',] },
+    //     ],
 
-        attributes: [
-            { name: 'Вместимость', value: ['2 человека.'] },
-            { name: 'Доп. гости', value: ['нет'] },
-            { name: 'Заселение', value: checkInRoom },
-        ],
-        amenities: [
-            ...defaultAmenities,
-            'Мангальная зона',
-            'Микроволновая печь',
-            'Набор посуды',
-            'Халаты и сланцы',
-            'Сейф',
-        ]
-    }
+    //     attributes: [
+    //         { name: 'Вместимость', value: ['2 человека.'] },
+    //         { name: 'Доп. гости', value: ['нет'] },
+    //         { name: 'Заселение', value: checkInRoom },
+    //     ],
+    //     amenities: [
+    //         ...defaultAmenities,
+    //         'Мангальная зона',
+    //         'Микроволновая печь',
+    //         'Набор посуды',
+    //         'Халаты и сланцы',
+    //         'Сейф',
+    //     ]
+    // }
 ];
 
 
