@@ -16,7 +16,8 @@ const checkInRoom = ['Заезд:', ' <b>14:00</b>;', ' Выезд:', ' <b>12:00
 // import { images } from 'imageImports'
 
 const saleTitle = '<span style="color: red; white-space: nowrap;">с 3 сентября снижение цены:</span>'
-const nextSeason = '<span style="color: green; white-space: nowrap;">Цены с 1 июня по 31 августа:</span>'
+const nextSeason = '<span style="color: green; white-space: nowrap;">Цены с 28 декабря по 2 января:</span>'
+const newYear = '<span style="color: red; white-space: nowrap;">С 31 по 1 возможно бронирование минимум на 2 дня:</span>'
 
 export const hotelRooms: RoomObjectProps[] = [
     {
@@ -49,8 +50,9 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цена вс-чт', value: ['<b>6200 руб/сутки</b>',] },
             { name: 'Цена пт-сб', value: ['<span class="op">7900</span><b>6200 руб/сутки</b>',] },
             // { name: '', value: [nextSeason] },
-            // { name: 'Цена вс-чт', value: ['<b>6200 руб/сутки</b>',] },
-            // { name: 'Цена пт-сб', value: ['<b>7900 руб/сутки</b>',] },
+            // { name: '28 дек. - 30 дек.', value: ['<b>9200 руб/сутки</b>',] },
+            // { name: '', value: [newYear] },
+            // { name: '31 дек. - 1 янв.', value: ['<b>26500 руб за 2 дня</b>',] },
         ],
 
         attributes: [
@@ -499,10 +501,11 @@ export const hotelRooms: RoomObjectProps[] = [
             'Сейф',
         ]
     },
+
     {
         tlid: 245531,
-        bnid: 16538,
-        title: 'Таунхаус',
+        bnid: 492549,
+        title: 'Таунхаус (частичный вид на стройку) -10%',
         description: 'Двухэтажные апартаменты. Возле каждого таунхауса – веранда с местами для отдыха на свежем воздухе и мангалом.',
         pets: true,
         images: [
@@ -529,8 +532,10 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: 'Цена вс-чт', value: ['<b>10900 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>12900 руб/сутки</b>',] },
             // { name: '', value: [saleTitle,] },
-            { name: 'Цена вс-чт', value: ['<span class="op">13950</span><b>11950 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<span class="op">16550</span><b>14450 руб/сутки</b>',] },
+            // { name: 'Цена вс-чт', value: ['<span class="op">13950</span><b>11950 руб/сутки</b>',] },
+            { name: 'Цена вс-чт', value: ['<span class="op">11950</span><b>10755 руб/сутки</b>',] },
+            // { name: 'Цена пт-сб', value: ['<span class="op">16550</span><b>14450 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">14450</span><b>13005 руб/сутки</b>',] },
             // { name: '', value: [nextSeason] },
             // { name: 'Цена вс-чт', value: ['<b>13950 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>16550 руб/сутки</b>',] },
@@ -556,6 +561,68 @@ export const hotelRooms: RoomObjectProps[] = [
             'Сейф',
         ]
     },
+
+    {
+        tlid: 245531,
+        bnid: 16538,
+        title: 'Таунхаус (вид на стройку) -15%',
+        description: 'Двухэтажные апартаменты. Возле каждого таунхауса – веранда с местами для отдыха на свежем воздухе и мангалом.',
+        pets: true,
+        images: [
+            '/img/hotel/room-previews/townhouse/1.webp',
+            '/img/hotel/room-previews/townhouse/2.webp',
+            '/img/hotel/room-previews/townhouse/3.webp',
+            '/img/hotel/room-previews/townhouse/4.webp',
+            '/img/hotel/room-previews/townhouse/5.webp',
+            '/img/hotel/room-previews/townhouse/6.webp',
+            '/img/hotel/room-previews/townhouse/7.webp',
+        ],
+        previews: [
+            '/img-previews/hotel/room-previews/townhouse/1.webp',
+            '/img-previews/hotel/room-previews/townhouse/2.webp',
+            '/img-previews/hotel/room-previews/townhouse/3.webp',
+            '/img-previews/hotel/room-previews/townhouse/4.webp',
+            '/img-previews/hotel/room-previews/townhouse/5.webp',
+            '/img-previews/hotel/room-previews/townhouse/6.webp',
+            '/img-previews/hotel/room-previews/townhouse/7.webp',
+        ],
+        size: 'Размер номера 96 м².',
+
+        price: [
+            // { name: 'Цена вс-чт', value: ['<b>10900 руб/сутки</b>',] },
+            // { name: 'Цена пт-сб', value: ['<b>12900 руб/сутки</b>',] },
+            // { name: '', value: [saleTitle,] },
+            // { name: 'Цена вс-чт', value: ['<span class="op">13950</span><b>11950 руб/сутки</b>',] },
+            { name: 'Цена вс-чт', value: ['<span class="op">11950</span><b>10155 руб/сутки</b>',] },
+            // { name: 'Цена пт-сб', value: ['<span class="op">16550</span><b>14450 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">14450</span><b>12285 руб/сутки</b>',] },
+            // { name: '', value: [nextSeason] },
+            // { name: 'Цена вс-чт', value: ['<b>13950 руб/сутки</b>',] },
+            // { name: 'Цена пт-сб', value: ['<b>16550 руб/сутки</b>',] },
+        ],
+
+        attributes: [
+            { name: 'Вместимость', value: ['4 человека'] },
+            { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Заселение', value: checkInHouse },
+        ],
+        amenities: [
+            ...defaultAmenities,
+            'Мангальная зона',
+            'Микроволновая печь',
+            'Мультиварка',
+            'Кухонная зона',
+            'Набор посуды',
+            'Дополнительная душевая',
+            'Гардеробная',
+            'Утюг и гладильная доска',
+            'Инфракрасная кабина (мини-сауна)',
+            'Халаты, тапочки и сланцы',
+            'Сейф',
+        ]
+    },
+
+
 
     // {
     //     tlid: 100,
