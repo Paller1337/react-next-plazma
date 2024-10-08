@@ -16,6 +16,7 @@ export default function Document() {
                 <Head>
                     <link rel='preconnect' href='https://fonts.googleapis.com' />
                     <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
+                    <meta name="google-site-verification" content="E36ptUCTRfUBdjkHz434f1EO1Waq_Jy98S5lWI4qj_E" />
                 </Head>
                 <body className='body'>
                     <Main />
