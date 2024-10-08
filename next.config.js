@@ -39,7 +39,7 @@ module.exports = {
         return [
             {
                 source: '/%D0%BC%D0%B5%D0%BD%D1%8E-%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D0%B0',
-                destination: 'https://disk.yandex.ru/d/IQSMzn3UPA3ieA',
+                destination: '/meals/menu',
                 permanent: true,
             },
             {
