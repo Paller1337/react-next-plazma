@@ -168,7 +168,7 @@ export const hotelRooms: RoomObjectProps[] = [
 
         attributes: [
             { name: 'Вместимость', value: ['8 человек. 6 взрослых и 2 детей.'] },
-            { name: 'Доп. гости', value: ['+2 за дополнительную плату'] },
+            { name: 'Доп. гости', value: ['+1 за дополнительную плату'] },
             { name: 'Заселение', value: checkInHouse },
         ],
         amenities: [
