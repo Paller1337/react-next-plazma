@@ -5,18 +5,23 @@ const cdn = 'https://cdn0.kplazma.ru'
 const menus = [
     {
         name: 'Меню ресторана',
-        img: '/pdf/28.03/rest-2.pdf',
+        img: '/pdf/rest.pdf',
         sM: 1,
     },
     {
         name: 'Банкетное меню',
-        img: '/pdf/28.03/banquet-3.pdf',
+        img: '/pdf/banquet.pdf',
         sM: .8,
     },
     {
         name: 'Барная карта',
-        img: '/pdf/28.03/bar-2.pdf',
+        img: '/pdf/bar.pdf',
         sM: 1,
+    },
+    {
+        name: 'Детское меню',
+        img: '/pdf/children.pdf',
+        sM: .8,
     },
     // {
     //     name: 'Чайная карта',
