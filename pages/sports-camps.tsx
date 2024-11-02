@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import PromoMin from '../components/PromoMin'
 import ColumnCard from '../components/ColumnCard'
 import TextBlock from '../components/TextBlock'
@@ -12,7 +12,7 @@ import SportObjectsMenu from '@/components/SportObjectsMenu'
 import RowCard from '@/components/RowCard'
 import SportNews from '@/components/SportNews'
 import SportRequest from '@/components/SportRequest'
-import { Button, Divider, Grid, Group, Input, Modal, Paper, rem, Stack, Text, Textarea, Title, useMantineTheme } from '@mantine/core'
+import { Button, Divider, Grid, Group, Input, Modal, Paper, rem, Stack, Text, Textarea, Title, useMantineTheme, Image, Box, em } from '@mantine/core'
 import { Calendar, Eye } from 'react-feather'
 import { IVKGroupWallPost } from '@/mw/types/VKGroupWallPost'
 import { getVkWall } from '@/mw/utils/getVkWall'
@@ -72,8 +72,9 @@ const CalcButton = ({ onClick }) => {
 }
 
 const VKPost = ({ image, text, views, link, date }: IVKPost) => {
+    const isMobile = useMediaQuery(`(max-width: ${em(720)})`)
     return (<>
-        <Stack h={520} w={'90%'} maw={456} p={24} justify='space-between'
+        <Stack h={520} w={isMobile ? '100%' : '90%'} maw={isMobile ? '100%' : 456} p={24} justify='space-between'
             style={{
                 backgroundColor: '#1B2128',
                 background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 63.92%, 
@@ -419,12 +420,13 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                         {mobile
                                             ?
                                             <Carousel
-                                                slideSize={'80vw'}
-                                                slideGap={'10vw'}
                                                 align="start"
+                                                slideSize="100%"
+                                                loop
+                                                slideGap="md"
                                                 slidesToScroll={mobile ? 1 : 2}
                                                 h={700}
-                                                w={'100%'}
+                                                w='100%'
                                             >
                                                 {props.vkposts && props.vkposts?.length > 0 ? props.vkposts.map(p => {
                                                     const img = p?.attachments[0]?.photo.sizes.find(x => x.height > 510 && x.width > 710)
@@ -434,15 +436,17 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                                             key={p.hash + '-slide'}
                                                             bg={'red'}
                                                         >
-                                                            <VKPost
-                                                                link={`https://vk.com/plazma.sport?w=wall-218633598_${p.id}`}
-                                                                views={p.views.count}
-                                                                key={p.hash}
-                                                                id={p.id}
-                                                                date={date}
-                                                                text={p.text}
-                                                                image={img}
-                                                            />
+                                                            <Box w='100%'>
+                                                                <VKPost
+                                                                    link={`https://vk.com/plazma.sport?w=wall-218633598_${p.id}`}
+                                                                    views={p.views.count}
+                                                                    key={p.hash}
+                                                                    id={p.id}
+                                                                    date={date}
+                                                                    text={p.text}
+                                                                    image={img}
+                                                                />
+                                                            </Box>
                                                         </Carousel.Slide>
                                                     )
                                                 }
@@ -502,8 +506,8 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                             <Image
                                 alt=''
                                 src={'/img/sports-camps/promo-pres.png'}
-                                height={800}
-                                width={1824}
+                                h={800}
+                                w='100%'
                             />
                         </Stack>
 
