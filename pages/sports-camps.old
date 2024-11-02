@@ -56,7 +56,7 @@ export default function PageSportsCamps() {
 
                     <div className='base-bg' data-scroll-section></div>
 
-                    <SportNews />
+                    {/* <SportNews /> */}
 
                     <div className='page-events__welcome text-section text-section_big container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>

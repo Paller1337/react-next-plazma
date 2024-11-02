@@ -113,22 +113,24 @@ interface SportVillageItemProps {
 }
 
 const SportVillageItem = ({ images, title, desc, id, dir, openModal }: SportVillageItemProps) => {
+    const theme = useMantineTheme()
+    const min = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
     return (
         <Grid gutter={48}
             data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
         >
-            {dir === 'irtl' ?
-                <Grid.Col span={4}>
-                    <Stack px={48} gap={20} h={'100%'} justify='center'>
+            {dir === 'irtl' || min ?
+                <Grid.Col span={{ lg: 4, md: 12 }}>
+                    <Stack px={{ lg: 48, md: 0 }} gap={20} h={'100%'} justify='center'>
                         <Title order={3} style={{ letterSpacing: -1.5 }}>{title}</Title>
                         <Text size='md'>{desc}</Text>
                         <CalcButton onClick={openModal} />
                     </Stack>
                 </Grid.Col> : <></>}
 
-            <Grid.Col span={8}>
+            <Grid.Col span={{ lg: 8, md: 12 }}>
                 <Grid gutter={48}>
-                    <Grid.Col span={4}>
+                    <Grid.Col span={{ lg: 4, md: 12 }}>
                         <Group
                             style={{
                                 height: 700,
@@ -140,7 +142,7 @@ const SportVillageItem = ({ images, title, desc, id, dir, openModal }: SportVill
                             }}
                         />
                     </Grid.Col>
-                    <Grid.Col span={8}>
+                    <Grid.Col span={{ lg: 8, md: 12 }}>
                         <Group
                             style={{
                                 height: 700,
@@ -156,8 +158,8 @@ const SportVillageItem = ({ images, title, desc, id, dir, openModal }: SportVill
                 </Grid>
             </Grid.Col>
 
-            {dir === 'iltr' ?
-                <Grid.Col span={4}>
+            {dir === 'iltr' && !min ?
+                <Grid.Col span={{ lg: 4, md: 12 }}>
                     <Stack px={48} gap={20} h={'100%'} justify='center'>
                         <Title order={3} style={{ letterSpacing: -1.5 }}>{title}</Title>
                         <Text size='md'>{desc}</Text>
