@@ -486,7 +486,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                             </Stack>
                         </Stack>
 
-                        {/* <Stack py={96}>
+                        <Stack py={96}>
                             <Text size={rem(64)} maw={1260} ta={'center'} style={{ lineHeight: '140%' }}
                                 data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
                             >
@@ -679,7 +679,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     </Stack>
                                 </Grid.Col>
                             </Grid>
-                        </Stack> */}
+                        </Stack>
                     </Stack>
 
 
