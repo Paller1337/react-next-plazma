@@ -20,14 +20,19 @@ export interface IVKGroupWallPost {
             }[]
         }
     }[],
-    date: 1693750617,
-    from_id: -218633598,
-    id: 121,
-    likes: { can_like: 0, count: 12, user_likes: 0 },
-    owner_id: -218633598,
+    date: number,
+    from_id: number,
+    id: number,
+    likes: {
+        can_like: number,
+        count: number,
+        user_likes: number
+
+    },
+    owner_id: number,
     post_type: 'post',
-    reposts: { count: 0 },
-    text: 'Наши чудесные гимнастки из спортивного клуба «РОКСЭТ» г.Тула. Это ваш не первый раз у нас и, надеемся, далеко не последний❤️',
-    views: { count: 242 }
+    reposts: { count: number },
+    text: string,
+    views: { count: number }
 
 }

@@ -3,6 +3,7 @@ import 'swiper/css/bundle'
 import "aos/dist/aos.css"
 import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
+import '@mantine/carousel/styles.css'
 import '../styles/style.sass'
 
 import type { AppProps } from 'next/app'
@@ -14,10 +15,52 @@ import { useRouter } from 'next/router'
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar'
 import AppLayout from '@/components/AppLayout'
 import { YMProvider } from '@/components/ym/YMProvider'
-import { createTheme, MantineProvider } from '@mantine/core'
+import { createTheme, MantineProvider, rem } from '@mantine/core'
 import ReactModal from 'react-modal'
 
-const theme = createTheme({})
+const theme = createTheme({
+  fontFamily: '"Roboto Serif", serif !important',
+  fontSizes: {
+    xxs: rem(12),
+    xs: rem(15),
+    sm: rem(18),
+    md: rem(20),
+    lg: rem(24),
+    xl: rem(30),
+  },
+  lineHeights: {
+    xs: '140%',
+    sm: '140%',
+    md: '140%',
+    lg: '140%',
+    xl: '140%',
+  },
+  colors: {
+
+  },
+  headings: {
+    fontWeight: '400',
+    fontFamily: '"Roboto Serif", serif',
+
+    sizes: {
+      h2: {
+        fontWeight: '500',
+        fontSize: rem(48),
+        lineHeight: '140%',
+      },
+      h3: {
+        fontWeight: '500',
+        fontSize: rem(36),
+        lineHeight: '140%',
+      },
+      h4: {
+        fontWeight: '500',
+        fontSize: rem(24),
+        lineHeight: '140%',
+      },
+    },
+  },
+})
 
 
 ReactModal.setAppElement('#__next')

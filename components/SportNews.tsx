@@ -6,6 +6,7 @@ import { ReactSVG } from 'react-svg'
 import { FreeMode, Pagination } from 'swiper'
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
 import TextBlock from './TextBlock'
+import { getVkWall } from '@/mw/utils/getVkWall'
 
 interface NewsItemProps {
     general?: boolean
@@ -50,24 +51,14 @@ export default function SportNews(props) {
     const containerRef = useRef(null)
     const [swiperWidth, setSwiperWidth] = useState(0)
 
-    const getVkWall = async () => {
-        await fetch('/api/get-sport-news')
-            .then(async res => {
-                if (res.status === 200) {
-                    setLoading(false)
-                    const posts = await res.json()
-                    if (Array.isArray(posts.posts)) {
-                        setVkGroudPosts(posts.posts)
-                    } else {
-                        console.error('API did not return an array')
-                    }
-                }
-            })
-    }
 
-    useEffect(() => {
-        getVkWall()
-    }, [])
+    // const getNews = async () => {
+    //     const news = await getVkWall()
+    //     setVkGroudPosts(news)
+    // }
+    // useEffect(() => {
+    //     getNews()
+    // }, [])
 
     useEffect(() => {
         console.log('vk: ', vkGroudPosts)
