@@ -12,7 +12,7 @@ import SportObjectsMenu from '@/components/SportObjectsMenu'
 import RowCard from '@/components/RowCard'
 import SportNews from '@/components/SportNews'
 import SportRequest from '@/components/SportRequest'
-import { Button, Divider, Grid, Group, Input, Modal, Paper, rem, Stack, Text, Textarea, Title, useMantineTheme, Image, Box, em, BackgroundImage } from '@mantine/core'
+import { Button, Divider, Grid, Group, Input, Modal, Paper, rem, Stack, Text, Textarea, Title, useMantineTheme, Image, Box, em, BackgroundImage, StyleProp, BackgroundImageProps } from '@mantine/core'
 import { Calendar, Eye } from 'react-feather'
 import { IVKGroupWallPost } from '@/mw/types/VKGroupWallPost'
 import { getVkWall } from '@/mw/utils/getVkWall'
@@ -70,12 +70,15 @@ const CalcButton = ({ onClick }) => {
             px={mobile ? 24 : queryMd ? 24 : 34}
             variant='outline'
             radius={0}
-            color='#262626'
+            // color='#262626'
+
+            bg={'#2A4F78'}
+            c={'#F1F1F1'}
             h={'fit-content'}
             w={'fit-content'}
             onClick={onClick}
         >
-            <Group gap={12} align='center'>
+            <Group gap={12} align='center' wrap='nowrap'>
                 <Text size='sm'>Заказать расчет стоимости</Text>
                 <FaCalculator />
             </Group>
@@ -135,95 +138,207 @@ const SportVillageItem = ({ images, title, desc, id, dir, openModal }: SportVill
     const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
     const queryLg = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`)
     const isMinImg = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`)
-    return (
-        <Grid gutter={{ base: 48, xs: 24, md: 48 }}
-            data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
-            style={{ overflow: 'hidden' }}
-        >
-            {dir === 'irtl' || queryLg ?
-                <Grid.Col span={{ base: 12, lg: 6, xl: 4 }}>
-                    <Stack px={{ base: 0, lg: 48 }} gap={20} h={'100%'} justify='center'>
-                        <Title
-                            order={3}
-                            style={{ letterSpacing: -1.5 }}
-                            size={mobile ? 'h5' : queryMd ? 'h4' : 'h3'}
-                        >{title}</Title>
-                        <Text
-                            // size={mobile ? 'sm' : queryMd ? 'md' : 'lg'}
-                            size={mobile ? 'xs' : queryMd ? 'md' : 'lg'}
-                        >
-                            {desc}
-                        </Text>
-                        <CalcButton onClick={openModal} />
-                    </Stack>
-                </Grid.Col> : <></>}
 
-            <Grid.Col span={{ lg: 6, xl: 8, md: 12 }}>
-                <Grid gutter={48}>
-                    {isMinImg ?
-                        <Grid.Col span={{ base: 12, lg: 4 }} p={mobile && 0}
+    if (mobile) {
+        return (
+            <Paper bg={'#EBF2F4'} radius={0} p={8}>
+                <Grid gutter={{ base: 48, xs: 24, md: 48 }}
+                    data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
+                    style={{ overflow: 'hidden' }}
+                >
+                    <Grid.Col span={{ base: 12, lg: 6, xl: 4 }}>
+                        <Stack px={{ base: 12, lg: 48 }} py={{ base: 12 }} gap={12} h={'100%'} align='center'>
+                            <Title
+                                order={3}
+                                style={{ letterSpacing: -1.5 }}
+                                size={mobile ? 'h4' : queryMd ? 'h4' : 'h3'}
+                                ta={'center'}
+                            >
+                                {title}
+                            </Title>
+                            <Text
+                                // size={mobile ? 'sm' : queryMd ? 'md' : 'lg'}
+                                size={mobile ? 'xs' : queryMd ? 'md' : 'lg'}
+                                ta={'center'}
+                            >
+                                {desc}
+                            </Text>
+                            <CalcButton onClick={openModal} />
+                        </Stack>
+                    </Grid.Col>
+
+                    <Grid.Col span={{ lg: 6, xl: 8, md: 12 }}>
+                        <Grid gutter={48}>
+                            {isMinImg ?
+                                <Grid.Col span={{ base: 12, lg: 4 }} p={mobile && 0}
+                                    style={{ overflow: 'hidden' }}
+                                >
+                                    <BackgroundImage
+                                        h={mobile ? rem(320) : queryMd ? rem(520) : rem(700)}
+                                        miw={mobile ? rem(120) : rem(380)}
+                                        src={`${images[0]}`}
+                                        bgsz={'cover'}
+                                        bgr={'no-repeat'}
+                                        bgp={'center'}
+                                    />
+                                </Grid.Col>
+                                : <> </>}
+
+                            <Grid.Col span={{ base: 12, lg: 8 }} p={mobile && 0}
+                                style={{ overflow: 'hidden' }}
+                            >
+                                {/* <Group
+                                style={{
+                                    height: mobile ? rem(320) : queryMd ? rem(520) : rem(700),
+                                    minWidth: mobile ? rem(120) : rem(380),
+                                    // width: '100%',
+                                    backgroundImage: `url(${images[1]})`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                }}
+                            /> */}
+                                <BackgroundImage
+                                    h={mobile ? rem(320) : queryMd ? rem(520) : rem(700)}
+                                    miw={mobile ? rem(120) : rem(380)}
+                                    src={images[1]}
+                                    bgsz={'cover'}
+                                    bgr={'no-repeat'}
+                                    bgp={'center'}
+                                />
+                            </Grid.Col>
+                        </Grid>
+                    </Grid.Col >
+                </Grid >
+            </Paper>
+        )
+    } else {
+        return (
+            <Grid gutter={{ base: 48, xs: 24, md: 48 }}
+                data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
+                style={{ overflow: 'hidden' }}
+            >
+                {dir === 'irtl' || queryLg ?
+                    <Grid.Col span={{ base: 12, lg: 6, xl: 4 }}>
+                        <Stack px={{ base: 0, lg: 48 }} gap={20} h={'100%'} justify='center'>
+                            <Title
+                                order={3}
+                                style={{ letterSpacing: -1.5 }}
+                                size={mobile ? 'h5' : queryMd ? 'h4' : 'h3'}
+                            >{title}</Title>
+                            <Text
+                                // size={mobile ? 'sm' : queryMd ? 'md' : 'lg'}
+                                size={mobile ? 'xs' : queryMd ? 'md' : 'lg'}
+                            >
+                                {desc}
+                            </Text>
+                            <CalcButton onClick={openModal} />
+                        </Stack>
+                    </Grid.Col> : <></>}
+
+                <Grid.Col span={{ lg: 6, xl: 8, md: 12 }}>
+                    <Grid gutter={48}>
+                        {isMinImg ?
+                            <Grid.Col span={{ base: 12, lg: 4 }} p={mobile && 0}
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <BackgroundImage
+                                    h={mobile ? rem(320) : queryMd ? rem(520) : rem(700)}
+                                    miw={mobile ? rem(120) : rem(380)}
+                                    src={`${images[0]}`}
+                                    bgsz={'cover'}
+                                    bgr={'no-repeat'}
+                                    bgp={'center'}
+                                />
+                            </Grid.Col>
+                            : <> </>}
+
+                        <Grid.Col span={{ base: 12, lg: 8 }} p={mobile && 0}
                             style={{ overflow: 'hidden' }}
                         >
+                            {/* <Group
+                                style={{
+                                    height: mobile ? rem(320) : queryMd ? rem(520) : rem(700),
+                                    minWidth: mobile ? rem(120) : rem(380),
+                                    // width: '100%',
+                                    backgroundImage: `url(${images[1]})`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                }}
+                            /> */}
                             <BackgroundImage
                                 h={mobile ? rem(320) : queryMd ? rem(520) : rem(700)}
                                 miw={mobile ? rem(120) : rem(380)}
-                                src={`${images[0]}`}
+                                src={images[1]}
                                 bgsz={'cover'}
                                 bgr={'no-repeat'}
                                 bgp={'center'}
                             />
                         </Grid.Col>
-                        : <> </>}
+                    </Grid>
+                </Grid.Col >
 
-                    <Grid.Col span={{ base: 12, lg: 8 }} p={mobile && 0}
-                        style={{ overflow: 'hidden' }}
-                    >
-                        {/* <Group
-                            style={{
-                                height: mobile ? rem(320) : queryMd ? rem(520) : rem(700),
-                                minWidth: mobile ? rem(120) : rem(380),
-                                // width: '100%',
-                                backgroundImage: `url(${images[1]})`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                            }}
-                        /> */}
-                        <BackgroundImage
-                            h={mobile ? rem(320) : queryMd ? rem(520) : rem(700)}
-                            miw={mobile ? rem(120) : rem(380)}
-                            src={images[1]}
-                            bgsz={'cover'}
-                            bgr={'no-repeat'}
-                            bgp={'center'}
-                        />
-                    </Grid.Col>
-                </Grid>
-            </Grid.Col >
-
-            {dir === 'iltr' && !queryLg ?
-                <Grid.Col span={{ lg: 6, xl: 4, md: 12 }}>
-                    <Stack px={48} gap={20} h={'100%'} justify='center'>
-                        <Title
-                            order={3}
-                            size={mobile ? 'h5' : queryMd ? 'h4' : 'h3'}
-                            style={{ letterSpacing: -1.5 }}
-                        >
-                            {title}
-                        </Title>
-                        <Text
-                            // size='md'
-                            size={mobile ? 'xs' : queryMd ? 'md' : 'lg'}
-                        >
-                            {desc}
-                        </Text>
-                        <CalcButton onClick={openModal} />
-                    </Stack>
-                </Grid.Col> : <></>}
-        </Grid >
-    )
+                {dir === 'iltr' && !queryLg ?
+                    <Grid.Col span={{ lg: 6, xl: 4, md: 12 }}>
+                        <Stack px={48} gap={20} h={'100%'} justify='center'>
+                            <Title
+                                order={3}
+                                size={mobile ? 'h5' : queryMd ? 'h4' : 'h3'}
+                                style={{ letterSpacing: -1.5 }}
+                            >
+                                {title}
+                            </Title>
+                            <Text
+                                // size='md'
+                                size={mobile ? 'xs' : queryMd ? 'md' : 'lg'}
+                            >
+                                {desc}
+                            </Text>
+                            <CalcButton onClick={openModal} />
+                        </Stack>
+                    </Grid.Col> : <></>}
+            </Grid >
+        )
+    }
 }
 
+const FormPhotos = () => {
+    const theme = useMantineTheme()
+    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
+    const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
+    const height = { base: 240, md: 340, lg: 700 }
+    const styles = {
+        w: '100%',
+        bgsz: 'cover',
+        radius: 0,
+        h: height,
+        src: ''
+    } as BackgroundImageProps
+    return (
+        <Stack gap={mobile ? 24 : 48} pt={mobile ? 96 : 0} pb={mobile ? 48 : 96}>
+            <BackgroundImage {...styles}
+                src='/img/sports-camps/photos/1.png'
+            />
+
+            <BackgroundImage  {...styles}
+                src='/img/sports-camps/photos/2.png'
+            />
+
+            <BackgroundImage  {...styles}
+                src='/img/sports-camps/photos/3.png'
+            />
+
+            <BackgroundImage {...styles}
+                src='/img/sports-camps/photos/4.png'
+            />
+
+            <BackgroundImage {...styles}
+                src='/img/sports-camps/photos/5.png'
+            />
+        </Stack>
+    )
+}
 interface SportFormProps {
     onSubmit?: () => void
 }
@@ -232,11 +347,20 @@ const SportForm = ({ onSubmit }: SportFormProps) => {
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
     const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
     return (
-        <>
+        <Stack gap={0} p={0} maw={560}>
             <Stack py={48} top={10}>
-                <Title order={3} ta={'center'}>Заявка на сборы</Title>
+                <Title
+                    order={3}
+                    size={mobile ? 'h4' : queryMd ? 'h4' : 'h3'}
+                    ta={'center'}
+                >
+                    Заявка на сборы
+                </Title>
                 <Stack gap={0} p={0} pos={'relative'} style={{ zIndex: 1 }}>
-                    <Text size='md' ta={'center'} >
+                    <Text
+                        size={mobile ? 'xs' : queryMd ? 'sm' : 'md'}
+                        ta={'center'}
+                    >
                         Заполните форму, отправьте заявку и наш менеджер свяжется с вами,
                         уточнит все детали и ответит на любые вопросы.
                     </Text>
@@ -247,12 +371,14 @@ const SportForm = ({ onSubmit }: SportFormProps) => {
             <Stack gap={24}>
                 <Input.Wrapper label="Название команды" description={' '}>
                     <Input
+                        size='xs'
                         radius={0} styles={{ input: { padding: 12, height: 'fit-content', borderColor: "#1B2128" } }}
                         placeholder="Например: Чемпионы"
                     />
                 </Input.Wrapper>
 
                 <Textarea
+                    size='xs'
                     label="Площадка для тренировок"
                     description=" "
                     placeholder="Опишите необходимое вам помещение, покрытие, площадь."
@@ -261,6 +387,7 @@ const SportForm = ({ onSubmit }: SportFormProps) => {
 
                 <Input.Wrapper label="Ф.И.О." description={' '}>
                     <Input
+                        size='xs'
                         type='text'
                         radius={0} styles={{ input: { padding: 12, height: 'fit-content', borderColor: "#1B2128" } }}
                         placeholder="Иванов Иван"
@@ -269,6 +396,7 @@ const SportForm = ({ onSubmit }: SportFormProps) => {
 
                 <Input.Wrapper label="Ф.И.О." description={' '}>
                     <Input
+                        size='xs'
                         type='text'
                         radius={0} styles={{ input: { padding: 12, height: 'fit-content', borderColor: "#1B2128" } }}
                         placeholder="Иванов Иван"
@@ -276,6 +404,7 @@ const SportForm = ({ onSubmit }: SportFormProps) => {
                 </Input.Wrapper>
 
                 <Textarea
+                    size='xs'
                     label="Комментарий"
                     description=" "
                     placeholder="Ваш вопрос..."
@@ -288,7 +417,7 @@ const SportForm = ({ onSubmit }: SportFormProps) => {
                     </Group>
                 </Button>
             </Stack>
-        </>
+        </Stack>
     )
 }
 
@@ -304,31 +433,37 @@ const PlacementVariant = ({ img, title, desc }: PlacementVariantProps) => {
     const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
     return (
         <Grid.Col span={{ base: 12, lg: 4, xs: 6, }}>
-            <Stack gap={mobile ? 8 : queryMd ? 12 : 24}>
-                <Group
-                    style={{
-                        height: mobile ? 240 : queryMd ? 320 : 420,
-                        backgroundImage: `url(${img})`,
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                    }}
-                />
-                <Stack gap={mobile ? 4 : queryMd ? 8 : 12}>
-                    <Title
-                        order={4}
-                        size={mobile ? 'h5' : queryMd ? 'h4' : 'h4'}
-                        lineClamp={1}
+            <Paper bg={'#EBF2F4'} radius={0} p={8}>
+                <Stack gap={0}>
+                    <Group
+                        style={{
+                            height: mobile ? 240 : queryMd ? 320 : 420,
+                            backgroundImage: `url(${img})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                        }}
+                    />
+                    <Stack
+                        gap={mobile ? 4 : queryMd ? 8 : 12}
+                        py={mobile ? 8 : queryMd ? 12 : 24}
+                        px={mobile ? 4 : queryMd ? 8 : 12}
                     >
-                        {title}
-                    </Title>
-                    <Text
-                        size='xs'
-                    >
-                        {desc}
-                    </Text>
+                        <Title
+                            order={4}
+                            size={mobile ? 'h5' : queryMd ? 'h4' : 'h4'}
+                            lineClamp={1}
+                        >
+                            {title}
+                        </Title>
+                        <Text
+                            size='xs'
+                        >
+                            {desc}
+                        </Text>
+                    </Stack>
                 </Stack>
-            </Stack>
+            </Paper>
         </Grid.Col>
     )
 }
@@ -346,36 +481,42 @@ const SportObjectVariant = ({ img, title, desc }: SportObjectVariantProps) => {
 
     return (
         <Grid.Col span={{ base: 12, lg: 4, xs: 6, }}>
-            <Stack gap={mobile ? 8 : queryMd ? 12 : 24}>
-                <Group
-                    style={{
-                        height: mobile ? 240 : queryMd ? 320 : 420,
-                        backgroundImage: `url(${img})`,
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                    }}
-                />
-                <Stack gap={mobile ? 4 : queryMd ? 8 : 12}>
-                    <Title
-                        order={4}
-                        size={mobile ? 'h5' : queryMd ? 'h4' : 'h4'}
-                        lineClamp={1}
-                    >{title}</Title>
-                    <Text size='xs' lineClamp={2}>{desc}</Text>
-                    <Button
-                        radius={0}
-                        bg={'#2A4F78'}
-                        c={'#F1F1F1'}
-                        fw={300}
-                        px={32}
-                        py={14}
-                        mt={mobile ? 8 : queryMd ? 8 : 0}
-                        w={'fit-content'}
-                        h={'fit-content'}
-                    >Подробнее</Button>
+            <Paper bg={'#EBF2F4'} radius={0} p={8}>
+                <Stack gap={0}>
+                    <Group
+                        style={{
+                            height: mobile ? 240 : queryMd ? 320 : 420,
+                            backgroundImage: `url(${img})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                        }}
+                    />
+                    <Stack
+                        gap={mobile ? 4 : queryMd ? 8 : 12}
+                        py={mobile ? 8 : queryMd ? 12 : 24}
+                        px={mobile ? 4 : queryMd ? 8 : 12}
+                    >
+                        <Title
+                            order={4}
+                            size={mobile ? 'h5' : queryMd ? 'h4' : 'h4'}
+                            lineClamp={1}
+                        >{title}</Title>
+                        <Text size='xs' lineClamp={2}>{desc}</Text>
+                        <Button
+                            radius={0}
+                            bg={'#2A4F78'}
+                            c={'#F1F1F1'}
+                            fw={300}
+                            px={32}
+                            py={14}
+                            mt={mobile ? 8 : queryMd ? 8 : 0}
+                            w={'fit-content'}
+                            h={'fit-content'}
+                        >Подробнее</Button>
+                    </Stack>
                 </Stack>
-            </Stack>
+            </Paper>
         </Grid.Col>
     )
 }
@@ -383,8 +524,10 @@ const SportObjectVariant = ({ img, title, desc }: SportObjectVariantProps) => {
 export default function PageSportsCamps(props: SportCampsPageProps) {
     const [opened, { open, close }] = useDisclosure(false)
     const theme = useMantineTheme()
+    const queryXs = useMediaQuery(`(max-width: ${theme.breakpoints.xs})`)
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
     const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
+    const queryLg = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`)
 
     return (
         <>
@@ -415,7 +558,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                     transition: 'fade',
                 }}
             >
-                <Stack px={96} gap={0}>
+                <Stack px={mobile ? 12 : 96} pb={24} gap={0}>
                     <SportForm />
                 </Stack>
             </Modal >
@@ -476,9 +619,9 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     <Title
                                         order={2}
                                         ta={'center'}
-                                        size={queryMd ? 'h3' : 'h2'}
+                                        size={mobile ? 'h4' : queryMd ? 'h3' : 'h2'}
                                     >Спортивные мероприятия</Title>
-                                    <Text size={'md'} ta={'center'}>
+                                    <Text size={queryMd ? 'sm' : 'md'} ta={'center'}>
                                         На базе нашего комплекса круглый год проводятся спортивные мероприятия по различным спортивным дисциплинам
                                     </Text>
                                 </Stack>
@@ -498,7 +641,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                             tt={'uppercase'}
                                         >Последние новости</Text>
                                     </Stack>
-                                    <Group gap={30} w={'100%'} maw={'100vw'} justify={'start'} pos={'relative'} style={{ zIndex: 10 }} wrap='nowrap'>
+                                    <Group gap={30} w={'100%'} maw={'100vw'} justify={mobile ? 'center' : 'start'} pos={'relative'} style={{ zIndex: 10 }} wrap='nowrap'>
                                         {mobile
                                             ?
                                             <Carousel
@@ -508,7 +651,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                                 slideGap="md"
                                                 slidesToScroll={mobile ? 1 : 2}
                                                 h={520}
-                                                w='100%'
+                                                w='90%'
                                             >
                                                 {props.vkposts && props.vkposts?.length > 0 ? props.vkposts.map(p => {
                                                     const img = p?.attachments[0]?.photo.sizes.find(x => x.height > 510 && x.width > 710)
@@ -516,7 +659,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                                     return (
                                                         <Carousel.Slide
                                                             key={p.hash + '-slide'}
-                                                            bg={'red'}
+                                                        // bg={'red'}
                                                         >
                                                             <Box w='100%'>
                                                                 <VKPost
@@ -576,7 +719,9 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 <Group justify='center'>
                                     <CalcButton onClick={open} />
                                     <Button
-                                        color='#2A4F78'
+                                        variant='outline'
+                                        c='#262626'
+                                        style={{ borderColor: '#262626' }}
                                         radius={0}
                                         size={mobile ? 'sm' : queryMd ? 'md' : 'md'}
                                         py={mobile ? 12 : queryMd ? 14 : 18}
@@ -585,11 +730,11 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                         h={'fit-content'}
                                     >
                                         <Group gap={12} align='center'>
-                                            <Text size='sm' c={'#F1F1F1'}>
+                                            <Text size='sm'>
                                                 Презентация Plazma Sport
                                             </Text>
                                             <ReactSVG
-                                                src='/svg/down-long.svg'
+                                                src='/svg/down-long-d.svg'
                                             />
                                         </Group>
                                     </Button>
@@ -631,13 +776,15 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
 
                         <Group
                             py={mobile ? rem(24) : queryMd ? rem(48) : rem(96)}
-                            px={mobile ? rem(0) : queryMd ? rem(32) : rem(64)}
+                            px={mobile ? rem(24) : queryMd ? rem(32) : rem(64)}
                         >
                             <Grid align='center'>
                                 <Grid.Col span={{ lg: 7, md: 12 }}>
                                     <Stack
                                         py={mobile ? rem(12) : queryMd ? rem(32) : rem(48)}
                                         pr={mobile ? rem(12) : queryMd ? rem(32) : rem(64)}
+                                        pl={mobile ? rem(0) : queryMd ? rem(0) : rem(0)}
+                                        pt={mobile ? rem(48) : queryMd ? rem(0) : rem(0)}
                                         gap={mobile ? rem(12) : queryMd ? rem(16) : rem(20)}
                                     >
                                         <Title
@@ -658,13 +805,19 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 </Grid.Col>
 
                                 <Grid.Col span={{ lg: 5, md: 12 }}>
-                                    <Group
+                                    {/* <Group
                                         w={'100%'}
                                         h={mobile ? rem(320) : queryMd ? rem(420) : rem(650)}
                                         bg={'cyan'}
                                     >
-
-                                    </Group>
+                                    </Group> */}
+                                    <BackgroundImage
+                                        bgsz='cover'
+                                        radius={0}
+                                        src='/img/sports-camps/about_us.png'
+                                        w={'100%'}
+                                        h={mobile ? rem(320) : queryMd ? rem(420) : rem(650)}
+                                    />
                                 </Grid.Col>
                             </Grid>
 
@@ -688,7 +841,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 </Text>
                             </Stack>
 
-                            <Stack gap={96}>
+                            <Stack gap={mobile ? 32 : 96}>
                                 <SportVillageItem
                                     dir='iltr'
                                     images={['/img/sports-camps/terr_1.png', '/img/sports-camps/terr_2.png']}
@@ -746,8 +899,10 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                             </Stack>
                         </Stack>
 
-                        <Stack py={96} gap={24} w={'100%'}>
-                            <Title order={3}>Дополнительные Варианты Размещения</Title>
+                        <Stack py={mobile ? rem(24) : queryMd ? rem(48) : rem(96)} gap={mobile ? 12 : 24} w={'100%'}>
+                            <Title order={3}
+                                size={mobile ? 'h4' : queryMd ? 'h4' : 'h3'}
+                            >Дополнительные Варианты Размещения</Title>
                             <Grid gutter={24} grow>
                                 <PlacementVariant
                                     title='Корпус №6'
@@ -767,8 +922,10 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                             </Grid>
                         </Stack>
 
-                        <Stack py={96} gap={48} w={'100%'}>
-                            <Title order={3}>Наши Спортивные Объекты</Title>
+                        <Stack py={mobile ? rem(24) : queryMd ? rem(48) : rem(96)} gap={mobile ? 12 : 24} w={'100%'}>
+                            <Title order={3}
+                                size={mobile ? 'h4' : queryMd ? 'h4' : 'h3'}
+                            >Наши Спортивные Объекты</Title>
                             <Grid gutter={24} grow>
                                 <SportObjectVariant
                                     title='Пляжный центр'
@@ -806,105 +963,51 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                         </Stack>
 
                         <Stack w={'100%'} align='center'>
-                            <Stack maw={1180} py={48} pr={64} gap={20} align='center'>
-                                <Title order={2}>Спортивные сборы</Title>
-                                <Text size='md' ta={'center'}>
+                            <Stack maw={1180} py={48} pr={{ base: 0, sm: 64 }} gap={20} align={'center'}>
+                                <Title
+                                    order={2}
+                                    size={mobile ? 'h4' : queryMd ? 'h3' : 'h2'}
+                                    ta={'center'}
+                                >Спортивные сборы</Title>
+                                <Text
+                                    size={mobile ? 'xs' : queryMd ? 'sm' : 'md'}
+                                    ta={'center'}
+                                >
                                     Повысьте свою спортивную производительность с помощью наших передовых спортивных сооружений, включающих
                                     первоклассный спортзал, теннисные корты и освежающий бассейн.
                                 </Text>
                             </Stack>
 
-                            <Grid w={'100%'} style={{ alignSelf: 'baseline' }} gutter={96}>
-                                {!queryMd ? <Grid.Col span={{ base: 12, md: 6, lg: 8 }}>
-                                    <Stack gap={48}>
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/1.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/2.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/3.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/4.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/5.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-                                    </Stack>
-                                </Grid.Col>
+                            <Grid style={{ alignSelf: 'baseline' }} gutter={{ base: 0, md: 24, lg: 96 }} w={'100%'}>
+                                {!queryMd ?
+                                    <Grid.Col span={{ base: 12, md: 6 }} style={{ overflow: 'hidden' }}>
+                                        <FormPhotos />
+                                    </Grid.Col>
                                     : <></>}
-                                <Grid.Col span={{ base: 12, md: 6, lg: 4 }} top={10} pos={!queryMd ? 'sticky' : 'relative'} style={{
-                                    // border: '5px solid #f23',
-                                    height: 'fit-content'
-                                }} >
-                                    <Stack gap={0} p={0}>
+
+                                <Grid.Col
+                                    span={{ base: 12, md: 6 }}
+                                    top={10}
+                                    pos={!queryMd ? 'sticky' : 'relative'}
+                                    pb={mobile ? 24 : 196}
+                                    style={{ height: 'fit-content' }}
+                                >
+                                    <Stack gap={0} p={0} w={'100%'} align='center'>
                                         <SportForm onSubmit={open} />
                                     </Stack>
                                 </Grid.Col>
-                                {queryMd ? <Grid.Col span={{ base: 12, md: 6, lg: 8 }}>
-                                    <Stack gap={48}>
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/1.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
 
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/2.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/3.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/4.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-
-                                        <BackgroundImage
-                                            src='/img/sports-camps/photos/5.png'
-                                            h={queryMd ? 340 : 700}
-                                            w={'100%'} bgsz={'cover'} radius={0}
-                                        />
-                                    </Stack>
-                                </Grid.Col>
+                                {queryMd ?
+                                    <Grid.Col span={{ base: 12, md: 6 }} style={{ overflow: 'hidden' }}>
+                                        <FormPhotos />
+                                    </Grid.Col>
                                     : <></>}
                             </Grid>
                         </Stack>
                     </Stack>
 
 
-                    <div className='page-sports-camps__calculate container'
-                        data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                        <TextBlock title={{ type: 'h2', text: 'Заявка на расчет сборов в «PLAZMA»' }}
-                            style={{ paddingBottom: 40, paddingTop: 70 }}
-                        />
 
-                        {/* <SportCalculator /> */}
-                        {/* <SportRequest /> */}
-                    </div>
                 </div >
             </main >
 
