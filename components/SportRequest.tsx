@@ -223,7 +223,7 @@ export default function SportRequest(props: SportCalculatorProps) {
                     />
 
                     <div ref={dateInRef} className={`sport-calculator__datepicker ${datePickerInVisible ? 'visible' : ''}`}>
-                        <DatePicker locale="ru" size='xl' numberOfColumns={1}
+                        <DatePicker locale="ru" size='md' numberOfColumns={1}
                             onChange={(e) => {
                                 setDatePickerInVisible(false)
                                 setDatePickerInValue(e)
@@ -245,7 +245,7 @@ export default function SportRequest(props: SportCalculatorProps) {
                     />
 
                     <div className={`sport-calculator__datepicker right ${datePickerOutVisible ? 'visible' : ''}`}>
-                        <DatePicker locale="ru" size='xl' numberOfColumns={1}
+                        <DatePicker locale="ru" size='md' numberOfColumns={1}
                             onChange={(e) => {
                                 setDatePickerOutVisible(false)
                                 setDatePickerOutValue(e)
