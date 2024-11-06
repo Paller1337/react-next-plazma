@@ -1,5 +1,5 @@
 import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel'
-import { Box, useMantineTheme, Image as SlideImg, Loader, Stack } from '@mantine/core'
+import { Box, useMantineTheme, Image as SlideImg, Loader, Stack, BackgroundImage } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
 
@@ -67,7 +67,14 @@ export default function ModalSlider({ images, alt, }) {
             ))}
         </Carousel>
     ) :
-        <Stack h={mobile ? 240 : 420} bg={'#EBF2F4'} align='center' justify='center'>
-            <Loader />
+        <Stack h={mobile ? 240 : 420} bg={'#EBF2F4'} pos={'relative'}>
+            <BackgroundImage src={images[0]} h={'100%'} w={'100%'} pos={'relative'} style={{ zIndex: 9 }} />
+            <Stack
+                pos={'absolute'} left={0} right={0} top={0} bottom={0}
+                style={{ zIndex: 10, background: 'rgba(17, 65, 126, 0.60)', backdropFilter: 'blur(2px)' }}
+                align='center' justify='center'
+            >
+                <Loader color='white' size={48}  />
+            </Stack>
         </Stack>
 }
