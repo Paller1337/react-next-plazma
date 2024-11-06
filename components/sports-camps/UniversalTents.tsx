@@ -15,7 +15,7 @@ const IMAGES = [
 export default function UniversalTents() {
     const theme = useMantineTheme()
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
-
+    
 
     return (
         <Stack miw={'80%'} gap={24}>

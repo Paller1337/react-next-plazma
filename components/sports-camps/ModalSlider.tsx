@@ -1,7 +1,7 @@
 import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel'
-import { Box, useMantineTheme, Image } from '@mantine/core'
+import { Box, useMantineTheme, Image as SlideImg, Loader, Stack } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ModalSlider({ images, alt, }) {
     const TRANSITION_DURATION = 200
@@ -9,8 +9,27 @@ export default function ModalSlider({ images, alt, }) {
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
     const [embla, setEmbla] = useState<Embla | null>(null)
 
-    useAnimationOffsetEffect(embla, TRANSITION_DURATION);
-    return (
+    const [loaded, setLoaded] = useState(false)
+
+    // Инициализируем хук анимации на уровне компонента
+    useAnimationOffsetEffect(embla, loaded ? TRANSITION_DURATION : 0)
+
+    // Проверка загрузки изображений
+    useEffect(() => {
+        let loadedImages = 0;
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                loadedImages += 1;
+                if (loadedImages === images.length) {
+                    setLoaded(true)
+                }
+            };
+        });
+    }, [images])
+
+    return loaded ? (
         <Carousel
             getEmblaApi={setEmbla}
             align="center"
@@ -36,7 +55,7 @@ export default function ModalSlider({ images, alt, }) {
             {images.map(x => (
                 <Carousel.Slide key={x}>
                     <Box w='100%' style={{ overflow: 'hidden' }}>
-                        <Image
+                        <SlideImg
                             src={x}
                             alt={alt}
                             fit='cover'
@@ -47,5 +66,8 @@ export default function ModalSlider({ images, alt, }) {
                 </Carousel.Slide>
             ))}
         </Carousel>
-    )
+    ) :
+        <Stack h={mobile ? 240 : 420} bg={'#EBF2F4'} align='center' justify='center'>
+            <Loader />
+        </Stack>
 }
