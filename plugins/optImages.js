@@ -11,7 +11,7 @@ async function optimizeImages() {
     // функция определения является ли файл изображением
     function isImageFile(file) {
         const ext = path.extname(file);
-        return ['.jpg', '.jpeg', '.png'].includes(ext);
+        return ['.jpg', '.jpeg', '.png'].includes(ext.toLowerCase());
     }
 
     async function optimizeImage(filePath, outputDirPath) {
@@ -54,7 +54,7 @@ async function optimizeImages() {
                         fs.mkdirSync(outputDirPath, { recursive: true });
                     }
 
-                    
+
                     try {
                         optimizeImage(filePath, outputDirPath);
                     } catch (error) {

@@ -10,7 +10,7 @@ async function convertToWebP() {
 
     function isImageFile(file) {
         const ext = path.extname(file);
-        return ['.jpg', '.jpeg', '.png'].includes(ext);
+        return ['.jpg', '.jpeg', '.png'].includes(ext.toLowerCase());
     }
 
     // Функция для конвертации изображений в формат WebP

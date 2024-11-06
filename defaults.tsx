@@ -4,8 +4,10 @@
 
 export module DEFAULTS {
     export const URL = {
-        BASE_URL: 'https://kplazma.ru'
+        BASE_URL: 'https://kplazma.ru',
+        CDN: 'https://cdn0.kplazma.ru'
     }
+
     export const AOS = {
         animation: 'fade-up',
         duration: '1000',

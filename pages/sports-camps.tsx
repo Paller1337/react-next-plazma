@@ -1304,7 +1304,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                             /> */}
 
                             <BackgroundImage
-                                src={'/img/sports-camps/promo-pres.png'}
+                                src={DEFAULTS.URL.CDN + '/img/sports-camps/promo-pres.webp'}
                                 radius={0}
                             >
                                 <Stack h={mobile ? rem(400) : queryMd ? rem(600) : rem(800)}></Stack>
@@ -1353,7 +1353,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     <BackgroundImage
                                         bgsz='cover'
                                         radius={0}
-                                        src='/img/sports-camps/about_us.png'
+                                        src={DEFAULTS.URL.CDN + '/img/sports-camps/about_us.webp'}
                                         w={'100%'}
                                         h={mobile ? rem(320) : queryMd ? rem(420) : rem(650)}
                                     />
@@ -1383,7 +1383,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                             <Stack gap={mobile ? 32 : 96}>
                                 <SportVillageItem
                                     dir='iltr'
-                                    images={['/img/sports-camps/terr_1.png', '/img/sports-camps/terr_2.png']}
+                                    images={[DEFAULTS.URL.CDN + '/img/sports-camps/terr_1.webp', DEFAULTS.URL.CDN + '/img/sports-camps/terr_2.webp']}
                                     title={'Территория'}
                                     desc={`В спортивной деревне предусмотрена изолированная территория, созданная специально для спортсменов.
                                         Это позволяет участникам сборов тренироваться и отдыхать в комфортной и приватной обстановке,
@@ -1394,7 +1394,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
 
                                 <SportVillageItem
                                     dir='irtl'
-                                    images={['/img/sports-camps/pl_1.png', '/img/sports-camps/pl_2.png']}
+                                    images={[DEFAULTS.URL.CDN + '/img/sports-camps/pl_1.webp', DEFAULTS.URL.CDN + '/img/sports-camps/pl_2.webp']}
                                     title={'Размещение спортсменов'}
                                     desc={`Для размещения спортсменов предусмотрено 8 корпусов. В каждом корпусе имеется 
                                     отдельный номер для тренера и 10 комфортабельных номеров для спортсменов. 
@@ -1405,7 +1405,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
 
                                 <SportVillageItem
                                     dir='iltr'
-                                    images={['/img/sports-camps/meal_1.png', '/img/sports-camps/meal_2.png']}
+                                    images={[DEFAULTS.URL.CDN + '/img/sports-camps/meal_1.webp', DEFAULTS.URL.CDN + '/img/sports-camps/meal_2.webp']}
                                     title={'Питание'}
                                     desc={`В парк-отеле «Plazma» для спортсменов создана отдельная столовая, 
                                     доступная только участникам сборов, что обеспечивает спокойную обстановку 
@@ -1416,7 +1416,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
 
                                 <SportVillageItem
                                     dir='irtl'
-                                    images={['/img/sports-camps/so_1.png', '/img/sports-camps/so_2.png']}
+                                    images={[DEFAULTS.URL.CDN + '/img/sports-camps/so_1.webp', DEFAULTS.URL.CDN + '/img/sports-camps/so_2.webp']}
                                     title={'Спортивные объекты'}
                                     desc={`На территории спортивной деревни расположены современные спортивные объекты: просторные шатры для тренировок, 
                                     оборудованная воркаут-площадка и круговая беговая дорожка длиной 450 метров, частично покрытая резиновой крошкой. 
@@ -1427,7 +1427,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
 
                                 <SportVillageItem
                                     dir='iltr'
-                                    images={['/img/sports-camps/pastime_1.png', '/img/sports-camps/pastime_2.png']}
+                                    images={[DEFAULTS.URL.CDN + '/img/sports-camps/pastime_1.webp', DEFAULTS.URL.CDN + '/img/sports-camps/pastime_2.webp']}
                                     title={'Досуг'}
                                     desc={`В шатрах для спортсменов организуются показы фильмов, спортивные трансляции и вечерние дискотеки. 
                                     Это помогает участникам сборов расслабиться и провести время с удовольствием после насыщенного тренировочного дня. 
@@ -1447,17 +1447,17 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 <PlacementVariant
                                     title='Корпус №6'
                                     desc='Вместимость 50 - 57 человек.'
-                                    img='/img/sports-camps/corp6.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/corp6.webp'}
                                 />
                                 <PlacementVariant
                                     title='Корпус №5'
                                     desc='Вместимость 70 - 72 человек.'
-                                    img='/img/sports-camps/corp5.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/corp5.webp'}
                                 />
                                 <PlacementVariant
                                     title='Корпус №3'
                                     desc='Вместимость 64 - 66 человек.'
-                                    img='/img/sports-camps/corp3.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/corp3.webp'}
                                 />
                             </Grid>
                         </Stack>

@@ -13,7 +13,7 @@ async function generatePreview() {
     // функция определения является ли файл изображением
     function isImageFile(file) {
         const ext = path.extname(file);
-        return ['.jpg', '.jpeg', '.png', '.webp'].includes(ext);
+        return ['.jpg', '.jpeg', '.png', '.webp'].includes(ext.toLowerCase());
     }
 
     async function createPreviews(inputDir, outputDir) {
