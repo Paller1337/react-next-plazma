@@ -3,16 +3,17 @@ import { Box, Stack, useMantineTheme, Image, Text, Title, Blockquote } from '@ma
 import { useMediaQuery } from '@mantine/hooks'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
+import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/sports-hall/1.jpg`,
-    `/img/sports-camps/sports-hall/2.jpg`,
-    `/img/sports-camps/sports-hall/3.jpg`,
-    `/img/sports-camps/sports-hall/4.jpg`,
-    `/img/sports-camps/sports-hall/5.jpg`,
-    `/img/sports-camps/sports-hall/6.jpg`,
-    `/img/sports-camps/sports-hall/7.jpg`,
-    `/img/sports-camps/sports-hall/8.jpg`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/5.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/6.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/7.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/8.webp`,
 ]
 
 
@@ -20,7 +21,7 @@ const IMAGES = [
 export default function SportsHall() {
     const theme = useMantineTheme()
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
-    
+
     return (
         <Stack miw={'80%'} gap={24}>
             <Stack gap={8}>

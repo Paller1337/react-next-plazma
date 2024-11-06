@@ -4,13 +4,14 @@ import { useMediaQuery } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
+import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/gym/1.jpg`,
-    `/img/sports-camps/gym/2.jpg`,
-    `/img/sports-camps/gym/3.jpg`,
-    `/img/sports-camps/gym/4.jpg`,
-    `/img/sports-camps/gym/5.jpg`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/5.webp`,
 ]
 
 export default function Gym() {

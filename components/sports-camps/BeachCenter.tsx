@@ -3,14 +3,15 @@ import { Box, Stack, useMantineTheme, Image, Text, Blockquote, Title } from '@ma
 import { useMediaQuery } from '@mantine/hooks'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
+import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/beach-center/1.jpg`,
-    `/img/sports-camps/beach-center/2.jpg`,
-    `/img/sports-camps/beach-center/3.jpg`,
-    `/img/sports-camps/beach-center/4.jpg`,
-    `/img/sports-camps/beach-center/5.jpg`,
-    `/img/sports-camps/beach-center/6.jpg`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/5.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/6.webp`,
 ]
 
 export default function BeachCenter() {

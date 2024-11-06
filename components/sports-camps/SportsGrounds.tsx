@@ -3,13 +3,14 @@ import { Box, Stack, useMantineTheme, Image, Text, Title, Blockquote } from '@ma
 import { useMediaQuery } from '@mantine/hooks'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
+import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/sports-grounds/1.jpg`,
-    `/img/sports-camps/sports-grounds/2.jpg`,
-    `/img/sports-camps/sports-grounds/3.jpg`,
-    `/img/sports-camps/sports-grounds/4.jpg`,
-    `/img/sports-camps/sports-grounds/5.jpg`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-grounds/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-grounds/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-grounds/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-grounds/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/sports-grounds/5.webp`,
 ]
 
 export default function SportsGrounds() {
@@ -27,7 +28,7 @@ export default function SportsGrounds() {
                     нескользящему покрытию, а также позволяют проводить занятия с минимальным риском травм.
                 </Text>
             </Stack>
-            
+
             <ModalSlider images={IMAGES} alt={'Спортивные сборы на Плазме в Донском. Универсальные спортивные площадки.'} />
 
             {/* <Text size={mobile ? 'xs' : 'sm'}>

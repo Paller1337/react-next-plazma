@@ -347,23 +347,23 @@ const FormPhotos = () => {
     return (
         <Stack gap={mobile ? 24 : 48} pt={mobile ? 96 : 0} pb={mobile ? 48 : 96}>
             <BackgroundImage {...styles}
-                src='/img/sports-camps/photos/1.png'
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/1.webp'}
             />
 
             <BackgroundImage  {...styles}
-                src='/img/sports-camps/photos/2.png'
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/2.webp'}
             />
 
             <BackgroundImage  {...styles}
-                src='/img/sports-camps/photos/3.png'
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/3.webp'}
             />
 
             <BackgroundImage {...styles}
-                src='/img/sports-camps/photos/4.png'
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/4.webp'}
             />
 
             <BackgroundImage {...styles}
-                src='/img/sports-camps/photos/5.png'
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/5.webp'}
             />
         </Stack>
     )
@@ -1471,13 +1471,13 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 <SportObjectVariant
                                     title='Универсальный спортивный зал'
                                     desc='Многофункциональное пространство, созданное для проведения тренировок, соревнований и спортивных мероприятий.'
-                                    img='/img/sports-camps/sports-hall.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/sports-hall.webp'}
                                     content={<SportsHall />}
                                 />
                                 <SportObjectVariant
                                     title='Пляжный центр'
                                     desc='Первый в Тульской области крытый манеж для тренировок по пляжным видам спорта.'
-                                    img='/img/sports-camps/beach-center.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/beach-center.webp'}
                                     content={<BeachCenter />}
                                 />
                                 {/* <SportObjectVariant
@@ -1489,27 +1489,27 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 <SportObjectVariant
                                     title='Уличные площадки'
                                     desc='Универсальные уличные площадки обеспечивают комфортные условия для тренировок на свежем воздухе.'
-                                    img='/img/sports-camps/sports-grounds.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/sports-grounds.webp'}
                                     content={<SportsGrounds />}
                                 />
                                 <SportObjectVariant
                                     title='Уличные тренажеры'
                                     desc='Уличная воркаут-площадка предоставляет отличные условия для силовых тренировок на открытом воздухе.'
-                                    img='/img/sports-camps/outdoor-gym.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/outdoor-gym.webp'}
                                     content={<OutdoorGym />}
                                 />
 
                                 <SportObjectVariant
                                     title='Универсальные шатры'
                                     desc='Универсальные шатры в спортивной деревне подходят для проведения тренировок и досуговых мероприятий.'
-                                    img='/img/sports-camps/universal-tents.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/universal-tents.webp'}
                                     content={<UniversalTents />}
                                 />
 
                                 <SportObjectVariant
                                     title='Тренажерный зал'
                                     desc='Тренажерный зал оборудован для комплексных силовых и кардиотренировок.'
-                                    img='/img/sports-camps/gym.png'
+                                    img={DEFAULTS.URL.CDN + '/img/sports-camps/gym.webp'}
                                     content={<Gym />}
                                 />
                             </Grid>

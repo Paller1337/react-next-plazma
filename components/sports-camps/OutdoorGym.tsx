@@ -3,12 +3,13 @@ import { Box, Stack, useMantineTheme, Image, Text, Title, Blockquote } from '@ma
 import { useMediaQuery } from '@mantine/hooks'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
+import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/outdoor-gym/1.jpg`,
-    `/img/sports-camps/outdoor-gym/2.jpg`,
-    `/img/sports-camps/outdoor-gym/3.jpg`,
-    `/img/sports-camps/outdoor-gym/4.jpg`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/4.webp`,
 ]
 
 export default function OutdoorGym() {

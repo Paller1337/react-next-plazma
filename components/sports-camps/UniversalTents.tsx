@@ -3,12 +3,13 @@ import { Box, Stack, useMantineTheme, Image, Text, Title, Blockquote } from '@ma
 import { useMediaQuery } from '@mantine/hooks'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
+import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/universal-tents/1.jpg`,
-    `/img/sports-camps/universal-tents/2.jpg`,
-    `/img/sports-camps/universal-tents/3.jpg`,
-    `/img/sports-camps/universal-tents/4.jpg`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/4.webp`,
 ]
 
 export default function UniversalTents() {
