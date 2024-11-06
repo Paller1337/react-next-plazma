@@ -114,16 +114,20 @@ const VKPost = ({ image, text, views, link, date }: IVKPost) => {
     const queryLg = useMediaQuery(`(max-width: ${theme.breakpoints.lg})`)
     const router = useRouter()
     return (<>
-        <Stack h={isMobile ? 420 : 520} miw={queryMinLg ? '30%' : '100%'} flex={queryMinLg ? '1 0 0' : '0 0 0'} maw={queryMinLg ? 510 : '100%'} p={24} justify='space-between'
+        <Stack
+            h={isMobile ? 420 : 520} miw={queryMinLg ? '30%' : '100%'} flex={queryMinLg ? '1 0 0' : '0 0 0'}
+            maw={queryMinLg ? 510 : '100%'} p={24} justify='space-between'
             style={{
                 backgroundColor: '#1B2128',
                 background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 63.92%, 
                 rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 45.08%, rgba(0, 0, 0, 0.40) 100%), 
                 linear-gradient(0deg, var(--Miscellaneous-_Kit-Section-Stroke, rgba(0, 0, 0, 0.30)) 0%, 
                 var(--Miscellaneous-_Kit-Section-Stroke, rgba(0, 0, 0, 0.30)) 100%), url(${image.url}) lightgray 50% / cover no-repeat`,
-                backgroundSize: 'cover'
+                backgroundSize: 'cover',
+                cursor: 'pointer'
             }}
-            onClick={() => router.push(link, '_blank')}
+            onClick={() => window.open(link, '_blank', 'noopener,noreferrer')}
+
         >
             {/* <span style={{ color: 'white' }}>{'queryMd: ' + queryMd}</span><br />
             <span style={{ color: 'white' }}>{'queryMinLg: ' + queryMinLg}</span><br />
