@@ -210,7 +210,8 @@ export default function SportRequest(props: SportCalculatorProps) {
 
 
             <InputText label='Вид спорта' placeholder='Например: Баскетбол'
-                onChange={(e) => setFormState(prev => ({ ...prev, sport: e.target.value }))} />
+                onChange={(e) => setFormState(prev => ({ ...prev, sport: e.target.value }))}
+            />
 
             <div className='sport-calculator__dates'>
                 <div className='sport-calculator__date'>

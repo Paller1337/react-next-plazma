@@ -5,8 +5,8 @@ async function convertToWebP() {
 
     //Конвертация в WebP (опционально) #3
 
-    const input = 'public/resized-img';  
-    const output = 'public/img';  
+    const input = 'public/resized-img';
+    const output = 'public/img';
 
     function isImageFile(file) {
         const ext = path.extname(file);
@@ -17,7 +17,7 @@ async function convertToWebP() {
     async function convertImageToWebP(filePath, outputDirPath) {
         const imagemin = await import('imagemin');
         const imageminWebp = await import('imagemin-webp');
-        
+
         await imagemin.default([filePath], {
             destination: outputDirPath,
             plugins: [
@@ -57,5 +57,7 @@ async function convertToWebP() {
     processFiles(input, output);
 
 }
+
+module.exports = { convertToWebP }
 
 convertToWebP()

@@ -25,7 +25,7 @@ interface PromoMinProps {
     image?: PromoMinImage
     button?: {
         text: string
-        link: string
+        onclick: () => void
         icon?: string
     }
 }
@@ -115,10 +115,10 @@ export default function PromoMin(props: PromoMinProps) {
                 <h1>{props.title}</h1>
                 <span>{props.description}</span>
                 {props.button ?
-                    <Link href={props.button.link} className='btn btn_white'>
+                    <div onClick={props.button.onclick} className='btn btn_white'>
                         {props.button.text}
                         {props.button.icon ? <ReactSVG src={props.button.icon} className='btn__icon' /> : <></>}
-                    </Link>
+                    </div>
                     : <></>
                 }
             </div>

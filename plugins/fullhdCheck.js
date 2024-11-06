@@ -4,7 +4,7 @@ async function fullhdCheck() {
     const path = await import('path');
 
 
-    
+
     //Проверка на разрешение (пропорциональное уменьшение) #2
 
     const inputDir = 'public/compressed-img';  // замените на вашу директорию
@@ -56,4 +56,5 @@ async function fullhdCheck() {
     checkAndResizeImages(inputDir, outputDir);
 }
 
+module.exports = { fullhdCheck }
 fullhdCheck()

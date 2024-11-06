@@ -70,4 +70,6 @@ async function optimizeImages() {
     processFiles(input, output);
 }
 
+module.exports = { optimizeImages }
+
 optimizeImages()

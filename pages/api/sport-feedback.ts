@@ -9,8 +9,10 @@ type Data = {
 }
 
 
-const BOT_TOKEN = process.env.TG_BOT_TOKEN
-const CHAT_ID = '-1001699514488'
+// const BOT_TOKEN = process.env.TG_BOT_TOKEN
+// const CHAT_ID = '-1001699514488'
+const BOT_TOKEN = '6855526888:AAEDn9Llk6k8gd_3T9eRHMwGTzIB9225xuY'
+const CHAT_ID = '-1001934278839'
 
 // const BOT_TOKEN = '6855526888:AAEDn9Llk6k8gd_3T9eRHMwGTzIB9225xuY'
 // const CHAT_ID = '-1001934278839'
@@ -24,7 +26,7 @@ async function sendTelegramMessage(message) {
         parse_mode: 'Markdown',
     }
 
-    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    const result = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -38,6 +40,7 @@ async function sendTelegramMessage(message) {
         .catch((error) => {
             console.error('Ошибка отправки сообщения в Telegram:', error)
         })
+    return result
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,8 +85,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
         // await send('max.paller@yandex.ru')
-        await send('max@kplazma.ru')
-        await send('dnd@kplazma.ru')
+        // await send('max@kplazma.ru')
+        // await send('dnd@kplazma.ru')
 
         // sport?: string,
         // dateIn?: string,
@@ -112,22 +115,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         //     `* Комментарий:* ${requestData.comment ? requestData.comment : ' отсутствует'}\n` +
 
         //     `${body.utm ? '* UTM:* ' + body.utm : ''}`);
-        const message = `*Заявка с kplazma.ru *\n\n` +
-            `*Вид спорта:* ${requestData.sport ? requestData.sport : ' отсутствует'}\n` +
-            `*Название команды:* ${requestData.team?.name ? requestData.team?.name : ' отсутствует'}\n` +
-            `*Количество человек:* ${requestData.team?.size ? requestData.team?.size : ' отсутствует'}\n` +
-            `*Заезд:* ${requestData.dateIn ? formatIn : ' отсутствует'}\n` +
-            `*Выезд:* ${requestData.dateOut ? formatOut : ' отсутствует'}\n\n` +
-            `*ФИО:* ${requestData.name ? requestData.name : ' отсутствует'}\n` +
-            `*Телефон:* ${requestData.phone ? requestData.phone : ' отсутствует'}\n\n` +
-            `*Площадка для тренировок:* \n${requestData.sportArea ? requestData.sportArea : ' отсутствует'}\n\n` +
-            `*Продолжительность тренировок:* \n${requestData.trainingDuration ? requestData.trainingDuration : ' отсутствует'}\n\n` +
-            `*Комментарий:* \n${requestData.comment ? requestData.comment : ' отсутствует'}\n` +
-            `${body.utm ? '* UTM:* ' + body.utm : ''}`;
-        sendTelegramMessage(message)
+        const message = `*Заявка с kplazma.ru *\n` +
+            `\n*Вид спорта:* ${requestData.sport ? requestData.sport : ' отсутствует'}` +
+            `\n*Название команды:* ${requestData.team?.name ? requestData.team?.name : ' отсутствует'}` +
+            `\n*Количество человек:* ${requestData.team?.size ? requestData.team?.size : ' отсутствует'}` +
+            `\n*Заезд:* ${requestData.dateIn ? formatIn : ' отсутствует'}` +
+            `\n*Выезд:* ${requestData.dateOut ? formatOut : ' отсутствует'}` +
+            `\n\n*ФИО:* ${requestData.name ? requestData.name : ' отсутствует'}` +
+            `\n*Телефон:* ${requestData.phone ? requestData.phone : ' отсутствует'}` +
+            // `*Площадка для тренировок:* \n${requestData.sportArea ? requestData.sportArea : ' отсутствует'}\n\n` +
+            // `*Продолжительность тренировок:* \n${requestData.trainingDuration ? requestData.trainingDuration : ' отсутствует'}\n\n` +
+            `\n*Комментарий:* \n${requestData.comment ? requestData.comment : ' отсутствует'}\n` +
+            `${body?.utm ? '\n*UTM:* ' + body.utm : ''}` +
+            `${body?.ymTag ? '\n*YaMetrikaTag:* ' + body.ymTag : ''}`
 
+        const result = await sendTelegramMessage(message)
+        console.log({ result })
         // await sendMessageWithDocument(requestData, body.utm, BOT_TOKEN, CHAT_ID)
-        await send('nastya@kplazma.ru')
+        // await send('nastya@kplazma.ru')
 
         return res.status(200).json({ status: 'Сообщение отправлено!' });
     } catch (error) {

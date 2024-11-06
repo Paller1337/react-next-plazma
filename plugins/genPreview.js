@@ -46,4 +46,7 @@ async function generatePreview() {
 
 }
 
+
+module.exports = { generatePreview }
+
 generatePreview()
