@@ -701,14 +701,19 @@ const SportForm = ({ ymTag }: SportFormProps) => {
                                 label="Заезд"
                                 description={' '}
                                 withAsterisk
+                                onFocus={e => e.preventDefault()}
+                                onClick={e => e.preventDefault()}
                             >
                                 <Input
                                     size='xs'
+                                    onClick={e => e.preventDefault()}
                                     radius={0} styles={{ input: inputStyle(formStateValidate?.dateIn) }}
                                     readOnly
-                                    value={DateTime.fromJSDate(datePickerInValue).toFormat('yyyy-MM-dd')}
+                                    onFocus={e => e.preventDefault()}
+                                    value={datePickerInValue ? DateTime.fromJSDate(datePickerInValue).toFormat('dd-MM-yyyy') : ''}
+                                    placeholder={DateTime.fromJSDate(new Date()).plus({ day: 10 }).toFormat('dd-MM-yyyy')}
                                     onSelect={() => setDatePickerInVisible(true)}
-                                    type='date'
+                                    type='text'
                                     error={formStateValidate?.dateIn}
                                 />
                             </Input.Wrapper>
@@ -729,14 +734,6 @@ const SportForm = ({ ymTag }: SportFormProps) => {
                         </Stack>
                         <div className='sport-calculator__date-separator'>-</div>
                         <Stack ref={dateOutRef} pos={'relative'} flex={'1 0 0'}>
-                            {/* <InputText
-                            label='Выезд' placeholder=''
-                            onClick={e => e.preventDefault()}
-                            value={DateTime.fromJSDate(datePickerOutValue).toFormat('yyyy-MM-dd')}
-                            onSelect={() => setDatePickerOutVisible(true)}
-                            type='date'
-                            readOnly
-                        /> */}
                             <Input.Wrapper
                                 size='xs'
                                 label="Выезд"
@@ -746,12 +743,14 @@ const SportForm = ({ ymTag }: SportFormProps) => {
                                 {/* TODO Даты обязательны */}
                                 <Input
                                     onClick={e => e.preventDefault()}
-                                    value={DateTime.fromJSDate(datePickerOutValue).toFormat('yyyy-MM-dd')}
+                                    value={datePickerOutValue ? DateTime.fromJSDate(datePickerOutValue).toFormat('dd-MM-yyyy') : ''}
                                     onSelect={() => setDatePickerOutVisible(true)}
-                                    type='date'
+                                    placeholder={DateTime.fromJSDate(new Date()).plus({ day: 20 }).toFormat('dd-MM-yyyy')}
+                                    type='text'
                                     size='xs'
                                     radius={0} styles={{ input: inputStyle(formStateValidate?.dateOut) }}
                                     readOnly
+                                    onFocus={e => e.preventDefault()}
                                     error={formStateValidate?.dateOut}
                                 />
                             </Input.Wrapper>
