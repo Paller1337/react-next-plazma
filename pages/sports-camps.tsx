@@ -36,6 +36,7 @@ import SportsGrounds from '@/components/sports-camps/SportsGrounds'
 import OutdoorGym from '@/components/sports-camps/OutdoorGym'
 import Gym from '@/components/sports-camps/Gym'
 import UniversalTents from '@/components/sports-camps/UniversalTents'
+import IndoorSportsGrounds from '@/components/sports-camps/IndoorSportsGrounds'
 
 
 interface SportCampsPageProps {
@@ -1483,11 +1484,12 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     img={DEFAULTS.URL.CDN + '/img/sports-camps/beach-center.webp'}
                                     content={<BeachCenter />}
                                 />
-                                {/* <SportObjectVariant
+                                <SportObjectVariant
                                     title='Универсальные крытые площадки'
                                     desc='Универсальные крытые площадки позволяют спортсменам тренироваться круглый год, независимо от погодных условий.'
-                                    img='/img/sports-camps/corp3.png'
-                                /> */}
+                                    img='/img/sports-camps/indoor-sports-grounds.webp'
+                                    content={<IndoorSportsGrounds />}
+                                />
 
                                 <SportObjectVariant
                                     title='Уличные площадки'
@@ -1503,8 +1505,8 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 />
 
                                 <SportObjectVariant
-                                    title='Универсальные шатры'
-                                    desc='Универсальные шатры в спортивной деревне подходят для проведения тренировок и досуговых мероприятий.'
+                                    title='Летние шатры'
+                                    desc='Летние шатры в спортивной деревне подходят для проведения тренировок и досуговых мероприятий.'
                                     img={DEFAULTS.URL.CDN + '/img/sports-camps/universal-tents.webp'}
                                     content={<UniversalTents />}
                                 />

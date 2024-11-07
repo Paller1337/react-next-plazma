@@ -12,6 +12,8 @@ const IMAGES = [
     DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/4.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/5.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/6.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/7.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/beach-center/8.webp`,
 ]
 
 export default function BeachCenter() {

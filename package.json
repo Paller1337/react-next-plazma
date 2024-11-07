@@ -11,7 +11,7 @@
     "imgWebp": "node plugins/toWebp.js",
     "imgResize": "node plugins/fullhdCheck.js",
     "imgPreviews": "node plugins/genPreview.js",
-    "imgOpt": "node plugins/optimizeFull.ts"
+    "optimize": "node plugins/optimize.js"
   },
   "dependencies": {
     "@barba/core": "^2.9.7",
@@ -91,6 +91,7 @@
     "file-loader": "^6.2.0",
     "postcss": "^8.4.37",
     "postcss-preset-mantine": "^1.17.0",
-    "postcss-simple-vars": "^7.0.1"
+    "postcss-simple-vars": "^7.0.1",
+    "ts-node": "^10.9.2"
   }
 }

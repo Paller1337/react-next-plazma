@@ -54,7 +54,7 @@ export default function ModalSlider({ images, alt, }) {
         >
             {images.map(x => (
                 <Carousel.Slide key={x}>
-                    <Box w='100%' style={{ overflow: 'hidden' }}>
+                    <Box w='100%' h={'100%'} style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                         <SlideImg
                             src={x}
                             alt={alt}
@@ -74,7 +74,7 @@ export default function ModalSlider({ images, alt, }) {
                 style={{ zIndex: 10, background: 'rgba(17, 65, 126, 0.60)', backdropFilter: 'blur(2px)' }}
                 align='center' justify='center'
             >
-                <Loader color='white' size={48}  />
+                <Loader color='white' size={48} />
             </Stack>
         </Stack>
 }
