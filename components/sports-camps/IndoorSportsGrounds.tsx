@@ -6,10 +6,10 @@ import ModalSlider from './ModalSlider'
 import { DEFAULTS } from 'defaults'
 
 const IMAGES = [
-    `/img/sports-camps/indoor-sports-grounds/1.webp`,
-    `/img/sports-camps/indoor-sports-grounds/2.webp`,
-    `/img/sports-camps/indoor-sports-grounds/3.webp`,
-    `/img/sports-camps/indoor-sports-grounds/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/indoor-sports-grounds/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/indoor-sports-grounds/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/indoor-sports-grounds/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/indoor-sports-grounds/4.webp`,
 ]
 
 export default function IndoorSportsGrounds() {
