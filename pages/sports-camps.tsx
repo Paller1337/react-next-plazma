@@ -1485,8 +1485,8 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     content={<BeachCenter />}
                                 />
                                 <SportObjectVariant
-                                    title='Универсальные крытые площадки'
-                                    desc='Универсальные крытые площадки позволяют спортсменам тренироваться круглый год, независимо от погодных условий.'
+                                    title='Спортивный манеж'
+                                    desc='Спортивный манеж позволяет спортсменам тренироваться круглый год, независимо от погодных условий.'
                                     img={DEFAULTS.URL.CDN + '/img/sports-camps/indoor-sports-grounds.webp'}
                                     content={<IndoorSportsGrounds />}
                                 />
