@@ -17,6 +17,7 @@ import AppLayout from '@/components/AppLayout'
 import { YMProvider } from '@/components/ym/YMProvider'
 import { createTheme, MantineProvider, rem } from '@mantine/core'
 import ReactModal from 'react-modal'
+import { YMInitializer } from 'react-yandex-metrika'
 
 const theme = createTheme({
   fontFamily: '"Roboto Serif", serif !important',
@@ -100,11 +101,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <BnovoLoadContextProvider>
         <MantineProvider theme={theme}>
-          <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true, webVisor: true }}>
-            <AppLayout asPath={router.asPath} pageProps={pageProps}>
-              <Component {...pageProps} />
-            </AppLayout>
-          </YMProvider>
+          <YMInitializer accounts={[94296197]} options={{ trackLinks: true, clickmap: true, webvisor: true }} />
+
+          {/* <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true, webVisor: true }}> */}
+          <AppLayout asPath={router.asPath} pageProps={pageProps}>
+            <Component {...pageProps} />
+          </AppLayout>
+          {/* </YMProvider> */}
         </MantineProvider>
       </BnovoLoadContextProvider>
     </>

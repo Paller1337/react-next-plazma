@@ -24,6 +24,7 @@ import toast from 'react-hot-toast'
 import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
 import { useMetrika } from '@/components/ym/YMContext'
+import ym from 'react-yandex-metrika'
 import { DatePicker } from '@mantine/dates'
 import 'dayjs/locale/ru'
 import InputText from '@/components/form/InputText'
@@ -392,7 +393,7 @@ const SportForm = ({ ymTag }: SportFormProps) => {
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
     const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
 
-    const ym = useMetrika()
+    // const ym = useMetrika()
     const router = useRouter()
     const [cookies, setCookie, removeCookie] = useCookies(['utm']);
 
@@ -474,10 +475,11 @@ const SportForm = ({ ymTag }: SportFormProps) => {
     // }, [result])
 
     const metrikaSubmit = () => {
-        ym.reachGoal(`sportsCampSubmit`)
+        ym('reachGoal', `sportsCampSubmit`)
 
         console.log({ ymTag })
-        ym.reachGoal(`sportsCamp-${ymTag}`)
+        ym('reachGoal', `sportsCamp-${ymTag}`)
+        // ym.reachGoal(`sportsCamp-${ymTag}`)
         // toast('metrika send')
     }
 
@@ -1257,6 +1259,10 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 </Text>
                                 <Group justify='center'>
                                     <CalcButton onClick={() => openCalcModal('startPres')} />
+                                    <Button
+                                        onClick={() => ym('reachGoal', `testNewMetrika`)}
+                                    >Тест</Button>
+
                                     <Button
                                         variant='outline'
                                         c='#262626'
