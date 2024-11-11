@@ -13,6 +13,8 @@ import { Stack, Image as MImage, useMantineTheme, Button } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { IoCall, IoCallOutline, IoCallSharp } from "react-icons/io5"
 import { useRouter } from 'next/router'
+import Snowfall from 'react-snowfall'
+import { useEffect, useRef } from 'react'
 
 interface PageIndexProps {
   images: any
@@ -24,7 +26,30 @@ export default function PageIndex(props: PageIndexProps) {
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
   const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
+  const nyRef = useRef(null)
+  const snowflakes = useRef(null)
 
+  useEffect(() => {
+    if (snowflakes) {
+      const snowflake1 = document.createElement('img')
+      snowflake1.src = '/img/index/snowflake-1.webp'
+      snowflake1.width = 120
+      snowflake1.height = 120
+
+      const snowflake2 = document.createElement('img')
+      snowflake2.src = '/img/index/snowflake-2.webp'
+      snowflake2.width = 120
+      snowflake2.height = 120
+
+      const snowflake3 = document.createElement('img')
+      snowflake3.src = '/img/index/snowflake-3.webp'
+      snowflake3.width = 120
+      snowflake3.height = 120
+
+      snowflakes.current = [snowflake1, snowflake2, snowflake3]
+    }
+
+  }, [snowflakes])
   return (
     <>
       <Head>
@@ -64,7 +89,21 @@ export default function PageIndex(props: PageIndexProps) {
 
 
           <Stack maw={1170} mx={'auto'} my={48} py={0} px={queryMd ? 12 : 40} gap={24} pos={'relative'} align='center'>
-            <MImage style={{ zIndex: 11 }} src={DEFAULTS.URL.CDN + `/img/index/new-year2025${mobile ? '-min' : ''}.webp`} />
+            <Snowfall
+              wind={[0, 0]}
+              color="#fff"
+              speed={[1, 1]}
+              radius={[12, 18]}
+              images={snowflakes.current}
+              style={{
+                position: 'absolute', zIndex: 15,
+                left: 0, right: 0, top: 0, bottom: 0
+                // width: '100%', height: nyRef?.current?.offsetHeight
+              }}
+              snowflakeCount={100}
+            />
+            {/* DEFAULTS.URL.CDN +  */}
+            <MImage style={{ zIndex: 11 }} src={`/img/index/new-year2025${mobile ? '-min' : ''}.webp`} />
             <Button
               onClick={() => router.push('tel:+79101681761')}
               pos={'relative'} style={{ zIndex: 11 }} bg={'#fff'}
@@ -75,7 +114,7 @@ export default function PageIndex(props: PageIndexProps) {
                 <IoCallSharp size={queryMd ? 12 : 14} color='#262626' style={{ transform: 'scale(-1, 1)' }} />
               </Stack>
             </Button>
-            <Stack pos={'absolute'} style={{ zIndex: 10 }} left={0} right={0} top={40} bottom={28} bg={'#f6f6f6'}></Stack>
+            <Stack ref={nyRef} pos={'absolute'} style={{ zIndex: 10 }} left={0} right={0} top={40} bottom={28} bg={'#f6f6f6'}></Stack>
           </Stack>
 
           {/* New Year Booking */}
