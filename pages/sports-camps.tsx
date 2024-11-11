@@ -1259,10 +1259,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 </Text>
                                 <Group justify='center'>
                                     <CalcButton onClick={() => openCalcModal('startPres')} />
-                                    <Button
-                                        onClick={() => ym('reachGoal', `testNewMetrika`)}
-                                    >Тест</Button>
-
+                                        
                                     <Button
                                         variant='outline'
                                         c='#262626'
