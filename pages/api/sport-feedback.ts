@@ -77,16 +77,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             <p><strong>Площадка для тренировок:</strong> ${requestData.sportArea ? requestData.sportArea : 'отсутствует'}</p>
             <p><strong>Продолжительность тренировок:</strong> ${requestData.trainingDuration ? requestData.trainingDuration : 'отсутствует'}</p>
             <p><strong>Комментарий:</strong> ${requestData.comment ? requestData.comment : 'отсутствует'}</p>
-            ${body.utm ? `<p><strong>UTM:</strong> ${body.utm}</p>` : ''}
-            
+            ${body?.utm ? `<p><strong>UTM:</strong> ${body.utm}</p>` : ''}
+            ${body?.ymTag ? `<p><strong>YaMetrikaTag:</strong> ${body.ymTag}</p>` : ''}
             `
         });
     }
 
     try {
         // await send('max.paller@yandex.ru')
-        // await send('max@kplazma.ru')
-        // await send('dnd@kplazma.ru')
+        await send('max@kplazma.ru')
+        await send('dnd@kplazma.ru')
+        await send('nastya@kplazma.ru')
 
         // sport?: string,
         // dateIn?: string,
@@ -132,7 +133,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const result = await sendTelegramMessage(message)
         console.log({ result })
         // await sendMessageWithDocument(requestData, body.utm, BOT_TOKEN, CHAT_ID)
-        // await send('nastya@kplazma.ru')
+
 
         return res.status(200).json({ status: 'Сообщение отправлено!' });
     } catch (error) {

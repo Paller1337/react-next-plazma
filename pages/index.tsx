@@ -9,6 +9,10 @@ import { ReactSVG } from 'react-svg'
 import Link from 'next/link'
 import NYBookingRoom from '@/components/NYBookingRoom'
 import NYBookingSlider from '@/components/NYBookingSlider'
+import { Stack, Image as MImage, useMantineTheme, Button } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
+import { IoCall, IoCallOutline, IoCallSharp } from "react-icons/io5"
+import { useRouter } from 'next/router'
 
 interface PageIndexProps {
   images: any
@@ -16,6 +20,10 @@ interface PageIndexProps {
 
 
 export default function PageIndex(props: PageIndexProps) {
+  const router = useRouter()
+  const theme = useMantineTheme()
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
+  const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
 
   return (
     <>
@@ -53,6 +61,22 @@ export default function PageIndex(props: PageIndexProps) {
           <Promo booking video />
           {/* <Header /> */}
           <div className='base-bg' data-scroll-section></div>
+
+
+          <Stack maw={1170} mx={'auto'} my={48} py={0} px={queryMd ? 12 : 40} gap={24} pos={'relative'} align='center'>
+            <MImage style={{ zIndex: 11 }} src={`/img/index/new-year2025${mobile ? '-min' : ''}.webp`} />
+            <Button
+              onClick={() => router.push('tel:+79101681761')}
+              pos={'relative'} style={{ zIndex: 11 }} bg={'#fff'}
+              variant='outline' size={queryMd ? 'xs' : 'md'} h={'fit-content'} w={'fit-content'} color='#262626'
+              py={12} px={queryMd ? 32 : 48} radius={0} styles={{ label: { gap: 12 } }}>
+              Подробнее
+              <Stack align='center' justify='center' w={queryMd ? 18 : 24} h={queryMd ? 18 : 24} style={{ borderRadius: 24, border: '1px solid #262626' }}>
+                <IoCallSharp size={queryMd ? 12 : 14} color='#262626' style={{ transform: 'scale(-1, 1)' }} />
+              </Stack>
+            </Button>
+            <Stack pos={'absolute'} style={{ zIndex: 10 }} left={0} right={0} top={40} bottom={28} bg={'#f6f6f6'}></Stack>
+          </Stack>
 
           {/* New Year Booking */}
           {/* <div className='page-index__ny-booking ny-booking'>
