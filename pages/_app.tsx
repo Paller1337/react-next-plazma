@@ -101,7 +101,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <BnovoLoadContextProvider>
         <MantineProvider theme={theme}>
-          <YMInitializer accounts={[94296197]} options={{ trackLinks: true, clickmap: true, webvisor: true }} />
+          <YMInitializer
+            accounts={[94296197]}
+            options={{ trackLinks: true, clickmap: true, webvisor: true }}
+            version='2'
+          />
 
           {/* <YMProvider counterId={94296197} options={{ trackLinks: true, clickmap: true, webVisor: true }}> */}
           <AppLayout asPath={router.asPath} pageProps={pageProps}>

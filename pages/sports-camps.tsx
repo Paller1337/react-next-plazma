@@ -368,6 +368,7 @@ const FormPhotos = () => {
 
             <BackgroundImage {...styles}
                 src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/5.webp'}
+                onClick={() => ym('reachGoal', `YM2Test`)}
             />
         </Stack>
     )
@@ -1259,7 +1260,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                 </Text>
                                 <Group justify='center'>
                                     <CalcButton onClick={() => openCalcModal('startPres')} />
-                                        
+
                                     <Button
                                         variant='outline'
                                         c='#262626'
