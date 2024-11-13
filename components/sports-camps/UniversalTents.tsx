@@ -12,7 +12,7 @@ const IMAGES = [
     DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/4.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/5.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/6.webp`,
-    DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/7.webp`,
+    // DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/7.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/8.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/9.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/universal-tents/10.webp`,
