@@ -10,6 +10,9 @@ const IMAGES = [
     DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/2.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/3.webp`,
     DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/5.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/6.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/outdoor-gym/7.webp`,
 ]
 
 export default function OutdoorGym() {
