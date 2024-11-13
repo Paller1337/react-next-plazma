@@ -374,7 +374,7 @@ const FormPhotos = () => {
             <BackgroundImage {...styles}
                 src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/6.webp'}
             />
-            
+
             <BackgroundImage {...styles}
                 src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/7.webp'}
             />
@@ -1562,7 +1562,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     pb={mobile ? 24 : 196}
                                     style={{ height: 'fit-content' }}
                                 >
-                                    <Stack gap={0} p={0} w={'100%'} align='center'>
+                                    <Stack gap={0} p={0} w={'100%'} align='center' mah={'calc(100vh - 40px)'} style={{ overflow: 'scroll' }}>
                                         <SportForm ymTag='endPage' />
                                     </Stack>
                                 </Grid.Col>
