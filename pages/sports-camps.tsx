@@ -370,6 +370,14 @@ const FormPhotos = () => {
                 src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/5.webp'}
                 onClick={() => ym('reachGoal', `YM2Test`)}
             />
+
+            <BackgroundImage {...styles}
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/6.webp'}
+            />
+            
+            <BackgroundImage {...styles}
+                src={DEFAULTS.URL.CDN + '/img/sports-camps/photos/7.webp'}
+            />
         </Stack>
     )
 }
