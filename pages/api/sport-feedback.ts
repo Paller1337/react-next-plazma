@@ -17,6 +17,31 @@ const CHAT_ID = '-1001699514488'
 // const BOT_TOKEN = '6855526888:AAEDn9Llk6k8gd_3T9eRHMwGTzIB9225xuY'
 // const CHAT_ID = '-1001934278839'
 
+function escapeMarkdown(text) {
+    const replacements = {
+        '*': '\*',
+        '_': '\_',
+        '[': '\[',
+        ']': '\]',
+        '(': '\(',
+        ')': '\)',
+        '~': '\~',
+        '`': '\`',
+        '>': '\>',
+        '#': '\#',
+        '+': '\+',
+        '-': '\-',
+        '=': '\=',
+        '|': '\|',
+        '{': '\{',
+        '}': '\}',
+        '.': '\.',
+        '!': '\!'
+    };
+    return text.replace(/[\*\_\[\]\(\)\~\`\>\#\+\-\=\|\{\}\.\!]/g, match => replacements[match]);
+}
+
+
 async function sendTelegramMessage(message) {
     const chatId = CHAT_ID; // chat_id 
 
@@ -74,8 +99,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             <p><strong>Выезд:</strong> ${requestData.dateOut ? formatOut : 'отсутствует'}</p>
             <p><strong>ФИО:</strong> ${requestData.name ? requestData.name : 'отсутствует'}</p>
             <p><strong>Телефон:</strong> ${requestData.phone ? requestData.phone : 'отсутствует'}</p>
-            <p><strong>Площадка для тренировок:</strong> ${requestData.sportArea ? requestData.sportArea : 'отсутствует'}</p>
-            <p><strong>Продолжительность тренировок:</strong> ${requestData.trainingDuration ? requestData.trainingDuration : 'отсутствует'}</p>
             <p><strong>Комментарий:</strong> ${requestData.comment ? requestData.comment : 'отсутствует'}</p>
             ${body?.utm ? `<p><strong>UTM:</strong> ${body.utm}</p>` : ''}
             ${body?.ymTag ? `<p><strong>YaMetrikaTag:</strong> ${body.ymTag}</p>` : ''}
@@ -116,19 +139,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         //     `* Комментарий:* ${requestData.comment ? requestData.comment : ' отсутствует'}\n` +
 
         //     `${body.utm ? '* UTM:* ' + body.utm : ''}`);
+        // const message = `*Заявка с kplazma.ru *\n` +
+        //     `\n*Вид спорта:* ${requestData.sport ? requestData.sport : ' отсутствует'}` +
+        //     `\n*Название команды:* ${requestData.team?.name ? requestData.team?.name : ' отсутствует'}` +
+        //     `\n*Количество человек:* ${requestData.team?.size ? requestData.team?.size : ' отсутствует'}` +
+        //     `\n*Заезд:* ${requestData.dateIn ? formatIn : ' отсутствует'}` +
+        //     `\n*Выезд:* ${requestData.dateOut ? formatOut : ' отсутствует'}` +
+        //     `\n\n*ФИО:* ${requestData.name ? requestData.name : ' отсутствует'}` +
+        //     `\n*Телефон:* ${requestData.phone ? requestData.phone : ' отсутствует'}` +
+        //     // `*Площадка для тренировок:* \n${requestData.sportArea ? requestData.sportArea : ' отсутствует'}\n\n` +
+        //     // `*Продолжительность тренировок:* \n${requestData.trainingDuration ? requestData.trainingDuration : ' отсутствует'}\n\n` +
+        //     `\n*Комментарий:* \n${requestData.comment ? requestData.comment : ' отсутствует'}\n` +
+        //     `${body?.utm ? '\n*UTM:* ' + body.utm : ''}` +
+        //     `${body?.ymTag ? '\n*YaMetrikaTag:* ' + body.ymTag : ''}`
+
         const message = `*Заявка с kplazma.ru *\n` +
-            `\n*Вид спорта:* ${requestData.sport ? requestData.sport : ' отсутствует'}` +
-            `\n*Название команды:* ${requestData.team?.name ? requestData.team?.name : ' отсутствует'}` +
-            `\n*Количество человек:* ${requestData.team?.size ? requestData.team?.size : ' отсутствует'}` +
-            `\n*Заезд:* ${requestData.dateIn ? formatIn : ' отсутствует'}` +
-            `\n*Выезд:* ${requestData.dateOut ? formatOut : ' отсутствует'}` +
-            `\n\n*ФИО:* ${requestData.name ? requestData.name : ' отсутствует'}` +
-            `\n*Телефон:* ${requestData.phone ? requestData.phone : ' отсутствует'}` +
-            // `*Площадка для тренировок:* \n${requestData.sportArea ? requestData.sportArea : ' отсутствует'}\n\n` +
-            // `*Продолжительность тренировок:* \n${requestData.trainingDuration ? requestData.trainingDuration : ' отсутствует'}\n\n` +
-            `\n*Комментарий:* \n${requestData.comment ? requestData.comment : ' отсутствует'}\n` +
-            `${body?.utm ? '\n*UTM:* ' + body.utm : ''}` +
-            `${body?.ymTag ? '\n*YaMetrikaTag:* ' + body.ymTag : ''}`
+            `\n*Вид спорта:* ${requestData.sport ? escapeMarkdown(requestData.sport) : ' отсутствует'}` +
+            `\n*Название команды:* ${requestData.team?.name ? escapeMarkdown(requestData.team.name) : ' отсутствует'}` +
+            `\n*Количество человек:* ${requestData.team?.size ? escapeMarkdown(requestData.team.size.toString()) : ' отсутствует'}` +
+            `\n*Заезд:* ${requestData.dateIn ? escapeMarkdown(formatIn) : ' отсутствует'}` +
+            `\n*Выезд:* ${requestData.dateOut ? escapeMarkdown(formatOut) : ' отсутствует'}` +
+            `\n\n*ФИО:* ${requestData.name ? escapeMarkdown(requestData.name) : ' отсутствует'}` +
+            `\n*Телефон:* ${requestData.phone ? escapeMarkdown(requestData.phone) : ' отсутствует'}` +
+            `\n*Комментарий:* \n${requestData.comment ? escapeMarkdown(requestData.comment) : ' отсутствует'}` +
+            `${body?.utm ? '\n*UTM:* ' + escapeMarkdown(body.utm) : ''}` +
+            `${body?.ymTag ? '\n*YaMetrikaTag:* ' + escapeMarkdown(body.ymTag) : ''}`;
+
 
         const result = await sendTelegramMessage(message)
         console.log({ result })

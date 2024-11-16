@@ -67,7 +67,7 @@ export interface SportRequestFormData {
     dateOut?: string,
     team?: {
         name: string,
-        size: 0,
+        size: number,
     },
     sportArea?: string,
     trainingDuration?: string,
