@@ -109,8 +109,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
         // await send('max.paller@yandex.ru')
         await send('max@kplazma.ru')
-        await send('dnd@kplazma.ru')
-        await send('nastya@kplazma.ru')
+        // await send('dnd@kplazma.ru')
+        // await send('nastya@kplazma.ru')
 
         // sport?: string,
         // dateIn?: string,
