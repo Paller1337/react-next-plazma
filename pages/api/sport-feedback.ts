@@ -165,7 +165,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             `${body?.utm ? '\n*UTM:* ' + escapeMarkdown(body.utm) : ''}` +
             `${body?.ymTag ? '\n*YaMetrikaTag:* ' + escapeMarkdown(body.ymTag) : ''}`;
 
-
+        console.log({ message })
         const result = await sendTelegramMessage(message)
         console.log({ result })
         // await sendMessageWithDocument(requestData, body.utm, BOT_TOKEN, CHAT_ID)
