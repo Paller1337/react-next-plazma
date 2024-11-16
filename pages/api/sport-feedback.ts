@@ -153,7 +153,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         //     `${body?.utm ? '\n*UTM:* ' + body.utm : ''}` +
         //     `${body?.ymTag ? '\n*YaMetrikaTag:* ' + body.ymTag : ''}`
 
-        const message = `*Заявка с kplazma.ru *\n` +
+        const message = `*Заявка с kplazma.ru* \n` +
             `\n*Вид спорта:* ${requestData.sport ? escapeMarkdown(requestData.sport) : ' отсутствует'}` +
             `\n*Название команды:* ${requestData.team?.name ? escapeMarkdown(requestData.team.name) : ' отсутствует'}` +
             `\n*Количество человек:* ${requestData.team?.size ? escapeMarkdown(requestData.team.size.toString()) : ' отсутствует'}` +
