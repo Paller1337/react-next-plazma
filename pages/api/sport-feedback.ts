@@ -19,26 +19,28 @@ const CHAT_ID = '-1001699514488'
 
 function escapeMarkdown(text) {
     const replacements = {
-        '*': '\*',
-        '_': '\_',
-        '[': '\[',
-        ']': '\]',
-        '(': '\(',
-        ')': '\)',
-        '~': '\~',
-        '`': '\`',
-        '>': '\>',
-        '#': '\#',
-        '+': '\+',
-        '-': '\-',
-        '=': '\=',
-        '|': '\|',
-        '{': '\{',
-        '}': '\}',
-        '.': '\.',
-        '!': '\!'
+        '*': '\\*',
+        '_': '\\_',
+        '[': '\\[',
+        ']': '\\]',
+        '(': '\\(',
+        ')': '\\)',
+        '~': '\\~',
+        '`': '\\`',
+        '>': '\\>',
+        '#': '\\#',
+        '+': '+',
+        '-': '-',
+        '=': '\\=',
+        '|': '\\|',
+        '{': '\\{',
+        '}': '\\}',
+        '.': '.',
+        '!': '!'
     };
-    return text.replace(/[\*\_\[\]\(\)\~\`\>\#\+\-\=\|\{\}\.\!]/g, match => replacements[match]);
+    const res = text.replace(/[\*\_\[\]\(\)\~\`\>\#\+\-\=\|\{\}\.\!]/g, match => replacements[match]);
+    console.log({ res })
+    return res
 }
 
 
@@ -164,6 +166,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             `\n*Комментарий:* \n${requestData.comment ? escapeMarkdown(requestData.comment) : ' отсутствует'}` +
             `${body?.utm ? '\n*UTM:* ' + escapeMarkdown(body.utm) : ''}` +
             `${body?.ymTag ? '\n*YaMetrikaTag:* ' + escapeMarkdown(body.ymTag) : ''}`;
+
 
         console.log({ message })
         const result = await sendTelegramMessage(message)
