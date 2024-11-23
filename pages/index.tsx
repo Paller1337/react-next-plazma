@@ -102,8 +102,27 @@ export default function PageIndex(props: PageIndexProps) {
               }}
               snowflakeCount={100}
             />
-            
-            <MImage style={{ zIndex: 11 }} src={DEFAULTS.URL.CDN + `/img/index/new-year2025${mobile ? '-min' : ''}.webp`} />
+
+            <MImage style={{ zIndex: 11 }} src={DEFAULTS.URL.CDN + `/img/index/new-year2025/adv${mobile ? '-min' : ''}.webp`} />
+            <Stack ref={nyRef} pos={'absolute'} style={{ zIndex: 10 }} left={0} right={0} top={40} bottom={28} bg={'#f6f6f6'}></Stack>
+          </Stack>
+
+          <Stack maw={1170} mx={'auto'} my={48} py={0} px={queryMd ? 12 : 40} gap={24} pos={'relative'} align='center'>
+            <Snowfall
+              wind={[0, 0]}
+              color="#fff"
+              speed={[1, 1]}
+              radius={[12, 18]}
+              images={snowflakes.current}
+              style={{
+                position: 'absolute', zIndex: 15,
+                left: 0, right: 0, top: 0, bottom: 0
+                // width: '100%', height: nyRef?.current?.offsetHeight
+              }}
+              snowflakeCount={100}
+            />
+
+            <MImage style={{ zIndex: 11 }} src={DEFAULTS.URL.CDN + `/img/index/new-year2025/program${mobile ? '-min' : ''}.webp`} />
             <Button
               onClick={() => router.push('tel:+79101681761')}
               pos={'relative'} style={{ zIndex: 11 }} bg={'#fff'}
