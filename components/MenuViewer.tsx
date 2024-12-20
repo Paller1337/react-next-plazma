@@ -4,6 +4,11 @@ import { Document, Page } from 'react-pdf'
 const cdn = 'https://cdn0.kplazma.ru'
 const menus = [
     {
+        name: 'Новогоднее меню',
+        img: '/pdf/ny2025.pdf',
+        sM: .8,
+    },
+    {
         name: 'Меню ресторана',
         img: '/pdf/rest.pdf',
         sM: 1,
@@ -21,7 +26,7 @@ const menus = [
     {
         name: 'Детское меню',
         img: '/pdf/children.pdf',
-        sM: .8,
+        sM: .6,
     },
     // {
     //     name: 'Чайная карта',
