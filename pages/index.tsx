@@ -88,7 +88,7 @@ export default function PageIndex(props: PageIndexProps) {
           <div className='base-bg' data-scroll-section></div>
 
 
-          <Stack maw={1170} mx={'auto'} my={48} py={0} px={queryMd ? 12 : 40} gap={24} pos={'relative'} align='center'>
+          {/* <Stack maw={1170} mx={'auto'} my={48} py={0} px={queryMd ? 12 : 40} gap={24} pos={'relative'} align='center'>
             <Snowfall
               wind={[0, 0]}
               color="#fff"
@@ -134,7 +134,7 @@ export default function PageIndex(props: PageIndexProps) {
               </Stack>
             </Button>
             <Stack ref={nyRef} pos={'absolute'} style={{ zIndex: 10 }} left={0} right={0} top={40} bottom={28} bg={'#f6f6f6'}></Stack>
-          </Stack>
+          </Stack> */}
 
           {/* New Year Booking */}
           {/* <div className='page-index__ny-booking ny-booking'>
