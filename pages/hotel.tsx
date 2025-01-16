@@ -93,7 +93,7 @@ export default function PageHotel(props: PageHotelProps) {
 
                     <div className='page-saunas__attention container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration}
-                        data-aos-once={DEFAULTS.AOS.once} style={{paddingTop: 0}}>
+                        data-aos-once={DEFAULTS.AOS.once} style={{ paddingTop: 0 }}>
                         <TextBlock title={{ type: 'h2', text: 'Правила бронирования' }}
                             style={{ paddingTop: 0, paddingBottom: 0 }}
                         />
@@ -110,12 +110,22 @@ export default function PageHotel(props: PageHotelProps) {
                             <span className='text-normal'>
                                 Для возврата денежных средств позвоните 89101681761 или 89308977701.
                             </span>
+
+
                             <span className='text-normal'>
                                 Незаезд штрафуется в размере первых суток проживания.
                             </span>
 
                             <span className='text-normal'>
-                                При заезде администратор имеет право взять с гостей депозит в размере от 2000 до 10000 рублей.
+                                Островок и стоянка включены в стоимость.
+                            </span>
+
+                            <span className='text-normal'>
+                                Паспорта всех гостей обязательны.
+                            </span>
+
+                            <span className='text-normal'>
+                                При заезде вносится страховой депозит в размере от 5000 до 10000 рублей.
                             </span>
                         </div>
                     </div>
@@ -129,7 +139,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     key={'room-' + x.tlid.toString()}
                                     tlid={x.tlid}
                                     bnid={x.bnid}
-                                    
+                                    alert={x.alert}
                                     title={x.title}
                                     description={x.description}
                                     pets={x.pets}

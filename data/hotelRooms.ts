@@ -26,6 +26,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Дача',
         description: 'Расположенный в дачном дворике дом с панорамными окнами, в котором есть мини-кухня с посудой, две односпальные кровати, раскладывающийся диван и санузел.',
         pets: true,
+        alert: true,
         images: [
             '/img/hotel/room-previews/dacha/1.webp',
             '/img/hotel/room-previews/dacha/2.webp',
@@ -75,6 +76,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Домик на набережной',
         description: 'Уютный домик на набережной, включающий в себя мини-кухню, душевую, спальную и зал в панорамными окнами.',
         pets: true,
+        alert: true,
         images: [
             '/img/hotel/room-previews/module-house/1.webp',
             '/img/hotel/room-previews/module-house/2.webp',
@@ -129,6 +131,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Австрийский таунхаус',
         description: 'Двухэтажный таунхаус в современном стиле с мини-кухней, баней. Два варианта размещения: с русской парной или финской сауной.',
         pets: true,
+        alert: true,
         images: [
             '/img/hotel/room-previews/austr-townhouse/1.webp',
             '/img/hotel/room-previews/austr-townhouse/2.webp',
@@ -192,6 +195,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Делюкс на набережной двухместный',
         description: 'Корпус на набережной с прекрасным видом на водоём.',
         pets: false,
+        alert: false,
         images: [
             '/img/hotel/room-previews/deluxe-5-corps/1.webp',
             '/img/hotel/room-previews/deluxe-5-corps/2.webp',
@@ -229,6 +233,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Делюкс на набережной трехместный',
         description: 'Трехместные номера с тремя отдельными кроватями в корпусе на набережной.',
         pets: false,
+        alert: false,
         images: [
             '/img/hotel/room-previews/deluxe-5-corps/1.webp',
             '/img/hotel/room-previews/deluxe-5-corps/4.webp',
@@ -267,6 +272,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Номер Комфорт с сауной (5)',
         description: 'Однокомнатный номер для двоих с сауной.',
         pets: false,
+        alert: true,
         images: [
             '/img/hotel/room-previews/comfort-5/1.webp',
             '/img/hotel/room-previews/comfort-5/2.webp',
@@ -353,6 +359,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Номер Комфорт',
         description: 'Однокомнатный номер для двоих. Отдельный вход с верандой.',
         pets: false,
+        alert: true,
         images: [
             '/img/hotel/room-previews/comfort/1.webp',
             '/img/hotel/room-previews/comfort/2.webp',
@@ -402,6 +409,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Номер Комфорт с сауной',
         description: 'Однокомнатный номер для двоих. Отдельный вход с верандой.',
         pets: false,
+        alert: true,
         images: [
             '/img/hotel/room-previews/comfort-sauna/1.webp',
             '/img/hotel/room-previews/comfort-sauna/2.webp',
@@ -454,6 +462,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Коттедж',
         description: `Уютный двухэтажный домик c гостинной, кухней и двумя спальнями. Во дворе мангал, стол, лавочки.`,
         pets: true,
+        alert: true,
         images: [
             '/img/hotel/room-previews/cottage/1.webp',
             '/img/hotel/room-previews/cottage/2.webp',
@@ -508,6 +517,7 @@ export const hotelRooms: RoomObjectProps[] = [
         title: 'Таунхаус',
         description: 'Двухэтажные апартаменты. Возле каждого таунхауса – веранда с местами для отдыха на свежем воздухе и мангалом.',
         pets: true,
+        alert: true,
         images: [
             '/img/hotel/room-previews/townhouse/1.webp',
             '/img/hotel/room-previews/townhouse/2.webp',

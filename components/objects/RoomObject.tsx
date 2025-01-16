@@ -21,6 +21,7 @@ export interface RoomObjectProps {
     title: string,
     description: string,
     pets: boolean,
+    alert: boolean,
     images: string[],
     previews: string[]
     size: string,
@@ -219,6 +220,11 @@ export default function RoomObject(data: RoomObjectProps) {
                 {data.pets ?
                     <span className='hotel-room__text pets'>
                         Возможно размещение с животными (до 7 кг) + 500 рублей/сутки
+                    </span> : <></>}
+
+                {data.alert ?
+                    <span className='hotel-room__text'>
+                        Островок и стоянка включены, паспорта гостей обязательны, страховой депозит при заезде — 5000₽–10000₽.
                     </span> : <></>}
                 <span className='hotel-room__text bold'>{data.size}</span>
 
