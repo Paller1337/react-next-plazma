@@ -224,7 +224,8 @@ export default function RoomObject(data: RoomObjectProps) {
 
                 {data.alert ?
                     <span className='hotel-room__text'>
-                        Островок и стоянка включены, паспорта гостей обязательны, страховой депозит при заезде — 5000₽–10000₽.
+                        {/* Островок и стоянка включены,  */}
+                        Паспорта гостей обязательны, страховой депозит при заезде — 5000₽–10000₽.
                     </span> : <></>}
                 <span className='hotel-room__text bold'>{data.size}</span>
 
