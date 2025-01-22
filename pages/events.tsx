@@ -66,7 +66,7 @@ export default function PageEvents() {
                                 <h2>БАНКЕТЫ</h2>
                                 <span>
                                     Пригласите своих гостей в наш банкетный зал и создайте яркие воспоминания. <br></br>
-                                    <b>Минимальный заказ - 3000 руб. на человека</b>
+                                    <b>Минимальный заказ - 3500 руб. на человека</b>
                                 </span>
                                 <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
@@ -203,13 +203,13 @@ export default function PageEvents() {
                                 <h2>КОРПОРАТИВЫ</h2>
                                 <span>
                                     Отвлекитесь от деловой обстановки вместе со своими коллегами. <br></br>
-                                    <b>Минимальный заказ - 3000 руб. на человека</b>
+                                    <b>Минимальный заказ - 3500 руб. на человека</b>
                                 </span>
                                 <Link href={DEFAULTS.MENU.BANQUET} className='btn btn_black'>Банкетное меню</Link>
                             </div>
                             <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                                <Image src='/img/events/corp-prev.webp' width={670} height={485} alt=''
+                                <Image src='/img/events/corp-slides/1.webp' width={670} height={485} alt=''
                                     loader={vkCloudLoader}
                                 />
                             </div>
