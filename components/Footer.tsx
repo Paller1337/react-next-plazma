@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import toast from 'react-hot-toast'
 import copy from './functions/copy'
 import { DEFAULTS } from 'defaults'
+import { Group, Stack, Text } from '@mantine/core'
 
 interface FooterProps {
 
@@ -132,27 +133,33 @@ export default function Footer(props: FooterProps) {
                         Парк-отель «PLAZMA»
                     </div>
 
-                    <div className='footer-mobile__feedback'>
-                        <span className='text'>
-                            Мы ответим на любые ваши вопросы
-                        </span>
+                    <Group justify='space-between' align='flex-start'>
+                        <Stack>
+                            <Group>
+                                <Text className='text' c={'#fff'}>Ресепшен</Text>
+                                <a className='btn btn_white' href='tel: +79101681761'>Позвонить</a>
+                            </Group>
 
-                        <a className='btn btn_white' href='tel: +79101681761'>Позвонить</a>
+                            <Group>
+                                <Text className='text' c={'#fff'}>Ресторан</Text>
+                                <a className='btn btn_white' href='tel: +79202756312'>Позвонить</a>
+                            </Group>
+                        </Stack>
 
-                    </div>
+                        <div className='social-container'>
+                            <Link className='social-icon vk' href='https://vk.com/park_hotel_plazma' target='blank' ></Link>
+                            <Link className='social-icon tg' href='https://t.me/plazmadonskoy' target='blank' ></Link>
+                            {/* <div className='social-icon inst'></div> */}
+                        </div>
+                    </Group>
 
-                    <div className='social-container'>
-                        <Link className='social-icon vk' href='https://vk.com/park_hotel_plazma' target='blank' ></Link>
-                        <Link className='social-icon tg' href='https://t.me/plazmadonskoy' target='blank' ></Link>
-                        {/* <div className='social-icon inst'></div> */}
-                    </div>
 
                     <div className='footer-mobile__contact-container'>
                         <span className='footer-mobile__contact-text copy-click address'
                             onClick={() => copy('Тульская область, г. Донской, ул. Герцена, д. 14', 'Адрес скопирован', { metric: 'address' })}
                         >Тульская область, г. Донской, ул. Герцена, д. 14</span>
                     </div>
-                    
+
                     <div className='footer-mobile__info'>
                         <Link href='#' className='footer-mobile__contact-link'>Политика конфидециальности</Link>
                         <a

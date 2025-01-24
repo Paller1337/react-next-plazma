@@ -225,7 +225,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 {data.alert ?
                     <span className='hotel-room__text'>
                         {/* Островок и стоянка включены,  */}
-                        Паспорта гостей обязательны, страховой депозит при заезде — 5000₽–10000₽.
+                        Оригинал документа, удостоверяющего личность, обязателен для всех гостей; при заезде вносится страховой депозит в размере 5000–10000 рублей.
                     </span> : <></>}
                 <span className='hotel-room__text bold'>{data.size}</span>
 

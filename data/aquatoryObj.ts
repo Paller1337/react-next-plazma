@@ -15,13 +15,13 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             {
                 cardName: "Взрослые",
                 cardAttr: "(с 11 лет и старше)",
-                cardPrice: "700 рублей",
+                cardPrice: "800 рублей",
                 cardSize: "min"
             },
             {
                 cardName: "Дети",
                 cardAttr: "(до 11 лет)",
-                cardPrice: "500 рублей",
+                cardPrice: "800 рублей",
                 cardSize: "min"
             },
             {
@@ -36,17 +36,16 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
 
         includedItems: [
             "Шезлонг",
-            // "Матрас на шезлонг",
+            "Полотенце",
             "Горка для детей",
             "Зонт"
         ],
 
         includedImg: '/img/aquatory/pen-4.webp',
 
-        additionalItems: [
-            "Аренда полотенца (180х100) – 200 рублей."
-        ],
-        // additionalText: ""
+        //additionalItems: [
+        //    "Аренда полотенца (180х100) – 200 рублей."
+        //],
     },
 
     // {

@@ -139,7 +139,7 @@ export default function PageAquatory() {
                         </div>
                     </div>
 
-                    <div id='AquatoryPrice' className='page-aquatory__price container' data-scroll-section
+                    {/* <div id='AquatoryPrice' className='page-aquatory__price container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <div className='worktime-section'>
                             <div className='aquatory-worktime__heading'>
@@ -182,15 +182,12 @@ export default function PageAquatory() {
                                     </div>
                                 </div>
                             </div>
-                            {/* <span className='worktime-section__text' style={{ maxWidth: '100%', fontWeight: 'bold' }}>
-                                В период с 1.05.24 по 24.05.24 на вход на территорию акватории
-                                действует фиксированная 200 рублей(взрослые и дети).</span> */}
                         </div>
 
                         <picture className='page-aquatory__price-img'>
                             <Image width={1170} height={700} src={'/img/aquatory/5.webp'} alt='' loader={vkCloudLoader} />
                         </picture>
-                    </div>
+                    </div> */}
 
 
                     <div id='AquatoryPrice' className='page-aquatory__price reverse container' data-scroll-section
@@ -244,8 +241,8 @@ export default function PageAquatory() {
                                     <li className='page-aquatory__list-item'>2 детские площадки</li>
                                     <li className='page-aquatory__list-item'>Детская песочница</li>
                                     <li className='page-aquatory__list-item'>Воркаут площадка</li>
-                                    <li className='page-aquatory__list-item'>Беседки с мангалом (оплачивается дополнительно)
-                                    </li>
+                                    {/* <li className='page-aquatory__list-item'>Беседки с мангалом (оплачивается дополнительно)
+                                    </li> */}
                                     <li className='page-aquatory__list-item'>Полуостров с бассейном (оплачивается дополнительно)
                                     </li>
                                     <li className='page-aquatory__list-item'>Универсальные спортивные площадки (оплачивается дополнительно)</li>
@@ -259,7 +256,7 @@ export default function PageAquatory() {
                             </picture>
                         </div>
 
-                        <div className='aquatory-props__second'
+                        {/* <div className='aquatory-props__second'
                             data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                             <picture className='aquatory-props__img'>
                                 <Image width={1170} height={638} src={'/img/aquatory/7.webp'} alt='' loader={vkCloudLoader} />
@@ -279,7 +276,7 @@ export default function PageAquatory() {
                                     <li className='page-aquatory__list-item'>Для игры в волейбол имеются мячи (на прокат)</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {aquatoryObjData.map((x, i) =>

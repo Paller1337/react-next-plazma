@@ -22,7 +22,7 @@ export interface AquatoryObjectProps {
     includedItems: string[],
 
     includedImg: StaticImageData | string,
-    additionalItems: string[],
+    additionalItems?: string[],
     additionalText?: string
 }
 
@@ -77,7 +77,7 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                 {data.warningText ? <span className='warning' dangerouslySetInnerHTML={{ __html: data.warningText }}></span> : ''}
             </div>
 
-           {/*} {data.id === 'pen' ?
+            {/*} {data.id === 'pen' ?
                 <div className='aquatory-object__ad-pen'>
                     <h3 className='heading'>Взрослая пятница 16+</h3>
                     <span className='text'>
@@ -100,15 +100,16 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                             )}
                         </ul>
                     </div>
-
-                    <div className='page-aquatory__list'>
-                        <span className='page-aquatory__list-title'>Дополнительно:</span>
-                        <ul>
-                            {data.additionalItems.map((x, i) =>
-                                <li key={i} className='page-aquatory__list-item'>{x}</li>
-                            )}
-                        </ul>
-                    </div>
+                    {data.additionalItems ?
+                        <div className='page-aquatory__list'>
+                            <span className='page-aquatory__list-title'>Дополнительно:</span>
+                            <ul>
+                                {data.additionalItems?.map((x, i) =>
+                                    <li key={i} className='page-aquatory__list-item'>{x}</li>
+                                )}
+                            </ul>
+                        </div>
+                        : <></>}
                 </div>
 
                 <picture className='aquatory-object__include-img'>
