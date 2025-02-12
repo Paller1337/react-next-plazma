@@ -276,7 +276,7 @@ export const hotelRooms: RoomObjectProps[] = [
     {
         tlid: 245517,
         bnid: 30814,
-        title: 'Номер Комфорт с сауной (5)',
+        title: 'Номер Комфорт с сауной',
         description: 'Однокомнатный номер для двоих с сауной.',
         pets: false,
         alert: true,
@@ -419,7 +419,7 @@ export const hotelRooms: RoomObjectProps[] = [
     {
         tlid: 245529,
         bnid: 16536,
-        title: 'Номер Комфорт с сауной',
+        title: 'Улучшенный номер с сауной',
         description: 'Однокомнатный номер для двоих. Отдельный вход с верандой.',
         pets: false,
         alert: true,
@@ -429,8 +429,6 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img/hotel/room-previews/comfort-sauna/3.webp',
             '/img/hotel/room-previews/comfort-sauna/4.webp',
             '/img/hotel/room-previews/comfort-sauna/5.webp',
-            '/img/hotel/room-previews/comfort-sauna/6.webp',
-            '/img/hotel/room-previews/comfort-sauna/7.webp',
         ],
         previews: [
             '/img-previews/hotel/room-previews/comfort-sauna/1.webp',
@@ -438,8 +436,6 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort-sauna/3.webp',
             '/img-previews/hotel/room-previews/comfort-sauna/4.webp',
             '/img-previews/hotel/room-previews/comfort-sauna/5.webp',
-            '/img-previews/hotel/room-previews/comfort-sauna/6.webp',
-            '/img-previews/hotel/room-previews/comfort-sauna/7.webp',
         ],
         size: 'Размер номера 33 м².',
 
