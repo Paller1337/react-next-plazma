@@ -28,6 +28,11 @@ const menus = [
         img: '/pdf/children.pdf',
         sM: .6,
     },
+    {
+        name: 'Завтраки',
+        img: '/pdf/breakfast.pdf',
+        sM: .8,
+    },
     // {
     //     name: 'Чайная карта',
     //     img: '/pdf/tea.pdf',
