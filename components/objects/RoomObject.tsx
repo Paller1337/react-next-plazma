@@ -14,6 +14,12 @@ import * as Icon from 'react-feather'
 import Aos from 'aos'
 import { DEFAULTS } from 'defaults'
 import { ReactSVG } from 'react-svg'
+import { Modal, Stack, Text } from '@mantine/core'
+import PetsRulesModal from '../modals/PetsRulesModal'
+import { pdfjs } from 'react-pdf'
+import BreakfastModal from '../modals/BreakfastModal'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`
 
 export interface RoomObjectProps {
     tlid: number | number[],
@@ -25,6 +31,7 @@ export interface RoomObjectProps {
     images: string[],
     previews: string[]
     size: string,
+    count?: number,
     price: {
         name: string,
         value: string[],
@@ -219,7 +226,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 </span>
                 {data.pets ?
                     <span className='hotel-room__text pets'>
-                        Возможно размещение с животными (до 7 кг) + 500 рублей/сутки
+                        Возможно размещение с животными (до 7 кг) + 1000 рублей/сутки
                     </span> : <></>}
 
                 {data.alert ?
@@ -228,17 +235,21 @@ export default function RoomObject(data: RoomObjectProps) {
                         Оригинал документа, удостоверяющего личность, обязателен для всех гостей; при заезде вносится страховой депозит в размере 5000–10000 рублей.
                     </span> : <></>}
                 <span className='hotel-room__text bold'>{data.size}</span>
-
+                <span className='hotel-room__text bold'>Количество номеров: {data.count}</span>
+                <Stack py={12} gap={4}>
+                    <PetsRulesModal />
+                    <BreakfastModal />
+                </Stack>
                 {/* <div className='btn booking-btn'>Забронировать</div> */}
                 <BookingRoom roomId={roomId} targetId={`${roomId}-target`} />
                 <div className='hotel-room__attrs'>
                     {/* {data.price ? */}
                     <div className='hotel-room__price'>
                         {data.price?.map((price, i) =>
-                            <div key={price.name} className='hotel-room__attr-item'>
+                            <div key={price.name + i} className='hotel-room__attr-item'>
                                 <span className='hotel-room__text attr-name'>{price.name}</span>
-                                {price.value.map(x =>
-                                    <span key={x} className='hotel-room__text attr-value' dangerouslySetInnerHTML={{
+                                {price.value.map((x, index) =>
+                                    <span key={x + index} className='hotel-room__text attr-value' dangerouslySetInnerHTML={{
                                         __html: x
                                     }}
                                     />)}
@@ -271,6 +282,5 @@ export default function RoomObject(data: RoomObjectProps) {
 
             </div >
         </div >
-        {/* </Suspense> */}
     </>)
 }

@@ -46,7 +46,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/dacha/7.webp',
         ],
         size: 'Размер номера 28 м².', // Добавить площадь терассы 9 кв.м.
-
+        count: 8,
         price: [
             { name: 'Цена вс-чт', value: ['<b>6200 руб/сутки</b>',] },
             { name: 'Цена пт-сб', value: ['<span class="op">7880</span><b>6200 руб/сутки</b>',] },
@@ -100,7 +100,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/module-house/8.webp',
         ],
         size: 'Размер номера 48 м².', // Добавить площадь терассы 9 кв.м.
-
+        count: 8,
         price: [
             // { name: 'Цена', value: ['<b>9200 руб/сутки</b>',] },
             // { name: '', value: [saleTitle,] },
@@ -161,7 +161,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/austr-townhouse/10.webp',
         ],
         size: 'Размер номера 145 м².',
-
+        count: 2,
         price: [
             // { name: 'Цена вс-чт', value: ['<b>15950 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>18950 руб/сутки</b>',] },
@@ -218,7 +218,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/deluxe-5-corps/5.webp',
         ],
         size: 'Размер номера 26 м².',
-
+        count: 12,
         price: [
             { name: 'Цена', value: ['<b>4150 руб/сутки</b>',] },
         ],
@@ -259,6 +259,7 @@ export const hotelRooms: RoomObjectProps[] = [
         ],
         size: 'Размер номера 26 м².',
 
+        count: 11,
         price: [
             { name: 'Цена', value: ['<b>5150 руб/сутки</b>',] },
         ],
@@ -297,7 +298,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort-5/6.webp',
         ],
         size: 'Размер номера 50 м².',
-
+        count: 1,
         price: [
             // { name: 'Цена вс-чт', value: ['<b>5980 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>6980 руб/сутки</b>',] },
@@ -387,7 +388,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort/6.webp',
         ],
         size: 'Размер номера 33 м².',
-
+        count: 2,
         price: [
             // { name: 'Цена вс-чт', value: ['<b>4980 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>5980 руб/сутки</b>',] },
@@ -438,6 +439,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/comfort-sauna/5.webp',
         ],
         size: 'Размер номера 33 м².',
+        count: 2,
 
         price: [
             // { name: 'Цена вс-чт', value: ['<b>5480 руб/сутки</b>',] },
@@ -493,7 +495,7 @@ export const hotelRooms: RoomObjectProps[] = [
         ],
 
         size: 'Размер номера 64 м².',
-
+        count: 2,
         price: [
             // { name: 'Цена вс-чт', value: ['<b>6900 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>7900 руб/сутки</b>',] },
@@ -552,7 +554,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/townhouse/7.webp',
         ],
         size: 'Размер номера 96 м².',
-
+        count: 3,
         price: [
             // { name: 'Цена вс-чт', value: ['<b>10900 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<b>12900 руб/сутки</b>',] },
