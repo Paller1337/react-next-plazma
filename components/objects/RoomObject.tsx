@@ -237,7 +237,7 @@ export default function RoomObject(data: RoomObjectProps) {
                 <span className='hotel-room__text bold'>{data.size}</span>
                 <span className='hotel-room__text bold'>Количество номеров: {data.count}</span>
                 <Stack py={12} gap={4}>
-                    <PetsRulesModal />
+                    {data.pets ? <PetsRulesModal /> : <></>}
                     <BreakfastModal />
                 </Stack>
                 {/* <div className='btn booking-btn'>Забронировать</div> */}
