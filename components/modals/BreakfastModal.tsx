@@ -1,50 +1,43 @@
-import { useDisclosure, useMediaQuery } from '@mantine/hooks'
-import { Modal, Button, Text, ScrollArea, Stack, em } from '@mantine/core'
+import { useDisclosure, useMediaQuery, useOrientation } from '@mantine/hooks'
+import { Modal, Button, Text, ScrollArea, Stack, em, Loader } from '@mantine/core'
 import { Document, Page } from 'react-pdf'
 import { useEffect, useRef, useState } from 'react'
 import { LoadError, Viewer } from '@react-pdf-viewer/core'
 
 export default function BreakfastModal() {
     const isMobile = useMediaQuery(`(max-width: ${em(750)})`)
+    const isVerticalFull = useMediaQuery(`(max-height: ${em(500)})`)
     const [opened, { open, close }] = useDisclosure(false)
     const [numPages, setNumPages] = useState(null)
     const containerRef = useRef()
     const [sM, setSM] = useState(1)
     const [scale, setScale] = useState(1)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [modalIsLoad, setModalIsLoad] = useState(false)
+    const [updateCounter, setUpdateCounter] = useState(0)
+    const { angle, type } = useOrientation();
 
     useEffect(() => {
         // Обновление масштаба в зависимости от размера контейнера
         const updateScale = () => {
             if (containerRef.current) {
-                const cw = (containerRef.current as HTMLDivElement).clientWidth;
-                // Вы можете настроить padding или максимальный размер, который PDF может занять
-                const maxScaleWidth = cw; // Предположим, что контейнер уже включает padding
+                const cw = (containerRef.current as HTMLDivElement).clientWidth
+                const maxScaleWidth = cw
                 setContainerWidth(cw)
-                // Предполагается, что ширина PDF для масштаба 1.0 равна 595.28 (стандартный размер для PDF)
                 const scaleFactor = maxScaleWidth / 595.28 * sM;
                 setScale(scaleFactor);
             }
         };
 
-        // Вызываем функцию при первой загрузке компонента
-        updateScale();
-        // Добавляем слушателя события на изменение размера окна, чтобы обновить масштаб при изменении размеров окна
-        window.addEventListener('DOMContentLoaded', updateScale)
+        updateScale()
         window.addEventListener('resize', updateScale)
-        window.addEventListener('orientationchange', updateScale)
 
-        // Удаление слушателя события при размонтировании компонента
         return () => {
-            window.removeEventListener('DOMContentLoaded', updateScale)
-            window.removeEventListener('orientationchange', updateScale)
             window.removeEventListener('resize', updateScale)
         }
-    }, [sM, modalIsLoad])
+    }, [sM, updateCounter])
 
     const onDocumentLoadSuccess = ({ numPages }) => {
-        setModalIsLoad(true)
+        setUpdateCounter(p => p + 1)
         setNumPages(numPages);
     }
 
@@ -54,7 +47,7 @@ export default function BreakfastModal() {
                 opened={opened}
                 onClose={() => {
                     close()
-                    setModalIsLoad(false)
+                    setUpdateCounter(p => p + 1)
                 }}
                 title="Меню завтраков"
                 scrollAreaComponent={ScrollArea.Autosize}
@@ -71,17 +64,30 @@ export default function BreakfastModal() {
                     close: {
                         background: '#fff',
                         borderRadius: 0
-                    }
+                    },
+                    content: {
+                        height: 'fit-content'
+                    },
+                    inner: {
+                        alignItems: isMobile ? 'flex-end' : 'center',
+                        maxWidth: isVerticalFull && 720,
+                        left: isVerticalFull && '50%',
+                        transform: isVerticalFull && 'translateX(-50%)',
+                    },
                 }}
-                fullScreen={isMobile}
+                fullScreen={isMobile || isVerticalFull}
             >
                 <Stack ref={containerRef} gap={4} w={'100%'}>
                     {/* {containerWidth} */}
                     <Document
-                        file={'/pdf/breakfast.pdf'}
+                        file={`/pdf/breakfast.pdf?${type}`}
                         onLoadSuccess={onDocumentLoadSuccess}
                         onLoadError={(error) => console.log('Image load: ', error)}
-
+                        loading={
+                            <Stack w={'100%'} mih={200} align='center' justify='center'>
+                                <Loader color={'#252525'} size={48} />
+                            </Stack>
+                        }
                     >
                         {Array.from(new Array(numPages), (el, index) => (
                             <Page
