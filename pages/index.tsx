@@ -301,8 +301,8 @@ export default function PageIndex(props: PageIndexProps) {
                 <span className='page-aquatory__list-title'>Парк-отель «PLAZMA» в цифрах:</span>
                 <ul>
                   <li className='page-aquatory__list-item'>7 гектар занимает территория отеля</li>
-                  <li className='page-aquatory__list-item'>130 единиц составляет наш номерной фонд</li>
-                  <li className='page-aquatory__list-item'>400 человек вмещает отель</li>
+                  <li className='page-aquatory__list-item'>300 единиц составляет наш номерной фонд</li>
+                  <li className='page-aquatory__list-item'>более 1000 человек вмещает отель</li>
                   <li className='page-aquatory__list-item'>1 пляж с водоемом</li>
                   <li className='page-aquatory__list-item'>3 крытых спортивных объекта</li>
                   <li className='page-aquatory__list-item'>3 бани на дровах с бассейном</li>
@@ -313,6 +313,8 @@ export default function PageIndex(props: PageIndexProps) {
                   <li className='page-aquatory__list-item'>2 открытые универсальные спортивные площадки</li>
                   <li className='page-aquatory__list-item'>2 детские площадки </li>
                   <li className='page-aquatory__list-item'>1 воркаут площадка </li>
+                  <li className='page-aquatory__list-item'>1 тренажерный зал</li>
+                  <li className='page-aquatory__list-item'>5 летних спортивных шатров</li>
                 </ul>
               </div>
 
@@ -324,9 +326,9 @@ export default function PageIndex(props: PageIndexProps) {
             </div>
           </div>
 
-          <YoutubeVideo
+          {/* <YoutubeVideo
             title='Обзорное видео парк-отеля'
-            src='vL15ngFeBNM' />
+            src='vL15ngFeBNM' /> */}
 
           <div className='page-index__previews preview-blocks' data-scroll-section>
             <FullSizePreviewInfo
@@ -335,8 +337,8 @@ export default function PageIndex(props: PageIndexProps) {
               Все наши номера выполнены из качественных материалов, а дизайн был разработан с
               учетом удобства и современных тенденций. Мы уверены, что у нас вы сможете
               расслабиться и в полной мере насладиться отдыхом. Наш номерной фонд настолько
-              разнообразен, что каждый сможет найти себе что-то по душе. В гостинице 130 номеров,
-              которые вмещают 400 человек. У нас есть номера на 2,3,4,5,6,7,8 человек, некоторые
+              разнообразен, что каждый сможет найти себе что-то по душе. В гостинице 300 номеров,
+              которые вмещают более 1000 человек. У нас есть номера на 2,3,4,5,6,7,8 человек, некоторые
               из них расположены в гостиничных корпусах, а некоторые –отдельные домики с видом на
               набережную.
               `}
