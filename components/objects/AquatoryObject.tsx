@@ -11,7 +11,7 @@ export interface AquatoryObjectProps {
     description: string,
     images: StaticImageData[] | string[],
     priceTitleAdditional?: string,
-    priceCards: {
+    priceCards?: {
         cardName: string,
         cardAttr: string,
         cardPrice: string | number,
@@ -60,18 +60,20 @@ export default function AquatoryObject(data: AquatoryObjectProps) {
                     </div>
                     : ''}
 
-                <span className={`text-normal`} style={data.priceTitleAdditional ? { paddingBottom: '0px' } : {}}>Стоимость посещения</span>
+                {/* <span className={`text-normal`} style={data.priceTitleAdditional ? { paddingBottom: '0px' } : {}}>Стоимость посещения</span> */}
                 {data.priceTitleAdditional ? <span className='attention' dangerouslySetInnerHTML={{ __html: data.priceTitleAdditional }}></span> : ''}
 
-                <div className='price-card__wrapper'>
-                    {data.priceCards.map((x, i) =>
-                        <div key={i} className={`price-card__item card_${x.cardSize}`}>
-                            <span className='card-name'>{x.cardName}</span>
-                            <span className='card-attr separator-after'>{x.cardAttr}</span>
-                            <span className='card-price'>{x.cardPrice}</span>
-                        </div>
-                    )}
-                </div>
+                {data.priceCards && data.priceCards?.length > 0 &&
+                    <div className='price-card__wrapper'>
+                        {data.priceCards?.map((x, i) =>
+                            <div key={i} className={`price-card__item card_${x.cardSize}`}>
+                                <span className='card-name'>{x.cardName}</span>
+                                <span className='card-attr separator-after'>{x.cardAttr}</span>
+                                <span className='card-price'>{x.cardPrice}</span>
+                            </div>
+                        )}
+                    </div>
+                }
 
                 {data.attentionText ? <span className='attention' dangerouslySetInnerHTML={{ __html: data.attentionText }}></span> : ''}
                 {data.warningText ? <span className='warning' dangerouslySetInnerHTML={{ __html: data.warningText }}></span> : ''}

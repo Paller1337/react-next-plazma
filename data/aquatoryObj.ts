@@ -11,27 +11,27 @@ export const aquatoryObjData: AquatoryObjectProps[] = [
             '/img/aquatory/pen-2.webp',
             '/img/aquatory/pen-3.webp',
         ],
-        priceCards: [
-            {
-                cardName: "Взрослые",
-                cardAttr: "(с 11 лет и старше)",
-                cardPrice: "800 рублей",
-                cardSize: "min"
-            },
-            {
-                cardName: "Дети",
-                cardAttr: "(до 11 лет)",
-                cardPrice: "800 рублей",
-                cardSize: "min"
-            },
-            {
-                cardName: "Дети",
-                cardAttr: "(до 5 лет)",
-                cardPrice: "бесплатно",
-                cardSize: "min"
-            }
-        ],
-        priceTitleAdditional: `оплачивается отдельно в кассе в шатре, сверх стоимости входа на территорию акватории.`,
+        // priceCards: [
+        //     {
+        //         cardName: "Взрослые",
+        //         cardAttr: "(с 11 лет и старше)",
+        //         cardPrice: "800 рублей",
+        //         cardSize: "min"
+        //     },
+        //     {
+        //         cardName: "Дети",
+        //         cardAttr: "(до 11 лет)",
+        //         cardPrice: "800 рублей",
+        //         cardSize: "min"
+        //     },
+        //     {
+        //         cardName: "Дети",
+        //         cardAttr: "(до 5 лет)",
+        //         cardPrice: "бесплатно",
+        //         cardSize: "min"
+        //     }
+        // ],
+        // priceTitleAdditional: `оплачивается отдельно в кассе в шатре, сверх стоимости входа на территорию акватории.`,
         attentionText: `Дети до 11 лет обязательно при сопровождении взрослого. </br>`,
 
         includedItems: [
