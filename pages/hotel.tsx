@@ -117,7 +117,7 @@ export default function PageHotel(props: PageHotelProps) {
                             </span>
 
                             <span className='text-normal'>
-                                С 1 июня островок и стоянка включены в стоимость.
+                                С 1 июня бассейн на полуострове (лежак + полотенце) и стоянка включены в стоимость проживания.
                             </span>
 
                             <span className='text-normal'>
