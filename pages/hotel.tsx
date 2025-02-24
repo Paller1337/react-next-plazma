@@ -15,6 +15,7 @@ import { Rings } from 'react-loader-spinner'
 import RoomObject from '../components/objects/RoomObject'
 import { DEFAULTS } from 'defaults'
 import TextBlock from '@/components/TextBlock'
+import { Stack } from '@mantine/core'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 // const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -117,16 +118,18 @@ export default function PageHotel(props: PageHotelProps) {
                             </span>
 
                             <span className='text-normal'>
-                                С 1 июня бассейн на полуострове (лежак + полотенце) и стоянка включены в стоимость проживания.
-                            </span>
-
-                            <span className='text-normal'>
                                 Оригинал документа, удостоверяющего личность, обязателен для всех гостей.
                             </span>
 
                             <span className='text-normal'>
                                 При заезде вносится страховой депозит в размере 5000–10000 рублей.
                             </span>
+
+                            <Stack p={12} bd={'1px solid #252525'}>
+                                <span className='text-normal'>
+                                    С 1 июня бассейн на полуострове (лежак + полотенце) и стоянка включены в стоимость проживания.
+                                </span>
+                            </Stack>
                         </div>
                     </div>
 
