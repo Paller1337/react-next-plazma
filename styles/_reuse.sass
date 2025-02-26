@@ -342,6 +342,7 @@
     background: transparent
     cursor: pointer
     gap: 12px
+    white-space: nowrap
     transition: all .32s ease-in-out
     @media screen and ( max-width:  $md3)
         padding: .8rem 2.8125rem
@@ -1448,7 +1449,10 @@ object
         margin: 0 auto
         gap: 30px
         padding: 100px 0 40px 0
+        flex-wrap: wrap
+        max-width: 80%
         @media screen and ( max-width: $md3 )
+            max-width: 100%
             padding-top: 40px
             flex-direction: column
             gap: 10px

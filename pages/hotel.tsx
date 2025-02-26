@@ -15,7 +15,8 @@ import { Rings } from 'react-loader-spinner'
 import RoomObject from '../components/objects/RoomObject'
 import { DEFAULTS } from 'defaults'
 import TextBlock from '@/components/TextBlock'
-import { Stack } from '@mantine/core'
+import { Group, Stack } from '@mantine/core'
+import PetsRulesModal from '@/components/modals/PetsRulesModal'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 // const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -125,9 +126,16 @@ export default function PageHotel(props: PageHotelProps) {
                                 При заезде вносится страховой депозит в размере 5000–10000 рублей.
                             </span>
 
+                            <Group gap={4}>
+                                <span className='text-normal'>
+                                    Перед бронированием, пожалуйста, ознакомьтесь с
+                                </span>
+                                <PetsRulesModal text='правилами проживания с животными' />
+                            </Group>
+
                             <Stack p={12} bd={'1px solid #252525'}>
                                 <span className='text-normal'>
-                                    С 1 июня бассейн на полуострове (лежак + полотенце) и стоянка включены в стоимость проживания.
+                                    С 30 мая бассейн на полуострове (лежак + полотенце) и парковка включены в стоимость проживания.
                                 </span>
                             </Stack>
                         </div>

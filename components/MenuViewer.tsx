@@ -33,6 +33,11 @@ const menus = [
         img: '/pdf/breakfast.pdf',
         sM: .8,
     },
+    {
+        name: 'Масленица',
+        img: '/pdf/season-menu.pdf',
+        sM: .8,
+    },
     // {
     //     name: 'Чайная карта',
     //     img: '/pdf/tea.pdf',

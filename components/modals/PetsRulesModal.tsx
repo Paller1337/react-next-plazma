@@ -4,8 +4,11 @@ import { Document, Page } from 'react-pdf'
 import { useEffect, useRef, useState } from 'react'
 
 
+interface PetsRulesModalProps {
+    text?: string
+}
 
-export default function PetsRulesModal() {
+export default function PetsRulesModal(props: PetsRulesModalProps) {
     const isMobile = useMediaQuery(`(max-width: ${em(750)})`)
     const isVerticalFull = useMediaQuery(`(max-height: ${em(500)})`)
     const [opened, { open, close }] = useDisclosure(false)
@@ -108,7 +111,7 @@ export default function PetsRulesModal() {
             </Modal>
 
 
-            <Text fz={16} td={'underline'} style={{ cursor: 'pointer' }} onClick={open}>Правила проживания с животными</Text>
+            <Text fz={16} td={'underline'} style={{ cursor: 'pointer' }} onClick={open}>{props.text ?? 'Правила проживания с животными'}</Text>
         </>
     );
 }
