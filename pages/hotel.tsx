@@ -103,6 +103,9 @@ export default function PageHotel(props: PageHotelProps) {
                         <div className='text-column'>
 
                             <span className='text-normal'>
+                                Возможен ранний заезд с 07:00 (при наличии свободного и готового номера). Возможен поздний выезд до 17:00 -  при предварительном согласовании с администратором и оплачивается дополнительно 50% от стоимости номера.
+                            </span>
+                            <span className='text-normal'>
                                 При бронировании номера взимается оплата в размере 1х суток проживания.
                             </span>
                             <span className='text-normal'>
