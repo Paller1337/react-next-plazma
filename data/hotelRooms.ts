@@ -218,7 +218,7 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/deluxe-5-corps/5.webp',
         ],
         size: 'Размер номера 26 м².',
-        count: 12,
+        count: 2,
         price: [
             { name: 'Цена', value: ['<b>4150 руб/сутки</b>',] },
         ],
@@ -259,7 +259,7 @@ export const hotelRooms: RoomObjectProps[] = [
         ],
         size: 'Размер номера 26 м².',
 
-        count: 11,
+        count: 22,
         price: [
             { name: 'Цена', value: ['<b>5150 руб/сутки</b>',] },
         ],
