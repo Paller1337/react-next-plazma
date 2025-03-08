@@ -315,7 +315,7 @@ export default function PageEvents() {
 
 
                     <div className=' event-conditions'>
-                        <div className='event-conditions__item'>
+                        {/* <div className='event-conditions__item'>
                             <span className='event-conditions__title'>
                                 Летний шатер
                             </span>
@@ -355,7 +355,7 @@ export default function PageEvents() {
                             </div>
                         </div>
 
-                        <div className='event-conditions__divider' />
+                        <div className='event-conditions__divider' /> */}
 
                         <div className='event-conditions__item'>
                             <span className='event-conditions__title'>
