@@ -99,9 +99,6 @@ export default function Promo(props: PromoProps) {
             case 'smash':
                 setPreviewSrc(smash)
                 break
-            // case 'sports-camp':
-            //     setPreviewSrc(sportsCamp)
-            //     break
             case 'tent':
                 setPreviewSrc(tent)
                 break
@@ -110,32 +107,6 @@ export default function Promo(props: PromoProps) {
         }
     }, [props.image])
 
-    // const [coff, setCoff] = useState(0)
-    // const [imageLoaded, setImageLoaded] = useState(false)
-    // const [imgProps, setImgProps] = useState({
-    //     width: 0,
-    //     height: 0
-    // })
-
-    // useEffect(() => {
-    //     if (window) {
-    //         const wh = window.innerHeight
-    //         const ww = window.innerWidth
-    //         if (wh / defaultImg.height > ww / defaultImg.width) {
-    //             let newCoff = wh / defaultImg.height
-    //             setCoff(newCoff)
-    //         } else {
-    //             let newCoff = ww / defaultImg.width
-    //             setCoff(newCoff)
-    //         }
-
-    //         setImgProps({
-    //             width: defaultImg.width * coff,
-    //             height: defaultImg.height * coff,
-    //         })
-    //     }
-    // }, [imageLoaded])
-    const src = ''
 
     return (<>
         <div className='main__promo' data-scroll-section>

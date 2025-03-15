@@ -22,34 +22,34 @@ interface PageIndexProps {
 
 
 export default function PageIndex(props: PageIndexProps) {
-  const router = useRouter()
+  // const router = useRouter()
   const theme = useMantineTheme()
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
-  const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
-  const nyRef = useRef(null)
-  const snowflakes = useRef(null)
+  // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
+  // const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
+  // const nyRef = useRef(null)
+  // const snowflakes = useRef(null)
 
-  useEffect(() => {
-    if (snowflakes) {
-      const snowflake1 = document.createElement('img')
-      snowflake1.src = '/img/index/snowflake-1.webp'
-      snowflake1.width = 120
-      snowflake1.height = 120
+  // useEffect(() => {
+  //   if (snowflakes) {
+  //     const snowflake1 = document.createElement('img')
+  //     snowflake1.src = '/img/index/snowflake-1.webp'
+  //     snowflake1.width = 120
+  //     snowflake1.height = 120
 
-      const snowflake2 = document.createElement('img')
-      snowflake2.src = '/img/index/snowflake-2.webp'
-      snowflake2.width = 120
-      snowflake2.height = 120
+  //     const snowflake2 = document.createElement('img')
+  //     snowflake2.src = '/img/index/snowflake-2.webp'
+  //     snowflake2.width = 120
+  //     snowflake2.height = 120
 
-      const snowflake3 = document.createElement('img')
-      snowflake3.src = '/img/index/snowflake-3.webp'
-      snowflake3.width = 120
-      snowflake3.height = 120
+  //     const snowflake3 = document.createElement('img')
+  //     snowflake3.src = '/img/index/snowflake-3.webp'
+  //     snowflake3.width = 120
+  //     snowflake3.height = 120
 
-      snowflakes.current = [snowflake1, snowflake2, snowflake3]
-    }
+  //     snowflakes.current = [snowflake1, snowflake2, snowflake3]
+  //   }
 
-  }, [snowflakes])
+  // }, [snowflakes])
   return (
     <>
       <Head>
