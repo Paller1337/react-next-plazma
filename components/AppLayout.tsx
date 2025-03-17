@@ -7,6 +7,7 @@ import { BnovoContext } from './bnovo/bnovoContext'
 import { Toaster } from 'react-hot-toast'
 import Aos from 'aos'
 import { TLContext } from './travelline/tlContext'
+import { useMediaQuery } from '@mantine/hooks'
 
 interface AppLayoutProps {
     children: React.ReactNode
@@ -20,6 +21,7 @@ export default function AppLayout(props: AppLayoutProps) {
     // const { tlIsLoad, setTlIframeIsLoad, setTlIsLoad } = useContext(TLContext)
     const [isNotFound, setIsNotFound] = useState(false);
     const { setBnovoIframeIsLoad, setBnovoIsLoad } = useContext(BnovoContext)
+    const isMobile = useMediaQuery('(max-width: 620px')
 
     // const loadTL = () => {
     //     (function () {
@@ -71,6 +73,7 @@ export default function AppLayout(props: AppLayoutProps) {
 
     const job = props.asPath.includes('job')
     const awards = props.asPath.includes('awards')
+    const weddings = props.asPath.includes('weddings') && !isMobile
 
     useEffect(() => {
         checkIfNotFound()
@@ -79,6 +82,7 @@ export default function AppLayout(props: AppLayoutProps) {
             meals ||
             job ||
             awards ||
+            weddings ||
             props.asPath.includes('booking') ||
             isNotFound
         ) {
@@ -86,7 +90,7 @@ export default function AppLayout(props: AppLayoutProps) {
         } else {
             setHeaderBlack(false)
         }
-    }, [props.asPath, props.pageProps, isNotFound])
+    }, [props.asPath, props.pageProps, isNotFound, isMobile])
 
     return (<>
 

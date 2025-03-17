@@ -7,6 +7,7 @@ import Link from 'next/link'
 import TextBlock from '@/components/TextBlock'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Lazy, Navigation, Pagination, Thumbs, Virtual } from 'swiper'
+import { Stack } from '@mantine/core'
 
 export default function PageEvents() {
     return (
@@ -170,7 +171,25 @@ export default function PageEvents() {
                         </Swiper>
                     </div>
 
-
+                    <Stack pt={60}></Stack>
+                    <div className='page-events__about-quatr about-quatr reverse' data-scroll-section>
+                        <div className='about-quatr__wrapper'
+                            data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <div className='about-quatr__text'>
+                                <h2>СВАДЬБЫ</h2>
+                                <span>
+                                    Окунитесь в атмосферу любви и праздника — этот день только для вас и ваших близких.
+                                </span>
+                                <Link href={'/weddings'} className='btn btn_black'>Подробнее</Link>
+                            </div>
+                            <div className='about-quatr__image'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                <Image src='/img/weddings/promo.webp' width={670} height={485} alt=''
+                                // loader={vkCloudLoader}
+                                />
+                            </div>
+                        </div>
+                    </div>
 
 
 
