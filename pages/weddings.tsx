@@ -166,7 +166,7 @@ const SNW = ({ children }: { children: string }) => {
 const FeedbackButton = ({ fw }) => {
     const isMobile = useMediaQuery('(max-width: 620px)')
     const openPhone = () => {
-        window.open('tel:+79038438929')
+        window.open('tel:+79202756312')
     }
     return (
         <Button bg={'#DE3753'} c={'#fff'} radius={0} h={isMobile ? 50 : 60} w={isMobile || fw ? '100%' : 330} onClick={openPhone}>
@@ -391,7 +391,7 @@ export default function PageWeddings() {
 
                                             <Stack gap={12} pb={32}>
                                                 <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
-                                                    <span style={{ fontWeight: 700 }}>Телефон:</span> +7(903)843-89-29
+                                                    <span style={{ fontWeight: 700 }}>Телефон:</span> +7(920)275-63-12
                                                 </Text>
                                                 <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
                                                     <span style={{ fontWeight: 700 }}>Email:</span> anna@kplazma.ru
