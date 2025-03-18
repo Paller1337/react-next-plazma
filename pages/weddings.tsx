@@ -2,18 +2,445 @@ import Head from 'next/head'
 import Link from 'next/link'
 import vkCloudLoader from '@/mw/utils/imageLoader'
 import TextBlock from '@/components/TextBlock'
-import { Box, Button, Divider, Group, Stack, Text, Title, Image, Grid, Modal } from '@mantine/core'
+import { Box, Button, Divider, Group, Stack, Text, Title, Image, Grid, Modal, Textarea, InputBase, Input, useMantineTheme, LoadingOverlay, Paper } from '@mantine/core'
 import { MdPhone } from "react-icons/md"
 import { Carousel } from '@mantine/carousel'
-import { useDisclosure, useMediaQuery } from '@mantine/hooks'
-import React from 'react'
+import { useClickOutside, useDisclosure, useInViewport, useLocalStorage, useMediaQuery } from '@mantine/hooks'
+import React, { useEffect, useState } from 'react'
 import { IoMdClose } from "react-icons/io"
 import { DEFAULTS } from 'defaults'
+import { IMaskInput } from 'react-imask'
+import { DatePicker } from '@mantine/dates'
+import { useRouter } from 'next/router'
+import { useCookies } from 'react-cookie'
+import { DateTime } from 'luxon'
+import ym from 'react-yandex-metrika'
+import toast from 'react-hot-toast'
+import 'dayjs/locale/ru'
+import { clear } from 'console'
+
 
 const colors = {
     main: '#2F2525',
     subtitle: '#6E6767',
     dividerSub: '#D5D3D3'
+}
+
+interface WeddingFormProps {
+    ymTag: string
+    close: () => void
+}
+
+interface IWeddingFormState {
+    // sport: string
+    dateIn: string
+    // dateOut: string
+    // team: {
+    //     name: string
+    //     size: string
+    // },
+    name: string
+    phone: string
+    // comment: string
+}
+const SportForm = ({ ymTag, close }: WeddingFormProps) => {
+    const theme = useMantineTheme()
+    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
+    const queryMd = useMediaQuery(`(max-width: ${theme.breakpoints.md})`)
+
+    // const ym = useMetrika()
+    const router = useRouter()
+    const [cookies, setCookie, removeCookie] = useCookies(['utm']);
+
+    const [error, setError] = useState(false)
+    const [utm, setUtm] = useState('')
+
+    const [phone, setPhone] = useState('')
+    const [phoneValue, setPhoneValue] = useState('+7')
+    const [formState, setFormState] = useState<IWeddingFormState>(null)
+    const [formStateValidate, setFormStateValidate] = useState({
+        // sport: false,
+        dateIn: false,
+        // team: false,
+        name: false,
+        phone: false,
+        // comment: false
+    })
+    const [isLoading, setIsLoading] = useState(false)
+
+    const [isBlur, setIsBlur] = useState(false)
+
+    const [storageValue, setStorageValue, removeStorageValue] = useLocalStorage<IWeddingFormState>({
+        key: 'wedding-form',
+        defaultValue: null,
+    })
+
+    const [datePickerInValue, setDatePickerInValue] = useState<Date>(null)
+
+    const [datePickerInVisible, setDatePickerInVisible] = useState(false)
+    const [datePickerOutVisible, setDatePickerOutVisible] = useState(false)
+
+    const dateInRef = useClickOutside(() => setDatePickerInVisible(false))
+
+    const pageQuery = router.query
+
+    useEffect(() => {
+        const utmCookie = cookies.utm
+
+        if (pageQuery) {
+            if (utmCookie) {
+                console.log('utm-cookie: ', utmCookie)
+                setUtm(utmCookie)
+            }
+            if (pageQuery.utm_campaign) {
+                setUtm(pageQuery.utm_campaign.toString())
+                setCookie('utm', `${pageQuery.utm_campaign.toString()}-[${DateTime.now().toLocaleString()}-${DateTime.now().hour}.${DateTime.now().minute}]`)
+            }
+        }
+        console.log('utm: ', utm)
+    }, [pageQuery]);
+
+    useEffect(() => {
+        // console.log({ storageValue })
+        if ((storageValue && !formState)) {
+            setFormState(storageValue)
+            if (storageValue?.phone) setPhoneValue(storageValue?.phone)
+            if (storageValue?.dateIn) setDatePickerInValue(DateTime.fromFormat(storageValue?.dateIn, 'yyyy-MM-dd').toJSDate())
+        }
+    }, [storageValue, formState, setFormState])
+
+
+    useEffect(() => {
+        if (formState) {
+            setStorageValue(formState)
+        }
+    }, [formState])
+
+    useEffect(() => {
+        setFormState(p => ({ ...p, phone: phone }))
+    }, [phone])
+
+    const metrikaSubmit = () => {
+        ym('reachGoal', `weddingSubmit`)
+
+        console.log({ ymTag })
+        ym('reachGoal', `wedding-${ymTag}`)
+        // ym.reachGoal(`sportsCamp-${ymTag}`)
+        // toast('metrika send')
+    }
+
+    const handleSubmit = () => {
+        if (!formState?.name) setFormStateValidate(p => ({ ...p, name: true }))
+        if (!formState?.phone) setFormStateValidate(p => ({ ...p, phone: true }))
+        if (!formState?.dateIn) setFormStateValidate(p => ({ ...p, dateIn: true }))
+
+        if (!formState?.name || !formState?.phone || !formState?.dateIn) {
+            toast.error('Заполните необходимые поля', {
+                duration: 3000,
+                style: {
+                    fontSize: 15,
+                    borderRadius: 0,
+                    border: '1px solid #393939',
+                    padding: '12px 18px'
+                }
+            });
+            setError(true)
+            return
+        }
+
+        if (formState?.phone && formState?.phone.length !== 12) {
+            setFormStateValidate(p => ({ ...p, phone: true }))
+            toast.error('Неверный номер телефона', {
+                duration: 3000,
+                style: {
+                    fontSize: 15,
+                    borderRadius: 0,
+                    border: '1px solid #393939',
+                    padding: '12px 18px'
+                }
+            });
+            setError(true)
+            return
+        }
+
+        const data = {
+            data: formState,
+            utm,
+            ymTag
+        }
+
+        setIsLoading(true)
+        fetch('/api/wedding-feedback', {
+            method: 'post',
+            body: JSON.stringify(data),
+        })
+            .then(async res => {
+                if (res.status === 200) {
+                    const data = await res.json()
+                    toast.success(data.status, {
+                        duration: 3000,
+                        style: {
+                            fontSize: 15,
+                            borderRadius: 0,
+                            border: '1px solid #393939',
+                            padding: '12px 18px'
+                        }
+                    })
+                    metrikaSubmit()
+
+                    removeStorageValue()
+                    setFormState(p => ({
+                        dateIn: '',
+                        name: '',
+                        phone: '',
+                    }))
+                    setPhoneValue(null)
+                    setDatePickerInValue(null)
+
+                    setIsBlur(true)
+                } else {
+                    const data = await res.json()
+                    toast.error(data.status, {
+                        duration: 3000,
+                        style: {
+                            fontSize: 15,
+                            borderRadius: 0,
+                            border: '1px solid #393939',
+                            padding: '12px 18px'
+                        }
+                    });
+                }
+                setIsLoading(false)
+            })
+            .then(res => {
+            })
+    }
+
+
+    const formatNumber = (n: string) => {
+        if (!n) return ""
+        n = n.replace(/[\(\)\-\ ]/g, "")
+
+        if (n.startsWith("+7")) {
+            if (n[2] === '8') {
+                return "+7" + n.slice(3)
+            }
+            return n
+        }
+
+        if (n[0] === '8') {
+            n = "+7" + n.slice(1);
+            if (n[2] === '8') {
+                return "+7" + n.slice(3)
+            }
+            return n
+        }
+
+        return n
+    }
+
+    const inputStyle = (isError?) => ({
+        paddingLeft: mobile ? 8 : 12,
+        paddingRight: mobile ? 8 : 12,
+        paddingTop: mobile ? 8 : 10,
+        paddingBottom: mobile ? 8 : 10,
+        height: 'fit-content',
+        borderColor: isError ? "#F23" : "#1B2128"
+    })
+
+    return (
+        <>
+            <LoadingOverlay visible={isLoading} zIndex={1000} overlayProps={{ radius: "sm", blur: 2 }} />
+
+            <Stack gap={0} p={0} maw={560} pos={'relative'}>
+                <Stack
+                    pos={'absolute'} top={0} left={0} right={0} bottom={0}
+                    style={{ background: 'rgba(253, 253, 253, .7)', zIndex: 1000, visibility: isBlur ? 'visible' : 'hidden' }}
+                    justify='center'
+                    align='center'
+                >
+                    <Stack gap={24} bg={'rgb(255 255 255)'} px={24} py={24} align='center'
+                        style={{ border: '1px solid #262626', boxShadow: '0px 4px 24px 0px rgba(0, 0, 0, 0.35)' }}
+                    >
+                        <Title
+                            order={4}
+                            size={mobile ? 'h5' : queryMd ? 'h5' : 'h4'}
+                            ta={'center'}
+                        >
+                            Заявка отправлена
+                        </Title>
+                        <Text
+                            size={mobile ? 'xs' : queryMd ? 'sm' : 'sm'}
+                            ta={'center'}
+                        >
+                            С вами свяжется наш менеджер в ближайшее время
+                        </Text>
+
+                        <Button color='rgba(222, 55, 83)' radius={0} py={mobile ? 12 : 18} w={330} h={'fit-content'} onClick={() => {
+                            setIsBlur(false)
+                            close()
+                        }}>
+                            <Group gap={12} align='center'>
+                                <Text size='sm' c={'#F1F1F1'}>Хорошо</Text>
+                            </Group>
+                        </Button>
+                    </Stack>
+                </Stack>
+
+
+                <Stack pb={48} top={10} gap={0}>
+                    <Title
+                        order={3}
+                        size={mobile ? 'h4' : queryMd ? 'h4' : 'h3'}
+                        ta={'center'}
+                    >
+                        Обсудим детали
+                    </Title>
+                    <Stack gap={0} p={0} pos={'relative'} style={{ zIndex: 1 }}>
+                        <Text
+                            size={mobile ? 'xs' : queryMd ? 'sm' : 'sm'}
+                            ta={'center'}
+                        >
+                            Заполните форму, отправьте заявку и наш менеджер свяжется с вами,
+                            уточнит все детали и ответит на любые вопросы.
+                        </Text>
+                        <Paper bg={'rgba(222, 55, 83, 0.2)'} style={{ top: 20, right: 0, bottom: -5, left: 75, zIndex: -1 }} pos={'absolute'} />
+                    </Stack>
+                </Stack>
+
+                <Stack gap={12}>
+                    <Input.Wrapper
+                        size='xs'
+                        label="Ф.И.О." description={' '}
+                        withAsterisk
+                    >
+                        <Input
+                            size='xs'
+                            type='text'
+                            radius={0} styles={{ input: inputStyle(formStateValidate?.name) }}
+                            placeholder="Иванов Иван"
+                            value={formState?.name}
+                            onChange={(event) => {
+                                setFormStateValidate(p => ({ ...p, name: false }))
+                                setFormState(p => ({ ...p, name: event.target.value }))
+                            }}
+                            error={formStateValidate?.name}
+                        />
+                    </Input.Wrapper>
+
+                    <InputBase
+                        label='Телефон'
+                        withAsterisk
+                        component={IMaskInput}
+                        mask="+7 (000) 000-00-00"
+                        placeholder="Ваш номер"
+                        size='xs'
+                        radius={0} styles={{ input: inputStyle(formStateValidate?.phone) }}
+                        value={phoneValue}
+                        onInput={e => {
+                            // @ts-ignore
+                            let value = e.target.value
+                            // console.log('value[4] ', value[4])
+                            if (value[4] == '8') {
+                                setPhoneValue('+7')
+                            } else {
+                                setPhoneValue(value)
+                            }
+
+                            // @ts-ignore
+                            setPhone(formatNumber(e.target.value.toString()))
+                            setFormStateValidate(p => ({ ...p, phone: false }))
+                        }}
+                        defaultValue={'+7'}
+                        error={formStateValidate?.phone}
+                    />
+
+                    <Group align='center'>
+                        <Stack pos={'relative'} flex={'1 0 0'}>
+                            <Input.Wrapper
+                                size='xs'
+                                label="Дата свадьбы"
+                                description={' '}
+                                withAsterisk
+                                onFocus={e => e.preventDefault()}
+                                onClick={e => e.preventDefault()}
+                            >
+                                <Input
+                                    size='xs'
+                                    onClick={e => e.preventDefault()}
+                                    radius={0} styles={{ input: inputStyle(formStateValidate?.dateIn) }}
+                                    readOnly
+                                    onFocus={e => e.preventDefault()}
+                                    value={datePickerInValue ? DateTime.fromJSDate(datePickerInValue).toFormat('dd-MM-yyyy') : ''}
+                                    placeholder={DateTime.fromJSDate(new Date()).plus({ day: 10 }).toFormat('dd-MM-yyyy')}
+                                    onSelect={() => setDatePickerInVisible(true)}
+                                    type='text'
+                                    error={formStateValidate?.dateIn}
+                                />
+                            </Input.Wrapper>
+
+                            <div ref={dateInRef} className={`sport-calculator__datepicker ${datePickerInVisible ? 'visible' : ''}`}>
+                                <DatePicker
+                                    locale="ru" size='sm' numberOfColumns={1}
+                                    onChange={(e) => {
+                                        setDatePickerInVisible(false)
+                                        setDatePickerInValue(e)
+                                        setFormStateValidate(p => ({ ...p, dateIn: false }))
+                                        setFormState(p => ({ ...p, dateIn: DateTime.fromJSDate(e).toFormat('yyyy-MM-dd') }))
+                                    }}
+                                    minDate={DateTime.now().toJSDate()}
+                                    onBlur={() => setDatePickerOutVisible(false)}
+                                />
+                            </div>
+                        </Stack>
+
+                        {/* <Input.Wrapper
+                            size='xs'
+                            label="Количество человек"
+                            description={' '}
+                            flex={'1 0 0'}
+                        >
+                            <Input
+                                size='xs'
+                                type='number'
+                                radius={0} styles={{ input: inputStyle() }}
+                                placeholder="50"
+                                value={formState?.team?.size}
+                                onChange={(event) => setFormState(p => ({ ...p, team: { ...p.team, size: event.target.value } }))}
+                            />
+                        </Input.Wrapper> */}
+                    </Group>
+
+
+                    {/* <Textarea
+                    size='xs'
+                    label="Площадка для тренировок"
+                    description=" "
+                    placeholder="Опишите необходимое вам помещение, покрытие, площадь."
+                    radius={0} styles={{ input: { padding: 12, height: 'fit-content', borderColor: "#1B2128" } }}
+                /> */}
+
+                    {/* <Textarea
+                        size='xs'
+                        label="Комментарий"
+                        description=" "
+                        placeholder="Ваш вопрос..."
+                        value={formState?.comment}
+                        radius={0} styles={{ input: inputStyle() }}
+                        onChange={(event) => setFormState(p => ({ ...p, comment: event.target.value }))}
+                    /> */}
+
+                    <Stack w={'100%'} pt={24}>
+                        <Button color='rgb(222, 55, 83)' radius={0} py={mobile ? 12 : 18} w={mobile ? '100%' : 330} h={'fit-content'} onClick={handleSubmit}>
+                            <Group gap={12} align='center'>
+                                <Text size='sm' c={'#F1F1F1'}>Позвоните мне</Text>
+                            </Group>
+                        </Button>
+                    </Stack>
+                </Stack>
+            </Stack>
+        </>
+    )
 }
 
 interface WeddingItemProps {
@@ -163,10 +590,11 @@ const SNW = ({ children }: { children: string }) => {
     )
 }
 
-const FeedbackButton = ({ fw }) => {
+const FeedbackButton = ({ fw, onClick }) => {
     const isMobile = useMediaQuery('(max-width: 620px)')
     const openPhone = () => {
-        window.open('tel:+79202756312')
+        // window.open('tel:+79202756312')
+        onClick()
     }
     return (
         <Button bg={'#DE3753'} c={'#fff'} radius={0} h={isMobile ? 50 : 60} w={isMobile || fw ? '100%' : 330} onClick={openPhone}>
@@ -185,10 +613,72 @@ export default function PageWeddings() {
     const isNotebook = useMediaQuery('(max-width: 1324px)')
     const isLaptop = useMediaQuery('(max-width: 1199px)')
     const isMobile = useMediaQuery('(max-width: 620px)')
+    const [opened, { open, close }] = useDisclosure(false)
+    const { ref: refDedails, inViewport: inViewportDetails } = useInViewport()
+    const { ref: refWelcome, inViewport: inViewportWelcome } = useInViewport()
 
+    const [scrollButtonVisibleBlocked, setScrollButtonVisibleBlocked] = useState(true)
+    const [scrollButtonVisible, setScrollButtonVisible] = useState(false)
 
+    const [currentYmTag, setCurrentYmTag] = useState('')
+
+    const openCalcModal = (tag) => {
+        setCurrentYmTag(tag)
+        open()
+    }
+
+    useEffect(() => {
+        if ((inViewportDetails || inViewportWelcome || opened) && !scrollButtonVisibleBlocked) setScrollButtonVisible(false)
+        else if (!scrollButtonVisibleBlocked) setScrollButtonVisible(true)
+
+    }, [inViewportDetails, inViewportWelcome, opened, scrollButtonVisibleBlocked])
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setScrollButtonVisibleBlocked(false)
+        }, 1500)
+
+        return () => clearTimeout(timeout)
+    }, [])
     return (
         <>
+            <Modal
+                opened={opened}
+                onClose={close}
+                closeButtonProps={{
+                    size: 48
+                }}
+                fullScreen
+                overlayProps={{
+                    backgroundOpacity: 0.55,
+                    blur: 3,
+                    bg: 'rgba(63, 16, 24, 0.6)'
+                }}
+                styles={{
+                    inner: {
+                        right: 0,
+                        maxWidth: 780,
+                    },
+                    header: {
+                        background: 'transparent',
+                        height: 0,
+                        padding: '60px 40px 0 40px'
+                    },
+                    content: {
+                        background: '#FAFCFF'
+                    }
+                }}
+                transitionProps={{
+                    transition: 'fade',
+                }}
+            >
+                <Stack px={isMobile ? 12 : 96} pb={24} gap={0}>
+                    <SportForm ymTag={currentYmTag} close={close} />
+                </Stack>
+            </Modal>
+
+
+
             <Head>
                 <title>Ваша свадьба в парк-отеле «PLAZMA»</title>
                 {/* <meta name='description' content='' /> */}
@@ -223,7 +713,7 @@ export default function PageWeddings() {
                             justify={isMobile ? 'flex-end' : 'center'}
                             bgsz={isMobile ? 'cover' : 'auto'}
                             bgp={isMobile ? 'top center' : 'auto auto'}
-
+                            ref={refWelcome}
                         >
                             <Stack pt={96} gap={8} align={isMobile ? 'center' : 'flex-start'}>
                                 <Title ff={'Georgia'} fz={isMobile ? 32 : 40} fw={400} tt={'uppercase'} c={'white'} ta={isMobile ? 'center' : 'left'}>свадьба, <SNW>о которой</SNW> вы мечтаете</Title>
@@ -232,13 +722,27 @@ export default function PageWeddings() {
                                     и с радостью поможем в организации.
                                 </Text>
                                 <Stack pt={24} w={'100%'}>
-                                    <FeedbackButton fw={false} />
+                                    <FeedbackButton fw={false} onClick={() => openCalcModal('pageWelcome')} />
                                 </Stack>
                             </Stack>
                         </Stack>
                     </Stack>
 
-                    <Stack key={'content'} gap={isMobile ? 48 : isLaptop ? 64 : 96} px={isMobile ? 12 : 32}>
+                    <Stack key={'content'} gap={isMobile ? 48 : isLaptop ? 64 : 96} px={isMobile ? 12 : 32} pos={'relative'}>
+                        <Stack pos={'fixed'} bottom={40} left={0} right={0}
+                            style={{
+                                zIndex: 1000,
+                                opacity: scrollButtonVisible ? 1 : 0,
+                                transition: 'opacity .32s ease'
+                            }}
+                            px={24} align='center'
+                        >
+                            <Stack maw={400} w='100%'>
+                                <FeedbackButton fw={true} onClick={() => openCalcModal('pageScroll')} />
+                            </Stack>
+                        </Stack>
+
+
                         <Stack py={64} gap={96}>
                             <Text ff={'Lora'} fz={isMobile ? 20 : 24} c={colors.main} lh={'150%'} maw={1100}>
                                 Уже более ста пар доверили нам самый важный день в своей жизни – рождение новой семьи.
@@ -370,7 +874,7 @@ export default function PageWeddings() {
                             </Grid>
                         </Group>
 
-                        <Group w={'100%'} py={isMobile || isLaptop ? 0 : 58} mb={120}>
+                        <Group w={'100%'} py={isMobile || isLaptop ? 0 : 58} mb={120} ref={refDedails}>
                             <Grid
                                 gutter={{ base: isMobile ? 32 : 48 }} w={'100%'}
                                 style={{ overflow: 'hidden' }}
@@ -400,7 +904,7 @@ export default function PageWeddings() {
                                                     <span style={{ fontWeight: 700 }}>Адрес:</span> <SNW>г. Донской,</SNW> <SNW>ул. Герцена,</SNW> <SNW>дом 14,</SNW> <SNW>Парк-отель «Plazma»</SNW>
                                                 </Text>
                                             </Stack>
-                                            <FeedbackButton fw={isMobile || (isNotebook && !isLaptop) || isDesktop} />
+                                            <FeedbackButton fw={isMobile || (isNotebook && !isLaptop) || isDesktop} onClick={() => openCalcModal('pageEnd')} />
                                         </Stack>
                                     </Stack>
                                 </Grid.Col>
