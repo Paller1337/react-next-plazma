@@ -11,7 +11,8 @@
     "imgWebp": "node plugins/toWebp.js",
     "imgResize": "node plugins/fullhdCheck.js",
     "imgPreviews": "node plugins/genPreview.js",
-    "optimize": "node plugins/optimize.js"
+    "optimize": "node plugins/optimize.js",
+    "fileScan": "node plugins/filescan.js"
   },
   "dependencies": {
     "@barba/core": "^2.9.7",

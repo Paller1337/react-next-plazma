@@ -18,6 +18,7 @@ import ym from 'react-yandex-metrika'
 import toast from 'react-hot-toast'
 import 'dayjs/locale/ru'
 import { clear } from 'console'
+import axios from 'axios'
 
 
 const colors = {
@@ -446,74 +447,27 @@ const SportForm = ({ ymTag, close }: WeddingFormProps) => {
 interface WeddingItemProps {
     title?: React.ReactNode
     subtitle?: string
-    description: string[]
+    description: React.ReactNode[]
     images: string[]
+    handleImageModal: (img) => void
 }
-const WeddingItem = ({ title, subtitle, description, images }: WeddingItemProps) => {
+const WeddingItem = ({ title, subtitle, description, images, handleImageModal }: WeddingItemProps) => {
     const isMobile = useMediaQuery('(max-width: 620px)')
     const isLaptop = useMediaQuery('(max-width: 1024px)')
     const isLaptopB = useMediaQuery('(max-width: 1999px)')
     const isNotebook = useMediaQuery('(max-width: 1324px)')
 
-    const [modalImage, setModalImage] = React.useState<string | undefined>(images[0])
-
-    const [opened, { open, close }] = useDisclosure(false)
-
     const gridWidth = images && images?.length > 0 ? 12 / images.length : 6
 
-    const handleImageModal = (img) => {
-        setModalImage(img)
-        open()
-    }
     return (<>
-        <Modal
-            styles={{
-                header: {
-                    position: 'absolute',
-                    background: 'transparent',
-                    right: '12px',
-                    top: '12px'
-                },
-                body: {
-                    padding: '0',
-                    height: '100%'
-                },
-                content: {
-                    height: 'fit-content',
-                    background: 'none'
-                },
-                inner: isMobile ? {
-                    padding: 0
-                } : {}
-            }}
-            closeButtonProps={{
-                icon: <Stack opacity={.5} miw={32} mih={32} bg={'rgba(255, 255, 255)'} justify='center' align='center'>
-                    <IoMdClose size={24} color='#262626' />
-                </Stack>
-            }}
 
-            centered opened={opened}
-            onClose={close}
-            size='xl'
-            radius={0}
-        >
-            <Image
-                radius={0} w='100%' mah='60vh' h='100%'
-                src={modalImage}
-                style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center'
-                }}
-                alt=''
-            />
-        </Modal>
         <Stack py={isMobile || isLaptop ? 32 : 58} gap={isMobile ? 32 : 64}>
             <Grid gutter={{ base: isMobile ? 32 : 48 }}
                 // data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
                 style={{ overflow: 'hidden' }}
             >
                 <Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
-                    <Stack gap={isMobile ? 16 : 32} maw={820}>
+                    <Stack gap={isMobile ? 16 : 32} maw={940}>
                         <Title ff={'Georgia'} fz={isMobile ? 30 : isNotebook ? 50 : 64} fw={600} tt={'uppercase'} c={colors.main} lh={'115%'}>
                             {title}
                         </Title>
@@ -621,10 +575,20 @@ export default function PageWeddings() {
     const [scrollButtonVisible, setScrollButtonVisible] = useState(false)
 
     const [currentYmTag, setCurrentYmTag] = useState('')
-
+    const [gallery, setGallery] = useState([] as string[])
     const openCalcModal = (tag) => {
         setCurrentYmTag(tag)
         open()
+    }
+
+
+    const [modalImage, setModalImage] = React.useState<string>('')
+
+    const [openedImage, { open: openImage, close: closeImage }] = useDisclosure(false)
+
+    const handleImageModal = (img) => {
+        setModalImage(img)
+        openImage()
     }
 
     useEffect(() => {
@@ -640,8 +604,60 @@ export default function PageWeddings() {
 
         return () => clearTimeout(timeout)
     }, [])
+
+    useEffect(() => {
+        const fetchGallery = async () => {
+            const data = await axios.get('/data/files-weddings.json')
+            setGallery(data.data)
+            console.log(data.data)
+        }
+        fetchGallery()
+    }, [])
+
     return (
         <>
+            <Modal
+                styles={{
+                    header: {
+                        position: 'absolute',
+                        background: 'transparent',
+                        right: '12px',
+                        top: '12px'
+                    },
+                    body: {
+                        padding: '0',
+                        height: '100%'
+                    },
+                    content: {
+                        height: 'fit-content',
+                        background: 'none'
+                    },
+                    inner: isMobile ? {
+                        padding: 0
+                    } : {}
+                }}
+                closeButtonProps={{
+                    icon: <Stack opacity={.5} miw={32} mih={32} bg={'rgba(255, 255, 255)'} justify='center' align='center'>
+                        <IoMdClose size={24} color='#262626' />
+                    </Stack>
+                }}
+
+                centered opened={openedImage}
+                onClose={closeImage}
+                size='xl'
+                radius={0}
+            >
+                <Image
+                    radius={0} w='100%' mah='60vh' h='100%'
+                    src={modalImage}
+                    style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center'
+                    }}
+                    alt=''
+                />
+            </Modal>
+
             <Modal
                 opened={opened}
                 onClose={close}
@@ -766,6 +782,7 @@ export default function PageWeddings() {
                                 `${DEFAULTS.URL.CDN}/img/weddings/1-1.webp`,
                                 `${DEFAULTS.URL.CDN}/img/weddings/1-2.webp`
                             ]}
+                            handleImageModal={handleImageModal}
                         />
 
                         <Divider color={colors.main} />
@@ -783,6 +800,7 @@ export default function PageWeddings() {
                                 `${DEFAULTS.URL.CDN}/img/weddings/2-1.webp`,
                                 `${DEFAULTS.URL.CDN}/img/weddings/2-2.webp`
                             ]}
+                            handleImageModal={handleImageModal}
                         />
 
                         <Divider color={colors.main} />
@@ -800,6 +818,7 @@ export default function PageWeddings() {
                                 `${DEFAULTS.URL.CDN}/img/weddings/3-1.webp`,
                                 `${DEFAULTS.URL.CDN}/img/weddings/3-2.webp`
                             ]}
+                            handleImageModal={handleImageModal}
                         />
 
                         <Divider color={colors.main} />
@@ -818,6 +837,7 @@ export default function PageWeddings() {
                                 `${DEFAULTS.URL.CDN}/img/weddings/4-2.webp`,
                                 `${DEFAULTS.URL.CDN}/img/weddings/4-3.webp`
                             ]}
+                            handleImageModal={handleImageModal}
                         />
 
                         <Divider color={colors.main} />
@@ -828,12 +848,14 @@ export default function PageWeddings() {
                             description={[
                                 `Всё необходимое оборудование уже на месте, так что вам не нужно арендовать или привозить технику отдельно. 
                                 Мы поможем с настройкой, чтобы ваш праздник прошёл без накладок.`,
-                                `Проектор: покажите трогательные фотоистории вашей пары или удивите гостей оригинальной презентацией.`,
+                                <><b>Светомузыка:</b> создаёт правильную атмосферу, подчёркивая главный танец и важные моменты.</>,
+                                <><b>Проектор:</b> покажите трогательные фотоистории вашей пары или удивите гостей оригинальной презентацией.</>,
                             ]}
                             images={[
                                 `${DEFAULTS.URL.CDN}/img/weddings/5-1.webp`,
                                 `${DEFAULTS.URL.CDN}/img/weddings/5-2.webp`
                             ]}
+                            handleImageModal={handleImageModal}
                         />
 
                         <Divider color={colors.main} />
@@ -852,10 +874,27 @@ export default function PageWeddings() {
                                     <Stack justify='space-between' h={'100%'} gap={48}>
                                         <Stack gap={isMobile ? 16 : 32} maw={820}>
                                             <Title ff={'Georgia'} fz={isMobile ? 30 : isNotebook ? 50 : 64} fw={600} tt={'uppercase'} c={colors.main} lh={'115%'}>
-                                                Важные правила площадки
+                                                правила <SNW>и условия</SNW> площадки
                                             </Title>
                                         </Stack>
                                         <Stack gap={isMobile ? 16 : 24} pt={10} maw={820}>
+                                            <Stack gap={8} >
+                                                <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
+                                                    <b>Минимальный заказ:</b> 3 500 руб./чел., кухня – от 175 000 руб.
+                                                </Text>
+                                                <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
+                                                    <b>Аренда зала: от 40 000 руб.</b> (в зависимости от дня недели)
+                                                </Text>
+                                                <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
+                                                    <b>Обслуживание:</b> 10% от суммы заказа
+                                                </Text>
+                                                <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
+                                                    <b>Дополнительное оформление зала:</b> 10 000 руб. (стойки и президиум)
+                                                </Text>
+                                            </Stack>
+
+                                            <Divider color={colors.dividerSub} />
+
                                             <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
                                                 Мы сделаем всё, чтобы молодожёны и гости чувствовали себя счастливыми и расслабленными.
                                                 Однако просим соблюдать несколько простых правил.
@@ -914,6 +953,23 @@ export default function PageWeddings() {
                                 </Grid.Col>
                             </Grid>
                         </Group>
+
+                        <Stack gap={24}>
+                            <Title ff={'Georgia'} fz={isMobile ? 30 : isNotebook ? 50 : 64} fw={600} tt={'uppercase'} c={colors.main} lh={'115%'}>
+                                Галерея
+                            </Title>
+                            <Grid
+                                gutter={{ base: isMobile ? 12 : 48 }} w={'100%'}
+                                style={{ overflow: 'hidden' }}
+                                pb={48}
+                            >
+                                {gallery.map(img => (
+                                    <Grid.Col span={{ base: 6, md: 4, lg: 4 }} key={img} onClick={() => handleImageModal(img)}>
+                                        <Image src={`${img}`} width={'100%'} height={isMobile ? 180 : 420} alt={'alt'} pt={isMobile ? 0 : 12} />
+                                    </Grid.Col>
+                                ))}
+                            </Grid>
+                        </Stack>
                     </Stack>
                 </Stack>
             </main>
