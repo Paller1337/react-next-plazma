@@ -5,6 +5,7 @@ import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
 import '@mantine/carousel/styles.css'
 import '../styles/style.sass'
+import '../styles/globals.css'
 
 import type { AppProps } from 'next/app'
 import React, { useContext, useEffect, useRef, useState } from 'react'
