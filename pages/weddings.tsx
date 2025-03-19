@@ -963,8 +963,8 @@ export default function PageWeddings() {
                                 pb={48}
                             >
                                 {gallery.map(img => (
-                                    <Grid.Col span={{ base: 6, md: 4, lg: 4 }} key={img} onClick={() => handleImageModal(img)}>
-                                        <Image src={`${img}`} width={'100%'} height={isMobile ? 180 : 420} alt={'alt'} pt={isMobile ? 0 : 12} />
+                                    <Grid.Col span={{ base: 6, md: 4, lg: 4 }} key={img} onClick={() => handleImageModal(DEFAULTS.URL.CDN + img)}>
+                                        <Image src={`${DEFAULTS.URL.CDN + img}`} width={'100%'} height={isMobile ? 180 : 420} alt={'alt'} pt={isMobile ? 0 : 12} />
                                     </Grid.Col>
                                 ))}
                             </Grid>
