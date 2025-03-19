@@ -609,7 +609,6 @@ export default function PageWeddings() {
         const fetchGallery = async () => {
             const data = await axios.get('/data/files-weddings.json')
             setGallery(data.data)
-            console.log(data.data)
         }
         fetchGallery()
     }, [])
