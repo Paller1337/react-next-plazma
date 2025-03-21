@@ -215,6 +215,9 @@ export default function PageActiveLeisure() {
                                     popover-data={'+7 (910) 168-17-61'}
                                     onClick={() => copy('+79101681761', 'Номер скопирован.', { metric: 'number' })}>
                                     Подробнее</div> */}
+                                <span className='column-card__desc' style={{ fontStyle: 'italic', textAlign: 'left', fontWeight: '600' }}>
+                                    Цена: 250 руб/час
+                                </span>
                             </div>
                             {/* <div className='about-quatr__image'
                                 data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>

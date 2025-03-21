@@ -10,10 +10,11 @@ import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import RulesModal from '@/components/modals/Rules'
 import { useState } from 'react'
+import { Stack, Text } from '@mantine/core'
 
 
 export default function PageAquatory() {
-    
+
     return (
         <>
             <Head>
@@ -50,6 +51,29 @@ export default function PageAquatory() {
                             Plazma Акватория – это оазис внутри города, место, где гости могут отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.
                         </span>
                     </div>
+
+                    <Stack m={'0 auto'} maw={690} px={12} pb={48}>
+                        <Stack p={24} gap={8} bd={'1px solid #252525'}>
+                            <Text fz={16}>
+                                С мая по июль 2025 года <b>акватория доступна только для проживающих гостей парк-отеля</b>.
+                                Посещение по билетам временно недоступно.
+
+                                Возможно, в августе мы откроем доступ для дневных гостей.
+                                Пожалуйста, следите за новостями на сайте и в наших соцсетях.
+
+                                Благодарим за понимание!
+                            </Text>
+
+                            <Text fz={16}>
+                                Возможно, в августе мы откроем доступ для дневных гостей.
+                                Пожалуйста, следите за новостями на сайте и в наших соцсетях.
+                            </Text>
+
+                            <Text fz={16}>
+                                Благодарим за понимание!
+                            </Text>
+                        </Stack>
+                    </Stack>
 
                     <div className='page-aquatory__promo-info promo-info container' data-scroll-section>
                         <div className='promo-info__upper'
