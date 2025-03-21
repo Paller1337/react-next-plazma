@@ -15,7 +15,13 @@ import SportNews from '@/components/SportNews'
 import TextBlock from '@/components/TextBlock'
 
 
-
+const GYM_IMAGES = [
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/1.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/2.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/3.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/4.webp`,
+    DEFAULTS.URL.CDN + `/img/sports-camps/gym/5.webp`,
+]
 
 export default function PageActiveLeisure() {
     const [objectsContent, setObjectsContent] = useState<JSX.Element>()
@@ -197,6 +203,65 @@ export default function PageActiveLeisure() {
                             это проект парк-отеля Plazma, расположенного в Тульской области в 220 км. от
                             Москвы, ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.
                         </span>
+                    </div>
+
+                    <div className='page-events__about-quatr about-quatr' data-scroll-section>
+                        <div className='about-quatr__wrapper'
+                            data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                            <div className='about-quatr__text'>
+                                <h2>тренажерный зал</h2>
+                                <span>Для гостей комплекса открыт тренажерный зал, что обеспечивает комфортные условия для тренировок и возможность заниматься в удобное время.</span>
+                                {/* <div className='btn btn_black popover pop-top'
+                                    popover-data={'+7 (910) 168-17-61'}
+                                    onClick={() => copy('+79101681761', 'Номер скопирован.', { metric: 'number' })}>
+                                    Подробнее</div> */}
+                            </div>
+                            {/* <div className='about-quatr__image'
+                                data-aos={'fade-left'} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
+                                <Image src={images.activeLeisure.img1Png} width={970} height={700} alt='' placeholder='blur' />
+
+                            </div> */}
+                            <div className='about-quatr__slider'>
+                                <Swiper
+                                    {...({
+                                        modules: [FreeMode, Pagination, Navigation],
+                                        navigation: {
+                                            enable: true
+                                        },
+                                        pagination: {
+                                            enabled: true
+                                        },
+                                        spaceBetween: 20,
+                                        slidesPerView: 1,
+                                        // breakpoints: {
+                                        //     1: {
+                                        //         centeredSlides: false,
+                                        //         enabled: true
+                                        //     },
+                                        //     420: {
+                                        //         enabled: true
+                                        //     },
+                                        //     768: {
+                                        //         centeredSlides: true,
+                                        //         enabled: true
+                                        //     },
+                                        // },
+
+                                    } as SwiperProps)}
+                                >
+                                    {GYM_IMAGES.map(x => (
+                                        <SwiperSlide key={'gym-' + x}>
+                                            <div style={{ position: 'relative', display: 'flex' }}>
+                                                <Image src={x} width={970} height={700} alt=''
+                                                // loader={vkCloudLoader}
+                                                />
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
+
+                        </div>
                     </div>
 
 
