@@ -445,13 +445,14 @@ const SportForm = ({ ymTag, close }: WeddingFormProps) => {
 }
 
 interface WeddingItemProps {
+    idTag: string
     title?: React.ReactNode
     subtitle?: string
     description: React.ReactNode[]
     images: string[]
     handleImageModal: (img) => void
 }
-const WeddingItem = ({ title, subtitle, description, images, handleImageModal }: WeddingItemProps) => {
+const WeddingItem = ({ idTag, title, subtitle, description, images, handleImageModal }: WeddingItemProps) => {
     const isMobile = useMediaQuery('(max-width: 620px)')
     const isLaptop = useMediaQuery('(max-width: 1024px)')
     const isLaptopB = useMediaQuery('(max-width: 1999px)')
@@ -461,7 +462,7 @@ const WeddingItem = ({ title, subtitle, description, images, handleImageModal }:
 
     return (<>
 
-        <Stack py={isMobile || isLaptop ? 32 : 58} gap={isMobile ? 32 : 64}>
+        <Stack id={idTag} py={isMobile || isLaptop ? 32 : 58} gap={isMobile ? 32 : 64}>
             <Grid gutter={{ base: isMobile ? 32 : 48 }}
                 // data-scroll-section data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}
                 style={{ overflow: 'hidden' }}
@@ -769,6 +770,7 @@ export default function PageWeddings() {
                         </Stack>
 
                         <WeddingItem
+                            idTag='banquet-hall'
                             title={<>Отдельное здание, <SNW>только для вас</SNW></>}
                             subtitle={'Место, которое отражает вашу историю, эмоции и стиль'}
                             description={[
@@ -787,6 +789,7 @@ export default function PageWeddings() {
                         <Divider color={colors.main} />
 
                         <WeddingItem
+                            idTag='ceremony'
                             title={<>Выездная церемония <SNW>и фуршет</SNW> <SNW>для гостей</SNW></>}
                             subtitle={'Скажите заветное «Да» под открытым небом'}
                             description={[
@@ -805,6 +808,7 @@ export default function PageWeddings() {
                         <Divider color={colors.main} />
 
                         <WeddingItem
+                            idTag='territory'
                             title={<>Территория 7 га <SNW>для фотосессий</SNW></>}
                             subtitle={'Создайте уникальные кадры без лишней суеты'}
                             description={[
@@ -823,6 +827,7 @@ export default function PageWeddings() {
                         <Divider color={colors.main} />
 
                         <WeddingItem
+                            idTag='menu-and-serving'
                             title={<>Индивидуальное меню <SNW>и сервировка</SNW></>}
                             subtitle={'Каждый гость будет доволен'}
                             description={[
@@ -842,6 +847,7 @@ export default function PageWeddings() {
                         <Divider color={colors.main} />
 
                         <WeddingItem
+                            idTag='equipment'
                             title={<>Техническое оснащение</>}
                             subtitle={'Сделайте праздник ещё ярче'}
                             description={[
@@ -859,7 +865,7 @@ export default function PageWeddings() {
 
                         <Divider color={colors.main} />
 
-                        <Group w={'100%'} py={isMobile || isLaptop ? 32 : 58}>
+                        <Group id='terms' w={'100%'} py={isMobile || isLaptop ? 32 : 58}>
                             <Grid
                                 gutter={{ base: isMobile ? 32 : 48 }} w={'100%'}
                                 style={{ overflow: 'hidden' }}
