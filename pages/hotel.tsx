@@ -15,7 +15,7 @@ import { Rings } from 'react-loader-spinner'
 import RoomObject from '../components/objects/RoomObject'
 import { DEFAULTS } from 'defaults'
 import TextBlock from '@/components/TextBlock'
-import { Group, Stack } from '@mantine/core'
+import { Group, List, Stack, Text } from '@mantine/core'
 import PetsRulesModal from '@/components/modals/PetsRulesModal'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
@@ -32,6 +32,12 @@ export async function getStaticProps() {
 
 interface PageHotelProps {
     rooms: RoomObjectProps[]
+}
+
+const SNW = ({ children }: { children: string }) => {
+    return (
+        <span style={{ whiteSpace: 'nowrap' }}>{children}</span>
+    )
 }
 
 export default function PageHotel(props: PageHotelProps) {
@@ -140,6 +146,20 @@ export default function PageHotel(props: PageHotelProps) {
                                 <span className='text-normal'>
                                     С 30 мая бассейн на полуострове (лежак + полотенце) и парковка включены в стоимость проживания.
                                 </span>
+                            </Stack>
+
+                            <Stack
+                            pt={24}
+                                // p={12}
+                                // bd={'1px solid #252525'}
+                                gap={4}
+                            >
+                                <Text fz={18} fw={500}>Условия размещения дополнительных гостей</Text>
+                                <List size={'xs'} styles={{ itemLabel: { fontSize: 16 }, item: { paddingBlock: 2 } }}>
+                                    <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1000 ₽/сутки</SNW></List.Item>
+                                    <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 500 ₽/сутки</SNW></List.Item>
+                                    <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
+                                </List>
                             </Stack>
                         </div>
                     </div>

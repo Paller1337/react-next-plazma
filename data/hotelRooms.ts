@@ -484,6 +484,9 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img/hotel/room-previews/cottage/4.webp',
             '/img/hotel/room-previews/cottage/5.webp',
             '/img/hotel/room-previews/cottage/6.webp',
+            '/img/hotel/room-previews/cottage/7.webp',
+            '/img/hotel/room-previews/cottage/8.webp',
+            '/img/hotel/room-previews/cottage/9.webp',
         ],
         previews: [
             '/img-previews/hotel/room-previews/cottage/1.webp',
@@ -492,6 +495,9 @@ export const hotelRooms: RoomObjectProps[] = [
             '/img-previews/hotel/room-previews/cottage/4.webp',
             '/img-previews/hotel/room-previews/cottage/5.webp',
             '/img-previews/hotel/room-previews/cottage/6.webp',
+            '/img-previews/hotel/room-previews/cottage/7.webp',
+            '/img-previews/hotel/room-previews/cottage/8.webp',
+            '/img-previews/hotel/room-previews/cottage/9.webp',
         ],
 
         size: 'Размер номера 64 м².',
