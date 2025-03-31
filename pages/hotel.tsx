@@ -17,6 +17,7 @@ import { DEFAULTS } from 'defaults'
 import TextBlock from '@/components/TextBlock'
 import { Group, List, Stack, Text } from '@mantine/core'
 import PetsRulesModal from '@/components/modals/PetsRulesModal'
+import { useMediaQuery } from '@mantine/hooks'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 // const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -34,13 +35,14 @@ interface PageHotelProps {
     rooms: RoomObjectProps[]
 }
 
-const SNW = ({ children }: { children: string }) => {
+const SNW = ({ children }: { children: string | React.ReactNode }) => {
     return (
         <span style={{ whiteSpace: 'nowrap' }}>{children}</span>
     )
 }
 
 export default function PageHotel(props: PageHotelProps) {
+    const isMobile = useMediaQuery('(max-width: 620px)')
 
     // const rooms = useMemo(() => hotelRooms.map(x => x), [])
     const rooms = props.rooms
@@ -105,10 +107,100 @@ export default function PageHotel(props: PageHotelProps) {
                         <TextBlock title={{ type: 'h2', text: 'Правила бронирования' }}
                             style={{ paddingTop: 0, paddingBottom: 0 }}
                         />
+                        <Stack gap={20} maw={700}>
+                            <Stack gap={4}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Заезд и выезд</Text>
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Ранний заезд возможен с 07:00, при наличии свободного и готового номера.</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Поздний выезд возможен до 17:00.</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Обе опции предоставляются по предварительному согласованию с администратором и оплачиваются дополнительно — 50% от стоимости номера.</Text>
+                                </Stack>
+                            </Stack>
 
+                            <Stack gap={4}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Оплата и отмена бронирования</Text>
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>При бронировании взимается предоплата в размере 1 суток проживания.</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>В случае отмены менее чем за 7 суток до даты заезда, предоплата не возвращается, за исключением ситуаций, индивидуально согласованных с администратором.</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>По вопросам возврата денежных средств: <SNW><a style={{ color: '#252525', textDecoration: 'underline' }} href='tel:+79101681761'>+7 (910) 168-17-61</a></SNW> или <SNW><a style={{ color: '#252525', textDecoration: 'underline' }} href='tel:+79308977701'>+7 (930) 897-77-01</a></SNW></Text>
+                                </Stack>
+                            </Stack>
+
+                            <Stack gap={4}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Незаезд</Text>
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>В случае незаезда взымается штраф в размере стоимости первых суток проживания.</Text>
+                                </Stack>
+                            </Stack>
+
+                            <Stack gap={4}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Документы</Text>
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>При заселении требуется оригинал документа, удостоверяющего личность, для всех гостей.</Text>
+                                </Stack>
+                            </Stack>
+
+                            <Stack gap={4}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Страховой депозит</Text>
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>При заезде вносится залог в размере от 5 000 до 10 000 рублей, в зависимости от категории номера и условий проживания.</Text>
+                                </Stack>
+                            </Stack>
+
+                            <Stack gap={4}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Проживание с животными</Text>
+                                <Group gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Перед бронированием просьба ознакомиться с</Text>
+                                    <PetsRulesModal fz={isMobile ? 15 : 16} text='правилами проживания с животными.' />
+                                </Group>
+                            </Stack>
+
+                            <Stack gap={8}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Бассейн и парковка (с 30 мая)</Text>
+                                <Stack gap={4}>
+                                    <Text fz={16} fw={600}>Услуги, включённые в стоимость проживания:</Text>
+                                    <Stack gap={4}>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Парковка</Text>
+                                    </Stack>
+                                </Stack>
+
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={600}>Перечень категорий размещения, для которых указанные услуги включены в стоимость:</Text>
+                                    <Stack gap={4}>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Австрийские таунхаусы</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Таунхаусы</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Коттеджи</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Домики на набережной</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Дачи</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Номера категории «Комфорт с сауной»</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Улучшенные номера</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Номера категории «Комфорт»</Text>
+                                    </Stack>
+                                </Stack>
+
+                                <Stack gap={4}>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Для гостей Спортивной деревни, 5 и 6 корпусов эти услуги не входят в стоимость проживания.</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Проживающие в данных номерах могут приобрести услугу дополнительно — 800 ₽ с человека (от 5 лет).</Text>
+                                </Stack>
+                            </Stack>
+
+
+                            <Stack gap={8}>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Условия размещения дополнительных гостей</Text>
+                                <Stack gap={4}>
+                                    <List size={'xs'} styles={{ itemLabel: { fontSize: isMobile ? 15 : 16 }, item: { paddingBlock: 2 } }}>
+                                        <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1000 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 500 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
+                                    </List>
+                                </Stack>
+                            </Stack>
+                        </Stack>
                         <div className='text-column'>
 
-                            <span className='text-normal'>
+                            {/* <span className='text-normal'>
                                 Возможен ранний заезд с 07:00 (при наличии свободного и готового номера). Возможен поздний выезд до 17:00. Услуги предоставляются при предварительном согласовании с администратором и оплачиваются дополнительно 50% от стоимости номера.
                             </span>
                             <span className='text-normal'>
@@ -133,23 +225,23 @@ export default function PageHotel(props: PageHotelProps) {
 
                             <span className='text-normal'>
                                 При заезде вносится страховой депозит в размере 5000–10000 рублей.
-                            </span>
+                            </span> */}
 
-                            <Group gap={4}>
+                            {/* <Group gap={4}>
                                 <span className='text-normal'>
                                     Перед бронированием, пожалуйста, ознакомьтесь с
                                 </span>
                                 <PetsRulesModal text='правилами проживания с животными' />
-                            </Group>
+                            </Group> */}
 
-                            <Stack p={12} bd={'1px solid #252525'}>
+                            {/* <Stack p={12} bd={'1px solid #252525'}>
                                 <span className='text-normal'>
                                     С 30 мая бассейн на полуострове (лежак + полотенце) и парковка включены в стоимость проживания.
                                 </span>
-                            </Stack>
+                            </Stack> */}
 
-                            <Stack
-                            pt={24}
+                            {/* <Stack
+                                pt={24}
                                 // p={12}
                                 // bd={'1px solid #252525'}
                                 gap={4}
@@ -160,7 +252,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 500 ₽/сутки</SNW></List.Item>
                                     <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
                                 </List>
-                            </Stack>
+                            </Stack> */}
                         </div>
                     </div>
 

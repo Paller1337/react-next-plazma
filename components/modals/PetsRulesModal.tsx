@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 
 interface PetsRulesModalProps {
     text?: string
+    fz?: number
 }
 
 export default function PetsRulesModal(props: PetsRulesModalProps) {
@@ -111,7 +112,7 @@ export default function PetsRulesModal(props: PetsRulesModalProps) {
             </Modal>
 
 
-            <Text fz={16} td={'underline'} style={{ cursor: 'pointer' }} onClick={open}>{props.text ?? 'Правила проживания с животными'}</Text>
+            <Text fz={props.fz ?? 16} td={'underline'} style={{ cursor: 'pointer' }} onClick={open}>{props.text ?? 'Правила проживания с животными'}</Text>
         </>
     );
 }
