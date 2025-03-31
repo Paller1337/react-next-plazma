@@ -320,7 +320,7 @@ export default function PageAquatory() {
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='text'>Территория и бассейн зоны отдыха соответствуют всем санитарно-эпидемиологическим нормам.</span>
                         <span className='text'> По всем лабораторным исследованиям и анализам вода в нашем водоеме имеет самые лучшие показатели в Тульской области .</span>
-                        <PlazmaSertItem img={'/img/certificate.webp'} />
+                        {/* <PlazmaSertItem img={'/img/certificate.webp'} /> */}
                         {/*<PlazmaSertItem img={'/img/sert/2_1new.webp'} />
                         <PlazmaSertItem img={'/img/sert/2_2new.webp'} />
                         <PlazmaSertItem img={'/img/sert/3new.webp'} /> */}
