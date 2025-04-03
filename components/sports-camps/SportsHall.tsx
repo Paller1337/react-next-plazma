@@ -1,9 +1,11 @@
 import { Carousel } from '@mantine/carousel'
-import { Box, Stack, useMantineTheme, Image, Text, Title, Blockquote } from '@mantine/core'
+import { Box, Stack, useMantineTheme, Image, Text, Title, Blockquote, Group, List } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { FaRankingStar } from 'react-icons/fa6'
 import ModalSlider from './ModalSlider'
 import { DEFAULTS } from 'defaults'
+import PlazmaSertItem from '../PlazmaSertItem'
+import SNW from '../SNW'
 
 const IMAGES = [
     DEFAULTS.URL.CDN + `/img/sports-camps/sports-hall/1.webp`,
@@ -51,6 +53,40 @@ export default function SportsHall() {
                 включая ворота для мини-футбола, баскетбольные стойки, сетки для волейбола и гимнастические зеркала.
                 Это пространство идеально подходит для интенсивных тренировок и соревнований самого разного уровня.
             </Blockquote>
+
+            <Group gap={12} justify={mobile ? 'center' : 'space-between'} pb={mobile ? 48 : 12}>
+                <Stack gap={12} maw={mobile ? '100%' : '70%'}>
+                    <Title order={4} size={mobile ? 20 : 'h4'}>Сертифицированный спортивный объект</Title>
+                    <Text size={mobile ? 'xs' : 'sm'}>
+                        Многофункциональный спортивный зал, расположенный по адресу: Тульская область, г. Донской, микрорайон Центральный, ул. Никольская, прошёл добровольную сертификацию по системе <b>«РОССПОРТСЕРТИФИКАТ. БЕЗОПАСНОСТЬ, КАЧЕСТВО, ДОСТУПНОСТЬ»</b>.
+                    </Text>
+
+                    <Stack gap={4} py={12}>
+                        <Text fz={mobile ? 15 : 18} fw={600}>Объект соответствует требованиям:</Text>
+                        <List size={'xs'} styles={{ itemLabel: { fontSize: mobile ? 15 : 18 }, item: { paddingBlock: 2 } }}>
+                            <List.Item><SNW>п. 5.1, 5.3 ГОСТ Р 52025-2021</SNW></List.Item>
+                            <List.Item><SNW>п. 5 ГОСТ Р 55529-2013</SNW></List.Item>
+                        </List>
+                    </Stack>
+
+                    <Stack gap={2}>
+                        <Text size={mobile ? 'xs' : 'sm'}>
+                            Срок действия сертификата: <b> с 14 февраля 2025 г. по 14 февраля 2028 г.</b>
+                        </Text>
+                        <Text size={mobile ? 'xs' : 'sm'}>
+                            Орган по сертификации: ООО «НИИ ПБСС»
+                        </Text>
+                    </Stack>
+
+                    <Text size={mobile ? 'xs' : 'sm'}>
+                        Сертификация подтверждает соответствие спортивного зала современным требованиям безопасности и качества.
+                    </Text>
+
+
+                </Stack>
+
+                <PlazmaSertItem img={'/img/certificate.webp'} />
+            </Group>
         </Stack>
     )
 }

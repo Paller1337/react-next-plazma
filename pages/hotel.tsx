@@ -18,6 +18,7 @@ import TextBlock from '@/components/TextBlock'
 import { Group, List, Stack, Text } from '@mantine/core'
 import PetsRulesModal from '@/components/modals/PetsRulesModal'
 import { useMediaQuery } from '@mantine/hooks'
+import SNW from '@/components/SNW'
 
 // const RoomObject = lazy(() => import('../components/objects/RoomObject'))
 // const PlazmaSlider = lazy(() => import('../components/PlazmaSlider'))
@@ -35,11 +36,7 @@ interface PageHotelProps {
     rooms: RoomObjectProps[]
 }
 
-const SNW = ({ children }: { children: string | React.ReactNode }) => {
-    return (
-        <span style={{ whiteSpace: 'nowrap' }}>{children}</span>
-    )
-}
+
 
 export default function PageHotel(props: PageHotelProps) {
     const isMobile = useMediaQuery('(max-width: 620px)')

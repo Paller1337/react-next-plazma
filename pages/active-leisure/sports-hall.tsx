@@ -14,11 +14,17 @@ import YoutubeVideo from '@/components/YoutubeVideo'
 import TextBlock from '@/components/TextBlock'
 import SportObjectForm from '@/components/SportObjectForm'
 import SportObjectsMenu from '@/components/SportObjectsMenu'
+import { Group, List, Stack, Title, useMantineTheme, Text } from '@mantine/core'
+import PlazmaSertItem from '@/components/PlazmaSertItem'
+import SNW from '@/components/SNW'
+import { useMediaQuery } from '@mantine/hooks'
 
 
 
 
 export default function PageSportsHall() {
+    const theme = useMantineTheme()
+    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
     return (
         <>
             <Head>
@@ -245,8 +251,41 @@ export default function PageSportsHall() {
                             </SwiperSlide>
                         </Swiper>
                     </div>
+                    <Group gap={12} justify={mobile ? 'center' : 'space-between'} py={mobile ? 48 : 96} maw={1170} m={'0 auto'}>
+                        <Stack gap={12} maw={mobile ? '100%' : '70%'}>
+                            <Title style={{ fontFamily: 'Lora' }} fw={400} tt={'uppercase'} c={'#252525'} order={4} size={mobile ? 20 : 'h4'}>Сертифицированный спортивный объект</Title>
+                            <Text style={{ fontFamily: 'Lora' }} lh={'140%'} c={'#252525'} fw={400} size={mobile ? '15px' : '17px'}>
+                                Многофункциональный спортивный зал, расположенный по адресу: Тульская область, г. Донской, микрорайон Центральный, ул. Никольская, прошёл добровольную сертификацию по системе <b>«РОССПОРТСЕРТИФИКАТ. БЕЗОПАСНОСТЬ, КАЧЕСТВО, ДОСТУПНОСТЬ»</b>.
+                            </Text>
 
-                    <SportObjectForm obj={'УНИВЕРСАЛЬНЫЙ СПОРТИВНЫЙ ЗАЛ'}/>
+                            <Stack gap={4} py={12}>
+                                <Text lh={'140%'} c={'#252525'} fw={500} size={mobile ? '15px' : '17px'}>Объект соответствует требованиям:</Text>
+                                <List size={'xs'} styles={{ itemLabel: { fontSize: mobile ? 15 : 17 }, item: { paddingBlock: 2 } }}>
+                                    <List.Item><SNW>п. 5.1, 5.3 ГОСТ Р 52025-2021</SNW></List.Item>
+                                    <List.Item><SNW>п. 5 ГОСТ Р 55529-2013</SNW></List.Item>
+                                </List>
+                            </Stack>
+
+                            <Stack gap={2}>
+                                <Text lh={'140%'} c={'#252525'} fw={400} size={mobile ? '15px' : '17px'}>
+                                    Срок действия сертификата: <b> с 14 февраля 2025 г. по 14 февраля 2028 г.</b>
+                                </Text>
+                                <Text lh={'140%'} c={'#252525'} fw={400} size={mobile ? '15px' : '17px'}>
+                                    Орган по сертификации: ООО «НИИ ПБСС»
+                                </Text>
+                            </Stack>
+
+                            <Text lh={'140%'} c={'#252525'} fw={400} size={mobile ? '15px' : '17px'}>
+                                Сертификация подтверждает соответствие спортивного зала современным требованиям безопасности и качества.
+                            </Text>
+
+
+                        </Stack>
+
+                        <PlazmaSertItem img={'/img/certificate.webp'} />
+                    </Group>
+
+                    <SportObjectForm obj={'УНИВЕРСАЛЬНЫЙ СПОРТИВНЫЙ ЗАЛ'} />
                     <SportObjectsMenu />
                 </div >
             </main >
