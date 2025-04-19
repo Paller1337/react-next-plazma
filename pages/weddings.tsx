@@ -809,7 +809,7 @@ export default function PageWeddings() {
 
                         <WeddingItem
                             idTag='territory'
-                            title={<>Территория 7 га <SNW>для фотосессий</SNW></>}
+                            title={<>Территория 15 га <SNW>для фотосессий</SNW></>}
                             subtitle={'Создайте уникальные кадры без лишней суеты'}
                             description={[
                                 `Наша площадка создаёт идеальные условия для  свадебной фотосессии. 

@@ -300,7 +300,7 @@ export default function PageIndex(props: PageIndexProps) {
               <div className='page-aquatory__list'>
                 <span className='page-aquatory__list-title'>Парк-отель «PLAZMA» в цифрах:</span>
                 <ul>
-                  <li className='page-aquatory__list-item'>7 гектар занимает территория отеля</li>
+                  <li className='page-aquatory__list-item'>15 гектар занимает территория отеля</li>
                   <li className='page-aquatory__list-item'>300 единиц составляет наш номерной фонд</li>
                   <li className='page-aquatory__list-item'>более 1000 человек вмещает отель</li>
                   <li className='page-aquatory__list-item'>1 пляж с водоемом</li>
