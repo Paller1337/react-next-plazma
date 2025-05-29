@@ -10,7 +10,8 @@ import vkCloudLoader from '@/mw/utils/imageLoader'
 import { DEFAULTS } from 'defaults'
 import RulesModal from '@/components/modals/Rules'
 import { useState } from 'react'
-import { Stack, Text } from '@mantine/core'
+import { Group, Stack, Text } from '@mantine/core'
+import Link from 'next/link'
 
 
 export default function PageAquatory() {
@@ -320,10 +321,22 @@ export default function PageAquatory() {
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
                         <span className='text'>Территория и бассейн зоны отдыха соответствуют всем санитарно-эпидемиологическим нормам.</span>
                         <span className='text'> По всем лабораторным исследованиям и анализам вода в нашем водоеме имеет самые лучшие показатели в Тульской области .</span>
-                        {/* <PlazmaSertItem img={'/img/certificate.webp'} /> */}
-                        {/*<PlazmaSertItem img={'/img/sert/2_1new.webp'} />
-                        <PlazmaSertItem img={'/img/sert/2_2new.webp'} />
-                        <PlazmaSertItem img={'/img/sert/3new.webp'} /> */}
+                        <Group>
+                            <PlazmaSertItem img={'/img/aqua-san.webp.webp'} />
+                            <Stack>
+                                <Link href={'/pdf/aquatory/Протокол-испытаний-воды.pdf'} target='_blank'>
+                                    Протокол испытаний воды
+                                </Link>
+
+                                <Link href={'/pdf/aquatory/Протокол-испытаний-почвы.pdf'} target='_blank'>
+                                    Протокол испытаний почвы
+                                </Link>
+
+                                <Link href={'/pdf/aquatory/Экспертное-заключение.pdf'} target='_blank'>
+                                    Экспертное заключение
+                                </Link>
+                            </Stack>
+                        </Group>
                     </div>
                 </div >
             </main>
