@@ -17,6 +17,7 @@ module.exports = {
         domains: [
             // 'localhost',
             'cdn0.kplazma.ru',
+            'kplazma.ru',
             // 'fonts.googleapis.com'
         ],
         // loader: 'custom',

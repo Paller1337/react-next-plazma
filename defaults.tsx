@@ -5,7 +5,8 @@
 export module DEFAULTS {
     export const URL = {
         BASE_URL: 'https://kplazma.ru',
-        CDN: 'https://cdn0.kplazma.ru'
+        // CDN: 'https://cdn0.kplazma.ru'
+        CDN: 'https://kplazma.ru'
     }
 
     export const AOS = {

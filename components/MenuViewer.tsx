@@ -1,7 +1,8 @@
+import { DEFAULTS } from 'defaults'
 import React, { useEffect, useRef, useState } from 'react'
 import { Document, Page } from 'react-pdf'
 
-const cdn = 'https://cdn0.kplazma.ru'
+const cdn = DEFAULTS.URL.CDN
 const menus = [
     // {
     //     name: 'Новогоднее меню',
