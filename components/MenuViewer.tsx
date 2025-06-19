@@ -4,14 +4,14 @@ import { Document, Page } from 'react-pdf'
 
 const cdn = DEFAULTS.URL.CDN
 const menus = [
-    // {
-    //     name: 'Новогоднее меню',
-    //     img: '/pdf/ny2025.pdf',
-    //     sM: .8,
-    // },
+    {
+        name: 'Сезонное меню',
+        img: '/pdf/season.pdf',
+        sM: .8,
+    },
     {
         name: 'Меню ресторана',
-        img: '/pdf/rest.pdf',
+        img: '/pdf/rest-new.pdf',
         sM: 1,
     },
     {
@@ -21,12 +21,12 @@ const menus = [
     },
     {
         name: 'Барная карта',
-        img: '/pdf/bar.pdf',
+        img: '/pdf/bar-new.pdf',
         sM: 1,
     },
     {
         name: 'Детское меню',
-        img: '/pdf/children.pdf',
+        img: '/pdf/children-new.pdf',
         sM: .6,
     },
     {
