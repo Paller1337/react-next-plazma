@@ -16,7 +16,7 @@ const menus = [
     },
     {
         name: 'Банкетное меню',
-        img: '/pdf/banquet.pdf',
+        img: '/pdf/banquet-new.pdf',
         sM: .8,
     },
     {
