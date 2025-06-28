@@ -28,6 +28,7 @@ export interface RoomObjectProps {
     description: string,
     pets: boolean,
     alert: boolean,
+    alertText?: string
     images: string[],
     previews: string[]
     size: string,
@@ -222,6 +223,12 @@ export default function RoomObject(data: RoomObjectProps) {
                 <span className='hotel-room__title' onClick={() => copyLink(roomId)} style={{ cursor: 'pointer' }}>
                     <Icon.Link size={20} /> {data.title}
                 </span>
+                {data.alertText ?
+                    <span className='hotel-room__text bold'>
+                        {/* Островок и стоянка включены,  */}
+                        {data.alertText}
+                    </span> : <></>}
+
                 <span className='hotel-room__text'>{data.description}
                 </span>
                 {data.pets ?

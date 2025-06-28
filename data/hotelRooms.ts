@@ -538,9 +538,10 @@ export const hotelRooms: RoomObjectProps[] = [
     {
         tlid: 245531,
         bnid: [492549, 16538],
-        title: 'Таунхаус',
+        title: 'Таунхаус. Скидка 10%',
         description: 'Двухэтажные апартаменты с гостиной, двумя спальнями, двумя санузлами, мини-кухней и инфракрасной сауной. Возле каждого таунхауса веранда с местами для отдыха на свежем воздухе и мангалом.',
         pets: true,
+        alertText: 'Возле таунхаусов ведутся строительные работы. Действует скидка 10%.',
         alert: true,
         images: [
             '/img/hotel/room-previews/townhouse/1.webp',
@@ -569,8 +570,12 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: 'Цена вс-чт', value: ['<span class="op">13950</span><b>11950 руб/сутки</b>',] },
             // { name: 'Цена пт-сб', value: ['<span class="op">16550</span><b>14450 руб/сутки</b>',] },
             // { name: '', value: [nextSeason] },
-            { name: 'Цена вс-чт', value: ['<b>17650 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>20250 руб/сутки</b>',] },
+
+            // { name: 'Цена вс-чт', value: ['<b>17650 руб/сутки</b>',] },
+            // { name: 'Цена пт-сб', value: ['<b>20250 руб/сутки</b>',] },
+            { name: 'Цена вс-чт', value: ['<span class="op">17650</span><b>15885 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<span class="op">20250</span><b>18225 руб/сутки</b>',] },
+            
             // { name: 'Цена пт-сб', value: ['<span class="op">14450</span><b>13000 руб/сутки</b>',] },
             // { name: '', value: [nextSeason] },
             // { name: 'Цена вс-чт', value: ['<b>13950 руб/сутки</b>',] },

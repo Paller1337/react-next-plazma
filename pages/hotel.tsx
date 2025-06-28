@@ -275,6 +275,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     tlid={x.tlid}
                                     bnid={x.bnid}
                                     alert={x.alert}
+                                    alertText={x.alertText}
                                     title={x.title}
                                     description={x.description}
                                     pets={x.pets}
