@@ -153,12 +153,12 @@ export default function PageHotel(props: PageHotelProps) {
                             </Stack>
 
                             <Stack gap={8}>
-                                <Text fz={isMobile ? 18 : 20} fw={700}>Бассейн и парковка (с 30 мая)</Text>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Бассейн (до 31 августа) и парковка</Text>
                                 <Stack gap={4}>
                                     <Text fz={16} fw={600}>Услуги, включённые в стоимость проживания:</Text>
                                     <Stack gap={4}>
-                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове</Text>
-                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове (до 31 августа)</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце (до 31 августа)</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Парковка</Text>
                                     </Stack>
                                 </Stack>
@@ -189,19 +189,20 @@ export default function PageHotel(props: PageHotelProps) {
                             <Stack gap={8}>
                                 <Text fz={isMobile ? 18 : 20} fw={700}>Условия размещения дополнительных гостей</Text>
                                 <Stack gap={4}>
-                                    <Text fz={isMobile ? 15 : 16} fw={600}>До 30 мая:</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={600}>До 31 августа:</Text>
                                     <List size={'xs'} styles={{ itemLabel: { fontSize: isMobile ? 15 : 16 }, item: { paddingBlock: 2 } }}>
-                                        <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1000 ₽/сутки</SNW></List.Item>
-                                        <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 500 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1800 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 1300 ₽/сутки</SNW></List.Item>
                                         <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
                                     </List>
                                 </Stack>
 
                                 <Stack gap={4}>
-                                    <Text fz={isMobile ? 15 : 16} fw={600}>С 30 мая:</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={600}>С 1 сентября:</Text>
+
                                     <List size={'xs'} styles={{ itemLabel: { fontSize: isMobile ? 15 : 16 }, item: { paddingBlock: 2 } }}>
-                                        <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1800 ₽/сутки</SNW></List.Item>
-                                        <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 1300 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1300 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 800 ₽/сутки</SNW></List.Item>
                                         <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
                                     </List>
                                 </Stack>
