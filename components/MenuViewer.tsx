@@ -11,7 +11,7 @@ const menus = [
     },
     {
         name: 'Меню ресторана',
-        img: '/pdf/rest-new.pdf',
+        img: '/pdf/rest-au.pdf',
         sM: 1,
     },
     {
@@ -21,7 +21,7 @@ const menus = [
     },
     {
         name: 'Барная карта',
-        img: '/pdf/bar-new.pdf',
+        img: '/pdf/bar-au.pdf',
         sM: 1,
     },
     {
