@@ -34,16 +34,7 @@ const menus = [
         img: '/pdf/breakfast.pdf',
         sM: .8,
     },
-    // {
-    //     name: 'Постное меню',
-    //     img: '/pdf/season-menu.pdf',
-    //     sM: .8,
-    // },
-    // {
-    //     name: 'Чайная карта',
-    //     img: '/pdf/tea.pdf',
-    //     sM: 1,
-    // },
+
 ]
 
 function MenuViewer() {
