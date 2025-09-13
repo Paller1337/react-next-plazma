@@ -19,8 +19,10 @@ const saleTitle = '<span style="color: red; white-space: nowrap;">с 3 сент�
 const nextSeason = '<span style="color: green; white-space: nowrap;">Цены с 1 сентября:</span>'
 
 const newYear = '<span style="color: green; white-space: nowrap;">Цены с 30 по 31 декабря и с 2 по 11 января:</span>'
-
 const newYearNight = '<span style="color: red; white-space: nowrap;">Цена в новогоднюю ночь с 31 по 2 января:</span>'
+
+const newYearDeluxe = '<span style="color: green; white-space: nowrap;">Цены с 30 по 31 декабря и с 1 по 11 января:</span>'
+const newYearNightDeluxe = '<span style="color: red; white-space: nowrap;">Цена в новогоднюю ночь с 31 по 1 января:</span>'
 
 export const hotelRooms: RoomObjectProps[] = [
     {
@@ -247,9 +249,9 @@ export const hotelRooms: RoomObjectProps[] = [
             { name: 'Цена', value: ['<b>6150 руб/сутки</b>',] },
 
 
-            { name: '', value: [newYear] },
+            { name: '', value: [newYearDeluxe] },
             { name: 'Цена', value: ['<b>6150 руб/сутки</b>',] },
-            { name: '', value: [newYearNight] },
+            { name: '', value: [newYearNightDeluxe] },
             { name: 'Цена пт-сб', value: ['<b>8250 руб. в новогоднюю ночь</b>',] },
         ],
 
@@ -295,7 +297,7 @@ export const hotelRooms: RoomObjectProps[] = [
 
             { name: '', value: [newYear] },
             { name: 'Цена', value: ['<b>6150 руб/сутки</b>',] },
-            { name: '', value: [newYearNight] },
+            { name: '', value: [newYearNightDeluxe] },
             { name: 'Цена пт-сб', value: ['<b>8250 руб. в новогоднюю ночь</b>',] },
         ],
 
