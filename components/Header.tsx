@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import svgVk from '/public/svg/vk.svg'
 import copy from './functions/copy'
 import { ReactSVG } from 'react-svg'
+import { MdEmail } from 'react-icons/md'
 
 interface HeaderProps {
     darken?: boolean
@@ -152,13 +153,13 @@ export default function Header(props: HeaderProps) {
                         <div className='menu__action'>
                             <span className='menu__action-link'>
                                 <object className='icon' data='/svg/vk.svg' type='image/svg+xml' title='Мы ВКонтакте'>
-                                    <img src='/svg/vk.svg' alt='' /> 
+                                    <img src='/svg/vk.svg' alt='' />
                                 </object>
                                 <Link href='https://vk.com/park_hotel_plazma' target='blank' />
                             </span>
                             <span className='menu__action-link'>
                                 <object className='icon' data='/svg/tg.svg' type='image/svg+xml' title='Наш Телеграм'>
-                                    <img src='/svg/tg.svg' alt='' /> 
+                                    <img src='/svg/tg.svg' alt='' />
                                 </object>
                                 <Link href='https://t.me/plazmadonskoy' target='blank' />
                             </span>
@@ -182,8 +183,19 @@ export default function Header(props: HeaderProps) {
                                     </div>
                                 </div>
                             </span>
-                        </div>
 
+                            <span className='menu__action-link popover-link'>
+                                <MdEmail className='icon' color='#fff' />
+                                <div className='popover-header'
+                                    onClick={() => copy('hotel@kplazma.ru', 'Почта скопирована', { metric: 'email' })}
+                                >
+                                    <div className='popover-header__item'>
+                                        <div className='popover-header__title'>Email:</div>
+                                        <div className='popover-header__text'>hotel@kplazma.ru</div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
                         <Link className='menu__logo' href='/'>
                             <span style={{ display: 'block' }}>
                                 <object data='/svg/new-logo.svg' type='image/svg+xml' title='Главная'>

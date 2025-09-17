@@ -1,6 +1,6 @@
 import toast from 'react-hot-toast'
 
-type TCopyEvent = 'number' | 'address'
+type TCopyEvent = 'number' | 'address' | 'email'
 
 export default function copy(x: string): void;
 export default function copy(x: string, success?: string): void;
