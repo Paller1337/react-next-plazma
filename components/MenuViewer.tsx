@@ -6,7 +6,7 @@ const cdn = DEFAULTS.URL.CDN
 const menus = [
     {
         name: 'Сезонное меню',
-        img: '/pdf/season-26.pdf',
+        img: '/pdf/season-26-2.pdf',
         sM: .8,
     },
     {
@@ -26,7 +26,7 @@ const menus = [
     },
     {
         name: 'Детское меню',
-        img: '/pdf/children-new.pdf',
+        img: '/pdf/children-new-2.pdf',
         sM: .6,
     },
     {
