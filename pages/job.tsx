@@ -67,20 +67,42 @@ export default function PageJob() {
                         </div>
 
                         <div className='job-page__content'>
-                            {/* <Job job={{
+                            <Job job={{
                                 name: 'Посудомойщица',
-                                tag: 'на лето',
-                                price: '2100 р./смена, 37.800',
+                                price: '2640 р./смена, 47.520',
                             }}>
+                                <JobText bold>Мы предлагаем: </JobText>
+                                <JobText>
+                                    Своевременную выплату зарплаты, такси до дома в вечернее время, корпоративное питание, авансы, парковка для сотрудников, подарки сотрудникам на Новый Год.
+                                </JobText>
                                 <JobText bold>Требования: </JobText>
                                 <JobText>
-                                    Добросовестность, физическая выносливость.
+                                    Исполнительность, ответственность, скорость.
                                 </JobText>
                                 <JobText bold>График: </JobText>
                                 <JobText>
-                                    3/2 - день, день, ночь. По 12 часов.
+                                    4/2. Смены дневные с 7:00 до 19:00 и ночные с 19:00 до 7:00.
                                 </JobText>
-                            </Job> */}
+                            </Job>
+
+
+                            <Job job={{
+                                name: 'Шеф повар столовой',
+                                price: '4900 р./смена 14 часов, 73.500',
+                            }}>
+                                <JobText bold>Мы предлагаем: </JobText>
+                                <JobText>
+                                    Своевременную выплату зарплаты, такси до дома в вечернее время, корпоративное питание, авансы, парковка для сотрудников, подарки сотрудникам на Новый Год.
+                                </JobText>
+                                <JobText bold>Требования: </JobText>
+                                <JobText>
+                                    Опыт работы в должности повора не менее 1 года, быстрая обучаемость, пунктуальность.
+                                </JobText>
+                                <JobText bold>График: </JobText>
+                                <JobText>
+                                    2/2. С 7:00 до 21:00.
+                                </JobText>
+                            </Job>
 
                             {/* <Job job={{
                                 name: 'Уборщица в столовую',
@@ -94,21 +116,6 @@ export default function PageJob() {
                                 <JobText bold>График: </JobText>
                                 <JobText>
                                     2/2 с 6:00 до 17:00 (11 часов).
-                                </JobText>
-                            </Job> */}
-                            {/* 
-                            <Job job={{
-                                name: 'Повар',
-                                tag: 'на лето',
-                                price: '3000 р./смена, 45.000 - 63.000',
-                            }}>
-                                <JobText bold>Требования: </JobText>
-                                <JobText>
-                                    Опыт работы, физическая выностивость, ответственность, честность.
-                                </JobText>
-                                <JobText bold>График: </JobText>
-                                <JobText>
-                                    4/2 и 2/2. Дневные и ночные смены с 8:00 до 20:00, с 10:00 до 22:00, с 20:00 до 8:00.
                                 </JobText>
                             </Job> */}
 
@@ -138,7 +145,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job> */}
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Администраторы',
                                 price: 'до 60.000',
                             }}>
@@ -154,7 +161,7 @@ export default function PageJob() {
                                 <JobText>
                                     Скользящий (есть дневные и ночные смены).
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             <Job job={{
                                 name: 'Дневные горничные',
@@ -184,7 +191,7 @@ export default function PageJob() {
                                 </JobText>
                             </Job>
 
-                            <Job job={{
+                            {/* <Job job={{
                                 name: 'Официант на постоянную работу',
                                 price: ' 1800 р./смена, ~ 27.000-29.000',
                             }}>
@@ -200,7 +207,7 @@ export default function PageJob() {
                                 <JobText>
                                     Скользящий. Смены с 7:00 до 19:00, с 11:00 до 23:00, с 14:00 до 02:00.
                                 </JobText>
-                            </Job>
+                            </Job> */}
 
                             {/* <Job job={{
                                 name: 'Повар в ресторан',
