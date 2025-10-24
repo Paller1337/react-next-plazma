@@ -44,6 +44,12 @@ module.exports = {
                 permanent: true,
             },
             {
+                source: '/privacy',
+                destination: '/pdf/privacy.pdf',
+                permanent: true,
+            },
+            
+            {
                 source: '/aqua/:slug*',
                 destination: '/aquatory',
                 permanent: true,
