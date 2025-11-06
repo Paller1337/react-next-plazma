@@ -29,11 +29,11 @@ const menus = [
         img: '/pdf/children-new-2.pdf',
         sM: .6,
     },
-    {
-        name: 'Завтраки',
-        img: '/pdf/breakfasts-new.pdf',
-        sM: .8,
-    },
+    // {
+    //     name: 'Завтраки',
+    //     img: '/pdf/breakfasts-new.pdf',
+    //     sM: .8,
+    // },
 
 ]
 
