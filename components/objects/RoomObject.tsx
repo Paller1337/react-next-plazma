@@ -32,7 +32,7 @@ export interface RoomObjectProps {
     images: string[],
     previews: string[]
     size: string,
-    count?: number,
+    count?: number | string,
     price: {
         name: string,
         value: string[],
