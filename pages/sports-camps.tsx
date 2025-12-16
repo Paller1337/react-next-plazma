@@ -122,7 +122,7 @@ const VKPost = ({ image, text, views, link, date }: IVKPost) => {
                 background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 63.92%, 
                 rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 45.08%, rgba(0, 0, 0, 0.40) 100%), 
                 linear-gradient(0deg, var(--Miscellaneous-_Kit-Section-Stroke, rgba(0, 0, 0, 0.30)) 0%, 
-                var(--Miscellaneous-_Kit-Section-Stroke, rgba(0, 0, 0, 0.30)) 100%), url(${image.url}) lightgray 50% / cover no-repeat`,
+                var(--Miscellaneous-_Kit-Section-Stroke, rgba(0, 0, 0, 0.30)) 100%), url(${image?.url}) lightgray 50% / cover no-repeat`,
                 backgroundSize: 'cover',
                 cursor: 'pointer'
             }}
