@@ -182,7 +182,7 @@ export default function PageIndex(props: PageIndexProps) {
           </div> */}
 
 
-          <div className='page-index__new-year i-new-year container'>
+          {/* <div className='page-index__new-year i-new-year container'>
             <div className='i-new-year__left'>
               <h2 className='i-new-year__title'>
                 Бронирование на Новый Год
@@ -224,7 +224,7 @@ export default function PageIndex(props: PageIndexProps) {
               <div className='i-new-year__fakebg'></div>
               <Image width={570} height={685} src={'/no-optimize-img/index/new-year.jpg'} alt='' />
             </div>
-          </div>
+          </div> */}
 
           {/* <div className='page-index__new-year i-new-year container'>
             <div className='i-new-year__left'>

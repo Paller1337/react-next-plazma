@@ -113,18 +113,18 @@ export default function AppLayout(props: AppLayoutProps) {
     }, [props.asPath, props.pageProps, isNotFound, isMobile])
 
 
-    useEffect(() => {
-        const wasOpened = getCookie('nyBookingModal')
+    // useEffect(() => {
+    //     const wasOpened = getCookie('nyBookingModal')
 
-        if (!wasOpened) {
-            const timer = setTimeout(() => {
-                setIsOpenNewYearBookingModal(true)
-                setCookie('nyBookingModal', '1', 30) // кука на 30 минут
-            }, 1000)
+    //     if (!wasOpened) {
+    //         const timer = setTimeout(() => {
+    //             setIsOpenNewYearBookingModal(true)
+    //             setCookie('nyBookingModal', '1', 30) // кука на 30 минут
+    //         }, 1000)
 
-            return () => clearTimeout(timer)
-        }
-    }, [])
+    //         return () => clearTimeout(timer)
+    //     }
+    // }, [])
 
     return (<>
         <NewYearBookingModal isOpen={isOpenNewYearBookingModal} contentLabel={'123'} onRequestClose={() => setIsOpenNewYearBookingModal(false)} />
