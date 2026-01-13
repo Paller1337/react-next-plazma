@@ -131,7 +131,7 @@ export default function PageHotel(props: PageHotelProps) {
                                         </SNW> или <SNW><a style={{ color: '#252525', textDecoration: 'underline' }} href='tel:+79308977701'> +7 (930) 897-77-01</a></SNW>
                                     </Text>
 
-                                    <Text fz={isMobile ? 16 : 17} fw={600} mt={8}>Условия на новогодние праздники:</Text>
+                                    {/* <Text fz={isMobile ? 16 : 17} fw={600} mt={8}>Условия на новогодние праздники:</Text>
                                     <Text fz={isMobile ? 15 : 16} fw={400}>
                                         При бронировании требуется предоплата <b>100%</b> стоимости проживания.
                                     </Text>
@@ -140,7 +140,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     </Text>
                                     <Text fz={isMobile ? 15 : 16} fw={400}>
                                         При поздней аннуляции (менее 60 суток до даты заезда) или незаезде предоплата <b>не возвращается</b>.
-                                    </Text>
+                                    </Text> */}
                                 </Stack>
                             </Stack>
 
