@@ -178,7 +178,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     <Stack gap={4}>
                                         {/* <Text fz={isMobile ? 15 : 16} fw={600}>С 11 января:</Text> */}
                                         <List size={'xs'} styles={{ itemLabel: { fontSize: isMobile ? 15 : 16 }, item: { paddingBlock: 2 } }}>
-                                            <List.Item>Доп. место для животного до 7 кг. - <SNW>доплата 1300 ₽/сутки</SNW></List.Item>
+                                            <List.Item>Доп. место для животного до 7 кг. - <SNW>доплата 1200 ₽/сутки</SNW></List.Item>
                                         </List>
                                     </Stack>
                                 </Stack>
