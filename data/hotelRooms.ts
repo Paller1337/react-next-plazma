@@ -142,7 +142,7 @@ export const hotelRooms: RoomObjectProps[] = [
             // { name: '', value: ['⠀'] },
             // { name: '', value: [nextSeason] },
             { name: 'Цена вс-чт', value: ['<b>11250 руб/сутки</b>',] },
-            { name: 'Цена пт-сб', value: ['<b>12800 руб/сутки</b>',] },
+            { name: 'Цена пт-сб', value: ['<b>12550 руб/сутки</b>',] },
         ],
 
         attributes: [
