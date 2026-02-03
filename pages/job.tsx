@@ -69,7 +69,7 @@ export default function PageJob() {
                         <div className='job-page__content'>
                             <Job job={{
                                 name: 'Посудомойщица',
-                                price: '2640 р./смена, 47.520',
+                                price: '2800 р./смена, 50.400',
                             }}>
                                 <JobText bold>Мы предлагаем: </JobText>
                                 <JobText>
@@ -88,7 +88,7 @@ export default function PageJob() {
 
                             <Job job={{
                                 name: 'Шеф повар столовой',
-                                price: '4900 р./смена 14 часов, 73.500',
+                                price: '5600 р./смена 14 часов, 84.000',
                             }}>
                                 <JobText bold>Мы предлагаем: </JobText>
                                 <JobText>
@@ -165,14 +165,17 @@ export default function PageJob() {
 
                             <Job job={{
                                 name: 'Дневные горничные',
-                                price: 'до 78.000',
+                                price: 'до 70.000',
                             }}>
                                 <JobText bold>Ставки по графику: </JobText>
                                 <JobText>
-                                    с 8:00 до 17:00 3000/смена
+                                    с 8:00 до 18:00 3000/смена
                                 </JobText>
                                 <JobText>
-                                    с 8:00 до 20:00 3600/смена
+                                    с 8:00 до 20:00 4000/смена
+                                </JobText>
+                                <JobText>
+                                    с 20:00 до 8:00 3480/смена
                                 </JobText>
                                 <JobText>
                                     + квартальная премия
