@@ -192,6 +192,8 @@ export default function PageHotel(props: PageHotelProps) {
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове (до 31 августа)</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце (до 31 августа)</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Парковка</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Завтрак (шведский стол)</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Тренажерный зал</Text>
                                     </Stack>
                                 </Stack>
 
@@ -225,6 +227,13 @@ export default function PageHotel(props: PageHotelProps) {
                                     <List size={'xs'} styles={{ itemLabel: { fontSize: isMobile ? 15 : 16 }, item: { paddingBlock: 2 } }}>
                                         <List.Item>Взрослый (от 12 лет) — <SNW>доплата 1500 ₽/сутки</SNW></List.Item>
                                         <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 1000 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
+                                    </List>
+
+                                    <Text fz={isMobile ? 15 : 16} fw={600}>С 31 мая:</Text>
+                                    <List size={'xs'} styles={{ itemLabel: { fontSize: isMobile ? 15 : 16 }, item: { paddingBlock: 2 } }}>
+                                        <List.Item>Взрослый (от 12 лет) — <SNW>доплата 2800 ₽/сутки</SNW></List.Item>
+                                        <List.Item>Ребёнок (5–11 лет) — <SNW>доплата 2500 ₽/сутки</SNW></List.Item>
                                         <List.Item>Дети до 5 лет размещаются бесплатно</List.Item>
                                     </List>
                                 </Stack>
