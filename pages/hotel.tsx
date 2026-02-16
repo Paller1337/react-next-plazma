@@ -162,7 +162,7 @@ export default function PageHotel(props: PageHotelProps) {
                             <Stack gap={4}>
                                 <Text fz={isMobile ? 18 : 20} fw={700}>Страховой депозит</Text>
                                 <Stack gap={4}>
-                                    <Text fz={isMobile ? 15 : 16} fw={400}>При заезде вносится залог в размере от 5 000 до 10 000 рублей, в зависимости <SNW>от категории</SNW> номера и условий проживания.</Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>При заезде вносится залог наличными в размере от 5 000 до 10 000 рублей, в зависимости <SNW>от категории</SNW> номера и условий проживания.</Text>
                                 </Stack>
                             </Stack>
 
@@ -185,12 +185,12 @@ export default function PageHotel(props: PageHotelProps) {
                             </Stack>
 
                             <Stack gap={8}>
-                                <Text fz={isMobile ? 18 : 20} fw={700}>Бассейн (до 31 августа) и парковка</Text>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Услуги, включённые в стоимость проживания <SNW>на летний период (до 31 августа)</SNW></Text>
                                 <Stack gap={4}>
-                                    <Text fz={16} fw={600}>Услуги, включённые в стоимость проживания:</Text>
+                                    {/* <Text fz={16} fw={600}>Услуги, включённые в стоимость проживания:</Text> */}
                                     <Stack gap={4}>
-                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове (до 31 августа)</Text>
-                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце (до 31 августа)</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Парковка</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Завтрак (шведский стол)</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Тренажерный зал</Text>
@@ -215,7 +215,7 @@ export default function PageHotel(props: PageHotelProps) {
                                 <Stack gap={4}>
                                     <Text fz={isMobile ? 15 : 16} fw={700}>ВНИМАНИЕ</Text>
                                     <Text fz={isMobile ? 15 : 16} fw={400}>Для гостей Спортивной деревни, 5 и 6 корпусов эти услуги не входят в стоимость проживания.</Text>
-                                    <Text fz={isMobile ? 15 : 16} fw={400}>Проживающие в данных номерах могут приобрести услугу дополнительно — 1500 ₽ <SNW>с человека (от 5 лет).</SNW></Text>
+                                    <Text fz={isMobile ? 15 : 16} fw={400}>Проживающие в данных номерах могут приобрести услуги за дополнительную плату.</Text>
                                 </Stack>
                             </Stack>
 
