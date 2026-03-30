@@ -198,8 +198,8 @@ export default function Header(props: HeaderProps) {
                         </div>
                         <Link className='menu__logo' href='/'>
                             <span style={{ display: 'block' }}>
-                                <object data='/svg/new-logo.svg' type='image/svg+xml' title='Главная'>
-                                    <img width={64} height={64} src='/img/new-logo.svg' alt='' />
+                                <object data='/svg/ru-logo.svg' type='image/svg+xml' title='Главная'>
+                                    <img width={64} height={64} src='/img/ru-logo.svg' alt='' />
                                 </object>
                             </span>
                         </Link>
