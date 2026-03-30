@@ -28,14 +28,14 @@ export default function PageSportsHall() {
     return (
         <>
             <Head>
-                <title>Универсальный спортивный зал в парк-отеле «PLAZMA»</title>
+                <title>Универсальный спортивный зал в парк-отеле «ПЛАЗМА»</title>
                 <meta name='description' content='это проект парк-отеля Plazma, 
                 расположенного в Тульской области в 220 км. от Москвы, 
                 ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.' />
 
                 <meta
                     property='og:title'
-                    content='Универсальный спортивный зал в парк-отеле «PLAZMA»' />
+                    content='Универсальный спортивный зал в парк-отеле «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='это проект парк-отеля Plazma, 

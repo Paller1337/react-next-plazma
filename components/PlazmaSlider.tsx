@@ -104,7 +104,7 @@ export default function PlazmaSlider(props: PlazmaSliderProps) {
                         onClick={() => setActiveSlide(index)}>
 
                         <ImageWithPreloader
-                            src={imagePath} height={1920} width={1056} alt='Plazma Парк-Отель'
+                            src={imagePath} height={1920} width={1056} alt='ПЛАЗМА Парк-Отель'
                             loading="lazy"
                             quality={90}
                             sizes="(max-width: 768px) 60vw, (max-width: 1200px) 70vw, 100vw"

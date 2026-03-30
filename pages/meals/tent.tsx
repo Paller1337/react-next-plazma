@@ -10,7 +10,7 @@ export default function PageTent() {
     return (
         <>
             <Head>
-                <title>Летний шатер «PLAZMA»</title>
+                <title>Летний шатер «ПЛАЗМА»</title>
                 <meta name='description' content='Расположенный на полуострове, 
                 он предлагает неповторимую атмосферу и вид на водоем. В нашем 
                 шатре вы сможете насладиться прохладными напитками и изысканными 
@@ -18,7 +18,7 @@ export default function PageTent() {
 
                 <meta
                     property='og:title'
-                    content='Летний шатер «PLAZMA»' />
+                    content='Летний шатер «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='Расположенный на полуострове, 

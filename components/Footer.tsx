@@ -47,7 +47,7 @@ export default function Footer(props: FooterProps) {
             <div className="footer" data-scroll-section>
                 <div className="footer__container container" data-scroll>
                     <div className="footer__title">
-                        Парк-отель «PLAZMA»
+                        Парк-отель «ПЛАЗМА»
                     </div>
                     <div className='footer__nav-container'>
                         <div className='footer__nav-col'>
@@ -90,7 +90,7 @@ export default function Footer(props: FooterProps) {
                         <div className='footer__nav-col'>
                             <div className='footer__links'>
                                 <span className='footer__links-title'>Активный отдых</span>
-                                <Link href='/active-leisure#AboutSport' className='footer__links-link'>О спорте в «PLAZMA»</Link>
+                                <Link href='/active-leisure#AboutSport' className='footer__links-link'>О спорте в «ПЛАЗМА»</Link>
                                 <Link href='/active-leisure#SportsObjects' className='footer__links-link'>Спортивные объекты</Link>
                                 <Link href='/sports-camps' className='footer__links-link'>Спортивные сборы</Link>
                             </div>
@@ -99,7 +99,7 @@ export default function Footer(props: FooterProps) {
                             <div className='footer__links'>
                                 <span className='footer__links-title'>Мероприятия</span>
                                 <Link href='/events#AboutEvents' className='footer__links-link'>О мероприятиях</Link>
-                                <Link href='/events#PlazmaCelebrate' className='footer__links-link'>Праздники в «PLAZMA»</Link>
+                                <Link href='/events#PlazmaCelebrate' className='footer__links-link'>Праздники в «ПЛАЗМА»</Link>
                                 <Link href='/events#Conferences' className='footer__links-link'>Конференции</Link>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ export default function Footer(props: FooterProps) {
             <div className="footer-mobile" data-scroll-section>
                 <div className="footer-mobile__container container" data-scroll>
                     <div className="footer-mobile__title">
-                        Парк-отель «PLAZMA»
+                        Парк-отель «ПЛАЗМА»
                     </div>
 
                     <Group justify='space-between' align='flex-start'>

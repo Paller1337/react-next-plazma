@@ -8,7 +8,7 @@ export default function PageBanquetHall() {
     return (
         <>
             <Head>
-                <title>Банкетный зал «PLAZMA»</title>
+                <title>Банкетный зал «ПЛАЗМА»</title>
                 <meta name='description' content='Наш банкетный зал - отличное место для особых 
                 событий и торжеств любого уровня. Он находится в отдельном здании, чтобы 
                 никто вам не помешал. Просторный и элегантный, он подарит вам ощущение 
@@ -16,7 +16,7 @@ export default function PageBanquetHall() {
 
                 <meta
                     property='og:title'
-                    content='Банкетный зал «PLAZMA»' />
+                    content='Банкетный зал «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='Наш банкетный зал - отличное место для особых 

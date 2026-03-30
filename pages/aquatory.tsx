@@ -19,13 +19,13 @@ export default function PageAquatory() {
     return (
         <>
             <Head>
-                <title>Акватория «PLAZMA»</title>
+                <title>Акватория «ПЛАЗМА»</title>
                 <meta name='description' content='Plazma Акватория – это оазис внутри города, место, где гости могут 
                 отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.' />
 
                 <meta
                     property='og:title'
-                    content='Акватория «PLAZMA»' />
+                    content='Акватория «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='Plazma Акватория – это оазис внутри города, место, где гости могут 
@@ -47,7 +47,7 @@ export default function PageAquatory() {
 
                     <div id='AboutAquatory' className='page-aquatory__welcome text-section text-section_big container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                        <span className='h2-title'>Акватория «PLAZMA»</span>
+                        <span className='h2-title'>Акватория «ПЛАЗМА»</span>
                         <span className='text'>
                             Plazma Акватория – это оазис внутри города, место, где гости могут отвлечься от шума и суеты повседневной жизни и отдохнуть в объятиях природы.
                         </span>

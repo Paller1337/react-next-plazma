@@ -164,7 +164,7 @@ export default function Promo(props: PromoProps) {
             <div className='main__promo-logo'>
                 <h1>
                     <span>парк-отель</span>
-                    <span>plazma</span>
+                    <span>ПЛАЗМА</span>
                 </h1>
             </div>
 

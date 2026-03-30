@@ -163,14 +163,14 @@ export default function PageActiveLeisure() {
     return (
         <>
             <Head>
-                <title>Активный отдых в парк-отеле «PLAZMA»</title>
+                <title>Активный отдых в парк-отеле «ПЛАЗМА»</title>
                 <meta name='description' content='это проект парк-отеля Plazma, 
                 расположенного в Тульской области в 220 км. от Москвы, 
                 ориентированный на проведение спортивных сборов, турниров и товарищеских матчей.' />
 
                 <meta
                     property='og:title'
-                    content='Активный отдых в парк-отеле «PLAZMA»' />
+                    content='Активный отдых в парк-отеле «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='это проект парк-отеля Plazma, 
@@ -269,7 +269,7 @@ export default function PageActiveLeisure() {
 
 
                     <YoutubeVideo
-                        title='Спорт в «PLAZMA»'
+                        title='Спорт в «ПЛАЗМА»'
                         src='VVBzBIcLERU'
                         reverse
                     />

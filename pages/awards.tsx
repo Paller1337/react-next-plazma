@@ -67,12 +67,12 @@ export default function PageAwards() {
             />
 
             <Head>
-                <title>Достижения и награды парк-отеля «PLAZMA»</title>
+                <title>Достижения и награды парк-отеля «ПЛАЗМА»</title>
                 {/* <meta name='description' content='' /> */}
 
                 <meta
                     property='og:title'
-                    content='Достижения и награды парк-отеля «PLAZMA»' />
+                    content='Достижения и награды парк-отеля «ПЛАЗМА»' />
                 {/* <meta
                     property='og:description'
                     content='' /> */}

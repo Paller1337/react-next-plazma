@@ -47,13 +47,13 @@ export default function PageHotel(props: PageHotelProps) {
     return (
         <>
             <Head>
-                <title>Размещение в парк-отеле «PLAZMA»</title>
+                <title>Размещение в парк-отеле «ПЛАЗМА»</title>
                 <meta name='description' content='Место отлично подходит для семейного 
                 отдыха на природе, романтических выходных, торжественных и деловых мероприятий.' />
 
                 <meta
                     property='og:title'
-                    content='Размещение в парк-отеле «PLAZMA»' />
+                    content='Размещение в парк-отеле «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='Место отлично подходит для семейного 

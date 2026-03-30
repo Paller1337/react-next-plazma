@@ -1421,7 +1421,7 @@ export default function PageSportsCamps(props: SportCampsPageProps) {
                                     dir='iltr'
                                     images={[DEFAULTS.URL.CDN + '/img/sports-camps/meal_1.webp', DEFAULTS.URL.CDN + '/img/sports-camps/meal_2.webp']}
                                     title={'Питание'}
-                                    desc={`В парк-отеле «Plazma» для спортсменов создана отдельная столовая, 
+                                    desc={`В парк-отеле «ПЛАЗМА» для спортсменов создана отдельная столовая, 
                                     доступная только участникам сборов, что обеспечивает спокойную обстановку 
                                     и комфорт во время приема пищи, без посторонних гостей.`}
                                     id={'meal'}

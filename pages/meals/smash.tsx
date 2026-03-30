@@ -17,7 +17,7 @@ export default function PageSmash() {
     return (
         <>
             <Head>
-                <title>Кафе SMASH в «PLAZMA»</title>
+                <title>Кафе SMASH в «ПЛАЗМА»</title>
                 <meta name='description' content='Кафе SMASH предлагает быструю и вкусную еду на завтрак,
                 обед, ужин. Кроме того, вы можете прийти к нам на поздний ужин и перекусить роллами и пиццей.' />
 

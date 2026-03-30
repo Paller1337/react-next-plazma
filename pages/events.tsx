@@ -13,13 +13,13 @@ export default function PageEvents() {
     return (
         <>
             <Head>
-                <title>Мероприятия в «PLAZMA»</title>
+                <title>Мероприятия в «ПЛАЗМА»</title>
                 {/* <meta name='description' content='Место отлично подходит для семейного 
                 отдыха на природе, романтических выходных, торжественных и деловых мероприятий.' /> */}
 
                 <meta
                     property='og:title'
-                    content='Мероприятия в «PLAZMA»' />
+                    content='Мероприятия в «ПЛАЗМА»' />
                 {/* <meta
                     property='og:description'
                     content='Место отлично подходит для семейного 
@@ -48,7 +48,7 @@ export default function PageEvents() {
 
                     <div id='AboutEvents' className='page-events__welcome text-section text-section_big container' data-scroll-section
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                        <span className='h2-title'>Мероприятия в «PLAZMA»</span>
+                        <span className='h2-title'>Мероприятия в «ПЛАЗМА»</span>
                         <span className='text'>
                             Вы можете использовать в качестве площадки наш банкетный зал, который трансформируется в конференц-зал,
                             пространство для дефиле, столовую для спортсменов. Вы можете найти места для выездной регистрации

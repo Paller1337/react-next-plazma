@@ -23,12 +23,12 @@ export default function PageMenu() {
     return (
         <>
             <Head>
-                <title>Питание в парк-отеле «PLAZMA»</title>
+                <title>Питание в парк-отеле «ПЛАЗМА»</title>
                 {/* <meta name='description' content='' /> */}
 
                 <meta
                     property='og:title'
-                    content='Питание в парк-отеле «PLAZMA»' />
+                    content='Питание в парк-отеле «ПЛАЗМА»' />
                 {/* <meta
                     property='og:description'
                     content='' /> */}

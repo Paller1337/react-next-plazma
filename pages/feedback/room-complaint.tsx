@@ -36,12 +36,12 @@ export default function PageJob() {
     return (
         <>
             <Head>
-                <title>Ваканции в парк-отеле «PLAZMA»</title>
+                <title>Ваканции в парк-отеле «ПЛАЗМА»</title>
                 {/* <meta name='description' content='' /> */}
 
                 <meta
                     property='og:title'
-                    content='Ваканции в парк-отеле «PLAZMA»' />
+                    content='Ваканции в парк-отеле «ПЛАЗМА»' />
                 {/* <meta
                     property='og:description'
                     content='' /> */}

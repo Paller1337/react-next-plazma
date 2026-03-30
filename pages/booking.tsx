@@ -39,12 +39,12 @@ export default function PageBooking() {
             <RulesModal isOpen={isOpenRules} contentLabel={'123'} onRequestClose={() => setIsOpenRules(false)} />
 
             <Head>
-                <title>Бронирование номера в парк-отеле «PLAZMA»</title>
+                <title>Бронирование номера в парк-отеле «ПЛАЗМА»</title>
                 <meta name='description' content='При прямом бронировании действует скидка 16.7%.' />
 
                 <meta
                     property='og:title'
-                    content='Бронирование номера в парк-отеле «PLAZMA»' />
+                    content='Бронирование номера в парк-отеле «ПЛАЗМА»' />
                 <meta
                     property='og:description'
                     content='При прямом бронировании действует скидка 16.7%.' />

@@ -71,7 +71,7 @@ export default function PageRestaurant() {
                             <div className='worktime-section__about'
                                 data-aos={'fade-right'} data-aos-duration={DEFAULTS.AOS.duration}
                                 data-aos-once={DEFAULTS.AOS.once}>
-                                <span className='worktime-section__title'>Ресторан «PLAZMA»</span>
+                                <span className='worktime-section__title'>Ресторан «ПЛАЗМА»</span>
                                 <span className='worktime-section__desc'>
                                     У нас есть столы на большие и маленькие компании, а также отдельные кабинки.
                                 </span>

@@ -74,7 +74,7 @@ export default function FullSizePreviewInfo(props: FullsizePreviewInfoProps) {
                                 loading='lazy'
                                 className='js--mobile-parallax'
                                 src={images[props.image]}
-                                alt='Парк-отель Plazma'
+                                alt='Парк-отель ПЛАЗМА'
                                 loader={vkCloudLoader}
                             />}
                     </picture>

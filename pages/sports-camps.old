@@ -295,7 +295,7 @@ export default function PageSportsCamps() {
                     </div>
                     <div className='page-sports-camps__calculate container'
                         data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
-                        <TextBlock title={{ type: 'h2', text: 'Заявка на расчет сборов в «PLAZMA»' }}
+                        <TextBlock title={{ type: 'h2', text: 'Заявка на расчет сборов в «ПЛАЗМА»' }}
                             style={{ paddingBottom: 40, paddingTop: 70 }}
                         />
 

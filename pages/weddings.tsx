@@ -696,12 +696,12 @@ export default function PageWeddings() {
 
 
             <Head>
-                <title>Ваша свадьба в парк-отеле «PLAZMA»</title>
+                <title>Ваша свадьба в парк-отеле «ПЛАЗМА»</title>
                 {/* <meta name='description' content='' /> */}
 
                 <meta
                     property='og:title'
-                    content='Ваша свадьба в парк-отеле «PLAZMA»' />
+                    content='Ваша свадьба в парк-отеле «ПЛАЗМА»' />
                 {/* <meta
                     property='og:description'
                     content='' /> */}
@@ -945,7 +945,7 @@ export default function PageWeddings() {
                                                     <span style={{ fontWeight: 700 }}>Email:</span> anna@kplazma.ru
                                                 </Text>
                                                 <Text ff={'Lora'} fz={isMobile ? 16 : 18} c={colors.main} lh={'125%'}>
-                                                    <span style={{ fontWeight: 700 }}>Адрес:</span> <SNW>г. Донской,</SNW> <SNW>ул. Герцена,</SNW> <SNW>дом 14,</SNW> <SNW>Парк-отель «Plazma»</SNW>
+                                                    <span style={{ fontWeight: 700 }}>Адрес:</span> <SNW>г. Донской,</SNW> <SNW>ул. Герцена,</SNW> <SNW>дом 14,</SNW> <SNW>Парк-отель «ПЛАЗМА»</SNW>
                                                 </Text>
                                             </Stack>
                                             <FeedbackButton fw={isMobile || (isNotebook && !isLaptop) || isDesktop} onClick={() => openCalcModal('pageEnd')} />

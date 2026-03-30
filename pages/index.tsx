@@ -53,18 +53,18 @@ export default function PageIndex(props: PageIndexProps) {
   return (
     <>
       <Head>
-        <title>Парк-отель «PLAZMA»</title>
-        <meta name='description' content='Парк-отель «Plazma» расположен в городе 
+        <title>Парк-отель «ПЛАЗМА»</title>
+        <meta name='description' content='Парк-отель «ПЛАЗМА» расположен в городе 
         Донской Тульской области, в 230 км от Москвы. Место отлично подходит для семейного 
         отдыха на природе, романтических выходных, торжественных и деловых мероприятий,
         а также для спортивных сборов.' />
 
         <meta
           property='og:title'
-          content='Парк-отель «PLAZMA»' />
+          content='Парк-отель «ПЛАЗМА»' />
         <meta
           property='og:description'
-          content='Парк-отель «Plazma» расположен в городе 
+          content='Парк-отель «ПЛАЗМА» расположен в городе 
           Донской Тульской области, в 230 км от Москвы. Место отлично подходит для семейного 
           отдыха на природе, романтических выходных, торжественных и деловых мероприятий,
           а также для спортивных сборов.' />
@@ -264,8 +264,8 @@ export default function PageIndex(props: PageIndexProps) {
             <div className='about-hotel__wrapper'
               data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
               <div className='about-hotel__about'>
-                <span className='about-hotel__text'>Парк-отель «PLAZMA»</span>
-                <span className='about-hotel__desc'>Парк-отель «Plazma» расположен в городе Донской Тульской области, в 230 км от Москвы. </span>
+                <span className='about-hotel__text'>Парк-отель «ПЛАЗМА»</span>
+                <span className='about-hotel__desc'>Парк-отель «ПЛАЗМА» расположен в городе Донской Тульской области, в 230 км от Москвы. </span>
                 <span className='about-hotel__desc'> Место отлично подходит для семейного отдыха на природе, романтических выходных, торжественных и деловых мероприятий,
                   а также для спортивных сборов.</span>
               </div>
@@ -281,7 +281,7 @@ export default function PageIndex(props: PageIndexProps) {
             <div className='about-hotel__wrapper reverse'
               data-aos={DEFAULTS.AOS.animation} data-aos-duration={DEFAULTS.AOS.duration} data-aos-once={DEFAULTS.AOS.once}>
               <div className='page-aquatory__list'>
-                <span className='page-aquatory__list-title'>Парк-отель «PLAZMA» в цифрах:</span>
+                <span className='page-aquatory__list-title'>Парк-отель «ПЛАЗМА» в цифрах:</span>
                 <ul>
                   <li className='page-aquatory__list-item'>15 гектар занимает территория отеля</li>
                   <li className='page-aquatory__list-item'>300 единиц составляет наш номерной фонд</li>
@@ -391,7 +391,7 @@ export default function PageIndex(props: PageIndexProps) {
             <FullSizePreviewInfo
               title={'АКТИВНЫЙ ОТДЫХ'}
               description={`
-              Парк-отель «Plazma» предлагает множество возможностей для активного отдыха.
+              Парк-отель «ПЛАЗМА» предлагает множество возможностей для активного отдыха.
               Разомнитесь на теннисном корте или в универсальном спортивном зале. Насладитесь
               пляжными видами спорта на крытых или открытых площадах. Пользуйтесь тренажерами под
               открытым небом и наслаждайтесь свежим воздухом. У нас также есть две универсальные

@@ -37,12 +37,12 @@ export default function PageJob() {
     return (
         <>
             <Head>
-                <title>Вакансии в парк-отеле «PLAZMA»</title>
+                <title>Вакансии в парк-отеле «ПЛАЗМА»</title>
                 {/* <meta name='description' content='' /> */}
 
                 <meta
                     property='og:title'
-                    content='Вакансии в парк-отеле «PLAZMA»' />
+                    content='Вакансии в парк-отеле «ПЛАЗМА»' />
                 {/* <meta
                     property='og:description'
                     content='' /> */}
@@ -59,7 +59,7 @@ export default function PageJob() {
                 <div className='relative main-wrap' data-scroll-container>
                     <div className='job-page container'>
                         <div className='job-page__heading'>
-                            <h1 className='h1-title'>Вакансии в «PLAZMA»</h1>
+                            <h1 className='h1-title'>Вакансии в «ПЛАЗМА»</h1>
                             <span className='job-page__description'>
                                 Если вас заинтересовала одна из предложнных вакансий - звоните по номеру:
                                 <b> +7 (910) 168-17-61</b>
