@@ -216,7 +216,7 @@ export default function PageActiveLeisure() {
                                     onClick={() => copy('+79101681761', 'Номер скопирован.', { metric: 'number' })}>
                                     Подробнее</div> */}
                                 <span className='column-card__desc' style={{ fontStyle: 'italic', textAlign: 'left', fontWeight: '600' }}>
-                                    Цена: 250 руб/час
+                                    Цена: 300 руб/час
                                 </span>
                             </div>
                             {/* <div className='about-quatr__image'
