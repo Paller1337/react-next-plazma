@@ -113,6 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await send('max@kplazma.ru')
         await send('dnd@kplazma.ru')
         await send('nastya@kplazma.ru')
+        await send('plazma.sport71@mail.ru')
 
         // sport?: string,
         // dateIn?: string,
