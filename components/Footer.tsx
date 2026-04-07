@@ -117,6 +117,7 @@ export default function Footer(props: FooterProps) {
 
                     <div className='footer__info'>
                         <Link href='https://kplazma.ru/privacy' className='footer__contact-link'>Политика конфидециальности</Link>
+                        <Link href='/docs/terms' className='footer__contact-link'>Условия бронирования</Link>
                         <a
                             className='footer__contact-link'
                             onClick={() => copy('ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031', 'Юридические реквизиты скопированы')}
@@ -162,6 +163,7 @@ export default function Footer(props: FooterProps) {
 
                     <div className='footer-mobile__info'>
                         <Link href='https://kplazma.ru/privacy' className='footer-mobile__contact-link'>Политика конфидециальности</Link>
+                        <Link href='/docs/terms' className='footer-mobile__contact-link'>Условия бронирования</Link>
                         <a
                             className='footer-mobile__contact-link'
                             onClick={() => copy('ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031', 'Юридические реквизиты скопированы')}

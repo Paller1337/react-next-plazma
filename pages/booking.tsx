@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { BnovoContext } from '../components/bnovo/bnovoContext'
 import { MailSubscribe } from '@/components/modals/MailSubscribe'
@@ -70,7 +71,7 @@ export default function PageBooking() {
                                 Ниже указаны цены со скидкой.<br />
 
                                 Бронируя или оплачивая услуги отеля вы принимаете условия договора публичной оферты.<br />
-                                Подробнее о порядке оплаты бронирования тут.<br /><br />
+                                <Link href='/docs/terms'>Подробнее о порядке оплаты бронирования тут.</Link><br /><br />
 
                                 <b>Общие условия:</b><br />
                                 – Бронирование можно отменить с возвратом предоплаты не позднее 7 суток до даты заезда.<br />

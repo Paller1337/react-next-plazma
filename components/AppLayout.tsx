@@ -93,6 +93,7 @@ export default function AppLayout(props: AppLayoutProps) {
 
     const job = props.asPath.includes('job')
     const awards = props.asPath.includes('awards')
+    const docs = props.asPath.includes('/docs')
     const weddings = props.asPath.includes('weddings') && !isMobile
 
     useEffect(() => {
@@ -102,6 +103,7 @@ export default function AppLayout(props: AppLayoutProps) {
             meals ||
             job ||
             awards ||
+            docs ||
             weddings ||
             props.asPath.includes('booking') ||
             isNotFound
@@ -110,7 +112,7 @@ export default function AppLayout(props: AppLayoutProps) {
         } else {
             setHeaderBlack(false)
         }
-    }, [props.asPath, props.pageProps, isNotFound, isMobile])
+    }, [awards, docs, isMobile, isNotFound, job, meals, props.asPath, props.pageProps, weddings])
 
 
     // useEffect(() => {
