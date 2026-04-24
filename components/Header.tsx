@@ -53,6 +53,14 @@ const headerItems = [
     },
 ]
 
+const mobileHeaderItems = [
+    ...headerItems,
+    {
+        name: 'Карта территории',
+        link: '/map',
+    },
+]
+
 export default function Header(props: HeaderProps) {
     const [burgerIsOpen, setBurgerIsOpen] = useState(false)
 
@@ -103,7 +111,7 @@ export default function Header(props: HeaderProps) {
             <div className='c-menu__container'>
                 <div className='menu-column'>
                     <ul className="menu-column__list">
-                        {headerItems.map((item, i) =>
+                        {mobileHeaderItems.map((item, i) =>
                             <li key={item.name + i}>
                                 <Link onClick={() => menuOpen(false)} href={item.link} className="menu-column__link">
                                     {item.name}

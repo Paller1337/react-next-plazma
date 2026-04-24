@@ -55,6 +55,7 @@ export default function Footer(props: FooterProps) {
                                 <span className='footer__links-title'>Гостиница</span>
                                 <Link href='/hotel#HotelPlacement' className='footer__links-link'>О гостинице</Link>
                                 <Link href='/awards' className='footer__links-link'>Достижения и награды</Link>
+                                <Link href='/map' className='footer__links-link'>Карта территории</Link>
                                 <Link href='/hotel#hotelRooms' className='footer__links-link'>Фотографии номеров</Link>
                                 <Link href='/booking' className='footer__links-link'>Забронировать номер</Link>
                             </div>
@@ -118,6 +119,7 @@ export default function Footer(props: FooterProps) {
                     <div className='footer__info'>
                         <Link href='https://kplazma.ru/privacy' className='footer__contact-link'>Политика конфидециальности</Link>
                         <Link href='/docs/terms' className='footer__contact-link'>Условия бронирования</Link>
+                        <Link href='/map' className='footer__contact-link'>Карта территории</Link>
                         <a
                             className='footer__contact-link'
                             onClick={() => copy('ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031', 'Юридические реквизиты скопированы')}
@@ -164,6 +166,7 @@ export default function Footer(props: FooterProps) {
                     <div className='footer-mobile__info'>
                         <Link href='https://kplazma.ru/privacy' className='footer-mobile__contact-link'>Политика конфидециальности</Link>
                         <Link href='/docs/terms' className='footer-mobile__contact-link'>Условия бронирования</Link>
+                        <Link href='/map' className='footer-mobile__contact-link'>Карта территории</Link>
                         <a
                             className='footer-mobile__contact-link'
                             onClick={() => copy('ИП Дяченко Николай Дмитриевич, ИНН 711400143917, ОГРН 306714927500031', 'Юридические реквизиты скопированы')}
