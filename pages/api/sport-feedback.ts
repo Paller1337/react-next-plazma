@@ -11,6 +11,7 @@ type Data = {
 
 const BOT_TOKEN = process.env.TG_BOT_TOKEN
 const CHAT_ID = '-1001699514488'
+const SPMS_API_URL = (process.env.SPMS_API_URL || 'https://spms-api.kplazma.ru').replace(/\/+$/, '')
 // const BOT_TOKEN = '6855526888:AAEDn9Llk6k8gd_3T9eRHMwGTzIB9225xuY'
 // const CHAT_ID = '-1001934278839'
 
@@ -43,6 +44,45 @@ function escapeMarkdown(text) {
     return res
 }
 
+const parseRequestBody = (body: unknown) => {
+    if (typeof body === 'string') {
+        return JSON.parse(body)
+    }
+    return body || {}
+}
+
+const forwardSportLeadToPms = async (body: any, req: NextApiRequest) => {
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 5000)
+    const payload = {
+        source: 'kplazma.ru',
+        formType: body?.result !== undefined ? 'sports_calculator' : 'sports_camps',
+        data: body?.data && typeof body.data === 'object' ? body.data : body,
+        utm: body?.utm,
+        ymTag: body?.ymTag,
+        pageUrl: typeof req.headers.referer === 'string' ? req.headers.referer : undefined,
+        userAgent: typeof req.headers['user-agent'] === 'string' ? req.headers['user-agent'] : undefined,
+    }
+
+    try {
+        const response = await fetch(`${SPMS_API_URL}/public/sport-leads`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+            signal: controller.signal,
+        })
+
+        if (!response.ok) {
+            const text = await response.text().catch(() => '')
+            throw new Error(`PMS lead endpoint failed: ${response.status} ${text}`)
+        }
+    } finally {
+        clearTimeout(timeout)
+    }
+}
+
 
 async function sendTelegramMessage(message) {
     const chatId = CHAT_ID; // chat_id 
@@ -71,13 +111,19 @@ async function sendTelegramMessage(message) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const body = JSON.parse(req.body)
-    const requestData = body.data as SportRequestFormData
+    const body = parseRequestBody(req.body)
+    const requestData = (body.data && typeof body.data === 'object' ? body.data : body) as SportRequestFormData
 
-    const formatIn = DateTime.fromFormat(requestData.dateIn, 'yyyy-MM-dd').toLocaleString(DateTime.DATE_FULL, { locale: 'ru' })
-    const formatOut = DateTime.fromFormat(requestData.dateOut, 'yyyy-MM-dd').toLocaleString(DateTime.DATE_FULL, { locale: 'ru' })
+    const formatDateRu = (value?: string) =>
+        value ? DateTime.fromFormat(value, 'yyyy-MM-dd').toLocaleString(DateTime.DATE_FULL, { locale: 'ru' }) : ''
+    const formatIn = formatDateRu(requestData.dateIn)
+    const formatOut = formatDateRu(requestData.dateOut)
 
     console.log('feedback body: ', body)
+    await forwardSportLeadToPms(body, req).catch((error) => {
+        console.error('Ошибка отправки заявки в PMS:', error)
+    })
+
     const transporter = nodemailer.createTransport({
         host: "mail.kplazma.ru",
         port: 465,
