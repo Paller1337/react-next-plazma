@@ -12,7 +12,7 @@ import React, { Suspense, lazy, useEffect, useMemo } from 'react'
 import BlockLoader from '@/components/BlockLoader'
 import { Rings } from 'react-loader-spinner'
 
-import RoomObject from '../components/objects/RoomObject'
+import RoomObject from '../components/objects/RoomObjectV2'
 import { DEFAULTS } from 'defaults'
 import TextBlock from '@/components/TextBlock'
 import { Group, List, Stack, Text } from '@mantine/core'
@@ -185,7 +185,7 @@ export default function PageHotel(props: PageHotelProps) {
                             </Stack>
 
                             <Stack gap={8}>
-                                <Text fz={isMobile ? 18 : 20} fw={700}>Услуги, включённые в стоимость проживания <SNW>на летний период (до 31 августа)</SNW></Text>
+                                <Text fz={isMobile ? 18 : 20} fw={700}>Услуги, включённые в стоимость проживания <SNW>на летний период (с 29 мая до 31 августа)</SNW></Text>
                                 <Stack gap={4}>
                                     {/* <Text fz={16} fw={600}>Услуги, включённые в стоимость проживания:</Text> */}
                                     <Stack gap={4}>

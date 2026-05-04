@@ -396,8 +396,6 @@ export const hotelRooms: RoomObjectProps[] = [
         amenities: [
             ...defaultAmenities,
             'Сауна',
-            'Мангальная зона',
-            'Веранда',
             'Микроволновая печь',
             'Халаты, тапочки и сланцы',
             'Сейф',
