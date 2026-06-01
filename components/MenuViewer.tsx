@@ -16,17 +16,17 @@ const menus = [
     },
     {
         name: 'Банкетное меню',
-        img: '/pdf/banquet-26.pdf',
+        img: '/pdf/menu-april/banquet.pdf',
         sM: .8,
     },
     {
         name: 'Барная карта',
-        img: '/pdf/bar.pdf',
+        img: '/pdf/menu-april/bar.pdf',
         sM: 1,
     },
     {
         name: 'Детское меню',
-        img: '/pdf/children-26.pdf',
+        img: '/pdf/menu-april/child.pdf',
         sM: .6,
     },
     // {

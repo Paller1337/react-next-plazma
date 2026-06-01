@@ -359,7 +359,7 @@ export default function PageAquatory() {
                                     </Text>
                                 </Link>
 
-                                <Link href={'/pdf/aquatory/Экспертное-заключение.pdf'} target='_blank'>
+                                <Link href={'/pdf/aquatory/Экспертное_заключение.pdf'} target='_blank'>
                                     <Text fz={16} c='#252525' td={'underline'}>
                                         Экспертное заключение
                                     </Text>
