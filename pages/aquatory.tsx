@@ -347,17 +347,17 @@ export default function PageAquatory() {
                         <Group gap={32}>
                             <PlazmaSertItem img={'/img/aqua-san.webp'} />
                             <Stack>
-                                {/* <Link href={'/pdf/aquatory/Протокол-испытаний-воды.pdf'} target='_blank'>
+                                <Link href={'/pdf/aquatory/Протокол-испытаний_вода.pdf'} target='_blank'>
                                     <Text fz={16} c='#252525' td={'underline'}>
                                         Протокол испытаний воды
                                     </Text>
                                 </Link>
 
-                                <Link href={'/pdf/aquatory/Протокол-испытаний-почвы.pdf'} target='_blank'>
+                                <Link href={'/pdf/aquatory/Протокол-испытаний_почва.pdf'} target='_blank'>
                                     <Text fz={16} c='#252525' td={'underline'}>
                                         Протокол испытаний почвы
                                     </Text>
-                                </Link> */}
+                                </Link>
 
                                 <Link href={'/pdf/aquatory/Экспертное_заключение.pdf'} target='_blank'>
                                     <Text fz={16} c='#252525' td={'underline'}>
