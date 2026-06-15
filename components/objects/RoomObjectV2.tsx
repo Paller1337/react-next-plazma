@@ -17,6 +17,8 @@ const INCLUDED_SUMMER_SERVICES = [
     { title: 'Парковка', Icon: Icon.Truck },
     { title: 'Завтрак, шведский стол', Icon: Icon.Coffee },
     { title: 'Круглосуточный тренажерный зал', Icon: Icon.Activity },
+    { title: 'Детская комната', Icon: Icon.Users },
+    { title: 'Анимационная программа', Icon: Icon.Smile },
 ]
 
 const PetIcon = () => (

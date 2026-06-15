@@ -194,6 +194,8 @@ export default function PageHotel(props: PageHotelProps) {
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Парковка</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Завтрак (шведский стол)</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Тренажерный зал</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Детская комната</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Анимационная программа</Text>
                                     </Stack>
                                 </Stack>
 
