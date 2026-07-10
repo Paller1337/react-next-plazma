@@ -13,6 +13,7 @@ import type { RoomObjectProps } from './RoomObject'
 
 const INCLUDED_SUMMER_SERVICES = [
     { title: 'Теплый бассейн на острове', Icon: Icon.Droplet },
+    { title: 'Тёплый двухуровневый бассейн Инфинити', Icon: Icon.Droplet },
     { title: 'Шезлонг и полотенце', Icon: Icon.Sun },
     { title: 'Парковка', Icon: Icon.Truck },
     { title: 'Завтрак, шведский стол', Icon: Icon.Coffee },

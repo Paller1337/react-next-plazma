@@ -190,6 +190,7 @@ export default function PageHotel(props: PageHotelProps) {
                                     {/* <Text fz={16} fw={600}>Услуги, включённые в стоимость проживания:</Text> */}
                                     <Stack gap={4}>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Посещение бассейна на полуострове</Text>
+                                        <Text fz={isMobile ? 15 : 16} fw={400}>- Тёплый двухуровневый бассейн Инфинити</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Шезлонг и полотенце</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Парковка</Text>
                                         <Text fz={isMobile ? 15 : 16} fw={400}>- Завтрак (шведский стол)</Text>
